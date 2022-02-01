@@ -8,8 +8,6 @@
 ## ABSTRACT
 This repository hosts the contents of the [Docs](https://docs.nbold.co/) website.
 
----
-
 ## 🚀 CONTRIBUTE
 
 ### Run locally

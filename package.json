@@ -29,6 +29,7 @@
     "push": "git push --follow-tags origin main"
   },
   "devDependencies": {
+    "@mr-hope/vuepress-plugin-copy-code": "^1.26.0",
     "sentence-case": "^3.0.4",
     "title-case": "^3.0.3",
     "vuepress": "^1.9.7",
