@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "nBold Documentation",
   "author": "Guillaume Meyer <gmeyer@salestim.com> (https://www.salestim.com)",
   "license": "MIT",
@@ -13,7 +13,6 @@
     "url": "https://github.com/SalesTim/docs/issues"
   },
   "homepage": "https://github.com/SalesTim/docs#readme",
-  
   "scripts": {
     "dev": "node ./node_modules/vuepress/cli.js dev ./src --no-clear-screen",
     "test": "find src -name '*.md' -not -path './node_modules/*' -exec npx --yes markdown-link-check '{}' --config .mlc_config.json --quiet ';' > ./links_check.log",
@@ -29,7 +28,6 @@
     "release:major": "npx --yes standard-version --release-as major",
     "push": "git push --follow-tags origin main"
   },
-  
   "devDependencies": {
     "vuepress": "^1.9.7",
     "vuepress-plugin-autometa": "^0.1.13",
