@@ -1,0 +1,40 @@
+{
+  "name": "docs",
+  "version": "0.0.1",
+  "description": "nBold Documentation",
+  "author": "Guillaume Meyer <gmeyer@salestim.com> (https://www.salestim.com)",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SalesTim/docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SalesTim/docs/issues"
+  },
+  "homepage": "https://github.com/SalesTim/docs#readme",
+  
+  "scripts": {
+    "dev": "node ./node_modules/vuepress/cli.js dev ./src --no-clear-screen",
+    "test": "find src -name '*.md' -not -path './node_modules/*' -exec npx --yes markdown-link-check '{}' --config .mlc_config.json --quiet ';' > ./links_check.log",
+    "build": "node ./node_modules/vuepress/cli.js build ./src --no-cache",
+    "export": "npm run export:docx && npm run export:pdf",
+    "export:docx": "bash ./export_docx.sh",
+    "export:pdf": "bash ./export_pdf.sh",
+    "export:issues": "gh2md --multiple-files --no-prs salestim/isms ./dist/issues",
+    "commit": "git add . && npx --yes git-cz",
+    "release": "npm run release:minor",
+    "release:patch": "npx --yes standard-version --release-as patch",
+    "release:minor": "npx --yes standard-version --release-as minor",
+    "release:major": "npx --yes standard-version --release-as major",
+    "push": "git push --follow-tags origin main"
+  },
+  
+  "devDependencies": {
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-autometa": "^0.1.13",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-mermaidjs": "^1.9.0",
+    "vuepress-theme-yuu": "^3.1.1"
+  }
+}
