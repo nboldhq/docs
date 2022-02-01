@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://developers.salestim.com/</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://developers.salestim.com/nocode</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://developers.salestim.com/api</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://developers.salestim.com/blog</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://developers.salestim.com/api/explorer</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://developers.salestim.com/platform</loc>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://status.salestim.com/</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+</urlset>
