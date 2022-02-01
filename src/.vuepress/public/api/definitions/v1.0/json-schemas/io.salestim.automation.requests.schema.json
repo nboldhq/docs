@@ -1,0 +1,303 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "$ref": "#/definitions/httpsUrl",
+      "description": "The https:// URL referencing the JSON Schema for the manifest."
+    },
+    "manifestVersion": {
+      "type": "string",
+      "description": "The version of the manifest schema this manifest is using. It should be '1.0'.",
+      "const": "1.0"
+    },
+    "id": {
+      "description": "ID of the request automatically generated when the request is received. Internal use only.",
+      "type": "string",
+      "maxLength": 128
+    },
+    "team": {
+      "description": "Defines the properties of the team to be provisioned.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "Name of the team to be used during the provisioning process. N.B: Naming conventions may be applied on it. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "type": "string",
+          "maxLength": 128
+        },
+        "description": {
+          "description": "Description of the team to be used during the provisioning process. N.B: Naming conventions may be applied on it. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "type": "string",
+          "maxLength": 1024
+        },
+        "welcomeMessage": {
+          "description": "Welcome message to be published in the 'general' channel of the provisioned team. N.B: Naming conventions may be applied on it. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "type": "string",
+          "maxLength": 2048
+        },
+        "pictureUrl": {
+          "description": "https:// URL of the photo to apply on the provisioned team. If empty or ignored, the provisioning process will use the photo from the template's source team.",
+          "format": "uri",
+          "type": "string",
+          "$ref": "#/definitions/httpsUrl",
+          "maxLength": 1024
+        },
+        "membership": {
+          "description": "Defines owners and members to invite to the provisioned team.",
+          "type": "object",
+          "properties": {
+            "owners": {
+              "description": "Defines owners to invite.",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "displayName": {
+                    "description": "User display name",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string",
+                    "$ref": "#/definitions/guid",
+                    "description": "User AD ID (GUID)"
+                  }
+                },
+                "required": [
+                  "id"
+                ]
+              }
+            },
+            "members": {
+              "description": "Defines members to invite.",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "displayName": {
+                    "description": "User display name",
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string",
+                    "$ref": "#/definitions/guid",
+                    "description": "User AD ID (GUID)"
+                  }
+                },
+                "required": [
+                  "id"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "template": {
+      "description": "Reference to the template to use during the provisioning process.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "ID of the template to use during the provisioning process.",
+          "type": "string",
+          "maxLength": 128
+        },
+        "name": {
+          "description": "Name of the template to use during the provisioning process.",
+          "type": "string",
+          "maxLength": 256
+        },
+        "description": {
+          "description": "Description of the template to use during the provisioning process.",
+          "type": "string",
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "request": {
+      "description": "Properties and metadata of the request itself.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requester": {
+          "description": "Reference to the user the request originates from.",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Requester display name",
+              "type": "string"
+            },
+            "id": {
+              "description": "Requester user AD ID (GUID)",
+              "type": "string",
+              "$ref": "#/definitions/guid"
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "date": {
+          "description": "Request creation date and time as an ISO string, automatically generated when the request is received. Internal use only.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "customerId": {
+          "description": "Customer ID as a guid, automatically populated when the request is received from its app ID. Internal use only.",
+          "type": "string",
+          "$ref": "#/definitions/guid"
+        },
+        "status": {
+          "description": "Describes the current state of the request. Internal use only.",
+          "type": "object",
+          "properties": {
+            "code": {
+              "description": "Request current status code.",
+              "type": "string"
+            },
+            "label": {
+              "description": "Request current status label as an i18n code.",
+              "type": "string"
+            },
+            "messages": {
+              "description": "Request audit trail messages.",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "statusCode": {
+                    "description": "Message status code",
+                    "type": "string"
+                  },
+                  "eventCode": {
+                    "description":"Message status label as an i18n code.",
+                    "type": "string"
+                  },
+                  "date": {
+                    "description": "Message date and time as an ISO string",
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "text":{
+                    "description":"Message text as a templatized i18n message.",
+                    "type":"string"
+                  }
+                },
+                "required": [
+                  "statusCode",
+                  "eventCode",
+                  "date",
+                  "text"
+                ]
+              }
+            },
+            "approval": {
+              "description": "Request approval status.",
+              "type": "object",
+              "properties": {
+                "date": {
+                  "description": "Request's approval date as an ISO string. Internal use only.",
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "team": {
+                  "description": "Defines members of the approval team.",
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "name": {
+                        "description": "Approval team member display name",
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string",
+                        "$ref": "#/definitions/guid",
+                        "description": "Approval team member user AD ID (GUID)"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ]
+                  }
+                },
+                "required": {
+                  "description": "Request's approval date as an ISO string. Internal use only.",
+                  "type": "string",
+                  "default": false
+                },
+                "approver": {
+                  "description": "Reference to the user that approved the request. Internal use only.",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "description": "Approver display name",
+                      "type": "string"
+                    },
+                    "id": {
+                      "description": "Approver user AD ID (GUID)",
+                      "type": "string",
+                      "$ref": "#/definitions/guid"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              }
+            },
+            "progress":{
+              "description":"Request processing overall progress as a percentage.",
+              "type":"integer"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "$schema",
+    "manifestVersion",
+    "team",
+    "template",
+    "request"
+  ],
+  "definitions": {
+    "httpsUrl": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[Hh][Tt][Tt][Pp][Ss]?://"
+    },
+    "semver": {
+      "type": "string",
+      "maxLength": 256,
+      "pattern": "^([0-9]|[1-9]+[0-9]*)\\.([0-9]|[1-9]+[0-9]*)\\.([0-9]|[1-9]+[0-9]*)$"
+    },
+    "guid": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+    },
+    "languageTag": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]{1,8}(-[A-Za-z0-9]{1,8}){0,2}$"
+    }
+  }
+}

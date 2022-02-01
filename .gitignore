@@ -1,2 +1,7 @@
 **/node_modules
+package-lock.json
 links_check.log
+bin
+dist
+**/mermaid-filter.err
+**/*.docx
