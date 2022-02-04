@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/SalesTim/docs/compare/v0.2.0...v0.3.0) (2022-02-04)
+
+
+### Features
+
+* 🎸 Updated logos and icons to match the nBold brand ([f795740](https://github.com/SalesTim/docs/commit/f7957402f06f164a402b2541609190711e7fdfc2))
+
+
+### Bug Fixes
+
+* 🐛 fixed build scripts and api docs generation ([b64a260](https://github.com/SalesTim/docs/commit/b64a260515ded31bf1f277e346063cba7ee20265))
+
 ## [0.2.0](https://github.com/SalesTim/docs/compare/v0.1.0...v0.2.0) (2022-02-01)
 
 
