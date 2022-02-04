@@ -1,5 +1,6 @@
-# Power Platform & Logic Apps Connector
-The `SalesTim Connector` gives you access to all the powerful features of our [Governance API](/api/), such as managing your teams or start a new team provisioning job, right from:
+# Automation Connectors
+
+Automation connectors gives you access to all the powerful features of our [Governance API](/api/), such as managing your teams or start a new team provisioning job, right from:
 - Power Platform:
     - [Power Apps](https://powerapps.com)
     - [Power Automate](https://flow.microsoft.com)

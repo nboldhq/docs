@@ -115,28 +115,6 @@ const convertOpenApiYamlToJson = (done) => {
   }
 }
 
-
-const copySdkDocs = (done) => {
-  const sdks = ['node', 'powershell']
-  sdks.forEach((sdk, i) => {
-    gulp.src([
-      `./src/sdks/v1.0/${sdk}/README.md`
-    ])
-      .pipe(gulp.dest(`./src/api/sdks/${sdk}`)).on('end', () => {
-        if (i === sdks.length - 1) {
-          done()
-        }
-      })
-    gulp.src([
-      `./src/sdks/v1.0/${sdk}/docs/*.md`
-    ])
-      .pipe(gulp.dest(`./src/api/sdks/${sdk}/docs`)).on('end', () => {
-        if (i === sdks.length - 1) {
-          done()
-        }
-      })
-  })
-}
 // #region EXPORTS
 
 exports.build = gulp.series(

@@ -157,10 +157,10 @@ module.exports = {
     sidebar: {
       '/': [
         {
-          title: '🚀 README',
+          title: 'nBold Documentation',
           path: '/'
         },
-        getSideBar('/_drafts', '📝 Drafts'),
+        getSideBar('/automation-connectors', 'Automation Connectors'),
         {
           title: 'No-Code Solutions',
           collapsable: true,
@@ -187,10 +187,10 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 1,
           children: [
-            ['/connectors/', 'Get Started'],
-            ['/connectors/power-platform-connector.md', 'Power Platform Setup'],
-            ['/connectors/logic-apps-connector.md', 'Logic Apps Setup'],
-            ['/connectors/connectors-actions.md', 'Triggers & Actions Reference']
+            ['/automation-connectors/', 'Get Started'],
+            ['/automation-connectors/power-platform-connector.md', 'Power Platform Setup'],
+            ['/automation-connectors/logic-apps-connector.md', 'Logic Apps Setup'],
+            ['/automation-connectors/automation-connectors-actions.md', 'Triggers & Actions Reference']
           ]
         },
         {
