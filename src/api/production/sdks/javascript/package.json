@@ -2,7 +2,7 @@
   "name": "sales_tim_api",
   "version": "1.2.3",
   "description": "The_unified_Microsoft_Teams_Governance_API__Visit_our__Tech_Hub_https__developers_salestim_com_api__for_more_information_",
-  "license": "(c) Copyright 2019-2021 SalesTim - all rights reserved.",
+  "license": "(c) Copyright 2019-2022 SalesTim - all rights reserved.",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",

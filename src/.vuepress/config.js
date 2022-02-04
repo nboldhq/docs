@@ -93,7 +93,7 @@ module.exports = {
     },
 
     logo: '/color.png',
-    
+
     // Footer options
     lastUpdated: '♻️ Last Updated',
 
@@ -160,7 +160,6 @@ module.exports = {
           title: 'nBold Documentation',
           path: '/'
         },
-        getSideBar('/automation-connectors', 'Automation Connectors'),
         {
           title: 'No-Code Solutions',
           collapsable: true,
@@ -183,7 +182,7 @@ module.exports = {
           ]
         },
         {
-          title: 'Connectors',
+          title: 'Automation Connectors',
           collapsable: true,
           sidebarDepth: 1,
           children: [
@@ -193,6 +192,7 @@ module.exports = {
             ['/automation-connectors/automation-connectors-actions.md', 'Triggers & Actions Reference']
           ]
         },
+        // getSideBar('/automation-connectors', 'Automation Connectors'),
         {
           title: 'API & Webhooks',
           collapsable: true,

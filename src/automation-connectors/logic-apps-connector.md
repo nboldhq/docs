@@ -1,4 +1,4 @@
-# Setup the SalesTim Connector for Logic Apps
+# Setup the Automation Connector for Logic Apps
 
 **Abstract**  
 This article explains how to register the SalesTim Connector as a custom connector for Azure [Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/).

@@ -11,7 +11,7 @@ info:
     url: https://developers.salestim.com/api
     email: support@salestim.com
   license:
-    name: (c) Copyright 2019-2021 SalesTim - all rights reserved.
+    name: (c) Copyright 2019-2022 SalesTim - all rights reserved.
     url: https://www.salestim.com/legal/eula
 
 servers:

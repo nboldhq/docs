@@ -1,4 +1,4 @@
-# SalesTim Connector Triggers & Actions
+# Automation Connector Triggers & Actions
 
 **Abstract**  
 This article describes the Power Platform and Logic Apps triggers and actions available from the SalesTim Connector.

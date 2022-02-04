@@ -1,4 +1,4 @@
-# Setup the SalesTim Connector for Power Platform
+# Setup the Automation Connector for Power Platform
 
 **Abstract**  
 This article explains how to register the SalesTim Connector as a custom connector for Microsoft [Power Platform](https://powerplatform.microsoft.com).
