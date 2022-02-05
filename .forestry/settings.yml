@@ -12,7 +12,6 @@ sections:
 - type: document
   path: src/README.md
   label: Homepage
-  match: "**/*"
 upload_dir: src/.vuepress/public/media
 public_path: "/uploads"
 front_matter_path: ''
