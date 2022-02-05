@@ -3,7 +3,16 @@ new_page_extension: md
 auto_deploy: false
 admin_path: src/.vuepress/public/admin
 webhook_url: 
-sections: 
+sections:
+- type: directory
+  path: src/automation-connectors
+  label: Automation Connectors
+  create: documents
+  match: "**/*"
+- type: document
+  path: src/README.md
+  label: Homepage
+  match: "**/*"
 upload_dir: src/.vuepress/public/media
 public_path: "/uploads"
 front_matter_path: ''
