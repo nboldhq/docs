@@ -32,6 +32,11 @@ sections:
   label: Trust Center
   create: documents
   match: "**/*"
+- type: document
+  path: src/.vuepress/config.js
+  label: Configuration
+  match: "**/*"
+  read_only: false
 upload_dir: src/.vuepress/public/media
 public_path: "/uploads"
 front_matter_path: ''
