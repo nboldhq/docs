@@ -14,7 +14,7 @@ const PACKAGE_FILE = ROOT_FOLDER + 'package.json'
 let pck = require(PACKAGE_FILE) // Not declared as a const as it may be refreshed/updated durung build
 const SRC_FOLDER = ROOT_FOLDER + 'src/'
 const PUBLIC_FOLDER = SRC_FOLDER + '.vuepress/public/'
-const JS_FOLDER = PUBLIC_FOLDER + 'jss/'
+const JS_FOLDER = PUBLIC_FOLDER + 'js/'
 const CSS_FOLDER = PUBLIC_FOLDER + 'css/'
 // #endregion DECLARATIONS
 

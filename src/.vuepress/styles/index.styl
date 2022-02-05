@@ -1,4 +1,21 @@
 /* ############################################################################################# */
+/* # FONTS */
+/* ############################################################################################# */
+@font-face {
+  font-family: Everett;
+  src: url('/fonts/Everett-Light.otf');
+}
+
+@font-face {
+  font-family: Signifier;
+  src: url('/fonts/Signifier-Light.otf');
+}
+
+body {
+   font-family: Everett !important;
+}
+
+/* ############################################################################################# */
 /* # SITE LAYOUT */
 /* ############################################################################################# */
 #main-title {
@@ -30,6 +47,7 @@ div .page-nav {
 
 h1 {
   font-size: 4rem;
+  font-family: Everett !important;
   background: linear-gradient(45deg, #253BFE, #FF0000);
   background-clip: text;
   -webkit-background-clip: text;
@@ -39,8 +57,27 @@ h1 {
   display: inline-block
 }
 
+h2 {
+  /* color: #020632; */
+  font-family: Everett !important;
+  background: linear-gradient(45deg, #253BFE, #FF0000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block
+}
+
+blockquote > p {
+    color: #FF003D !important;
+    font-weight: bold;
+    font-family: Signifier !important;
+    font-size: 1.4rem !important;
+}
+
 .settings-button {
-  display: none !important;
+  /* display: none !important; */
 }
 
 /* ############################################################################################# */

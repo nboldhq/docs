@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>👋 Getting Started | documentation</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/bundle.css">
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-5688830-15"></script>
+    <script type="text/javascript" src="/js/bundle.js"></script>
+    <meta name="description" content="Here is an overview of the different steps to deploy a SalesTim environment:
+graph LR
+    %% Nodes
+    subgraph cp[Setup common prerequisites]
+        terraform(InstallTerraform)
+        projecttemplates(Get deploymentprojects templates)
+        appreg(Register your appin Azure AD)
+    end
+    subgraph docker[Deploy to Docker]
+        dockerprereq(Setup Dockerprerequisites)
+        dockerdeploy(Deploy)
+    end
+    subgraph azure[Deploy to Azure]
+        azureprereq(Setup Azurererequisites)
+        azuredeploy(Deploy)
+    end
+    package(Create MicrosoftTeams package)
+    %% Styles
+    classDef startend fill:#9099d8, stroke-width:0px;
+        class s startend
+        class e startend
+    %% Links
+    terraform --&gt; projecttemplates
+    projecttemplates --&gt; appreg
+    appreg --&gt; dockerprereq
+    dockerprereq --&gt; dockerdeploy
+    appreg --&gt; azureprereq
+    azureprereq --&gt; azuredeploy
+    dockerdeploy --&gt; package
+    azuredeploy --&gt; package
+`">
+    <meta name="twitter:title" content="👋 Getting Started">
+    <meta name="twitter:description" content="Here is an overview of the different steps to deploy a SalesTim environment:
+graph LR
+    %% Nodes
+    subgraph cp[Setup common prerequisites]
+        terraform(InstallTerraform)
+        projecttemplates(Get deploymentprojects templates)
+        appreg(Register your appin Azure AD)
+    end
+    subgraph docker[Deploy to Docker]
+        dockerprereq(Setup Dockerprerequisites)
+        dockerdeploy(Deploy)
+    end
+    subgraph azure[Deploy to Azure]
+        azureprereq(Setup Azurererequisites)
+        azuredeploy(Deploy)
+    end
+    package(Create MicrosoftTeams package)
+    %% Styles
+    classDef startend fill:#9099d8, stroke-width:0px;
+        class s startend
+        class e startend
+    %% Links
+    terraform --&gt; projecttemplates
+    projecttemplates --&gt; appreg
+    appreg --&gt; dockerprereq
+    dockerprereq --&gt; dockerdeploy
+    appreg --&gt; azureprereq
+    azureprereq --&gt; azuredeploy
+    dockerdeploy --&gt; package
+    azuredeploy --&gt; package
+`">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="👋 Getting Started">
+    <meta property="og:description" content="Here is an overview of the different steps to deploy a SalesTim environment:
+graph LR
+    %% Nodes
+    subgraph cp[Setup common prerequisites]
+        terraform(InstallTerraform)
+        projecttemplates(Get deploymentprojects templates)
+        appreg(Register your appin Azure AD)
+    end
+    subgraph docker[Deploy to Docker]
+        dockerprereq(Setup Dockerprerequisites)
+        dockerdeploy(Deploy)
+    end
+    subgraph azure[Deploy to Azure]
+        azureprereq(Setup Azurererequisites)
+        azuredeploy(Deploy)
+    end
+    package(Create MicrosoftTeams package)
+    %% Styles
+    classDef startend fill:#9099d8, stroke-width:0px;
+        class s startend
+        class e startend
+    %% Links
+    terraform --&gt; projecttemplates
+    projecttemplates --&gt; appreg
+    appreg --&gt; dockerprereq
+    dockerprereq --&gt; dockerdeploy
+    appreg --&gt; azureprereq
+    azureprereq --&gt; azuredeploy
+    dockerdeploy --&gt; package
+    azuredeploy --&gt; package
+`">
+    <meta itemprop="name" content="👋 Getting Started">
+    <meta itemprop="description" content="Here is an overview of the different steps to deploy a SalesTim environment:
+graph LR
+    %% Nodes
+    subgraph cp[Setup common prerequisites]
+        terraform(InstallTerraform)
+        projecttemplates(Get deploymentprojects templates)
+        appreg(Register your appin Azure AD)
+    end
+    subgraph docker[Deploy to Docker]
+        dockerprereq(Setup Dockerprerequisites)
+        dockerdeploy(Deploy)
+    end
+    subgraph azure[Deploy to Azure]
+        azureprereq(Setup Azurererequisites)
+        azuredeploy(Deploy)
+    end
+    package(Create MicrosoftTeams package)
+    %% Styles
+    classDef startend fill:#9099d8, stroke-width:0px;
+        class s startend
+        class e startend
+    %% Links
+    terraform --&gt; projecttemplates
+    projecttemplates --&gt; appreg
+    appreg --&gt; dockerprereq
+    dockerprereq --&gt; dockerdeploy
+    appreg --&gt; azureprereq
+    azureprereq --&gt; azuredeploy
+    dockerdeploy --&gt; package
+    azuredeploy --&gt; package
+`">
+    
+    <link rel="preload" href="/assets/css/0.styles.86795a37.css" as="style"><link rel="preload" href="/assets/js/app.af93be28.js" as="script"><link rel="preload" href="/assets/js/2.d4a5f4cc.js" as="script"><link rel="preload" href="/assets/js/154.df01d292.js" as="script"><link rel="prefetch" href="/assets/js/10.01e43ae0.js"><link rel="prefetch" href="/assets/js/100.9942582b.js"><link rel="prefetch" href="/assets/js/101.f84f4d2f.js"><link rel="prefetch" href="/assets/js/102.988c221f.js"><link rel="prefetch" href="/assets/js/103.3588d49d.js"><link rel="prefetch" href="/assets/js/104.fa6f75e8.js"><link rel="prefetch" href="/assets/js/105.8ab93761.js"><link rel="prefetch" href="/assets/js/106.32dcc8c8.js"><link rel="prefetch" href="/assets/js/107.a8272e0e.js"><link rel="prefetch" href="/assets/js/108.7361b186.js"><link rel="prefetch" href="/assets/js/109.0e6ee69a.js"><link rel="prefetch" href="/assets/js/11.55e1ddff.js"><link rel="prefetch" href="/assets/js/110.67ab65ff.js"><link rel="prefetch" href="/assets/js/111.b4cf8528.js"><link rel="prefetch" href="/assets/js/112.a81ec0ee.js"><link rel="prefetch" href="/assets/js/113.c999deec.js"><link rel="prefetch" href="/assets/js/114.363e9cf5.js"><link rel="prefetch" href="/assets/js/115.5cf25037.js"><link rel="prefetch" href="/assets/js/116.70297573.js"><link rel="prefetch" href="/assets/js/117.8d3437bb.js"><link rel="prefetch" href="/assets/js/118.d787ecd6.js"><link rel="prefetch" href="/assets/js/119.103a58ac.js"><link rel="prefetch" href="/assets/js/12.0b5db647.js"><link rel="prefetch" href="/assets/js/120.9dd380f2.js"><link rel="prefetch" href="/assets/js/121.bf02ce6b.js"><link rel="prefetch" href="/assets/js/122.3ee2220c.js"><link rel="prefetch" href="/assets/js/123.f3e66c6f.js"><link rel="prefetch" href="/assets/js/124.14694ee0.js"><link rel="prefetch" href="/assets/js/125.083f62b5.js"><link rel="prefetch" href="/assets/js/126.a7802e23.js"><link rel="prefetch" href="/assets/js/127.996c4d5b.js"><link rel="prefetch" href="/assets/js/128.bd6d453c.js"><link rel="prefetch" href="/assets/js/129.dcfdfac9.js"><link rel="prefetch" href="/assets/js/13.395cd370.js"><link rel="prefetch" href="/assets/js/130.dba52f07.js"><link rel="prefetch" href="/assets/js/131.4fd63d22.js"><link rel="prefetch" href="/assets/js/132.fa2c2da4.js"><link rel="prefetch" href="/assets/js/133.02d0dd1b.js"><link rel="prefetch" href="/assets/js/134.73c2cc4b.js"><link rel="prefetch" href="/assets/js/135.6ef2f9ff.js"><link rel="prefetch" href="/assets/js/136.0b969ee8.js"><link rel="prefetch" href="/assets/js/137.86059a03.js"><link rel="prefetch" href="/assets/js/138.8766380b.js"><link rel="prefetch" href="/assets/js/139.1b2780dd.js"><link rel="prefetch" href="/assets/js/14.1b9388bd.js"><link rel="prefetch" href="/assets/js/140.b8ed820a.js"><link rel="prefetch" href="/assets/js/141.9aeafd54.js"><link rel="prefetch" href="/assets/js/142.4ebe27a8.js"><link rel="prefetch" href="/assets/js/143.1ee9bb27.js"><link rel="prefetch" href="/assets/js/144.9f684712.js"><link rel="prefetch" href="/assets/js/145.b2d91514.js"><link rel="prefetch" href="/assets/js/146.45ecb0f8.js"><link rel="prefetch" href="/assets/js/147.7b3bf580.js"><link rel="prefetch" href="/assets/js/148.083df801.js"><link rel="prefetch" href="/assets/js/149.5c3508f3.js"><link rel="prefetch" href="/assets/js/15.4108caab.js"><link rel="prefetch" href="/assets/js/150.68b3eb0c.js"><link rel="prefetch" href="/assets/js/151.8ab3f0b7.js"><link rel="prefetch" href="/assets/js/152.e865a1e3.js"><link rel="prefetch" href="/assets/js/153.54fd679c.js"><link rel="prefetch" href="/assets/js/155.4d3f105d.js"><link rel="prefetch" href="/assets/js/156.f091b6e5.js"><link rel="prefetch" href="/assets/js/157.0f7c76b9.js"><link rel="prefetch" href="/assets/js/158.2ad8a7d7.js"><link rel="prefetch" href="/assets/js/159.c2f4dbe5.js"><link rel="prefetch" href="/assets/js/16.027c1989.js"><link rel="prefetch" href="/assets/js/160.bef9b3a7.js"><link rel="prefetch" href="/assets/js/161.d480c83c.js"><link rel="prefetch" href="/assets/js/162.ddfa30ed.js"><link rel="prefetch" href="/assets/js/163.5b6c1928.js"><link rel="prefetch" href="/assets/js/164.ff11b699.js"><link rel="prefetch" href="/assets/js/165.81681656.js"><link rel="prefetch" href="/assets/js/166.1db357de.js"><link rel="prefetch" href="/assets/js/167.625893cf.js"><link rel="prefetch" href="/assets/js/168.a852e00f.js"><link rel="prefetch" href="/assets/js/169.da754488.js"><link rel="prefetch" href="/assets/js/17.a5c445b6.js"><link rel="prefetch" href="/assets/js/170.90e0c415.js"><link rel="prefetch" href="/assets/js/171.b2403432.js"><link rel="prefetch" href="/assets/js/172.acae4379.js"><link rel="prefetch" href="/assets/js/173.0320da3a.js"><link rel="prefetch" href="/assets/js/174.7154d036.js"><link rel="prefetch" href="/assets/js/175.bc597588.js"><link rel="prefetch" href="/assets/js/176.ea05fab4.js"><link rel="prefetch" href="/assets/js/177.6218b3af.js"><link rel="prefetch" href="/assets/js/178.24ebb250.js"><link rel="prefetch" href="/assets/js/179.d8287d16.js"><link rel="prefetch" href="/assets/js/18.e55a9a69.js"><link rel="prefetch" href="/assets/js/180.91472a9a.js"><link rel="prefetch" href="/assets/js/181.5527264b.js"><link rel="prefetch" href="/assets/js/182.5c44df8c.js"><link rel="prefetch" href="/assets/js/183.06a10dfb.js"><link rel="prefetch" href="/assets/js/184.df646c8e.js"><link rel="prefetch" href="/assets/js/185.2144d459.js"><link rel="prefetch" href="/assets/js/186.0e998748.js"><link rel="prefetch" href="/assets/js/187.6f60c2dc.js"><link rel="prefetch" href="/assets/js/188.a1ed2758.js"><link rel="prefetch" href="/assets/js/19.daeee6c3.js"><link rel="prefetch" href="/assets/js/20.5143918e.js"><link rel="prefetch" href="/assets/js/21.33c80902.js"><link rel="prefetch" href="/assets/js/22.cc223ccc.js"><link rel="prefetch" href="/assets/js/23.7d588e1e.js"><link rel="prefetch" href="/assets/js/24.5ba6e43b.js"><link rel="prefetch" href="/assets/js/25.9c72a4ff.js"><link rel="prefetch" href="/assets/js/26.c4107ea2.js"><link rel="prefetch" href="/assets/js/27.cc0fa34c.js"><link rel="prefetch" href="/assets/js/28.1fc50032.js"><link rel="prefetch" href="/assets/js/29.191d828a.js"><link rel="prefetch" href="/assets/js/3.8d7a4f98.js"><link rel="prefetch" href="/assets/js/30.38948ff3.js"><link rel="prefetch" href="/assets/js/31.07b649c9.js"><link rel="prefetch" href="/assets/js/32.9dacc98f.js"><link rel="prefetch" href="/assets/js/33.41559a43.js"><link rel="prefetch" href="/assets/js/34.cda39cce.js"><link rel="prefetch" href="/assets/js/35.a2f57c41.js"><link rel="prefetch" href="/assets/js/36.44f807dc.js"><link rel="prefetch" href="/assets/js/37.73a1db67.js"><link rel="prefetch" href="/assets/js/38.4a7bb21d.js"><link rel="prefetch" href="/assets/js/39.6e0fb897.js"><link rel="prefetch" href="/assets/js/4.dad9dfca.js"><link rel="prefetch" href="/assets/js/40.5966939d.js"><link rel="prefetch" href="/assets/js/41.68d95ca9.js"><link rel="prefetch" href="/assets/js/42.f092ad25.js"><link rel="prefetch" href="/assets/js/43.c1d3129a.js"><link rel="prefetch" href="/assets/js/44.6e4cdbaa.js"><link rel="prefetch" href="/assets/js/45.db124367.js"><link rel="prefetch" href="/assets/js/46.ef8600d3.js"><link rel="prefetch" href="/assets/js/47.beebfbe0.js"><link rel="prefetch" href="/assets/js/48.4d3110b5.js"><link rel="prefetch" href="/assets/js/49.4e32d149.js"><link rel="prefetch" href="/assets/js/5.7942bd35.js"><link rel="prefetch" href="/assets/js/50.d2be1bbc.js"><link rel="prefetch" href="/assets/js/51.023d6479.js"><link rel="prefetch" href="/assets/js/52.97ce01f0.js"><link rel="prefetch" href="/assets/js/53.5d4efd11.js"><link rel="prefetch" href="/assets/js/54.19e9172e.js"><link rel="prefetch" href="/assets/js/55.8b04fe4e.js"><link rel="prefetch" href="/assets/js/56.34995061.js"><link rel="prefetch" href="/assets/js/57.096632a7.js"><link rel="prefetch" href="/assets/js/58.e2d47601.js"><link rel="prefetch" href="/assets/js/59.abdd3248.js"><link rel="prefetch" href="/assets/js/6.52be9d89.js"><link rel="prefetch" href="/assets/js/60.db0d7226.js"><link rel="prefetch" href="/assets/js/61.35372aac.js"><link rel="prefetch" href="/assets/js/62.62097236.js"><link rel="prefetch" href="/assets/js/63.126efcca.js"><link rel="prefetch" href="/assets/js/64.1530a648.js"><link rel="prefetch" href="/assets/js/65.1b982dc9.js"><link rel="prefetch" href="/assets/js/66.98419bd4.js"><link rel="prefetch" href="/assets/js/67.ed995714.js"><link rel="prefetch" href="/assets/js/68.b40f0fd2.js"><link rel="prefetch" href="/assets/js/69.a231629f.js"><link rel="prefetch" href="/assets/js/7.e174b2f3.js"><link rel="prefetch" href="/assets/js/70.edd02b95.js"><link rel="prefetch" href="/assets/js/71.e19e9b83.js"><link rel="prefetch" href="/assets/js/72.a3fc1b41.js"><link rel="prefetch" href="/assets/js/73.bf2eba7e.js"><link rel="prefetch" href="/assets/js/74.00bd0223.js"><link rel="prefetch" href="/assets/js/75.6e907ff5.js"><link rel="prefetch" href="/assets/js/76.8498e308.js"><link rel="prefetch" href="/assets/js/77.4b047c22.js"><link rel="prefetch" href="/assets/js/78.1d153fa3.js"><link rel="prefetch" href="/assets/js/79.7e7b8f6b.js"><link rel="prefetch" href="/assets/js/8.2523f650.js"><link rel="prefetch" href="/assets/js/80.988d21a0.js"><link rel="prefetch" href="/assets/js/81.15e52b97.js"><link rel="prefetch" href="/assets/js/82.b6e3066f.js"><link rel="prefetch" href="/assets/js/83.73b9bca1.js"><link rel="prefetch" href="/assets/js/84.a216dfc0.js"><link rel="prefetch" href="/assets/js/85.23f15a10.js"><link rel="prefetch" href="/assets/js/86.9bb95c04.js"><link rel="prefetch" href="/assets/js/87.d756a8e3.js"><link rel="prefetch" href="/assets/js/88.7d061260.js"><link rel="prefetch" href="/assets/js/89.354bf43a.js"><link rel="prefetch" href="/assets/js/9.86bf4763.js"><link rel="prefetch" href="/assets/js/90.4c73eb45.js"><link rel="prefetch" href="/assets/js/91.dc661b1c.js"><link rel="prefetch" href="/assets/js/92.6790a29b.js"><link rel="prefetch" href="/assets/js/93.2ec6d029.js"><link rel="prefetch" href="/assets/js/94.90f9f624.js"><link rel="prefetch" href="/assets/js/95.e9f0d75e.js"><link rel="prefetch" href="/assets/js/96.0683587c.js"><link rel="prefetch" href="/assets/js/97.424c1655.js"><link rel="prefetch" href="/assets/js/98.83847115.js"><link rel="prefetch" href="/assets/js/99.2687e5a7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.86795a37.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/Logo_degrade_noir@4x.png" alt="documentation" class="logo"> <span class="site-name can-hide">documentation</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <ul class="color-theme-options"><li><a href="#" class="default-theme"></a></li> <li><a href="#" class="blue-theme"></a></li><li><a href="#" class="red-theme"></a></li><li><a href="#" class="purple-theme"></a></li></ul> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">🌗 Dark Theme</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Developers" class="dropdown-title"><span class="title">🚀 Developers</span> <span class="arrow down"></span></button> <button type="button" aria-label="Developers" class="mobile-dropdown-title"><span class="title">🚀 Developers</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/automation-connectors/power-platform-automation-connector.html" class="nav-link">
+  Power Platform
+</a></li><li class="dropdown-item"><!----> <a href="/automation-connectors/logic-apps-automation-connector.html" class="nav-link">
+  Logic Apps
+</a></li><li class="dropdown-item"><!----> <a href="/api/explorer.html" class="nav-link">
+  API Explorer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Security" class="dropdown-title"><span class="title">🔐 Security</span> <span class="arrow down"></span></button> <button type="button" aria-label="Security" class="mobile-dropdown-title"><span class="title">🔐 Security</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/platform/" class="nav-link">
+  Trust Center
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.nbold.co" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🌐 nBold
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Social" class="dropdown-title"><span class="title">📡 Social</span> <span class="arrow down"></span></button> <button type="button" aria-label="Social" class="mobile-dropdown-title"><span class="title">📡 Social</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.linkedin.com/company/salestim" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LinkedIn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://twitter.com/nboldhq" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Twitter
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.youtube.com/channel/UCyoESYiKzmIdVbR7BHu0cbQ" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Youtube
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <a href="https://github.com/nboldhq" target="_blank" rel="noopener noreferrer" class="repo-link">
+    🐙 GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Developers" class="dropdown-title"><span class="title">🚀 Developers</span> <span class="arrow down"></span></button> <button type="button" aria-label="Developers" class="mobile-dropdown-title"><span class="title">🚀 Developers</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/automation-connectors/power-platform-automation-connector.html" class="nav-link">
+  Power Platform
+</a></li><li class="dropdown-item"><!----> <a href="/automation-connectors/logic-apps-automation-connector.html" class="nav-link">
+  Logic Apps
+</a></li><li class="dropdown-item"><!----> <a href="/api/explorer.html" class="nav-link">
+  API Explorer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Security" class="dropdown-title"><span class="title">🔐 Security</span> <span class="arrow down"></span></button> <button type="button" aria-label="Security" class="mobile-dropdown-title"><span class="title">🔐 Security</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/platform/" class="nav-link">
+  Trust Center
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.nbold.co" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🌐 nBold
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Social" class="dropdown-title"><span class="title">📡 Social</span> <span class="arrow down"></span></button> <button type="button" aria-label="Social" class="mobile-dropdown-title"><span class="title">📡 Social</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.linkedin.com/company/salestim" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LinkedIn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://twitter.com/nboldhq" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Twitter
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.youtube.com/channel/UCyoESYiKzmIdVbR7BHu0cbQ" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Youtube
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <a href="https://github.com/nboldhq" target="_blank" rel="noopener noreferrer" class="repo-link">
+    🐙 GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Hosting</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/hosting/architecture.html" class="sidebar-link">Architecture</a></li><li><a href="/hosting/azure_deployment.html" class="sidebar-link">Azure deployment</a></li><li><a href="/hosting/azure_resources_reference.html" class="sidebar-link">Azure resources reference</a></li><li><a href="/hosting/common_prerequisites.html" class="sidebar-link">Common prerequisites</a></li><li><a href="/hosting/configuration_reference.html" class="sidebar-link">Configuration reference</a></li><li><a href="/hosting/docker_deployment.html" class="sidebar-link">Docker deployment</a></li><li><a href="/hosting/docker_resources_reference.html" class="sidebar-link">Docker resources reference</a></li><li><a href="/hosting/environment_variables.html" class="sidebar-link">Environment variables</a></li><li><a href="/hosting/events_reference.html" class="sidebar-link">Events reference</a></li><li><a href="/hosting/getting_started.html" aria-current="page" class="active sidebar-link">Getting started</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/hosting/getting_started.html#deployment-overview" class="sidebar-link">Deployment overview</a></li><li class="sidebar-sub-header"><a href="/hosting/getting_started.html#next-steps" class="sidebar-link">Next steps</a></li></ul></li><li><a href="/hosting/monitoring.html" class="sidebar-link">Monitoring</a></li><li><a href="/hosting/permanent_membership_policy.html" class="sidebar-link">Permanent membership policy</a></li><li><a href="/hosting/permissions.html" class="sidebar-link">Permissions</a></li><li><a href="/hosting/power_platform_connector_deployment.html" class="sidebar-link">Power platform connector deployment</a></li><li><a href="/hosting/provisioning_process.html" class="sidebar-link">Provisioning process</a></li><li><a href="/hosting/self_hosted_cloud_comparison.html" class="sidebar-link">Self hosted cloud comparison</a></li><li><a href="/hosting/services_reference.html" class="sidebar-link">Services reference</a></li><li><a href="/hosting/teams_package.html" class="sidebar-link">Teams package</a></li><li><a href="/hosting/updates_management.html" class="sidebar-link">Updates management</a></li><li><a href="/hosting/versioning_strategy.html" class="sidebar-link">Versioning strategy</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="👋-getting-started"><a href="#👋-getting-started" class="header-anchor">#</a> 👋 Getting Started</h1> <p><strong>TABLE OF CONTENTS</strong></p><div class="table-of-contents"><ul><li><a href="#deployment-overview">Deployment overview</a></li><li><a href="#next-steps">Next steps</a></li></ul></div><p></p> <hr> <h2 id="deployment-overview"><a href="#deployment-overview" class="header-anchor">#</a> Deployment overview</h2> <p>SalesTim is designed to be self-hosted from:</p> <ul><li>A local or remote Docker service</li> <li>Your Microsoft Azure tenant</li></ul> <div class="spinner" style="background:rgb(66, 185, 131);" data-v-1bbcb91a></div><div class="spinner" style="background:rgb(66, 185, 131);" data-v-1bbcb91a></div><p>Here is an overview of the different steps to deploy a SalesTim environment:</p> <div class="spinner" style="background:rgb(66, 185, 131);" data-v-1bbcb91a></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><strong><code>SalesTim Self-Hosted</code> comes with batteries included!</strong>
+You don't have to be a Docker or Azure expert to run your own SalesTim platform!
+You should just have a basic understanding of the command-line and networking to successfully set up your own full-featured environment.</p></div> <p>This getting started tutorial will guide you through the different steps required to setup the minimal common prerequisites.</p> <h2 id="next-steps"><a href="#next-steps" class="header-anchor">#</a> Next steps</h2> <p>Install the <a href="./common_prerequisites">common prerequisites</a>.</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/nboldhq/docs/edit/main/src/hosting/getting_started.md" target="_blank" rel="noopener noreferrer">🌈 Improve this page!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/hosting/events_reference.html" class="prev">
+        Events reference
+      </a></span> <span class="next"><a href="/hosting/monitoring.html">
+        Monitoring
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.af93be28.js" defer></script><script src="/assets/js/2.d4a5f4cc.js" defer></script><script src="/assets/js/154.df01d292.js" defer></script>
+  </body>
+</html>

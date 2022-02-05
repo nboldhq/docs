@@ -1,6 +1,6 @@
 module.exports = {
   base: '/',
-  title: 'nBold | Docs',
+  title: 'documentation',
   description: 'nBold Documentation',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -83,7 +83,7 @@ module.exports = {
     yuu: {
       defaultDarkTheme: true,
       disableDarkTheme: false,
-      colorThemes: ['red', 'blue', 'purple'], // green (default), blue, red, and purple
+      colorThemes: ['blue', 'purple'], // green (default), blue, red, and purple
       defaultColorTheme: 'red',
       labels: {
         darkTheme: '🌗 Dark Theme', // Default is "Enable Dark Theme?"
@@ -92,7 +92,7 @@ module.exports = {
       disableThemeIgnore: true
     },
 
-    logo: '/color.png',
+    logo: '/Logo_degrade_noir@4x.png',
 
     // Footer options
     lastUpdated: '♻️ Last Updated',
@@ -124,9 +124,9 @@ module.exports = {
         text: '🚀 Developers',
         ariaLabel: 'Developers',
         items: [
-          { text: 'API Explorer', link: '/api/explorer' },
-          { text: 'Power Platform', link: '/connectors/power-platform-connector' },
-          { text: 'Logic Apps', link: '/connectors/logic-apps-connector' }
+          { text: 'Power Platform', link: '/automation-connectors/power-platform-automation-connector' },
+          { text: 'Logic Apps', link: '/automation-connectors/logic-apps-automation-connector' },
+          { text: 'API Explorer', link: '/api/explorer' }
         ]
       },
       {
@@ -155,6 +155,9 @@ module.exports = {
 
     // Sidebar: Vertical navigation
     sidebar: {
+      '/hosting/': [
+        getSideBar('/hosting', 'Hosting')
+      ],
       '/': [
         {
           title: 'nBold Documentation',
@@ -187,8 +190,8 @@ module.exports = {
           sidebarDepth: 1,
           children: [
             ['/automation-connectors/', 'Get Started'],
-            ['/automation-connectors/power-platform-connector.md', 'Power Platform Setup'],
-            ['/automation-connectors/logic-apps-connector.md', 'Logic Apps Setup'],
+            ['/automation-connectors/power-platform-automation-connector.md', 'Power Platform Setup'],
+            ['/automation-connectors/logic-apps-automation-connector.md', 'Logic Apps Setup'],
             ['/automation-connectors/automation-connectors-actions.md', 'Triggers & Actions Reference']
           ]
         },

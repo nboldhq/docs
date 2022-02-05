@@ -168,7 +168,7 @@
     mounted() {
       console.debug("API Explorer Mounted");
       var pOpenApiFileUrl =
-        "/api/definitions/v1.0/open-api/apiDefinition.swagger.yaml";
+        "/api/production/definitions/open-api/apiDefinition.swagger.yaml";
 
       var s = document.createElement("script");
       s.setAttribute("src", "/js/authentication.bundle.js");

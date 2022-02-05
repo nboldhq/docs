@@ -1,18 +1,6 @@
 # No-Code
-<div class="uk-background-cover uk-background-blend-screen uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(/img/headers/templates.jpg);">
-  <div class="bg-text uk-section uk-section-muted uk-section-xsmall uk-padding-small uk-text-center">
-    <p class="uk-text-large">
-      With the SalesTim Platform, you can automate your business process with Microsoft Teams by creating powerful no-code solutions and teams templates without any technical skills.</p>
-  </div>
-</div>
 
-<style>
-  .bg-text {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.5);  
-  }
-</style>
+> With the nBold Platform, you can automate your business process with Microsoft Teams by creating powerful no-code solutions and teams templates without any technical skills.
 
 ## What are No-Code Solutions?
 `No-Code Solutions` are applications built using the SalesTim app and its provisioning and governance engine.
