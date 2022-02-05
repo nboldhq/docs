@@ -4,14 +4,34 @@ auto_deploy: false
 admin_path: src/.vuepress/public/admin
 webhook_url: 
 sections:
+- type: document
+  path: src/README.md
+  label: Homepage
+- type: directory
+  path: src/nocode
+  label: Teams Templates
+  create: documents
+  match: "**/*"
+- type: directory
+  path: src/connectedapps
+  label: Collaboration Process
+  create: documents
+  match: "**/*"
 - type: directory
   path: src/automation-connectors
   label: Automation Connectors
   create: documents
   match: "**/*"
-- type: document
-  path: src/README.md
-  label: Homepage
+- type: directory
+  path: src/api
+  label: API & Webhooks
+  create: documents
+  match: "**/*"
+- type: directory
+  path: src/platform
+  label: Trust Center
+  create: documents
+  match: "**/*"
 upload_dir: src/.vuepress/public/media
 public_path: "/uploads"
 front_matter_path: ''
