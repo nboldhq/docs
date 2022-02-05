@@ -2,7 +2,7 @@
 permalink: /blog/install-microsoft-teams-linux-wsl-ubuntu
 title: Install Microsoft Teams for Linux using Ubuntu on WSL2
 description: Learn how to install Microsoft Teams for Linux using an Ubuntu WSL2 distro.
-image: https://developers.salestim.com/img/blog/teams-linux-windows.png
+image: https://docs.nbold.co/img/blog/teams-linux-windows.png
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

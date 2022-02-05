@@ -7,10 +7,10 @@ All notable changes to the SalesTim API, Connectors and SDKs will be documented 
 ### Added
 - The OpenAPI definition of the `/hooks` operation now describes the events and body schema of all the possible callbacks from all the supported webhooks.
   - It follows the [OpenAPI 3 Specification](https://swagger.io/docs/specification/about/) for [Callbacks](https://swagger.io/docs/specification/callbacks/)
-  - See it live in [API Explorer](https://developers.salestim.com/api/explorer.html#/hooks/CreateHook).
+  - See it live in [API Explorer](https://docs.nbold.co/api/explorer.html#/hooks/CreateHook).
 
 ### Changed
-- The `TeamProvisioningCompletedNotificationPayload` object (payload of the `team_provisioning_completed` [webhook](https://developers.salestim.com/api/webhooks.html#team-provisioning-completed)), now has an additional `metadata` property holding the metadata passed to the `createTeamProvisioningJob` [operation](https://developers.salestim.com/api/reference/Apis/TeamsApi.html#createteamprovisioningjob)
+- The `TeamProvisioningCompletedNotificationPayload` object (payload of the `team_provisioning_completed` [webhook](https://docs.nbold.co/api/webhooks.html#team-provisioning-completed)), now has an additional `metadata` property holding the metadata passed to the `createTeamProvisioningJob` [operation](https://docs.nbold.co/api/reference/Apis/TeamsApi.html#createteamprovisioningjob)
 
 ## [1.2.0] - 2021-04-16
 

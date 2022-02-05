@@ -2,7 +2,7 @@
 permalink: /_drafts/microsoft-teams-naming-conventions-done-right
 title: Enterprise-Grade Microsoft Teams naming conventions done right without the hassle of complex solutions
 description: Discover how to implement your Microsoft Teams naming convention strategy. 
-image: https://developers.salestim.com/img/headers/teams-naming-conventions.png
+image: https://docs.nbold.co/img/headers/teams-naming-conventions.png
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

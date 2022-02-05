@@ -2,7 +2,7 @@
 permalink: /blog/export-microsoft-teams-team-members
 title: Export the owners and members of a Microsoft Teams team as a CSV file
 description: Discover how to exports the owners and members of a Microsoft Teams team as a CSV file. 
-image: https://developers.salestim.com/img/blog/export-teams-team-members.jpg
+image: https://docs.nbold.co/img/blog/export-teams-team-members.jpg
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

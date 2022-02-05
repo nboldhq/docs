@@ -211,7 +211,7 @@ To help you get started, you can also download our [.env file template](./enviro
 *Advanced Integrations*
 
 ### Mail
-*When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://developers.salestim.com/nocode/approval.html#approval-email-sent-by-your-organization*
+*When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization*
 
 ---
 | Environment Variable | Status | Description |
@@ -220,7 +220,7 @@ To help you get started, you can also download our [.env file template](./enviro
 | `MAIL_PROVIDER` | Optional ☑️ | (string) Mailer service (As of today, only "sendgrid" is supported). Defaults to "sendgrid". |
 | `MAIL_SECRET_KEY` | Optional ☑️ | (string) Secret key used to authenticate against the mailer service. Defaults to "". |
 | `MAIL_SENDER` | Optional ☑️ | (string) Default email sender (FROM:). Defaults to "notifications@salestim.io". |
-| `MAIL_ACTION_MSG_ORIGINATOR` | Optional ☑️ | (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://developers.salestim.com/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "". |
+| `MAIL_ACTION_MSG_ORIGINATOR` | Optional ☑️ | (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "". |
 
 
 

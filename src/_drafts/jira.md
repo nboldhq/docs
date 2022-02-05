@@ -10,7 +10,7 @@ Configure a Jira integration requires you to perform some one-time operations:
 1. Open your [Jira App Management](https://salestim.atlassian.net/secure/admin/oauth-credentials) page.
 2. Click `Create new app`.
 3. Give the app a name such as 'SalesTim' and accept [Atlassian's developer terms](https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/)
-4. Upload this picture as the app avatar: 'https://developers.salestim.com/color.png'
+4. Upload this picture as the app avatar: 'https://docs.nbold.co/color.png'
 5. From the `APIS AND FEATURES` section, click `OAuth 2.0 (3LO)`
 6. Paste this URL as the callcack URL 'https://connectedapps.salestim.io/auth/callback' and click `Save changes`
 7. Click `Add APIs`

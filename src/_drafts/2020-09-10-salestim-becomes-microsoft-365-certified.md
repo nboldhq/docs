@@ -2,7 +2,7 @@
 permalink: /_drafts/salestim-becomes-microsoft-365-certified
 title: SalesTim is now the first and the only Microsoft Teams governance app certified for Microsoft 365
 description: Discover how SalesTim became a Microsoft 365 certified app, and what are the benefits for our customers. 
-image: https://developers.salestim.com/img/headers/transparency.png
+image: https://docs.nbold.co/img/headers/transparency.png
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer
@@ -23,7 +23,7 @@ tags:
 
 Since the birth of SalesTim, we firmly believe that success is built on trust, and that trust starts with transparency. This commitment to protecting our customers data and respecting the privacy of their individuals is rooted in our values and guides all our actions.
 
-As a first incarnation of these principles, and very early while building the foundations of this company, we created our [Trust Center](https://developers.salestim.com/platform/). From this website, our prospects and customers have been able to discover and evaluate what kind of data we were accessing, processing, storing, using which formal process, and how we were ensuring both the compliance of our operations and the security of their data.
+As a first incarnation of these principles, and very early while building the foundations of this company, we created our [Trust Center](https://docs.nbold.co/platform/). From this website, our prospects and customers have been able to discover and evaluate what kind of data we were accessing, processing, storing, using which formal process, and how we were ensuring both the compliance of our operations and the security of their data.
 
 This unprecedented transparency helped us to earn the trust from major corporate and enterprise companies, and to create a virtuous circle of conversation comprised of frequent feedback and improvements.
 

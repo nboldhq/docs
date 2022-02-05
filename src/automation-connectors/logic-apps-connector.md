@@ -124,7 +124,7 @@ Now that we've created both the app registration and the logic apps resource, we
 - Under `Custom connectors`, select `REST`
 - From `Import mode`, select `OpenAPI URL` and and paste this URL:
 ```
-https://developers.salestim.com/api/definitions/v1.0/open-api/power-platform/apiDefinition.swagger.json
+https://docs.nbold.co/api/definitions/v1.0/open-api/power-platform/apiDefinition.swagger.json
 ```
 - Click `Import`
 - From the `General information` section, give your connector a name, such as:

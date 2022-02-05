@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The job ID, auto-generated at creation | [optional] [default to null]
-**log** | **List** | A collection of JobLogsEntry. See [https://developers.salestim.com/api/reference/Models/JobLogs](https://developers.salestim.com/api/reference/Models/JobLogs) for more information. | [optional] [default to null]
+**log** | **List** | A collection of JobLogsEntry. See [https://docs.nbold.co/api/reference/Models/JobLogs](https://docs.nbold.co/api/reference/Models/JobLogs) for more information. | [optional] [default to null]
 **type** | **String** | The job type (for instance &#x60;ProvisioningRequest&#x60;) | [optional] [default to null]
 **status** | **String** | The job current status | [optional] [default to null]
 **progress** | **Integer** | The job current progress | [optional] [default to null]

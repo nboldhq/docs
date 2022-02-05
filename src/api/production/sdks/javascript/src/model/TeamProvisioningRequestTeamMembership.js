@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -64,13 +64,13 @@ class TeamProvisioningRequestTeamMembership {
 }
 
 /**
- * An array of UserIdentifier. See [https://developers.salestim.com/api/reference/Models/UserIdentifier](https://developers.salestim.com/api/reference/Models/UserIdentifier) for more information.
+ * An array of UserIdentifier. See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
  * @member {Array.<module:model/MemberUserIdentifier>} members
  */
 TeamProvisioningRequestTeamMembership.prototype['members'] = undefined;
 
 /**
- * An array of UserIdentifier. See [https://developers.salestim.com/api/reference/Models/UserIdentifier](https://developers.salestim.com/api/reference/Models/UserIdentifier) for more information.
+ * An array of UserIdentifier. See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
  * @member {Array.<module:model/OwnerUserIdentifier>} owners
  */
 TeamProvisioningRequestTeamMembership.prototype['owners'] = undefined;

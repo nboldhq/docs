@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -69,7 +69,7 @@ class CatalogTemplateTemplateConfigurationApproval {
 CatalogTemplateTemplateConfigurationApproval.prototype['requireApproval'] = undefined;
 
 /**
- * Members of an approval team, as an array of ApprovalTeamMember. See [https://developers.salestim.com/api/reference/Models/ApprovalTeamMember](https://developers.salestim.com/api/reference/Models/ApprovalTeamMember) for more information.
+ * Members of an approval team, as an array of ApprovalTeamMember. See [https://docs.nbold.co/api/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/reference/Models/ApprovalTeamMember) for more information.
  * @member {Array.<module:model/ApprovalTeamMember>} approvalTeam
  */
 CatalogTemplateTemplateConfigurationApproval.prototype['approvalTeam'] = undefined;

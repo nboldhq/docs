@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class PermanentMember {
     /**
      * Constructs a new <code>PermanentMember</code>.
-     * Object representing a permanent member. See See [https://developers.salestim.com/api/reference/Models/PermanentMember](https://developers.salestim.com/api/reference/Models/PermanentMember) for more information.
+     * Object representing a permanent member. See See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.
      * @alias module:model/PermanentMember
      */
     constructor() { 

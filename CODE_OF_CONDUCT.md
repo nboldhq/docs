@@ -1,7 +1,7 @@
 # Code of Conduct
 
-This project has adopted the [SalesTim Open Source Code of Conduct](https://codeofconduct.salestim.com/).
+This project has adopted the [nBold Open Source Code of Conduct](https://codeofconduct.nbold.co/).
 
 Resources:
-- [SalesTim Code of Conduct FAQ](https://codeofconduct.salestim.com/faq/)
-- Contact [codeofconduct@salestim.com](mailto:codeofconduct@salestim.com) with questions or concerns
+- [nBold Code of Conduct FAQ](https://codeofconduct.nbold.co/faq/)
+- Contact [codeofconduct@nbold.co](mailto:codeofconduct@nbold.co) with questions or concerns

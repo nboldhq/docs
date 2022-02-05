@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -23,7 +23,7 @@ import TeamProvisioningRequestTemplate from './TeamProvisioningRequestTemplate';
 class TeamProvisioningRequest {
     /**
      * Constructs a new <code>TeamProvisioningRequest</code>.
-     * A request to provision a team based on a template from your corporate catalog. See [https://developers.salestim.com/api/reference/Models/ProvisioningRequest](https://developers.salestim.com/api/reference/Models/ProvisioningRequest) for more information.
+     * A request to provision a team based on a template from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/ProvisioningRequest](https://docs.nbold.co/api/reference/Models/ProvisioningRequest) for more information.
      * @alias module:model/TeamProvisioningRequest
      */
     constructor() { 
@@ -77,7 +77,7 @@ TeamProvisioningRequest.prototype['template'] = undefined;
 TeamProvisioningRequest.prototype['team'] = undefined;
 
 /**
- * Metadata from the app client as a JSON object. See [https://developers.salestim.com/api/reference/Models/AppMetadata](https://developers.salestim.com/api/reference/Models/VirtualAppMetadata) for more information.
+ * Metadata from the app client as a JSON object. See [https://docs.nbold.co/api/reference/Models/AppMetadata](https://docs.nbold.co/api/reference/Models/VirtualAppMetadata) for more information.
  * @member {Object} metadata
  */
 TeamProvisioningRequest.prototype['metadata'] = undefined;

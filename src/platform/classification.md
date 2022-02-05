@@ -1,6 +1,6 @@
 # Classification Labels
 
-To get their work done, people at SalesTim collaborate with others both inside and outside the organization. This means that content roams everywhere, and when it roams, we want it to do so in a secure, protected way that meets our organization’s business and compliance policies.  
+To get their work done, people at nBold collaborate with others both inside and outside the organization. This means that content roams everywhere, and when it roams, we want it to do so in a secure, protected way that meets our organization’s business and compliance policies.  
 
 Here is the list of classification labels we're using, from the least to the most sensitive:
 

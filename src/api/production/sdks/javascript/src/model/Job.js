@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class Job {
     /**
      * Constructs a new <code>Job</code>.
-     * A job that performs some tasks asynchronously. See [https://developers.salestim.com/api/reference/Models/Job](https://developers.salestim.com/api/reference/Models/Job) for more information.
+     * A job that performs some tasks asynchronously. See [https://docs.nbold.co/api/reference/Models/Job](https://docs.nbold.co/api/reference/Models/Job) for more information.
      * @alias module:model/Job
      */
     constructor() { 
@@ -80,7 +80,7 @@ class Job {
 Job.prototype['id'] = undefined;
 
 /**
- * A collection of JobLogsEntry. See [https://developers.salestim.com/api/reference/Models/JobLogs](https://developers.salestim.com/api/reference/Models/JobLogs) for more information.
+ * A collection of JobLogsEntry. See [https://docs.nbold.co/api/reference/Models/JobLogs](https://docs.nbold.co/api/reference/Models/JobLogs) for more information.
  * @member {Array.<String>} log
  */
 Job.prototype['log'] = undefined;

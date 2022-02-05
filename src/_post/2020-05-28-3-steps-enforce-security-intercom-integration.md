@@ -2,7 +2,7 @@
 permalink: /blog/3-steps-enforce-intercom-integration-security
 title: 3 steps to enforce your Intercom integration security
 description: Implement the most rigorous practices for third-party integrations. Discover 2 easy to implement steps to enforce security on your Intercom platform.
-image: https://developers.salestim.com/img/blog/intercom-security.png
+image: https://docs.nbold.co/img/blog/intercom-security.png
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

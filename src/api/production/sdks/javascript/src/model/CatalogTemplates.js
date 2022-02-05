@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -22,7 +22,7 @@ import CatalogTemplate from './CatalogTemplate';
 class CatalogTemplates {
     /**
      * Constructs a new <code>CatalogTemplates</code>.
-     * A collection of templates from your corporate catalog. See [https://developers.salestim.com/api/reference/Models/CatalogTemplate](https://developers.salestim.com/api/reference/Models/CatalogTemplate) for more information.
+     * A collection of templates from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/CatalogTemplate](https://docs.nbold.co/api/reference/Models/CatalogTemplate) for more information.
      * @alias module:model/CatalogTemplates
      */
     constructor() { 

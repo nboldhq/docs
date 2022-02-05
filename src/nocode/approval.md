@@ -68,7 +68,7 @@ You need to enable the service account that you configured in SalesTim to be aut
     ```xml
     <RSAKeyValue><Modulus>k0Qqob12HSdll52CbnXkQNW6nZO9477sE9pI8Y6z5M8hPtJinAf2r41Sxss3Y9oP1nzcfs3fHpi1AUjffyD44I2FxmqF+FGfgKsuWeYce/75Kb1QCEDOwTjP4kqgPD8NeJbWNIe2ZRRKilmxmmUZ6NErNEWvf8vzQvvpVeP9CLUIERuBxLlLlitjNTyCUjgTTkC+giKtmcxTnJ/lUav3erPsev8isS+IQwz6SaXCqj/eYnFkhM2ADF2UCL4ssgHEj6jYe4m8IyMQBgxxr4+4fziixn0uimGQqt54VbT4BToq7l7S8wSj3WNRwR7KBBWvo6pnx39fDMWazfLbe5NmsQ==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>
     ```
-    - Logo: **You can use the [SalesTim Logo](https://developers.salestim.com/color.png)**
+    - Logo: **You can use the [SalesTim Logo](https://docs.nbold.co/color.png)**
     
    ![SalesTim Approval Actionable Message New Provider Form](/img/nocode/approval-actionable-message-new-provider-form.png)
     

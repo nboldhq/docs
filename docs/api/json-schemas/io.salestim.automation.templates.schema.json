@@ -195,17 +195,17 @@
           }
         },
         "audienceTargeting": {
-          "description": "A targeting rule that defines who can use the template, based on the user profile data. See https://developers.salestim.com/nocodeapps/templatesaudiencetargeting",
+          "description": "A targeting rule that defines who can use the template, based on the user profile data. See https://docs.nbold.co/nocodeapps/templatesaudiencetargeting",
           "type": "object",
           "additionalProperties": false,
           "properties": {
             "enabled": {
-              "description": "Defines if this targeting rule is enabled. See https://developers.salestim.com/nocodeapps/templatesaudiencetargeting",
+              "description": "Defines if this targeting rule is enabled. See https://docs.nbold.co/nocodeapps/templatesaudiencetargeting",
               "type": "boolean",
               "default": false
             },
             "rules": {
-              "description": "Targeting rule to be applied. See https://developers.salestim.com/nocodeapps/templatesaudiencetargeting",
+              "description": "Targeting rule to be applied. See https://docs.nbold.co/nocodeapps/templatesaudiencetargeting",
               "type": "string",
               "maxLength": 4096
             }
@@ -279,7 +279,7 @@
           "maxLength": 2048
         },
         "screenshots": {
-          "description": "Defines the list of templates screenshots used in the template store. See https://developers.salestim.com/nocodeapps/manifestSchema",
+          "description": "Defines the list of templates screenshots used in the template store. See https://docs.nbold.co/nocodeapps/manifestSchema",
           "type": "array",
           "uniqueItems": true,
           "items": {
@@ -289,7 +289,7 @@
           }
         },
         "categories": {
-          "description": "Defines the gallery categories where the template has to appear as an array of category tags. See https://developers.salestim.com/nocodeapps/manifestSchema",
+          "description": "Defines the gallery categories where the template has to appear as an array of category tags. See https://docs.nbold.co/nocodeapps/manifestSchema",
           "type": "array",
           "uniqueItems": true,
           "items": {
@@ -376,22 +376,22 @@
       "additionalProperties": false,
       "properties": {
         "namingConvention": {
-          "description": "Dynamic name of the team to be generated during the provisioning process. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "description": "Dynamic name of the team to be generated during the provisioning process. See https://docs.nbold.co/nocodeapps/templatesnamingconventions",
           "type": "string",
           "maxLength": 4096
         },
         "emailConvention": {
-          "description": "Dynamic email nickname of the team's underlying group to be generated during the provisioning process. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "description": "Dynamic email nickname of the team's underlying group to be generated during the provisioning process. See https://docs.nbold.co/nocodeapps/templatesnamingconventions",
           "type": "string",
           "maxLength": 4096
         },
         "descriptionConvention": {
-          "description": "Dynamic description of the team to be generated during the provisioning process. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "description": "Dynamic description of the team to be generated during the provisioning process. See https://docs.nbold.co/nocodeapps/templatesnamingconventions",
           "type": "string",
           "maxLength": 4096
         },
         "welcomeMessageConvention": {
-          "description": "Dynamic welcome message to be published in the team's general channel during the provisioning process. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "description": "Dynamic welcome message to be published in the team's general channel during the provisioning process. See https://docs.nbold.co/nocodeapps/templatesnamingconventions",
           "type": "string",
           "maxLength": 4096
         },

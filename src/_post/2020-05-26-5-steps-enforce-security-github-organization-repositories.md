@@ -2,7 +2,7 @@
 permalink: /blog/5-steps-enforce-security-github-repositories
 title: 5 steps to enforce security on your GitHub organization's repositories
 description: Keeping your data safe is a full-time job. Discover 5 easy to implement steps to enforce security on your GitHub organization's repositories.
-image: https://developers.salestim.com/img/blog/github-security.png
+image: https://docs.nbold.co/img/blog/github-security.png
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

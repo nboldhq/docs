@@ -60,14 +60,14 @@ graph LR
     - This number isn’t given to Salesforce admins who install the app.
 7. (Optional) Paste this address as the `Logo Image Url`:
     ```
-    https://developers.salestim.com/color.png
+    https://docs.nbold.co/color.png
     ```
     - This  logo also displays on the consent page that users see when approving the app.
     - The logo URL must use HTTPS.
     - The logo image must be a GIF, JPG, or PNG file with a file size that’s preferably under 20 KB and no more than 100 KB. Salesforce resize the image to 128 pixels by 128 pixels, so be sure that you like how it looks. If you don’t supply a logo, Salesforce generates one for you using the app’s initials.
 8. (Optional) Paste this address as the `Info Url`:
     ```
-    https://developers.salestim.com
+    https://docs.nbold.co
     ```
 9. (Optional) Paste 'SalesTim App for Salesforce' as the `Description`.
 

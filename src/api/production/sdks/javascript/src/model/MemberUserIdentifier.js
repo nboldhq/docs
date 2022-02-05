@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class MemberUserIdentifier {
     /**
      * Constructs a new <code>MemberUserIdentifier</code>.
-     * Object representing a user. User identifier could be its ID, UPN or email. See See [https://developers.salestim.com/api/reference/Models/UserIdentifier](https://developers.salestim.com/api/reference/Models/UserIdentifier) for more information.
+     * Object representing a user. User identifier could be its ID, UPN or email. See See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
      * @alias module:model/MemberUserIdentifier
      * @param id {String} User identifier
      */

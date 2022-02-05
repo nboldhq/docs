@@ -206,7 +206,7 @@ MICROSOFT_GRAPH_DEFAULT_SCOPE=https://graph.microsoft.com/.default
 --------------------------------------------------------------------------------
 
 # Mail
-# When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://developers.salestim.com/nocode/approval.html#approval-email-sent-by-your-organization
+# When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization
 
 # (boolean) Enable sending emails from the platform. Defaults to "false".
 MAIL_ENABLED=false
@@ -216,7 +216,7 @@ MAIL_PROVIDER=sendgrid
 MAIL_SECRET_KEY=
 # (string) Default email sender (FROM:). Defaults to "notifications@salestim.io".
 MAIL_SENDER=notifications@salestim.io
-# (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://developers.salestim.com/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "".
+# (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "".
 MAIL_ACTION_MSG_ORIGINATOR=
 
 # Webhooks

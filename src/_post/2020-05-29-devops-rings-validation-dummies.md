@@ -2,7 +2,7 @@
 permalink: /blog/devops-rings-validation-dummies
 title: DevOps rings of validation for dummies
 description: Today I'll talk about the definition of the rings of validation in your SAAS release process, and how important it is to share a common vocabulary across your dev, ops and product teams.
-image: https://developers.salestim.com/img/blog/devops.png
+image: https://docs.nbold.co/img/blog/devops.png
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

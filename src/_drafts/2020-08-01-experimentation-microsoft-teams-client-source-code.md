@@ -2,7 +2,7 @@
 permalink: /_drafts/experimentation-microsoft-teams-client-source-code
 title: Experimentations using the Microsoft Teams client source code
 description: XXX
-image: https://developers.salestim.com/img/blog/XXX.png
+image: https://docs.nbold.co/img/blog/XXX.png
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

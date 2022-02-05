@@ -159,7 +159,7 @@ If the application is executed in the context of a service account model, when a
 | `ChannelSettings.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage channels settings. | Yes |
 | `ChannelMember.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage channels members. | Yes |
 
-Please refer to our Tech Hub to learn more about the [Service Account minimal requirements](https://developers.salestim.com/platform/apppermissions.html#service-account).
+Please refer to our Tech Hub to learn more about the [Service Account minimal requirements](https://docs.nbold.co/platform/apppermissions.html#service-account).
 
 ## Application scope
 

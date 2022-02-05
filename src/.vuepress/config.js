@@ -40,14 +40,14 @@ module.exports = {
       twitter: true, // twitter card
       og: true, // open graph: facebook, pinterest, google+
       schema: true,
-      canonical_base: 'https://developers.salestim.com',
+      canonical_base: 'https://docs.nbold.co',
       author: {
-        name: 'SalesTim',
-        twitter: 'salestimcrm',
+        name: 'nBold',
+        twitter: 'nBoldHQ',
       },
       site: {
-        name: 'SalesTim',
-        twitter: 'salestimcrm',
+        name: 'nBold Docs',
+        twitter: 'nBoldHQ',
       },
       description_sources: [
         'frontmatter',
@@ -102,13 +102,13 @@ module.exports = {
 
     // GitHub options
     // Assumes GitHub. Can also be a full GitLab url.
-    repo: 'salestim',
+    repo: 'nboldhq',
     // Customising the header label
     // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
     repoLabel: '🐙 GitHub',
     // Optional options for generating "Edit this page" link
     //   if your docs are in a different repo from your main project:
-    docsRepo: 'salestim/docs',
+    docsRepo: 'nboldhq/docs',
     //   if your docs are not at the root of the repo:
     docsDir: 'src',
     //   if your docs are in a specific branch (defaults to 'master'):
@@ -142,7 +142,7 @@ module.exports = {
         ariaLabel: 'Social',
         items: [
           { text: 'LinkedIn', link: 'https://www.linkedin.com/company/salestim' },
-          { text: 'Twitter', link: 'https://twitter.com/salestimcrm' },
+          { text: 'Twitter', link: 'https://twitter.com/nboldhq' },
           { text: 'Youtube', link: 'https://www.youtube.com/channel/UCyoESYiKzmIdVbR7BHu0cbQ' }
         ]
       }

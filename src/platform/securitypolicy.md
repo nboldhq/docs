@@ -19,7 +19,7 @@ The following versions of SalesTim are currently being supported with security u
 
 If you believe you have discovered a vulnerability in a SalesTim product or have a security incident to report, please send us a message to **[security@salestim.com](mailto:security@salestim.com)** (english as a preferred languages) that includes a detailed reports with reproducible steps.  
   
-If you feel the need, please use our **[PGP public key](https://developers.salestim.com/assets/encryption/PUBLIC-security@salestim.com-C97EEBEE66DCB9D1D3B372659320B5DCA21CE0A4.asc)** to encrypt your communications with us.
+If you feel the need, please use our **[PGP public key](https://docs.nbold.co/assets/encryption/PUBLIC-security@salestim.com-C97EEBEE66DCB9D1D3B372659320B5DCA21CE0A4.asc)** to encrypt your communications with us.
 
 
 ## SalesTim’s vulnerability disclosure policy

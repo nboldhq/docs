@@ -2,7 +2,7 @@
 permalink: /blog/export-microsoft-teams-meeting-participants
 title: Export the participants of a Microsoft Teams meeting as a CSV file
 description: Discover how to exports the participants of a Microsoft Teams meeting as a CSV file. 
-image: https://developers.salestim.com/img/blog/export-teams-meeting-participants.jpg
+image: https://docs.nbold.co/img/blog/export-teams-meeting-participants.jpg
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

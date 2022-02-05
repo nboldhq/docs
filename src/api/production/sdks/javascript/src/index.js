@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -73,7 +73,7 @@ import WebhooksApi from './api/WebhooksApi';
 
 
 /**
-* The_unified_Microsoft_Teams_Governance_API__Visit_our__Tech_Hub_https__developers_salestim_com_api__for_more_information_.<br>
+* The_unified_Microsoft_Teams_Governance_API__Visit_our__Tech_Hub_https__docs_nbold_co_api__for_more_information_.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:

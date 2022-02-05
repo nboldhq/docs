@@ -19,7 +19,7 @@ To import the Postman collection:
 4. Paste the following URL and choose **Import**.
 
 ```
-https://developers.salestim.com/api/definitions/v1.0/open-api/apiDefinition.swagger.yaml
+https://docs.nbold.co/api/definitions/v1.0/open-api/apiDefinition.swagger.yaml
 ```
 
 You are now up and running with the SalesTim API collection.

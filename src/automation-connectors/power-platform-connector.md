@@ -131,7 +131,7 @@ SalesTim
 ```
 - Paste this URL:
 ```
-https://developers.salestim.com/api/definitions/v1.0/open-api/power-platform/apiDefinition.swagger.json
+https://docs.nbold.co/api/definitions/v1.0/open-api/power-platform/apiDefinition.swagger.json
 ```
 - Click `Import`, then `Continue`
 - Upload the connector logo that you can download from:
@@ -163,9 +163,9 @@ https://graph.microsoft.com/.default
 
 ## 3. Update the Power Platform Connector
 To update your Power Platform connector:
-- Open the updated <a target="_blank" href="https://developers.salestim.com/api/definitions/v1.0/open-api/power-platform/apiDefinition.swagger.yaml">connector definition</a>
+- Open the updated <a target="_blank" href="https://docs.nbold.co/api/definitions/v1.0/open-api/power-platform/apiDefinition.swagger.yaml">connector definition</a>
 ```
-https://developers.salestim.com/api/definitions/v1.0/open-api/power-platform/apiDefinition.swagger.yaml
+https://docs.nbold.co/api/definitions/v1.0/open-api/power-platform/apiDefinition.swagger.yaml
 ```
 - Copy the whole content
 - From Power Apps or Power Automate, open your custom connector from the `Data \ Custom connectors` menu

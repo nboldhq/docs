@@ -2,27 +2,27 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://developers.salestim.com/</loc>
+      <loc>https://docs.nbold.co/</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>https://developers.salestim.com/nocode</loc>
+      <loc>https://docs.nbold.co/nocode</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>https://developers.salestim.com/api</loc>
+      <loc>https://docs.nbold.co/api</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>https://developers.salestim.com/blog</loc>
+      <loc>https://docs.nbold.co/blog</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>https://developers.salestim.com/api/explorer</loc>
+      <loc>https://docs.nbold.co/api/explorer</loc>
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>https://developers.salestim.com/platform</loc>
+      <loc>https://docs.nbold.co/platform</loc>
       <changefreq>monthly</changefreq>
    </url>
    <url>

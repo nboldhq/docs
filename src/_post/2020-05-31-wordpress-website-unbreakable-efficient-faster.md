@@ -2,7 +2,7 @@
 permalink: /blog/wordpress-website-unbreakable-cost-efficient-faster
 title: How we made our WordPress website unbreakable, cost efficient and 400% faster
 description: Discover how we improved our WordPress website security, efficiency and speed by building a Static Site Generator for GitHub Pages
-image: https://developers.salestim.com/img/blog/wordpress.png
+image: https://docs.nbold.co/img/blog/wordpress.png
 author:
   name: Guillaume Meyer
   profile: https://twitter.com/guillaumemeyer

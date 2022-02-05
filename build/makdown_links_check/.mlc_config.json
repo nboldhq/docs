@@ -1,7 +1,7 @@
 {
   "ignorePatterns": [
     {
-      "pattern": "^https://github.com/SalesTim/docs/"
+      "pattern": "^https://github.com/nboldhq/docs/"
     },
     {
       "pattern": "^/src/api/sdks"

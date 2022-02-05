@@ -4,7 +4,7 @@
 The SalesTim API SDKs are designed to simplify building high-quality, efficient, and resilient applications that access the SalesTim API.  
 The service library contains models and request builders that are generated from the SalesTim API metadata to provide a rich, strongly typed, and discoverable experience when working with the many datasets available in the SalesTim API.
 
-To learn more about the SalesTim API, see [API Reference](https://developers.salestim.com/api) or try it online with our [API Explorer](https://developers.salestim.com/api/explorer).
+To learn more about the SalesTim API, see [API Reference](https://docs.nbold.co/api) or try it online with our [API Explorer](https://docs.nbold.co/api/explorer).
 
 ---
 

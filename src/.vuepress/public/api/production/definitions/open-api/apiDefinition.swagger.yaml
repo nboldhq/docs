@@ -3,12 +3,12 @@ openapi: "3.0.3"
 info:
   title: SalesTim API
   description: >
-    The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information.
+    The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information.
   version: "1.2.3"
   termsOfService: https://www.salestim.com/legal/tos
   contact:
     name: SalesTim Support
-    url: https://developers.salestim.com/api
+    url: https://docs.nbold.co/api
     email: support@salestim.com
   license:
     name: (c) Copyright 2019-2022 SalesTim - all rights reserved.
@@ -22,35 +22,35 @@ tags:
   - name: Templates Catalog
     description: Your corporate catalog of teams templates and governance policies.
     externalDocs:
-      url: https://developers.salestim.com/api/reference/Apis/CatalogApi
+      url: https://docs.nbold.co/api/reference/Apis/CatalogApi
   - name: Approvals
     description: Team creation requests approvals.
     externalDocs:
-      url: https://developers.salestim.com/api/reference/Apis/ApprovalsApi
+      url: https://docs.nbold.co/api/reference/Apis/ApprovalsApi
   - name: Audit Trails
     description: SalesTim audit trails.
     externalDocs:
-      url: https://developers.salestim.com/api/reference/Apis/ApprovalsApi
+      url: https://docs.nbold.co/api/reference/Apis/ApprovalsApi
   - name: Teams
     description: Teams from your Microsoft Teams environment.
     externalDocs:
-      url: https://developers.salestim.com/api/reference/Apis/TeamsApi
+      url: https://docs.nbold.co/api/reference/Apis/TeamsApi
   - name: Users
     description: Users from your Microsoft 365 environment.
     externalDocs:
-      url: https://developers.salestim.com/api/reference/Apis/UsersApi
+      url: https://docs.nbold.co/api/reference/Apis/UsersApi
   - name: Jobs
     description: Jobs that performs governance operations.
     externalDocs:
-      url: https://developers.salestim.com/api/reference/Apis/JobsApi
+      url: https://docs.nbold.co/api/reference/Apis/JobsApi
   - name: Sensitivity Labels
     description: Microsoft 365 sensitivity labels.
     externalDocs:
-      url: https://developers.salestim.com/api/reference/Apis/LabelsApi
+      url: https://docs.nbold.co/api/reference/Apis/LabelsApi
   - name: Webhooks
     description: SalesTim Platform Webhooks.
     externalDocs:
-      url: https://developers.salestim.com/api/reference/Apis/HooksApi
+      url: https://docs.nbold.co/api/reference/Apis/HooksApi
 
 paths:
   /audittrails:
@@ -61,7 +61,7 @@ paths:
       description: Get all the audit trails accessible in your organization. TIER 3 | ROLES - AUTHORIZED_APP, COMPLIANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
       operationId: GetAuditTrails
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/AuditTrailsApi.html#getaudittrails
+        url: https://docs.nbold.co/api/reference/Apis/AuditTrailsApi.html#getaudittrails
       security:
         - bearerAuth: []
       responses:
@@ -98,7 +98,7 @@ paths:
       description: Get all the records from an audit trail. TIER 2 | ROLES - AUTHORIZED_APP, COMPLIANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
       operationId: GetAuditTrailRecords
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/AuditTrailsApi.html#getaudittrailrecords
+        url: https://docs.nbold.co/api/reference/Apis/AuditTrailsApi.html#getaudittrailrecords
       security:
         - bearerAuth: []
       parameters:
@@ -142,7 +142,7 @@ paths:
       description: Approve a team creation request. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: ApproveTeamCreation
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/ApprovalsApi.html#approveteamcreation
+        url: https://docs.nbold.co/api/reference/Apis/ApprovalsApi.html#approveteamcreation
       security:
         - bearerAuth: []
       parameters:
@@ -189,7 +189,7 @@ paths:
       description: Reject a team creation request. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: RejectTeamCreation
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/ApprovalsApi.html#rejectteamcreation
+        url: https://docs.nbold.co/api/reference/Apis/ApprovalsApi.html#rejectteamcreation
       security:
         - bearerAuth: []
       parameters:
@@ -236,7 +236,7 @@ paths:
       description: Get all the teams templates accessible in your organization. TIER 2️⃣ | ROLES - AUTHORIZED_APP, CATALOG_MANAGER, INTEGRATION_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
       operationId: GetCatalogTemplates
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/CatalogApi.html#getcatalogtemplates
+        url: https://docs.nbold.co/api/reference/Apis/CatalogApi.html#getcatalogtemplates
       security:
         - bearerAuth: []
       parameters:
@@ -280,7 +280,7 @@ paths:
       description: Get teams templates accessible to the connected user filtered by the audience targeting rules. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: GetMyCatalogTemplates
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/CatalogApi.html#getmycatalogtemplates
+        url: https://docs.nbold.co/api/reference/Apis/CatalogApi.html#getmycatalogtemplates
       security:
         - bearerAuth: []
       parameters:
@@ -324,7 +324,7 @@ paths:
       description: Get my Microsoft 365 sensitivity labels. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: GetMyLabels
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/LabelsApi.html#getmylabels
+        url: https://docs.nbold.co/api/reference/Apis/LabelsApi.html#getmylabels
       security:
         - bearerAuth: []
       responses:
@@ -361,7 +361,7 @@ paths:
       description: Retreive users from your Microsoft 365 environment. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: GetUsers
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/UsersApi.html#getUsers
+        url: https://docs.nbold.co/api/reference/Apis/UsersApi.html#getUsers
       security:
         - bearerAuth: []
       responses:
@@ -398,7 +398,7 @@ paths:
       description: Get detailed information about a team. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
       operationId: GetTeam
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#getteam
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#getteam
       security:
         - bearerAuth: []
       parameters:
@@ -440,7 +440,7 @@ paths:
       description: Update a team. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
       operationId: UpdateTeam
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#updateteam
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#updateteam
       security:
         - bearerAuth: []
       parameters:
@@ -485,7 +485,7 @@ paths:
       description: Delete a team. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: DeleteTeam
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#deleteteam
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#deleteteam
       security:
         - bearerAuth: []
       parameters:
@@ -525,7 +525,7 @@ paths:
       description: Archive a team. TIER 1️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: ArchiveTeam
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#archiveteam
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#archiveteam
       security:
         - bearerAuth: []
       parameters:
@@ -572,7 +572,7 @@ paths:
       description: Unarchive a team. TIER 1️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: UnarchiveTeam
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#unarchiveteam
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#unarchiveteam
       security:
         - bearerAuth: []
       parameters:
@@ -612,7 +612,7 @@ paths:
       description: Add a team member. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: AddTeamMember
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#addteammember
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#addteammember
       security:
         - bearerAuth: []
       parameters:
@@ -663,7 +663,7 @@ paths:
       description: Create a new team provisioning job. TIER 1️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: CreateTeamProvisioningJob
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#createteamprovisioningjob
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#createteamprovisioningjob
       security:
         - bearerAuth: []
       requestBody:
@@ -707,7 +707,7 @@ paths:
       description: Get team channels. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: GetTeamChannels
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#getteamchannels
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#getteamchannels
       security:
         - bearerAuth: []
       parameters:
@@ -749,7 +749,7 @@ paths:
       description: Create a new team channel. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: CreateTeamChannel
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#createteamchannel
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#createteamchannel
       security:
         - bearerAuth: []
       parameters:
@@ -800,7 +800,7 @@ paths:
       description: Get the primary channel of a team. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: GetTeamPrimaryChannel
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#getteamprimarychannel
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#getteamprimarychannel
       security:
         - bearerAuth: []
       parameters:
@@ -844,7 +844,7 @@ paths:
       description: Get team channel tabs. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: GetTeamChannelTabs
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#getteamchanneltabs
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#getteamchanneltabs
       security:
         - bearerAuth: []
       parameters:
@@ -892,7 +892,7 @@ paths:
       description: Create a new team channel tab. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: CreateTeamChannelTab
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/TeamsApi.html#createteamchanneltab
+        url: https://docs.nbold.co/api/reference/Apis/TeamsApi.html#createteamchanneltab
       security:
         - bearerAuth: []
       parameters:
@@ -949,7 +949,7 @@ paths:
       description: Get detailed information about a job, including its status, progress, logs... TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
       operationId: GetJob
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/JobsApi.html#getjob
+        url: https://docs.nbold.co/api/reference/Apis/JobsApi.html#getjob
       security:
         - bearerAuth: []
       parameters:
@@ -995,7 +995,7 @@ paths:
       security:
         - bearerAuth: []
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/HooksApi.html#gethooksevents
+        url: https://docs.nbold.co/api/reference/Apis/HooksApi.html#gethooksevents
       responses:
         "200":
           description: OK - Returns a HooksEvents object.
@@ -1032,7 +1032,7 @@ paths:
       security:
         - bearerAuth: []
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/HooksApi.html#generatehooksignature
+        url: https://docs.nbold.co/api/reference/Apis/HooksApi.html#generatehooksignature
       requestBody:
         description: A HookSignatureRequest object comprised of the secret and payload.
         content:
@@ -1076,7 +1076,7 @@ paths:
       security:
         - bearerAuth: []
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/HooksApi.html#createhook
+        url: https://docs.nbold.co/api/reference/Apis/HooksApi.html#createhook
       requestBody:
         description: A HookPayload object.
         content:
@@ -1161,7 +1161,7 @@ paths:
       security:
         - bearerAuth: []
       externalDocs:
-        url: https://developers.salestim.com/api/reference/Apis/HooksApi.html#deletehook
+        url: https://docs.nbold.co/api/reference/Apis/HooksApi.html#deletehook
       parameters:
         - name: hookId
           in: path
@@ -1973,7 +1973,7 @@ components:
 
     CatalogTemplates:
       title: Catalog Templates
-      description: A collection of templates from your corporate catalog. See [https://developers.salestim.com/api/reference/Models/CatalogTemplate](https://developers.salestim.com/api/reference/Models/CatalogTemplate) for more information.
+      description: A collection of templates from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/CatalogTemplate](https://docs.nbold.co/api/reference/Models/CatalogTemplate) for more information.
       type: object
       properties:
         "@odata.context":
@@ -1991,7 +1991,7 @@ components:
 
     CatalogTemplate:
       title: Catalog Template
-      description: A template from your corporate catalog. See [https://developers.salestim.com/api/reference/Models/CatalogTemplate](https://developers.salestim.com/api/reference/Models/CatalogTemplate) for more information.
+      description: A template from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/CatalogTemplate](https://docs.nbold.co/api/reference/Models/CatalogTemplate) for more information.
       type: object
       properties:
         templateConfiguration:
@@ -2130,7 +2130,7 @@ components:
 
     TeamProvisioningRequest:
       title: Team Provisioning Request
-      description: A request to provision a team based on a template from your corporate catalog. See [https://developers.salestim.com/api/reference/Models/ProvisioningRequest](https://developers.salestim.com/api/reference/Models/ProvisioningRequest) for more information.
+      description: A request to provision a team based on a template from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/ProvisioningRequest](https://docs.nbold.co/api/reference/Models/ProvisioningRequest) for more information.
       type: object
       properties:
         template:
@@ -2170,21 +2170,21 @@ components:
 
     MembersUserIdentifiers:
       title: Teams members
-      description: An array of UserIdentifier. See [https://developers.salestim.com/api/reference/Models/UserIdentifier](https://developers.salestim.com/api/reference/Models/UserIdentifier) for more information.
+      description: An array of UserIdentifier. See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
       type: array
       items:
         $ref: "#/components/schemas/MemberUserIdentifier"
 
     OwnersUserIdentifiers:
       title: Team owners
-      description: An array of UserIdentifier. See [https://developers.salestim.com/api/reference/Models/UserIdentifier](https://developers.salestim.com/api/reference/Models/UserIdentifier) for more information.
+      description: An array of UserIdentifier. See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
       type: array
       items:
         $ref: "#/components/schemas/OwnerUserIdentifier"
 
     MemberUserIdentifier:
       title: Team member
-      description: Object representing a user. User identifier could be its ID, UPN or email. See See [https://developers.salestim.com/api/reference/Models/UserIdentifier](https://developers.salestim.com/api/reference/Models/UserIdentifier) for more information.
+      description: Object representing a user. User identifier could be its ID, UPN or email. See See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
       type: object
       properties:
         id:
@@ -2196,7 +2196,7 @@ components:
 
     OwnerUserIdentifier:
       title: Team owner
-      description: Object representing a user. User identifier could be its ID, UPN or email. See See [https://developers.salestim.com/api/reference/Models/UserIdentifier](https://developers.salestim.com/api/reference/Models/UserIdentifier) for more information.
+      description: Object representing a user. User identifier could be its ID, UPN or email. See See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
       type: object
       properties:
         id:
@@ -2208,7 +2208,7 @@ components:
 
     AppMetadata:
       title: App Metadata
-      description: Metadata from the app client as a JSON object. See [https://developers.salestim.com/api/reference/Models/AppMetadata](https://developers.salestim.com/api/reference/Models/VirtualAppMetadata) for more information.
+      description: Metadata from the app client as a JSON object. See [https://docs.nbold.co/api/reference/Models/AppMetadata](https://docs.nbold.co/api/reference/Models/VirtualAppMetadata) for more information.
       type: object
 
     Hook:
@@ -2344,14 +2344,14 @@ components:
 
     PermanentMembers:
       title: Permanent Members
-      description: Members of a permanent membership team, as an array of PermanentMember. See [https://developers.salestim.com/api/reference/Models/PermanentMember](https://developers.salestim.com/api/reference/Models/PermanentMember) for more information.
+      description: Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.
       type: array
       items:
         $ref: "#/components/schemas/PermanentMember"
 
     PermanentMember:
       title: Permanent Member
-      description: Object representing a permanent member. See See [https://developers.salestim.com/api/reference/Models/PermanentMember](https://developers.salestim.com/api/reference/Models/PermanentMember) for more information.
+      description: Object representing a permanent member. See See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.
       type: object
       properties:
         id:
@@ -2365,14 +2365,14 @@ components:
 
     ApprovalTeamMembers:
       title: Approval Team Members
-      description: Members of an approval team, as an array of ApprovalTeamMember. See [https://developers.salestim.com/api/reference/Models/ApprovalTeamMember](https://developers.salestim.com/api/reference/Models/ApprovalTeamMember) for more information.
+      description: Members of an approval team, as an array of ApprovalTeamMember. See [https://docs.nbold.co/api/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/reference/Models/ApprovalTeamMember) for more information.
       type: array
       items:
         $ref: "#/components/schemas/ApprovalTeamMember"
 
     ApprovalTeamMember:
       title: Approval Team Member
-      description: Object representing an approval team member. See See [https://developers.salestim.com/api/reference/Models/ApprovalTeamMember](https://developers.salestim.com/api/reference/Models/ApprovalTeamMember) for more information.
+      description: Object representing an approval team member. See See [https://docs.nbold.co/api/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/reference/Models/ApprovalTeamMember) for more information.
       type: object
       properties:
         id:
@@ -2386,7 +2386,7 @@ components:
 
     Job:
       title: Job
-      description: A job that performs some tasks asynchronously. See [https://developers.salestim.com/api/reference/Models/Job](https://developers.salestim.com/api/reference/Models/Job) for more information.
+      description: A job that performs some tasks asynchronously. See [https://docs.nbold.co/api/reference/Models/Job](https://docs.nbold.co/api/reference/Models/Job) for more information.
       type: object
       properties:
         id:
@@ -2421,14 +2421,14 @@ components:
 
     JobLogs:
       title: Job Logs
-      description: A collection of JobLogsEntry. See [https://developers.salestim.com/api/reference/Models/JobLogs](https://developers.salestim.com/api/reference/Models/JobLogs) for more information.
+      description: A collection of JobLogsEntry. See [https://docs.nbold.co/api/reference/Models/JobLogs](https://docs.nbold.co/api/reference/Models/JobLogs) for more information.
       type: array
       items:
         $ref: "#/components/schemas/JobLogsEntry"
 
     JobLogsEntry:
       title: Job Logs Entry
-      description: A job logs entry. See [https://developers.salestim.com/api/reference/Models/JobLogsEntry](https://developers.salestim.com/api/reference/Models/JobLogsEntry) for more information.
+      description: A job logs entry. See [https://docs.nbold.co/api/reference/Models/JobLogsEntry](https://docs.nbold.co/api/reference/Models/JobLogsEntry) for more information.
       type: string
 
     ApiError:
@@ -2469,49 +2469,49 @@ components:
     202:
       description: Accepted - Indicates that the request has been accepted for processing, but the processing has not been completed.
     400:
-      description: Bad Request - Indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). See [Handling expected errors](https://developers.salestim.com/api/best-practices.html#handling-expected-errors) article for more information.
+      description: Bad Request - Indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). See [Handling expected errors](https://docs.nbold.co/api/best-practices.html#handling-expected-errors) article for more information.
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ApiError"
     401:
-      description: Unauthorized - Indicates that the request has not been applied because it lacks valid authentication credentials for the target resource (e.g., missing or invalid access token or API key...). See [Handling expected errors](https://developers.salestim.com/api/best-practices.html#handling-expected-errors) article for more information.
+      description: Unauthorized - Indicates that the request has not been applied because it lacks valid authentication credentials for the target resource (e.g., missing or invalid access token or API key...). See [Handling expected errors](https://docs.nbold.co/api/best-practices.html#handling-expected-errors) article for more information.
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ApiError"
     402:
-      description: Payment Required - Indicates that the request can not be processed as the client doesn't have a valid subscription. See [Handling expected errors](https://developers.salestim.com/api/best-practices.html#handling-expected-errors) article for more information.
+      description: Payment Required - Indicates that the request can not be processed as the client doesn't have a valid subscription. See [Handling expected errors](https://docs.nbold.co/api/best-practices.html#handling-expected-errors) article for more information.
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ApiError"
     403:
-      description: Forbidden - Indicates that the server understood the request but refuses to authorize it. See [Handling expected errors](https://developers.salestim.com/api/best-practices.html#handling-expected-errors) article for more information.
+      description: Forbidden - Indicates that the server understood the request but refuses to authorize it. See [Handling expected errors](https://docs.nbold.co/api/best-practices.html#handling-expected-errors) article for more information.
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ApiError"
     404:
-      description: Not Found - Indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists. See [Handling expected errors](https://developers.salestim.com/api/best-practices.html#handling-expected-errors) article for more information.
+      description: Not Found - Indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists. See [Handling expected errors](https://docs.nbold.co/api/best-practices.html#handling-expected-errors) article for more information.
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ApiError"
     429:
-      description: Too Many Requests - Your request has been throttled as you've reached the maximum number of concurrent calls to our service. Look at the "Retry-After" header. See [API throttling guidance](https://developers.salestim.com/api/throttling.html#salestim-api-throttling-guidance) article for more information.
+      description: Too Many Requests - Your request has been throttled as you've reached the maximum number of concurrent calls to our service. Look at the "Retry-After" header. See [API throttling guidance](https://docs.nbold.co/api/throttling.html#salestim-api-throttling-guidance) article for more information.
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ApiError"
     500:
-      description: Internal Server Error - Indicates that the server encountered an unexpected condition that prevented it from fulfilling the request. See [Handling expected errors](https://developers.salestim.com/api/best-practices.html#handling-expected-errors) article for more information.
+      description: Internal Server Error - Indicates that the server encountered an unexpected condition that prevented it from fulfilling the request. See [Handling expected errors](https://docs.nbold.co/api/best-practices.html#handling-expected-errors) article for more information.
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ApiError"
     503:
-      description: Service Unavailable - Indicates that the server is currently unable to handle the request due to a temporary overload or scheduled maintenance, which will likely be alleviated after some delay. See [Handling expected errors](https://developers.salestim.com/api/best-practices.html#handling-expected-errors) article for more information.
+      description: Service Unavailable - Indicates that the server is currently unable to handle the request due to a temporary overload or scheduled maintenance, which will likely be alleviated after some delay. See [Handling expected errors](https://docs.nbold.co/api/best-practices.html#handling-expected-errors) article for more information.
       content:
         application/json:
           schema:

@@ -1,6 +1,6 @@
 /**
  * SalesTim API
- * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://developers.salestim.com/api/) for more information. 
+ * The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information. 
  *
  * The version of the OpenAPI document: 1.2.3
  * Contact: support@salestim.com
@@ -63,13 +63,13 @@ class CatalogTemplateTemplateConfigurationPermanentMembership {
 }
 
 /**
- * Members of a permanent membership team, as an array of PermanentMember. See [https://developers.salestim.com/api/reference/Models/PermanentMember](https://developers.salestim.com/api/reference/Models/PermanentMember) for more information.
+ * Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.
  * @member {Array.<module:model/PermanentMember>} members
  */
 CatalogTemplateTemplateConfigurationPermanentMembership.prototype['members'] = undefined;
 
 /**
- * Members of a permanent membership team, as an array of PermanentMember. See [https://developers.salestim.com/api/reference/Models/PermanentMember](https://developers.salestim.com/api/reference/Models/PermanentMember) for more information.
+ * Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.
  * @member {Array.<module:model/PermanentMember>} owners
  */
 CatalogTemplateTemplateConfigurationPermanentMembership.prototype['owners'] = undefined;

@@ -1,7 +1,7 @@
 ![Classification:PUBLIC](https://img.shields.io/badge/🔖_Classification-PUBLIC-blue)
 [![license](https://img.shields.io/badge/©️_License-MIT-yellow?style=flat)](./LICENSE.md)
 [![](https://img.shields.io/badge/semver-2.0.0-informational)](https://semver.org)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/salestim/docs)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/nboldhq/docs)
 
 # 👋 Welcome to the nBold documentation repository
 
@@ -14,7 +14,7 @@ This repository hosts the contents of the [Docs](https://docs.nbold.co/) website
 
 ```sh
 # Clone this repo
-git clone https://github.com/SalesTim/docs.git
+git clone https://github.com/nboldhq/docs.git
 # Install dependencies
 npm install
 # Build the app

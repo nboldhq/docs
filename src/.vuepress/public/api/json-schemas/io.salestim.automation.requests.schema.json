@@ -25,17 +25,17 @@
       "additionalProperties": false,
       "properties": {
         "name": {
-          "description": "Name of the team to be used during the provisioning process. N.B: Naming conventions may be applied on it. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "description": "Name of the team to be used during the provisioning process. N.B: Naming conventions may be applied on it. See https://docs.nbold.co/nocodeapps/templatesnamingconventions",
           "type": "string",
           "maxLength": 128
         },
         "description": {
-          "description": "Description of the team to be used during the provisioning process. N.B: Naming conventions may be applied on it. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "description": "Description of the team to be used during the provisioning process. N.B: Naming conventions may be applied on it. See https://docs.nbold.co/nocodeapps/templatesnamingconventions",
           "type": "string",
           "maxLength": 1024
         },
         "welcomeMessage": {
-          "description": "Welcome message to be published in the 'general' channel of the provisioned team. N.B: Naming conventions may be applied on it. See https://developers.salestim.com/nocodeapps/templatesnamingconventions",
+          "description": "Welcome message to be published in the 'general' channel of the provisioned team. N.B: Naming conventions may be applied on it. See https://docs.nbold.co/nocodeapps/templatesnamingconventions",
           "type": "string",
           "maxLength": 2048
         },
