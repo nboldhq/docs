@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/nboldhq/docs/compare/v0.3.0...v0.4.0) (2022-02-08)
+
+
+### Features
+
+* 🎸 first implementation of the nbold branding ([cfbed43](https://github.com/nboldhq/docs/commit/cfbed435accc2ab508c9b9adb849f1e7582460f4))
+
+
+### Bug Fixes
+
+* 🐛 fixed issue with the automation-connectors nav ([6266be7](https://github.com/nboldhq/docs/commit/6266be7085a7a569c0ff49beeb430572fcb16cb9))
+
 ## [0.3.0](https://github.com/nboldhq/docs/compare/v0.2.0...v0.3.0) (2022-02-04)
 
 
