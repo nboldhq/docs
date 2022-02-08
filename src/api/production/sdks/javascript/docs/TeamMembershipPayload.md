@@ -1,4 +1,4 @@
-# SalesTimApi.TeamMembershipPayload
+# NBoldApi.TeamMembershipPayload
 
 ## Properties
 

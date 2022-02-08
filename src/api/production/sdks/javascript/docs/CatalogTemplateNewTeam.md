@@ -1,4 +1,4 @@
-# SalesTimApi.CatalogTemplateNewTeam
+# NBoldApi.CatalogTemplateNewTeam
 
 ## Properties
 

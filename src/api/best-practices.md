@@ -1,7 +1,7 @@
-# Best Practices for Working with the SalesTim API
+# Best Practices for Working with the nBold API
 
 **ABSTRACT**  
-This article describes best practices that you can apply to help your applications get the most out of the SalesTim API - whether that involves improving app performance, or making your application more reliable for end users.
+This article describes best practices that you can apply to help your applications get the most out of the nBold API - whether that involves improving app performance, or making your application more reliable for end users.
 
 ---
 
@@ -12,7 +12,7 @@ This article describes best practices that you can apply to help your applicatio
 
 ## Handle responses effectively
 
-Depending on the requests you make to SalesTim API, your applications should be prepared to handle different types of responses. The following are some of the most important practices to follow to ensure that your application behaves reliably and predictably for your end users.
+Depending on the requests you make to nBold API, your applications should be prepared to handle different types of responses. The following are some of the most important practices to follow to ensure that your application behaves reliably and predictably for your end users.
 
 ### Handling expected errors
 
@@ -27,10 +27,10 @@ While your application should handle all error responses (in the 400 and 500 ran
 
 ### Evolvable enums
 
-Client applications can be broken by the addition of members to an existing enum. For some newer enums in SalesTim API, a mechanism is available to allow for adding new members without incurring a breaking change. On these newer enums, you'll see a common *sentinel* member called `unknownFutureValue` that demarcates known and unknown enum members. Known members will have a number less than the sentinel member, while unknown members will be greater in value.
+Client applications can be broken by the addition of members to an existing enum. For some newer enums in nBold API, a mechanism is available to allow for adding new members without incurring a breaking change. On these newer enums, you'll see a common *sentinel* member called `unknownFutureValue` that demarcates known and unknown enum members. Known members will have a number less than the sentinel member, while unknown members will be greater in value.
 
 ## Reliability and support
-To ensure reliability and facilitate support for your application, generate a unique GUID and send it on each SalesTim API REST request. This will help SalesTim investigate any errors more easily if you need to report an issue with SalesTim API.
-To do so, on every request to SalesTim API, generate a unique GUID, send it in the `client-request-id` HTTP request header, and also log it in your application's logs.
+To ensure reliability and facilitate support for your application, generate a unique GUID and send it on each nBold API REST request. This will help nBold investigate any errors more easily if you need to report an issue with nBold API.
+To do so, on every request to nBold API, generate a unique GUID, send it in the `client-request-id` HTTP request header, and also log it in your application's logs.
 
 <Classification label="public" />

@@ -1,4 +1,4 @@
-# SalesTimApi.MemberUserIdentifier
+# NBoldApi.MemberUserIdentifier
 
 ## Properties
 

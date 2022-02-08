@@ -1,4 +1,4 @@
-# SalesTimApi.TeamChannelTab
+# NBoldApi.TeamChannelTab
 
 ## Properties
 

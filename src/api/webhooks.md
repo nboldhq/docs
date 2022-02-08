@@ -1,7 +1,7 @@
 # Webhooks Reference
 
 **ABSTACT**  
-Webhooks enable organizations to trigger automated operations outside of the SalesTim platform, such as in a custom application, or in an automation tool such as Power Automate or Zapier.
+Webhooks enable organizations to trigger automated operations outside of the nBold platform, such as in a custom application, or in an automation tool such as Power Automate or Zapier.
 
 ---
 
@@ -11,15 +11,15 @@ Webhooks enable organizations to trigger automated operations outside of the Sal
 ---
 
 ## Managing Webhooks
-Organizations can manage webhooks from the SalesTim App UI:
+Organizations can manage webhooks from the nBold App UI:
 1. Open the `Integration` tab
 2. Select the `Webhooks` section.
 
 ::: warning
-Due to the fact that data may be exchanged outside of your Microsoft 365 environment, webhooks have to be considered as **highly sensitive**. To protect these operations, the SalesTim platform controls webhooks management through RBAC, making any operation related to webhooks accessible only to users granted with one of the following roles:
+Due to the fact that data may be exchanged outside of your Microsoft 365 environment, webhooks have to be considered as **highly sensitive**. To protect these operations, the nBold platform controls webhooks management through RBAC, making any operation related to webhooks accessible only to users granted with one of the following roles:
 - `Global admin` (Microsoft 365) role
 - `Teams service admin` (Microsoft 365) role
-- `Integration Manager` (SalesTim) role
+- `Integration Manager` (nBold) role
 :::
 
 ## Anatomy of a Webhook
@@ -50,10 +50,10 @@ When triggered, the webhook generates an http `POST` request to its configured u
 The following headers are included in the request:
 ```json
 {
-  "X-SalesTim-Webhook": "", // {string} UUID of the webhook that triggered the request.
-  "X-SalesTim-Event": "", // {string} Code of the event that triggered the request.
-  "X-SalesTim-Delivery": "", // {string} An automatically generated UUID to identify the request.
-  "X-SalesTim-Signature": "" // {string} This header is sent if the webhook is configured with a secret.
+  "X-nBold-Webhook": "", // {string} UUID of the webhook that triggered the request.
+  "X-nBold-Event": "", // {string} Code of the event that triggered the request.
+  "X-nBold-Delivery": "", // {string} An automatically generated UUID to identify the request.
+  "X-nBold-Signature": "" // {string} This header is sent if the webhook is configured with a secret.
 }
 ```
 
@@ -69,8 +69,8 @@ A webhook payload contains at least the following properties:
 ```
 
 ### User-Agent
-The User-Agent for the requests will have the prefix `SalesTim-Webhook/` and include the SalesTim current version number.  
-For instance `SalesTim-Webhook/2.1.193`
+The User-Agent for the requests will have the prefix `nBold-Webhook/` and include the nBold current version number.  
+For instance `nBold-Webhook/2.1.193`
 
 ## Supported Events
 Here are sample payloads for each supported event. 
@@ -615,8 +615,8 @@ RETRY_INTERVAL = 10000 // Number of milliseconds between each retry
 ```
 
 ### Verifying Webhooks
-Webhooks sent by SalesTim can be verified by calculating a digital signature. If a secret has been defined, the webhook requests will includes a `X-SalesTim-Signature` header.  
-To verify that the request came from SalesTim, compute the HMAC hex digest of the request body, generated using the SHA-256 hash function and the secret as the HMAC key. If they match, then you can be sure that the webhook was sent from SalesTim.
+Webhooks sent by nBold can be verified by calculating a digital signature. If a secret has been defined, the webhook requests will includes a `X-nBold-Signature` header.  
+To verify that the request came from nBold, compute the HMAC hex digest of the request body, generated using the SHA-256 hash function and the secret as the HMAC key. If they match, then you can be sure that the webhook was sent from nBold.
 
 Here are a comprehensive list of examples for multiple languages:
 

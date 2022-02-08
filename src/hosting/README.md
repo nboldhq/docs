@@ -1,8 +1,8 @@
-# About SalesTim Self-Hosted
+# nBold Self-Hosted
 
-This documentation is for hosting SalesTim on your own servers and managing your own infrastructure (installation, maintenance, upgrades, server capacity, uptime, backup and so on).
+This documentation is for hosting our platform on your own servers and managing your own infrastructure (installation, maintenance, upgrades, server capacity, uptime, backup and so on).
 
-This is different from [SalesTim Cloud](https://www.salestim.com) where we manage everything for your ease and convenience. Take a look at the [differences between SalesTim Cloud and Self-Hosted](./references/self_hosted_cloud_comparison).
+This is different from [nBold Cloud](https://www.bold.co) where we manage everything for your ease and convenience. Take a look at the [differences between nBold Cloud and Self-Hosted](./references/self_hosted_cloud_comparison).
 
 **To get started easily, please read our [Getting Started Guide](./deployment/getting_started).**
 

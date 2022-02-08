@@ -121,27 +121,28 @@ module.exports = {
     // Navbar: Horizontal navigation
     nav: [
       {
-        text: '🚀 Developers',
+        text: '🚀 Automation',
+        ariaLabel: 'Automation',
+        items: [
+          { text: 'Power Platform', link: '/automation/power-platform-automation-connector' },
+          { text: 'Logic Apps', link: '/automation/logic-apps-automation-connector' }
+        ]
+      },
+      {
+        text: '>_ Developers',
         ariaLabel: 'Developers',
         items: [
-          { text: 'Power Platform', link: '/automation-connectors/power-platform-automation-connector' },
-          { text: 'Logic Apps', link: '/automation-connectors/logic-apps-automation-connector' },
-          { text: 'API Explorer', link: '/api/explorer' }
+          { text: 'API Explorer', link: '/api/explorer' },
+          { text: 'API Reference', link: '/api/production/reference/' }
         ]
       },
+      { text: '🔐 Trust Center', link: '/trust/' },
       {
-        text: '🔐 Security',
-        ariaLabel: 'Security',
+        text: '🌐 More',
+        ariaLabel: 'More',
         items: [
-          { text: 'Trust Center', link: '/platform/' },
-        ]
-      },
-      { text: '🌐 nBold', link: 'https://www.nbold.co' },
-      {
-        text: '📡 Social',
-        ariaLabel: 'Social',
-        items: [
-          { text: 'LinkedIn', link: 'https://www.linkedin.com/company/salestim' },
+          { text: 'nBold', link: 'https://www.nbold.co' },
+          { text: 'LinkedIn', link: 'https://www.linkedin.com/company/nbold' },
           { text: 'Twitter', link: 'https://twitter.com/nboldhq' },
           { text: 'Youtube', link: 'https://www.youtube.com/channel/UCyoESYiKzmIdVbR7BHu0cbQ' }
         ]
@@ -156,7 +157,14 @@ module.exports = {
     // Sidebar: Vertical navigation
     sidebar: {
       '/hosting/': [
-        getSideBar('/hosting', 'Hosting')
+        {
+          title: 'About',
+          path: '/hosting/'
+        },
+        getSideBar('/hosting/deployment', 'Deployment Guide'),
+        getSideBar('/hosting/operations', 'Operations Manual'),
+        getSideBar('/hosting/jobs', 'Jobs Reference'),
+        getSideBar('/hosting/references', 'References')
       ],
       '/': [
         {
@@ -164,35 +172,34 @@ module.exports = {
           path: '/'
         },
         {
-          title: 'No-Code Solutions',
+          title: 'Setup',
           collapsable: true,
           sidebarDepth: 1,
           children: [
-            ['/nocode/', 'Get Started'],
-            ['/nocode/naming-conventions.md', 'Naming conventions'],
-            ['/nocode/approval.md', 'Approval workflow'],
-            ['/nocode/audience-targeting.md', 'Audience Targeting'],
-            ['/nocode/ad-schema-extensions.md', 'AD Schema Extensions']
+            ['/setup/installation-options.md', 'Installation options'],
+            ['/setup/supported-clients.md', 'Supported clients']
           ]
         },
         {
-          title: 'Connected Apps',
+          title: 'Configuration',
           collapsable: true,
           sidebarDepth: 1,
           children: [
-            ['/connectedapps/', 'Get Started'],
-            ['/connectedapps/salesforce-sales-cloud.md', 'Salesforce Sales Cloud']
+            ['/configuration/naming-conventions.md', 'Naming conventions'],
+            ['/configuration/approval.md', 'Approval workflow'],
+            ['/configuration/audience-targeting.md', 'Audience Targeting'],
+            ['/configuration/ad-schema-extensions.md', 'AD Schema Extensions']
           ]
         },
         {
-          title: 'Automation Connectors',
+          title: 'Automation',
           collapsable: true,
           sidebarDepth: 1,
           children: [
-            ['/automation-connectors/', 'Get Started'],
-            ['/automation-connectors/power-platform-automation-connector.md', 'Power Platform Setup'],
-            ['/automation-connectors/logic-apps-automation-connector.md', 'Logic Apps Setup'],
-            ['/automation-connectors/automation-connectors-actions.md', 'Triggers & Actions Reference']
+            ['/automation/', 'Get Started'],
+            ['/automation/power-platform-automation-connector.md', 'Power Platform Setup'],
+            ['/automation/logic-apps-automation-connector.md', 'Logic Apps Setup'],
+            ['/automation/automation-connectors-actions.md', 'Triggers & Actions Reference']
           ]
         },
         // getSideBar('/automation-connectors', 'Automation Connectors'),
@@ -222,21 +229,19 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 1,
           children: [
-            ['/platform/', 'Overview'],
-            '/platform/supportedclients.md',
-            '/platform/sso.md',
-            '/platform/rbac.md',
-            '/platform/access.md',
-            '/platform/infrastructurekeycomponents.md',
-            '/platform/apppermissions.md',
-            '/platform/datamanagement.md',
-            '/platform/securedevelopment.md',
-            '/platform/securitypolicy.md',
-            '/platform/privacyandcompliance.md',
-            '/platform/classification.md',
-            '/platform/installation-options.md',
-            '/platform/releases.md',
-            '/platform/knownissues.md'
+            ['/trust/', 'Overview'],
+            '/trust/sso.md',
+            '/trust/rbac.md',
+            '/trust/access.md',
+            '/trust/infrastructurekeycomponents.md',
+            '/trust/apppermissions.md',
+            '/trust/datamanagement.md',
+            '/trust/securedevelopment.md',
+            '/trust/securitypolicy.md',
+            '/trust/privacyandcompliance.md',
+            '/trust/classification.md',
+            '/trust/releases.md',
+            '/trust/knownissues.md'
           ]
         }
       ]

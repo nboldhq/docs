@@ -1,4 +1,4 @@
-# SalesTimApi.CatalogTemplateTemplateConfiguration
+# NBoldApi.CatalogTemplateTemplateConfiguration
 
 ## Properties
 

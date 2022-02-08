@@ -1,4 +1,4 @@
-# SalesTimApi.ApprovedApprovalResponsePayloadApprover
+# NBoldApi.ApprovedApprovalResponsePayloadApprover
 
 ## Properties
 

@@ -1,6 +1,6 @@
 # UsersApi
 
-All URIs are relative to *https://api.salestim.io/api/v1.0*
+All URIs are relative to *https://api.nbold.co/production*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

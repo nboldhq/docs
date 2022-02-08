@@ -1,4 +1,4 @@
-# SalesTimApi.TeamProvisioningRequest
+# NBoldApi.TeamProvisioningRequest
 
 ## Properties
 

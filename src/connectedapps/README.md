@@ -1,5 +1,5 @@
 # Connected Apps
-The `SalesTim Connected Apps` brings your Microsoft Teams environment an off-the-shelf integration with all the major apps on the market.
+The `nBold Connected Apps` brings your Microsoft Teams environment an off-the-shelf integration with all the major apps on the market.
 
 | | Connected App | Status |
 |-|---------------|:------:|

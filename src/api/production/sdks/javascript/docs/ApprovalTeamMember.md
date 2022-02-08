@@ -1,4 +1,4 @@
-# SalesTimApi.ApprovalTeamMember
+# NBoldApi.ApprovalTeamMember
 
 ## Properties
 

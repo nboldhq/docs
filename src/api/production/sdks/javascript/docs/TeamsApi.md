@@ -1,6 +1,6 @@
-# SalesTimApi.TeamsApi
+# NBoldApi.TeamsApi
 
-All URIs are relative to *https://api.salestim.io/api/v1.0*
+All URIs are relative to *https://api.nbold.co/production*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,15 +30,15 @@ Add a team member. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
-let teamMembershipPayload = new SalesTimApi.TeamMembershipPayload(); // TeamMembershipPayload | TeamMembershipPayload.
+let teamMembershipPayload = new NBoldApi.TeamMembershipPayload(); // TeamMembershipPayload | TeamMembershipPayload.
 apiInstance.addTeamMember(teamId, teamMembershipPayload, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -81,13 +81,13 @@ Archive a team. TIER 1️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 let opts = {
   'body': {key: null} // Object | In the request, you may optionally include the shouldSetSpoSiteReadOnlyForMembers parameter in a JSON body. This optional parameter defines whether to set permissions for team members to read-only on the SharePoint Online site associated with the team. Setting it to false or omitting the body altogether will result in this step being skipped.
@@ -134,13 +134,13 @@ Create a new team channel. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 let body = {key: null}; // Object | A TeamChannelPayload object describing the channel to create.
 apiInstance.createTeamChannel(teamId, body, (error, data, response) => {
@@ -185,13 +185,13 @@ Create a new team channel tab. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 let channelId = "channelId_example"; // String | The team channel ID.
 let body = {key: null}; // Object | A TeamChannelTabPayload object describing the tab to create.
@@ -238,14 +238,14 @@ Create a new team provisioning job. TIER 1️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
-let teamProvisioningRequest = new SalesTimApi.TeamProvisioningRequest(); // TeamProvisioningRequest | A TeamProvisioningRequest object describing the job to execute.
+let apiInstance = new NBoldApi.TeamsApi();
+let teamProvisioningRequest = new NBoldApi.TeamProvisioningRequest(); // TeamProvisioningRequest | A TeamProvisioningRequest object describing the job to execute.
 apiInstance.createTeamProvisioningJob(teamProvisioningRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -287,13 +287,13 @@ Delete a team. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 apiInstance.deleteTeam(teamId, (error, data, response) => {
   if (error) {
@@ -336,13 +336,13 @@ Get detailed information about a team. TIER 3️⃣ | ROLES - AUTHORIZED_APP, IN
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 apiInstance.getTeam(teamId, (error, data, response) => {
   if (error) {
@@ -385,13 +385,13 @@ Get team channel tabs. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 let channelId = "channelId_example"; // String | The team channel ID.
 apiInstance.getTeamChannelTabs(teamId, channelId, (error, data, response) => {
@@ -436,13 +436,13 @@ Get team channels. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 apiInstance.getTeamChannels(teamId, (error, data, response) => {
   if (error) {
@@ -485,13 +485,13 @@ Get the primary channel of a team. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 apiInstance.getTeamPrimaryChannel(teamId, (error, data, response) => {
   if (error) {
@@ -534,13 +534,13 @@ Unarchive a team. TIER 1️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 apiInstance.unarchiveTeam(teamId, (error, data, response) => {
   if (error) {
@@ -583,13 +583,13 @@ Update a team. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVER
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TeamsApi();
+let apiInstance = new NBoldApi.TeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 let body = {key: null}; // Object | Supply a JSON representation of team object.
 apiInstance.updateTeam(teamId, body, (error, data, response) => {

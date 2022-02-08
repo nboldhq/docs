@@ -1,4 +1,4 @@
-# SalesTimApi.PermanentMember
+# NBoldApi.PermanentMember
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# SalesTimApi.AuditTrailRecords
+# NBoldApi.AuditTrailRecords
 
 ## Properties
 

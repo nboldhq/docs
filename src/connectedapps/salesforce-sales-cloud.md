@@ -1,7 +1,7 @@
 # <img src="/img/connectedapps/salesforcesalescloud.jpg" style="width: 40px"> Salesforce Sales Cloud <Badge text="v1.0" type="tip" vertical="top"/>
 
 **Abstract**  
-This article explains how to configure the SalesTim `Connected App` for Salesforce Sales Cloud.
+This article explains how to configure the nBold `Connected App` for Salesforce Sales Cloud.
 
 ::: tip ⏱ Expected Duration
 It only requires a few operations that are described hereafter as a detailed step-by-step procedure. Assuming you have all the required access and permissions to execute it properly, it should take ***less than 10 minutes***.
@@ -25,7 +25,7 @@ graph LR
     subgraph sf[Salesforce]
         appreg(1. Create a Connected App)
     end
-    subgraph st[SalesTim]
+    subgraph st[nBold]
         createconnectedapp(2. Create a Connected App)
         configureentities(3. Entities Business Rules)
     end
@@ -47,11 +47,11 @@ graph LR
 
 1. Open your Salesforce `setup` page, enter 'Apps' in the Quick Find box, and select `App Manager`.
 2. Click `New Connected App`.
-3. Enter 'SalesTim' as a the connected app’s name
+3. Enter 'nBold' as a the connected app’s name
     - This name is displayed in the App Manager and on its App Launcher tile.
     - The connected app name must be unique within your org.
     - If the connected app was created in the Spring ‘14 release or later, you can reuse the name of a deleted connected app.
-4. Enter 'SalesTim' as the `API name`.
+4. Enter 'nBold' as the `API name`.
     - It defaults to a version of the name without spaces.
     - Only letters, numbers, and underscores are allowed, so if the original app name contains any other characters, edit the default name.
 5. Enter your own email or any other email as the `Contact Email` for Salesforce to use in case we want to contact you or your support team.
@@ -69,7 +69,7 @@ graph LR
     ```
     https://docs.nbold.co
     ```
-9. (Optional) Paste 'SalesTim App for Salesforce' as the `Description`.
+9. (Optional) Paste 'nBold App for Salesforce' as the `Description`.
 
 For reference, see [Configure Basic Connected App Settings](https://help.salesforce.com/articleView?id=connected_app_create_basics.htm)
 
@@ -99,8 +99,8 @@ For reference, see [Enable OAuth Settings for API Integration](https://help.sale
     - copy `Consumer Key`
     - next to the `Consumer Secret` field, click `Click to reveal` and copy the consumer key
 
-## Create a new SalesTim Connected App
-From the SalesTim "Connected Apps" tab:
+## Create a new nBold Connected App
+From the nBold "Connected Apps" tab:
 - Click "New Connected App".
 - From the "Salesforce Sales Cloud" card, click "Connect"
 
@@ -112,4 +112,4 @@ From the new "Connection" section:
 Once your Salesforce Sales Cloud connection is authorized, you can configure your business rules for each available object type.
 
 ## Configure Entities Business Rules
-Each entity has its own available actions and schema. We tried hard to make it self-explanatory but if you have any doubt or question, lease refer to our [Help Center](https://help.salestim.com)
+Each entity has its own available actions and schema. We tried hard to make it self-explanatory but if you have any doubt or question, lease refer to our [Help Center](https://docs.nbold.co)

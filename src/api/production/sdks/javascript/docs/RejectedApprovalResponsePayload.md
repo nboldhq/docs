@@ -1,4 +1,4 @@
-# SalesTimApi.RejectedApprovalResponsePayload
+# NBoldApi.RejectedApprovalResponsePayload
 
 ## Properties
 

@@ -6,27 +6,7 @@
       <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>https://docs.nbold.co/nocode</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>https://docs.nbold.co/api</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>https://docs.nbold.co/blog</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>https://docs.nbold.co/api/explorer</loc>
-      <changefreq>weekly</changefreq>
-   </url>
-   <url>
-      <loc>https://docs.nbold.co/platform</loc>
-      <changefreq>monthly</changefreq>
-   </url>
-   <url>
-      <loc>https://status.salestim.com/</loc>
+      <loc>https://status.nbold.co/</loc>
       <changefreq>weekly</changefreq>
    </url>
 </urlset>

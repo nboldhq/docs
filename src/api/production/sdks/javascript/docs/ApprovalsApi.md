@@ -1,6 +1,6 @@
-# SalesTimApi.ApprovalsApi
+# NBoldApi.ApprovalsApi
 
-All URIs are relative to *https://api.salestim.io/api/v1.0*
+All URIs are relative to *https://api.nbold.co/production*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,16 +20,16 @@ Approve a team creation request. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.ApprovalsApi();
+let apiInstance = new NBoldApi.ApprovalsApi();
 let approvalRequestId = "approvalRequestId_example"; // String | The approval request ID.
 let opts = {
-  'approvedApprovalResponsePayload': new SalesTimApi.ApprovedApprovalResponsePayload() // ApprovedApprovalResponsePayload | An ApprovedApprovalResponsePayload object.
+  'approvedApprovalResponsePayload': new NBoldApi.ApprovedApprovalResponsePayload() // ApprovedApprovalResponsePayload | An ApprovedApprovalResponsePayload object.
 };
 apiInstance.approveTeamCreation(approvalRequestId, opts, (error, data, response) => {
   if (error) {
@@ -73,16 +73,16 @@ Reject a team creation request. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.ApprovalsApi();
+let apiInstance = new NBoldApi.ApprovalsApi();
 let approvalRequestId = "approvalRequestId_example"; // String | The approval request ID.
 let opts = {
-  'rejectedApprovalResponsePayload': new SalesTimApi.RejectedApprovalResponsePayload() // RejectedApprovalResponsePayload | An RejectedApprovalResponsePayload object.
+  'rejectedApprovalResponsePayload': new NBoldApi.RejectedApprovalResponsePayload() // RejectedApprovalResponsePayload | An RejectedApprovalResponsePayload object.
 };
 apiInstance.rejectTeamCreation(approvalRequestId, opts, (error, data, response) => {
   if (error) {

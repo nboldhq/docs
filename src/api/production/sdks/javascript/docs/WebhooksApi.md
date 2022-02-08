@@ -1,6 +1,6 @@
-# SalesTimApi.WebhooksApi
+# NBoldApi.WebhooksApi
 
-All URIs are relative to *https://api.salestim.io/api/v1.0*
+All URIs are relative to *https://api.nbold.co/production*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,14 +22,14 @@ Create a new webhook. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.WebhooksApi();
-let hookPayload = new SalesTimApi.HookPayload(); // HookPayload | A HookPayload object.
+let apiInstance = new NBoldApi.WebhooksApi();
+let hookPayload = new NBoldApi.HookPayload(); // HookPayload | A HookPayload object.
 apiInstance.createHook(hookPayload, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -71,13 +71,13 @@ Delete a webhook. TIER 2️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.WebhooksApi();
+let apiInstance = new NBoldApi.WebhooksApi();
 let hookId = "hookId_example"; // String | ID of the webhook to be deleted.
 apiInstance.deleteHook(hookId, (error, data, response) => {
   if (error) {
@@ -120,14 +120,14 @@ Generate a signature from a secret and a webhook payload. TIER 3️⃣ | ROLES -
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.WebhooksApi();
-let hookSignatureRequest = new SalesTimApi.HookSignatureRequest(); // HookSignatureRequest | A HookSignatureRequest object comprised of the secret and payload.
+let apiInstance = new NBoldApi.WebhooksApi();
+let hookSignatureRequest = new NBoldApi.HookSignatureRequest(); // HookSignatureRequest | A HookSignatureRequest object comprised of the secret and payload.
 apiInstance.generateHookSignature(hookSignatureRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -169,13 +169,13 @@ Get webhooks events. TIER 3️⃣ | ROLES - AUTHENTICATED_USER.
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.WebhooksApi();
+let apiInstance = new NBoldApi.WebhooksApi();
 apiInstance.getHooksEvents((error, data, response) => {
   if (error) {
     console.error(error);

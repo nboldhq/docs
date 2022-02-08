@@ -31,7 +31,7 @@
         },
         "id": {
           "type": "string",
-          "description": "A unique identifier for this publisher in reverse domain notation. E.g: io.salestim",
+          "description": "A unique identifier for this publisher in reverse domain notation. E.g: io.nbold",
           "maxLength": 64
         },
         "logo": {

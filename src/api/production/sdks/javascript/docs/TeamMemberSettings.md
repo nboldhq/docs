@@ -1,4 +1,4 @@
-# SalesTimApi.TeamMemberSettings
+# NBoldApi.TeamMemberSettings
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# SalesTimApi.TeamFunSettings
+# NBoldApi.TeamFunSettings
 
 ## Properties
 

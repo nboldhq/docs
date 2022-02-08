@@ -1,4 +1,4 @@
-# SalesTimApi.HookSignatureRequest
+# NBoldApi.HookSignatureRequest
 
 ## Properties
 

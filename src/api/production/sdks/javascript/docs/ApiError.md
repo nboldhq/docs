@@ -1,4 +1,4 @@
-# SalesTimApi.ApiError
+# NBoldApi.ApiError
 
 ## Properties
 

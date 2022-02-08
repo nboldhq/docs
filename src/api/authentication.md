@@ -1,7 +1,7 @@
 # Authentication
 
 **ABSTRACT**  
-To access the SalesTim API, a valid Azure Active Directory access token is required. This article explains how to get it, as a user or as an application.
+To access the nBold API, a valid Azure Active Directory access token is required. This article explains how to get it, as a user or as an application.
 
 ---
 
@@ -11,14 +11,14 @@ To access the SalesTim API, a valid Azure Active Directory access token is requi
 ---
 
 ## Supported access tokens
-The SalesTim API expects a valid access token in the HTTP `Authorization` request header with a `bearer` token such as:
+The nBold API expects a valid access token in the HTTP `Authorization` request header with a `bearer` token such as:
 ```json
 {
   "Authorization": "bearer <JWT_TOKEN>"
 }
 ```
 
-SalesTim supports [access tokens](https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens) retreived from the following OAuth 2.0 grant flows:
+nBold supports [access tokens](https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens) retreived from the following OAuth 2.0 grant flows:
 - [Auth Code](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 - [On-behalf-of](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 - [Client Credentials](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)

@@ -1,7 +1,7 @@
 # Rate Limits
 
 **ABSTRACT**  
-SalesTim API allows you to access data and to perform operations on multiple services. These services impose their own rate limits that affect applications that use SalesTim API to access them.
+nBold API allows you to access data and to perform operations on multiple services. These services impose their own rate limits that affect applications that use nBold API to access them.
 
 ---
 
@@ -25,7 +25,7 @@ The specific limits described here are subject to change.
 
 ## What happens when your is exceeding a limit?
 
-When a threshold is exceeded, SalesTim API limits any further requests from that client for a period of time. When throttling occurs, SalesTim API returns HTTP status code 429 (Too many requests), and the requests fail.
+When a threshold is exceeded, nBold API limits any further requests from that client for a period of time. When throttling occurs, nBold API returns HTTP status code 429 (Too many requests), and the requests fail.
 
 See the [Throttling Guidance](/api/throttling) article to understand how to properly handle throttled requests.
 

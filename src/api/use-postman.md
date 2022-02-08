@@ -1,8 +1,8 @@
-# Use Postman with the SalesTim API
+# Use Postman with the nBold API
 
 **ABSTRACT**  
-You can use the SalesTim API Postman collection to get started with the SalesTim API in minutes.  
-This article explains how to get up and running with Postman and SalesTim (You can also explore SalesTim APIs directly in your web browser by using [API Explorer](/api/explorer.md)).
+You can use the nBold API Postman collection to get started with the nBold API in minutes.  
+This article explains how to get up and running with Postman and nBold (You can also explore nBold APIs directly in your web browser by using [API Explorer](/api/explorer.md)).
 
 ---
 
@@ -22,6 +22,6 @@ To import the Postman collection:
 https://docs.nbold.co/api/production/definitions/open-api/apiDefinition.swagger.yaml
 ```
 
-You are now up and running with the SalesTim API collection.
+You are now up and running with the nBold API collection.
 
 <Classification label="public" />

@@ -1,6 +1,6 @@
-# SalesTimApi.AuditTrailsApi
+# NBoldApi.AuditTrailsApi
 
-All URIs are relative to *https://api.salestim.io/api/v1.0*
+All URIs are relative to *https://api.nbold.co/production*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,13 +20,13 @@ Get all the records from an audit trail. TIER 2 | ROLES - AUTHORIZED_APP, COMPLI
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.AuditTrailsApi();
+let apiInstance = new NBoldApi.AuditTrailsApi();
 let code = "code_example"; // String | The audit trail code.
 apiInstance.getAuditTrailRecords(code, (error, data, response) => {
   if (error) {
@@ -69,13 +69,13 @@ Get all the audit trails accessible in your organization. TIER 3 | ROLES - AUTHO
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.AuditTrailsApi();
+let apiInstance = new NBoldApi.AuditTrailsApi();
 apiInstance.getAuditTrails((error, data, response) => {
   if (error) {
     console.error(error);

@@ -1,4 +1,4 @@
-# SalesTimApi.ApiErrorErrorInnerError
+# NBoldApi.ApiErrorErrorInnerError
 
 ## Properties
 

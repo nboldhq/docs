@@ -1,4 +1,4 @@
-# SalesTimApi.CatalogTemplateTemplateConfigurationApproval
+# NBoldApi.CatalogTemplateTemplateConfigurationApproval
 
 ## Properties
 

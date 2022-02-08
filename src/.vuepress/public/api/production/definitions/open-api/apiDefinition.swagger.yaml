@@ -1,21 +1,21 @@
 openapi: "3.0.3"
 
 info:
-  title: SalesTim API
+  title: nBold API
   description: >
-    The unified Microsoft Teams Governance API. Visit our [Tech Hub](https://docs.nbold.co/api/) for more information.
-  version: "1.2.3"
-  termsOfService: https://www.salestim.com/legal/tos
+    Visit our [API documentation](https://docs.nbold.co/api/) for more information.
+  version: "2.0.0"
+  termsOfService: https://Fwww.nbold.co/legal/tos
   contact:
-    name: SalesTim Support
+    name: nBold Support
     url: https://docs.nbold.co/api
-    email: support@salestim.com
+    email: support@nbold.co
   license:
     name: (c) Copyright 2019-2022 SalesTim - all rights reserved.
-    url: https://www.salestim.com/legal/eula
+    url: https://www.nbold.co/legal/eula
 
 servers:
-  - url: https://api.salestim.io/api/v1.0
+  - url: https://api.nbold.co/production
     description: Production environment
 
 tags:
@@ -28,7 +28,7 @@ tags:
     externalDocs:
       url: https://docs.nbold.co/api/reference/Apis/ApprovalsApi
   - name: Audit Trails
-    description: SalesTim audit trails.
+    description: Platform audit trails.
     externalDocs:
       url: https://docs.nbold.co/api/reference/Apis/ApprovalsApi
   - name: Teams
@@ -48,7 +48,7 @@ tags:
     externalDocs:
       url: https://docs.nbold.co/api/reference/Apis/LabelsApi
   - name: Webhooks
-    description: SalesTim Platform Webhooks.
+    description: Platform Webhooks.
     externalDocs:
       url: https://docs.nbold.co/api/reference/Apis/HooksApi
 
@@ -1827,7 +1827,7 @@ components:
 
     AuditTrails:
       title: Audit Trails
-      description: A collection of SalesTim audit trails.
+      description: A collection of audit trails.
       type: object
       properties:
         "@odata.context":
@@ -1845,7 +1845,7 @@ components:
 
     AuditTrail:
       title: Audit Trail
-      description: A SalesTim audit trail.
+      description: An audit trail.
       type: object
       properties:
         code:
@@ -1865,12 +1865,12 @@ components:
 
     AuditTrailField:
       title: Audit Trail Field
-      description: A SalesTim audit trail field.
+      description: An audit trail field.
       type: string
 
     AuditTrailRecords:
       title: Audit Trail Records
-      description: A collection of SalesTim audit trails records.
+      description: A collection of audit trails records.
       type: object
       properties:
         "@odata.context":
@@ -1888,7 +1888,7 @@ components:
 
     AuditTrailRecord:
       title: Audit Trail Record
-      description: A SalesTim audit trail record.
+      description: An audit trail record.
       type: object
 
     Labels:
@@ -2499,7 +2499,7 @@ components:
           schema:
             $ref: "#/components/schemas/ApiError"
     429:
-      description: Too Many Requests - Your request has been throttled as you've reached the maximum number of concurrent calls to our service. Look at the "Retry-After" header. See [API throttling guidance](https://docs.nbold.co/api/throttling.html#salestim-api-throttling-guidance) article for more information.
+      description: Too Many Requests - Your request has been throttled as you've reached the maximum number of concurrent calls to our service. Look at the "Retry-After" header. See [API throttling guidance](https://docs.nbold.co/api/throttling.html) article for more information.
       content:
         application/json:
           schema:

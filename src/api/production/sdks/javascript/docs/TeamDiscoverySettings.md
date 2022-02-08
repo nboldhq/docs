@@ -1,4 +1,4 @@
-# SalesTimApi.TeamDiscoverySettings
+# NBoldApi.TeamDiscoverySettings
 
 ## Properties
 

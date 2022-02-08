@@ -8,19 +8,19 @@ info:
   x-ms-deployment-version: "1.2.4"
   x-ms-api-annotation:
     status: Production
-  title: SalesTim Collaborative Process Automation
+  title: nBold Collaborative Process Automation
   description: >
     Improve collaborative processes, governance, compliance and security of your Microsoft Teams environment.
   contact:
-    name: SalesTim Support
+    name: nBold Support
     url: https://docs.nbold.co/api
-    email: support@salestim.com
+    email: support@nbold.co
 
 x-ms-connector-metadata:
   - propertyName: Website
-    propertyValue: https://www.salestim.com
+    propertyValue: https://www.nbold.co
   - propertyName: Privacy policy
-    propertyValue: https://www.salestim.com/legal/privacy
+    propertyValue: https://www.nbold.co/legal/privacy
   - propertyName: Categories
     propertyValue: Productivity;IT Operations
 
@@ -81,7 +81,7 @@ tags:
     externalDocs:
       url: https://docs.nbold.co/api/reference/Apis/LabelsApi
   - name: hooks
-    description: SalesTim Platform Webhooks.
+    description: nBold Platform Webhooks.
     externalDocs:
       url: https://docs.nbold.co/api/reference/Apis/HooksApi
 
@@ -109,8 +109,8 @@ paths:
         status: Production
         family: TestAPIConnection
         revision: 1
-      summary: Test Connection to the SalesTim API
-      description: Test connection to the SalesTim API
+      summary: Test Connection to the nBold API
+      description: Test connection to the nBold API
       operationId: TestAPIConnection
       responses:
         "200":
@@ -1148,7 +1148,7 @@ paths:
       tags:
         - hooks
       x-ms-trigger: "single"
-      x-ms-trigger-hint: To see it work, create a new team from SalesTim.
+      x-ms-trigger-hint: To see it work, create a new team from nBold.
       x-ms-visibility: important
       deprecated: false
       x-ms-api-annotation:

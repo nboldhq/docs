@@ -1,6 +1,6 @@
-# SalesTimApi.TemplatesCatalogApi
+# NBoldApi.TemplatesCatalogApi
 
-All URIs are relative to *https://api.salestim.io/api/v1.0*
+All URIs are relative to *https://api.nbold.co/production*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,13 +20,13 @@ Get all the teams templates accessible in your organization. TIER 2️⃣ | ROLE
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TemplatesCatalogApi();
+let apiInstance = new NBoldApi.TemplatesCatalogApi();
 let opts = {
   'language': "language_example" // String | Optional. Default to 'en'. Language code to be used to filter the colection of templates, for instance 'en' or 'en-uk'.
 };
@@ -71,13 +71,13 @@ Get teams templates accessible to the connected user filtered by the audience ta
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.TemplatesCatalogApi();
+let apiInstance = new NBoldApi.TemplatesCatalogApi();
 let opts = {
   'language': "language_example" // String | Optional. Default to 'en'. Language code to be used to filter the colection of templates, for instance 'en' or 'en-uk'.
 };

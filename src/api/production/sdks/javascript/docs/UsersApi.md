@@ -1,6 +1,6 @@
-# SalesTimApi.UsersApi
+# NBoldApi.UsersApi
 
-All URIs are relative to *https://api.salestim.io/api/v1.0*
+All URIs are relative to *https://api.nbold.co/production*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,13 +19,13 @@ Retreive users from your Microsoft 365 environment. TIER 3️⃣ | ROLES - AUTHE
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.UsersApi();
+let apiInstance = new NBoldApi.UsersApi();
 apiInstance.getUsers((error, data, response) => {
   if (error) {
     console.error(error);

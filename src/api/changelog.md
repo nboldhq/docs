@@ -1,6 +1,6 @@
-# SalesTim API Changelog
+# nBold API Changelog
 
-All notable changes to the SalesTim API, Connectors and SDKs will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
+All notable changes to the nBold API, Connectors and SDKs will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
 ## [1.2.1] - 2021-04-21
 

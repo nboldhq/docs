@@ -1,4 +1,4 @@
-# SalesTimApi.CatalogTemplateTemplateConfigurationPermanentMembership
+# NBoldApi.CatalogTemplateTemplateConfigurationPermanentMembership
 
 ## Properties
 

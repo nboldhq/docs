@@ -1,7 +1,7 @@
 {
-  "name": "sales_tim_api",
-  "version": "1.2.3",
-  "description": "The_unified_Microsoft_Teams_Governance_API__Visit_our__Tech_Hub_https__docs_nbold_co_api__for_more_information_",
+  "name": "n_bold_api",
+  "version": "2.0.0",
+  "description": "Visit_our__API_documentation_https__docs_nbold_co_api__for_more_information_",
   "license": "(c) Copyright 2019-2022 SalesTim - all rights reserved.",
   "main": "dist/index.js",
   "scripts": {

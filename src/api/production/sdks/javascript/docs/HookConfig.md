@@ -1,4 +1,4 @@
-# SalesTimApi.HookConfig
+# NBoldApi.HookConfig
 
 ## Properties
 

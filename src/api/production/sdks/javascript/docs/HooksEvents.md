@@ -1,4 +1,4 @@
-# SalesTimApi.HooksEvents
+# NBoldApi.HooksEvents
 
 ## Properties
 

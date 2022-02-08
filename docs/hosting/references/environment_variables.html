@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>⚒️ Environment Variables | documentation</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/bundle.css">
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-5688830-15"></script>
+    <script type="text/javascript" src="/js/bundle.js"></script>
+    <meta name="description" content="📆 Updated: Sat, 29 Jan 2022 02:59:58 GMT">
+    <meta name="twitter:title" content="⚒️ Environment Variables">
+    <meta name="twitter:description" content="📆 Updated: Sat, 29 Jan 2022 02:59:58 GMT">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="⚒️ Environment Variables">
+    <meta property="og:description" content="📆 Updated: Sat, 29 Jan 2022 02:59:58 GMT">
+    <meta itemprop="name" content="⚒️ Environment Variables">
+    <meta itemprop="description" content="📆 Updated: Sat, 29 Jan 2022 02:59:58 GMT">
+    
+    <link rel="preload" href="/assets/css/0.styles.47697e94.css" as="style"><link rel="preload" href="/assets/js/app.d2268d2f.js" as="script"><link rel="preload" href="/assets/js/2.8f423580.js" as="script"><link rel="preload" href="/assets/js/162.d54ecb05.js" as="script"><link rel="prefetch" href="/assets/js/10.02c28755.js"><link rel="prefetch" href="/assets/js/100.c112b09b.js"><link rel="prefetch" href="/assets/js/101.df675a15.js"><link rel="prefetch" href="/assets/js/102.7e0f7763.js"><link rel="prefetch" href="/assets/js/103.9d093a06.js"><link rel="prefetch" href="/assets/js/104.7daa3980.js"><link rel="prefetch" href="/assets/js/105.b3fe13fd.js"><link rel="prefetch" href="/assets/js/106.3bdceea3.js"><link rel="prefetch" href="/assets/js/107.aec6da23.js"><link rel="prefetch" href="/assets/js/108.7a3aca45.js"><link rel="prefetch" href="/assets/js/109.98105133.js"><link rel="prefetch" href="/assets/js/11.c2bce313.js"><link rel="prefetch" href="/assets/js/110.24feb83f.js"><link rel="prefetch" href="/assets/js/111.87af10bd.js"><link rel="prefetch" href="/assets/js/112.5aab1213.js"><link rel="prefetch" href="/assets/js/113.850551fe.js"><link rel="prefetch" href="/assets/js/114.d68a3cb2.js"><link rel="prefetch" href="/assets/js/115.f083ba14.js"><link rel="prefetch" href="/assets/js/116.572c0fc6.js"><link rel="prefetch" href="/assets/js/117.626b9d30.js"><link rel="prefetch" href="/assets/js/118.0d3df4f8.js"><link rel="prefetch" href="/assets/js/119.2c5078df.js"><link rel="prefetch" href="/assets/js/12.7828a3cc.js"><link rel="prefetch" href="/assets/js/120.15a7225f.js"><link rel="prefetch" href="/assets/js/121.44015ff8.js"><link rel="prefetch" href="/assets/js/122.f6e7cb68.js"><link rel="prefetch" href="/assets/js/123.49a63271.js"><link rel="prefetch" href="/assets/js/124.87014c38.js"><link rel="prefetch" href="/assets/js/125.d27928d4.js"><link rel="prefetch" href="/assets/js/126.b7f25f57.js"><link rel="prefetch" href="/assets/js/127.b14591a7.js"><link rel="prefetch" href="/assets/js/128.ea1f5fe6.js"><link rel="prefetch" href="/assets/js/129.376ee1ac.js"><link rel="prefetch" href="/assets/js/13.6a20dbd8.js"><link rel="prefetch" href="/assets/js/130.edb16d9a.js"><link rel="prefetch" href="/assets/js/131.bac4230c.js"><link rel="prefetch" href="/assets/js/132.6cfaa532.js"><link rel="prefetch" href="/assets/js/133.972f833b.js"><link rel="prefetch" href="/assets/js/134.8831c678.js"><link rel="prefetch" href="/assets/js/135.92841b77.js"><link rel="prefetch" href="/assets/js/136.e6b91e8b.js"><link rel="prefetch" href="/assets/js/137.2dded67e.js"><link rel="prefetch" href="/assets/js/138.af9753b1.js"><link rel="prefetch" href="/assets/js/139.96f7ef52.js"><link rel="prefetch" href="/assets/js/14.54e29ba5.js"><link rel="prefetch" href="/assets/js/140.dcd99858.js"><link rel="prefetch" href="/assets/js/141.815919cb.js"><link rel="prefetch" href="/assets/js/142.ab6f891e.js"><link rel="prefetch" href="/assets/js/143.907ac1a8.js"><link rel="prefetch" href="/assets/js/144.434dd8fe.js"><link rel="prefetch" href="/assets/js/145.be8bba5e.js"><link rel="prefetch" href="/assets/js/146.b84ce480.js"><link rel="prefetch" href="/assets/js/147.c6ff4e64.js"><link rel="prefetch" href="/assets/js/148.186308ff.js"><link rel="prefetch" href="/assets/js/149.3d2bfad6.js"><link rel="prefetch" href="/assets/js/15.a11640c2.js"><link rel="prefetch" href="/assets/js/150.c51c496f.js"><link rel="prefetch" href="/assets/js/151.51c1f790.js"><link rel="prefetch" href="/assets/js/152.2fd06620.js"><link rel="prefetch" href="/assets/js/153.9f1cd003.js"><link rel="prefetch" href="/assets/js/154.49c14955.js"><link rel="prefetch" href="/assets/js/155.5081c047.js"><link rel="prefetch" href="/assets/js/156.e23e5194.js"><link rel="prefetch" href="/assets/js/157.d7bb3c4e.js"><link rel="prefetch" href="/assets/js/158.39783e76.js"><link rel="prefetch" href="/assets/js/159.3bab61e3.js"><link rel="prefetch" href="/assets/js/16.4aee7b62.js"><link rel="prefetch" href="/assets/js/160.f4cbe9c6.js"><link rel="prefetch" href="/assets/js/161.a9508aad.js"><link rel="prefetch" href="/assets/js/163.8e600805.js"><link rel="prefetch" href="/assets/js/164.96573782.js"><link rel="prefetch" href="/assets/js/165.a5b8d87b.js"><link rel="prefetch" href="/assets/js/166.921c76cd.js"><link rel="prefetch" href="/assets/js/167.786bd491.js"><link rel="prefetch" href="/assets/js/168.d00bb9e5.js"><link rel="prefetch" href="/assets/js/169.d9eec8b6.js"><link rel="prefetch" href="/assets/js/17.4cdf4064.js"><link rel="prefetch" href="/assets/js/170.b8102f93.js"><link rel="prefetch" href="/assets/js/171.10ec256f.js"><link rel="prefetch" href="/assets/js/172.b7e6c52f.js"><link rel="prefetch" href="/assets/js/173.b04432c7.js"><link rel="prefetch" href="/assets/js/174.0794cb60.js"><link rel="prefetch" href="/assets/js/175.f675f695.js"><link rel="prefetch" href="/assets/js/176.fcc9cd5e.js"><link rel="prefetch" href="/assets/js/177.5b22a52c.js"><link rel="prefetch" href="/assets/js/178.6965c8ad.js"><link rel="prefetch" href="/assets/js/179.d9527b39.js"><link rel="prefetch" href="/assets/js/18.39f67139.js"><link rel="prefetch" href="/assets/js/180.32eecf96.js"><link rel="prefetch" href="/assets/js/181.4e189c60.js"><link rel="prefetch" href="/assets/js/182.627b9950.js"><link rel="prefetch" href="/assets/js/183.57c6ab50.js"><link rel="prefetch" href="/assets/js/184.8117f975.js"><link rel="prefetch" href="/assets/js/185.9ea19b3c.js"><link rel="prefetch" href="/assets/js/186.ed7fe03f.js"><link rel="prefetch" href="/assets/js/187.6288afdc.js"><link rel="prefetch" href="/assets/js/19.a1983656.js"><link rel="prefetch" href="/assets/js/20.66ad2b86.js"><link rel="prefetch" href="/assets/js/21.d1b96383.js"><link rel="prefetch" href="/assets/js/22.ca5f7cf8.js"><link rel="prefetch" href="/assets/js/23.222d23b2.js"><link rel="prefetch" href="/assets/js/24.6f28ece8.js"><link rel="prefetch" href="/assets/js/25.452b6005.js"><link rel="prefetch" href="/assets/js/26.7506f943.js"><link rel="prefetch" href="/assets/js/27.5d9b6818.js"><link rel="prefetch" href="/assets/js/28.bc587d64.js"><link rel="prefetch" href="/assets/js/29.54fdffb5.js"><link rel="prefetch" href="/assets/js/3.bc6e0443.js"><link rel="prefetch" href="/assets/js/30.64cbc577.js"><link rel="prefetch" href="/assets/js/31.e675c9c1.js"><link rel="prefetch" href="/assets/js/32.6b111014.js"><link rel="prefetch" href="/assets/js/33.1344a885.js"><link rel="prefetch" href="/assets/js/34.616da1e3.js"><link rel="prefetch" href="/assets/js/35.8d0615b7.js"><link rel="prefetch" href="/assets/js/36.e6fa7bbc.js"><link rel="prefetch" href="/assets/js/37.29fb5133.js"><link rel="prefetch" href="/assets/js/38.872c94e3.js"><link rel="prefetch" href="/assets/js/39.af9a12d4.js"><link rel="prefetch" href="/assets/js/4.cce96f00.js"><link rel="prefetch" href="/assets/js/40.d0f6e0ba.js"><link rel="prefetch" href="/assets/js/41.2e8b60e3.js"><link rel="prefetch" href="/assets/js/42.f713d098.js"><link rel="prefetch" href="/assets/js/43.2e7544a8.js"><link rel="prefetch" href="/assets/js/44.d8290f10.js"><link rel="prefetch" href="/assets/js/45.a698a5bc.js"><link rel="prefetch" href="/assets/js/46.f4f9d940.js"><link rel="prefetch" href="/assets/js/47.f38a9999.js"><link rel="prefetch" href="/assets/js/48.427df3f0.js"><link rel="prefetch" href="/assets/js/49.d01d7490.js"><link rel="prefetch" href="/assets/js/5.e6140722.js"><link rel="prefetch" href="/assets/js/50.0c18c411.js"><link rel="prefetch" href="/assets/js/51.153e1189.js"><link rel="prefetch" href="/assets/js/52.0da0d0ec.js"><link rel="prefetch" href="/assets/js/53.f3757e24.js"><link rel="prefetch" href="/assets/js/54.cb4f3f67.js"><link rel="prefetch" href="/assets/js/55.eed97af4.js"><link rel="prefetch" href="/assets/js/56.7f4f4165.js"><link rel="prefetch" href="/assets/js/57.49c0dd2e.js"><link rel="prefetch" href="/assets/js/58.6078efeb.js"><link rel="prefetch" href="/assets/js/59.cd2c7142.js"><link rel="prefetch" href="/assets/js/6.a94dfc9f.js"><link rel="prefetch" href="/assets/js/60.486d1a58.js"><link rel="prefetch" href="/assets/js/61.7d2914b7.js"><link rel="prefetch" href="/assets/js/62.ad2b5fc0.js"><link rel="prefetch" href="/assets/js/63.c96a7af8.js"><link rel="prefetch" href="/assets/js/64.03f8caee.js"><link rel="prefetch" href="/assets/js/65.21966207.js"><link rel="prefetch" href="/assets/js/66.495c7fa3.js"><link rel="prefetch" href="/assets/js/67.e538b23d.js"><link rel="prefetch" href="/assets/js/68.e3746aa7.js"><link rel="prefetch" href="/assets/js/69.c86201ea.js"><link rel="prefetch" href="/assets/js/7.7edc6485.js"><link rel="prefetch" href="/assets/js/70.bbf845f0.js"><link rel="prefetch" href="/assets/js/71.6ea7c932.js"><link rel="prefetch" href="/assets/js/72.a03b3269.js"><link rel="prefetch" href="/assets/js/73.89ce3701.js"><link rel="prefetch" href="/assets/js/74.deddd9c0.js"><link rel="prefetch" href="/assets/js/75.ae3f49d3.js"><link rel="prefetch" href="/assets/js/76.75afe994.js"><link rel="prefetch" href="/assets/js/77.f4486fdf.js"><link rel="prefetch" href="/assets/js/78.b4128768.js"><link rel="prefetch" href="/assets/js/79.863d8cf3.js"><link rel="prefetch" href="/assets/js/8.8fadc531.js"><link rel="prefetch" href="/assets/js/80.64ea15bd.js"><link rel="prefetch" href="/assets/js/81.587a35a7.js"><link rel="prefetch" href="/assets/js/82.f7d0df3b.js"><link rel="prefetch" href="/assets/js/83.2a0fa082.js"><link rel="prefetch" href="/assets/js/84.d63589c4.js"><link rel="prefetch" href="/assets/js/85.4566f1fe.js"><link rel="prefetch" href="/assets/js/86.03a21c76.js"><link rel="prefetch" href="/assets/js/87.b5b5f5b7.js"><link rel="prefetch" href="/assets/js/88.bc25cd9d.js"><link rel="prefetch" href="/assets/js/89.7107bed7.js"><link rel="prefetch" href="/assets/js/9.6152b5b2.js"><link rel="prefetch" href="/assets/js/90.501fe85b.js"><link rel="prefetch" href="/assets/js/91.4d67b399.js"><link rel="prefetch" href="/assets/js/92.146bd200.js"><link rel="prefetch" href="/assets/js/93.0817d5d2.js"><link rel="prefetch" href="/assets/js/94.1267f5b5.js"><link rel="prefetch" href="/assets/js/95.94e22a23.js"><link rel="prefetch" href="/assets/js/96.12cb55b2.js"><link rel="prefetch" href="/assets/js/97.dc0ee79e.js"><link rel="prefetch" href="/assets/js/98.ba0c0ec3.js"><link rel="prefetch" href="/assets/js/99.34917278.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.47697e94.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/Logo_degrade_noir@4x.png" alt="documentation" class="logo"> <span class="site-name can-hide">documentation</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <ul class="color-theme-options"><li><a href="#" class="default-theme"></a></li> <li><a href="#" class="blue-theme"></a></li><li><a href="#" class="red-theme"></a></li><li><a href="#" class="purple-theme"></a></li></ul> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">🌗 Dark Theme</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Automation" class="dropdown-title"><span class="title">🚀 Automation</span> <span class="arrow down"></span></button> <button type="button" aria-label="Automation" class="mobile-dropdown-title"><span class="title">🚀 Automation</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/automation/power-platform-automation-connector.html" class="nav-link">
+  Power Platform
+</a></li><li class="dropdown-item"><!----> <a href="/automation/logic-apps-automation-connector.html" class="nav-link">
+  Logic Apps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Developers" class="dropdown-title"><span class="title">&gt;_ Developers</span> <span class="arrow down"></span></button> <button type="button" aria-label="Developers" class="mobile-dropdown-title"><span class="title">&gt;_ Developers</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/api/explorer.html" class="nav-link">
+  API Explorer
+</a></li><li class="dropdown-item"><!----> <a href="/api/production/reference/" class="nav-link">
+  API Reference
+</a></li></ul></div></div><div class="nav-item"><a href="/trust/" class="nav-link">
+  🔐 Trust Center
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="More" class="dropdown-title"><span class="title">🌐 More</span> <span class="arrow down"></span></button> <button type="button" aria-label="More" class="mobile-dropdown-title"><span class="title">🌐 More</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.nbold.co" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  nBold
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.linkedin.com/company/nbold" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LinkedIn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://twitter.com/nboldhq" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Twitter
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.youtube.com/channel/UCyoESYiKzmIdVbR7BHu0cbQ" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Youtube
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <a href="https://github.com/nboldhq" target="_blank" rel="noopener noreferrer" class="repo-link">
+    🐙 GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Automation" class="dropdown-title"><span class="title">🚀 Automation</span> <span class="arrow down"></span></button> <button type="button" aria-label="Automation" class="mobile-dropdown-title"><span class="title">🚀 Automation</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/automation/power-platform-automation-connector.html" class="nav-link">
+  Power Platform
+</a></li><li class="dropdown-item"><!----> <a href="/automation/logic-apps-automation-connector.html" class="nav-link">
+  Logic Apps
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Developers" class="dropdown-title"><span class="title">&gt;_ Developers</span> <span class="arrow down"></span></button> <button type="button" aria-label="Developers" class="mobile-dropdown-title"><span class="title">&gt;_ Developers</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/api/explorer.html" class="nav-link">
+  API Explorer
+</a></li><li class="dropdown-item"><!----> <a href="/api/production/reference/" class="nav-link">
+  API Reference
+</a></li></ul></div></div><div class="nav-item"><a href="/trust/" class="nav-link">
+  🔐 Trust Center
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="More" class="dropdown-title"><span class="title">🌐 More</span> <span class="arrow down"></span></button> <button type="button" aria-label="More" class="mobile-dropdown-title"><span class="title">🌐 More</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.nbold.co" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  nBold
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.linkedin.com/company/nbold" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LinkedIn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://twitter.com/nboldhq" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Twitter
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.youtube.com/channel/UCyoESYiKzmIdVbR7BHu0cbQ" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Youtube
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <a href="https://github.com/nboldhq" target="_blank" rel="noopener noreferrer" class="repo-link">
+    🐙 GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/hosting/" aria-current="page" class="sidebar-link">About</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Deployment Guide</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Operations Manual</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jobs Reference</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>References</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/hosting/references/architecture.html" class="sidebar-link">Architecture</a></li><li><a href="/hosting/references/azure_resources_reference.html" class="sidebar-link">Azure resources reference</a></li><li><a href="/hosting/references/configuration_reference.html" class="sidebar-link">Configuration reference</a></li><li><a href="/hosting/references/docker_resources_reference.html" class="sidebar-link">Docker resources reference</a></li><li><a href="/hosting/references/environment_variables.html" aria-current="page" class="active sidebar-link">Environment variables</a></li><li><a href="/hosting/references/events_reference.html" class="sidebar-link">Events reference</a></li><li><a href="/hosting/references/permissions.html" class="sidebar-link">Permissions</a></li><li><a href="/hosting/references/self_hosted_cloud_comparison.html" class="sidebar-link">Self hosted cloud comparison</a></li><li><a href="/hosting/references/services_reference.html" class="sidebar-link">Services reference</a></li><li><a href="/hosting/references/versioning_strategy.html" class="sidebar-link">Versioning strategy</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="⚒️-environment-variables"><a href="#⚒️-environment-variables" class="header-anchor">#</a> ⚒️ Environment Variables</h1> <p>📆 <em>Updated: Sat, 29 Jan 2022 02:59:58 GMT</em></p> <p>Here is a formal <code>.env</code> file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
+For more details about these environment variables, please refer to our <a href="./configuration_reference">configuration reference</a>.</p> <div class="language-sh extra-class"><pre class="language-sh"><code>--------------------------------------------------------------------------------
+<span class="token comment"># Backing services</span>
+<span class="token comment"># Mandatory infrastructure</span>
+--------------------------------------------------------------------------------
+
+<span class="token comment"># Redis</span>
+<span class="token comment"># Redis service used for caching and queuing</span>
+
+<span class="token comment"># (string) Redis server host. Defaults to &quot;localhost&quot;.</span>
+<span class="token assign-left variable">REDIS_HOST</span><span class="token operator">=</span>localhost
+<span class="token comment"># (number) Redis server port. Defaults to &quot;6379&quot;.</span>
+<span class="token assign-left variable">REDIS_PORT</span><span class="token operator">=</span><span class="token number">6379</span>
+<span class="token comment"># (number) Redis server db. Defaults to &quot;0&quot;.</span>
+<span class="token assign-left variable">REDIS_DB</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token comment"># (boolean) Use TLS to connect to the redis server. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">REDIS_TLS</span><span class="token operator">=</span>false
+<span class="token comment"># (number) Redis connection timeout in ms. Defaults to &quot;30000&quot;.</span>
+<span class="token assign-left variable">REDIS_TIMEOUT</span><span class="token operator">=</span><span class="token number">30000</span>
+<span class="token comment"># (string) Key used to connect to Redis server. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">REDIS_SECRET_KEY</span><span class="token operator">=</span>
+<span class="token comment"># (string) Global partition key for all redis keys. Defaults to &quot;st:&quot;.</span>
+<span class="token assign-left variable">REDIS_KEYS_PREFIX</span><span class="token operator">=</span>st:
+<span class="token comment"># (string) Partition sub-key for the sessions keys. Defaults to &quot;sessions:&quot;.</span>
+<span class="token assign-left variable">REDIS_SESSIONS_PREFIX</span><span class="token operator">=</span>sessions:
+<span class="token comment"># (string) Prefix for queues names. Defaults to &quot;queue_&quot;.</span>
+<span class="token assign-left variable">REDIS_QUEUES_PREFIX</span><span class="token operator">=</span>queue_
+
+<span class="token comment"># Configuration database</span>
+<span class="token comment"># Main data storage for the application configuration (PostgreSQL)</span>
+
+<span class="token comment"># (string) Database engine client among &quot;mysql&quot; / &quot;mariadb&quot; / &quot;postgres&quot; / &quot;mssql&quot; (Currently only supports &quot;postgres&quot;). Defaults to &quot;postgres&quot;.</span>
+<span class="token assign-left variable">DB_DATA_CLIENT</span><span class="token operator">=</span>postgres
+<span class="token comment"># (string) Database engine specific dialect options as a stringified json. Defaults to &quot;{}&quot;.</span>
+<span class="token assign-left variable">DB_DATA_DIALECT_OPTIONS</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment"># (string) Database server host. Defaults to &quot;localhost&quot;.</span>
+<span class="token assign-left variable">DB_DATA_HOST</span><span class="token operator">=</span>localhost
+<span class="token comment"># (number) Database server port. Defaults to &quot;5432&quot;.</span>
+<span class="token assign-left variable">DB_DATA_PORT</span><span class="token operator">=</span><span class="token number">5432</span>
+<span class="token comment"># (string) Database user name. Defaults to &quot;st_data_user&quot;.</span>
+<span class="token assign-left variable">DB_DATA_USERNAME</span><span class="token operator">=</span>st_data_user
+<span class="token comment"># (string) Database password. Defaults to &quot;st_data_password&quot;.</span>
+<span class="token assign-left variable">DB_DATA_PASSWORD</span><span class="token operator">=</span>st_data_password
+<span class="token comment"># (string) Database name. Defaults to &quot;st_data_db&quot;.</span>
+<span class="token assign-left variable">DB_DATA_DATABASE_NAME</span><span class="token operator">=</span>st_data_db
+<span class="token comment"># (boolean) Enable database advanced logging. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">DB_DATA_LOGGING</span><span class="token operator">=</span>false
+
+<span class="token comment"># Microsoft Azure Storage</span>
+<span class="token comment"># Blob storage used for storing images (templates pictures and screenshots).</span>
+
+<span class="token comment"># (string) Microsoft Azure Storage account name. Defaults to the default Azure Storage emulator account.</span>
+<span class="token assign-left variable">MICROSOFT_AZURE_STORAGE_ACCOUNT_NAME</span><span class="token operator">=</span>devstoreaccount1
+<span class="token comment"># (string) Secret key used to authenticate against Microsoft Azure Storage. Defaults to the default Azure Storage secret key.</span>
+<span class="token assign-left variable">MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY</span><span class="token operator">=</span>Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw<span class="token operator">==</span>
+<span class="token comment"># (string) Microsoft Azure Storage service endpoint. Defaults to the default Azure Storage emulator endpoint.</span>
+<span class="token assign-left variable">MICROSOFT_AZURE_STORAGE_ENDPOINT</span><span class="token operator">=</span>http://localhost:10000/devstoreaccount1
+<span class="token comment"># (string) Name of the container that hosts catalog templates pictures (Has to be created manually), for instance &quot;sttemplatespictures&quot;. Defaults to &quot;sttemplatespictures&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_AZURE_STORAGE_TEMPLATES_PICTURES_CONTAINER</span><span class="token operator">=</span>sttemplatespictures
+<span class="token comment"># (string) Name of the container that hosts screenshots generated from the UI when GitHub alerting is enabled (Has to be created manually), for instance &quot;stscreenshots&quot;. Defaults to &quot;stscreenshots&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_AZURE_STORAGE_SCREENSHOTS_CONTAINER</span><span class="token operator">=</span>stscreenshots
+
+<span class="token comment"># Microsoft Cosmos DB</span>
+<span class="token comment"># Nosql database used to manage user and organization data.</span>
+
+<span class="token comment"># (string) Microsoft Cosmos DB endpoint URL. Defaults to &quot;https://localhost:8081&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_ENDPOINT</span><span class="token operator">=</span>https://localhost:8081
+<span class="token comment"># (string) Secret key used to connect to Microsoft Cosmos DB. Defaults to the default Cosmos DB emulator secret key.</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_SECRET_KEY</span><span class="token operator">=</span>C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw<span class="token operator">==</span>
+<span class="token comment"># (string) Name of the Microsoft Cosmos DB database (Has to be created manually and include four collections named: &quot;users&quot;, &quot;customers&quot;, &quot;requests&quot; and &quot;apps&quot;), for instance &quot;st_app_db&quot;. No defaults.</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_DATABASE</span><span class="token operator">=</span>st_app_db
+<span class="token comment"># (string) Property action as a partition key in each collection. Defaults to &quot;/tenantId&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_CONTAINER_PARTITION_KEY</span><span class="token operator">=</span>/tenantId
+<span class="token comment"># (number) Maximum number of retries in the case where the request fails because the Azure Cosmos DB service has applied rate limiting on the client. Defaults to &quot;9&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_MAXRETRYATTEMPTSONTHROTTLEDREQUESTS</span><span class="token operator">=</span><span class="token number">9</span>
+<span class="token comment"># (number) Maximum retry time in seconds for the Azure Cosmos DB service. Defaults to &quot;60&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_MAXRETRYWAITTIMEINSECONDS</span><span class="token operator">=</span><span class="token number">60</span>
+
+--------------------------------------------------------------------------------
+<span class="token comment"># Core Services</span>
+<span class="token comment"># Core platform services</span>
+--------------------------------------------------------------------------------
+
+<span class="token comment"># Application Services</span>
+<span class="token comment"># Common HTTP Server for all the platform services (Web, API, Jobs...)</span>
+
+<span class="token comment"># (string) Deployment environment. Could be &quot;dev&quot;, &quot;int&quot;, &quot;uat&quot;, &quot;ppr&quot;, &quot;prd&quot;, &quot;self&quot;. Defaults to &quot;self&quot;.</span>
+<span class="token assign-left variable">APP_DEPLOY</span><span class="token operator">=</span>self
+<span class="token comment"># (string) Server role. Could be &quot;standalone&quot;, &quot;web&quot;, &quot;api&quot;, &quot;jobs&quot;, &quot;scheduler&quot;, &quot;integration&quot;, &quot;featuretogglesserver&quot;, &quot;featuretogglesproxy&quot;, &quot;flowserver&quot;. Defaults to &quot;standalone&quot;.</span>
+<span class="token assign-left variable">APP_ROLE</span><span class="token operator">=</span>standalone
+<span class="token comment"># (number) Application server port. Defaults to the PORT environment variable set by the Azure app service box (or other server/container hosting providers) or to &quot;3000&quot;.</span>
+<span class="token assign-left variable">APP_PORT</span><span class="token operator">=</span><span class="token number">3000</span>
+
+<span class="token comment"># Web Services</span>
+<span class="token comment"># Web services (Teams web application UI)</span>
+
+<span class="token comment"># (string) Web server public URL. Defaults &quot;http://localhost&quot;.</span>
+<span class="token assign-left variable">WEB_PUBLICURL</span><span class="token operator">=</span>http://localhost
+<span class="token comment"># (string) Root URL of the CDN used by the web server. Defaults to &quot;&quot; (means that the web server is serving the static assets itself).</span>
+<span class="token assign-left variable">WEB_CDN_PUBLICURL</span><span class="token operator">=</span>
+<span class="token comment"># (string) Secret server-side string used to encrypt session data. Defaults to &quot;secret&quot;</span>
+<span class="token assign-left variable">WEB_SESSION_SECRET</span><span class="token operator">=</span>secret
+
+<span class="token comment"># API Services</span>
+<span class="token comment"># API services (REST API)</span>
+
+<span class="token comment"># (string) API server public URL. Defaults to &quot;http://localhost/api/v1.0&quot;.</span>
+<span class="token assign-left variable">API_PUBLICURL</span><span class="token operator">=</span>http://localhost/api/v1.0
+
+<span class="token comment"># Scheduler Services</span>
+<span class="token comment"># Scheduler services (Manages execution plans for scheduled jobs)</span>
+
+<span class="token comment"># (boolean) Enable the RENEW_SERVICE_ACCOUNT_TOKENS scheduling. Defaults to &quot;true&quot;</span>
+<span class="token assign-left variable">SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_ENABLED</span><span class="token operator">=</span>true
+<span class="token comment"># (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to &quot;0 6 * * 0&quot; (At 06:00 on Sunday).</span>
+<span class="token assign-left variable">SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_SCHEDULE</span><span class="token operator">=</span><span class="token number">0</span> <span class="token number">6</span> * * <span class="token number">0</span>
+<span class="token comment"># (boolean) Enable the PERMANENT_MEMBERSHIP_POLICY scheduling. Defaults to &quot;true&quot;</span>
+<span class="token assign-left variable">SCHEDULER_PERMANENT_MEMBERSHIP_POLICY_ENABLED</span><span class="token operator">=</span>true
+<span class="token comment"># (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to */15 * * * *&quot; (At every 15th minute).</span>
+<span class="token assign-left variable">SCHEDULER_PERMANENT_MEMBERSHIP_POLICY_SCHEDULE</span><span class="token operator">=</span>*/15 * * * *
+<span class="token comment"># (boolean) Enable the QUEUES_RETENTION scheduling. Defaults to &quot;true&quot;</span>
+<span class="token assign-left variable">SCHEDULER_QUEUES_RETENTION_POLICY_ENABLED</span><span class="token operator">=</span>true
+<span class="token comment"># (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 1 * * *&quot; (Every day at 01:00).</span>
+<span class="token assign-left variable">SCHEDULER_QUEUES_RETENTION_POLICY_SCHEDULE</span><span class="token operator">=</span><span class="token number">0</span> <span class="token number">1</span> * * *
+<span class="token comment"># (boolean) Enable the GRAPH_SUBSCRIPTIONS_MANAGER scheduling. Defaults to &quot;true&quot;</span>
+<span class="token assign-left variable">SCHEDULER_GRAPH_SUBSCRIPTIONS_RENEWAL_ENABLED</span><span class="token operator">=</span>true
+<span class="token comment"># (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 2 * * *&quot; (Every day at 02:00).</span>
+<span class="token assign-left variable">SCHEDULER_GRAPH_SUBSCRIPTIONS_RENEWAL_SCHEDULE</span><span class="token operator">=</span><span class="token number">0</span> <span class="token number">2</span> * * *
+
+<span class="token comment"># Events Collector</span>
+<span class="token comment"># Events Collector</span>
+
+<span class="token comment"># (boolean) Enable integration with the events collector service. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">EVENTSCOLLECTOR_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Events collector root URL. Defaults to &quot;https://events.salestim.io&quot;.</span>
+<span class="token assign-left variable">EVENTSCOLLECTOR_ROOT_URL</span><span class="token operator">=</span>https://events.salestim.io
+<span class="token comment"># (string) HTTP header used to pass the authentication token to the events collector service. Defaults to &quot;X-Auth-Token&quot;.</span>
+<span class="token assign-left variable">EVENTSCOLLECTOR_AUTH_HEADER</span><span class="token operator">=</span>X-Auth-Token
+<span class="token comment"># (string) Token used to authenticate from clients against the events collector service for tracking operations. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">EVENTSCOLLECTOR_AUTH_CLIENT_TOKEN</span><span class="token operator">=</span>
+<span class="token comment"># (string) Token used to authenticate from servers (s2s) against the events collector service for tracking operations. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">EVENTSCOLLECTOR_AUTH_SERVER_TOKEN</span><span class="token operator">=</span>
+<span class="token comment"># (string) Token used to authenticate from servers (s2s) against the events collector service for administration operations. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">EVENTSCOLLECTOR_AUTH_ADMIN_TOKEN</span><span class="token operator">=</span>
+<span class="token comment"># (string) Tracking endpoint of the events collector service. Defaults to &quot;/api/v1/s2s/event&quot;.</span>
+<span class="token assign-left variable">EVENTSCOLLECTOR_TRACK_ENDPOINT</span><span class="token operator">=</span>/api/v1/s2s/event
+<span class="token comment"># (string) HTTP verb used to post events. Defaults to &quot;POST&quot;.</span>
+<span class="token assign-left variable">EVENTSCOLLECTOR_TRACK_METHOD</span><span class="token operator">=</span>POST
+
+<span class="token comment"># PostgreSQL Events Database</span>
+<span class="token comment"># Database for application events and audit trails</span>
+
+<span class="token comment"># (string) Database engine client among &quot;mysql&quot; / &quot;mariadb&quot; / &quot;postgres&quot; / &quot;mssql&quot; (Currently only supports &quot;postgres&quot;). Defaults to &quot;postgres&quot;.</span>
+<span class="token assign-left variable">DB_EVENTS_CLIENT</span><span class="token operator">=</span>postgres
+<span class="token comment"># (string) Database engine specific dialect options as a stringified json. Defaults to &quot;{}&quot;.</span>
+<span class="token assign-left variable">DB_EVENTS_DIALECT_OPTIONS</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment"># (string) Database server host. Defaults to &quot;localhost&quot;.</span>
+<span class="token assign-left variable">DB_EVENTS_HOST</span><span class="token operator">=</span>localhost
+<span class="token comment"># (number) Database server port. Defaults to &quot;5432&quot;.</span>
+<span class="token assign-left variable">DB_EVENTS_PORT</span><span class="token operator">=</span><span class="token number">5432</span>
+<span class="token comment"># (string) Database user name. Defaults to &quot;st_events_user&quot;.</span>
+<span class="token assign-left variable">DB_EVENTS_USERNAME</span><span class="token operator">=</span>st_events_user
+<span class="token comment"># (string) Database password. Defaults to &quot;st_events_password&quot;.</span>
+<span class="token assign-left variable">DB_EVENTS_PASSWORD</span><span class="token operator">=</span>st_events_password
+<span class="token comment"># (string) Database name. Defaults to &quot;st_events_db&quot;.</span>
+<span class="token assign-left variable">DB_EVENTS_DATABASE_NAME</span><span class="token operator">=</span>st_events_db
+<span class="token comment"># (boolean) Enable database advanced logging. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">DB_EVENTS_LOGGING</span><span class="token operator">=</span>false
+
+--------------------------------------------------------------------------------
+<span class="token comment"># Core Integrations</span>
+<span class="token comment"># Mandatory platform integrations</span>
+--------------------------------------------------------------------------------
+
+<span class="token comment"># Microsoft Identity Platform</span>
+<span class="token comment"># Microsoft Identity Platform</span>
+
+<span class="token comment"># (string) Base URL of the Microsoft identity platform (May vary in non global environments such as GCC / DOD). Defaults to &quot;https://login.microsoftonline.com&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_IDENTITY_PLATFORM_BASEURL</span><span class="token operator">=</span>https://login.microsoftonline.com
+
+<span class="token comment"># Microsoft App Registration</span>
+<span class="token comment"># Microsoft App Registration</span>
+
+<span class="token comment"># (string) Microsoft Azure AD app registration client ID. No defaults.</span>
+<span class="token assign-left variable">MICROSOFT_APP_CLIENT_ID</span><span class="token operator">=</span><span class="token punctuation">{</span>PLACEHOLDER<span class="token punctuation">}</span>
+<span class="token comment"># (string) Microsoft Azure AD app registration client secret. No defaults.</span>
+<span class="token assign-left variable">MICROSOFT_APP_CLIENT_SECRET</span><span class="token operator">=</span><span class="token punctuation">{</span>PLACEHOLDER<span class="token punctuation">}</span>
+
+<span class="token comment"># Microsoft Graph</span>
+<span class="token comment"># Microsoft Graph</span>
+
+<span class="token comment"># (string) Base URL of the Microsoft Graph service (May vary in non global environments such as GCC / DOD). Defaults to &quot;https://graph.microsoft.com&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_BASEURL</span><span class="token operator">=</span>https://graph.microsoft.com
+<span class="token comment"># (string) Default requested scope during authentication to the Microsoft Graph service in client credential authentication mode. Defaults to &quot;https://graph.microsoft.com/.default&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_DEFAULT_SCOPE</span><span class="token operator">=</span>https://graph.microsoft.com/.default
+
+--------------------------------------------------------------------------------
+<span class="token comment"># Advanced Integrations (Optional)</span>
+<span class="token comment"># Advanced Integrations</span>
+--------------------------------------------------------------------------------
+
+<span class="token comment"># Mail</span>
+<span class="token comment"># When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://developers.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization</span>
+
+<span class="token comment"># (boolean) Enable sending emails from the platform. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">MAIL_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Mailer service (As of today, only &quot;sendgrid&quot; is supported). Defaults to &quot;sendgrid&quot;.</span>
+<span class="token assign-left variable">MAIL_PROVIDER</span><span class="token operator">=</span>sendgrid
+<span class="token comment"># (string) Secret key used to authenticate against the mailer service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MAIL_SECRET_KEY</span><span class="token operator">=</span>
+<span class="token comment"># (string) Default email sender (FROM:). Defaults to &quot;notifications@salestim.io&quot;.</span>
+<span class="token assign-left variable">MAIL_SENDER</span><span class="token operator">=</span>notifications@salestim.io
+<span class="token comment"># (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://developers.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MAIL_ACTION_MSG_ORIGINATOR</span><span class="token operator">=</span>
+
+<span class="token comment"># Webhooks</span>
+<span class="token comment"># Webhooks advanced configuration</span>
+
+<span class="token comment"># (string) HTTP user agent passed as a header with each request. Defaults to &quot;nBold-Webhook/v[MAJOR].[MINOR].[PATCH]&quot;.</span>
+<span class="token assign-left variable">WEBHOOKS_USER_AGENT</span><span class="token operator">=</span>nBold-Webhook/v4.8.1
+<span class="token comment"># (number) Interval in ms between two attempts. Defaults to &quot;10000&quot;.</span>
+<span class="token assign-left variable">WEBHOOKS_RETRY_INTERVAL</span><span class="token operator">=</span><span class="token number">10000</span>
+<span class="token comment"># (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to &quot;2&quot;.</span>
+<span class="token assign-left variable">WEBHOOKS_MAX_RETRY</span><span class="token operator">=</span><span class="token number">2</span>
+<span class="token comment"># (number) Timeout in ms before aborting the request if the server is unresponsive. Defaults to &quot;5000&quot;.</span>
+<span class="token assign-left variable">WEBHOOKS_TIMEOUT</span><span class="token operator">=</span><span class="token number">5000</span>
+
+<span class="token comment"># Analytics</span>
+<span class="token comment"># Analytics configuration</span>
+
+<span class="token comment"># (boolean) Enable integration with our analytics platform based on [Plausible Analytics](https://plausible.io/) that collects only anonymous data. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">ANALYTICS_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Base URL of the analytics service. Defaults to &quot;https://analytics.salestim.io&quot;.</span>
+<span class="token assign-left variable">ANALYTICS_BASEURL</span><span class="token operator">=</span>https://analytics.salestim.io
+<span class="token comment"># (string) Data domain as defined in the analytics server, useful if there are multiple analysed domains. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">ANALYTICS_DATA_DOMAIN</span><span class="token operator">=</span>
+
+<span class="token comment"># Microsoft Application Insights</span>
+<span class="token comment"># Microsoft Application Insights</span>
+
+<span class="token comment"># (boolean) Enable integration with Azure Application Insights service. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_APPINSIGHTS_INTEGRATION_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (boolean) Enable collection and push of live metrics to the Azure Application Insights service. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_APPINSIGHTS_LIVE_METRICS_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Secret instrumentation key used server-side to authenticate against the Azure Application Insights service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET_KEY</span><span class="token operator">=</span>
+<span class="token comment"># (string) Connection string used client-side to connect to the Azure Application Insights service . Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_APPINSIGHTS_CONNECTION_STRING</span><span class="token operator">=</span>
+
+<span class="token comment"># Prometheus</span>
+<span class="token comment"># Metrics exporter for Prometheus </span>
+
+<span class="token comment"># (boolean) Enable the `/monitoring/metrics` endpoint to expose platform's key metrics and be polled by a Prometheus server. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">PROMETHEUS_EXPORTER_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (boolean) Token used to authenticate against the Prometheus exporter endpoint `/monitoring/metrics` through the `X-Auth-Token` HTTP header or the `token` url parameter (for instance: `/monitoring/metrics?token=YOUR_AUTH_TOKEN`). Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">PROMETHEUS_EXPORTER_AUTH_TOKEN</span><span class="token operator">=</span>
+<span class="token comment"># (boolean) Collect and expose all the default node.js metrics to Prometheus. Defaults to &quot;true&quot;.</span>
+<span class="token assign-left variable">PROMETHEUS_EXPORTER_COLLECT_DEFAULT_METRICS</span><span class="token operator">=</span>true
+<span class="token comment"># (boolean) Collect and expose node.js garbage collector metrics to Prometheus. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">PROMETHEUS_EXPORTER_COLLECT_GARBAGE_COLLECTOR_METRICS</span><span class="token operator">=</span>false
+
+<span class="token comment"># GitHub Alerting</span>
+<span class="token comment"># GitHub Alerting</span>
+
+<span class="token comment"># (boolean) Enable integration with GitHub for alerting purposes. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">GITHUB_INTEGRATION_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to &quot;https://api.github.com&quot;.</span>
+<span class="token assign-left variable">GITHUB_API_BASE_URL</span><span class="token operator">=</span>https://api.github.com
+<span class="token comment"># (string) HTTP user agent passed as a header to the GitHub API. Defaults to &quot;nBold-GitHub/v[MAJOR].[MINOR].[PATCH]&quot;.</span>
+<span class="token assign-left variable">GITHUB_USER_AGENT</span><span class="token operator">=</span>nBold-GitHub/4.8.1
+<span class="token comment"># (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">GITHUB_OWNER</span><span class="token operator">=</span>
+<span class="token comment"># (string) GitHub repository where to create alert issues. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">GITHUB_REPO</span><span class="token operator">=</span>
+<span class="token comment"># (string) Token used to create issues. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">GITHUB_TOKEN</span><span class="token operator">=</span>
+<span class="token comment"># (string) Default assignees of the created alert issues as a comma-separated list (Using the user handle, e.g user1,user2). Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">GITHUB_ISSUES_ASSIGNEES</span><span class="token operator">=</span>
+<span class="token comment"># (string) Default labels of the created alert issues as a comma-separated list (e.g label1,label2). Defaults to &quot;nBold,alert&quot;.</span>
+<span class="token assign-left variable">GITHUB_ISSUES_LABELS</span><span class="token operator">=</span>nBold,alert
+
+<span class="token comment"># Mail Alerting</span>
+<span class="token comment"># Mail Alerting</span>
+
+<span class="token comment"># (boolean) Enable integration with the mailer service for alerting purposes. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">MAIL_ALERTS_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Sender (FROM:) of the alerts emails. Defaults to &quot;notifications@salestim.io&quot;.</span>
+<span class="token assign-left variable">MAIL_ALERTS_FROM</span><span class="token operator">=</span>notifications@salestim.io
+<span class="token comment"># (string) Recipient(s) (TO:) of the alerts emails.. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MAIL_ALERTS_TO</span><span class="token operator">=</span>
+
+<span class="token comment"># Intercom</span>
+<span class="token comment"># Intercom</span>
+
+<span class="token comment"># (boolean) Enable integration with Intercom for in-app end-users chat and support. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">INTERCOM_INTEGRATION_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Secret key used to generate hmac digest to secure connectivity between the client ans the Intercom service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">INTERCOM_CRYPTO_SECRET_KEY</span><span class="token operator">=</span>
+<span class="token comment"># (string) Intercom application ID used for authentication against the Intercom service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">INTERCOM_APP_ID</span><span class="token operator">=</span>
+<span class="token comment"># (string) Intercom access token used for server-side authentication against the Intercom service. Defaults to &quot;nBold,alert&quot;.</span>
+<span class="token assign-left variable">INTERCOM_ACCESS_TOKEN</span><span class="token operator">=</span>
+
+<span class="token comment"># Microsoft Marketplace</span>
+<span class="token comment"># Service used by the [nBold Cloud](https://www.nbold.co) SAAS environment to enable the &quot;Purchase from Microsoft Teams&quot; scenarios integrated with the [Microsoft Commercial Marketplace](https://docs.microsoft.com/en-us/azure/marketplace/).</span>
+
+<span class="token comment"># (boolean) Enable integration with the Microsoft Marketplace. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_MARKETPLACE_INTEGRATION_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) URL of the Microsoft Marketplace landing page. Defaults to &quot;http://localhost/microsoft-marketplace/order&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_MARKETPLACE_LANDING_PAGE_URL</span><span class="token operator">=</span>http://localhost/microsoft-marketplace/order
+<span class="token comment"># (string) URL of the Microsoft Marketplace webhook URL. Defaults to &quot;http://localhost/api/v1.0/microsoft_marketplace/notifications_handler&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_MARKETPLACE_CONNECTION_WEBHOOK_URL</span><span class="token operator">=</span>http://localhost/api/v1.0/microsoft_marketplace/notifications_handler
+<span class="token comment"># (string) Tenant ID used for authentication to the Microsoft Marketplace landing page. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_MARKETPLACE_TENANT_ID</span><span class="token operator">=</span>
+<span class="token comment"># (string) Microsoft Azure client ID used for authentication to the Microsoft Marketplace landing page. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_MARKETPLACE_FRONTEND_APP_ID</span><span class="token operator">=</span>
+<span class="token comment"># (string) Microsoft Azure client ID used for interactions with the Microsoft Marketplace API. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_MARKETPLACE_BACKEND_APP_ID</span><span class="token operator">=</span>
+<span class="token comment"># (string) Publisher ID from the Microsoft Marketplace registration. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_MARKETPLACE_PUBLISHER_ID</span><span class="token operator">=</span>
+<span class="token comment"># (string) Offer ID from the Microsoft Marketplace registration. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">MICROSOFT_MARKETPLACE_OFFER_ID</span><span class="token operator">=</span>
+
+<span class="token comment"># Feature Toggles Service</span>
+<span class="token comment"># [Feature Toggles](https://en.wikipedia.org/wiki/Feature_toggle) Service build on the [Unleash](https://docs.getunleash.io/) service.  This service brings advanced options to enable/disable features for specific audiences of users, such as a pilot group of users that needs to validate a new feature of the platform.</span>
+
+<span class="token comment"># (boolean) Enable the feature toggles server services. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Absolute URL of the feature toggles service. Defaults to &quot;http://localhost/feature-toggles/server&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_URL</span><span class="token operator">=</span>http://localhost/feature-toggles/server
+<span class="token comment"># (string) Relative URL of the feature toggles service. Defaults to &quot;/feature-toggles/server&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_BASEPATH</span><span class="token operator">=</span>/feature-toggles/server
+<span class="token comment"># (string) SMTP host used by the feature toggles service. Defaults to &quot;localhost&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_SMTP_HOST_ADDR</span><span class="token operator">=</span>localhost
+<span class="token comment"># (number) SMTP port used by the feature toggles service. Defaults to &quot;465&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_SMTP_HOST_PORT</span><span class="token operator">=</span><span class="token number">465</span>
+<span class="token comment"># (boolean) Defines if it is required to use SSL to connected to the SMTP server used by the feature toggles service. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_SMTP_HOST_SSL_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) User used to authenticate against the SMTP server used by the feature toggles service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_SMTP_USER_NAME</span><span class="token operator">=</span>
+<span class="token comment"># (string) Password used to authenticate against the SMTP server used by the feature toggles service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_SMTP_USER_PASSWORD</span><span class="token operator">=</span>
+<span class="token comment"># (string) Serder (FROM:) of the emails emitted by the feature toggles service. Defaults to &quot;notifications@salestim.io&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_SERVICE_SMTP_SENDER</span><span class="token operator">=</span>notifications@salestim.io
+<span class="token comment"># (string) PostgreSql host used by the feature toggles service. Defaults to &quot;localhost&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_DB_HOST</span><span class="token operator">=</span>localhost
+<span class="token comment"># (number) PostgreSql port used by the feature toggles service. Defaults to &quot;5432&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_DB_PORT</span><span class="token operator">=</span><span class="token number">5432</span>
+<span class="token comment"># (boolean) Defines if it is required to use SSL to connected to the PostgreSql server used by of the feature toggles service. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_DB_SSL</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Database used by the feature toggles service. Defaults to &quot;st_featuretoggles_db&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_DB_NAME</span><span class="token operator">=</span>st_featuretoggles_db
+<span class="token comment"># (string) Database schema used by the feature toggles service. Defaults to &quot;public&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_DB_SCHEMA</span><span class="token operator">=</span>public
+<span class="token comment"># (string) User used to authenticate against PostgreSql server used by the feature toggles service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_DB_USERNAME</span><span class="token operator">=</span>
+<span class="token comment"># (string) Password used to authenticate against PostgreSql server used by the feature toggles service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_DB_PASSWORD</span><span class="token operator">=</span>
+<span class="token comment"># (boolean) Enable the feature toggles proxy service for client-side requests. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_PROXY_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (string) Absolute URL of the feature toggles proxy. Defaults to &quot;http://localhost/feature-toggles/proxy&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_PROXY_SERVICE_URL</span><span class="token operator">=</span>http://localhost/feature-toggles/proxy
+<span class="token comment"># (string) User used to authenticate client-side against the feature toggles proxy service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_PROXY_CLIENT_USERNAME</span><span class="token operator">=</span>
+<span class="token comment"># (string) Password used to authenticate client-side against the feature toggles proxy service. Defaults to &quot;&quot;.</span>
+<span class="token assign-left variable">FEATURE_TOGGLES_PROXY_CLIENT_SECRET</span><span class="token operator">=</span>
+
+--------------------------------------------------------------------------------
+<span class="token comment"># Advanced Tuning (Optional)</span>
+<span class="token comment"># Performance Tuning</span>
+--------------------------------------------------------------------------------
+
+<span class="token comment"># Templates Business Rules</span>
+<span class="token comment"># Templates</span>
+
+<span class="token comment"># (number) Maximum number of users that could be defined as approvers in a template. Defaults to &quot;10&quot;.</span>
+<span class="token assign-left variable">BR_TEMPLATES_APPROVERS_MAX</span><span class="token operator">=</span><span class="token number">10</span>
+<span class="token comment"># (number) Maximum number of users that could be defined as permanent owners in a template. Defaults to &quot;20&quot;.</span>
+<span class="token assign-left variable">BR_TEMPLATES_PERMANENTOWNERS_MAX</span><span class="token operator">=</span><span class="token number">20</span>
+<span class="token comment"># (number) Maximum number of users that could be defined as permanent members in a template. Defaults to &quot;20&quot;.</span>
+<span class="token assign-left variable">BR_TEMPLATES_PERMANENTMEMBERS_MAX</span><span class="token operator">=</span><span class="token number">20</span>
+
+<span class="token comment"># Requests Business Rules</span>
+<span class="token comment"># Requests</span>
+
+<span class="token comment"># (number) Maximum number of users that could be invited as owners as part of a new team creation request. Defaults to &quot;20&quot;.</span>
+<span class="token assign-left variable">BR_REQUEST_REQUESTEDOWNERS_MAX</span><span class="token operator">=</span><span class="token number">20</span>
+<span class="token comment"># (number) Maximum number of users that could be invited as members as part of a new team creation request. Defaults to &quot;20&quot;.</span>
+<span class="token assign-left variable">BR_REQUEST_REQUESTEDMEMBERS_MAX</span><span class="token operator">=</span><span class="token number">20</span>
+
+<span class="token comment"># Logging</span>
+<span class="token comment"># Logging</span>
+
+<span class="token comment"># (string) Logging level. Uses the `npm` logging levels &quot;error&quot; / &quot;warn&quot; / &quot;info&quot; / &quot;http&quot; / &quot;verbose&quot; / &quot;debug&quot; / &quot;silly&quot; (highest to lowest). Defaults to &quot;info&quot;.</span>
+<span class="token assign-left variable">LOG_LEVEL</span><span class="token operator">=</span>info
+<span class="token comment"># (boolean) Enable logs persistency as files in the directory defined by LOG_PERSISTENCY_DIRECTORY. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">LOG_PERSISTENCY_ENABLED</span><span class="token operator">=</span>false
+<span class="token comment"># (boolean) Defines logs persistency directory location. Defaults to &quot;/volumes/logs&quot;.</span>
+<span class="token assign-left variable">LOG_PERSISTENCY_DIRECTORY</span><span class="token operator">=</span>/volumes/logs
+
+<span class="token comment"># Jobs Services</span>
+<span class="token comment"># Jobs services (Scheduled and on-demand background tasks)</span>
+
+<span class="token comment"># (boolean / number) If true, removes the job when it successfully completes. A number specified the amount of jobs to keep. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">JOBS_POLICY_REMOVE_ON_COMPLETE</span><span class="token operator">=</span>false
+<span class="token comment"># (boolean / number) If true, removes the job when it fails after all attempts. A number specified the amount of jobs to keep. Defaults to &quot;false&quot;.</span>
+<span class="token assign-left variable">JOBS_POLICY_REMOVE_ON_FAIL</span><span class="token operator">=</span>false
+<span class="token comment"># (number) Grace retention period for all jobs, defined in ms. Default to &quot;2419200000&quot; (28 days).</span>
+<span class="token assign-left variable">JOBS_POLICY_RETENTION_GRACE_PERIOD</span><span class="token operator">=</span><span class="token number">2419200000</span>
+<span class="token comment"># (string) Status of the jobs to delete after the grace period. Accepts &quot;null&quot; / &quot;completed&quot; / &quot;failed&quot;. Defaults to &quot;null&quot;</span>
+<span class="token assign-left variable">JOBS_POLICY_RETENTION_STATUS</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Maximum amount of jobs to clean per call to the jobs retention process. If not provided will clean all matching jobs. Defaults to &quot;null&quot;</span>
+<span class="token assign-left variable">JOBS_POLICY_RETENTION_LIMIT</span><span class="token operator">=</span>null
+
+<span class="token comment"># Graph Rate Limiter</span>
+<span class="token comment"># Graph Rate Limiter</span>
+
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_MAXCONCURRENT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_MINTIME</span><span class="token operator">=</span><span class="token number">50</span>
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_HIGHWATER</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_STRATEGY</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_PENALTY</span><span class="token operator">=</span><span class="token number">5000</span>
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_RESERVOIR</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_RESERVOIRREFRESHINTERVAL</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_RESERVOIRREFRESHAMOUNT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_RESERVOIRINCREASEINTERVAL</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_RESERVOIRINCREASEAMOUNT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Graph requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_GRAPH_LIMITER_RESERVOIRINCREASEMAXIMUM</span><span class="token operator">=</span>null
+
+<span class="token comment"># Planner Rate Limiter</span>
+<span class="token comment"># Planner Rate Limiter</span>
+
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_MAXCONCURRENT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_MINTIME</span><span class="token operator">=</span><span class="token number">400</span>
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_HIGHWATER</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_STRATEGY</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_PENALTY</span><span class="token operator">=</span><span class="token number">5000</span>
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_RESERVOIR</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_RESERVOIRREFRESHINTERVAL</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_RESERVOIRREFRESHAMOUNT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_RESERVOIRINCREASEINTERVAL</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_RESERVOIRINCREASEAMOUNT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Planner requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_PLANNER_LIMITER_RESERVOIRINCREASEMAXIMUM</span><span class="token operator">=</span>null
+
+<span class="token comment"># Cosmos DB Rate Limiter</span>
+<span class="token comment"># Cosmos DB Rate Limiter</span>
+
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_MAXCONCURRENT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_MINTIME</span><span class="token operator">=</span><span class="token number">200</span>
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_HIGHWATER</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_STRATEGY</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_PENALTY</span><span class="token operator">=</span><span class="token number">5000</span>
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_RESERVOIR</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_RESERVOIRREFRESHINTERVAL</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_RESERVOIRREFRESHAMOUNT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEINTERVAL</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEAMOUNT</span><span class="token operator">=</span>null
+<span class="token comment"># (number) Microsoft Cosmos DB requests limiter</span>
+<span class="token assign-left variable">MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEMAXIMUM</span><span class="token operator">=</span>null
+```sh</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/nboldhq/docs/edit/main/src/hosting/references/environment_variables.md" target="_blank" rel="noopener noreferrer">🌈 Improve this page!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">♻️ Last Updated:</span> <span class="time">2/5/2022, 8:28:31 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/hosting/references/docker_resources_reference.html" class="prev">
+        Docker resources reference
+      </a></span> <span class="next"><a href="/hosting/references/events_reference.html">
+        Events reference
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d2268d2f.js" defer></script><script src="/assets/js/2.8f423580.js" defer></script><script src="/assets/js/162.d54ecb05.js" defer></script>
+  </body>
+</html>

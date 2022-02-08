@@ -1,4 +1,4 @@
-# SalesTimApi.TeamMessagingSettings
+# NBoldApi.TeamMessagingSettings
 
 ## Properties
 

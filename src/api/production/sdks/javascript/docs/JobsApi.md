@@ -1,6 +1,6 @@
-# SalesTimApi.JobsApi
+# NBoldApi.JobsApi
 
-All URIs are relative to *https://api.salestim.io/api/v1.0*
+All URIs are relative to *https://api.nbold.co/production*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,13 +19,13 @@ Get detailed information about a job, including its status, progress, logs... TI
 ### Example
 
 ```javascript
-import SalesTimApi from 'sales_tim_api';
-let defaultClient = SalesTimApi.ApiClient.instance;
+import NBoldApi from 'n_bold_api';
+let defaultClient = NBoldApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SalesTimApi.JobsApi();
+let apiInstance = new NBoldApi.JobsApi();
 let jobId = "jobId_example"; // String | The job ID.
 apiInstance.getJob(jobId, (error, data, response) => {
   if (error) {

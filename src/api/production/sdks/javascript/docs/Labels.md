@@ -1,4 +1,4 @@
-# SalesTimApi.Labels
+# NBoldApi.Labels
 
 ## Properties
 
