@@ -12,9 +12,9 @@ To set up or change the Service Account, you just need to follow these steps:
 
 \[\[toc\]\]
 
-_While we invite you to create a dedicated Service Account for n_Bold_, you can rely on an existing one if you prefer. In that case, you can jump to point 2. 
+_While we invite you to create a dedicated Service Account for n_Bold_, you can rely on an existing one if you prefer. In that case, you can jump to point 2.
 
-_To learn more about why we rely on a Service Account and what are the best practices to secure it, please visit our_ [_Trust Center_](https://developers.salestim.com/platform/apppermissions.html#service-account)_._
+_To learn more about why we rely on a Service Account and what are the best practices to secure it, please visit our_ [_Trust Center_](https://docs.nbold.co/trust-center/)_._
 
 ## 1. Create a Teams Admin User Account
 
