@@ -1,3 +1,7 @@
+---
+author: Guillaume Meyer
+
+---
 # Installation Options
 
 ---
