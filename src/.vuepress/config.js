@@ -171,15 +171,16 @@ module.exports = {
           title: 'nBold Documentation',
           path: '/'
         },
-        {
-          title: 'Setup',
-          collapsable: true,
-          sidebarDepth: 1,
-          children: [
-            ['/setup/installation-options.md', 'Installation options'],
-            ['/setup/supported-clients.md', 'Supported clients']
-          ]
-        },
+        getSideBar('/setup', 'Quickstart'),
+        // {
+        //   title: 'Quickstart',
+        //   collapsable: true,
+        //   sidebarDepth: 1,
+        //   children: [
+        //     ['/setup/installation-options.md', 'Installation options'],
+        //     ['/setup/supported-clients.md', 'Supported clients']
+        //   ]
+        // },
         {
           title: 'Configuration',
           collapsable: true,

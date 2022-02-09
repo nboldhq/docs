@@ -1,5 +1,5 @@
 # ⚒️ Environment Variables
-📆 *Updated: Sat, 29 Jan 2022 02:59:58 GMT*
+📆 *Updated: Tue, 08 Feb 2022 15:35:58 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -206,7 +206,7 @@ MICROSOFT_GRAPH_DEFAULT_SCOPE=https://graph.microsoft.com/.default
 --------------------------------------------------------------------------------
 
 # Mail
-# When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://developers.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization
+# When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://developers.salestim.com/nocode/approval.html#approval-email-sent-by-your-organization
 
 # (boolean) Enable sending emails from the platform. Defaults to "false".
 MAIL_ENABLED=false
@@ -216,14 +216,14 @@ MAIL_PROVIDER=sendgrid
 MAIL_SECRET_KEY=
 # (string) Default email sender (FROM:). Defaults to "notifications@salestim.io".
 MAIL_SENDER=notifications@salestim.io
-# (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://developers.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "".
+# (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://developers.salestim.com/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "".
 MAIL_ACTION_MSG_ORIGINATOR=
 
 # Webhooks
 # Webhooks advanced configuration
 
-# (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]".
-WEBHOOKS_USER_AGENT=nBold-Webhook/v4.8.1
+# (string) HTTP user agent passed as a header with each request. Defaults to "SalesTim-Webhook/v[MAJOR].[MINOR].[PATCH]".
+WEBHOOKS_USER_AGENT=SalesTim-Webhook/v4.9.0
 # (number) Interval in ms between two attempts. Defaults to "10000".
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to "2".
@@ -272,8 +272,8 @@ PROMETHEUS_EXPORTER_COLLECT_GARBAGE_COLLECTOR_METRICS=false
 GITHUB_INTEGRATION_ENABLED=false
 # (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com".
 GITHUB_API_BASE_URL=https://api.github.com
-# (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]".
-GITHUB_USER_AGENT=nBold-GitHub/4.8.1
+# (string) HTTP user agent passed as a header to the GitHub API. Defaults to "SalesTim-GitHub/v[MAJOR].[MINOR].[PATCH]".
+GITHUB_USER_AGENT=SalesTim-GitHub/4.9.0
 # (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "".
 GITHUB_OWNER=
 # (string) GitHub repository where to create alert issues. Defaults to "".
@@ -282,8 +282,8 @@ GITHUB_REPO=
 GITHUB_TOKEN=
 # (string) Default assignees of the created alert issues as a comma-separated list (Using the user handle, e.g user1,user2). Defaults to "".
 GITHUB_ISSUES_ASSIGNEES=
-# (string) Default labels of the created alert issues as a comma-separated list (e.g label1,label2). Defaults to "nBold,alert".
-GITHUB_ISSUES_LABELS=nBold,alert
+# (string) Default labels of the created alert issues as a comma-separated list (e.g label1,label2). Defaults to "SalesTim,alert".
+GITHUB_ISSUES_LABELS=SalesTim,alert
 
 # Mail Alerting
 # Mail Alerting
@@ -304,11 +304,11 @@ INTERCOM_INTEGRATION_ENABLED=false
 INTERCOM_CRYPTO_SECRET_KEY=
 # (string) Intercom application ID used for authentication against the Intercom service. Defaults to "".
 INTERCOM_APP_ID=
-# (string) Intercom access token used for server-side authentication against the Intercom service. Defaults to "nBold,alert".
+# (string) Intercom access token used for server-side authentication against the Intercom service. Defaults to "SalesTim,alert".
 INTERCOM_ACCESS_TOKEN=
 
 # Microsoft Marketplace
-# Service used by the [nBold Cloud](https://www.nbold.co) SAAS environment to enable the "Purchase from Microsoft Teams" scenarios integrated with the [Microsoft Commercial Marketplace](https://docs.microsoft.com/en-us/azure/marketplace/).
+# Service used by the [SalesTim Cloud](https://www.salestim.com) SAAS environment to enable the "Purchase from Microsoft Teams" scenarios integrated with the [Microsoft Commercial Marketplace](https://docs.microsoft.com/en-us/azure/marketplace/).
 
 # (boolean) Enable integration with the Microsoft Marketplace. Defaults to "false".
 MICROSOFT_MARKETPLACE_INTEGRATION_ENABLED=false

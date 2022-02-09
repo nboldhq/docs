@@ -1,5 +1,5 @@
 # 📡 Services Reference
-📆 *Updated: Sat, 29 Jan 2022 02:59:58 GMT*
+📆 *Updated: Tue, 08 Feb 2022 15:35:58 GMT*
 
 This document lists all the services supported by the platform.
 
@@ -14,7 +14,7 @@ Each service is specified with:
 | ID | Name | Description | Roles |
 |:---|:-----|:------------|:------|
 | `web_svc` | Web | Web service hosting the server side of the Microsoft Teams web client. | `standalone, web` |
-| `api_svc` | API | API service, used both by the webclient and by third-party apps (Power Platform and Logic Apps connectors, custom apps...). Learn more from our [Tech Hub](https://developers.nbold.co/api) | `standalone, api` |
+| `api_svc` | API | API service, used both by the webclient and by third-party apps (Power Platform and Logic Apps connectors, custom apps...). Learn more from our [Tech Hub](https://developers.salestim.com/api) | `standalone, api` |
 | `jobs_svc` | Jobs | Service executing the different background worker processes, both triggered by the scheduler service and executed on-demand | `standalone, jobs` |
 | `scheduler_svc` | Scheduler | Service scheduling and triggering the execution of jobs by the jobs service | `standalone, scheduler` |
 | `connected_apps_svc` | Connected Apps | Service managing the lifecycle of connected apps agents | `integration` |

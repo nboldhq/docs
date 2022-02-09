@@ -4,6 +4,7 @@
 // Platform Dependencies
 const os = require('os')
 const fs = require('fs')
+const https = require('https')
 // External Dependencies
 const gulp = require('gulp')
 const concat = require('gulp-concat')
@@ -115,13 +116,41 @@ const convertOpenApiYamlToJson = (done) => {
   }
 }
 
+const downloadAssetsFromAppPlatformRepo = (done) => {
+  try {
+    const REFERENCES_DIR = `${SRC_FOLDER}hosting/references`
+    const ASSETS_ROOT_URL = 'https://dist.salestim.io/assets'
+    const assets = [
+      'azure_resources_reference.md',
+      'configuration_reference.md',
+      'docker_resources_reference.md',
+      'environment_variables.md',
+      'events_reference.md',
+      'services_reference.md'
+    ]
+    assets.forEach((asset, i) => {
+      const file = fs.createWriteStream(`${REFERENCES_DIR}/${asset}`)
+      const request = https.get(`${ASSETS_ROOT_URL}/${asset}`, (response) => {
+        response.pipe(file)
+        if (i === assets.length - 1) {
+          done()
+        }
+      })
+    })
+  } catch (err) { // Unexpected error
+    console.error('Unexpected error in /gulpfile/downloadAssetsFromAppPlatformRepo.')
+    console.dir(err)
+    done(err)
+  }
+}
+
 // #region EXPORTS
 
 exports.build = gulp.series(
   concatJs,
   concatCss,
   convertOpenApiYamlToJson,
-  // copySdkDocs
+  downloadAssetsFromAppPlatformRepo
 )
 
 // #endregion EXPORTS
