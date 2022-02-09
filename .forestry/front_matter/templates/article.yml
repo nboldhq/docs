@@ -26,4 +26,5 @@ fields:
   default: []
   label: Tags
 pages:
+- src/collaboration-templates/create-a-new-collaboration-template.md
 - src/quickstart/install-app-on-microsoft-teams.md
