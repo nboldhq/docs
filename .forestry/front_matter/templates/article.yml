@@ -1,0 +1,9 @@
+---
+label: Article
+hide_body: false
+fields:
+- name: author
+  type: text
+  config:
+    required: true
+  label: Author
