@@ -28,4 +28,3 @@ See [Node.js SDK Documentation](/api/sdks/node).
 Status: <Badge text="Coming Soon" type="error"/>  
 PowerShell module for the nBold API service. Cmdlets should work in any environment supported by `PowerShell Core`.
 
-<Classification label="public" />

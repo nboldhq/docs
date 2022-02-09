@@ -17,4 +17,3 @@ nBold API under the `beta` endpoint (under `https://api.salestim.io/api/beta`) i
 **Do NOT use beta APIs in your production apps**.
 :::
 
-<Classification label="public" />

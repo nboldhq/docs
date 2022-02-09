@@ -61,4 +61,3 @@ Any alert of any severity breaks our build and deployment process until resoluti
 :::
 Learn more about [GitHub Security Alerts](https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/about-alerts-for-vulnerable-dependencies)
 
-<Classification label="public" />

@@ -37,6 +37,13 @@ const concatJs = (done) => {
       done()
     })
   gulp.src([
+    './node_modules/@microsoft/teams-js/dist/MicrosoftTeams.min.js'
+  ])
+    .pipe(concat('MicrosoftTeams.min.js'))
+    .pipe(gulp.dest(JS_FOLDER)).on('end', () => {
+      done()
+    })
+  gulp.src([
     './node_modules/swagger-ui-dist/swagger-ui-bundle.js',
     './node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js'
   ])

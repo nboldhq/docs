@@ -1,6 +1,6 @@
 # NBoldApi.TemplatesCatalogApi
 
-All URIs are relative to *https://api.nbold.co/production*
+All URIs are relative to *https://api.salestim.io/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

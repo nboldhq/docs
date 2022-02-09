@@ -56,5 +56,3 @@ For reference, see [Manifest schema for Microsoft Teams](https://docs.microsoft.
 ::: tip We'll be glad to help!
 Need help to customize your own package? Just <a onclick="Intercom('showNewMessage');">Contact Us!</a>
 :::
-
-<Classification label="public" />

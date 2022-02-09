@@ -61,4 +61,3 @@ In addition to the `Retry-After` header, nBold API includes `X-RateLimit-Limit` 
 }
 ```
 
-<Classification label="public" />

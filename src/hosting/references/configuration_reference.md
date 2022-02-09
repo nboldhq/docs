@@ -1,5 +1,5 @@
 # ⚙️ Configuration Reference
-📆 *Updated: Tue, 08 Feb 2022 15:35:58 GMT*
+📆 *Updated: Wed, 09 Feb 2022 12:51:09 GMT*
 
 This document lists all the configuration options supported by the platform.
 

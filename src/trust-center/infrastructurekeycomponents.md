@@ -103,4 +103,3 @@ Learn more about [Intercom Security](https://www.intercom.com/security).
 Learn more about [Stripe Security](https://stripe.com/docs/security/stripe)
 :::
 
-<Classification label="public" />

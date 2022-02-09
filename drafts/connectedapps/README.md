@@ -15,4 +15,3 @@ The `nBold Connected Apps` brings your Microsoft Teams environment an off-the-sh
 | <img src="/img/connectedapps/trello.png" style="width: 40px"> | Trello | <Badge text="Coming Soon" type="warning" vertical="middle"/> |
 | <img src="/img/connectedapps/zohocrm.jpg" style="width: 40px"> | Zoho CRM | <Badge text="Coming Soon" type="warning" vertical="middle"/> |
 
-<Classification label="public" />

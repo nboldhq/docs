@@ -1,4 +1,1 @@
----
-
----
 # nBold documentation

@@ -42,4 +42,3 @@ Jobs can be requested by the nBold administrators, catalog managers and virtual 
 The easiest way to start exploring the data and services available through nBold API is to use [API Explorer](/api/explorer.md).  
 API Explorer lets you craft REST requests, adapt the HTTP request headers, and see the data responses.
 
-<Classification label="public" />

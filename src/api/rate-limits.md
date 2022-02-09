@@ -29,4 +29,3 @@ When a threshold is exceeded, nBold API limits any further requests from that cl
 
 See the [Throttling Guidance](/api/throttling) article to understand how to properly handle throttled requests.
 
-<Classification label="public" />

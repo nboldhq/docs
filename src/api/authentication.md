@@ -29,4 +29,3 @@ Reference: [Get access to the Microsoft Graph on behalf of a user](https://docs.
 ## Access without a user (client credentials flow)
 Reference: [Get access to the Microsoft Graph without a user](https://docs.microsoft.com/en-us/graph/auth-v2-service)
 
-<Classification label="public" />

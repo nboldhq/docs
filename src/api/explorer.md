@@ -2,4 +2,3 @@
 
 <ApiExplorer />
 
-<Classification label="public" />

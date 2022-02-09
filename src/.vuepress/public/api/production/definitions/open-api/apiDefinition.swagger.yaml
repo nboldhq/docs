@@ -5,17 +5,17 @@ info:
   description: >
     Visit our [API documentation](https://docs.nbold.co/api/) for more information.
   version: "2.0.0"
-  termsOfService: https://Fwww.nbold.co/legal/tos
+  termsOfService: https://nbold.co/legal/tos
   contact:
     name: nBold Support
     url: https://docs.nbold.co/api
     email: support@nbold.co
   license:
     name: (c) Copyright 2019-2022 SalesTim - all rights reserved.
-    url: https://www.nbold.co/legal/eula
+    url: https://nbold.co/legal/eula
 
 servers:
-  - url: https://api.nbold.co/production
+  - url: https://api.salestim.io/api/v1.0
     description: Production environment
 
 tags:

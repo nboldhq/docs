@@ -133,4 +133,3 @@ The following characters are forbidden in teams names:
 You can use " **-** " or " **|** " as separators.
 :::
 
-<Classification label="public" />

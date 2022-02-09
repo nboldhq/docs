@@ -140,4 +140,3 @@ To learn more about this option, please read the [nBold API](/api/) documentatio
 - [Team Creation Approved](/api/webhooks.md#supported-events)
 - [Team Creation Rejected](/api/webhooks.md#team-creation-rejected)
 
-<Classification label="public" />

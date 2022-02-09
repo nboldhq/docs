@@ -15,4 +15,3 @@ Automation connectors gives you access to all the powerful features of our [Gove
 - Setup the [Connector for Azure Logic Apps](/connectors/logic-apps-connector.md)
 - Discover the [Available Triggers and Actions](/connectors/connectors-actions.md)
 
-<Classification label="public" />

@@ -245,4 +245,3 @@ Be sure to enable auditing for all service accounts and related objects. Once au
 ### 7. Implement access rights management software.
 Carefully managing your Active Directory service accounts is crucial to preventing misuse of broad access and privileges. An access rights management tool can be beneficial to ensure user accounts are set up and managed with appropriate permissions and access.
 
-<Classification label="public" />

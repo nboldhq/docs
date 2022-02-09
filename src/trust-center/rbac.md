@@ -40,4 +40,3 @@ Here is the matrix of features/roles supported by the nBold platform:
 | **Audit trails** - View company-wide and user-level audit trails | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | ✅ |
 | **Roles management** - Assign roles to specific users | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | ✅ |
 
-<Classification label="public" />

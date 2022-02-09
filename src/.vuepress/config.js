@@ -5,7 +5,9 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'stylesheet', href: '/css/bundle.css' }],
-    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=UA-5688830-15' }],
+    ['script', { type: 'text/javascript', src: '/js/MicrosoftTeams.min.js' }],
+    ['script', { type: 'text/javascript', src: '/js/theme.js' }],
+    ['script', { type: 'text/javascript', src: 'https://www.googletagmanager.com/gtag/js?id=UA-5688830-15' }],
     // Bundle
     ['script', { type: 'text/javascript', src: '/js/bundle.js' }]
   ],
@@ -81,7 +83,7 @@ module.exports = {
   themeConfig: {
 
     yuu: {
-      defaultDarkTheme: true,
+      defaultDarkTheme: false,
       disableDarkTheme: false,
       colorThemes: ['blue', 'purple'], // green (default), blue, red, and purple
       defaultColorTheme: 'red',
@@ -95,14 +97,14 @@ module.exports = {
     logo: '/Logo_degrade_noir@4x.png',
 
     // Footer options
-    lastUpdated: '♻️ Last Updated',
+    lastUpdated: '📅 Last Updated',
 
     // Smooth scrolling
     smoothScroll: true,
 
     // GitHub options
     // Assumes GitHub. Can also be a full GitLab url.
-    repo: 'nboldhq',
+    repo: '',
     // Customising the header label
     // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
     repoLabel: '🐙 GitHub',
@@ -114,7 +116,7 @@ module.exports = {
     //   if your docs are in a specific branch (defaults to 'master'):
     docsBranch: 'main',
     //   defaults to false, set to true to enable
-    editLinks: true,
+    editLinks: false,
     //  custom text for edit link. Defaults to "Edit this page"
     editLinkText: '🌈 Improve this page!',
 
@@ -168,7 +170,7 @@ module.exports = {
       ],
       '/': [
         {
-          title: 'nBold documentation',
+          title: 'Introduction',
           path: '/'
         },
         getSideBar('/quickstart', 'Quickstart'),

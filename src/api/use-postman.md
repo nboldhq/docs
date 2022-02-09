@@ -24,4 +24,3 @@ https://docs.nbold.co/api/production/definitions/open-api/apiDefinition.swagger.
 
 You are now up and running with the nBold API collection.
 
-<Classification label="public" />

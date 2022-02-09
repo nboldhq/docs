@@ -17,4 +17,3 @@ For further reference, see [Microsoft Teams SSO for custom apps known limitation
 For service account authentication details, please refer to [Microsoft Graph Permissions](./apppermissions.md)
 :::
 
-<Classification label="public" />

@@ -39,4 +39,3 @@ Use [Postman](/api/use-postman) to test the nBold API from your own desktop.
 ### Power Platform
 Use the nBold [Power Platform & Logic Apps Connector](/connectors/) for use in `Power Apps`, `Power Automate` and `Logic Apps`.
 
-<Classification label="public" />

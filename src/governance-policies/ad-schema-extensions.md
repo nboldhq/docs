@@ -87,4 +87,3 @@ user.extension_e3049e305790413ca1b11bb53526f057_extensionAttribute10
 To see the available extensions in your tenant, you can use this link from the [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer?request=me&method=GET&version=beta&GraphUrl=https://graph.microsoft.com) that list all the user profile properties for the current user.
 :::
 
-<Classification label="public" />

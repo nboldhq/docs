@@ -57,4 +57,3 @@ Reopen the team with a team owner account (To be confirmed).
 
 ***
 
-<Classification label="public" />

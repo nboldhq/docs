@@ -33,4 +33,3 @@ Client applications can be broken by the addition of members to an existing enum
 To ensure reliability and facilitate support for your application, generate a unique GUID and send it on each nBold API REST request. This will help nBold investigate any errors more easily if you need to report an issue with nBold API.
 To do so, on every request to nBold API, generate a unique GUID, send it in the `client-request-id` HTTP request header, and also log it in your application's logs.
 
-<Classification label="public" />

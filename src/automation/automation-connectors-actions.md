@@ -227,4 +227,3 @@ Generate a signature from a secret and a webhook payload
 
 See [API Documentation](/api/reference/Apis/HooksApi.md#generatehooksignature)
 
-<Classification label="public" />

@@ -2,4 +2,3 @@
 
 https://docs.microsoft.com/en-us/microsoft-365-app-certification/teams/salestim
 
-<Classification label="public" />

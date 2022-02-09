@@ -42,4 +42,3 @@ Here is the list of classification labels we're using, from the least to the mos
 3.	The highest possible levels of integrity, confidentiality and availability are vital.
 4.	Material that can only be accessed by some specific employees (authenticated).
 
-<Classification label="public" />

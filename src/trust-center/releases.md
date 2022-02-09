@@ -59,4 +59,3 @@ Meaning of each component:
   * PATCH: version that includes backwards-compatible bug fixes
   * BUILD: incremental development-only version
 
-<Classification label="public" />

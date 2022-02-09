@@ -33,4 +33,3 @@ As well as country-specific standards, including:
 
 See [Microsoft Azure Trusted Cloud](https://azure.microsoft.com/en-us/overview/trusted-cloud/) for more information.
 
-<Classification label="public" />

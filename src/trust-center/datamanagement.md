@@ -411,4 +411,3 @@ Here is a summary of the key architecture components and their associated data r
 Learn more about [Azure Regions](https://azure.microsoft.com/en-us/global-infrastructure/regions/)
 :::
 
-<Classification label="public" />
