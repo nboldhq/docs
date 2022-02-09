@@ -8,13 +8,23 @@ sections:
   path: src/README.md
   label: Homepage
 - type: directory
-  path: src/setup
+  path: src/quickstart
   label: Quickstart
   create: documents
   match: "**/*"
 - type: directory
-  path: src/configuration
-  label: Configuration
+  path: src/collaboration-templates
+  label: Collaboration templates
+  create: documents
+  match: "**/*"
+- type: directory
+  path: src/business-scenarios
+  label: Business scenarios
+  create: documents
+  match: "**/*"
+- type: directory
+  path: src/governance-policies
+  label: Governance policies
   create: documents
   match: "**/*"
 - type: directory
@@ -24,11 +34,11 @@ sections:
   match: "**/*"
 - type: directory
   path: src/api
-  label: API & Webhooks
+  label: API
   create: documents
   match: "**/*"
 - type: directory
-  path: src/trust
+  path: src/trust-center
   label: Trust Center
   create: documents
   match: "**/*"
