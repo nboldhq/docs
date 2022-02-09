@@ -26,5 +26,6 @@ fields:
   default: []
   label: Tags
 pages:
+- src/business-scenarios/team-of-executive-committee-template.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/quickstart/install-app-on-microsoft-teams.md
