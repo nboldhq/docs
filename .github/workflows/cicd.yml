@@ -38,3 +38,5 @@ jobs:
           action: "upload"
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/dist"
+          skip_app_build: true
+          output_location: ""
