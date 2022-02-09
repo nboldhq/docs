@@ -136,7 +136,7 @@ module.exports = {
           { text: 'API Reference', link: '/api/production/reference/' }
         ]
       },
-      { text: '🔐 Trust Center', link: '/trust/' },
+      { text: '🔐 Trust Center', link: '/trust-center/' },
       {
         text: '🌐 More',
         ariaLabel: 'More',
@@ -168,10 +168,10 @@ module.exports = {
       ],
       '/': [
         {
-          title: 'nBold Documentation',
+          title: 'nBold documentation',
           path: '/'
         },
-        getSideBar('/setup', 'Quickstart'),
+        getSideBar('/quickstart', 'Quickstart'),
         // {
         //   title: 'Quickstart',
         //   collapsable: true,
@@ -181,15 +181,17 @@ module.exports = {
         //     ['/setup/supported-clients.md', 'Supported clients']
         //   ]
         // },
+        getSideBar('/collaboration-templates', 'Collaboration templates'),
+        getSideBar('/business-scenarios', 'Business scenarios'),
         {
-          title: 'Configuration',
+          title: 'Governance policies',
           collapsable: true,
           sidebarDepth: 1,
           children: [
-            ['/configuration/naming-conventions.md', 'Naming conventions'],
-            ['/configuration/approval.md', 'Approval workflow'],
-            ['/configuration/audience-targeting.md', 'Audience Targeting'],
-            ['/configuration/ad-schema-extensions.md', 'AD Schema Extensions']
+            ['/governance-policies/naming-conventions.md', 'Naming conventions'],
+            ['/governance-policies/approval.md', 'Approval workflow'],
+            ['/governance-policies/audience-targeting.md', 'Audience Targeting'],
+            ['/governance-policies/ad-schema-extensions.md', 'AD Schema Extensions']
           ]
         },
         {
@@ -205,7 +207,7 @@ module.exports = {
         },
         // getSideBar('/automation-connectors', 'Automation Connectors'),
         {
-          title: 'API & Webhooks',
+          title: 'API',
           collapsable: true,
           sidebarDepth: 1,
           children: [
@@ -230,19 +232,19 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 1,
           children: [
-            ['/trust/', 'Overview'],
-            '/trust/sso.md',
-            '/trust/rbac.md',
-            '/trust/access.md',
-            '/trust/infrastructurekeycomponents.md',
-            '/trust/apppermissions.md',
-            '/trust/datamanagement.md',
-            '/trust/securedevelopment.md',
-            '/trust/securitypolicy.md',
-            '/trust/privacyandcompliance.md',
-            '/trust/classification.md',
-            '/trust/releases.md',
-            '/trust/knownissues.md'
+            ['/trust-center/', 'Overview'],
+            '/trust-center/sso.md',
+            '/trust-center/rbac.md',
+            '/trust-center/access.md',
+            '/trust-center/infrastructurekeycomponents.md',
+            '/trust-center/apppermissions.md',
+            '/trust-center/datamanagement.md',
+            '/trust-center/securedevelopment.md',
+            '/trust-center/securitypolicy.md',
+            '/trust-center/privacyandcompliance.md',
+            '/trust-center/classification.md',
+            '/trust-center/releases.md',
+            '/trust-center/knownissues.md'
           ]
         }
       ]
