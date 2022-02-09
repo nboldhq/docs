@@ -7,25 +7,6 @@ fields:
   config:
     required: true
   label: Author
-- name: category
-  type: select
-  default: quickstart
-  config:
-    required: true
-    options:
-    - quickstart
-    - collaboration-templates
-    - business-scenarios
-    - governance-policies
-    - automation
-    - api
-    - trust-center
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Category
 - name: tags
   type: tag_list
   default: []
