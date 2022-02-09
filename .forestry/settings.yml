@@ -12,36 +12,50 @@ sections:
   label: Quickstart
   create: documents
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: src/collaboration-templates
   label: Collaboration templates
   create: documents
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: src/business-scenarios
   label: Business scenarios
   create: documents
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: src/governance-policies
   label: Governance policies
   create: documents
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: src/automation
   label: Automation
   create: documents
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: src/api
   label: API
   create: documents
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: src/trust-center
   label: Trust Center
   create: documents
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: drafts
   label: Drafts
