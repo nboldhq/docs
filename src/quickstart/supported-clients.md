@@ -1,3 +1,7 @@
+---
+author: Guillaume Meyer
+
+---
 # Supported Clients
 
 nBold is a suite of integrated services accessible from all the supported Microsoft Teams clients:
