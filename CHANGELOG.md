@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/nboldhq/docs/compare/v0.4.0...v0.5.0) (2022-02-09)
+
+
+### Features
+
+* 🎸 support for embedded mode in ms teams ([26343ed](https://github.com/nboldhq/docs/commit/26343ed766d0c2dbf7795b8b7f1b331d8da6f4a9))
+* 🎸 updated forestry cms configuration ([0c48dd8](https://github.com/nboldhq/docs/commit/0c48dd80c509958fcb754690c2310f5bb6834460))
+
 ## [0.4.0](https://github.com/nboldhq/docs/compare/v0.3.0...v0.4.0) (2022-02-08)
 
 
