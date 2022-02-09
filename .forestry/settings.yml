@@ -8,18 +8,18 @@ sections:
   path: src/README.md
   label: Homepage
 - type: directory
-  path: src/nocode
-  label: Teams Templates
+  path: src/setup
+  label: Quickstart
   create: documents
   match: "**/*"
 - type: directory
-  path: src/connectedapps
-  label: Collaboration Process
+  path: src/configuration
+  label: Configuration
   create: documents
   match: "**/*"
 - type: directory
-  path: src/automation-connectors
-  label: Automation Connectors
+  path: src/automation
+  label: Automation
   create: documents
   match: "**/*"
 - type: directory
@@ -28,7 +28,7 @@ sections:
   create: documents
   match: "**/*"
 - type: directory
-  path: src/platform
+  path: src/trust
   label: Trust Center
   create: documents
   match: "**/*"
