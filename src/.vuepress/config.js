@@ -9,7 +9,7 @@ module.exports = {
     // Bundle
     ['script', { type: 'text/javascript', src: '/js/bundle.js' }]
   ],
-  dest: 'docs',
+  dest: 'dist',
   plugins: [
     '@vuepress/active-header-links', {
       sidebarLinkSelector: '.sidebar-link',
