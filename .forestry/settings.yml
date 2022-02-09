@@ -42,6 +42,13 @@ sections:
   label: Trust Center
   create: documents
   match: "**/*"
+- type: directory
+  path: drafts
+  label: Drafts
+  create: documents
+  match: "**/*"
+  templates:
+  - article
 upload_dir: src/.vuepress/public/media
 public_path: "/uploads"
 front_matter_path: ''
