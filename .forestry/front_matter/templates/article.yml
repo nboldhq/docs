@@ -1,6 +1,7 @@
 ---
 label: Article
 hide_body: false
+display_field: author
 fields:
 - name: author
   type: text
