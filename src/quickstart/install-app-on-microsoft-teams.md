@@ -1,6 +1,7 @@
 ---
 tags: []
 author: Kristina Konstantynova
+status: draft
 
 ---
 # 👍 Install _n_Bold App on Microsoft Teams
