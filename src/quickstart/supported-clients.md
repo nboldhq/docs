@@ -1,6 +1,5 @@
 ---
 author: Guillaume Meyer
-category: quickstart
 tags:
 - microsoftteams
 - microsoft

@@ -1,4 +1,4 @@
-name: Publish
+name: Generate static assets and deploy to Azure Static Website
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout the main branch
         uses: actions/checkout@v2
         with:
           ref: main
@@ -29,16 +29,36 @@ jobs:
         run: |
           npm run build
 
-      - name: Commit files
-        run: |
-          git config --local user.email "guillaume.meyer@outlook.com"
-          git config --local user.name "Guillaume Meyer"
-          git add .
-          git commit -m "publishing" -a
+      # - name: Commit files
+      #   run: |
+      #     git config --local user.email "guillaume.meyer@outlook.com"
+      #     git config --local user.name "Guillaume Meyer"
+      #     git add .
+      #     git commit -m "publishing" -a
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      # - name: Push changes to the published branch
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: published
+      #     force: true
+
+      # - name: Checkout the published branch
+      #   uses: actions/checkout@v2
+      #   with:
+      #     ref: published
+      #     submodules: true
+
+      - name: Deploy to Azure Static Website
+        id: deploy
+        uses: Azure/static-web-apps-deploy@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: published
-          force: true
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_MEADOW_096585F10 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          action: "upload"
+          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+          app_location: "/docs" # App source code path
+          api_location: "" # Api source code path - optional
+          output_location: "" # Built app content directory - optional
+          ###### End of Repository/Build Configurations ######
