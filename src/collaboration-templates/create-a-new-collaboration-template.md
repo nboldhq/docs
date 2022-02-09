@@ -12,7 +12,7 @@ You want to create a Microsoft Teams Template to support any Collaborative Proce
 
 There are two simple steps for that:
 
-**TABLE OF CONTENTS** 
+**TABLE OF CONTENTS**
 
 \[\[toc\]\]
 
@@ -54,4 +54,4 @@ _Things to notice:_
 
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)
 
-13. Test your new Collaboration Template from the home page! Click on "**+New Team**"
+1. Test your new Collaboration Template from the home page! Click on "**+New Team**"
