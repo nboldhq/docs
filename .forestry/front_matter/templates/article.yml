@@ -25,3 +25,5 @@ fields:
   type: tag_list
   default: []
   label: Tags
+pages:
+- src/quickstart/Install nBold App on Microsoft Teams.md
