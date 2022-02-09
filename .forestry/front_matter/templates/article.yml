@@ -7,10 +7,6 @@ fields:
   config:
     required: true
   label: Author
-- name: tags
-  type: tag_list
-  default: []
-  label: Tags
 - name: status
   type: select
   default: draft
@@ -25,3 +21,7 @@ fields:
       file: 
       path: 
   label: Status
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
