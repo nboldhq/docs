@@ -26,6 +26,7 @@ fields:
   default: []
   label: Tags
 pages:
+- drafts/hello-world.md
 - src/business-scenarios/team-of-executive-committee-template.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/collaboration-templates/what-happens-if-the-template-is-changed.md
