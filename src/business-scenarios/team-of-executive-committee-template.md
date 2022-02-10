@@ -8,13 +8,17 @@ author: Kristina Konstantynova
 
 A guide to create a Collaboration template for Managing a Team of Executive Committee
 
-**TABLE OF CONTENTS**
+***
 
-\[\[toc\]\]
+**TABLE OF CONTENTS** \[\[toc\]\]
+
+***
 
 ## Introduction
 
 The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize the collaboration in an Executive Committee Team. Formation of Executive Committee is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization.
+
+***
 
 ### Step 1: Create the Original Team of the Collaboration Template
 
@@ -29,7 +33,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 * 📢 Internal Communication
 * 📜 Company News
 * 🔭 Market Watch
-* 🗓  Weekly Meeting
+* 🗓 Weekly Meeting
 * 🤝 Partners
 * 🛫Corporate Strategy
 
@@ -48,7 +52,7 @@ You can frame the channels the way you want, based on your need.
 5\. **Create a Planner** with the list of tasks that you need to carry out. Few examples that can be:
 
 * Communication with CEO (Weekly dialogue, Communication Report and Communication)
-* Organizational Oversight (Formation of Committees and Task force, Good governance practices)
+* Organizational Oversight (Formation of Committees and Task force, good governance practices)
 * Strategy Design (Swot Analysis, Access Competitors)
 
 _Planner is currently replicated in the inverse. So, for Planner you need to create the tasks displayed in the opposite of what you want to show in the Teams that will be created from the template._
@@ -61,9 +65,11 @@ _Planner is currently replicated in the inverse. So, for Planner you need to cre
 
 It's done!
 
+***
+
 ### Step 2: Adding Collaboration template to a template catalog
 
-1\. **Add the Original Team to the Catalog**: for this, you need to be logged in as a global admin. Go to Catalog Tab in _n_Bold App and look for the team you created i.e. "Team of Executive Committee - Template.
+1\. **Add the Original Team to the Catalog**: for this, you need to be logged in as a global admin. Go to Catalog Tab in nBold App and look for the team you created i.e. "Team of Executive Committee - Template.
 
 2\. **Click on the '+ New template'** option present on the top right corner and select the team to be cloned, which in this case is "Team of Executive Committee"
 
@@ -86,6 +92,8 @@ It's done!
 * Teams Privacy enforcement (to Private for example)
 * Permanent Owners
 * Permanent Members
+
+***
 
 ### Step 3: Try It 🚀
 
