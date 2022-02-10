@@ -27,9 +27,9 @@ You can set up that for everyone in your organization to a selected group of peo
 
 _To complete these steps, you would need to be a Microsoft Teams Admin or a Microsoft Global Admin._
 
-## 1. Get the _n_Bold Home App package
+## 1. Get the nBold Home App package
 
-Download the latest _n_Bold Home Package from [Here](https://dist.salestim.io/packages/io.salestim.targeted.home.prd.zip). **Do not unzip**.
+Download the latest nBold Home Package from [Here](https://dist.salestim.io/packages/io.salestim.targeted.home.prd.zip). **Do not unzip**.
 
 ***
 
@@ -41,7 +41,7 @@ Connect to Microsoft Teams [https://teams.microsoft.com](https://teams.microsoft
 
 ![](https://downloads.intercomcdn.com/i/o/442958778/717597f2312a2e0e1829cf7a/2022-01-04_11-52-01.png)
 
-Select from your computer the _n_Bold Home Package that you have just downloaded.
+Select from your computer the nBold Home Package that you have just downloaded.
 
 ![](https://downloads.intercomcdn.com/i/o/442959362/46787b77a50b236b8ff71096/home+page.png)
 
@@ -104,7 +104,7 @@ On the App Setup Policies page, create a New Policy by selecting **"+Add"**
 
 ![](https://downloads.intercomcdn.com/i/o/164966410/ea62789ceeebfe3875d4271a/image.png)
 
-Name It as you want, you can choose "_n_Bold Home Page"
+Name It as you want, you can choose "nBold Home Page"
 
 ![](https://downloads.intercomcdn.com/i/o/164967102/021fadb4c8f6d30d719ec650/image.png)
 
