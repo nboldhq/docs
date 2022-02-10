@@ -8,13 +8,17 @@ author: Kristina Konstantynova
 
 To set up or change the Service Account, you just need to follow these steps:
 
-**TABLE OF CONTENTS**
+***
 
-\[\[toc\]\]
+**TABLE OF CONTENTS** \[\[toc\]\]
 
-_While we invite you to create a dedicated Service Account for n_Bold_, you can rely on an existing one if you prefer. In that case, you can jump to point 2.
+***
+
+_While we invite you to create a dedicated Service Account for nBold_, you can rely on an existing one if you prefer. In that case, you can jump to point 2.
 
 _To learn more about why we rely on a Service Account and what are the best practices to secure it, please visit our_ [_Trust Center_](https://docs.nbold.co/trust-center/)_._
+
+***
 
 ## 1. Create a Teams Admin User Account
 
@@ -30,9 +34,11 @@ Here are the requirements for that account to work:
 
 ![](https://downloads.intercomcdn.com/i/o/164946313/1e6321497d4803963fcde313/image.png)
 
-## 2. Login to Microsoft Teams and search for _n_Bold App
+***
 
-Login to [https://teams.microsoft.com](https://teams.microsoft.com "https://teams.microsoft.com") with the account you created. Reach _n_Bold app by searching "_n_Bold" through the three dots on the left bar.
+## 2. Login to Microsoft Teams and search for nBold App
+
+Login to [https://teams.microsoft.com](https://teams.microsoft.com "https://teams.microsoft.com") with the account you created. Reach nBold app by searching "nBold" through the three dots on the left bar.
 
 ![](https://downloads.intercomcdn.com/i/o/462450073/e4bb47e521339359e6aeff34/Screenshot+2022-02-09+at+19.13.23.png)
 
@@ -40,13 +46,15 @@ Then click on the "Add" button.
 
 ![](https://downloads.intercomcdn.com/i/o/462452055/aade15170fed32201e00c5d7/Screenshot+2022-02-09+at+19.19.31.png)
 
-Sign-in into _n_Bold App
+Sign-in into nBold App
 
 ![](https://downloads.intercomcdn.com/i/o/462466035/88dd6bc11225e6af2e56048c/sign-in.jpg)
 
 You should be logged in now:
 
 ![](https://downloads.intercomcdn.com/i/o/462460356/dc0ad4f63124164169d9e766/Screenshot+2022-02-09+at+19.33.36.png)
+
+***
 
 ## 3. Update and Service Account Check
 
