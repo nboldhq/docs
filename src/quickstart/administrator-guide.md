@@ -5,12 +5,14 @@ author: Kristina Konstantynova
 
 ---
 # Administrator Guide
----
+
+***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
----
+***
+
 ## 📚 Microsoft Teams Templates Catalog
 
 ### View and manage all the Teams templates
@@ -31,7 +33,6 @@ During setup, a "Default team" Template has been provisioned. You cannot delete 
 
 For each existing Template, you can Enable or Disable it for users:
 
-  
 N.B: To edit an existing Template, just click on its name from the list. The edit form is similar to the creation form.
 
 ![](https://downloads.intercomcdn.com/i/o/175629976/0fd31007ea6ade2d20a50cd8/image.png)
@@ -84,11 +85,13 @@ Define the audience you want to target for this Template.
 
 [Learn more about Audience Targeting](https://help.salestim.com/en/articles/3519963-audience-targeting)
 
-### Data Compliance 
+### Data Compliance
 
-Define sensitivity labels to protect your data.
+Define sensitivity labels that are assigned to each team created from the Template to protect your data.
 
-![](/uploads/screenshot-2022-02-10-at-14-37-23.png)
+![](/uploads/screenshot-2022-02-10-at-15-39-51.png)
+
+[Learn more about Sensitivity Labels]()
 
 ### Teams Template Security Policy
 
