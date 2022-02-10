@@ -13,6 +13,7 @@ author: Kristina Konstantynova
 **TABLE OF CONTENTS**
 [[toc]]
 
+
 ***
 
 ## [1. 👍 Install Salestim App on Microsoft Teams](https://docs.nbold.co/quickstart/install-app-on-microsoft-teams.html)
