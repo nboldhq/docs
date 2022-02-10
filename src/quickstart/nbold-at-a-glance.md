@@ -10,8 +10,12 @@ nBold helps every organization to improve their Collaborative Processes in makin
 
 ***
 
+---
+
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
+
+---
 
 ***
 
