@@ -30,3 +30,4 @@ pages:
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/quickstart/install-app-on-microsoft-teams.md
 - src/quickstart/set-up-or-change-the-service-account.md
+- src/quickstart/set-up-the-home-page.md
