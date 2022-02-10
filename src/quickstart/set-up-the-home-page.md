@@ -4,27 +4,20 @@ tags: []
 author: Kristina Konstantynova
 
 ---
-# 🏡 Set up the Home Page (Optional)
+# Set up the Home Page (Optional)
 
-In this article you'll get all the step to set the Home Page for Microsoft Teams
+In this article, you'll get all the steps to set the Home Page for Microsoft Teams
 
 ![](https://downloads.intercomcdn.com/i/o/175631759/31ded0f5316a7f707c5752af/image.png)Employees will get a Home Page that gathers all the Teams she/he belongs to and where they can create Teams based on the catalog made available by the organization.
 
 You can set up that for everyone in your organization to a selected group of people.
 
----
+***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
----
-
-1. Get the Home Package
-2. Connect to Teams and Upload to Tenant App Catalog
-3. Connect To Microsoft Teams Admin Panel
-4. Reach Microsoft Teams Apps Setup section
-5. Set up the App for everyone
-6. Set up the App for a selected group of people
+***
 
 _To complete these steps, you would need to be a Microsoft Teams Admin or a Microsoft Global Admin._
 
@@ -38,15 +31,13 @@ Download the latest nBold Home Package from [Here](https://dist.salestim.io/pack
 
 Connect to Microsoft Teams [https://teams.microsoft.com](https://teams.microsoft.com "https://teams.microsoft.com") and load the Home Package as shown.
 
-![](https://downloads.intercomcdn.com/i/o/442939581/3d5339421eefa614cf9cbc44/2022-01-04_11-46-11.png)
+![](/uploads/home-page.png)
 
 ![](https://downloads.intercomcdn.com/i/o/442958778/717597f2312a2e0e1829cf7a/2022-01-04_11-52-01.png)
 
 Select from your computer the nBold Home Package that you have just downloaded.
 
-![](https://downloads.intercomcdn.com/i/o/442959362/46787b77a50b236b8ff71096/home+page.png)
-
-![](https://downloads.intercomcdn.com/i/o/442958837/102509cecc8574325677b667/add+home.png)
+![](/uploads/home-page-1.png)![](/uploads/add-home.png)
 
 ![](https://downloads.intercomcdn.com/i/o/442959300/32e37d44e7c306fe23d9c902/home+app+pinned.png)
 
@@ -81,19 +72,17 @@ Select Add Apps
 
 Search for the Home add select Add
 
-![](https://downloads.intercomcdn.com/i/o/164964392/bea145ed16553e7dc8ba7b5f/image.png)
+![](/uploads/add-home-1.png)
 
 Select Add Again on the bottom
 
-![](https://downloads.intercomcdn.com/i/o/164964622/c458a79db2d3a1af3c3420f7/image.png)
+![](/uploads/add-home-2.png)
 
 Select and move up to the top
 
-![](https://downloads.intercomcdn.com/i/o/164965048/099e08b4a1a16f18b7d16f24/image.png)
+![](/uploads/add-home-3.png)
 
 And now just click on save!
-
-![](https://downloads.intercomcdn.com/i/o/164965278/ac1a2a6a0499a65e316e9f67/image.png)
 
 It's taking up to 2 hours to be reflected on the end-user side.
 
@@ -103,10 +92,10 @@ It's taking up to 2 hours to be reflected on the end-user side.
 
 On the App Setup Policies page, create a New Policy by selecting **"+Add"**
 
-![](https://downloads.intercomcdn.com/i/o/164966410/ea62789ceeebfe3875d4271a/image.png)
+![](https://downloads.intercomcdn.com/i/o/164966410/ea62789ceeebfe3875d4271a/image.png)![](/uploads/add-home-4.png)
 
 Name It as you want, you can choose "nBold Home Page"
 
-![](https://downloads.intercomcdn.com/i/o/164967102/021fadb4c8f6d30d719ec650/image.png)
+![](/uploads/add-home-page-5.png)
 
 Then follow the steps described in **"4. Add the home Page to everyone"** to add the Home Package to the Policy.
