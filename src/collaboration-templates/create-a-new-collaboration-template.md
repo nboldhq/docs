@@ -14,9 +14,7 @@ There are two simple steps for that:
 
 ***
 
-**TABLE OF CONTENTS**
-
-\[\[toc\]\]
+**TABLE OF CONTENTS** \[\[toc\]\]
 
 ***
 
@@ -31,13 +29,11 @@ There are two simple steps for that:
 5. Add Planner in the relevant channels with Predefined Tasks, Checklist, Description, Labels and Buckets
 6. Add an image to this Team in Jpeg
 7. Remove all the wiki tabs from the channels created
-8. Add the _n_Bold Service Account as an owner of the Team
+8. Add the nBold Service Account as an owner of the Team
 
 ::: tip
 
-_Things to notice:_
-
-* _Tips: on windows 10, launch the emoji keyboard clicking "_Windows" + ";" _and pimp the channel name with emoji 💪💯👌😍  ._
+* On Windows 10, launch the emoji keyboard clicking "_Windows" + ";" _and pimp the channel name with emoji 💪💯👌😍  ._
 
   _For IOS devices, type "Control" + "Command" +"Space"._
 
@@ -48,7 +44,7 @@ _Things to notice:_
 ## 2. Add it to the Teams Template Corporate Catalog with Governance Policies (for Admins)
 
  1. Connect as a **Global Admin in Microsoft Teams**
- 2. Select _n_Bold in the App Store and go to [Catalog Tab](https://teams.microsoft.com/_#/apps/ae576c96-fc05-4e94-8b4f-28becf874a6e/sections/io.salestim.automation.catalog).
+ 2. Select nBold in the App Store and go to [Catalog Tab](https://teams.microsoft.com/_#/apps/ae576c96-fc05-4e94-8b4f-28becf874a6e/sections/io.salestim.automation.catalog).
  3. Click on **"+ New Template"** on top right
  4. Enter the **name of the Team** created before
  5. Adapt the name of the Template to be shown to end-users in the catalog
