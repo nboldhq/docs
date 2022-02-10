@@ -10,16 +10,14 @@ nBold helps every organization to improve their Collaborative Processes in makin
 
 ***
 
----
-
 **TABLE OF CONTENTS**
-[[toc]]
-
----
+\[\[toc\]\]
 
 ***
 
 * Repetitive processes such as Proposal Management, Crisis Management, Recruitment, etc.
+
+
 * Organization Collaboration such as collaboration at a Department level, Region, etc.
 
 nBold is built with a love for IT. It automates Microsoft Teams provisioning with many Governance Rules, so that you can scale in enterprise organizations.
