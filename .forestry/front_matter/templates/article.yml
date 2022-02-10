@@ -30,6 +30,7 @@ pages:
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
+- src/quickstart/create-teams-only-through-microsoft-teams-templates-by-nbold.md
 - src/quickstart/domain-to-whitelist.md
 - src/quickstart/install-app-on-microsoft-teams.md
 - src/quickstart/key-feautures.md
