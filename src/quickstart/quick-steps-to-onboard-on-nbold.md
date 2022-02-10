@@ -8,12 +8,12 @@ author: Kristina Konstantynova
 
 ##### In this article you'll find a recap of the steps needed to onboard on the app:
 
----
+***
 
 **TABLE OF CONTENTS**
 [[toc]]
 
----
+***
 
 ## [1. 👍 Install Salestim App on Microsoft Teams](https://docs.nbold.co/quickstart/install-app-on-microsoft-teams.html)
 
