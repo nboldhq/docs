@@ -3,12 +3,12 @@
 Start by downloading our latest package template:
 ```bash
 mkdir -p packages/standalone && cd packages/standalone
-curl https://dist.salestim.io/packages/io.salestim.standalone.self.zip -o io.salestim.standalone.self.zip
+curl https://dist.salestim.io/packages/io.nbold.standalone.self.zip -o io.nbold.standalone.self.zip
 ```
 
 Then unzip the package:
 ```bash
-unzip io.salestim.standalone.self.zip
+unzip io.nbold.standalone.self.zip
 ```
 
 Each package is comprised of 7 files:
@@ -37,7 +37,7 @@ sudo apt install zip
 
 Build your own package by adding all the assets to the zip archive:
 ```bash
-zip io.salestim.standalone.self.zip *.json *.png
+zip io.nbold.standalone.self.zip *.json *.png
 ```
 
 You can now go to Microsoft Teams and upload the package as a custom app.

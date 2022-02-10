@@ -2,7 +2,7 @@
   "name": "n_bold_api",
   "version": "2.0.0",
   "description": "Visit_our__API_documentation_https__docs_nbold_co_api__for_more_information_",
-  "license": "(c) Copyright 2019-2022 SalesTim - all rights reserved.",
+  "license": "(c) Copyright 2021-2022 SalesTim - all rights reserved.",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",

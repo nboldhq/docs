@@ -143,7 +143,7 @@ module.exports = {
         text: '🌐 More',
         ariaLabel: 'More',
         items: [
-          { text: 'nBold', link: 'https://www.nbold.co' },
+          { text: 'nBold', link: 'https://nbold.co' },
           { text: 'LinkedIn', link: 'https://www.linkedin.com/company/nbold' },
           { text: 'Twitter', link: 'https://twitter.com/nboldhq' },
           { text: 'Youtube', link: 'https://www.youtube.com/channel/UCyoESYiKzmIdVbR7BHu0cbQ' }
@@ -242,7 +242,7 @@ module.exports = {
             '/trust-center/apppermissions.md',
             '/trust-center/datamanagement.md',
             '/trust-center/securedevelopment.md',
-            '/trust-center/securitypolicy.md',
+            '/trust-center/security-policy.md',
             '/trust-center/privacyandcompliance.md',
             '/trust-center/classification.md',
             '/trust-center/releases.md',

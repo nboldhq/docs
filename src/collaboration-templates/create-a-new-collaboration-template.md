@@ -45,7 +45,7 @@ There are two simple steps for that:
 ## 2. Add it to the Teams Template Corporate Catalog with Governance Policies (for Admins)
 
  1. Connect as a **Global Admin in Microsoft Teams**
- 2. Select nBold in the App Store and go to [Catalog Tab](https://teams.microsoft.com/_#/apps/ae576c96-fc05-4e94-8b4f-28becf874a6e/sections/io.salestim.automation.catalog).
+ 2. Select nBold in the App Store and go to [Catalog Tab](https://teams.microsoft.com/_#/apps/ae576c96-fc05-4e94-8b4f-28becf874a6e/sections/io.nbold.catalog).
  3. Click on **"+ New Template"** on top right
  4. Enter the **name of the Team** created before
  5. Adapt the name of the Template to be shown to end-users in the catalog

@@ -11,7 +11,7 @@ Customer trust and data security are critical to everything we do at nBold.
 - You own your data: Customer data is only used to provide agreed upon services and if you leave the data is removed.
 
 ::: tip
-If you need more information, please refer to our [PRIVACY POLICY](https://www.nbold.co/legal/privacy/)
+If you need more information, please refer to our [PRIVACY POLICY](https://nbold.co/legal/privacy/)
 :::
 
 ## How nBold hosts services and data

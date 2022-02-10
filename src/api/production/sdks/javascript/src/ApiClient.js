@@ -33,11 +33,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'https://api.salestim.io/v1.0') {
+    constructor(basePath = 'https://api.salestim.io/api/v1.0') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://api.salestim.io/v1.0
+         * @default https://api.salestim.io/api/v1.0
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -593,7 +593,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://api.salestim.io/v1.0",
+              'url': "https://api.salestim.io/api/v1.0",
               'description': "Production environment",
             }
       ];

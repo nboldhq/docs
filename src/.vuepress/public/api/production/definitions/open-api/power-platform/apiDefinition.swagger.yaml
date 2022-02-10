@@ -18,9 +18,9 @@ info:
 
 x-ms-connector-metadata:
   - propertyName: Website
-    propertyValue: https://www.nbold.co
+    propertyValue: https://nbold.co
   - propertyName: Privacy policy
-    propertyValue: https://www.nbold.co/legal/privacy
+    propertyValue: https://nbold.co/legal/privacy
   - propertyName: Categories
     propertyValue: Productivity;IT Operations
 

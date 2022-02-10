@@ -2,7 +2,7 @@
   "name": "docs",
   "version": "0.5.0",
   "description": "nBold Documentation",
-  "author": "Guillaume Meyer <gmeyer@nbold.co> (https://www.nbold.co)",
+  "author": "Guillaume Meyer <gmeyer@nbold.co> (https://nbold.co)",
   "license": "MIT",
   "private": true,
   "repository": {

@@ -3,7 +3,7 @@
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.salestim.io/v1.0*
+All URIs are relative to *https://api.salestim.io/api/v1.0*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

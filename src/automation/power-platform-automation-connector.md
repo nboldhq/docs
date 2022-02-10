@@ -136,7 +136,7 @@ https://docs.nbold.co/api/production/definitions/open-api/power-platform/apiDefi
 - Click `Import`, then `Continue`
 - Upload the connector logo that you can download from:
 ```
-https://www.nbold.co/wp-content/uploads/2019/05/color.png
+https://nbold.co/wp-content/uploads/2019/05/color.png
 ```
 - Set the icon background color to:
 ```
@@ -178,8 +178,8 @@ Now that you've created the nBold connector, you can use it from [Power Apps](ht
 
 ::: tip 💡 To Go Further
 Here are a few interesting articles that may give you some guidelines and new ideas on how to use the the nBold Connector:
-- [Power Automate with Microsoft Teams: The Full Tutorial with Examples](https://www.nbold.co/power-automate-with-microsoft-teams-the-full-tutorial-with-examples/)
+- [Power Automate with Microsoft Teams: The Full Tutorial with Examples](https://nbold.co/power-automate-with-microsoft-teams-the-full-tutorial-with-examples/)
 - [Get started with Power Automate](https://docs.microsoft.com/en-us/power-automate/getting-started)
-- [Power BI with Microsoft Teams: How to Manage Reports Effectively](https://www.nbold.co/power-bi-with-microsoft-teams-how-to-manage-reports-effectively/)
+- [Power BI with Microsoft Teams: How to Manage Reports Effectively](https://nbold.co/power-bi-with-microsoft-teams-how-to-manage-reports-effectively/)
 :::
 

@@ -125,7 +125,7 @@ api.approveTeamCreation(approvalRequestId, opts, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.salestim.io/v1.0*
+All URIs are relative to *https://api.salestim.io/api/v1.0*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
