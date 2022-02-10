@@ -12,11 +12,12 @@ In this article you'll get all the step to set the Home Page for Microsoft Teams
 
 You can set up that for everyone in your organization to a selected group of people.
 
-***
+---
 
-**TABLE OF CONTENTS** \[\[toc\]\]
+**TABLE OF CONTENTS**
+[[toc]]
 
-***
+---
 
 1. Get the Home Package
 2. Connect to Teams and Upload to Tenant App Catalog

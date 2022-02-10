@@ -10,7 +10,12 @@ To set up or change the Service Account, you just need to follow these steps:
 
 ***
 
-**TABLE OF CONTENTS** \[\[toc\]\]
+---
+
+**TABLE OF CONTENTS**
+[[toc]]
+
+---
 
 ***
 

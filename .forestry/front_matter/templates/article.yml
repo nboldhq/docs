@@ -28,8 +28,11 @@ fields:
 pages:
 - src/business-scenarios/team-of-executive-committee-template.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
+- src/quickstart/administrator-guide.md
+- src/quickstart/domain-to-whitelist.md
 - src/quickstart/install-app-on-microsoft-teams.md
 - src/quickstart/key-feautures.md
 - src/quickstart/nbold-at-a-glance.md
+- src/quickstart/quick-steps-to-onboard-on-nbold.md
 - src/quickstart/set-up-or-change-the-service-account.md
 - src/quickstart/set-up-the-home-page.md
