@@ -58,4 +58,4 @@ There are two simple steps for that:
 
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)
 
-1. Test your new Collaboration Template from the home page! Click on "**+New Team**"
+13. Test your new Collaboration Template from the home page! Click on "**+New Team**"
