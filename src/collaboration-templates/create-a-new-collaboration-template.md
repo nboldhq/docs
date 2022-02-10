@@ -12,9 +12,13 @@ You want to create a Microsoft Teams Template to support any Collaborative Proce
 
 There are two simple steps for that:
 
+***
+
 **TABLE OF CONTENTS**
 
 \[\[toc\]\]
+
+***
 
 ![](https://downloads.intercomcdn.com/i/o/177141289/0ed99712620e25804e2aa8f0/Microsoft+Teams+Templates+with+Salestim.png)
 
@@ -29,11 +33,15 @@ There are two simple steps for that:
 7. Remove all the wiki tabs from the channels created
 8. Add the _n_Bold Service Account as an owner of the Team
 
+::: tip
+
 _Things to notice:_
 
 * _Tips: on windows 10, launch the emoji keyboard clicking "_Windows" + ";" _and pimp the channel name with emoji 💪💯👌😍  ._
 
   _For IOS devices, type "Control" + "Command" +"Space"._
+
+  :::
 
 ![](https://downloads.intercomcdn.com/i/o/462347098/2f4dddfcdc1c025f4f781728/Screenshot+2022-02-09+at+16.54.12.png)
 
