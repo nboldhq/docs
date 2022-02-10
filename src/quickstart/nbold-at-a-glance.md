@@ -28,7 +28,7 @@ nBold is built with a love for IT. It automates Microsoft Teams provisioning wit
 
 nBold lets organizations build a Collaboration Templates Catalog that the company owns, letting user creates a Team needed to perform Business Activities such as: Proposal Realization, Recruitment Session, Project Management, Crisis Management, etc. Possibilities are endless!
 
-Today's Templates created by nBold supports:
+Today's Templates created by nBold support:
 
 * List of Channels
 * List of Tabs
@@ -39,11 +39,12 @@ Today's Templates created by nBold supports:
 
 ## Governance Rules for Teams in Microsoft Teams
 
-Improving collaboration at scale with Microsoft Teams, can't be done without strong governance. nBold empowers end-users with self-service Teams provisioning and management that suits IT needs. With each Collaboration Template build with nBold you can apply governance rules such as:
+Improving collaboration at scale with Microsoft Teams, can't be done without strong governance. nBold empowers end-users with self-service Teams provisioning and management that suits IT needs. With each Collaboration Template built with nBold you can apply governance rules such as:
 
-* Microsoft Teams Naming Convention
+* Naming Convention
 * Teams Creation Approval
-* Microsoft Teams Template Audience Targeting
+* Template Audience Targeting
+* Compliance with Sensitivity Labels
 * Teams Enforced Privacy Policy
 * Teams Creation Requester as non-Owner
 * Permanent Owners and Permanent Members
