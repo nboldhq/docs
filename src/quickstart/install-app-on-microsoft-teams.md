@@ -4,21 +4,25 @@ author: Kristina Konstantynova
 status: draft
 
 ---
-# 👍 Install _n_Bold App on Microsoft Teams
+# 👍 Install nBold App on Microsoft Teams
 
-The article describes how to setup _n_Bold, you'll see it's fast 🚀
+The article describes how to setup nBold, you'll see it's fast 🚀
 
 _This article has been recently updated to reflect the new experience with the Microsoft Teams App SSO Support._
 
-It's taking only a few minutes to enable _n_Bold to your organization. You just need to follow these steps:
+It's taking only a few minutes to enable nBold to your organization. You just need to follow these steps:
 
-**TABLE OF CONTENTS**
+***
 
-\[\[toc\]\]
+**TABLE OF CONTENTS** \[\[toc\]\]
 
-## 1. Get the _n_Bold Automation app package
+***
 
-Get _n_Bold through the [Microsoft Teams Apps Store](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link).
+## 1. Get the nBold Automation app package
+
+Get nBold through the [Microsoft Teams Apps Store](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link).
+
+***
 
 ## 2. Connect to Microsoft Teams as a Global Admin
 
@@ -26,15 +30,19 @@ Connect to Microsoft Teams with a Global Admin account. Otherwise, you won't be 
 
 Select it, click on Install and choose **"Add"**
 
+***
+
 ## 3. Give Permission for SSO Login
+
+***
 
 ## 4. Grant Admin Consent for all other permissions
 
-Log into _n_Bold Automation by using the "SIGN IN" button to start the login process.
+Log into nBold Automation by using the "SIGN IN" button to start the login process.
 
 Select your Office 365 account (you must be a Global Admin) and enter your password. Read the permissions, **check the box "Consent on behalf of your organization" and click "Accept".**
 
-1. _n_Bold _doesn't support personal Microsoft Accounts (for instance @outlook.com, @hotmail.com...). You must use a valid Office 365 account from your organization that is a Global Admin_
+1. nBold _doesn't support personal Microsoft Accounts (for instance @outlook.com, @hotmail.com...). You must use a valid Office 365 account from your organization that is a Global Admin_
 
 You see, it was quick! You're all set up.
 
