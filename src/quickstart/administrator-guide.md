@@ -5,7 +5,12 @@ author: Kristina Konstantynova
 
 ---
 # Administrator Guide
+---
 
+**TABLE OF CONTENTS**
+[[toc]]
+
+---
 ## 📚 Microsoft Teams Templates Catalog
 
 ### View and manage all the Teams templates
