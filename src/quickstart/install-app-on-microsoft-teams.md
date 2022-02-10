@@ -24,7 +24,7 @@ Get _n_Bold through the [Microsoft Teams Apps Store](https://teams.microsoft.com
 
 Connect to Microsoft Teams with a Global Admin account. Otherwise, you won't be able to implement the app in the organization.
 
-Select it, Click on Install and choose **""Add"**
+Select it, click on Install and choose **"Add"**
 
 ## 3. Give Permission for SSO Login
 
@@ -32,7 +32,7 @@ Select it, Click on Install and choose **""Add"**
 
 Log into _n_Bold Automation by using the "SIGN IN" button to start the login process.
 
-Select your Office 365 account (you must be a Global Admin), and enter your password. Read the permissions, **check the box "Consent on behalf of your organization" and click "Accept".**
+Select your Office 365 account (you must be a Global Admin) and enter your password. Read the permissions, **check the box "Consent on behalf of your organization" and click "Accept".**
 
 1. _n_Bold _doesn't support personal Microsoft Accounts (for instance @outlook.com, @hotmail.com...). You must use a valid Office 365 account from your organization that is a Global Admin_
 
