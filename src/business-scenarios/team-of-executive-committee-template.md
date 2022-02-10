@@ -10,7 +10,12 @@ A guide to create a Collaboration template for Managing a Team of Executive Comm
 
 ***
 
-**TABLE OF CONTENTS** \[\[toc\]\]
+---
+
+**TABLE OF CONTENTS**
+[[toc]]
+
+---
 
 ***
 
