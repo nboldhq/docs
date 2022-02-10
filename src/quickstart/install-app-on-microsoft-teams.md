@@ -14,7 +14,8 @@ It's taking only a few minutes to enable nBold to your organization. You just ne
 
 ***
 
-**TABLE OF CONTENTS** \[\[toc\]\]
+**TABLE OF CONTENTS** 
+[[toc]]
 
 ***
 
@@ -48,7 +49,9 @@ You see, it was quick! You're all set up.
 
 Now it's time [to create your first template](https://help.salestim.com/en/articles/3387488-create-a-new-microsoft-teams-template) to try it out.
 
-In addition, you can:
+::: tip In addition, you can:
 
 * [Set up the Home App for users](https://help.salestim.com/en/articles/3507463-set-up-the-home-page-optional)
 * [Delegate the Template Catalog Administration to any user](https://help.salestim.com/en/articles/4859635-catalog-manager-admin-role)
+
+:::
