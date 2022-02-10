@@ -12,11 +12,12 @@ You want to create a Microsoft Teams Template to support any Collaborative Proce
 
 There are two simple steps for that:
 
-***
+---
 
-**TABLE OF CONTENTS** \[\[toc\]\]
+**TABLE OF CONTENTS**
+[[toc]]
 
-***
+---
 
 ![](https://downloads.intercomcdn.com/i/o/177141289/0ed99712620e25804e2aa8f0/Microsoft+Teams+Templates+with+Salestim.png)
 
