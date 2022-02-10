@@ -1,5 +1,5 @@
-# ⚙️ Configuration Reference
-📆 *Generated: Thu, 10 Feb 2022 13:57:08 GMT*
+# Configuration Reference
+📆 *Generated: Thu, 10 Feb 2022 16:34:31 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -11,7 +11,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 To help you get started, you can also download our [.env file template](./environment_variables) that you can use with any infrastructure-as-code solution.
 
 
-**🔖 TABLE OF CONTENTS:**
+**TABLE OF CONTENTS:**
 
 [[toc]]
 

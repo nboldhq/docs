@@ -1,5 +1,5 @@
-# 📡 Services Reference
-📆 *Generated: Thu, 10 Feb 2022 13:57:08 GMT*
+# Services Reference
+📆 *Generated: Thu, 10 Feb 2022 16:34:31 GMT*
 
 This document lists all the services supported by the platform.
 

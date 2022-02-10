@@ -28,7 +28,7 @@ fields:
 pages:
 - src/business-scenarios/team-of-executive-committee-template.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
-- src/collaboration-templates/what-happens-if-the-template-is-changed?.md
+- src/collaboration-templates/what-happens-if-the-template-is-changed.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
 - src/quickstart/create-teams-only-through-microsoft-teams-templates-by-nbold.md

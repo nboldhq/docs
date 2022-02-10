@@ -1,4 +1,4 @@
-# 🐳 Docker Resources
+# Docker Resources
 This is a list of all the resources, both mandatory and optional, used to deploy a full-featured SalesTim environment on Docker.
 
 ::: warning N.B
