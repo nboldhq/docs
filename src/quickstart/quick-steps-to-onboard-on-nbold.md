@@ -6,13 +6,14 @@ author: Kristina Konstantynova
 ---
 # Quick steps to onboard on nBold
 
-In this article you'll find a recap of the steps needed to onboard on the app: 
+##### In this article you'll find a recap of the steps needed to onboard on the app:
+
 ---
 
 **TABLE OF CONTENTS**
 [[toc]]
 
---- 
+---
 
 ## [1. 👍 Install Salestim App on Microsoft Teams](https://docs.nbold.co/quickstart/install-app-on-microsoft-teams.html)
 
@@ -22,5 +23,4 @@ In this article you'll find a recap of the steps needed to onboard on the app:
 
 ## [4. 🏡 Set up the Home Page](https://docs.nbold.co/quickstart/set-up-the-home-page.html) and deploy!
 
-  
 You may need to whitelist the Salestim domains, check [🏳 Domain to whitelist](https://help.salestim.com/en/articles/3519991-domain-to-whitelist)
