@@ -41,6 +41,7 @@ pages:
 - src/governance-policies/mandatory-number-of-owners-and-members.md
 - src/governance-policies/permanent-owners-and-members-policy.md
 - src/governance-policies/security-policy.md
+- src/governance-policies/sensitivity-labels.md
 - src/governance-policies/serve-private-channels.md
 - src/governance-policies/simplifying-and-extending-naming-convention-and-audience-targeting-policy.md
 - src/governance-policies/wiki-tabs.md
