@@ -53,8 +53,6 @@ You can frame the channels the way you want, based on your need.
 
 [![](https://downloads.intercomcdn.com/i/o/166565567/56049c2a0e0bbd4ddc3b380c/Screen+Shot+2019-11-22+at+4.57.01+PM.png =929x583)](https://downloads.intercomcdn.com/i/o/166565567/56049c2a0e0bbd4ddc3b380c/Screen+Shot+2019-11-22+at+4.57.01+PM.png)
 
-_Planner is currently replicated in the inverse. So, for Planner you need to create the tasks displayed in the opposite of what you want to show in the Teams that will be created from the template._
-
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
 It's done!
@@ -79,9 +77,9 @@ It's done!
 
 5\. **In the Approval tab**, define the approval policy with an approver from your organization.
 
-6. **In the Audience tab**, define the audience you wish to target for this Collaboration Template.
-7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
-8. **In the Security tab**, define the Security Policy with:
+1. **In the Audience tab**, define the audience you wish to target for this Collaboration Template.
+2. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
+3. **In the Security tab**, define the Security Policy with:
 
 * Teams Privacy enforcement to Private for example
 * Permanent Owners
@@ -100,5 +98,4 @@ Go on home page. Click on the "Create" option. You will see the Business option 
 
 ![](/uploads/screenshot-2022-02-11-at-09-57-24.png)
 
-  
-If you are doing that with a service account, no notification will be seen because you are the account that is creating the Team. 
+If you are doing that with a service account, no notification will be seen because you are the account that is creating the Team.
