@@ -2,6 +2,7 @@
 status: draft
 tags: []
 author: Kristina Konstantynova
+position: 1
 
 ---
 # **When would I need to** [**update App Packages**](https://docs.nbold.co/quickstart/update-app-packages.html)**?**
