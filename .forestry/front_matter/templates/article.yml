@@ -33,6 +33,7 @@ pages:
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/collaboration-templates/files-clonning.md
 - src/collaboration-templates/private-channels-in-colaboration-templates.md
+- src/collaboration-templates/sharepoint-library-tab.md
 - src/collaboration-templates/what-happens-if-the-template-is-changed.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
