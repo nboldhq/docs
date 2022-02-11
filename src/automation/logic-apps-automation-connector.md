@@ -1,3 +1,13 @@
+---
+status: published
+author: Guillaume Meyer
+position: 2
+tags:
+- automation
+- azure
+- logic-apps
+
+---
 # Setup the Automation Connector for Logic Apps
 
 **Abstract**  
@@ -179,4 +189,3 @@ Here are a few interesting articles that may give you some guidelines and new id
 - [Get started with Power Automate](https://docs.microsoft.com/en-us/power-automate/getting-started)
 - [Power BI with Microsoft Teams: How to Manage Reports Effectively](https://nbold.co/power-bi-with-microsoft-teams-how-to-manage-reports-effectively/)
 :::
-
