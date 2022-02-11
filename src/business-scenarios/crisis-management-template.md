@@ -8,7 +8,6 @@ author: Kristina Konstantynova
 
 A guide to create a Collaboration template for Crisis Management
 
-  
 Introduction
 
 The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize any Crisis. Crisis Management is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization
@@ -32,8 +31,6 @@ You can frame the channels the way you want, based on your need.
 
 ![](https://downloads.intercomcdn.com/i/o/165930020/83ba89fbd451d1097b5c1c2f/CM-+Channels+list.png)
 
-  
-  
 4\. **Add Websites Tabs** in every channel needed, you can bring any content that comes with a URL to the Team created. The content can be any information that you would like to share with your team members.
 
 * Guidelines on Internet or intranet
@@ -48,10 +45,8 @@ You can frame the channels the way you want, based on your need.
 * Business Impact (Regulatory fines, Increase in Expenses, Reputation Control)
 * Action Plan (Use planner to add tasks that the Teams owner will first perform when the team is created)
 
-_Planner is currently replicated in the inverse. So, for Planner you need to create the tasks displayed in the opposite of what you want to show in the Teams that will be created from the template._
+![](https://downloads.intercomcdn.com/i/o/165930307/0801296a07da9c0b8ff21c7a/CM-+Planner.png)
 
-![](https://downloads.intercomcdn.com/i/o/165930307/0801296a07da9c0b8ff21c7a/CM-+Planner.png)  
-  
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
 It's done!
