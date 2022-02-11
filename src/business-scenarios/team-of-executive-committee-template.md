@@ -10,16 +10,12 @@ A guide to create a Collaboration template for Managing a Team of Executive Comm
 
 ***
 
-***
-
 **TABLE OF CONTENTS**
 \[\[toc\]\]
 
 ***
 
-***
-
-## Introduction
+### Introduction
 
 The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize the collaboration in an Executive Committee Team. Formation of Executive Committee is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization.
 
@@ -62,9 +58,7 @@ You can frame the channels the way you want, based on your need.
 
 ![](https://downloads.intercomcdn.com/i/o/166279328/993d724fd2dbbd3f8261a9b6/Screen+Shot+2019-11-27+at+12.40.41+PM.png)
 
-6\. Delete all the Wiki Tabs in each Channel. Otherwise, Microsoft will create two.
-
-7\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
+6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
 It's done!
 
@@ -72,25 +66,29 @@ It's done!
 
 ### Step 2: Adding Collaboration template to a template catalog
 
-1\. **Add the Original Team to the Catalog**: for this, you need to be logged in as a global admin. Go to Catalog Tab in nBold App and look for the team you created i.e. "Team of Executive Committee - Template.
+1. **Add the Original Team to the Catalog**: for this, you need to be logged in as a global admin. Go to Catalog Tab in nBold App and look for the team you created i.e. "Team of Executive Committee - Template.
+2. **Click on the '+ New template'** option present on the top right corner and select the team to be cloned, which in this case is "Team of Executive Committee"
+3. **In the Info tab**, fill in the name of the original team which is named "Team of Executive Committee - Template" and description. You also have the ability to choose the desired Collaboration Template language.
+4. **In the Naming Tab,** set up the name of the Team that will be created from the Template:
+   * **Default Team Name** (what user will fill in the request form): this can be the _Name of the Team_
 
-2\. **Click on the '+ New template'** option present on the top right corner and select the team to be cloned, which in this case is "Team of Executive Committee"
 
-3\. **In the Info tab**, fill in the name of the original team which is named "Team of Executive Committee - Template" and description. You also have the ability to choose the desired Collaboration Template language.
+   * **Naming Convention** (name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name) _%> - Exec Committee_
 
-4\. **In the Naming Tab,** set up the name of the Team that will be created from the Template:
 
-* **Default Team Name** (what user will fill in the request form): this can be _Name of the Team_
-* **Naming Convention** (name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name) _%> - Exec Committee_
-* **Default Teams description:** Enter Additional Team Description
-* **Business Solution Description:**  this can be _Team dedicated to collaboration around the Team: <%=_ [_request.team.name_](http://request.team.name) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
-* Same Idea with the welcome message!
+   * **Default Teams description:** Enter Additional Team Description
 
-5\. **In the Approval tab**, define the approval policy with an approver from your organization.
 
-7\. **In the Audience tab**, define the audience you wish to target for this Collaboration Template.
+   * **Business Solution Description:**  this can be _Team dedicated to collaboration around the Team: <%=_ [_request.team.name_](http://request.team.name) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
 
-8\. **In the Security tab**, define the Security Policy with:
+
+   * Same Idea with the welcome message!
+
+
+5. **In the Approval tab**, define the approval policy with an approver from your organization.
+6. **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
+7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
+8. **In the Security tab**, define the Security Policy with:
 
 * Teams Privacy enforcement (to Private for example)
 * Permanent Owners
