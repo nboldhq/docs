@@ -79,9 +79,11 @@ It's done!
 
 5\. **In the Approval tab**, define the approval policy with an approver from your organization.
 
-7\. **In the Audience tab**, define the audience you wish to target for this Collaboration Template
+6.  **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
 
-8\. In the Security tab, define the Security Policy with:
+
+7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
+8.  **In the Security tab**, define the Security Policy with:
 
 * Teams Privacy enforcement to Private for example
 * Permanent Owners
