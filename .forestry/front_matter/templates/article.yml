@@ -31,6 +31,7 @@ pages:
 - src/business-scenarios/test-gme.md
 - src/collaboration-templates/all-supported-features-in-collaboration-templates.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
+- src/collaboration-templates/files-clonning.md
 - src/collaboration-templates/private-channels-in-colaboration-templates.md
 - src/collaboration-templates/what-happens-if-the-template-is-changed.md
 - src/quickstart/administrator-guide.md
