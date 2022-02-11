@@ -51,8 +51,6 @@ You can frame the channels the way you want, based on your need.
 * Work (Monthly reviews with contractors, weekly team follow up, weekly contactor follow up)
 * Finalization (Communication Plan, Final contractors work list)
 
-_Planner is currently replicated in the inverse. So, for Planner you need to create the tasks displayed in the opposite of what you want to show in the Teams that will be created from the template._
-
 [![](https://downloads.intercomcdn.com/i/o/166069999/de3cd2ddefab1be32f3f173d/Screen+Shot+2019-11-21+at+3.36.11+PM.png =929x630)](https://downloads.intercomcdn.com/i/o/166069999/de3cd2ddefab1be32f3f173d/Screen+Shot+2019-11-21+at+3.36.11+PM.png)
 
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
