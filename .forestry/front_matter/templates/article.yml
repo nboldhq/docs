@@ -31,6 +31,7 @@ pages:
 - src/business-scenarios/test-gme.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/collaboration-templates/crisis-management-template.md
+- src/collaboration-templates/deal-room-template.md
 - src/collaboration-templates/project-management-template.md
 - src/collaboration-templates/what-happens-if-the-template-is-changed.md
 - src/quickstart/administrator-guide.md
