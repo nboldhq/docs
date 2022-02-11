@@ -46,7 +46,7 @@ pages:
 - src/quickstart/a-new-design.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
-- src/quickstart/catalo-manager-admin-role.md
+- src/quickstart/catalog-manager-admin-role.md
 - src/quickstart/changes-are-coming-action-required.md
 - src/quickstart/create-teams-only-through-microsoft-teams-templates-by-nbold.md
 - src/quickstart/domain-to-whitelist.md
