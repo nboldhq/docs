@@ -134,6 +134,7 @@ module.exports = {
         text: '>_ Developers',
         ariaLabel: 'Developers',
         items: [
+          { text: 'Get started', link: '/api/' },
           { text: 'API Explorer', link: '/api/explorer' },
           { text: 'API Reference', link: '/api/production/reference/' }
         ]
@@ -185,50 +186,52 @@ module.exports = {
         // },
         getSideBar('/collaboration-templates', 'Collaboration templates'),
         getSideBar('/business-scenarios', 'Business scenarios'),
-        {
-          title: 'Governance policies',
-          collapsable: true,
-          sidebarDepth: 1,
-          children: [
-            ['/governance-policies/naming-conventions.md', 'Naming conventions'],
-            ['/governance-policies/approval.md', 'Approval workflow'],
-            ['/governance-policies/audience-targeting.md', 'Audience Targeting'],
-            ['/governance-policies/ad-schema-extensions.md', 'AD Schema Extensions']
-          ]
-        },
-        {
-          title: 'Automation',
-          collapsable: true,
-          sidebarDepth: 1,
-          children: [
-            ['/automation/', 'Get Started'],
-            ['/automation/power-platform-automation-connector.md', 'Power Platform Setup'],
-            ['/automation/logic-apps-automation-connector.md', 'Logic Apps Setup'],
-            ['/automation/automation-connectors-actions.md', 'Triggers & Actions Reference']
-          ]
-        },
-        // getSideBar('/automation-connectors', 'Automation Connectors'),
-        {
-          title: 'API',
-          collapsable: true,
-          sidebarDepth: 1,
-          children: [
-            ['/api/', 'Overview'],
-            ['/api/getting-started', 'Getting Started'],
-            ['/api/authentication', 'Authentication'],
-            ['/api/best-practices', 'Best Practices'],
-            ['/api/explorer', 'API Explorer'],
-            ['/api/production/reference/', 'API Reference'],
-            ['/api/sdks', 'API SDKs'],
-            ['/api/production/sdks/javascript/', 'JavaScript & Node SDK'],
-            ['/api/use-postman', 'Use Postman'],
-            ['/api/webhooks', 'Webhooks'],
-            ['/api/rate-limits', 'Rate Limits'],
-            ['/api/throttling', 'Throttling'],
-            ['/api/versions', 'Versions'],
-            ['/api/changelog', 'Changelog']
-          ]
-        },
+        getSideBar('/governance-policies', 'Governance policies'),
+        // {
+        //   title: 'Governance policies',
+        //   collapsable: true,
+        //   sidebarDepth: 1,
+        //   children: [
+        //     ['/governance-policies/naming-conventions.md', 'Naming conventions'],
+        //     ['/governance-policies/approval.md', 'Approval workflow'],
+        //     ['/governance-policies/audience-targeting.md', 'Audience Targeting'],
+        //     ['/governance-policies/ad-schema-extensions.md', 'AD Schema Extensions']
+        //   ]
+        // },
+        getSideBar('/automation', 'Automation'),
+        // {
+        //   title: 'Automation',
+        //   collapsable: true,
+        //   sidebarDepth: 1,
+        //   children: [
+        //     ['/automation/', 'Get Started'],
+        //     ['/automation/power-platform-automation-connector.md', 'Power Platform Setup'],
+        //     ['/automation/logic-apps-automation-connector.md', 'Logic Apps Setup'],
+        //     ['/automation/automation-connectors-actions.md', 'Triggers & Actions Reference']
+        //   ]
+        // },
+        getSideBar('/api', 'API'),
+
+        // {
+        //   title: 'API',
+        //   collapsable: true,
+        //   sidebarDepth: 1,
+        //   children: [
+        //     ['/api/get-started', 'Get started'],
+        //     ['/api/authentication', 'Authentication'],
+        //     ['/api/best-practices', 'Best Practices'],
+        //     ['/api/explorer', 'API Explorer'],
+        //     ['/api/production/reference/', 'API Reference'],
+        //     ['/api/sdks', 'API SDKs'],
+        //     ['/api/production/sdks/javascript/', 'JavaScript & Node SDK'],
+        //     ['/api/use-postman', 'Use Postman'],
+        //     ['/api/webhooks', 'Webhooks'],
+        //     ['/api/rate-limits', 'Rate Limits'],
+        //     ['/api/throttling', 'Throttling'],
+        //     ['/api/versions', 'Versions'],
+        //     ['/api/changelog', 'Changelog']
+        //   ]
+        // },
         {
           title: 'Trust Center',
           collapsable: true,
@@ -260,29 +263,72 @@ function getSideBar (folder, title) {
   const path = require('path')
   const titleCasing = require('title-case')
   const sentenceCasing = require('sentence-case')
+  const fm = require('front-matter')
   const extension = ['.md']
-  const childrens = []
+  const unorderedChildrens = []
+  let orderedChildrens = []
+  const links = []
 
-  const files = fs
-    .readdirSync(path.join(`${__dirname}/../${folder}`))
-    .filter(
-      (item) =>
-        item.toLowerCase() !== 'readme.md' &&
-        fs.statSync(path.join(`${__dirname}/../${folder}`, item)).isFile() &&
-        extension.includes(path.extname(item))
-    )
-    .forEach((file, fileIndex) => {
-      let fileTitle = path.parse(file).name
-      fileTitle = fileTitle.replace('/-/g', ' ')
-      fileTitle = fileTitle.replace('/_/g', ' ')
-      fileTitle = sentenceCasing.sentenceCase(fileTitle)
-      childrens.push([folder + '/' + path.parse(file).name, fileTitle])
-    })
+  let files = fs.readdirSync(path.join(`${__dirname}/../${folder}`))
+  files = files.filter(
+    (item) =>
+      item.toLowerCase() !== 'readme.md' &&
+      fs.statSync(path.join(`${__dirname}/../${folder}`, item)).isFile() &&
+      extension.includes(path.extname(item))
+  )
+  files.forEach((file, fileIndex) => {
+    const filePath = path.join(`${__dirname}/../${folder}`, file)
+    let fileTitle = path.parse(file).name
+    fileTitle = fileTitle.replace('/-/g', ' ')
+    fileTitle = fileTitle.replace('/_/g', ' ')
+    fileTitle = sentenceCasing.sentenceCase(fileTitle)
+
+    const fileContent = fs.readFileSync(filePath, 'utf8')
+    const meta = fm(fileContent).attributes
+    // Hide draft posts
+    if (!meta.status || (meta.status && meta.status !== 'draft')) {
+      // Extract position if present
+      let position = 0
+      if (meta.position) { position = meta.position }
+      // unorderedChildrens.push([folder + '/' + path.parse(file).name, fileTitle, position])
+      unorderedChildrens.push(
+        {
+          path: folder + '/' + path.parse(file).name,
+          title: fileTitle,
+          position: position
+        }
+      )
+    }
+
+    console.log('Unordered')
+    console.log(unorderedChildrens)
+
+    // If this is the latest article from the folder
+    if (fileIndex === files.length - 1) {
+      // Sort the childrens
+      orderedChildrens = unorderedChildrens.sort((a, b) => {
+        if (a.position < b.position) {
+          return -1
+        }
+        if (a.position > b.position) {
+          return 1
+        }
+        return 0
+      })
+
+      console.log('Ordered')
+      console.log(orderedChildrens)
+
+      orderedChildrens.forEach((child) => {
+        links.push([child.path, child.title])
+      })
+    }
+  })
 
   return {
     title: titleCasing.titleCase(title),
     collapsable: true,
     sidebarDepth: 1,
-    children: childrens
+    children: links
   }
 }
