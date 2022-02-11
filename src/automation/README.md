@@ -1,3 +1,11 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- automation
+position: 1
+
+---
 # Automation Connectors
 
 Automation connectors gives you access to all the powerful features of our [Governance API](/api/), such as managing your teams or start a new team provisioning job, right from:
@@ -14,4 +22,3 @@ Automation connectors gives you access to all the powerful features of our [Gove
 - Setup the [Connector for Power Platform](/connectors/power-platform-connector.md)
 - Setup the [Connector for Azure Logic Apps](/connectors/logic-apps-connector.md)
 - Discover the [Available Triggers and Actions](/connectors/connectors-actions.md)
-
