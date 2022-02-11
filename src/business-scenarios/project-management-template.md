@@ -56,8 +56,6 @@ You can frame the channels the way you want, based on your need.
 * Milestones (First International office opening, outsource building the Android and IOS application)
 * Next Steps (Find a venture for the next party, Revise the employee handbook)
 
-_Planner is currently replicated in the inverse. So, for Planner you need to create the tasks displayed in the opposite of what you want to show in the Teams that will be created from the template._
-
 [![](https://downloads.intercomcdn.com/i/o/166321670/f11558266cc40b8449b708c6/Screen+Shot+2019-11-27+at+2.51.42+PM.png =906x584)](https://downloads.intercomcdn.com/i/o/166321670/f11558266cc40b8449b708c6/Screen+Shot+2019-11-27+at+2.51.42+PM.png)
 
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
@@ -82,14 +80,10 @@ It's done!
 * **Business Solution Description:** this can be _Team dedicated to collaborate around the Project: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
 * Same Idea with the welcome message!
 
-5. **In the Approval tab**, define the approval policy with an approver from your organization.
-
-
-6.  **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
-
-
-7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
-8.  **In the Security tab**, define the Security Policy with:
+1. **In the Approval tab**, define the approval policy with an approver from your organization.
+2. **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
+3. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
+4. **In the Security tab**, define the Security Policy with:
 
 * Teams Privacy enforcement to Private for example
 * Permanent Owners
