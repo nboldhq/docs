@@ -51,6 +51,7 @@ pages:
 - src/quickstart/create-teams-only-through-microsoft-teams-templates-by-nbold.md
 - src/quickstart/domain-to-whitelist.md
 - src/quickstart/install-app-on-microsoft-teams.md
+- src/quickstart/issue-granting-permissions.md
 - src/quickstart/key-feautures.md
 - src/quickstart/microsoft-teams-apps-sso-support-is-here.md
 - src/quickstart/nbold-at-a-glance.md
