@@ -8,24 +8,24 @@ author: Kristina Konstantynova
 
 You may need to update the nBold App Packages. Here are a few steps to do so.
 
----
+***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
----
+***
 
 ### 1. Download the latest packages
 
 Download these packages locally and do not unzip them:
 
-* [Home Page](https://dist.salestim.com/packages/io.salestim.automation.targeted.home.prd.zip)
+* [Home Page](https://dist.salestim.io/packages/io.nbold.standalone.prd.zip)
 
 ### 2. Upload to your app catalog
 
-Launch Microsoft Teams (Desktop or Web Browser) and open the app catalog.
+Go to [Team Admin Center in the "manage apps" section](https://admin.teams.microsoft.com/policies/manage-apps).
 
-![](/uploads/screenshot-2022-02-10-at-17-51-47.png)
+![](/uploads/screenshot-2022-02-11-at-13-04-33.png)
 
 Go to "More apps" and click on "Built for your org"
 
