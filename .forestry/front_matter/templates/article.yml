@@ -34,6 +34,7 @@ pages:
 - src/collaboration-templates/crisis-management-template.md
 - src/collaboration-templates/deal-room-template.md
 - src/collaboration-templates/project-management-template.md
+- src/collaboration-templates/store-opening-template.md
 - src/collaboration-templates/what-happens-if-the-template-is-changed.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
