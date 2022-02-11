@@ -8,12 +8,12 @@ author: Kristina Konstantynova
 
 You may need to update the nBold App Packages. Here are a few steps to do so.
 
----
+***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
----
+***
 
 ### 1. Download the latest packages
 
@@ -25,24 +25,16 @@ Download these packages locally and do not unzip them:
 
 Go to [Team Admin Center in the "manage apps" section](https://admin.teams.microsoft.com/policies/manage-apps).
 
-![](/uploads/screenshot-2022-02-11-at-13-04-33.png)
+![](/uploads/screenshot-2022-02-11-at-14-43-30.png)
 
-Go to "More apps" and click on "Built for your org"
-
-![](/uploads/screenshot-2022-02-10-at-17-55-47.png)
+Search for "home" in a search bar and click on it.![](/uploads/screenshot-2022-02-11-at-13-31-45.png)
 
 ### 3. Update the package
 
-Click on the three dots in the app card
+Click on "Upload file" in New version section.
 
-![](https://downloads.intercomcdn.com/i/o/220175279/73cf50cf22a56ebbaaac7ed4/image.png)
+![](/uploads/screenshot-2022-02-11-at-13-32-26.png)
 
-Select "Update"
-
-![](https://downloads.intercomcdn.com/i/o/220175532/f0a0f9b7e2c7b1486a462a7d/image.png)
-
-Select the corresponding package and click "Open"
-
-![](https://downloads.intercomcdn.com/i/o/220176385/489ea6d61c3bbb0706477b46/image.png)
+Select the downloaded file from your computer and click "Open".
 
 You're done!
