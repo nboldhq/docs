@@ -1,7 +1,7 @@
 ---
 status: draft
 tags: []
-author: Kristina Konsatntnyova
+author: Kristina Konstantynova
 
 ---
 Wiki Tabs
