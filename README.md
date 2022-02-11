@@ -1,4 +1,3 @@
-![Classification:PUBLIC](https://img.shields.io/badge/🔖_Classification-PUBLIC-red)
 [![license](https://img.shields.io/badge/©️_License-MIT-yellow?style=flat)](./LICENSE.md)
 [![](https://img.shields.io/badge/semver-2.0.0-informational)](https://semver.org)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/nboldhq/docs)
