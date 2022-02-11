@@ -10,12 +10,12 @@ A guide to create a Collaboration template for Managing a Team of Executive Comm
 
 ***
 
----
+***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
----
+***
 
 ***
 
@@ -59,8 +59,6 @@ You can frame the channels the way you want, based on your need.
 * Communication with CEO (Weekly dialogue, Communication Report and Communication)
 * Organizational Oversight (Formation of Committees and Task force, good governance practices)
 * Strategy Design (Swot Analysis, Access Competitors)
-
-_Planner is currently replicated in the inverse. So, for Planner you need to create the tasks displayed in the opposite of what you want to show in the Teams that will be created from the template._
 
 ![](https://downloads.intercomcdn.com/i/o/166279328/993d724fd2dbbd3f8261a9b6/Screen+Shot+2019-11-27+at+12.40.41+PM.png)
 
