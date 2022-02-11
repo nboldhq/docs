@@ -43,6 +43,7 @@ pages:
 - src/governance-policies/security-policy.md
 - src/governance-policies/serve-private-channels.md
 - src/governance-policies/simplifying-and-extending-naming-convention-and-audience-targeting-policy.md
+- src/governance-policies/wiki-tabs.md
 - src/quickstart/a-new-design.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
