@@ -61,25 +61,27 @@ It's done!
 
 ## Step 2: Adding Collaboration template to a corporate catalog
 
-1\. **Add the Original Team to the Catalog**: for this, you need to be logged in as a global admin. Go to Catalog Tab in nBold App and look for the team you created i.e. "Store Opening - Template.
+1.  **Add the Original Team to the Catalog**: for this, you need to be logged in as a global admin. Go to Catalog Tab in nBold App and look for the team you created i.e. "Store Opening - Template.
+2.  **Click on the 'Create'** option present on the top right corner and select the team to be cloned, which in this case is "Store Opening"
+3.  **In the Info tab**, fill in the name of the original team which is named "Store Opening - Template" Microsoft Team name and description. You also have the ability to choose the desired Collaboration Template language.
+4. **In the Name Tab,** set up the name of the Team that will be created from the Template:
+   * **Default Team Name** (what user will fill in the request form): this can be the _Name of the Store_
 
-2\. **Click on the 'Create'** option present on the top right corner and select the team to be cloned, which in this case is "Store Opening"
 
-3\. **In the Info tab**, fill in the name of the original team which is named "Store Opening - Template" Microsoft Team name and description. You also have the ability to choose the desired Collaboration Template language.
+   * **Naming Convention** (the name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name/) _%> - Store Opening_
 
-4\. **In the Name Tab,** set up the name of the Team that will be created from the Template:
 
-* **Default Team Name** (what user will fill in the request form): this can be the _Name of the Store_
-* **Naming Convention** (the name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name/) _%> - Store Opening_
-* **Default Teams description:** Enter Additional Store Opening Description
-* **Business Solution Description:** this can be _Team dedicated to collaborate around the Sto: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
-* Same Idea with the welcome message!
+   * **Default Teams description:** Enter Additional Store Opening Description
 
-5\. **In the Approval tab**, define the approval policy with an approver from your organization.
 
-1. **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
-2. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
-3. **In the Security tab**, define the Security Policy with:
+   * **Business Solution Description:** this can be _Team dedicated to collaborate around the Sto: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
+
+
+   * Same Idea with the welcome message!
+5. **In the Approval tab**, define the approval policy with an approver from your organization.
+6. **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
+7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
+8. **In the Security tab**, define the Security Policy with:
 
 * Teams Privacy enforcement to Private for example
 * Permanent Owners
