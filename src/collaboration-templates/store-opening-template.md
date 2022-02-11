@@ -79,11 +79,9 @@ It's done!
 
 5\. **In the Approval tab**, define the approval policy with an approver from your organization.
 
-6.  **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
-
-
-7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
-8.  **In the Security tab**, define the Security Policy with:
+1. **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
+2. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
+3. **In the Security tab**, define the Security Policy with:
 
 * Teams Privacy enforcement to Private for example
 * Permanent Owners
@@ -100,6 +98,6 @@ Go on home page. Click on the "Create" option. You will see the Business option 
 3. Name the template and add a description to it. Add a welcome message that you want to be seen by the members of the team when they join the Team.
 4. Within seconds, your Teams matching your business need are up and running.
 
-![](/uploads/screenshot-2022-02-11-at-09-08-06.png)
+![](/uploads/screenshot-2022-02-11-at-10-08-52.png)
 
 _If you are doing that with a service account, no notification will be seen because you are the account that is creating the Team._
