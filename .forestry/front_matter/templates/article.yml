@@ -38,6 +38,7 @@ pages:
 - src/collaboration-templates/private-channels-in-colaboration-templates.md
 - src/collaboration-templates/sharepoint-library-tab.md
 - src/collaboration-templates/what-happens-if-the-template-is-changed.md
+- src/governance-policies/security-policy.md
 - src/governance-policies/serve-private-channels.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
