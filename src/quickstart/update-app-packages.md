@@ -8,12 +8,12 @@ author: Kristina Konstantynova
 
 You may need to update the nBold App Packages. Here are a few steps to do so.
 
-***
+---
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
-***
+---
 
 ### 1. Download the latest packages
 
