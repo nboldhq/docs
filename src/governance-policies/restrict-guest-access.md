@@ -1,7 +1,7 @@
 ---
 status: draft
 tags: []
-author: Kristina Konstantnyova
+author: Kristina Konstantynova
 
 ---
 **Restrict guest access**
