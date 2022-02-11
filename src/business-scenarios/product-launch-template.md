@@ -54,8 +54,6 @@ You can frame the channels the way you want, based on your need.
 * Launch (Market Strategy, Update the Sales Team, Activate the Sales Team)
 * Pre-Launch (Go to Market Strategy, Build Buyer Persona, Mock Press Release)
 
-_Planner is currently replicated in the inverse. So, for Planner you need to create the tasks displayed in the opposite of what you want to show in the Teams that will be created from the template._
-
 [![](https://downloads.intercomcdn.com/i/o/166312600/3457c89712c5853108027654/Screen+Shot+2019-11-27+at+2.21.32+PM.png =904x627)](https://downloads.intercomcdn.com/i/o/166312600/3457c89712c5853108027654/Screen+Shot+2019-11-27+at+2.21.32+PM.png)  
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
