@@ -6,7 +6,7 @@ author: Kristina Konstantynova
 ---
 # **Project Management Template**
 
-###### A guide to create Collaboration template for Project Management
+###### A guide to create a Collaboration template for Project Management
 
 ***
 
@@ -82,11 +82,14 @@ It's done!
 * **Business Solution Description:** this can be _Team dedicated to collaborate around the Project: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
 * Same Idea with the welcome message!
 
-5\. **In the Approval tab**, define the approval policy with an approver from your organization.
+5. **In the Approval tab**, define the approval policy with an approver from your organization.
 
-7\. **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template
 
-8\. In the Security tab, define the Security Policy with:
+6.  **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
+
+
+7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
+8.  **In the Security tab**, define the Security Policy with:
 
 * Teams Privacy enforcement to Private for example
 * Permanent Owners
@@ -98,8 +101,8 @@ It's done!
 
 Go on home page. Click on the "Create" option. You will see the Business option being created on the Catalog. The business solution is named 'Project Management'.
 
-1. Go on home page. Click on the "Create" option. You will see the Microsoft Teams Template option being created on the Catalog. The template is named 'Project Management'.
-2. Once the Microsoft Teams Template named 'Project Management' is created, go to the 'Home' tab and select the template
+1. Go on home page. Click on the "Create" option. You will see the Collaboration Template option being created on the Catalog. The template is named 'Project Management'.
+2. Once the Collaboration Template named 'Project Management' is created, go to the 'Home' tab and select the template
 3. Name the template and add a description to it. Add a welcome message that you want to be seen by the members of the team when they join the Team.
 4. Within seconds, your Teams matching your business need are up and running.
 
