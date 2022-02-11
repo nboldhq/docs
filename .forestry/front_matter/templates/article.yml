@@ -25,6 +25,17 @@ fields:
   type: tag_list
   default: []
   label: Tags
+- name: position
+  type: number
+  label: Position
+  description: Use the position field to define the position of the article in its
+    category.<br>Lowest values will make the article to appear first.
+  default: 0
+  required: true
+  config:
+    min: 0
+    max: 100
+    step: 1
 pages:
 - drafts/hello-world.md
 - src/business-scenarios/team-of-executive-committee-template.md
