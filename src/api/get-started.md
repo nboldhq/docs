@@ -1,5 +1,10 @@
 ---
 position: 1
+status: published
+author: Guillaume Meyer
+tags:
+- api
+
 ---
 # Get started with the nBold API
 
