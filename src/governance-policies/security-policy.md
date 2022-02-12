@@ -15,7 +15,7 @@ The "Security & Privacy" tab defines the main security and privacy policy of you
 
 ## Enforced Teams Privacy
 
-"Private" by default. Defines if the new team will be created as "Private". Meaning that only team owners will be able to add members"Public" Meaning that anyone in your organization will be able to join the team without validation. This parameter is permanent.
+"Private" by default. Defines if the new team will be created as "Private". Meaning that only team owners will be able to add members "Public" Meaning that anyone in your organization will be able to join the team without validation. This parameter is permanent.
 
 ## Membership Policy
 
