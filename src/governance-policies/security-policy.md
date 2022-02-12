@@ -11,7 +11,7 @@ position:
 
 The "Security & Privacy" tab defines the main security and privacy policy of your Business Solution:
 
-[![](https://salestim.intercom-attachments-1.com/i/o/165306841/f961885dd925e94114232305/securityPolicy.png =3240x1929)](https://salestim.intercom-attachments-1.com/i/o/165306841/f961885dd925e94114232305/securityPolicy.png)
+![](/uploads/screenshot-2022-02-12-at-03-17-30.png)
 
 ## Enforced Teams Privacy
 
