@@ -2,6 +2,7 @@
 status: draft
 tags: []
 author: Kristina Konstantynova
+position: 
 
 ---
 # ➕ Create a new Collaboration Template
@@ -12,12 +13,12 @@ You want to create a Microsoft Teams Template to support any Collaborative Proce
 
 There are two simple steps for that:
 
----
+***
 
 **TABLE OF CONTENTS**
-[[toc]] 
+\[\[toc\]\]
 
----
+***
 
 ![](https://downloads.intercomcdn.com/i/o/177141289/0ed99712620e25804e2aa8f0/Microsoft+Teams+Templates+with+Salestim.png)
 
@@ -59,4 +60,4 @@ There are two simple steps for that:
 
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)
 
-1. Test your new Collaboration Template from the home page! Click on "**+New Team**"
+Test your new Collaboration Template from the home page! Click on "**+New Team**"
