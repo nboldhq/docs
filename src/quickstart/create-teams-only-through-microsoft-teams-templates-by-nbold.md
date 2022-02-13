@@ -2,9 +2,10 @@
 status: draft
 tags: []
 author: Kristina Konstantynova
+position: 
 
 ---
-# Create Teams only through Microsoft Teams Templates by nBold
+# Create Teams only through Collaboration Templates by nBold
 
 After having setup your templates, you may want to make sure that people in your organization are only using Templates you've set up with nBold to create teams.
 
@@ -18,4 +19,4 @@ Yes, it is. The thing you need to know before proceeding is that you can't restr
 
 Following this [documentation by Microsoft](https://docs.microsoft.com/en-us/microsoft-365/solutions/manage-creation-of-groups), you'll be able to set only a group user (based on a security group) who will be able to create Office 365 and therefore teams, through the regular way.
 
-The only thing you must do is to make sure that the [Service Account](https://docs.nbold.co/quickstart/set-up-the-home-page.html) is belonging to the security group that can create Office 365 Group in the tenant. 
+The only thing you must do is to make sure that the [Service Account](https://docs.nbold.co/quickstart/set-up-the-home-page.html) belongs to the security group that can create Office 365 Group in the tenant.
