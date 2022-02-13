@@ -2,6 +2,7 @@
 tags: []
 author: Kristina Konstantynova
 status: draft
+position: 
 
 ---
 # 👍 Install nBold App on Microsoft Teams
@@ -14,8 +15,8 @@ It's taking only a few minutes to enable nBold to your organization. You just ne
 
 ***
 
-**TABLE OF CONTENTS** 
-[[toc]]
+**TABLE OF CONTENTS**
+\[\[toc\]\]
 
 ***
 
@@ -31,15 +32,21 @@ Connect to Microsoft Teams with a Global Admin account. Otherwise, you won't be 
 
 Select it, click on Install and choose **"Add"**
 
+![](/uploads/screenshot-2022-02-13-at-11-44-50.png)
+
 ***
 
 ## 3. Give Permission for SSO Login
+
+![](/uploads/screenshot-2022-02-13-at-11-48-38.png)![](/uploads/permission.png)
 
 ***
 
 ## 4. Grant Admin Consent for all other permissions
 
 Log into nBold Automation by using the "SIGN IN" button to start the login process.
+
+![](/uploads/permission-1.png)![](/uploads/permission-2.png)
 
 Select your Office 365 account (you must be a Global Admin) and enter your password. Read the permissions, **check the box "Consent on behalf of your organization" and click "Accept".**
 
