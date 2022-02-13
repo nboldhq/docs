@@ -20,7 +20,7 @@ It's taking only a few minutes to enable nBold to your organization. You just ne
 
 ***
 
-## 1. Get the nBold Automation app package
+## 1. Get the nBold app
 
 Get nBold through the [Microsoft Teams Apps Store](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link).
 
@@ -44,7 +44,7 @@ Select it, click on Install and choose **"Add"**
 
 ## 4. Grant Admin Consent for all other permissions
 
-Log into nBold Automation by using the "SIGN IN" button to start the login process.
+Log into nBold by using the "SIGN IN" button to start the login process.
 
 ![](/uploads/permission-1.png)![](/uploads/permission-2.png)
 
