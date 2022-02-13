@@ -28,7 +28,7 @@ Ensure the strong, predictable, and supported workspace without overloading your
 </div>
 
 <div class="footer">
-Copyright © 2021-2011 SalesTim SAS
+(c) Copyright 2021-2022 SalesTim SAS, all rights reserved.
 </div>
   
 </main>

@@ -1,3 +1,13 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+- authentication
+- token
+position: 2
+---
+
 # Communication & Network Security
 
 ## Network diagram
