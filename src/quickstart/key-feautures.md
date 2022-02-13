@@ -2,6 +2,7 @@
 status: draft
 tags: []
 author: Kristina Konstantynova
+position: 
 
 ---
 # ✅ Key Features
@@ -12,44 +13,40 @@ nBold lets organizations improve their collaborative processes through the abili
 
 **TABLE OF CONTENTS**
 
-[[toc]]
+\[\[toc\]\]
 
 ***
 
+### 1. Advanced Collaboration Template creation:
 
-### 1. Advanced Collaboration Template creation:  
-
-Build any Microsoft Teams Templates, to address any collaboration need in the organization, with: 
+Build any Microsoft Teams Templates, to address any collaboration need in the organization, with:
 
 * List of Channels
-* List of Tabs 
+* List of Tabs
 * Files and Folders
 * Pre-configured Website Tabs
 * Pre-configured Planner with Tasks, Buckets, Description, Buckets and Labels
-* Pre-configured Forms Tab 
+* Pre-configured Forms Tab
 * Pre-configured SharePoint Online Documentation Library
-
- 
 
 ***
 
-### 2. Collaboration Governance rule:  
+### 2. Collaboration Governance rule:
 
-Features that IT will love! Microsoft Teams has been designed to address enterprise needs to scale collaboration in an organization. While there are tons of potential with Teams created with content such as Planner and Website Tabs, this can't be done without a strong Microsoft Teams Governance. 
+Features that IT will love! Microsoft Teams has been designed to address enterprise needs to scale collaboration in an organization. While there are tons of potential with Teams created with content such as Planner and Website Tabs, this can't be done without a strong Microsoft Teams Governance.
 
-All the features described hereafter, are set at the template level:  
+All the features described hereafter, are set at the template level:
 
 * Naming Convention
 * Teams Creation Approval
 * Template Audience Targeting
 * Teams Compliance with Sensitivity Labels
 * Teams Enforced Privacy Policy
-* Teams Creation Requester as non-Owner 
-* Permanent Owners and Permanent Members 
+* Teams Creation Requester as non-Owner
+* Minimum number of Owners and Members
+* Permanent Owners and Permanent Members
 
 ![](https://downloads.intercomcdn.com/i/o/462804740/66f3b89c10e5add4bf608298/Screenshot+2022-02-10+at+10.43.05.png)
-
- 
 
 ***
 
@@ -71,7 +68,6 @@ Get a Collaboration Template Catalog owned by your organization, tailored for yo
 
 4\. Define a welcome message that will be published in the "general" channel once the new Team will have been provisioned
 
-  
 5\. Choose the future team owners and members from the company directory
 
 ***
@@ -92,7 +88,7 @@ Get an overview of all the Teams you belong to, search for the good one with a s
 
 ***
 
-### **6. Compliance** 
+### **6. Compliance**
 
 * Protect your data with the help of [sensitivity labels ]()
 
@@ -100,6 +96,6 @@ Get an overview of all the Teams you belong to, search for the good one with a s
 
 ### 7. Service Account:
 
-* Choose a specific Office 365 service account for background processing operations 
+* Choose a specific Office 365 service account for background processing operations
 
 ![](https://downloads.intercomcdn.com/i/o/462810197/2871dad04f634fd41a12f09a/Screenshot+2022-02-10+at+10.48.51.png)
