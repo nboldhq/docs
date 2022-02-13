@@ -2,13 +2,13 @@
 status: draft
 tags: []
 author: Kristina Konstantynova
+position: 
 
 ---
 # **All supported features in Collaboration Templates with nBold**
 
 A list of all the supported features in Teams Templates with **nBold**
 
-  
 In this article, we simply list the different features supported on Microsoft Teams Templates with nBold. For more details on how to create a Template, go to the dedicated page about [how to build a Collaboration Template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html).
 
 Microsoft Teams Templates Features:
@@ -22,6 +22,7 @@ Microsoft Teams Templates Features:
 * [Forms Tabs](https://help.salestim.com/en/articles/3534829-adopt-microsoft-forms-at-scale-through-microsoft-teams)
 * [Office Files Tabs](https://help.salestim.com/en/articles/3561694-office-documents-and-pdf-tabs-in-microsoft-teams-template) with the same configuration from one team to another
 * [SharePoint Online Document Library](https://help.salestim.com/en/articles/3559803-sharepoint-library-tab-in-microsoft-teams-templates)
+* Channel Calendar Tab
 * Yammer Tab
 * Stream Tab
 * Any 3rd Party Tab with the same configuration from Original Team
