@@ -1,3 +1,12 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+- versions
+position: 3
+
+---
 # Versions
 
 The nBold API currently supports two versions: `v1.0` and `beta`.

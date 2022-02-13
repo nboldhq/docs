@@ -2,7 +2,10 @@
 status: published
 author: Guillaume Meyer
 position: 10
-
+tags:
+- automation
+- connectors
+- actions
 ---
 # Available triggers and actions
 

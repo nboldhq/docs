@@ -3,7 +3,7 @@ module.exports = {
   title: 'documentation',
   description: 'nBold Documentation',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/n_degrade-1.svg' }],
     ['link', { rel: 'stylesheet', href: '/css/bundle.css' }],
     ['script', { type: 'text/javascript', src: '/js/MicrosoftTeams.min.js' }],
     ['script', { type: 'text/javascript', src: '/js/theme.js' }],
@@ -45,11 +45,11 @@ module.exports = {
       canonical_base: 'https://docs.nbold.co',
       author: {
         name: 'nBold',
-        twitter: 'nBoldHQ',
+        twitter: 'nboldco',
       },
       site: {
         name: 'nBold Docs',
-        twitter: 'nBoldHQ',
+        twitter: 'nboldco',
       },
       description_sources: [
         'frontmatter',
@@ -146,7 +146,7 @@ module.exports = {
         items: [
           { text: 'nBold', link: 'https://nbold.co' },
           { text: 'LinkedIn', link: 'https://www.linkedin.com/company/nbold' },
-          { text: 'Twitter', link: 'https://twitter.com/nboldhq' },
+          { text: 'Twitter', link: 'https://twitter.com/nboldco' },
           { text: 'Youtube', link: 'https://www.youtube.com/channel/UCyoESYiKzmIdVbR7BHu0cbQ' }
         ]
       }

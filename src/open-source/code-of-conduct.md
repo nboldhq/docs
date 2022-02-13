@@ -1,3 +1,11 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- opensource
+- policy
+position: 1
+---
 # Open Source Code of Conduct
 
 ## Abstract

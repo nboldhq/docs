@@ -1,4 +1,4 @@
-# 🚀 Azure Deployment <Badge text="draft" type="error"/>
+# Azure Deployment
 
 This tutorial assumes you've already installed the common prerequisites from the [Getting Started](./getting_started) guide.
 

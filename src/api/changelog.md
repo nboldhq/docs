@@ -1,3 +1,13 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+- changelog
+- versions
+position: 8
+
+---
 # nBold API Changelog
 
 All notable changes to the nBold API, Connectors and SDKs will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).

@@ -1,3 +1,12 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+- authentication
+- token
+position: 2
+---
 # Authentication
 
 **ABSTRACT**  

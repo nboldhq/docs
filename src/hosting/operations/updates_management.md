@@ -1,4 +1,4 @@
-# ♻️ Updates Management
+# Updates Management
 
 nBold offers two default options to manage upgrades in your environment when we're publishing a new release.
 

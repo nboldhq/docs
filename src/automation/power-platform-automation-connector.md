@@ -3,8 +3,9 @@ status: published
 author: Guillaume Meyer
 tags:
 - automation
+- connectors
 - power-platform
-position: 1
+position: 2
 
 ---
 # Setup the Automation Connector for Power Platform

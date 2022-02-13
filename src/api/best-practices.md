@@ -1,3 +1,11 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+position: 4
+
+---
 # Best Practices for Working with the nBold API
 
 **ABSTRACT**  

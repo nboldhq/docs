@@ -1,3 +1,12 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+- throttling
+position: 8
+
+---
 # Throttling Guidance
 
 **ABSTRACT**  

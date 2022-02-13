@@ -1,4 +1,4 @@
-# 🔢 Versioning strategy
+# Versioning strategy
 
 nBold follows [semantic versioning](https://semver.org/) format: `MAJOR.MINOR.PATCH`
 

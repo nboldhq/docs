@@ -1,4 +1,4 @@
-# 🐳 Docker Deployment
+# Docker Deployment
 
 :::warning Warning
 Hosting nBold on a docker server is for educational purpose only and is not considered as a supported production environment.

@@ -1,3 +1,14 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+- postman
+- collection
+- openapi
+position: 4
+
+---
 # Use Postman with the nBold API
 
 **ABSTRACT**  

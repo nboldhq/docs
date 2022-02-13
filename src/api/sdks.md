@@ -1,4 +1,13 @@
-# API SDKs <Badge text="beta" type="warning"/>
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+- sdk
+position: 6
+
+---
+# API SDKs
 
 **ABSTRACT**  
 The nBold API SDKs are designed to simplify building high-quality, efficient, and resilient applications that access the nBold API.  

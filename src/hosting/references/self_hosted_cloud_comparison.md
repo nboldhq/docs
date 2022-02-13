@@ -1,4 +1,4 @@
-# ⚔️ nBold Cloud vs Self-Hosted
+# nBold Cloud vs Self-Hosted
 
 > What’s the difference between nBold Cloud and Self-Hosted?
 

@@ -1,4 +1,4 @@
-# 📐 Architecture
+# Architecture
 
 nBold is a multi-tier platform that relies on [independent services](./services_reference) to support high-availability and scale with ease.
 

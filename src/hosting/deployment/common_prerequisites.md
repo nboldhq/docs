@@ -1,4 +1,4 @@
-# 🏁 Setup common prerequisites
+# Setup common prerequisites
 
 **TABLE OF CONTENTS**:
 [[toc]]

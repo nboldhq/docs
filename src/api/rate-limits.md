@@ -1,3 +1,13 @@
+---
+status: published
+author: Guillaume Meyer
+tags:
+- api
+- rate
+- limits
+position: 7
+
+---
 # Rate Limits
 
 **ABSTRACT**  

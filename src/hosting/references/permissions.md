@@ -1,4 +1,4 @@
-# 🔐 Permissions Reference
+# Permissions Reference
 
 For nBold to access and process data from the Microsoft Graph, your administrator must grant the appropriate permissions via a consent process.  
 

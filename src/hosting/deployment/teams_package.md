@@ -1,4 +1,4 @@
-# 📦 Create your Microsoft Teams package
+# Create your Microsoft Teams package
 
 Start by downloading our latest package template:
 ```bash

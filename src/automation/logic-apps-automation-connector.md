@@ -1,9 +1,10 @@
 ---
 status: published
 author: Guillaume Meyer
-position: 2
+position: 3
 tags:
 - automation
+- connectors
 - azure
 - logic-apps
 
