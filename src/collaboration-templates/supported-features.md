@@ -10,6 +10,7 @@ position: 2
 In this article, we simply list the different features supported on Microsoft Teams Templates with nBold. For more details on how to create a Template, go to the dedicated page about [how to build a Collaboration Template](/collaboration-templates/create-a-new-collaboration-template).
 
 Microsoft Teams Templates Features:
+
 * Standard Channels Cloning
 * Private Channels Cloning
 * Tabs Cloning
@@ -37,8 +38,8 @@ Microsoft Teams Templates Governance Policies:
 * [Enforced Privacy to Private or Public](/governance-policies/security-policy)
 * [Teams Creation Requester Membership Policy](/governance-policies/mandatory-number-of-owners-and-members)
 * [Permanent Owners and Members](/governance-policies/permanent-members-and-owners-policy)
-* [Create Teams only through ](https://help.salestim.com/en/articles/4182432-create-teams-only-through-microsoft-teams-templates-by-salestim)nBold
-* [Create Private Channels Only Through ](https://help.salestim.com/en/articles/4182433-serve-private-channels-in-microsoft-teams-only-through-templates)nBold
+* [Create Teams only through templates ](https://help.salestim.com/en/articles/4182432-create-teams-only-through-microsoft-teams-templates-by-salestim)
+* [Create Private Channels Only Through templates ](https://help.salestim.com/en/articles/4182433-serve-private-channels-in-microsoft-teams-only-through-templates)
 
 We do not support yet:
 
