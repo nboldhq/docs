@@ -72,7 +72,7 @@ So that as a result, in the team created with this template, this setting is off
 
 For a governance purpose, you may want to make sure that Private Channels are only created through Microsoft Template, and users won't be allowed to create a Private Channel for any purpose. With nBold you can enable that scenario.
 
-For a governance purpose, you may want to restrict Private Channels creation for user and make available only through the ones you define in Templates. Users won't be allowed to create a Private Channel for any other purpose. Private Channels will be created only with the teams created through the defined templates.
+For a governance purpose, you may want to restrict Private Channels creation for users and make available only through the ones you define in Templates. Users won't be allowed to create a Private Channel for any other purpose. Private Channels will be created only with the teams created through the defined templates.
 
 The only thing you need to do is first, to disable the ability for users to create Private Channel, second, make sure that only nBold App can create private channels.
 
