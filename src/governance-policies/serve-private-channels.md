@@ -19,7 +19,7 @@ As a Microsoft Teams Admin or Global Admin, go to the [Microsoft Teams Admin Por
 
 As a result, everyone in your organization won't be able to create private channels.
 
-[![](https://downloads.intercomcdn.com/i/o/216810631/50350f2537121e5e36eb52e6/image.png =3237x1134)](https://downloads.intercomcdn.com/i/o/216810631/50350f2537121e5e36eb52e6/image.png)
+![](/uploads/governance-policies-private-channels.png)
 
 **Only** _nBold_ **App is allowed to create private channels**
 
