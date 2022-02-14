@@ -23,9 +23,15 @@ In a word, you'll be able to get a team created with different standard channels
 
 In each Private Channel by default, the permanent owners defined at the template level, are added as Default Private Channel Owners.
 
+![](/uploads/private-channels-1.png)
+
 By default, Team Members of the team are not allowed to create a Private Channel in the team.
 
+![](/uploads/private-channel-settings.png)
+
 Tabs in Private Channels are supported and pre-configured following the configuration from the original team.
+
+![](/uploads/tabs-configured.png)
 
 Currently not supported with Private Channels in Collaboration Templates:
 
