@@ -11,7 +11,7 @@ Now you can clone your 📚 Files stored in teams channels (technically in Share
 
 It means that you can replicate all the folders' structure and documents across multiple teams, enforcing quality and efficiency in your organization. Have a look:
 
-[![](https://downloads.intercomcdn.com/i/o/175364595/22645f2630ff40fc13b0cd3a/Files+in+template+v4.gif =800x408)](https://downloads.intercomcdn.com/i/o/175364595/22645f2630ff40fc13b0cd3a/Files+in+template+v4.gif)
+/uploads/files-in-template-v4.gif
 
 ::: tip It's especially useful for:
 
@@ -28,9 +28,9 @@ This feature completes our preexisting files management capabilities for Microso
 * [📙📗📘 Office Documents and 💼 PDF Tabs in Microsoft Teams Template](https://help.salestim.com/articles/3561694-office-documents-and-pdf-tabs-in-microsoft-teams-template)
 * [📚 SharePoint Library Tab in Microsoft Teams Templates](https://help.salestim.com/articles/3561694-office-documents-and-pdf-tabs-in-microsoft-teams-template)
 
-🙏🏼 Please try it and share your use case with us by 💬 chat. 
+🙏🏼 Please try it and share your use case with us by 💬 chat.
 
-::: tip **_Be careful to just one thing:_** 
+::: tip **_Be careful to just one thing:_**
 
 _if you have changed the name of a channel from Name1 to Name2 in the original team then the corresponding folder name in the associated SharePoint Library wouldn't change and remain Name1 (by design on the Microsoft side). Be careful that the name of the channel is the same as the folder's name in the SharePoint Online Library. You would need to change the name of the folder from Name1 to Name2 to match the exact same name._
 
