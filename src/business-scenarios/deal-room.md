@@ -1,21 +1,17 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
 
 ---
-# **Deal Room Template**
-
-A guide to create Microsoft Teams template for New Proposal Management
-
-  
-Introduction
+# Deal Room Template
 
 The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize any New Proposal. New Proposal Management is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization
 
 ***
 
-###### **TABLE OF CONTENTS** \[\[toc\]\]
+**TABLE OF CONTENTS**
+[[toc]]
 
 ***
 
@@ -35,7 +31,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 
 You can frame the channels the way you want, based on your need.
 
-[![](https://downloads.intercomcdn.com/i/o/166643154/4b98525f3af7262165957008/Screen+Shot+2019-11-28+at+4.08.28+PM.png =277x218)](https://downloads.intercomcdn.com/i/o/166643154/4b98525f3af7262165957008/Screen+Shot+2019-11-28+at+4.08.28+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166643154/4b98525f3af7262165957008/Screen+Shot+2019-11-28+at+4.08.28+PM.png)
 
 4\. **Add Websites Tabs** in every channel needed, you can bring any content that comes with a URL to the Team created. The content can be any information that you would like to share with your team members.
 
@@ -43,7 +39,7 @@ You can frame the channels the way you want, based on your need.
 * Link to a share-point online documentation library
 * Internal web-based application
 
-[![](https://downloads.intercomcdn.com/i/o/166321478/d21887079312e2924f290688/Screen+Shot+2019-11-27+at+2.52.09+PM.png =896x629)](https://downloads.intercomcdn.com/i/o/166321478/d21887079312e2924f290688/Screen+Shot+2019-11-27+at+2.52.09+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166321478/d21887079312e2924f290688/Screen+Shot+2019-11-27+at+2.52.09+PM.png)
 
 5\. **Create a Planner** with the list of tasks that you need to carry out. Few examples that can be:
 
@@ -51,7 +47,7 @@ You can frame the channels the way you want, based on your need.
 * Develop (Proposal Review, Define success criteria, Proposal first version)
 * Qualify (Define a draft budget, Define an action plan, Organize an opportunity)
 
-[![](https://downloads.intercomcdn.com/i/o/166643856/a0d6556e82e43e244217f359/Screen+Shot+2019-11-28+at+4.10.21+PM.png =908x637)](https://downloads.intercomcdn.com/i/o/166643856/a0d6556e82e43e244217f359/Screen+Shot+2019-11-28+at+4.10.21+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166643856/a0d6556e82e43e244217f359/Screen+Shot+2019-11-28+at+4.10.21+PM.png)
 
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
@@ -69,17 +65,17 @@ It's done!
 
 4\. **In the Name Tab,** set up the name of the Team that will be created from the Template:
 
-* **Default Team Name** (what user will fill in the request form): this can be the _Name of the Proposal_
-* **Naming Convention** (the name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name/) _%> - Proposal_
-* **Default Teams description:** Enter Additional _Proposal_ Description
-* **Business Solution Description:** this can be _Team dedicated to collaborate around the Proposal: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
+* **Default Team Name** (what user will fill in the request form): this can be the `Name of the Proposal`
+* **Naming Convention** (the name automatically generated): this can be `<%= request.team.name %> - Proposal`
+* **Default Teams description:** Enter `Additional Proposal Description`
+* **Business Solution Description:** this can be `Team dedicated to collaborate around the Proposal: <%=_request.team.name %> | Location: <%= user.msCountry %> | Created by: <%= request.request.requester.name %>` with the job role: `<%= user.msJobTitle%> | <%= request.team.description %>`
 * Same Idea with the welcome message!
 
 5\. **In the Approval tab**, define the approval policy with an approver from your organization.
 
 6\. **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
 
-7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
+1. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
 
 8\. **In the Security tab**, define the Security Policy with:
 
@@ -89,7 +85,7 @@ It's done!
 
 ***
 
-## Step 3: Try It 🚀
+## Step 3: Try It!
 
 Go on home page. Click on the "Create" option. You will see the Business option being created on the Catalog. The business solution is named 'New Proposal Management'.
 

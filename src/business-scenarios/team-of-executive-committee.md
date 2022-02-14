@@ -1,23 +1,18 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
 
 ---
-# 👩‍💼👨‍💼 Team of Executive Committee Template
+# Team of Executive Committee Template
 
-A guide to create a Collaboration template for Managing a Team of Executive Committee
+The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize the collaboration in an Executive Committee Team. Formation of Executive Committee is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization.
 
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
 
-***
-
-### Introduction
-
-The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize the collaboration in an Executive Committee Team. Formation of Executive Committee is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization.
+[[toc]]
 
 ***
 
@@ -73,13 +68,13 @@ It's done!
    * **Default Team Name** (what user will fill in the request form): this can be the _Name of the Team_
 
 
-   * **Naming Convention** (name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name) _%> - Exec Committee_
+   * **Naming Convention** (name automatically generated): this can be `<%=  [_request.team.name_](http://request.team.name) %> - Exec Committee`
 
 
    * **Default Teams description:** Enter Additional Team Description
 
 
-   * **Business Solution Description:**  this can be _Team dedicated to collaboration around the Team: <%=_ [_request.team.name_](http://request.team.name) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
+   * **Business Solution Description:**  this can be `Team dedicated to collaboration around the Team: <%= request.team.name %> | Location: <%= user.msCountry %> | Created by: <%= request.request.requester.name %>` with the job role: `<%= user.msJobTitle%> | <%= request.team.description %>`
 
 
    * Same Idea with the welcome message!
@@ -96,7 +91,7 @@ It's done!
 
 ***
 
-### Step 3: Try It 🚀
+### Step 3: Try It!
 
 1. Once the Collaboration Template named 'Team of Executive Committee - Template' is created, go to the 'Home' tab and select the template to create a new team.
 2. Name the Team and add a description to it. Add a welcome message that you want to be seen by the members of the team when they join the Team.

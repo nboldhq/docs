@@ -288,7 +288,7 @@ function getSideBar (folder, title) {
     // Hide draft posts
     if (!meta.status || (meta.status && meta.status !== 'draft')) {
       // Extract position if present
-      let position = 0
+      let position = 100 // High by default to push them to the end
       if (meta.position) { position = meta.position }
       // unorderedChildrens.push([folder + '/' + path.parse(file).name, fileTitle, position])
       unorderedChildrens.push(

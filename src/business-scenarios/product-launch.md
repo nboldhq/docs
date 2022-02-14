@@ -1,21 +1,18 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
 
 ---
-# **Product Launch Template**
-
-A guide to create a Collaboration template for Product Launch
-
-**Introduction**
+# Product Launch Template
 
 The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize any Product Launch. Product Launch Management is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization
+
 
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
@@ -36,7 +33,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 
 You can frame the channels the way you want, based on your need.
 
-[![](https://downloads.intercomcdn.com/i/o/166312288/6219ab15681cafcf305f9b33/Screen+Shot+2019-11-27+at+2.20.32+PM.png =277x248)](https://downloads.intercomcdn.com/i/o/166312288/6219ab15681cafcf305f9b33/Screen+Shot+2019-11-27+at+2.20.32+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166312288/6219ab15681cafcf305f9b33/Screen+Shot+2019-11-27+at+2.20.32+PM.png)
 
 You can frame the channels the way you want, based on your need.
 
@@ -46,7 +43,7 @@ You can frame the channels the way you want, based on your need.
 * Link to a share-point online documentation library
 * Internal web-based application
 
-[![](https://downloads.intercomcdn.com/i/o/166312440/7e165aa1cee22baf12054cb6/Screen+Shot+2019-11-27+at+2.21.50+PM.png =898x613)](https://downloads.intercomcdn.com/i/o/166312440/7e165aa1cee22baf12054cb6/Screen+Shot+2019-11-27+at+2.21.50+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166312440/7e165aa1cee22baf12054cb6/Screen+Shot+2019-11-27+at+2.21.50+PM.png)
 
 5\. **Create a Planner** with the list of tasks that you need to carry out. Few examples that can be:
 
@@ -54,7 +51,8 @@ You can frame the channels the way you want, based on your need.
 * Launch (Market Strategy, Update the Sales Team, Activate the Sales Team)
 * Pre-Launch (Go to Market Strategy, Build Buyer Persona, Mock Press Release)
 
-[![](https://downloads.intercomcdn.com/i/o/166312600/3457c89712c5853108027654/Screen+Shot+2019-11-27+at+2.21.32+PM.png =904x627)](https://downloads.intercomcdn.com/i/o/166312600/3457c89712c5853108027654/Screen+Shot+2019-11-27+at+2.21.32+PM.png)  
+![](https://downloads.intercomcdn.com/i/o/166312600/3457c89712c5853108027654/Screen+Shot+2019-11-27+at+2.21.32+PM.png)
+
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
 It's done!
@@ -71,10 +69,10 @@ It's done!
 
 4\. **In the Name Tab,** set up the name of the Team that will be created from the Template:
 
-* **Default Team Name** (what user will fill in the request form): this can be the _Name of the Product_
-* **Naming Convention** (the name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name/) _%> - Product Launch_
-* **Default Teams description:** Enter Additional Product Launch Information
-* **Business Solution Description:** this can be _Team dedicated to collaborate around the Product Launch: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
+* **Default Team Name** (what user will fill in the request form): this can be the `Product name`
+* **Naming Convention** (the name automatically generated): this can be `<%= request.team.name %> - Product Launch`
+* **Default Teams description:** Enter `Additional Product Launch Information`
+* **Business Solution Description:** this can be `Team dedicated to collaborate around the Product Launch: <%=_request.team.name %> | Location: <%= user.msCountry %> | Created by: <%= request.request.requester.name %>` with the job role: `<%= user.msJobTitle%> | <%= request.team.description %>`
 * Same Idea with the welcome message!
 
 5\. **In the Approval tab**, define the approval policy with an approver from your organization.
@@ -89,7 +87,7 @@ It's done!
 
 ***
 
-## Step 3: Try It 🚀
+## Step 3: Try It!
 
 Go on the home page. Click on the "Create" option. You will see the Business option being created on the Catalog. The business solution is named 'Product Launch'.
 

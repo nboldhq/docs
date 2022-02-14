@@ -1,16 +1,19 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
 
 ---
 # Crisis Management Template
 
-A guide to create a Collaboration template for Crisis Management
-
-Introduction
-
 The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize any Crisis. Crisis Management is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization
+
+***
+
+**TABLE OF CONTENTS**
+[[toc]]
+
+***
 
 ## Step 1: Create the Original Team of the Collaboration Template
 
@@ -62,9 +65,9 @@ It's done!
 4\. **In the Name Tab,** set up the name of the Team that will be created from the Template:
 
 * **Default Team Name** (what user will fill in the request form): this can be the _Name of the Crisis_
-* **Naming Convention** (the name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name/) _%> - Crisis_
+* **Naming Convention** (the name automatically generated): this can be `<%= request.team.name %> - Crisis`
 * **Default Teams description:** Enter Additional Crisis Description
-* **Business Solution Description:** this can be _Team dedicated to collaborate around the crisis: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
+* **Business Solution Description:** this can be `Team dedicated to collaborate around the crisis: <%= request.team.name %> | Location: <%= user.msCountry %> | Created by: <%= request.request.requester.name %>` with the job role: `<%= user.msJobTitle%> | <%= request.team.description %>`
 * Same Idea with the welcome message!
 
 5\. **In the Approval tab**, define the approval policy with an approver from your organization.
@@ -77,7 +80,7 @@ It's done!
 * Permanent Owners
 * Permanent Members
 
-## Step 3: Try It 🚀
+## Step 3: Try It!
 
 Go on home page. Click on the "Create" option. You will see the Business option being created on the Catalog. The business solution is named 'Merger and Acquisition'.
 

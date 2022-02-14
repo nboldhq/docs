@@ -1,19 +1,17 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
 
 ---
-# **Account Management Template**
-
-**Introduction**
+# Account Management Template
 
 The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize any Sales Account Management activity. Sales Account Management is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization
 
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
@@ -35,7 +33,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 
 You can frame the channels the way you want, based on your need.
 
-[![](https://downloads.intercomcdn.com/i/o/166562826/597b92d4743978a45361c544/Screen+Shot+2019-11-22+at+4.56.06+PM.png =276x266)](https://downloads.intercomcdn.com/i/o/166562826/597b92d4743978a45361c544/Screen+Shot+2019-11-22+at+4.56.06+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166562826/597b92d4743978a45361c544/Screen+Shot+2019-11-22+at+4.56.06+PM.png)
 
 4\. **Add Websites Tabs** in every channel needed, you can bring any content that comes with a URL to the Team created. The content can be any information that you would like to share with your team members.
 
@@ -43,7 +41,7 @@ You can frame the channels the way you want, based on your need.
 * Link to a share-point online documentation library
 * Internal web-based application
 
-[![](https://downloads.intercomcdn.com/i/o/166565521/ec01e232d2ede460a21a3db1/Screen+Shot+2019-11-22+at+4.58.56+PM.png =907x633)](https://downloads.intercomcdn.com/i/o/166565521/ec01e232d2ede460a21a3db1/Screen+Shot+2019-11-22+at+4.58.56+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166565521/ec01e232d2ede460a21a3db1/Screen+Shot+2019-11-22+at+4.58.56+PM.png)
 
 5\. **Create a Planner** with the list of tasks that you need to carry out. Few examples that can be:
 
@@ -51,7 +49,7 @@ You can frame the channels the way you want, based on your need.
 * Supporting Documents (Maintaining key account database, Weekly account plan)
 * Process Stages (Weekly situational analysis, Strategic formulation and Operations)
 
-[![](https://downloads.intercomcdn.com/i/o/166565567/56049c2a0e0bbd4ddc3b380c/Screen+Shot+2019-11-22+at+4.57.01+PM.png =929x583)](https://downloads.intercomcdn.com/i/o/166565567/56049c2a0e0bbd4ddc3b380c/Screen+Shot+2019-11-22+at+4.57.01+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166565567/56049c2a0e0bbd4ddc3b380c/Screen+Shot+2019-11-22+at+4.57.01+PM.png)
 
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
@@ -70,9 +68,9 @@ It's done!
 4\. **In the Name Tab,** set up the name of the Team that will be created from the Template:
 
 * **Default Team Name** (what user will fill in the request form): this can be the _Name of the Sales Account_
-* **Naming Convention** (the name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name/) _%> - Sales Account_
+* **Naming Convention** (the name automatically generated): this can be `<%= request.team.name %> - Sales Account`
 * **Default Teams description:** Enter Additional Sales Account Description
-* **Business Solution Description:** this can be _Team dedicated to collaborate around the Sales Account: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
+* **Business Solution Description:** this can be `Team dedicated to collaborate around the Sales Account: <%= request.team.name %> | Location: <%= user.msCountry %> | Created by: <%= request.request.requester.name %>` with the job role: `<%= user.msJobTitle%> | <%= request.team.description %>`
 * Same Idea with the welcome message!
 
 5\. **In the Approval tab**, define the approval policy with an approver from your organization.
@@ -87,7 +85,7 @@ It's done!
 
 ***
 
-## Step 3: Try It 🚀
+## Step 3: Try It!
 
 Go on home page. Click on the "Create" option. You will see the Business option being created on the Catalog. The business solution is named 'Sales Account Management'.
 

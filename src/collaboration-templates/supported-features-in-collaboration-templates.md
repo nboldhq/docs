@@ -1,8 +1,8 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
-position: 
+position: 2
 
 ---
 # **All supported features in Collaboration Templates with nBold**

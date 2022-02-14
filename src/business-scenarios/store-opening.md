@@ -1,21 +1,17 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
 
 ---
-# **Store Opening Template**
-
-A guide to create a Collaboration template for New Store Opening
-
-**Introduction**
+# Store Opening Template
 
 The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize any Store Opening. Opening a new Store is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization
 
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
@@ -35,7 +31,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 
 You can frame the channels the way you want, based on your need.
 
-[![](https://downloads.intercomcdn.com/i/o/166062352/9e258aff0e411e8040894338/Screen+Shot+2019-11-21+at+3.34.10+PM.png =284x212)](https://downloads.intercomcdn.com/i/o/166062352/9e258aff0e411e8040894338/Screen+Shot+2019-11-21+at+3.34.10+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166062352/9e258aff0e411e8040894338/Screen+Shot+2019-11-21+at+3.34.10+PM.png)
 
 4\. **Add Websites Tabs** in every channel needed, you can bring any content that comes with a URL to the Team created. The content can be any information that you would like to share with your team members.
 
@@ -43,7 +39,7 @@ You can frame the channels the way you want, based on your need.
 * Link to a share-point online documentation library
 * Internal web-based application
 
-[![](https://downloads.intercomcdn.com/i/o/166062600/6ef70fa5307f61431ca2e2a4/Screen+Shot+2019-11-21+at+3.35.22+PM.png =917x626)](https://downloads.intercomcdn.com/i/o/166062600/6ef70fa5307f61431ca2e2a4/Screen+Shot+2019-11-21+at+3.35.22+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166062600/6ef70fa5307f61431ca2e2a4/Screen+Shot+2019-11-21+at+3.35.22+PM.png)
 
 5\. **Create a Planner** with the list of tasks that you need to carry out. Few examples that can be:
 
@@ -51,7 +47,7 @@ You can frame the channels the way you want, based on your need.
 * Work (Monthly reviews with contractors, weekly team follow up, weekly contactor follow up)
 * Finalization (Communication Plan, Final contractors work list)
 
-[![](https://downloads.intercomcdn.com/i/o/166069999/de3cd2ddefab1be32f3f173d/Screen+Shot+2019-11-21+at+3.36.11+PM.png =929x630)](https://downloads.intercomcdn.com/i/o/166069999/de3cd2ddefab1be32f3f173d/Screen+Shot+2019-11-21+at+3.36.11+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166069999/de3cd2ddefab1be32f3f173d/Screen+Shot+2019-11-21+at+3.36.11+PM.png)
 
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
@@ -65,16 +61,16 @@ It's done!
 2.  **Click on the 'Create'** option present on the top right corner and select the team to be cloned, which in this case is "Store Opening"
 3.  **In the Info tab**, fill in the name of the original team which is named "Store Opening - Template" Microsoft Team name and description. You also have the ability to choose the desired Collaboration Template language.
 4. **In the Name Tab,** set up the name of the Team that will be created from the Template:
-   * **Default Team Name** (what user will fill in the request form): this can be the _Name of the Store_
+   * **Default Team Name** (what user will fill in the request form): this can be the `Store name`
 
 
-   * **Naming Convention** (the name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name/) _%> - Store Opening_
+   * **Naming Convention** (the name automatically generated): this can be `<%= request.team.name %> - Store Opening`
 
 
-   * **Default Teams description:** Enter Additional Store Opening Description
+   * **Default Teams description:** Enter `Additional Store Opening Description`
 
 
-   * **Business Solution Description:** this can be _Team dedicated to collaborate around the Sto: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
+   * **Business Solution Description:** this can be `Team dedicated to collaborate around the store: `<%=_request.team.name %> | Location: <%= user.msCountry %> | Created by: <%= request.request.requester.name %>` with the job role: `<%= user.msJobTitle%> | <%= request.team.description %>`
 
 
    * Same Idea with the welcome message!
@@ -89,7 +85,7 @@ It's done!
 
 ***
 
-## Step 3: Try It 🚀
+## Step 3: Try It!
 
 Go on home page. Click on the "Create" option. You will see the Business option being created on the Catalog. The business solution is named 'Store Opening'.
 

@@ -1,8 +1,8 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
-position: 
+position: 1
 
 ---
 # ➕ Create a new Collaboration Template

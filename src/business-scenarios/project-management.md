@@ -1,24 +1,17 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
-position: 1
 
 ---
-# **Project Management Template**
+# Project Management Template
 
-###### A guide to create a Collaboration template for Project Management
+The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize any Project. Project Management is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization.
 
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
-
-***
-
-Introduction
-
-The objective of the article is to present, how collaboration with Microsoft Teams templates can help an organization optimize any Project. Project Management is a Collaborative Process and Teams is the perfect home for that. With a Template, you can address this process at scale in your organization.
+[[toc]]
 
 ***
 
@@ -41,7 +34,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 
 You can frame the channels the way you want, based on your need.
 
-[![](https://downloads.intercomcdn.com/i/o/166319533/ba4ba7a6271a85034f5c3dc6/Screen+Shot+2019-11-27+at+2.50.15+PM.png =275x290)](https://downloads.intercomcdn.com/i/o/166319533/ba4ba7a6271a85034f5c3dc6/Screen+Shot+2019-11-27+at+2.50.15+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166319533/ba4ba7a6271a85034f5c3dc6/Screen+Shot+2019-11-27+at+2.50.15+PM.png)
 
 4\. **Add Websites Tabs** in every channel needed, you can bring any content that comes with a URL to the Team created. The content can be any information that you would like to share with your team members.
 
@@ -49,7 +42,7 @@ You can frame the channels the way you want, based on your need.
 * Link to a share-point online documentation library
 * Internal web-based application
 
-[![](https://downloads.intercomcdn.com/i/o/166321478/d21887079312e2924f290688/Screen+Shot+2019-11-27+at+2.52.09+PM.png =896x629)](https://downloads.intercomcdn.com/i/o/166321478/d21887079312e2924f290688/Screen+Shot+2019-11-27+at+2.52.09+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166321478/d21887079312e2924f290688/Screen+Shot+2019-11-27+at+2.52.09+PM.png)
 
 5\. **Create a Planner** with the list of tasks that you need to carry out. Few examples that can be:
 
@@ -57,7 +50,7 @@ You can frame the channels the way you want, based on your need.
 * Milestones (First International office opening, outsource building the Android and IOS application)
 * Next Steps (Find a venture for the next party, Revise the employee handbook)
 
-[![](https://downloads.intercomcdn.com/i/o/166321670/f11558266cc40b8449b708c6/Screen+Shot+2019-11-27+at+2.51.42+PM.png =906x584)](https://downloads.intercomcdn.com/i/o/166321670/f11558266cc40b8449b708c6/Screen+Shot+2019-11-27+at+2.51.42+PM.png)
+![](https://downloads.intercomcdn.com/i/o/166321670/f11558266cc40b8449b708c6/Screen+Shot+2019-11-27+at+2.51.42+PM.png)
 
 6\. Also, add a profile image to the Original Team, this image will be replicated to each Team Created.
 
@@ -75,10 +68,10 @@ It's done!
 
 4\. **In the Name Tab,** set up the name of the Team that will be created from the Template:
 
-* **Default Team Name** (what user will fill in the request form): this can be the _Name of the Project_
-* **Naming Convention** (the name automatically generated): this can be _<%=_ [_request.team.name_](http://request.team.name/) _%> - Project_
+* **Default Team Name** (what user will fill in the request form): this can be the `Project name`
+* **Naming Convention** (the name automatically generated): this can be `<%= request.team.name %> - Project`
 * **Default Teams description:** Enter Additional Project Description
-* **Business Solution Description:** this can be _Team dedicated to collaborate around the Project: <%=_ [_request.team.name_](http://request.team.name/) _%> | Location: <%= user.msCountry %> | Created by: <%=_ [_request.request.requester.name_](http://request.request.requester.name/) _%> with the job role: <%= user.msJobTitle%> | <%= request.team.description %>_
+* **Business Solution Description:** this can be `Team dedicated to collaborate around the Project: <%=_request.team.name %> | Location: <%= user.msCountry %> | Created by: <% request.request.requester.name %>` with the job role: `<%= user.msJobTitle%> | <%= request.team.description %>`
 * Same Idea with the welcome message!
 
 1. **In the Approval tab**, define the approval policy with an approver from your organization.
@@ -92,7 +85,7 @@ It's done!
 
 ***
 
-## Step 3: Try It 🚀
+## Step 3: Try It!
 
 Go on home page. Click on the "Create" option. You will see the Business option being created on the Catalog. The business solution is named 'Project Management'.
 

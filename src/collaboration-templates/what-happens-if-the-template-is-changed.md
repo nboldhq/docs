@@ -1,8 +1,8 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
-
+position: 20
 ---
 # What happens if the Template is changed?
 
