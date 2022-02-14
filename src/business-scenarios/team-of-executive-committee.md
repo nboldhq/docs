@@ -12,7 +12,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 
 **TABLE OF CONTENTS**
 
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -66,20 +66,10 @@ It's done!
 3. **In the Info tab**, fill in the name of the original team which is named "Team of Executive Committee - Template" and description. You also have the ability to choose the desired Collaboration Template language.
 4. **In the Naming Tab,** set up the name of the Team that will be created from the Template:
    * **Default Team Name** (what user will fill in the request form): this can be the _Name of the Team_
-
-
-   * **Naming Convention** (name automatically generated): this can be `<%=  [_request.team.name_](http://request.team.name) %> - Exec Committee`
-
-
+   * **Naming Convention** (name automatically generated): this can be `<%= [_request.team.name_](http://request.team.name) %> - Exec Committee`
    * **Default Teams description:** Enter Additional Team Description
-
-
    * **Business Solution Description:**  this can be `Team dedicated to collaboration around the Team: <%= request.team.name %> | Location: <%= user.msCountry %> | Created by: <%= request.request.requester.name %>` with the job role: `<%= user.msJobTitle%> | <%= request.team.description %>`
-
-
    * Same Idea with the welcome message!
-
-
 5. **In the Approval tab**, define the approval policy with an approver from your organization.
 6. **In the Audience tab**, define the audience you wish to target for this Microsoft Teams Template.
 7. **In the Compliance tab,** define sensitivity labels applied to each team created from the template to protect your data.
