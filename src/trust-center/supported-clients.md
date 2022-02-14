@@ -3,7 +3,7 @@ author: Guillaume Meyer
 tags:
 - microsoftteams
 - microsoft
-status: draft
+status: published
 
 ---
 # Supported Clients

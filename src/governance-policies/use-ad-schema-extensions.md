@@ -1,4 +1,4 @@
-# Active Directory Schema Extensions
+# How to use Active Directory Schema Extensions
 
 **ABSTRACT**  
 This article describes how you can leverage the nBold platform to create [naming conventions](/nocode/naming-conventions.md) and [audience targeting](/nocode/audience-targeting.md) rules based on user profiles Active Directory schema extensions (aka `extension attributes`).

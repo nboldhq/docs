@@ -85,7 +85,7 @@ module.exports = {
     yuu: {
       defaultDarkTheme: false,
       disableDarkTheme: false,
-      colorThemes: ['blue', 'purple'], // green (default), blue, red, and purple
+      colorThemes: ['red', 'purple'], // green (default), blue, red, and purple
       defaultColorTheme: 'red',
       labels: {
         darkTheme: '🌗 Dark Theme', // Default is "Enable Dark Theme?"
@@ -134,7 +134,7 @@ module.exports = {
         text: '>_ Developers',
         ariaLabel: 'Developers',
         items: [
-          { text: 'Get started', link: '/api/' },
+          { text: 'Get started', link: '/api/get-started' },
           { text: 'API Explorer', link: '/api/explorer' },
           { text: 'API Reference', link: '/api/production/reference/' }
         ]
@@ -160,98 +160,21 @@ module.exports = {
     // Sidebar: Vertical navigation
     sidebar: {
       '/hosting/': [
-        {
-          title: 'About',
-          path: '/hosting/'
-        },
+        { title: 'About', path: '/hosting/' },
         getSideBar('/hosting/deployment', 'Deployment Guide'),
         getSideBar('/hosting/operations', 'Operations Manual'),
         getSideBar('/hosting/jobs', 'Jobs Reference'),
         getSideBar('/hosting/references', 'References')
       ],
       '/': [
-        {
-          title: 'Introduction',
-          path: '/'
-        },
+        { title: 'Introduction', path: '/' },
         getSideBar('/quickstart', 'Quickstart'),
-        // {
-        //   title: 'Quickstart',
-        //   collapsable: true,
-        //   sidebarDepth: 1,
-        //   children: [
-        //     ['/setup/installation-options.md', 'Installation options'],
-        //     ['/setup/supported-clients.md', 'Supported clients']
-        //   ]
-        // },
         getSideBar('/collaboration-templates', 'Collaboration templates'),
         getSideBar('/business-scenarios', 'Business scenarios'),
         getSideBar('/governance-policies', 'Governance policies'),
-        // {
-        //   title: 'Governance policies',
-        //   collapsable: true,
-        //   sidebarDepth: 1,
-        //   children: [
-        //     ['/governance-policies/naming-conventions.md', 'Naming conventions'],
-        //     ['/governance-policies/approval.md', 'Approval workflow'],
-        //     ['/governance-policies/audience-targeting.md', 'Audience Targeting'],
-        //     ['/governance-policies/ad-schema-extensions.md', 'AD Schema Extensions']
-        //   ]
-        // },
         getSideBar('/automation', 'Automation'),
-        // {
-        //   title: 'Automation',
-        //   collapsable: true,
-        //   sidebarDepth: 1,
-        //   children: [
-        //     ['/automation/', 'Get Started'],
-        //     ['/automation/power-platform-automation-connector.md', 'Power Platform Setup'],
-        //     ['/automation/logic-apps-automation-connector.md', 'Logic Apps Setup'],
-        //     ['/automation/automation-connectors-actions.md', 'Triggers & Actions Reference']
-        //   ]
-        // },
         getSideBar('/api', 'API'),
-
-        // {
-        //   title: 'API',
-        //   collapsable: true,
-        //   sidebarDepth: 1,
-        //   children: [
-        //     ['/api/get-started', 'Get started'],
-        //     ['/api/authentication', 'Authentication'],
-        //     ['/api/best-practices', 'Best Practices'],
-        //     ['/api/explorer', 'API Explorer'],
-        //     ['/api/production/reference/', 'API Reference'],
-        //     ['/api/sdks', 'API SDKs'],
-        //     ['/api/production/sdks/javascript/', 'JavaScript & Node SDK'],
-        //     ['/api/use-postman', 'Use Postman'],
-        //     ['/api/webhooks', 'Webhooks'],
-        //     ['/api/rate-limits', 'Rate Limits'],
-        //     ['/api/throttling', 'Throttling'],
-        //     ['/api/versions', 'Versions'],
-        //     ['/api/changelog', 'Changelog']
-        //   ]
-        // },
-        {
-          title: 'Trust Center',
-          collapsable: true,
-          sidebarDepth: 1,
-          children: [
-            ['/trust-center/', 'Overview'],
-            '/trust-center/sso.md',
-            '/trust-center/rbac.md',
-            '/trust-center/access.md',
-            '/trust-center/infrastructurekeycomponents.md',
-            '/trust-center/apppermissions.md',
-            '/trust-center/datamanagement.md',
-            '/trust-center/securedevelopment.md',
-            '/trust-center/security-policy.md',
-            '/trust-center/privacyandcompliance.md',
-            '/trust-center/classification.md',
-            '/trust-center/releases.md',
-            '/trust-center/knownissues.md'
-          ]
-        }
+        getSideBar('/trust-center', 'Trust center')
       ]
     }
   }

@@ -11,7 +11,7 @@ author: Guillaume Meyer
 
 ---
 
-## Install from the Microsoft Teams Store
+## Install the app from the Microsoft Teams store
 
 You can install the latest version of Salestim from the Microsoft Teams Store:  
 <a href="https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link" target="_blank">

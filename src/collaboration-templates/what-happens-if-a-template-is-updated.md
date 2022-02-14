@@ -8,7 +8,7 @@ position: 20
 
 We always have this question:
 
-> what if I change the Microsoft Teams Template, will it change all the Teams already created with this Template?.
+> what if I change the Microsoft Teams Template, will it change all the Teams already created with this Template?
 
 When you [build a Collaboration Template with nBold](/collaboration-templates/create-a-new-collaboration-template) there are two main parts: the original team that will be replicated and the associated governance policies. When a change is made to one of these two pieces, here is what won't affect or will affect the formerly created teams linked to the Template:
 
