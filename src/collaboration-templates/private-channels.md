@@ -23,15 +23,9 @@ In a word, you'll be able to get a team created with different standard channels
 
 In each Private Channel by default, the permanent owners defined at the template level, are added as Default Private Channel Owners.
 
-[![](https://downloads.intercomcdn.com/i/o/216773752/250b79cc6301df9fa8d054af/image.png =1442x646)](https://downloads.intercomcdn.com/i/o/216773752/250b79cc6301df9fa8d054af/image.png)
-
 By default, Team Members of the team are not allowed to create a Private Channel in the team.
 
-[![](https://downloads.intercomcdn.com/i/o/216774574/1c35f0f4b85f35eaf9ef6579/image.png =1448x677)](https://downloads.intercomcdn.com/i/o/216774574/1c35f0f4b85f35eaf9ef6579/image.png)
-
 Tabs in Private Channels are supported and pre-configured following the configuration from the original team.
-
-[![](https://downloads.intercomcdn.com/i/o/219323334/c2835a6dad57fc62b601fd5a/image.png =3213x1763)](https://downloads.intercomcdn.com/i/o/219323334/c2835a6dad57fc62b601fd5a/image.png)
 
 Currently not supported with Private Channels in Collaboration Templates:
 
@@ -60,15 +54,11 @@ _Learn more about the_ [_Permanent Members and Permanent Owners Policy_](https:/
 
 If you want to make sure members or not allowed to create a Private Channel by default in the team, make sure that in the Original Team of the template, this setting is off by default.
 
-[![](https://downloads.intercomcdn.com/i/o/216804762/823a001339f559d49d355cac/image.png =2462x1023)](https://downloads.intercomcdn.com/i/o/216804762/823a001339f559d49d355cac/image.png)
-
 Make sure that at the Template Level, "Settings" is checked on "Cloning Strategy". So that settings from the Original Team will be cloned.
 
 ![](/uploads/screenshot-2022-02-11-at-11-33-52.png)
 
 So that as a result, in the team created with this template, this setting is off by default.
-
-[![](https://downloads.intercomcdn.com/i/o/216806841/0123025549cdb55ce32dcf87/image.png =2604x1010)](https://downloads.intercomcdn.com/i/o/216806841/0123025549cdb55ce32dcf87/image.png)
 
 ## 4. Serve Private Channels through Templates only
 
