@@ -11,7 +11,7 @@ Now you can clone your 📚 Files stored in teams channels (technically in Share
 
 It means that you can replicate all the folders' structure and documents across multiple teams, enforcing quality and efficiency in your organization. Have a look:
 
-/uploads/files-in-template-v4.gif
+![](/uploads/files-in-template-v4.gif)
 
 ::: tip It's especially useful for:
 
