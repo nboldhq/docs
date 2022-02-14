@@ -38,12 +38,7 @@ fields:
     step: 1
 pages:
 - drafts/hello-world.md
-- src/collaboration-templates/adopt-microsoft-forms.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
-- src/collaboration-templates/office-documents-and-pdf-tabs.md
-- src/collaboration-templates/private-channels-in-colaboration-templates.md
-- src/collaboration-templates/sharepoint-library-tab.md
-- src/collaboration-templates/what-happens-if-the-template-is-changed.md
 - src/governance-policies/mandatory-number-of-owners-and-members.md
 - src/governance-policies/permanent-owners-and-members-policy.md
 - src/governance-policies/restrict-guest-access.md
