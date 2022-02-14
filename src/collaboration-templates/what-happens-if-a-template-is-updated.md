@@ -1,14 +1,16 @@
 ---
 status: published
-tags: []
+tags:
+- Collaboration Template
 author: Kristina Konstantynova
 position: 20
+
 ---
-# What happens if a template is updated?
+# What happens if a collaboration template is updated?
 
 We always have this question:
 
-> what if I change the Microsoft Teams Template, will it change all the Teams already created with this Template?.
+> what if I change the Collaboration Template, will it change all the Teams already created with this Template?.
 
 When you [build a Collaboration Template with nBold](/collaboration-templates/create-a-new-collaboration-template) there are two main parts: the original team that will be replicated and the associated governance policies. When a change is made to one of these two pieces, here is what won't affect or will affect the formerly created teams linked to the Template:
 
@@ -21,7 +23,7 @@ Will change for the Teams created **in the future**:
 
 * Standard Channels Cloning
 * Tabs Cloning
-* Files Tabs Cloning with Files and Folders in each channel
+* Files Tabs Cloning with Files and Folders in each standard channel
 * Planner Tabs with Buckets, Tasks, Description, Checklist and Label
 * Website Tabs
 * Forms Tabs
@@ -30,3 +32,5 @@ Will change for the Teams created **in the future**:
 * Naming Convention
 * Audience Targeting
 * Teams Creation Requester Membership Policy
+* Minimum Number of Owner and Members
+* Sensivity Label
