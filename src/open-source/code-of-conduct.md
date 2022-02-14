@@ -6,12 +6,18 @@ tags:
 - policy
 position: 1
 ---
-# Open Source Code of Conduct
 
-## Abstract
+# Open Source Code of Conduct
 
 This code of conduct outlines expectations for participation in open source communities we're managing, as well as steps for reporting unacceptable behavior. We are committed to providing a welcoming and inspiring community for all. People violating this code of conduct may be banned from the community.
 
+***
+
+**TABLE OF CONTENTS**
+[[toc]]
+
+***
+  
 Our open source communities strive to:
 
 - **Be friendly and patient**: Remember you might not be communicating in someone else's primary spoken or programming language, and others may not have your level of understanding.
