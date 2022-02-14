@@ -1,6 +1,8 @@
 ---
 status: published
-tags: []
+tags:
+- 'template '
+- sharepoint
 author: Kristina Konstantynova
 
 ---
@@ -15,6 +17,8 @@ To include your content, just add a new tab in your template team:
 ![](/uploads/office-files.png)
 
 And boom! Your tab is automatically replicated to any team created from this template!
+
+![](/uploads/sharepoint-library.png)
 
 We're supporting the following tab types:
 
