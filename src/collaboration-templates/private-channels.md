@@ -66,8 +66,6 @@ Make sure that at the Template Level, "Settings" is checked on "Cloning Strategy
 
 So that as a result, in the team created with this template, this setting is off by default.
 
-![](/uploads/private-channel-team-member-settings.png)
-
 ## 4. Serve Private Channels through Templates only
 
 For a governance purpose, you may want to make sure that Private Channels are only created through Microsoft Template, and users won't be allowed to create a Private Channel for any purpose. With nBold you can enable that scenario.
