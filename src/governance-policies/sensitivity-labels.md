@@ -31,10 +31,10 @@ When you set up the sensitivity labels at the template level, whenever you creat
 
 So, in a new team created from this template, you won't be able to share a file with someone out of your organization because of the label configuration applied (CONFIDENTIAL - Finance).
 
-#### ::: tip
+::: tip
 
-#### 🔓 Restrict guest access with the help of a sensitivity label.
+ 🔓 Restrict guest access with the help of a sensitivity label.
 
-::
+:::
 
 [Go to the article.]()
