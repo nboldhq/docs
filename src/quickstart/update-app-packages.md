@@ -7,7 +7,7 @@ position: 20
 ---
 # Update App Packages
 
-# **When would I need to** [**update App Packages**](https://docs.nbold.co/quickstart/update-app-packages.html)**?**
+## **When would I need to** **update App Packages?**
 
 While we're pushing several updates per week on the nBold App without bothering you in updating anything on your side, there are some cases where you would be required to update the Home Package.
 
@@ -22,12 +22,12 @@ For the Home App Package, this would be the case when the changes are concerning
 5. Icon change
 6. Microsoft has made a change in the schema of the manifest
 
-Here is how to Update the nBold App Packages:
+###### Here is how to Update the nBold App Packages:
 
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc\]]
 
 ***
 
