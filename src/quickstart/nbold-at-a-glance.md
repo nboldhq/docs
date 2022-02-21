@@ -3,17 +3,18 @@ status: published
 tags: []
 author: Kristina Konstantynova
 position: 1
+
 ---
 # nBold at a Glance
-
-nBold helps every organization to improve their Collaborative Processes in making it easy to build Microsoft Teams Templates and automate it. You can build a template for any Collaborative purpose:
 
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
+
+nBold helps every organization to improve their Collaborative Processes in making it easy to build Microsoft Teams Templates and automate it. You can build a template for any Collaborative purpose:
 
 * Repetitive processes such as Proposal Management, Crisis Management, Recruitment, etc.
 * Organization Collaboration such as collaboration at a Department level, Region, etc.
@@ -37,9 +38,9 @@ Today's Templates created by nBold support:
 
 Improving collaboration at scale with Microsoft Teams, can't be done without strong governance. nBold empowers end-users with self-service Teams provisioning and management that suits IT needs. With each Collaboration Template built with nBold you can apply governance rules such as:
 
-* Naming Convention
-* Teams Creation Approval
-* Template Audience Targeting
+* [Naming Convention](https://docs.nbold.co/governance-policies/naming-conventions.html)
+* [Teams Creation Approval](https://docs.nbold.co/governance-policies/approval.html)
+* [Template Audience Targeting](https://docs.nbold.co/governance-policies/audience-targeting.html)
 * Compliance with Sensitivity Labels
 * Teams Enforced Privacy Policy
 * Teams Creation Requester as non-Owner
