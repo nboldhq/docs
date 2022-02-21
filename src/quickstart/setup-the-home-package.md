@@ -3,6 +3,7 @@ status: published
 tags: []
 author: Kristina Konstantynova
 position: 10
+
 ---
 # Set up the Home package
 
@@ -12,9 +13,7 @@ In this article, you'll see how to setup the `Home` package in your Microsoft Te
 
 Employees will get a homepage that gathers all the Teams she/he belongs to, and where they can create teams based on templates made available by your organization.
 
-:::tip
-You can make this homepage available to everyone  in your organization or just certain groups of people.
-:::
+:::tip You can make this homepage available to everyone in your organization or just certain groups of people. :::
 
 ***
 
@@ -34,8 +33,8 @@ To complete these steps, you MUST be a Microsoft Teams Administrator or a Micros
 This "targeted" package is a personal Microsoft Teams app comprised of only one tab (Home).
 
 | Package name | Download link |
-|--------------|---------------|
-| nBold Home | [![](https://img.shields.io/badge/Microsoft_Teams-Download_nBold_Home_Package-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://dist.salestim.io/packages/io.nbold.targeted.home.prd.zip) |
+| --- | --- |
+| nBold Home |  |
 
 <hr/>
 
@@ -62,6 +61,7 @@ Connect to the [Microsoft Teams Admin Center](https://admin.teams.microsoft.com/
 ![](https://downloads.intercomcdn.com/i/o/164959617/c9f596e883c3f0cc24cd116f/image.png)
 
 At this stage, you have two options:
+
 * Deploy the Home Page for everyone: Just follow step 4
 * Deploy the Home Page for a selected group of users: jump directly to step 5
 
@@ -107,11 +107,12 @@ Give it a name, such as "nBold Home setup policy"
 
 Then follow the steps described in **"4. Add the home Page to everyone"** to add the Home Package to the Policy.
 
-
 ## Optional: Package customization
+
 This package could be be customized to match your organization's branding or vertical approach, especially:
-- Package icons
-- Package title and description
+
+* Package icons
+* Package title and description
 
 For reference, see [Manifest schema for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
 
