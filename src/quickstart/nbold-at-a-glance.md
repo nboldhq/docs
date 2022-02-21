@@ -10,7 +10,7 @@ position: 1
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
