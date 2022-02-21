@@ -13,7 +13,9 @@ In this article, you'll see how to set up the `Home` Page in your Microsoft Team
 
 Employees will get a home page that gathers all the Teams she/he belongs to, and where they can create teams based on templates made available by your organization.
 
-:::tip You can make this homepage available to everyone in your organization or just certain groups of people. :::
+:::tip You can make this homepage available to everyone in your organization or just certain groups of people. 
+:::
+
 
 ***
 
