@@ -27,7 +27,7 @@ For the Home App Package, this would be the case when the changes are concerning
 ***
 
 **TABLE OF CONTENTS**
-[[toc\]]
+[[toc]]
 
 ***
 
