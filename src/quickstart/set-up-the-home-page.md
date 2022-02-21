@@ -18,7 +18,7 @@ Employees will get a home page that gathers all the Teams she/he belongs to, and
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc\]]
 
 ***
 
