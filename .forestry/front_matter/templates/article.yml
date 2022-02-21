@@ -41,6 +41,7 @@ pages:
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/governance-policies/mandatory-number-of-owners-and-members.md
 - src/governance-policies/security-policy.md
+- src/governance-policies/sensitivity-labels.md
 - src/governance-policies/serve-private-channels.md
 - src/governance-policies/simplifying-and-extending-naming-convention-and-audience-targeting-policy.md
 - src/quickstart/administrator-guide.md
