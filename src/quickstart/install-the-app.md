@@ -12,7 +12,7 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -21,10 +21,10 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 ### 1. Get the nBold app
 
 You can install the latest version of nBold from the Microsoft Teams store:
-| Package name | Download link |
-|--------------|---------------|
-| nBold | [![](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link) |
 
+| Package name | Download link |
+| --- | --- |
+| nBold |  |
 
 ***
 
@@ -56,13 +56,14 @@ Sign-in with your Microsoft 365 account from your organization that is granted t
 nBold does **NOT** supports personal Microsoft Accounts (for instance @outlook.com, @hotmail.com...).
 :::
 
-You're all set up! Now it's time to [create your first template](/collaboration-templates/create-a-new-collaboration-template) to try it out.
+You're all set up! Now it's time to [create your first template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html) to try it out.
 
 You can also:
-* [Set up the Home package](/quickstart/setup-the-home-package) to make it easier for your end-users.
-* [Delegate the Template Catalog administration](/quickstart/delegate-template-catalog-administration) to your business users.
 
----
+* [Set up the Home package](https://docs.nbold.co/quickstart/setup-the-home-package.html) to make it easier for your end-users.
+* [Delegate the Template Catalog administration](https://docs.nbold.co/quickstart/delegate-template-catalog-administration.html) to your business users.
+
+***
 
 ## Optional: Alternative deployment method
 
@@ -71,14 +72,15 @@ You can also:
 This "standalone" package is a personal Microsoft Teams app comprised of the following tabs (Home, Catalog, Settings, Docs), that you can manually upload to your Microsoft Teams App Catalog.
 
 | Package name | Download link |
-|--------------|---------------|
-| nBold Standalone | [![](https://img.shields.io/badge/Microsoft_Teams-nBold_Standalone-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://dist.salestim.io/packages/io.nbold.standalone.prd.zip) |
-
+| --- | --- |
+| nBold Standalone |  |
 
 ### Package customization
+
 This package could be be customized to match your organization's branding or vertical approach, especially:
-- Package icons
-- Package title and description
+
+* Package icons
+* Package title and description
 
 For reference, see [Manifest schema for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
 
