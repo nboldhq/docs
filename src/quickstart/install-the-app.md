@@ -24,7 +24,7 @@ You can install the latest version of nBold from the Microsoft Teams store:
 
 | Package name | Download link |
 | --- | --- |
-| nBold | ![](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link) |
+| nBold | [![](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link) |
 
 ***
 
