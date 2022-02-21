@@ -17,20 +17,20 @@ Today, we're announcing a new and effortless way to build those rules using Tags
 
 From each of your Dynamic Naming Conventions fields, you're now able to add any attribute by simply typing "@" and you'll be suggested with all supported attributes (you can also search for them by typing the beginning of the tag name).
 
-[![](https://downloads.intercomcdn.com/i/o/242060759/74360a30a709eb809b13fbf9/image.png =3239x1937)](https://downloads.intercomcdn.com/i/o/242060759/74360a30a709eb809b13fbf9/image.png)
+![](/uploads/screenshot-2022-02-21-at-15-14-02.png)
 
 So, in a few seconds, you just build an advanced Naming Policy for your Collaboration Templates!
 
-[![](https://downloads.intercomcdn.com/i/o/242075754/c20a340837b0719fdba8eb20/Tags+in+naming+convention.gif =1456x829)](https://downloads.intercomcdn.com/i/o/242075754/c20a340837b0719fdba8eb20/Tags+in+naming+convention.gif)
+![](/uploads/ezgif-com-gif-maker-1.gif)
 
-Also, at the bottom of the list you'll be able to add any custom attribute from your Active Directory.
+Also, at the bottom of the list, you'll be able to add any custom attribute from your Active Directory.
 
-[![](https://downloads.intercomcdn.com/i/o/242079101/86b8cfa67b8d3e6c69fa00bd/image.png =1464x836)](https://downloads.intercomcdn.com/i/o/242079101/86b8cfa67b8d3e6c69fa00bd/image.png)
+![](/uploads/screenshot-2022-02-21-at-15-25-48.png)
 
-Learn more about dynamic convention in [the Help Center documentation](https://docs.nbold.co/governance-policies/naming-conventions.html).
+Learn more about a dynamic convention in [the Help Center documentation](https://docs.nbold.co/governance-policies/naming-conventions.html).
 
 # **Audience Targeting**
 
 Similarly, you now can use any of these attributes to build your audience targeting rules. You can follow the [tech documentation to learn more](https://docs.nbold.co/governance-policies/audience-targeting.html) to learn how to write them.
 
-[![](https://downloads.intercomcdn.com/i/o/242083872/c9e51e5d2ca9846c1907b8c7/Tags+in+Audience+Targeting.gif =1456x829)](https://downloads.intercomcdn.com/i/o/242083872/c9e51e5d2ca9846c1907b8c7/Tags+in+Audience+Targeting.gif)
+![](/uploads/ezgif-com-gif-maker-2.gif)
