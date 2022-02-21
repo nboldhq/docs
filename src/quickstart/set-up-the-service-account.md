@@ -1,17 +1,18 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
 position: 8
+
 ---
-# 🤖 Set up or change the Service Account
+# Set up or change the Service Account
 
 To set up or change the Service Account, you just need to follow these steps:
 
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 

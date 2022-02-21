@@ -8,9 +8,9 @@ author: Kristina Konstantynova
 
 How to clone Planner plans as part of Collaboration templates
 
-After tremendous efforts, we reached a new milestone in our provisioning engine. Now you can clone your 📅 Planner plans across Collaboration templates, with **full parity** between the original one and the cloned plan!
+After tremendous efforts, we reached a new milestone in our provisioning engine. Now you can clone your 📅 Planner tasks across Collaboration templates, with **full parity** between the original one and the cloned plan!
 
-[![](https://downloads.intercomcdn.com/i/o/169384908/3958f1b1a4e2c2c4ad4fc51e/image.png =1607x1074)](https://downloads.intercomcdn.com/i/o/169384908/3958f1b1a4e2c2c4ad4fc51e/image.png)
+![](/uploads/planner.png)
 
 What do we mean by full fidelity? Here are the elements that will be cloned from your source plan:
 
