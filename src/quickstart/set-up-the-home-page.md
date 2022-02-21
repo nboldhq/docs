@@ -34,7 +34,7 @@ This "targeted" package is a personal Microsoft Teams app comprised of only one 
 
 | Package name | Download link |
 | --- | --- |
-| nBold Home |  |
+| nBold Home |  |https://dist.salestim.io/packages/io.nbold.targeted.home.prd.zip |
 
 <hr/>
 
