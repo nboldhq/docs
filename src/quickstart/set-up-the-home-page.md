@@ -13,14 +13,13 @@ In this article, you'll see how to set up the `Home` Page in your Microsoft Team
 
 Employees will get a home page that gathers all the Teams she/he belongs to, and where they can create teams based on templates made available by your organization.
 
-:::tip You can make this homepage available to everyone in your organization or just certain groups of people. 
+:::tip You can make this homepage available to everyone in your organization or just certain groups of people.
 :::
-
 
 ***
 
 **TABLE OF CONTENTS**
-[[toc\]]
+[[toc]]
 
 ***
 
@@ -34,11 +33,7 @@ To complete these steps, you MUST be a Microsoft Teams Administrator or a Micros
 
 This "targeted" package is a personal Microsoft Teams app comprised of only one tab (Home).
 
-| Package name | Download link |
-| --- | --- |
-| nBold Home |  |https://dist.salestim.io/packages/io.nbold.targeted.home.prd.zip |
-
-<hr/>
+[nBold Home package](https://dist.salestim.io/packages/io.nbold.targeted.home.prd.zip)
 
 ### 2. Connect to Microsoft Teams as an administrator
 
