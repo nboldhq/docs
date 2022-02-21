@@ -27,7 +27,7 @@ Also, at the bottom of the list you'll be able to add any custom attribute from 
 
 [![](https://downloads.intercomcdn.com/i/o/242079101/86b8cfa67b8d3e6c69fa00bd/image.png =1464x836)](https://downloads.intercomcdn.com/i/o/242079101/86b8cfa67b8d3e6c69fa00bd/image.png)
 
-Learn more about dynamic convention in [the Help Center documentation](https://docs.nbold.co/governance-policies/naming-conventions.html).
+Learn more about dynamic convention in our [Documentation](https://docs.nbold.co/governance-policies/naming-conventions) website.
 
 # **Audience Targeting**
 

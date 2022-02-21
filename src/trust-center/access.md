@@ -61,13 +61,13 @@ Our complete portfolio of domains are outlined below to help our customers confi
 This information is subject to change and we recommend that you check back quarterly for the addition of new domains.
 :::
 
-### nBold Web App
+### nBold App
 * Domains/Hosts: ***.salestim.io**
 * Justification/Purpose: nBold main web application for Microsoft Teams
 
-### nBold Help Center
+### nBold Docs
 * Domains/Hosts: ***.nbold.co**
-* Justification/Purpose: nBold Help Center embedded into the Microsoft Teams app
+* Justification/Purpose: nBold documentation could be embedded into the Microsoft Teams app
 
 ### Microsoft Azure Application Insight
 * Domains/Hosts:

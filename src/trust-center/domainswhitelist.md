@@ -13,9 +13,9 @@ This information is subject to change and we recommend that you check back quart
 * Domains/Hosts: ***.salestim.io**
 * Justification/Purpose: nBold main web application for Microsoft Teams
 
-### nBold Help Center
+### nBold Documentation
 * Domains/Hosts: ***.nbold.co**
-* Justification/Purpose: nBold Help Center embedded into the Microsoft Teams app
+* Justification/Purpose: nBold documentation embedded into the Microsoft Teams app
 
 ## Third-party services
 

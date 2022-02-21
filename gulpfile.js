@@ -97,7 +97,7 @@ const convertOpenApiYamlToJson = (done) => {
         if (!err) {
           console.log('JSON file has been saved.')
           const openApiJson = YAML.parse(data)
-          fs.writeFile(targetJsonFile, JSON.stringify(openApiJson), 'utf8', function (err) { // eslint-disable-line
+          fs.writeFile(targetJsonFile, JSON.stringify(openApiJson, null, 2), 'utf8', function (err) { // eslint-disable-line
             if (!err) {
               console.log('JSON file has been saved.')
               if (index === srcYamlFiles.length - 1) {

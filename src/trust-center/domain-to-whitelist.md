@@ -23,10 +23,10 @@ Our complete portfolio of domains is outlined below for our customers to referen
 * Domains/Hosts: *.nbold.io
 * Justification/Purpose: nBold main web application for Microsoft Teams
 
-### nBold Help Center
+### nBold DocumentationCenter
 
 * Domains/Hosts: *.nbold.com
-* Justification/Purpose: nBold Help Center embedded into the Microsoft Teams app
+* Justification/Purpose: nBold documentation embedded into the Microsoft Teams app
 
 ## Third-party services
 

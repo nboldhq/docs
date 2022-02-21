@@ -112,4 +112,4 @@ From the new "Connection" section:
 Once your Salesforce Sales Cloud connection is authorized, you can configure your business rules for each available object type.
 
 ## Configure Entities Business Rules
-Each entity has its own available actions and schema. We tried hard to make it self-explanatory but if you have any doubt or question, lease refer to our [Help Center](https://docs.nbold.co)
+Each entity has its own available actions and schema. We tried hard to make it self-explanatory but if you have any doubt or question, lease refer to our [Documentation](https://docs.nbold.co) website.
