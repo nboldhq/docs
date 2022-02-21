@@ -12,7 +12,7 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
@@ -24,7 +24,7 @@ You can install the latest version of nBold from the Microsoft Teams store:
 
 | Package name | Download link |
 | --- | --- |
-| nBold |  |
+| nBold |  https://dist.salestim.io/packages/io.nbold.targeted.home.prd.zip |
 
 ***
 
