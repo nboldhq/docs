@@ -49,5 +49,5 @@ pages:
 - src/quickstart/create-teams-only-through-microsoft-teams-templates-by-nbold.md
 - src/quickstart/nbold-at-a-glance.md
 - src/quickstart/quick-steps-to-onboard-on-nbold.md
-- src/quickstart/set-up-or-change-the-service-account.md
+- src/quickstart/set-up-the-service-account.md
 - src/quickstart/update-app-packages.md
