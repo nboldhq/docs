@@ -5,20 +5,20 @@ author: Kristina Konstantynova
 position: 10
 
 ---
-# Set up the Home package
+# Set up the Home Page
 
-In this article, you'll see how to setup the `Home` package in your Microsoft Teams environment:
+In this article, you'll see how to set up the `Home` Page in your Microsoft Teams environment:
 
 ![](https://downloads.intercomcdn.com/i/o/175631759/31ded0f5316a7f707c5752af/image.png)
 
-Employees will get a homepage that gathers all the Teams she/he belongs to, and where they can create teams based on templates made available by your organization.
+Employees will get a home page that gathers all the Teams she/he belongs to, and where they can create teams based on templates made available by your organization.
 
 :::tip You can make this homepage available to everyone in your organization or just certain groups of people. :::
 
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
