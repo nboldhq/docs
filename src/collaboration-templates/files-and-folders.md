@@ -2,6 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
+position: 4
 
 ---
 # **Files cloning for Collaboration Templates**

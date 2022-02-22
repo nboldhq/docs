@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 
+position: 5
 
 ---
 # **Adopt Microsoft Forms at scale through Collaboration Templates!**
