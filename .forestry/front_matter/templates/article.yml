@@ -43,7 +43,6 @@ pages:
 - src/governance-policies/security-policy.md
 - src/governance-policies/sensitivity-labels.md
 - src/governance-policies/serve-private-channels.md
-- src/governance-policies/simplifying-and-extending-naming-convention-and-audience-targeting-policy.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
 - src/quickstart/create-teams-only-through-microsoft-teams-templates-by-nbold.md
