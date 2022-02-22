@@ -12,7 +12,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 
 **TABLE OF CONTENTS**
 
-\[\[toc\]\]
+[[toc]]
 
 ***
 
