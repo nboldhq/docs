@@ -10,7 +10,7 @@ position: 2
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -41,7 +41,7 @@ Improving collaboration at scale with Microsoft Teams, can't be done without str
 * [Naming Convention](https://docs.nbold.co/governance-policies/naming-conventions.html)
 * [Teams Creation Approval](https://docs.nbold.co/governance-policies/approval.html)
 * [Template Audience Targeting](https://docs.nbold.co/governance-policies/audience-targeting.html)
-* Compliance with Sensitivity Labels
-* Teams Enforced Privacy Policy
+* Compliance with [Sensitivity Labels](https://docs.nbold.co/governance-policies/sensitivity-labels.html)
+* Teams [Enforced Privacy Policy](https://docs.nbold.co/governance-policies/security-policy.html)
 * Teams Creation Requester as non-Owner
-* Permanent Owners and Permanent Members
+* [Permanent Owners and Permanent Members](https://docs.nbold.co/governance-policies/permanent-owners-and-members-policy.html)
