@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 
+position: 9
 
 ---
 # Create Teams only through Collaboration Templates by nBold
