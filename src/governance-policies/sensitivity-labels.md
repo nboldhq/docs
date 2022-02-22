@@ -22,18 +22,16 @@ Based on your organization’s specific needs, you can create categories for var
 3. Go to the **Compliance** tab.
 4. Simply type "**@**" and you'll be able to add any sensitivity label created in[ Microsoft 365 Security & Compliance Center ](https://protection.office.com/homepage)(in our example it is a Confidential Finance label that prevents people from sharing content in teams with externals).
 
-![](/uploads/ezgif-7-745936a329.gif)
-
-[![](https://downloads.intercomcdn.com/i/o/455115227/1f43de40324cd373de75bd22/ezgif-7-745936a329.gif =600x383)](https://downloads.intercomcdn.com/i/o/455115227/1f43de40324cd373de75bd22/ezgif-7-745936a329.gif)
+![](/uploads/sensitivity-label-gif.gif)
 
 When you set up the sensitivity labels at the template level, whenever you create new teams from the template, the files shared in those teams will have the sensitivity label specified during the template creation.
 
 4\. Create a new team with this template and check out new features
 
-![](/uploads/screenshot-2022-01-28-at-16-21-27.png)
+![](/uploads/sensitivity-label-image.png)
 
 So, in a new team created from this template, you won't be able to share a file with someone out of your organization because of the label configuration applied (CONFIDENTIAL - Finance).
 
 ##### 🔓 Restrict guest access with the help of a sensitivity label.
 
-[Go to the article.]()
+[Go to the article.](https://docs.nbold.co/governance-policies/restrict-guest-access.html)
