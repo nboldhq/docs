@@ -39,6 +39,7 @@ fields:
 pages:
 - drafts/hello-world.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
+- src/collaboration-templates/create-teams-only-through-microsoft-teams-templates-by-nbold.md
 - src/governance-policies/mandatory-number-of-owners-and-members.md
 - src/governance-policies/security-policy-1.md
 - src/governance-policies/security-policy.md
