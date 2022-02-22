@@ -9,12 +9,7 @@ position: 1
 
 ##### In this article you'll find a recap of the steps needed to onboard on the app:
 
-***
 
-**TABLE OF CONTENTS**
-[[toc]]
-
-***
 
 ## [1. 👍 Install nBold App on Microsoft Teams](https://docs.nbold.co/quickstart/install-the-app.html)
 
