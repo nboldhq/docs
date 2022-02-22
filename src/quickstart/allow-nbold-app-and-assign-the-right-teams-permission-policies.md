@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 10
+position: 11
 
 ---
 # Allow nBold App and assign the right Teams Permission Policies
