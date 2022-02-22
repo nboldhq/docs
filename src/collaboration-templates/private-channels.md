@@ -2,6 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
+position: 8
 
 ---
 # **Private Channels in Collaboration Templates by nBold**
