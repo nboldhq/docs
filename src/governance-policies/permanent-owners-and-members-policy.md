@@ -1,8 +1,8 @@
 ---
 status: published
 tags: []
-position: 9
-author: Kristina Konstantynova
+position: 0
+author: Kristina Konstantnyova
 
 ---
 # **Permanent Owners and Members Policy**
