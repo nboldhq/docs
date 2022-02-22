@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 
+position: 7
 
 ---
 # **Office Documents and PDF Tabs in Microsoft Teams Template**

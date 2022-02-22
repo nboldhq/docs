@@ -2,6 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
+position: 6
 
 ---
 # **Full fidelity Planner cloning in Microsoft Teams**
@@ -29,4 +30,4 @@ For each task, here are the elements that are cloned:
 
 For now, we decided not to clone "Progress", "Priority", "Start date", "End date" and "Attachments", as they may vary from one team to another, but if you have specific use cases or requirements, 🙏🏼 please share them with us by 💬 chat.
 
-# 
+#
