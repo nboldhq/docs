@@ -14,6 +14,8 @@ It means that you can replicate all the folders' structure and documents across 
 
 ![](/uploads/files-in-template-v4.gif)
 
+![](/uploads/files-in-template-v4.gif)
+
 ::: tip It's especially useful for:
 
 * [Project management templates](https://docs.nbold.co/business-scenarios/project-management-template.html)
