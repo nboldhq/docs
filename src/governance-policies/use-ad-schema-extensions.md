@@ -1,6 +1,6 @@
 ---
 status: published
-position: 10
+position: 4
 author: Guillaume Meyer
 
 ---
