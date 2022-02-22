@@ -28,7 +28,7 @@ Here are all the cases:
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
