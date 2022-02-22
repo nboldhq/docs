@@ -22,14 +22,14 @@ For the Home App Package, this would be the case when the changes are concerning
 5. Icon change
 6. Microsoft has made a change in the schema of the manifest
 
-###### Here is how to Update the nBold App Packages:
-
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
+
+## How to Update the nBold App Packages?
 
 ### 1. Download the latest packages
 
