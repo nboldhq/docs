@@ -39,15 +39,17 @@ For Mac devices, type `Control + Command + Space`.
 
  1. Connect as a **Global Admin in Microsoft Teams**
  2. Select nBold in the App Store and go to `Catalog` Tab.
- 3. Click on **"+ New Template"** on top right
+ 3. Click on **`+ New Template`** on top right
  4. Enter the **name of the Team** created before
  5. Adapt the name of the Template to be shown to end-users in the catalog
  6. Select what to be cloned (most of the time uncheck "Members")
- 7. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example). More details about [Naming Convention](/governance-policies/naming-conventions).
- 8. **Approval**: select who will be the approver of the creation (currently disabled by default)
- 9. **Audience**: define who will be able to create a team with this template
-10. **Compliance**: define additional sensitivity labels to protect your data.
-11. **Security policy**: define the enforced privacy policy, membership policy and Permanent owners/members policy
+ 7. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example). 
+
+    More details about [Naming Convention](/governance-policies/naming-conventions).
+ 8. [**Approval**](https://docs.nbold.co/governance-policies/approval.html): select who will be the approver of the creation (currently disabled by default)
+ 9. [**Audience**](https://docs.nbold.co/governance-policies/audience-targeting.html): define who will be able to create a team with this template
+10. **Compliance**: define additional [sensitivity labels ](https://docs.nbold.co/governance-policies/sensitivity-labels.html)to protect your data.
+11. [**Security policy**](https://docs.nbold.co/governance-policies/security-policy.html): define the enforced privacy policy, membership policy and Permanent owners/members policy
 12. Click "Save"
 
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)
