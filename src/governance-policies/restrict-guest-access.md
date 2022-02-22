@@ -25,7 +25,7 @@ Define external sharing and user access settings.
 
 ![](/uploads/screenshot-2022-01-27-at-10-22-51.png)
 
-2\. Go to Microsoft Teams and log into your **_n_Bold account**.
+2\. Go to Microsoft Teams and log into your **nBold account**.
 
 3\. Click on [**Create a Template**](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html)**.**
 
