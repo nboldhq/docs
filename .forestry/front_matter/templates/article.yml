@@ -43,7 +43,6 @@ pages:
 - src/collaboration-templates/wiki-tabs.md
 - src/governance-policies/mandatory-number-of-owners-and-members.md
 - src/governance-policies/restrict-guest-access.md
-- src/governance-policies/security-policy-1.md
 - src/governance-policies/security-policy.md
 - src/governance-policies/sensitivity-labels.md
 - src/governance-policies/serve-private-channels.md
