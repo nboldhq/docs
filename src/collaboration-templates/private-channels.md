@@ -12,7 +12,7 @@ In this article, we describe the different capabilities of the Private Channels 
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
