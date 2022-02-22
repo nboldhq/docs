@@ -13,7 +13,10 @@ While we're pushing several updates per week on the nBold App without bothering 
 
 Regarding the nBold App, we're now present in the Microsoft Teams App Store, all the updates for this particular App Package are managed by us. So, nothing to worry about.
 
-For the Home App Package, this would be the case when the changes are concerning a Microsoft Teams direct-related feature. Here are all the cases:
+::: warning For the Home App Package, this would be the case when the changes are concerning a Microsoft Teams direct-related feature. 
+:::
+
+Here are all the cases:
 
 1. New Language Support
 2. App SSO Support
@@ -25,7 +28,7 @@ For the Home App Package, this would be the case when the changes are concerning
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
