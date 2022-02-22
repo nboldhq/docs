@@ -10,7 +10,7 @@ position: 9
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -48,14 +48,14 @@ To create a new Collaboration Template, select "➕ New template"
 
 Select an existing team as a Template: Mandatory. Search for an existing team that will be cloned to create the new team. This team is hereafter referred to as the "original team"
 
-![](/uploads/salestim.png)
+![](/uploads/screenshot-2022-02-22-at-11-23-24.png)
 
 ### Info Tab
 
 * Collaboration Template name and description: This information is displayed to the end-user during the selection of the Template
 * What you'd like to include from the original team: different characteristics that will be cloned from the "original team" to the new one.
 
-![](/uploads/screenshot-2022-02-10-at-14-32-51.png)
+![](/uploads/info-tab.png)
 
 You can selectively enable or disable these characteristics among:
 
@@ -68,7 +68,7 @@ You can selectively enable or disable these characteristics among:
 
 Define the Naming settings with Team name, description and welcome message default values.
 
-![](/uploads/screenshot-2022-02-10-at-14-33-43.png)
+![](/uploads/naming-convention.png)
 
 [Learn more about Naming Convention](https://docs.nbold.co/governance-policies/naming-conventions.html)
 
@@ -76,7 +76,7 @@ Define the Naming settings with Team name, description and welcome message defau
 
 Define the approval policy with an approver from your organization.
 
-![](/uploads/screenshot-2022-02-10-at-14-34-09.png)
+![](/uploads/teams-creation-approval-policy.png)
 
 [Learn more abo](https://docs.nbold.co/governance-policies/naming-conventions.html)
 
@@ -84,7 +84,7 @@ Define the approval policy with an approver from your organization.
 
 Define the audience you want to target for this Template.
 
-![](/uploads/screenshot-2022-02-10-at-14-35-17.png)
+![](/uploads/audience-targeting.png)
 
 [Learn more about Audience Targeting](https://help.salestim.com/en/articles/3519963-audience-targeting)
 
@@ -92,7 +92,7 @@ Define the audience you want to target for this Template.
 
 Define sensitivity labels that are assigned to each team created from the Template to protect your data.
 
-![](/uploads/screenshot-2022-02-10-at-15-39-51.png)
+![](/uploads/data-compliance.png)
 
 [Learn more about Sensitivity Labels](https://docs.nbold.co/governance-policies/sensitivity-labels.html)
 
@@ -100,7 +100,7 @@ Define sensitivity labels that are assigned to each team created from the Templa
 
 Define the Security Policy with Teams Privacy, Permanent Owners and Permanent Members
 
-![](/uploads/screenshot-2022-02-10-at-14-38-24.png)
+![](/uploads/teams-template-security-policy.png)
 
 [Learn more about Security Policy](https://help.salestim.com/en/articles/3519966-security-policy)
 
@@ -108,15 +108,16 @@ Define the Security Policy with Teams Privacy, Permanent Owners and Permanent Me
 
 By default, nBold redirects you to the "Home" page. If you're a member of the Office 365 Global Administrators Group, you can access the "⚙ Settings" dashboard from the main menu.
 
-![](/uploads/screenshot-2022-02-10-at-14-49-01.png)
+![](/uploads/settings-dashboard.png)
 
 ### 🤖 Service Account
 
 From the "🤖 Service Account" tab, you can define the Office 365 account that will execute the different operations, such as new teams provisioning.
 
-![](/uploads/screenshot-2022-02-10-at-14-39-00.png)
+![](/uploads/service-account.png)
 
-* Security
+**Security**
+
 * Approval
 * Roles
 * System Information
