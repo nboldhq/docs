@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 2
+position: 3
 
 ---
 # Key Features
@@ -13,7 +13,7 @@ nBold lets organizations improve their collaborative processes through the abili
 
 **TABLE OF CONTENTS**
 
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -35,10 +35,10 @@ Features that IT will love! Microsoft Teams has been designed to address enterpr
 
 All the features described hereafter, are set at the template level:
 
-* Naming Convention
-* Teams Creation Approval
-* Template Audience Targeting
-* Teams Compliance with Sensitivity Labels
+* [Naming Convention]( "https://docs.nbold.co/governance-policies/naming-conventions.html")
+* [Teams Creation Approval]( "https://docs.nbold.co/governance-policies/approval.html")
+* [Template Audience Targeting]( "https://docs.nbold.co/governance-policies/audience-targeting.html")
+* Teams Compliance with [Sensitivity Labels](https://docs.nbold.co/governance-policies/sensitivity-labels.html)
 * Teams Enforced Privacy Policy
 * Teams Creation Requester as non-Owner
 * Minimum number of Owners and Members
@@ -51,18 +51,18 @@ All the features described hereafter, are set at the template level:
 Get a Collaboration Template Catalog owned by your organization, tailored for your needs. Your company can provide Collaboration Templates such as: Project Management, Recruitment Process, Opportunity Management, Crisis Management, etc. The possibilities are endless!
 
 **Request a new team**
+
 1. Request a new team
 2. Select the appropriate Collaboration Template from your corporate catalog:
 
 ![](https://downloads.intercomcdn.com/i/o/175628319/9367e7d111ffcaeb0e0001b5/image.png)
 
-3. Choose the team name and description:
+1. Choose the team name and description:
 
 ![](https://downloads.intercomcdn.com/i/o/175628523/60feb48f0bd397ca2b0f343d/image.png)
 
-4. Define a welcome message that will be published in the `General` channel once the new Team is available.
-
-5. Select the team owners and members from your company directory.
+1. Define a welcome message that will be published in the `General` channel once the new Team is available.
+2. Select the team owners and members from your company directory.
 
 ## Get a Home Page for Microsoft Teams
 
@@ -76,6 +76,6 @@ Get an overview of all the Teams you belong to, search for the good one with a s
 * Request Review: update request information, approve or reject requests
 * Notification: email received by the approver to act, link to the teams created
 
-## Compliance
+## Compliance 
 
 * Protect your data with the help of sensitivity labels
