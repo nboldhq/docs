@@ -1,7 +1,8 @@
 ---
-status: draft
+status: published
 tags: []
 author: Kristina Konstantynova
+position: 10
 
 ---
 # Administrator Guide
@@ -29,7 +30,7 @@ You can sort your Teams Templates for easier navigation by clicking on the colum
 
 During setup, a "Default team" Template has been provisioned. You cannot delete the "Default Team" Template. If you don't want to use it, just disable it from the main "Information" tab.
 
-## Manage your Collaboration Template
+## Manage your Collaboration Templates
 
 For each existing Template, you can Enable or Disable it for users:
 
@@ -39,7 +40,7 @@ N.B: To edit an existing Template, just click on its name from the list. The edi
 
 ## Create a Collaboration Template
 
-First, you would need to create the Original Team of the Template. This team will serve as a referral for the Template. Get in the dedicated [article all the steps to create the original team and the template](https://help.salestim.com/en/articles/3387488-create-a-new-microsoft-teams-template).
+First, you would need to create the Original Team of the Template. This team will serve as a referral for the Template. Get in the dedicated [article all the steps to create the original team and the template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html).
 
 To create a new Collaboration Template, select "➕ New template"
 
@@ -69,13 +70,15 @@ Define the Naming settings with Team name, description and welcome message defau
 
 ![](/uploads/screenshot-2022-02-10-at-14-33-43.png)
 
-[Learn more about Naming Convention](https://help.salestim.com/en/articles/3519232-naming-convention)
+[Learn more about Naming Convention](https://docs.nbold.co/governance-policies/naming-conventions.html)
 
 ### Teams Creation Approval Policy
 
 Define the approval policy with an approver from your organization.
 
 ![](/uploads/screenshot-2022-02-10-at-14-34-09.png)
+
+[Learn more abo](https://docs.nbold.co/governance-policies/naming-conventions.html)
 
 ### Audience Targeting
 
@@ -91,7 +94,7 @@ Define sensitivity labels that are assigned to each team created from the Templa
 
 ![](/uploads/screenshot-2022-02-10-at-15-39-51.png)
 
-[Learn more about Sensitivity Labels]()
+[Learn more about Sensitivity Labels](https://docs.nbold.co/governance-policies/sensitivity-labels.html)
 
 ### Teams Template Security Policy
 
