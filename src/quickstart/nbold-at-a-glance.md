@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 1
+position: 2
 
 ---
 # nBold at a Glance
