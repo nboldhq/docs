@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 
+position: 8
 
 ---
 # **Serve Private Channels in Microsoft Teams only through Collaboration Templates**
