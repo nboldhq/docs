@@ -2,7 +2,7 @@
 tags: []
 author: Kristina Konstantynova
 status: published
-position: 3
+position: 4
 
 ---
 # Install nBold for Microsoft Teams
@@ -12,7 +12,7 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -22,9 +22,7 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 
 You can install the latest version of nBold from the Microsoft Teams store:
 
-| Package name | Download link |
-| --- | --- |
-| nBold | [![](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link) |
+[nBold app]()
 
 ***
 
@@ -73,7 +71,7 @@ This "standalone" package is a personal Microsoft Teams app comprised of the fol
 
 | Package name | Download link |
 | --- | --- |
-| nBold Standalone | [![](https://img.shields.io/badge/Microsoft_Teams-nBold_Standalone-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://dist.salestim.io/packages/io.nbold.standalone.prd.zip) |
+| nBold Standalone |  |
 
 ### Package customization
 
