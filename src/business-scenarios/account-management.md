@@ -11,7 +11,7 @@ The objective of the article is to present, how collaboration with Microsoft Tea
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -96,4 +96,4 @@ Go on home page. Click on the "Create" option. You will see the Business option 
 
 ![](/uploads/screenshot-2022-02-11-at-09-57-24.png)
 
-If you are doing that with a service account, no notification will be seen because you are the account that is creating the Team.
+_If you are doing that with a service account, no notification will be seen because you are the account that is creating the Team._
