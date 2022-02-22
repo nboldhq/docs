@@ -42,6 +42,7 @@ pages:
 - src/collaboration-templates/create-teams-only-through-microsoft-teams-templates-by-nbold.md
 - src/collaboration-templates/wiki-tabs.md
 - src/governance-policies/mandatory-number-of-owners-and-members.md
+- src/governance-policies/permanent-owners-and-members-policy.md
 - src/governance-policies/restrict-guest-access.md
 - src/governance-policies/security-policy.md
 - src/governance-policies/sensitivity-labels.md
