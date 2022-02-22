@@ -22,7 +22,7 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 
 You can install the latest version of nBold from the Microsoft Teams store:
 
-[nBold app]()
+[nBold app](https://docs.nbold.co/quickstart/install-the-app.html)
 
 ***
 
