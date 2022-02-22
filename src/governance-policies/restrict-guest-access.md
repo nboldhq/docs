@@ -1,7 +1,7 @@
 ---
 status: published
 tags: []
-position: 9
+position: 6
 author: Kristina Konstantynova
 
 ---
