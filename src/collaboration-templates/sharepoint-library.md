@@ -4,6 +4,7 @@ tags:
 - 'template '
 - sharepoint
 author: Kristina Konstantynova
+position: 9
 
 ---
 # **SharePoint Library Tab in Collaboration Templates**
