@@ -7,9 +7,16 @@ position: 10
 ---
 # Allow nBold App and assign the right Teams Permission Policies
 
+***
+
+**TABLE OF CONTENTS**
+[[toc]]
+
+***
+
 In some organizations, 3rd Party Apps are blocked in Teams. To make sure you can proceed to the nBold App and the Home App install, you need to verify this:
 
-1. Allow nBold App to appear to users.
+### 1. Allow nBold App to appear to users.
 
 In this step you ensure that the nBold is allowed in the tenant:
 
@@ -18,7 +25,7 @@ In this step you ensure that the nBold is allowed in the tenant:
 
 ![](/uploads/allow-2.png)
 
-2\. Give permission to users to install nBold
+### 2. Give permission to users to install nBold
 
 In the next step, you make sure that the nBold App can be installed on Teams for users.
 
