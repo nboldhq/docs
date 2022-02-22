@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konsatntnyova
-position: 5
+position: 7
 
 ---
 # Delegate your template catalog administration
