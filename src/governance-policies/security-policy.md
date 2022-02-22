@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konsatntnyova
-position: 7
+position: 6
 
 ---
 # **Security Policy**
