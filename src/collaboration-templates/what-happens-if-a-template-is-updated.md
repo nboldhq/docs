@@ -3,7 +3,7 @@ status: published
 tags:
 - Collaboration Template
 author: Kristina Konstantynova
-position: 20
+position: 3
 
 ---
 # What happens if a collaboration template is updated?
