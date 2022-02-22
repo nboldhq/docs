@@ -4,7 +4,7 @@ position: 1
 author: Guillaume Meyer
 
 ---
-# Naming Conventions
+# Naming Convention
 
 **ABSTRACT**  
 You use a naming convention to enforce a consistent naming strategy for teams created by users in your organization. A naming convention can help you and your users identify the function of the team, membership, geographic region, or who created the team. The naming convention can also help categorize teams and underlying groups in the address book.  
