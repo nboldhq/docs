@@ -1,5 +1,8 @@
 ---
 position: 2
+status: published
+author: Guillaume Meyer
+
 ---
 # Team creation approval workflow
 
@@ -142,4 +145,3 @@ To learn more about this option, please read the [nBold API](/api/) documentatio
 - [Team Creation Approval Requested](/api/webhooks.md#team-creation-approval-requested)
 - [Team Creation Approved](/api/webhooks.md#supported-events)
 - [Team Creation Rejected](/api/webhooks.md#team-creation-rejected)
-
