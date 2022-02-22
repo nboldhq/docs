@@ -17,13 +17,13 @@ For all these reasons, we're introducing the capability called "Mandatory Owners
 
 Here is how it works 👇
 
-The Catalog Admin Experience:
+###### The Catalog Admin Experience:
 
 As an admin on the Catalog tab, in the template settings at the Security tab, you have the policy to define a minim number of Owners and Members to add when a team is being created by a user.
 
 ![](/uploads/screenshot-2022-02-13-at-11-33-13.png)
 
-From the end-user perspective, if you don't enter the required number of owners and members, you're prompted with a message to comply with the policy.
+From the **end-user perspective**, if you don't enter the required number of owners and members, you're prompted with a message to comply with the policy.
 
 ![](/uploads/screenshot-2022-02-13-at-11-37-09.png)
 
