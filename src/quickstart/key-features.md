@@ -13,7 +13,7 @@ nBold lets organizations improve their collaborative processes through the abili
 
 **TABLE OF CONTENTS**
 
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -39,10 +39,10 @@ All the features described hereafter, are set at the template level:
 * [Teams Creation Approval]( "https://docs.nbold.co/governance-policies/approval.html")
 * [Template Audience Targeting]( "https://docs.nbold.co/governance-policies/audience-targeting.html")
 * Teams Compliance with [Sensitivity Labels](https://docs.nbold.co/governance-policies/sensitivity-labels.html)
-* Teams Enforced Privacy Policy
+* Teams [Enforced Privacy Policy](https://docs.nbold.co/governance-policies/security-policy.html)
 * Teams Creation Requester as non-Owner
-* Minimum number of Owners and Members
-* Permanent Owners and Permanent Members
+* [Mandatory number of Owners and Members](https://docs.nbold.co/governance-policies/mandatory-number-of-owners-and-members.html)
+* [Permanent Owners and Permanent Members](https://docs.nbold.co/governance-policies/permanent-owners-and-members-policy.html)
 
 ![](https://downloads.intercomcdn.com/i/o/462804740/66f3b89c10e5add4bf608298/Screenshot+2022-02-10+at+10.43.05.png)
 
@@ -57,7 +57,7 @@ Get a Collaboration Template Catalog owned by your organization, tailored for yo
 
 ![](https://downloads.intercomcdn.com/i/o/175628319/9367e7d111ffcaeb0e0001b5/image.png)
 
-1. Choose the team name and description:
+1. Choose the team's name and description:
 
 ![](https://downloads.intercomcdn.com/i/o/175628523/60feb48f0bd397ca2b0f343d/image.png)
 
@@ -76,6 +76,6 @@ Get an overview of all the Teams you belong to, search for the good one with a s
 * Request Review: update request information, approve or reject requests
 * Notification: email received by the approver to act, link to the teams created
 
-## Compliance 
+## Compliance
 
 * Protect your data with the help of sensitivity labels
