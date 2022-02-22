@@ -13,7 +13,7 @@ You don't need to be a Microsoft 365 Global Administrator to create, manage and 
 
 **1.** As a Microsoft 365 Administrator, connect to the nBold app, open the `Settings` tab, and navigate to the `RBAC` section:
 
-![](/media/rbac.jpg)
+![](/media/rbac.jpg)![](/uploads/screenshot-2022-02-22-at-14-43-16.png)
 
 **2.** From the `Catalog Managers` field, search for users with their name or email:
 
