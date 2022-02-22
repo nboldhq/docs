@@ -13,7 +13,7 @@ Intrinsically, naming conventions are a combination of values and expressions th
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
