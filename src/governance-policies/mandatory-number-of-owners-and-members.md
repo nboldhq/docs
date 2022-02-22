@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 9
+position: 10
 
 ---
 # **Mandatory Number of Owners and Members at teams Creation**
