@@ -1,5 +1,8 @@
 ---
-position: 1
+position: 2
+status: published
+author: Guillaume Meyer
+
 ---
 # Audience Targeting
 
@@ -145,4 +148,3 @@ A "Check Syntax" button is available to test the rule against the current logged
 2. You would not have access
 3. An error is detected. In case of error, the technical details are also available, helping you solve the issue.
 :::
-
