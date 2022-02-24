@@ -31,7 +31,7 @@ Define external sharing and user access settings.
 
 4\. Go to the `Compliance` tab and choose the relevant sensitivity label.
 
-[![](https://downloads.intercomcdn.com/i/o/458505277/db0f3a8b0d4249f1204a9b91/ezgif-5-4da236667e.gif =600x325)](https://downloads.intercomcdn.com/i/o/458505277/db0f3a8b0d4249f1204a9b91/ezgif-5-4da236667e.gif)
+![](/uploads/gif-restrict-guest-access.gif)
 
 5\. Create a **new team** **from this Template** and check out new features.
 
