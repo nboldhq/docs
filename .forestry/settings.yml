@@ -13,7 +13,7 @@ sections:
   - article
 - type: document
   path: src/solutions/README.md
-  label: Solutions homepage
+  label: Solutions - Homepage
   match: "**/*"
 - type: document
   path: src/README.md
