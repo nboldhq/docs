@@ -1,5 +1,5 @@
 # Azure Resources
-This is a list of all the resources, both mandatory and optional, used to deploy a full-featured SalesTim environment on Azure.
+This is a list of all the resources, both mandatory and optional, used to deploy a full-featured nBold environment on Azure.
 
 ::: warning N.B
 This documentation is automatically generated from our sample [Terraform](https://www.terraform.io/) configuration file, and is intended to be used as a reference.
@@ -549,7 +549,7 @@ resource "azurerm_app_service" "scheduler" {
 ```
 
 ### Azure Front Door
-Azure Front Door is an all-in-one service that is used to provide the following services to the SalesTim platform
+Azure Front Door is an all-in-one service that is used to provide the following services to the nBold platform
 - HTTP load balancing
 - Web Application Firewall
 - SSL certificates managemnet and HTTPS enforcement

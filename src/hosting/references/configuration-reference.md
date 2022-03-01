@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Tue, 15 Feb 2022 10:03:27 GMT*
+📆 *Generated: Thu, 24 Feb 2022 15:43:34 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -230,7 +230,7 @@ To help you get started, you can also download our [.env file template](./enviro
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
-| `WEBHOOKS_USER_AGENT` | Optional ☑️ | (string) HTTP user agent passed as a header with each request. Defaults to "SalesTim-Webhook/v[MAJOR].[MINOR].[PATCH]". |
+| `WEBHOOKS_USER_AGENT` | Optional ☑️ | (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]". |
 | `WEBHOOKS_RETRY_INTERVAL` | Optional ☑️ | (number) Interval in ms between two attempts. Defaults to "10000". |
 | `WEBHOOKS_MAX_RETRY` | Optional ☑️ | (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to "2". |
 | `WEBHOOKS_TIMEOUT` | Optional ☑️ | (number) Timeout in ms before aborting the request if the server is unresponsive. Defaults to "5000". |
@@ -283,12 +283,12 @@ To help you get started, you can also download our [.env file template](./enviro
 |:---------------------|:-------|:------------|
 | `GITHUB_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable integration with GitHub for alerting purposes. Defaults to "false". |
 | `GITHUB_API_BASE_URL` | Optional ☑️ | (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com". |
-| `GITHUB_USER_AGENT` | Optional ☑️ | (string) HTTP user agent passed as a header to the GitHub API. Defaults to "SalesTim-GitHub/v[MAJOR].[MINOR].[PATCH]". |
+| `GITHUB_USER_AGENT` | Optional ☑️ | (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]". |
 | `GITHUB_OWNER` | Optional ☑️ | (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "". |
 | `GITHUB_REPO` | Optional ☑️ | (string) GitHub repository where to create alert issues. Defaults to "". |
 | `GITHUB_TOKEN` | Optional ☑️ | (string) Token used to create issues. Defaults to "". |
 | `GITHUB_ISSUES_ASSIGNEES` | Optional ☑️ | (string) Default assignees of the created alert issues as a comma-separated list (Using the user handle, e.g user1,user2). Defaults to "". |
-| `GITHUB_ISSUES_LABELS` | Optional ☑️ | (string) Default labels of the created alert issues as a comma-separated list (e.g label1,label2). Defaults to "SalesTim,alert". |
+| `GITHUB_ISSUES_LABELS` | Optional ☑️ | (string) Default labels of the created alert issues as a comma-separated list (e.g label1,label2). Defaults to "nBold,alert". |
 
 
 
@@ -313,12 +313,12 @@ To help you get started, you can also download our [.env file template](./enviro
 | `INTERCOM_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable integration with Intercom for in-app end-users chat and support. Defaults to "false". |
 | `INTERCOM_CRYPTO_SECRET_KEY` | Optional ☑️ | (string) Secret key used to generate hmac digest to secure connectivity between the client ans the Intercom service. Defaults to "". |
 | `INTERCOM_APP_ID` | Optional ☑️ | (string) Intercom application ID used for authentication against the Intercom service. Defaults to "". |
-| `INTERCOM_ACCESS_TOKEN` | Optional ☑️ | (string) Intercom access token used for server-side authentication against the Intercom service. Defaults to "SalesTim,alert". |
+| `INTERCOM_ACCESS_TOKEN` | Optional ☑️ | (string) Intercom access token used for server-side authentication against the Intercom service. Defaults to "". |
 
 
 
 ### Microsoft Marketplace
-*Service used by the [SalesTim Cloud](https://nbold.co) SAAS environment to enable the "Purchase from Microsoft Teams" scenarios integrated with the [Microsoft Commercial Marketplace](https://docs.microsoft.com/en-us/azure/marketplace/).*
+*Service used by the [nBold Cloud](https://nbold.co) SAAS environment to enable the "Purchase from Microsoft Teams" scenarios integrated with the [Microsoft Commercial Marketplace](https://docs.microsoft.com/en-us/azure/marketplace/).*
 
 ---
 | Environment Variable | Status | Description |

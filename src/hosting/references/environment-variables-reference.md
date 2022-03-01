@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Tue, 15 Feb 2022 10:03:27 GMT*
+📆 *Generated: Thu, 24 Feb 2022 15:43:34 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -222,7 +222,7 @@ MAIL_ACTION_MSG_ORIGINATOR=
 # Webhooks
 # Webhooks advanced configuration
 
-# (string) HTTP user agent passed as a header with each request. Defaults to "SalesTim-Webhook/v[MAJOR].[MINOR].[PATCH]".
+# (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]".
 WEBHOOKS_USER_AGENT=nBold-Webhook/v4.16.0
 # (number) Interval in ms between two attempts. Defaults to "10000".
 WEBHOOKS_RETRY_INTERVAL=10000
@@ -272,7 +272,7 @@ PROMETHEUS_EXPORTER_COLLECT_GARBAGE_COLLECTOR_METRICS=false
 GITHUB_INTEGRATION_ENABLED=false
 # (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com".
 GITHUB_API_BASE_URL=https://api.github.com
-# (string) HTTP user agent passed as a header to the GitHub API. Defaults to "SalesTim-GitHub/v[MAJOR].[MINOR].[PATCH]".
+# (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]".
 GITHUB_USER_AGENT=nBold-GitHub/4.16.0
 # (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "".
 GITHUB_OWNER=
@@ -282,7 +282,7 @@ GITHUB_REPO=
 GITHUB_TOKEN=
 # (string) Default assignees of the created alert issues as a comma-separated list (Using the user handle, e.g user1,user2). Defaults to "".
 GITHUB_ISSUES_ASSIGNEES=
-# (string) Default labels of the created alert issues as a comma-separated list (e.g label1,label2). Defaults to "SalesTim,alert".
+# (string) Default labels of the created alert issues as a comma-separated list (e.g label1,label2). Defaults to "nBold,alert".
 GITHUB_ISSUES_LABELS=nBold,alert
 
 # Mail Alerting
@@ -304,11 +304,11 @@ INTERCOM_INTEGRATION_ENABLED=false
 INTERCOM_CRYPTO_SECRET_KEY=
 # (string) Intercom application ID used for authentication against the Intercom service. Defaults to "".
 INTERCOM_APP_ID=
-# (string) Intercom access token used for server-side authentication against the Intercom service. Defaults to "SalesTim,alert".
+# (string) Intercom access token used for server-side authentication against the Intercom service. Defaults to "".
 INTERCOM_ACCESS_TOKEN=
 
 # Microsoft Marketplace
-# Service used by the [SalesTim Cloud](https://nbold.co) SAAS environment to enable the "Purchase from Microsoft Teams" scenarios integrated with the [Microsoft Commercial Marketplace](https://docs.microsoft.com/en-us/azure/marketplace/).
+# Service used by the [nBold Cloud](https://nbold.co) SAAS environment to enable the "Purchase from Microsoft Teams" scenarios integrated with the [Microsoft Commercial Marketplace](https://docs.microsoft.com/en-us/azure/marketplace/).
 
 # (boolean) Enable integration with the Microsoft Marketplace. Defaults to "false".
 MICROSOFT_MARKETPLACE_INTEGRATION_ENABLED=false

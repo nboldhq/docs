@@ -1,5 +1,5 @@
 # Docker Resources
-This is a list of all the resources, both mandatory and optional, used to deploy a full-featured SalesTim environment on Docker.
+This is a list of all the resources, both mandatory and optional, used to deploy a full-featured nBold environment on Docker.
 
 ::: warning N.B
 This documentation is automatically generated from our sample [Terraform](https://www.terraform.io/) configuration file, and is intended to be used as a reference.
@@ -252,7 +252,7 @@ resource "docker_container" "jitsu" {
 
 ### Application image
 ::: tip Note
-All the application services are based on the same `salestim/app-platform` image.
+All the application services are based on the same `nboldhq/app-platform` image.
 Contact us to access our secured [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) or integrate this image to your own private container registry such as [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry) to access advanced CI/CD capabilities.
 :::
 
@@ -264,7 +264,7 @@ resource "docker_image" "salestim" {
 ```
 
 ### Application containers
-As a multi-tier application, SalesTim is composed of several services that could be executed and scaled independently.
+As a multi-tier application, nBold is composed of several services that could be executed and scaled independently.
 
 #### Installer service
 The installer service is responsible for initializing the backing services schemas (databases, blobs containers, etc.).

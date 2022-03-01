@@ -1,5 +1,5 @@
 # Services Reference
-📆 *Generated: Tue, 15 Feb 2022 10:03:27 GMT*
+📆 *Generated: Thu, 24 Feb 2022 15:43:34 GMT*
 
 This document lists all the services supported by the platform.
 
@@ -17,7 +17,3 @@ Each service is specified with:
 | `api_svc` | API | API service, used both by the webclient and by third-party apps (Power Platform and Logic Apps connectors, custom apps...). Learn more from our [Tech Hub](https://docs.nbold.co/api/api) | `standalone, api` |
 | `jobs_svc` | Jobs | Service executing the different background worker processes, both triggered by the scheduler service and executed on-demand | `standalone, jobs` |
 | `scheduler_svc` | Scheduler | Service scheduling and triggering the execution of jobs by the jobs service | `standalone, scheduler` |
-| `connected_apps_svc` | Connected Apps | Service managing the lifecycle of connected apps agents | `integration` |
-| `feature_toggles_server_svc` | Feature Toggles Server | Service allowing live activation / deactivation of specific features to a subset of audiences. | `featuretogglesserver` |
-| `feature_toggles_proxy_svc` | Feature Toggles Proxy | Service hosting the feature toggles proxy, used by client-side apps to retreive feature toggles configuration | `featuretogglesproxy` |
-| `flow_svc` | Flow | Service used by the platform to customize some workflows without having to update the codebase | `flowserver` |

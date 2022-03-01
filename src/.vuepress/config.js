@@ -159,12 +159,67 @@ module.exports = {
 
     // Sidebar: Vertical navigation
     sidebar: {
+      '/solutions/': [
+        { title: 'About', path: '/solutions/' },
+        getSideBar('/solutions/sales', 'Sales'),
+        getSideBar('/solutions/marketing', 'Marketing')
+      ],
       '/hosting/': [
         { title: 'About', path: '/hosting/' },
-        getSideBar('/hosting/deployment', 'Deployment Guide'),
-        getSideBar('/hosting/operations', 'Operations Manual'),
-        getSideBar('/hosting/jobs', 'Jobs Reference'),
-        getSideBar('/hosting/references', 'References')
+        {
+          title: 'Installation',
+          // path: '/hosting/installation/get-started', // optional, link of the title, which should be an absolute path and must exist
+          collapsable: true, // optional, defaults to true
+          sidebarDepth: 1, // optional, defaults to 1
+          children: [
+            { title: 'Get started', path: '/hosting/installation/get-started' },
+            { title: 'Prerequisites', path: '/hosting/installation/prerequisites' },
+            { title: 'Docker deployment', path: '/hosting/installation/docker-deployment' },
+            { title: 'Azure deployment', path: '/hosting/installation/azure-deployment' },
+            { title: 'Microsoft Teams package', path: '/hosting/installation/microsoft-teams-package' },
+            { title: 'Power Platform connector', path: '/hosting/installation/power-platform-connector' },
+          ]
+        },
+        {
+          title: 'Advanced',
+          collapsable: true, // optional, defaults to true
+          sidebarDepth: 1, // optional, defaults to 1
+          children: [
+            { title: 'Grant consent on-behalf', path: '/hosting/advanced/grant-content-on-behalf-of-a-user' },
+            { title: 'Monitoring', path: '/hosting/advanced/monitoring' },
+            { title: 'Updating', path: '/hosting/advanced/updating' },
+          ]
+        },
+        {
+          title: 'Concepts',
+          collapsable: true, // optional, defaults to true
+          sidebarDepth: 1, // optional, defaults to 1
+          children: [
+            { title: 'Team provisioning process', path: '/hosting/concepts/provisioning-process' },
+            { title: 'Permanent membership policy', path: '/hosting/concepts/permanent-membership-policy' },
+          ]
+        },
+        {
+          title: 'References',
+          collapsable: true, // optional, defaults to true
+          sidebarDepth: 1, // optional, defaults to 1
+          children: [
+            { title: 'Architecture overview', path: '/hosting/references/architecture-overview' },
+            { title: 'Services', path: '/hosting/references/services-reference' },
+            { title: 'Configuration options', path: '/hosting/references/configuration-reference' },
+            { title: 'Environment variables', path: '/hosting/references/environment-variables-reference' },
+            { title: 'Events', path: '/hosting/references/events-reference' },
+            { title: 'Azure resources', path: '/hosting/references/azure-resources-reference' },
+            { title: 'Docker resources', path: '/hosting/references/docker-resources-reference' },
+            { title: 'Permissions reference', path: '/hosting/references/permissions' },
+            { title: 'Versioning', path: '/hosting/references/versioning' },
+            { title: 'Cloud vs Self-Hosted', path: '/hosting/references/cloud-vs-self-hosted' },
+          ]
+        },
+        // getSideBar('/hosting/deployment', 'Deployment Guide'),
+        // getSideBar('/hosting/operations', 'Operations Manual'),
+        // getSideBar('/hosting/jobs', 'Jobs Reference'),
+        // getSideBar('/hosting/references', 'References')
       ],
       '/': [
         { title: 'Introduction', path: '/' },
@@ -223,9 +278,6 @@ function getSideBar (folder, title) {
       )
     }
 
-    console.log('Unordered')
-    console.log(unorderedChildrens)
-
     // If this is the latest article from the folder
     if (fileIndex === files.length - 1) {
       // Sort the childrens
@@ -238,9 +290,6 @@ function getSideBar (folder, title) {
         }
         return 0
       })
-
-      console.log('Ordered')
-      console.log(orderedChildrens)
 
       orderedChildrens.forEach((child) => {
         links.push([child.path, child.title])

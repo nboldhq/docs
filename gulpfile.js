@@ -128,12 +128,12 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
     const REFERENCES_DIR = `${SRC_FOLDER}hosting/references`
     const ASSETS_ROOT_URL = 'https://dist.salestim.io/assets'
     const assets = [
-      'azure_resources_reference.md',
-      'configuration_reference.md',
-      'docker_resources_reference.md',
-      'environment_variables.md',
-      'events_reference.md',
-      'services_reference.md'
+      'azure-resources-reference.md',
+      'configuration-reference.md',
+      'docker-resources-reference.md',
+      'environment-variables-reference.md',
+      'events-reference.md',
+      'services-reference.md'
     ]
     assets.forEach((asset, i) => {
       const file = fs.createWriteStream(`${REFERENCES_DIR}/${asset}`)

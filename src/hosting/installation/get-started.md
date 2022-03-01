@@ -1,4 +1,4 @@
-# Getting Started
+# Get started
 
 **TABLE OF CONTENTS**
 [[TOC]]
@@ -11,6 +11,7 @@ nBold is designed to be self-hosted from:
 - Your Microsoft Azure tenant
 
 Here is an overview of the different steps to deploy a nBold environment:
+
 ```mermaid
 graph LR
     %% Nodes

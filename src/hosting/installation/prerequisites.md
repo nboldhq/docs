@@ -14,33 +14,39 @@ For other platforms, see how to [install terraform cli](https://learn.hashicorp.
 :::
 
 Before installing Terraform, ensure that your system is up to date, and you have the gnupg, software-properties-common, and curl packages installed. You will use these packages to verify HashiCorp's GPG signature, and install HashiCorp's Debian package repository.
-```bash
+
+```sh
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
 ```
 
 Add the HashiCorp GPG key.
-```bash
+
+```sh
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 ```
 
 Add the official HashiCorp Linux repository.
-```bash
+
+```sh
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 ```
 
 Update apt to add the repository, and install the Terraform CLI.
-```bash
+
+```sh
 sudo apt-get update && sudo apt-get install terraform
 ```
 
 Check the installation with:
-```bash
+
+```sh
 terraform -v
 ```
 
 ## Get the deployment projects templates
 To get started quickly, clone locally the nBold [Hosting](https://github.com/nboldhq/hosting) repository as a starting point. It has everything you need to boot up your own nBold platform.
-```bash
+
+```sh
 mkdir salestim && cd salestim
 git clone https://github.com/nboldhq/hosting.git
 cd ./hosting
@@ -58,31 +64,41 @@ To create a new app registration, follow these steps:
 - Select `App registrations` from the left menu
 - Click `New registration` from the top bar
 - Give the app a name:
+
 ```
+
 nBold
+
 ```
+
 - Select the option `Accounts in this organizational directory only`, as you want to restrict access to nBold to users from your own tenant.
 - Define the web redirection URLs according to your environment:
+
 ```
 https://[WEB_PUBLICURL]/auth/service_account/return_admin_consent
 https://[WEB_PUBLICURL]/auth/grant/return
 https://[WEB_PUBLICURL]/auth/openid/returnAdminConsent
 https://[WEB_PUBLICURL]/auth/openid/return
 ```
+
 - Click `Register`
 - From the `Overview` menu, copy the `Application (client) ID`, and **keep it as we're gonna reuse it later**.
 - Open the `Authentication` menu
 - Ensure that the `Access tokens (used for implicit flows)` and `ID tokens (used for implicit and hybrid flows)` options are checked from the `Implicit grant and hybrid flows` section, and save your updates if required.
 - Open the `Certificates and secrets` menu and click `New client secret`. **A client secret is a kind of a password for your app, so manage it carefully**.
 - Give a name to your client secret such as:
+
 ```
 nBold client secret
 ```
+
 - Select the expiration option, and click `Add`
 - Copy the `Secret Value` value (**be careful, it will only be shown once**), and keep it as we're gonna reuse it later.
+
 ::: warning Be careful
 You should use the `Secret Value`, not the `Secret ID`!  
 :::
+
 - Open the `API permissions` from the left menu and click `Add a permission` from the top bar
 - Select `Microsoft Graph`, then from the permissions list, select the appropriate permissions as described in our [Permissions References](../references/permissions) documentation.
 - Click `Add permissions`
