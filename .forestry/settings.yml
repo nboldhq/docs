@@ -28,6 +28,10 @@ sections:
   match: "**/*"
   templates:
   - article
+- type: document
+  path: src/solutions/README.md
+  label: Solutions
+  match: "**/*"
 - type: directory
   path: src/governance-policies
   label: Governance policies
