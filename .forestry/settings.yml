@@ -4,17 +4,6 @@ auto_deploy: false
 admin_path: src/.vuepress/public/admin
 webhook_url: 
 sections:
-- type: directory
-  path: src/solutions/sales
-  label: Solutions - Sales
-  create: documents
-  match: "**/*"
-  templates:
-  - article
-- type: document
-  path: src/solutions/README.md
-  label: Solutions - Homepage
-  match: "**/*"
 - type: document
   path: src/README.md
   label: Homepage
@@ -35,6 +24,24 @@ sections:
 - type: directory
   path: src/business-scenarios
   label: Business scenarios
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: document
+  path: src/solutions/README.md
+  label: Solutions - Homepage
+  match: "**/*"
+- type: directory
+  path: src/solutions/sales
+  label: Solutions - Sales
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/solutions/marketing
+  label: Solutions - Marketing
   create: documents
   match: "**/*"
   templates:
