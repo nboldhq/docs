@@ -4,6 +4,17 @@ auto_deploy: false
 admin_path: src/.vuepress/public/admin
 webhook_url: 
 sections:
+- type: directory
+  path: src/solutions/sales
+  label: Solutions - Sales
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: document
+  path: src/solutions/README.md
+  label: Solutions homepage
+  match: "**/*"
 - type: document
   path: src/README.md
   label: Homepage
@@ -28,10 +39,6 @@ sections:
   match: "**/*"
   templates:
   - article
-- type: document
-  path: src/solutions/README.md
-  label: Solutions
-  match: "**/*"
 - type: directory
   path: src/governance-policies
   label: Governance policies
