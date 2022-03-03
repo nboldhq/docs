@@ -64,14 +64,18 @@ To create a new app registration, follow these steps:
 - Select `App registrations` from the left menu
 - Click `New registration` from the top bar
 - Give the app a name, such as:
+---
 ```
 nBold Logic Apps Connector
 ```
+---
 - Select the option `Accounts in this organizational directory only`, as you want to restrict access to your own tenant.
 - Use this web redirection URL:
+---
 ```
 https://global.consent.azure-apim.net/redirect
 ```
+---
 - Click `Register`
 - From the `Overview` menu, copy the `Application (client) ID`, and keep it as we're gonna reuse it later. You can temporarily paste it here:
 
@@ -82,9 +86,11 @@ https://global.consent.azure-apim.net/redirect
 - Ensure that the `Access tokens (used for implicit flows)` and `ID tokens (used for implicit and hybrid flows)` options are chacked from the `Implicit grant and hybrid flows` section, and save your updates if required.
 - Open the `Certificates and secrets` menu and click `New client secret`. A client secret is a kind of a password for your app, so manage it carefully.
 - Give a name to your client secret such as:
+---
 ```
 nBold Logic Apps Connector client secret
 ```
+---
 - Select the expiration option, and click `Add`
 - Copy the `Client secret` value (be careful, it will only be shown once), and keep it as we're gonna reuse it later. You can temporarily paste it here:
 
@@ -134,39 +140,55 @@ Now that we've created both the app registration and the logic apps resource, we
 - In your connector's menu, choose `Logic Apps Connector`, then choose `Edit`.
 - Under `Custom connectors`, select `REST`
 - From `Import mode`, select `OpenAPI URL` and and paste this URL:
+---
 ```
-https://docs.nbold.co/api/production/definitions/open-api/power-platform/apiDefinition.swagger.json
+https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/power-platform/apiDefinition.swagger.yaml
 ```
+---
 - Click `Import`
 - From the `General information` section, give your connector a name, such as:
+---
 ```
 nBold
 ```
+---
 - Upload the connector logo that you can download from:
+---
 ```
-https://nbold.co/wp-content/uploads/2019/05/color.png
+https://nbold.co/wp-content/uploads/2020/12/Logo_degrade_blanc.svg
 ```
+---
 - Set the icon background color to:
+---
 ```
 #000000
 ```
+---
 - Click `Security`
 - Ensure that the authentication type is set to `OAuth 2.0` and the identity provider is set to `Azure Active Directory`
 - Paste the previously copied `Client id` and `Client secret`
 - Ensure that the login url is set to:
+---
 ```
 https://login.windows.net
 ```
+---
 - Ensure that the tenant ID is set to:
+---
 ```common```
+---
 - Set the resource URL to:
+---
 ```
 https://graph.microsoft.com
 ```
+---
 - Set the scope to:
+---
 ```
 https://graph.microsoft.com/.default
 ```
+---
 - Click `Update connector`
 - From the `Security` page, copy the generated `Redirect URL`, and keep it as we're gonna reuse it later. You can temporarily paste it here:
 

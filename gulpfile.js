@@ -2,7 +2,6 @@
 
 // #region DECLARATIONS
 // Platform Dependencies
-const os = require('os')
 const fs = require('fs')
 const https = require('https')
 // External Dependencies
@@ -11,8 +10,6 @@ const concat = require('gulp-concat')
 const YAML = require('yamljs')
 // Variables
 const ROOT_FOLDER = './'
-const PACKAGE_FILE = ROOT_FOLDER + 'package.json'
-let pck = require(PACKAGE_FILE) // Not declared as a const as it may be refreshed/updated durung build
 const SRC_FOLDER = ROOT_FOLDER + 'src/'
 const PUBLIC_FOLDER = SRC_FOLDER + '.vuepress/public/'
 const JS_FOLDER = PUBLIC_FOLDER + 'js/'
@@ -86,8 +83,8 @@ const concatCss = (done) => {
 const convertOpenApiYamlToJson = (done) => {
   try {
     const srcYamlFiles = [
-      './src/.vuepress/public/api/production/definitions/open-api/apiDefinition.swagger.yaml',
-      './src/.vuepress/public/api/production/definitions/open-api/power-platform/apiDefinition.swagger.yaml'
+      './src/api/latest/definition/nbold-openapi.yaml',
+      './src/api/latest/definition/power-platform/apiDefinition.swagger.yaml'
     ]
     for (let index = 0; index < srcYamlFiles.length; index++) {
       const srcYamlFile = srcYamlFiles[index] // eslint-disable-line
@@ -137,7 +134,7 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
     ]
     assets.forEach((asset, i) => {
       const file = fs.createWriteStream(`${REFERENCES_DIR}/${asset}`)
-      const request = https.get(`${ASSETS_ROOT_URL}/${asset}`, (response) => {
+      https.get(`${ASSETS_ROOT_URL}/${asset}`, (response) => {
         response.pipe(file)
         if (i === assets.length - 1) {
           done()

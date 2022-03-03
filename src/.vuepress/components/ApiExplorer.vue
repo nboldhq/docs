@@ -168,7 +168,7 @@
     mounted() {
       console.debug("API Explorer Mounted");
       var pOpenApiFileUrl =
-        "/api/production/definitions/open-api/apiDefinition.swagger.yaml";
+        "https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/nbold-openapi.yaml";
 
       var s = document.createElement("script");
       s.setAttribute("src", "/js/authentication.bundle.js");
