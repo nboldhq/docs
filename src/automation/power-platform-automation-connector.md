@@ -150,7 +150,7 @@ nBold
 - Paste this URL:
 ---
 ```
-https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/power-platform/apiDefinition.swagger.yaml
+https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/power-platform/apiDefinition.swagger.json
 ```
 ---
 - Click `Import`, then `Continue`
@@ -195,11 +195,11 @@ https://graph.microsoft.com/.default
 ## 3. Update the Power Platform Connector
 To update your Power Platform connector:
 
-- Open the updated <a target="_blank" href="https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/power-platform/apiDefinition.swagger.yaml">connector definition</a>
+- Open the updated <a target="_blank" href="https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/power-platform/apiDefinition.swagger.json">connector definition</a>
 
 ---
 ```sh
-https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/power-platform/apiDefinition.swagger.yaml
+https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/power-platform/apiDefinition.swagger.json
 ```
 ---
 
