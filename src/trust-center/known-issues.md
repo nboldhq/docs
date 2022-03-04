@@ -1,3 +1,8 @@
+---
+position: 10
+status: published
+author: Guillaume Meyer
+---
 # Known issues
 
 ::: tip

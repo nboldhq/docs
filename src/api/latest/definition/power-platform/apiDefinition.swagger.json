@@ -62,49 +62,49 @@
       "name": "catalog",
       "description": "Your corporate catalog of collaboration templates and governance policies.",
       "externalDocs": {
-        "url": "https://docs.nbold.co/api/reference/Apis/CatalogApi"
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/CatalogApi"
       }
     },
     {
       "name": "approvals",
       "description": "Team creation requests approvals.",
       "externalDocs": {
-        "url": "https://docs.nbold.co/api/reference/Apis/ApprovalsApi"
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/ApprovalsApi"
       }
     },
     {
       "name": "teams",
       "description": "Teams from your Microsoft Teams environment.",
       "externalDocs": {
-        "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi"
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi"
       }
     },
     {
       "name": "users",
       "description": "Users from your Microsoft 365 environment.",
       "externalDocs": {
-        "url": "https://docs.nbold.co/api/reference/Apis/UsersApi"
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/UsersApi"
       }
     },
     {
       "name": "jobs",
       "description": "Jobs that performs governance operations.",
       "externalDocs": {
-        "url": "https://docs.nbold.co/api/reference/Apis/JobsApi"
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/JobsApi"
       }
     },
     {
       "name": "labels",
       "description": "Microsoft 365 sensitivity labels.",
       "externalDocs": {
-        "url": "https://docs.nbold.co/api/reference/Apis/LabelsApi"
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/LabelsApi"
       }
     },
     {
       "name": "hooks",
       "description": "nBold Platform Webhooks.",
       "externalDocs": {
-        "url": "https://docs.nbold.co/api/reference/Apis/HooksApi"
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/HooksApi"
       }
     }
   ],
@@ -155,7 +155,7 @@
         "description": "Approve a team creation request.",
         "operationId": "ApproveTeamCreation",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/ApprovalsApi.html#approveteamcreation"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/ApprovalsApi.html#approveteamcreation"
         },
         "parameters": [
           {
@@ -226,7 +226,7 @@
         "description": "Reject a team creation request.",
         "operationId": "RejectTeamCreation",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/ApprovalsApi.html#rejectteamcreation"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/ApprovalsApi.html#rejectteamcreation"
         },
         "parameters": [
           {
@@ -297,7 +297,7 @@
         "description": "Get the teams collaboration templates accessible to the connected user filtered by the audience targeting rules.",
         "operationId": "GetMyCatalogTemplates",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/CatalogApi.html#getmycatalogtemplates"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmycatalogtemplates"
         },
         "responses": {
           "200": {
@@ -352,7 +352,7 @@
         "description": "Get my Microsoft 365 sensitivity labels.",
         "operationId": "GetMyLabels",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/LabelsApi.html#getmylabels"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/LabelsApi.html#getmylabels"
         },
         "responses": {
           "200": {
@@ -407,7 +407,7 @@
         "description": "Retreive users from your Microsoft 365 environment.",
         "operationId": "GetUsers",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/UsersApi.html#getUsers"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/UsersApi.html#getUsers"
         },
         "responses": {
           "200": {
@@ -462,7 +462,7 @@
         "description": "Get detailed information about a team.",
         "operationId": "GetTeam",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#getteam"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteam"
         },
         "parameters": [
           {
@@ -525,7 +525,7 @@
         "description": "Delete a team.",
         "operationId": "DeleteTeam",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#deleteteam"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#deleteteam"
         },
         "parameters": [
           {
@@ -586,7 +586,7 @@
         "description": "Archive a team.",
         "operationId": "ArchiveTeam",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#archiveteam"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#archiveteam"
         },
         "parameters": [
           {
@@ -657,7 +657,7 @@
         "description": "Unarchive a team.",
         "operationId": "UnarchiveTeam",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#unarchiveteam"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#unarchiveteam"
         },
         "parameters": [
           {
@@ -719,7 +719,7 @@
         "description": "Invite a team member as a member or an owner.",
         "operationId": "AddTeamMember",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#addteammember"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#addteammember"
         },
         "parameters": [
           {
@@ -793,7 +793,7 @@
         "description": "Create a team provisioning job based on a collaboration template. This template may include files, folders, Planner tasks, private channels...",
         "operationId": "CreateTeamProvisioningJob",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#createteamprovisioningjob"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#createteamprovisioningjob"
         },
         "parameters": [
           {
@@ -859,7 +859,7 @@
         "description": "Get all the channels of a team.",
         "operationId": "GetTeamChannels",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#getteamchannels"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteamchannels"
         },
         "parameters": [
           {
@@ -922,7 +922,7 @@
         "description": "Create a new team channel.",
         "operationId": "CreateTeamChannel",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#createteamchannel"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#createteamchannel"
         },
         "parameters": [
           {
@@ -996,7 +996,7 @@
         "description": "Get the primary channel of a team.",
         "operationId": "GetTeamPrimaryChannel",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#getteamprimarychannel"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteamprimarychannel"
         },
         "parameters": [
           {
@@ -1061,7 +1061,7 @@
         "description": "Get the tabs of a channel from a team.",
         "operationId": "GetTeamChannelTabs",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#getteamchanneltabs"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteamchanneltabs"
         },
         "parameters": [
           {
@@ -1132,7 +1132,7 @@
         "description": "Create a new tab in a team channel.",
         "operationId": "CreateTeamChannelTab",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/TeamsApi.html#createteamchanneltab"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#createteamchanneltab"
         },
         "parameters": [
           {
@@ -1214,7 +1214,7 @@
         "description": "Get detailed information about a job, including its status, progress, logs...",
         "operationId": "GetJob",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/JobsApi.html#getjob"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/JobsApi.html#getjob"
         },
         "parameters": [
           {
@@ -1287,7 +1287,7 @@
         "description": "When a team creation approval is requested.",
         "operationId": "TeamCreationApprovalRequestedHook",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/HooksApi.html#teamcreationapprovalrequestedhook"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/HooksApi.html#teamcreationapprovalrequestedhook"
         },
         "parameters": [
           {
@@ -1361,7 +1361,7 @@
         "description": "When a team creation is approved.",
         "operationId": "TeamCreationApprovalApprovedHook",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/HooksApi.html#teamcreationapprovalapprovedhook"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/HooksApi.html#teamcreationapprovalapprovedhook"
         },
         "parameters": [
           {
@@ -1435,7 +1435,7 @@
         "description": "When a team creation is rejected.",
         "operationId": "TeamCreationApprovalRejectedHook",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/HooksApi.html#teamcreationapprovalrejectedhook"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/HooksApi.html#teamcreationapprovalrejectedhook"
         },
         "parameters": [
           {
@@ -1509,7 +1509,7 @@
         "description": "When a new team is created.",
         "operationId": "TeamCreatedHook",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/HooksApi.html#teamcreatedhook"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/HooksApi.html#teamcreatedhook"
         },
         "parameters": [
           {
@@ -1583,7 +1583,7 @@
         "description": "When a team is provisioned using a collaboration template.",
         "operationId": "TeamProvisioningCompletedHook",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/HooksApi.html#teamprovisioningcompletedhook"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/HooksApi.html#teamprovisioningcompletedhook"
         },
         "parameters": [
           {
@@ -1649,7 +1649,7 @@
         "description": "Generate a signature from a secret and a webhook payload.",
         "operationId": "GenerateHookSignature",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/HooksApi.html#generatehooksignature"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/HooksApi.html#generatehooksignature"
         },
         "parameters": [
           {
@@ -1716,7 +1716,7 @@
         "description": "Delete a webhook.",
         "operationId": "DeleteHook",
         "externalDocs": {
-          "url": "https://docs.nbold.co/api/reference/Apis/HooksApi.html#deletehook"
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/HooksApi.html#deletehook"
         },
         "parameters": [
           {
@@ -2361,7 +2361,7 @@
     },
     "CatalogTemplates": {
       "title": "Collaboration Templates",
-      "description": "A collection of collaboration templates from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/CatalogTemplate](https://docs.nbold.co/api/reference/Models/CatalogTemplate) for more information.",
+      "description": "A collection of collaboration templates from your corporate catalog. See [https://docs.nbold.co/api/latest/reference/Models/CatalogTemplate](https://docs.nbold.co/api/latest/reference/Models/CatalogTemplate) for more information.",
       "type": "object",
       "properties": {
         "value": {
@@ -2376,7 +2376,7 @@
     },
     "CatalogTemplate": {
       "title": "Collaboration Template",
-      "description": "A collaboration template from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/CatalogTemplate](https://docs.nbold.co/api/reference/Models/CatalogTemplate) for more information.",
+      "description": "A collaboration template from your corporate catalog. See [https://docs.nbold.co/api/latest/reference/Models/CatalogTemplate](https://docs.nbold.co/api/latest/reference/Models/CatalogTemplate) for more information.",
       "type": "object",
       "properties": {
         "templateConfiguration": {
@@ -2548,7 +2548,7 @@
     },
     "PermanentMembers": {
       "title": "Permanent Members",
-      "description": "Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.",
+      "description": "Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/latest/reference/Models/PermanentMember](https://docs.nbold.co/api/latest/reference/Models/PermanentMember) for more information.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/PermanentMember"
@@ -2556,7 +2556,7 @@
     },
     "PermanentMember": {
       "title": "Permanent Member",
-      "description": "Object representing a permanent member. See See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.",
+      "description": "Object representing a permanent member. See See [https://docs.nbold.co/api/latest/reference/Models/PermanentMember](https://docs.nbold.co/api/latest/reference/Models/PermanentMember) for more information.",
       "type": "object",
       "properties": {
         "id": {
@@ -2573,7 +2573,7 @@
     },
     "ApprovalTeamMembers": {
       "title": "Approval Team Members",
-      "description": "Members of an approval team, as an array of ApprovalTeamMember. See [https://docs.nbold.co/api/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/reference/Models/ApprovalTeamMember) for more information.",
+      "description": "Members of an approval team, as an array of ApprovalTeamMember. See [https://docs.nbold.co/api/latest/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/latest/reference/Models/ApprovalTeamMember) for more information.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/ApprovalTeamMember"
@@ -2581,7 +2581,7 @@
     },
     "ApprovalTeamMember": {
       "title": "Approval Team Member",
-      "description": "Object representing an approval team member. See See [https://docs.nbold.co/api/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/reference/Models/ApprovalTeamMember) for more information.",
+      "description": "Object representing an approval team member. See See [https://docs.nbold.co/api/latest/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/latest/reference/Models/ApprovalTeamMember) for more information.",
       "type": "object",
       "properties": {
         "id": {
@@ -2598,7 +2598,7 @@
     },
     "TeamProvisioningRequest": {
       "title": "Team Provisioning Request",
-      "description": "A request to provision a team based on a template from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/ProvisioningRequest](https://docs.nbold.co/api/reference/Models/ProvisioningRequest) for more information.",
+      "description": "A request to provision a team based on a template from your corporate catalog. See [https://docs.nbold.co/api/latest/reference/Models/ProvisioningRequest](https://docs.nbold.co/api/latest/reference/Models/ProvisioningRequest) for more information.",
       "type": "object",
       "properties": {
         "template": {
@@ -2669,7 +2669,7 @@
     "MembersUserIdentifiers": {
       "title": "Teams Members",
       "x-ms-summary": "Team Members",
-      "description": "An array of UserIdentifier. See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.",
+      "description": "An array of UserIdentifier. See [https://docs.nbold.co/api/latest/reference/Models/UserIdentifier](https://docs.nbold.co/api/latest/reference/Models/UserIdentifier) for more information.",
       "x-ms-visibility": "advanced",
       "type": "array",
       "items": {
@@ -2680,7 +2680,7 @@
       "x-ms-summary": "Team Owners",
       "x-ms-visibility": "advanced",
       "title": "Team Owners",
-      "description": "An array of UserIdentifier. See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.",
+      "description": "An array of UserIdentifier. See [https://docs.nbold.co/api/latest/reference/Models/UserIdentifier](https://docs.nbold.co/api/latest/reference/Models/UserIdentifier) for more information.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/OwnerUserIdentifier"
@@ -2689,7 +2689,7 @@
     "MemberUserIdentifier": {
       "title": "Team",
       "x-ms-summary": "Team",
-      "description": "Team member ID. See See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.",
+      "description": "Team member ID. See See [https://docs.nbold.co/api/latest/reference/Models/UserIdentifier](https://docs.nbold.co/api/latest/reference/Models/UserIdentifier) for more information.",
       "type": "object",
       "properties": {
         "id": {
@@ -2712,7 +2712,7 @@
     "OwnerUserIdentifier": {
       "title": "Team",
       "x-ms-summary": "Team",
-      "description": "Team member ID. See See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.",
+      "description": "Team member ID. See See [https://docs.nbold.co/api/latest/reference/Models/UserIdentifier](https://docs.nbold.co/api/latest/reference/Models/UserIdentifier) for more information.",
       "type": "object",
       "properties": {
         "id": {
@@ -2735,13 +2735,13 @@
     "AppMetadata": {
       "title": "Metadata",
       "x-ms-summary": "Metadata",
-      "description": "Additional metadata as a JSON object. See [https://docs.nbold.co/api/reference/Models/TeamProvisioningRequest](https://docs.nbold.co/api/reference/Models/TeamProvisioningRequest) for more information.",
+      "description": "Additional metadata as a JSON object. See [https://docs.nbold.co/api/latest/reference/Models/TeamProvisioningRequest](https://docs.nbold.co/api/latest/reference/Models/TeamProvisioningRequest) for more information.",
       "x-ms-visibility": "advanced",
       "type": "object"
     },
     "Job": {
       "title": "Job",
-      "description": "A job that performs some tasks asynchronously. See [https://docs.nbold.co/api/reference/Models/Job](https://docs.nbold.co/api/reference/Models/Job) for more information.",
+      "description": "A job that performs some tasks asynchronously. See [https://docs.nbold.co/api/latest/reference/Models/Job](https://docs.nbold.co/api/latest/reference/Models/Job) for more information.",
       "type": "object",
       "properties": {
         "id": {
@@ -2784,7 +2784,7 @@
     },
     "JobLogs": {
       "title": "Job Logs",
-      "description": "A collection of JobLogsEntry. See [https://docs.nbold.co/api/reference/Models/JobLogs](https://docs.nbold.co/api/reference/Models/JobLogs) for more information.",
+      "description": "A collection of JobLogsEntry. See [https://docs.nbold.co/api/latest/reference/Models/JobLogs](https://docs.nbold.co/api/latest/reference/Models/JobLogs) for more information.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/JobLogsEntry"
@@ -2792,7 +2792,7 @@
     },
     "JobLogsEntry": {
       "title": "Job Logs Entry",
-      "description": "A job logs entry. See [https://docs.nbold.co/api/reference/Models/JobLogsEntry](https://docs.nbold.co/api/reference/Models/JobLogsEntry) for more information.",
+      "description": "A job logs entry. See [https://docs.nbold.co/api/latest/reference/Models/JobLogsEntry](https://docs.nbold.co/api/latest/reference/Models/JobLogsEntry) for more information.",
       "type": "string"
     },
     "Hook": {

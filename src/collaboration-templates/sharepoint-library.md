@@ -15,11 +15,11 @@ What if you want to want to bring reference documents and materials that are sto
 Now you can deploy SharePoint libraries and Office documents at scale in your organization through Collaboration templates!  
 To include your content, just add a new tab in your template team:
 
-![](/uploads/office-files.png)
+![](/media/office-files.png)
 
 And boom! Your tab is automatically replicated to any team created from this template!
 
-![](/uploads/sharepoint-library.png)
+![](/media/sharepoint-library.png)
 
 We're supporting the following tab types:
 

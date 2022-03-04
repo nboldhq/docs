@@ -22,7 +22,7 @@ import CatalogTemplate from './CatalogTemplate';
 class CatalogTemplates {
     /**
      * Constructs a new <code>CatalogTemplates</code>.
-     * A collection of templates from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/CatalogTemplate](https://docs.nbold.co/api/reference/Models/CatalogTemplate) for more information.
+     * A collection of templates from your corporate catalog. See [https://docs.nbold.co/api/latest/reference/Models/CatalogTemplate](https://docs.nbold.co/api/latest/reference/Models/CatalogTemplate) for more information.
      * @alias module:model/CatalogTemplates
      */
     constructor() { 

@@ -1,3 +1,9 @@
+---
+position: 9
+status: published
+author: Guillaume Meyer
+---
+
 # Release process
 
 ---
@@ -18,7 +24,7 @@ Targeted release allows admins, change managers, or anyone else responsible for 
 - Use feature controls, where applicable, to control the release of updates to end users.
 
 ### Setup
-Access to targeted release is controlled by an [RBAC](/trust-center/role-based-access-control.md) policy. To grant a user access to targeted release features:
+Access to targeted release is controlled by an [RBAC](/trust-center/authentication-and-access-control.md) policy. To grant a user access to targeted release features:
 1. Open the `Settings` tab
 2. Open the `Roles (RBAC)` section
 3. Assign the `Change Manager` role to the user

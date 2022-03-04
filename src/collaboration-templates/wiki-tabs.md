@@ -28,13 +28,13 @@ There are some simple steps for that:
 * Create a team and call it the regular way "NAME OF THE USE CASE - Template" (Deal Room - Template; New Center - Template; Marketing Department - Template) with different channels, files and folders in Files tab, different Website tabs, Planner with predefined tasks, checklist, description, labels and buckets, etc.
 * Add the nBold Service Account as the owner of the team
 
-![](/uploads/team-creation.png)
+![](/media/team-creation.png)
 
 ## **2. Delete the Wiki tab in the Original team**
 
 Once the original team is created, you can remove the Wiki tab from it. Make sure that it is deleted from all the channels.
 
-![](/uploads/remove-wiki.png)
+![](/media/remove-wiki.png)
 
 ## **3. Add the team to the Template Catalog and configure Governance Policies**
 
@@ -42,10 +42,10 @@ Here is [How to create a Collaboration Template](https://docs.nbold.co/collabora
 
 ## **4. Create a new team without Wiki tabs**
 
-![](/uploads/new-team.png)
+![](/media/new-team.png)
 
 So now, when the team from this template is created, we don’t see the Wiki tab in it.
 
-![](/uploads/final.png)
+![](/media/final.png)
 
 And here we go!

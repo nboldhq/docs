@@ -37,6 +37,6 @@ Define external sharing and user access settings.
 
 So, with this sensitivity label applied, users won't be able to add externals to new teams created.
 
-![](/uploads/guests.png)
+![](/media/guests.png)
 
 [![](https://downloads.intercomcdn.com/i/o/458633631/d212e906da2746e314f06f7b/Screenshot+2022-02-02+at+19.14.35.png =1310x932)](https://downloads.intercomcdn.com/i/o/458633631/d212e906da2746e314f06f7b/Screenshot+2022-02-02+at+19.14.35.png)

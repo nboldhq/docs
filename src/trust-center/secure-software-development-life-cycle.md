@@ -1,3 +1,9 @@
+---
+position: 8
+status: published
+tags: []
+author: Guillaume Meyer
+---
 # Secure Software Development Lifecycle (SSDLC)
 
 ---
@@ -14,7 +20,7 @@ We at nBold know you care about how your personal information is used and shared
 These best practices are gounded by the [OWASP Security Design Principles](https://www.owasp.org):
 * Minimize attack surface area : The aim for secure development is to reduce the overall risk by reducing the attack surface area.
 * Establish secure defaults: By default, the experience should be secure, and it should be up to the user to reduce their security – if they are allowed.
-* Principle of Least privilege: The principle of least privilege recommends that accounts have the least amount of privilege required to perform their business processes. See [Microsoft Graph Permissions](./apppermissions.md) as an example.
+* Principle of Least privilege: The principle of least privilege recommends that accounts have the least amount of privilege required to perform their business processes. See [Microsoft Graph Permissions](/trust-center/microsoft-graph-permissions.md) as an example.
 * Principle of Defense in depth: The principle of defense in depth suggests that where one control would be reasonable, more controls that approach risks in different fashions are better.
 * Fail securely: Applications regularly fail to process transactions for many reasons. How they fail can determine if an application is secure or not.
 * Don’t trust services: Many organizations utilize the processing capabilities of third party partners, who more than likely have differing security policies and posture than you. Therefore, implicit trust of externally run systems is not warranted. All external systems should be treated in a similar fashion.
@@ -25,8 +31,6 @@ These best practices are gounded by the [OWASP Security Design Principles](https
 * Secure Release Process: Aside from the Secure Development Principles, we're using several tools during our release process as a gateway before each release and deployment, to reduce risks and avoid common pitfalls.
 
 ## Standard JavaScript Style
-
-**[JavaScript Standard Style](https://standardjs.com)**
 
 This module enforces JavaScript development best practices in different ways:
 * Automatically format code: Ease code maintenance and prevents messy or inconsistent code.
@@ -49,7 +53,7 @@ Learn more about [ESLint Security Plugin](https://github.com/nodesecurity/eslint
 
 ## NPM Audit
 
-This tool from [Node Package Manager](https://www.npmjs.com/) performs a moment-in-time security review of our project’s dependency tree and looks for known vulnerabilities.  
+This tool performs a moment-in-time security review of our project’s dependency tree and looks for known vulnerabilities.  
 Audit reports contain information about potential security vulnerabilities in our dependencies and helps us fix a potential vulnerability by providing recommendations for further troubleshooting.  
 
 ::: tip

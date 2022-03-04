@@ -20,18 +20,18 @@ All notable changes to the nBold API, Connectors and SDKs will be documented in 
   - See it live in [API Explorer](https://docs.nbold.co/api/explorer.html#/hooks/CreateHook).
 
 ### Changed
-- The `TeamProvisioningCompletedNotificationPayload` object (payload of the `team_provisioning_completed` [webhook](https://docs.nbold.co/api/webhooks.html#team-provisioning-completed)), now has an additional `metadata` property holding the metadata passed to the `createTeamProvisioningJob` [operation](https://docs.nbold.co/api/reference/Apis/TeamsApi.html#createteamprovisioningjob)
+- The `TeamProvisioningCompletedNotificationPayload` object (payload of the `team_provisioning_completed` [webhook](https://docs.nbold.co/api/webhooks.html#team-provisioning-completed)), now has an additional `metadata` property holding the metadata passed to the `createTeamProvisioningJob` [operation](https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#createteamprovisioningjob)
 
 ## [1.2.0] - 2021-04-16
 
 ### Added
-- New API operation [GetTemplates](/api/reference/Apis/CatalogApi.html#getcatalogtemplates).
-- New API operation [UpdateTeam](/api/reference/Apis/TeamsApi.html#updateteam).
+- New API operation [GetTemplates](/api/latest/reference/Apis/CatalogApi.html#getcatalogtemplates).
+- New API operation [UpdateTeam](/api/latest/reference/Apis/TeamsApi.html#updateteam).
 - The API support for application access tokens is now GA (aka "OAuth 2.0 client credentials grant flow"). See [Authentication](/api/authentication).
 
 ### Changed
 - The [Authentication](/api/authentication) page now reflects the new support for application access tokens.
-- The [GetUsers](/api/reference/Apis/UsersApi.html#getusers) API operation now supports standard [Microsoft Graph filters](https://docs.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0&tabs=http#optional-query-parameters).
+- The [GetUsers](/api/latest/reference/Apis/UsersApi.html#getusers) API operation now supports standard [Microsoft Graph filters](https://docs.microsoft.com/en-us/graph/api/user-list?view=graph-rest-1.0&tabs=http#optional-query-parameters).
 - The [GetJob](/connectors/connectors-actions.html#get-job-🦺) Connector Action is now only hidded by default but is still visible through search.
 
 ## [1.1.0] - 2021-02-07

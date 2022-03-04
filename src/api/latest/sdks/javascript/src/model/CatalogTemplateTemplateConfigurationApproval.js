@@ -69,7 +69,7 @@ class CatalogTemplateTemplateConfigurationApproval {
 CatalogTemplateTemplateConfigurationApproval.prototype['requireApproval'] = undefined;
 
 /**
- * Members of an approval team, as an array of ApprovalTeamMember. See [https://docs.nbold.co/api/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/reference/Models/ApprovalTeamMember) for more information.
+ * Members of an approval team, as an array of ApprovalTeamMember. See [https://docs.nbold.co/api/latest/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/latest/reference/Models/ApprovalTeamMember) for more information.
  * @member {Array.<module:model/ApprovalTeamMember>} approvalTeam
  */
 CatalogTemplateTemplateConfigurationApproval.prototype['approvalTeam'] = undefined;

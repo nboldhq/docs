@@ -21,10 +21,10 @@ Here is how it works 👇
 
 As an admin on the Catalog tab, in the template settings at the Security tab, you have the policy to define a minim number of Owners and Members to add when a team is being created by a user.
 
-![](/uploads/screenshot-2022-02-13-at-11-33-13.png)
+![](/media/screenshot-2022-02-13-at-11-33-13.png)
 
 From the **end-user perspective**, if you don't enter the required number of owners and members, you're prompted with a message to comply with the policy.
 
-![](/uploads/screenshot-2022-02-13-at-11-37-09.png)
+![](/media/screenshot-2022-02-13-at-11-37-09.png)
 
 You can select up to 20 Mandatory Owners and Members for each template.

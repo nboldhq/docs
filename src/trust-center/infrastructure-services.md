@@ -1,3 +1,9 @@
+---
+position: 2
+status: published
+author: Guillaume Meyer
+---
+
 # Infrastructure Services
 
 As a Microsoft Teams App, nBold relies on several "first-party" components and services such as the Microsoft Teams platform and Microsoft Azure.  
@@ -7,10 +13,6 @@ In addition the nBold platform uses several "second-party" or "third-party" serv
 - As nBold is not in the business of storing or processing payments, all payments made to nBold goes through our partner, Stripe. [Learn more...](https://stripe.com/)
 
 ## Microsoft Teams
-
-<p align="center">
-<img src="/img/logos/TeamsNew.png" style="width: 40px;">
-</p>
 
 nBold relies on the [Microsoft Teams extensibility platform](https://docs.microsoft.com/en-us/microsoftteams/platform/) to automate governance, bring business solutions and integrate LoB and CRM apps seamlessly into Microsoft Teams.  
 Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together.  
@@ -28,10 +30,6 @@ Especially, nBold leverages the following Microsoft Teams extensibility componen
 | Deep links | Initiate conversation based on business processes |
 
 ## Microsoft Azure
-
-<p align="center">
-<img src="/img/logos/Azure_400x400.jpg" style="width: 40px;">
-</p>
 
 The nBold Platform relies entirely on the Microsoft Azure platform.  
 Here is a summary of the key architecture components involved:
@@ -52,10 +50,6 @@ Learn more about Azure Data Residency from our [Data Management Practices](/plat
 
 ## GitHub
 
-<p align="center">
-<img src="/img/logos/GitHub_400x400.jpg" style="width: 40px;">  
-</p>
-
 | Security Measures | Description |
 |:-----------------:|-------------|
 | HTTPS | All data received from and sent to GitHub is encrypted in transit. |
@@ -69,10 +63,6 @@ Learn more about [GitHub Security](https://github.com/security).
 :::
 
 ## Intercom
-
-<p align="center">
-<img src="/img/logos/Intercom_400x400.jpg" style="width: 40px;">  
-</p>
 
 | Security Measures | Description |
 |:-----------------:|-------------|

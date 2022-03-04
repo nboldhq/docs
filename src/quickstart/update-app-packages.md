@@ -44,17 +44,17 @@ Download these packages locally and do not unzip them:
 
 Go to [Team Admin Center in the "manage apps" section](https://admin.teams.microsoft.com/policies/manage-apps).
 
-![](/uploads/image.png)
+![](/media/image.png)
 
 Search for "home" in a search bar and click on it.
 
-![](/uploads/image-2.png)
+![](/media/image-2.png)
 
 ### 3. Update the package
 
 Click on "Upload file" in New version section.
 
-![](/uploads/image-3.png)
+![](/media/image-3.png)
 
 Select the downloaded file from your computer and click "Open".
 

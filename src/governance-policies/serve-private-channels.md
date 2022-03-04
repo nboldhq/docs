@@ -19,16 +19,16 @@ As a Microsoft Teams Admin or Global Admin, go to the [Microsoft Teams Admin Por
 
 As a result, everyone in your organization won't be able to create private channels.
 
-![](/uploads/governance-policies-private-channels.png)
+![](/media/governance-policies-private-channels.png)
 
 **Only** _nBold_ **App is allowed to create private channels**
 
 Create a new policy that can call for example "_nBold_ Service Account
 
-![](/uploads/private-channel.png)
+![](/media/private-channel.png)
 
 Then select the policy and apply this policy to the nBold Service Account in your tenant.
 
-![](/uploads/private-2.png)
+![](/media/private-2.png)
 
 _Here the Service Account Name is "nBold", in your organization it certainly has another name that is defined._

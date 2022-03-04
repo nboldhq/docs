@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class OwnerUserIdentifier {
     /**
      * Constructs a new <code>OwnerUserIdentifier</code>.
-     * Object representing a user. User identifier could be its ID, UPN or email. See See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
+     * Object representing a user. User identifier could be its ID, UPN or email. See See [https://docs.nbold.co/api/latest/reference/Models/UserIdentifier](https://docs.nbold.co/api/latest/reference/Models/UserIdentifier) for more information.
      * @alias module:model/OwnerUserIdentifier
      * @param id {String} User identifier
      */

@@ -1,3 +1,10 @@
+---
+position: 4
+status: published
+tags: []
+author: Guillaume Meyer
+---
+
 # Security policy
 
 ## How we handle security vulnerabilities

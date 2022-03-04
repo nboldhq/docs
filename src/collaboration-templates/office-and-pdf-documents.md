@@ -15,7 +15,7 @@ Now you add any Office Documents as a Tab at scale in your organization through 
 
 To include your content, just add a new tab in your Original Team:
 
-![](/uploads/image-1.png)
+![](/media/image-1.png)
 
 And boom! Your tab is automatically replicated to any team created from this template!
 

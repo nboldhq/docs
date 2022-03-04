@@ -1,12 +1,39 @@
-# Data management policy
+---
+position: 5
+status: published
+tags: []
+author: Guillaume Meyer
+---
 
-We understand that our customers need to be confident using our application, and be aware of our data collection practices.
+# Privacy policy
+
+Customer trust and data security are critical to everything we do at nBold, and we understand that our customers need to be confident using our application, and be aware of our data collection practices.
+
+---
+
+**TABLE OF CONTENTS**
+[[toc]]
+
+---
+
+## Privacy principles
+
+Our primary privacy principles:
+- Control: We will put you in control of your privacy with easy-to-use tools and clear choices.
+- Transparency: We will be transparent about data collection and use so you can make informed decisions.
+- Security: We protect your data with strong security and encryption.
+- Benefit to you: When we do collect data, we will use it to benefit you and to make your experiences better.
+- You own your data: Customer data is only used to provide agreed upon services and if you leave the data is removed.
+
+If you need more information, please refer to our web [PRIVACY POLICY](https://nbold.co/legal/privacy/).
+
+## Data management policy
 
 ::: tip Note
 This section is subject to change and we recommend that you check back quarterly for updates.
 :::
 
-## Application data
+### Application data
 
 Through the implementation of its different features, the application access, processes and stores several kind of data:
 - [User profiles](#user-profiles)
@@ -31,7 +58,7 @@ Here is how we're managing data for these different categories:
 As you can see, we're not storing (nor in cache nor in database) any team content as part of our provisioning process. Teams data are processed in memory and not persisted.
 :::
 
-### User profiles
+#### User profiles
 
 The application stores a subset of Office 365 user profiles in our caching platform, in order to target templates through our audience targeting feature.
 
@@ -68,7 +95,7 @@ User profiles could be deleted upon simple request.
 If you have any questions about this section or our data practices generally, please contact us at [support@nbold.co](mailto:support@nbold.co)
 :::
 
-### Organization settings
+#### Organization settings
 
 nBold stores organization's settings as part of its application data.  
 
@@ -98,7 +125,7 @@ Organization settings could be deleted upon simple request.
 If you have any questions about this section or our data practices generally, please contact us at [support@nbold.co](mailto:support@nbold.co)
 :::
 
-### Templates Catalog
+#### Templates Catalog
 
 nBold stores organization's settings as part of its application data.  
 
@@ -150,7 +177,7 @@ Template catalog could be deleted upon simple request.
 If you have any questions about this section or our data practices generally, please contact us at [support@nbold.co](mailto:support@nbold.co)
 :::
 
-### User requests
+#### User requests
 
 nBold stores users requests as part of its application data.  
 
@@ -221,7 +248,7 @@ Plans contents are only processed IN MEMORY and NEVER stored, nor in cache nor p
 The application reads tabs metadata (Tab name and configuration) from the template to clone tabs during the provisionning process, but doesn't access their contents.
 Tabs metadata are only processed IN MEMORY and NEVER stored, nor in cache nor permenently in a database.
 
-## Metadata Collection
+### Metadata Collection
 
 In addition to core application data, the application collects metadata to help us understand how the product is being used and what kinds of errors, such as sign-in errors, have occurred. This information helps us understand usage patterns, plan new features, and troubleshoot and fix problem areas.
 
@@ -231,7 +258,7 @@ Collected metadata falls into these four categories:
 -  [Support data](#support-data)
 -  [Error reporting data](#error-reporting-data)
 
-## Census data
+### Census data
 Census data is acquired solely to provide, support, and improve the application. It includes environmental information such as device and operating system versions, and regional and language settings. Here are some specific examples of the census data that's collected:
 
 | Data type | Example | Notes |
@@ -259,7 +286,7 @@ Census data collection is on by default and cannot be turned off by admins or en
 :::
 
 
-## Usage data
+### Usage data
 
 Usage data includes information such as requests status, teams provisioning, approval status, frequency of features used, and stability issues.
 
@@ -308,13 +335,13 @@ Usage data are processed in two ways:
 * We are processing anonymous usage data to understand how our customers are using the application.
 * We are processing non-anonymous usage data to create in-app usage dashboards and audit trails for our customers administrators.
 
-## Support data
+### Support data
 
 Support data includes information such as user UPN, tenant ID, app version. Access to these data is restricted to our support team, and is only used in case of a direct support request to our support team.
 
 Support data contains information that identifies your organization, such as contoso.com, and your users. Here are some specific examples of the usage data that's collected, for three distinct kinds of profiles.
 
-### Identified (Using the application inside Microsoft Teams, not yet logged)
+#### Identified (Using the application inside Microsoft Teams, not yet logged)
 Data collected at user level:
 ```javascript
 {
@@ -330,7 +357,7 @@ Data collected at user level:
 }
 ```
 
-### Authenticated (Using the application inside Microsoft Teams, logged)
+#### Authenticated (Using the application inside Microsoft Teams, logged)
 Data collected at user level:
 ```javascript
 {
@@ -371,11 +398,11 @@ But we're not storing any [Sensitive Personal Data](https://ec.europa.eu/info/la
 Usage data collection is on by default and cannot be turned off by admins or end users.
 :::
 
-## Error reporting data
+### Error reporting data
 
 Error reporting data can include information about performance and reliability, device configuration, network connection quality, error codes, error logs, and exceptions.
 
-### Log files lifecycle
+#### Log files lifecycle
 
 1. Logs entries are generated from each application container.
 2. Each new log entry is stored:
@@ -392,7 +419,7 @@ Error reporting data may also contain personally identifiable information such a
 Error reporting data collection is on by default and cannot be turned off by admins or end users.
 :::
 
-## Data Residency
+### Data Residency
 
 The application relies entirely on the Microsoft Azure platform.  
 Here is a summary of the key architecture components and their associated data residency:

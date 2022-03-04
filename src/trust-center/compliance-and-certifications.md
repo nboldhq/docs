@@ -1,19 +1,11 @@
-# Privacy and compliance
+---
+position: 5
+status: published
+tags: []
+author: Guillaume Meyer
+---
 
-**Abstract**
-
-Customer trust and data security are critical to everything we do at nBold.
-
-Our primary privacy principles:
-- Control: We will put you in control of your privacy with easy-to-use tools and clear choices.
-- Transparency: We will be transparent about data collection and use so you can make informed decisions.
-- Security: We protect your data with strong security and encryption.
-- Benefit to you: When we do collect data, we will use it to benefit you and to make your experiences better.
-- You own your data: Customer data is only used to provide agreed upon services and if you leave the data is removed.
-
-::: tip
-If you need more information, please refer to our [PRIVACY POLICY](https://nbold.co/legal/privacy/)
-:::
+# Compliance and certifications
 
 ---
 
@@ -45,9 +37,8 @@ See [Microsoft Azure Trusted Cloud](https://azure.microsoft.com/en-us/overview/t
 
 ### Microsoft 365 App Certification
 
-The Microsoft 365 App Certification acknowledges that an app provides the highest level of data protection, security and privacy. In other words, if you use a Microsoft 365 certified app, you can be confident that your internal data and sensitive information are under control and protected.  
-
-This certification is comprised of four main domains.
+The [Microsoft 365 App Certification](https://docs.microsoft.com/en-us/microsoft-365-app-certification/overview) acknowledges that an app provides the highest level of data protection, security and privacy. In other words, if you use a Microsoft 365 certified app, you can be confident that your internal data and sensitive information are under control and protected.  
+This [certification criteria](https://docs.microsoft.com/en-us/microsoft-365-app-certification/docs/certification-submission-guide#app-certification-criteria) is comprised of four main domains.
 
 #### Application Security Domain
 The Application Security domain especially includes Microsoft Graph API Permission validation and Application Security Testing.

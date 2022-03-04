@@ -48,7 +48,7 @@ Select it, click on `Install` and choose `Add`
 
 Log into nBold then click the `Consent as an administrator` button to start the approval process.
 
-![](/media/permission-1.png)![](/uploads/permission-2.png)
+![](/media/permission-1.png)![](/media/permission-2.png)
 
 Sign-in with your Microsoft 365 account from your organization that is granted the `Global Administrator` role. Check the permissions, and don't forget to check the `Consent on behalf of your organization` option. Finally, click `Accept`.
 

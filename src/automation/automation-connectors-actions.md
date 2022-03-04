@@ -16,7 +16,7 @@ This article describes the Power Platform and Logic Apps triggers and actions av
 This article refers to connex concepts. If required, please refer to:
 
 * [Rate Limits](/api/rate-limits.md)
-* [Role-Based Access Control (RBAC)](/platform/rbac.md)
+* [Role-Based Access Control (RBAC)](/trust-center/authentication-and-access-control.md)
   :::
 
 ***
@@ -94,7 +94,7 @@ Get teams templates accessible to the connected user filtered by the audience ta
 * Rate Limit: <Badge text="Tier 2" type="warning" vertical="middle"/>
 * Roles: `AUTHENTICATED_USER`
 
-See [API Documentation](/api/reference/Apis/CatalogApi.md#getmycatalogtemplates)
+See [API Documentation](/api/latest/reference/Apis/CatalogApi.md#getmycatalogtemplates)
 
 ### Get My Sensitivity Labels
 
@@ -105,7 +105,7 @@ Get my Microsoft 365 sensitivity labels.
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: `AUTHENTICATED_USER`
 
-See [API Documentation](/api/reference/Apis/LabelsApi.md#getmylabels)
+See [API Documentation](/api/latest/reference/Apis/LabelsApi.md#getmylabels)
 
 ### Get Users
 
@@ -116,7 +116,7 @@ Retreive users from your Microsoft 365 environment.
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS.
 
-See [API Documentation](/api/reference/Apis/UsersApi.md#getUsers)
+See [API Documentation](/api/latest/reference/Apis/UsersApi.md#getUsers)
 
 ### Get Team
 
@@ -127,7 +127,7 @@ Get detailed information about a team.
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#getteam)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#getteam)
 
 ### Delete Team
 
@@ -138,7 +138,7 @@ Delete a team.
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#deleteteam)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#deleteteam)
 
 ### Archive Team
 
@@ -149,7 +149,7 @@ Archive a team.
 * Rate Limit: <Badge text="Tier 1" type="error" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#archiveteam)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#archiveteam)
 
 ### Unarchive Team
 
@@ -160,7 +160,7 @@ Unarchive a team.
 * Rate Limit: <Badge text="Tier 1" type="error" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#unarchiveteam)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#unarchiveteam)
 
 ### Invite Team Member
 
@@ -171,7 +171,7 @@ Invite a member to a team.
 * Rate Limit: <Badge text="Tier 2" type="warning" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#addteammember)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#addteammember)
 
 ### Create Team Based on Template
 
@@ -182,7 +182,7 @@ Create a new team provisioning job.
 * Rate Limit: <Badge text="Tier 1" type="error" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS.
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#createteamprovisioningjob)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#createteamprovisioningjob)
 
 ### Approve Team Creation
 
@@ -193,7 +193,7 @@ Approve a team creation request.
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS.
 
-See [API Documentation](/api/reference/Apis/ApprovalsApi.md#approveteamcreation)
+See [API Documentation](/api/latest/reference/Apis/ApprovalsApi.md#approveteamcreation)
 
 ### Reject Team Creation
 
@@ -204,7 +204,7 @@ Reject a team creation request.
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS.
 
-See [API Documentation](/api/reference/Apis/ApprovalsApi.md#rejectteamcreation)
+See [API Documentation](/api/latest/reference/Apis/ApprovalsApi.md#rejectteamcreation)
 
 ### Get Team Channels
 
@@ -215,7 +215,7 @@ Get team channels.
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS.
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#getteamchannels)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#getteamchannels)
 
 ### Create Team Channel
 
@@ -226,7 +226,7 @@ Create a new team channel.
 * Rate Limit: <Badge text="Tier 2" type="warning" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#createteamchannel)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#createteamchannel)
 
 ### Get Team Primary Channel
 
@@ -237,7 +237,7 @@ Get the primary channel of a team
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#getteamprimarychannel)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#getteamprimarychannel)
 
 ### Get Team Channel Tabs
 
@@ -248,7 +248,7 @@ Get team channel tabs
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#getteamchanneltabs)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#getteamchanneltabs)
 
 ### Create Team Channel Tab
 
@@ -259,7 +259,7 @@ Create a new team channel tab
 * Rate Limit: <Badge text="Tier 2" type="warning" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/TeamsApi.md#createteamchanneltab)
+See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#createteamchanneltab)
 
 ### Get Job
 
@@ -270,7 +270,7 @@ Get detailed information about a job, including its status, progress, logs...
 * Rate Limit: <Badge text="Tier 2" type="warning" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/JobsApi.md#getjob)
+See [API Documentation](/api/latest/reference/Apis/JobsApi.md#getjob)
 
 ### Generate Hook Signature
 
@@ -281,4 +281,4 @@ Generate a signature from a secret and a webhook payload
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/reference/Apis/HooksApi.md#generatehooksignature)
+See [API Documentation](/api/latest/reference/Apis/HooksApi.md#generatehooksignature)

@@ -63,13 +63,13 @@ class CatalogTemplateTemplateConfigurationPermanentMembership {
 }
 
 /**
- * Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.
+ * Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/latest/reference/Models/PermanentMember](https://docs.nbold.co/api/latest/reference/Models/PermanentMember) for more information.
  * @member {Array.<module:model/PermanentMember>} members
  */
 CatalogTemplateTemplateConfigurationPermanentMembership.prototype['members'] = undefined;
 
 /**
- * Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.
+ * Members of a permanent membership team, as an array of PermanentMember. See [https://docs.nbold.co/api/latest/reference/Models/PermanentMember](https://docs.nbold.co/api/latest/reference/Models/PermanentMember) for more information.
  * @member {Array.<module:model/PermanentMember>} owners
  */
 CatalogTemplateTemplateConfigurationPermanentMembership.prototype['owners'] = undefined;

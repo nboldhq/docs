@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class MemberUserIdentifier {
     /**
      * Constructs a new <code>MemberUserIdentifier</code>.
-     * Object representing a user. User identifier could be its ID, UPN or email. See See [https://docs.nbold.co/api/reference/Models/UserIdentifier](https://docs.nbold.co/api/reference/Models/UserIdentifier) for more information.
+     * Object representing a user. User identifier could be its ID, UPN or email. See See [https://docs.nbold.co/api/latest/reference/Models/UserIdentifier](https://docs.nbold.co/api/latest/reference/Models/UserIdentifier) for more information.
      * @alias module:model/MemberUserIdentifier
      * @param id {String} User identifier
      */

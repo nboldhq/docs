@@ -39,13 +39,13 @@ This "targeted" package is a personal Microsoft Teams app comprised of only one 
 
 Connect to [Microsoft Teams](https://teams.microsoft.com) and load the Home Package as described here:
 
-![](/uploads/home-page.png)
+![](/media/home-page.png)
 
 ![](https://downloads.intercomcdn.com/i/o/442958778/717597f2312a2e0e1829cf7a/2022-01-04_11-52-01.png)
 
 Select from your computer the nBold Home package that you have just downloaded.
 
-![](/uploads/home-page-1.png)![](/uploads/add-home.png)
+![](/media/home-page-1.png)![](/media/add-home.png)
 
 ![](https://downloads.intercomcdn.com/i/o/442959300/32e37d44e7c306fe23d9c902/home+app+pinned.png)
 

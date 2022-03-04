@@ -23,7 +23,7 @@ In this step you ensure that the nBold is allowed in the tenant:
 * In the teams Admin Portal go to: [Manage apps - Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps).
 * Search for nBold select and click "Allow"
 
-![](/uploads/allow-2.png)
+![](/media/allow-2.png)
 
 ### 2. Give permission to users to install nBold
 
@@ -46,14 +46,14 @@ Then choose nBold from "Add third-party apps".
 
 Then you'll have this:
 
-![](/uploads/allow-1-1.png)
+![](/media/allow-1-1.png)
 
 Then repeat this for the Home App [_(assuming you already added the App as described in Step 1 and 2 of this doc)_](https://docs.nbold.co/quickstart/set-up-the-home-page.html)
 
-![](/uploads/allow2-2.png)
+![](/media/allow2-2.png)
 
 Now you should see this:
 
-![](/uploads/allow3-1.png)
+![](/media/allow3-1.png)
 
 Click on Save and you're all set!

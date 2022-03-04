@@ -24,14 +24,14 @@ To learn more about the nBold API, see [API Reference](https://docs.nbold.co/api
 
 ::: tip 💡 Don't see your favorite programming language here?
 Wanna see a `Ruby`, `Go` or `Java` SDKs?  
-Just [Create a New Issue!](https://github.com/nboldhq/tech-hub/issues)
+Just [Create a New Issue!](https://github.com/nboldhq/docs/issues)
 :::
 
-## Node.js SDK
+## Javascript SDK
 Status: <Badge text="beta" type="warning"/>  
-Node.js module for the nBold API service. This library works both on the server with `Node.js` and in the browser environment with `JavaScript`.
+Javascript module for the nBold API service. This library works both on the server with `Node.js` and in the browser environment with `JavaScript`.
 
-See [Node.js SDK Documentation](/api/sdks/node).
+See [Javascript SDK Documentation](/api/latest/sdks/javascript).
 
 ## Powershell Module
 Status: <Badge text="Coming Soon" type="error"/>  

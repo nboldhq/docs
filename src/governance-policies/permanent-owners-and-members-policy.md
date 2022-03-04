@@ -24,4 +24,4 @@ When Permanent Owners and Permanent Members are defined at the template level, t
 2. Select an existing Template ➡️ go to the Security Tab ➡️ and go to the permanent Owners / Members section.
 3. Search for users from your corporate directory to systematically add them as owners or members of teams created using this Template.
 
-![](/uploads/screenshot-2022-02-22-at-15-20-29.png)
+![](/media/screenshot-2022-02-22-at-15-20-29.png)

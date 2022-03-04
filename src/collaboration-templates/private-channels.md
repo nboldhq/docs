@@ -20,19 +20,19 @@ In this article, we describe the different capabilities of the Private Channels 
 
 In a word, you'll be able to get a team created with different standard channels including files and folders, configured tabs, Planner, and... several **Private Channels.**
 
-![](/uploads/screenshot-2022-02-11-at-10-41-49.png)
+![](/media/screenshot-2022-02-11-at-10-41-49.png)
 
 In each Private Channel by default, the permanent owners defined at the template level, are added as Default Private Channel Owners.
 
-![](/uploads/private-channels-1.png)
+![](/media/private-channels-1.png)
 
 By default, Team Members of the team are not allowed to create a Private Channel in the team.
 
-![](/uploads/private-channel-settings.png)
+![](/media/private-channel-settings.png)
 
 Tabs in Private Channels are supported and pre-configured following the configuration from the original team.
 
-![](/uploads/tabs-configured.png)
+![](/media/tabs-configured.png)
 
 Currently not supported with Private Channels in Collaboration Templates:
 
@@ -45,15 +45,15 @@ As described in the article [➕ Create a new Collaboration Template ](https://d
 
 Make sure you have added the Service Account as an owner of the team and the private channels.
 
-![](/uploads/screenshot-2022-02-11-at-10-48-00.png)
+![](/media/screenshot-2022-02-11-at-10-48-00.png)
 
 Then add this particular team as a Template (you need to be a Global Admin for that). Connect to Teams > nBold App > Catalog > Create a Template > Type the name of the original team.
 
-![](/uploads/screenshot-2022-02-11-at-11-06-25.png)
+![](/media/screenshot-2022-02-11-at-11-06-25.png)
 
 Define Permanent Owners at the template level, they will be added as Private Channels Default Owners.
 
-![](/uploads/screenshot-2022-02-11-at-11-06-55.png)
+![](/media/screenshot-2022-02-11-at-11-06-55.png)
 
 _Learn more about the_ [_Permanent Members and Permanent Owners Policy_](https://help.salestim.com/en/articles/4149874-permanent-owners-and-members-policy)_._
 
@@ -63,7 +63,7 @@ If you want to make sure members or not allowed to create a Private Channel by d
 
 Make sure that at the Template Level, "Settings" is checked on "Cloning Strategy". So that settings from the Original Team will be cloned.
 
-![](/uploads/screenshot-2022-02-11-at-11-33-52.png)
+![](/media/screenshot-2022-02-11-at-11-33-52.png)
 
 So that as a result, in the team created with this template, this setting is off by default.
 

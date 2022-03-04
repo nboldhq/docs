@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class ApprovalTeamMember {
     /**
      * Constructs a new <code>ApprovalTeamMember</code>.
-     * Object representing an approval team member. See See [https://docs.nbold.co/api/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/reference/Models/ApprovalTeamMember) for more information.
+     * Object representing an approval team member. See See [https://docs.nbold.co/api/latest/reference/Models/ApprovalTeamMember](https://docs.nbold.co/api/latest/reference/Models/ApprovalTeamMember) for more information.
      * @alias module:model/ApprovalTeamMember
      */
     constructor() { 

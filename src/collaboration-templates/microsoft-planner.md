@@ -11,7 +11,7 @@ How to clone Planner plans as part of Collaboration templates
 
 After tremendous efforts, we reached a new milestone in our provisioning engine. Now you can clone your 📅 Planner tasks across Collaboration templates, with **full parity** between the original one and the cloned plan!
 
-![](/uploads/planner.png)
+![](/media/planner.png)
 
 What do we mean by full fidelity? Here are the elements that will be cloned from your source plan:
 

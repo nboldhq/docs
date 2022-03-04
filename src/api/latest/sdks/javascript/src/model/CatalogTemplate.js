@@ -24,7 +24,7 @@ import CatalogTemplateTemplateConfiguration from './CatalogTemplateTemplateConfi
 class CatalogTemplate {
     /**
      * Constructs a new <code>CatalogTemplate</code>.
-     * A template from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/CatalogTemplate](https://docs.nbold.co/api/reference/Models/CatalogTemplate) for more information.
+     * A template from your corporate catalog. See [https://docs.nbold.co/api/latest/reference/Models/CatalogTemplate](https://docs.nbold.co/api/latest/reference/Models/CatalogTemplate) for more information.
      * @alias module:model/CatalogTemplate
      */
     constructor() { 

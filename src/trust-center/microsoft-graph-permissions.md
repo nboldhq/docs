@@ -1,3 +1,8 @@
+---
+position: 4
+status: published
+author: Guillaume Meyer
+---
 # Microsoft Graph Permissions
 
 ---
@@ -6,20 +11,6 @@
 [[toc]]
 
 ---
-
-## Admin-restricted permissions
-Depending on the permission type (Delegated or Application), some high-privilege permissions in the Microsoft ecosystem are set to admin-restricted.  
-Examples of these kinds of permissions include the following:
-- Read all user's full profiles by using ```User.Read.All```
-- Write data to an organization's directory by using ```Directory.ReadWrite.All```
-- Read all groups in an organization's directory by using ```Groups.Read.All```
-
-For nBold to access data in Microsoft Graph, your administrator must grant it the correct permissions via a consent process.  
-
-Learn more:
-- [nBold Install and Setup Guide...](https://docs.nbold.co/articles/3505270-install-salestim-app-on-microsoft-teams)
-- [Azure AD application consent experience...](https://docs.microsoft.com/en-us/azure/active-directory/develop/application-consent-experience)
-- [Microsoft Graph permissions reference...](https://docs.microsoft.com/en-us/graph/permissions-reference)
 
 ## Understanding permissions scopes
 
@@ -105,6 +96,23 @@ graph TB
     classDef containers fill:#ADD8E6, stroke-width:0px;
         class srv containers
 ```
+
+---
+
+:::tip Understanding admin-restricted permissions
+Depending on the permission type (Delegated or Application), some high-privilege permissions in the Microsoft ecosystem are set to admin-restricted.  
+Examples of these kinds of permissions include the following:
+- Read all user's full profiles by using ```User.Read.All```
+- Write data to an organization's directory by using ```Directory.ReadWrite.All```
+- Read all groups in an organization's directory by using ```Groups.Read.All```
+
+For nBold to access data in Microsoft Graph, your administrator must grant it the correct permissions via a consent process.  
+
+Learn more:
+- [nBold Install and Setup Guide...](https://docs.nbold.co/articles/3505270-install-salestim-app-on-microsoft-teams)
+- [Azure AD application consent experience...](https://docs.microsoft.com/en-us/azure/active-directory/develop/application-consent-experience)
+- [Microsoft Graph permissions reference...](https://docs.microsoft.com/en-us/graph/permissions-reference)
+:::
 
 ## Basic scope
 
@@ -192,7 +200,7 @@ Due to some Microsoft Graph functional and technical limitations, nBold now reli
 Learn more about [Authentication and authorization basics for Microsoft Graph...](https://docs.microsoft.com/en-us/graph/auth/auth-concepts#microsoft-graph-permissions)
 
 **How we're securing it?**
-- **Least-Privilege Administrative Models**: Every single requested permission scope is documented and justified. See [Required Permissions](#required-permissions)
+- **Least-Privilege Administrative Models**: Every single requested permission scope is documented and justified.
 - **Authentication**: We're not storing any login / password combination, and service account configuration can only be performed by one of your administrators.
 
 **Minimal requirements**  
@@ -214,7 +222,7 @@ Service account optional requirements:
   * Why: To apply sensitivity labels to your teams/groups
 
 ::: tip
-Learn how to [setup the service account](https://docs.nbold.co/articles/3507462-set-up-the-service-account)
+Learn how to [setup the service account](/quickstart/set-up-the-service-account.md)
 :::
 
 ::: warning Password update and MFA (Multi-factor authentication)
@@ -226,7 +234,9 @@ Even if the service account is performing actions in the background (Such as pro
 - It is seen as the teams and associated resources (such as planner) creator
 - Its profile picture and name appear as the sender of notifications
 
-So choose the name you want, this can be the name of your IT Service for instance, and add a nice picture! :-)
+::: tip
+Choose the name you want, this can be the name of your IT Service for instance, and add a nice picture!
+:::
 
 ## Security Best practices
 

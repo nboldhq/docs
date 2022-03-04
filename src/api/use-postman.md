@@ -30,7 +30,7 @@ To import the Postman collection:
 4. Paste the following URL and choose **Import**.
 
 ```
-https://docs.nbold.co/api/production/definitions/open-api/apiDefinition.swagger.yaml
+https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/nbold-openapi.json
 ```
 
 You are now up and running with the nBold API collection.

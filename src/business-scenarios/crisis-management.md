@@ -89,6 +89,6 @@ Go on home page. Click on the "Create" option. You will see the Business option 
 3. Name the template and add a description to it. Add a welcome message that you want to be seen by the members of the team when they join the Team.
 4. Within seconds, your Teams matching your business need is up and running.
 
-![](/uploads/screenshot-2022-02-10-at-23-54-20.png)
+![](/media/screenshot-2022-02-10-at-23-54-20.png)
 
 _If you are doing that with a service account, no notification will be seen because you are the account that is creating the Team._

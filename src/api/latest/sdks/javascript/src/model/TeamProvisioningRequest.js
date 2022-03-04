@@ -23,7 +23,7 @@ import TeamProvisioningRequestTemplate from './TeamProvisioningRequestTemplate';
 class TeamProvisioningRequest {
     /**
      * Constructs a new <code>TeamProvisioningRequest</code>.
-     * A request to provision a team based on a template from your corporate catalog. See [https://docs.nbold.co/api/reference/Models/ProvisioningRequest](https://docs.nbold.co/api/reference/Models/ProvisioningRequest) for more information.
+     * A request to provision a team based on a template from your corporate catalog. See [https://docs.nbold.co/api/latest/reference/Models/ProvisioningRequest](https://docs.nbold.co/api/latest/reference/Models/ProvisioningRequest) for more information.
      * @alias module:model/TeamProvisioningRequest
      */
     constructor() { 
@@ -77,7 +77,7 @@ TeamProvisioningRequest.prototype['template'] = undefined;
 TeamProvisioningRequest.prototype['team'] = undefined;
 
 /**
- * Metadata from the app client as a JSON object. See [https://docs.nbold.co/api/reference/Models/AppMetadata](https://docs.nbold.co/api/reference/Models/VirtualAppMetadata) for more information.
+ * Metadata from the app client as a JSON object. See [https://docs.nbold.co/api/latest/reference/Models/AppMetadata](https://docs.nbold.co/api/latest/reference/Models/VirtualAppMetadata) for more information.
  * @member {Object} metadata
  */
 TeamProvisioningRequest.prototype['metadata'] = undefined;

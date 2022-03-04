@@ -11,7 +11,7 @@ position: 8
 
 The "Security & Privacy" tab defines the main security and privacy policy of your Business Solution:
 
-![](/uploads/screenshot-2022-02-12-at-03-17-30.png)
+![](/media/screenshot-2022-02-12-at-03-17-30.png)
 
 ## Enforced Teams Privacy
 

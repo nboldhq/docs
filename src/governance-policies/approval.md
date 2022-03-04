@@ -132,9 +132,9 @@ This options brings some valuable benefits and new options:
 - Integration with third-party apps
 
 To learn more about this option, please read the [Power Platform and Logic Apps Connectors](/connectors/) documentation, and refer to these connector's triggers that you can leverage from Microsoft Power Platform and Azure Logic Apps:
-- [When a Team Creation Approval is Requested](/connectors/connectors-actions.md#when-a-team-creation-approval-is-requested-🛃)
-- [When a Team Creation is Approved](/connectors/connectors-actions.md#when-a-team-creation-is-approved-✅)
-- [When a Team Creation is Rejected](/connectors/connectors-actions.md#when-a-team-creation-is-rejected-🚫)
+- [When a Team Creation Approval is Requested](/automation/automation-connectors-actions.md#when-a-team-creation-approval-is-requested-🛃)
+- [When a Team Creation is Approved](/automation/automation-connectors-actions.md#when-a-team-creation-is-approved-✅)
+- [When a Team Creation is Rejected](/automation/automation-connectors-actions.md#when-a-team-creation-is-rejected-🚫)
 
 ## Use your own custom app
 Instead of relying on Outlook actionable emails, you can use your own custom application to manage approval workflows.

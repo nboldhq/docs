@@ -15,15 +15,15 @@ So now we will show how you can apply them at the Collaboration Template level.
 
 1. Make sure your IT department created **sensitivity labels** with the right configuration.
 
-![](/uploads/screenshot-2022-01-27-at-10-17-53.png)
+![](/media/screenshot-2022-01-27-at-10-17-53.png)
 
 Verify that your labels can be applied to groups and sites.
 
-![](/uploads/screenshot-2022-01-27-at-10-25-02.png)
+![](/media/screenshot-2022-01-27-at-10-25-02.png)
 
 Define external sharing and user access settings.
 
-![](/uploads/screenshot-2022-01-27-at-10-22-51.png)
+![](/media/screenshot-2022-01-27-at-10-22-51.png)
 
 2\. Go to Microsoft Teams and log into your **nBold account**.
 
@@ -31,12 +31,12 @@ Define external sharing and user access settings.
 
 4\. Go to the `Compliance` tab and choose the relevant sensitivity label.
 
-![](/uploads/gif-restrict-guest-access.gif)
+![](/media/gif-restrict-guest-access.gif)
 
 5\. Create a **new team** **from this Template** and check out new features.
 
 So, with this sensitivity label applied, users won't be able to add externals to new teams created.
 
-![](/uploads/screenshot-2022-02-02-at-19-28-38.png)
+![](/media/screenshot-2022-02-02-at-19-28-38.png)
 
-![](/uploads/screenshot-2022-02-02-at-19-14-35.png)
+![](/media/screenshot-2022-02-02-at-19-14-35.png)

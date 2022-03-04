@@ -136,7 +136,7 @@ module.exports = {
         items: [
           { text: 'Get started', link: '/api/get-started' },
           { text: 'API Explorer', link: '/api/explorer' },
-          { text: 'API Reference', link: '/api/production/reference/' }
+          { text: 'API Reference', link: '/api/latest/reference/' }
         ]
       },
       { text: '🔐 Trust Center', link: '/trust-center/' },

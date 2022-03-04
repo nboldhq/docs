@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class PermanentMember {
     /**
      * Constructs a new <code>PermanentMember</code>.
-     * Object representing a permanent member. See See [https://docs.nbold.co/api/reference/Models/PermanentMember](https://docs.nbold.co/api/reference/Models/PermanentMember) for more information.
+     * Object representing a permanent member. See See [https://docs.nbold.co/api/latest/reference/Models/PermanentMember](https://docs.nbold.co/api/latest/reference/Models/PermanentMember) for more information.
      * @alias module:model/PermanentMember
      */
     constructor() { 
