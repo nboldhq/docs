@@ -31,7 +31,6 @@ sections:
 - type: document
   path: src/solutions/README.md
   label: Solutions - Homepage
-  match: "**/*"
 - type: directory
   path: src/solutions/sales
   label: Solutions - Sales
