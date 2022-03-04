@@ -2,6 +2,12 @@
   "ignorePatterns": [
     {
       "pattern": "^/src/api/sdks"
+    },
+    {
+      "pattern":"^http://localhost"
+    },
+    {
+      "pattern":"^https://localhost"
     }
   ],
   "replacementPatterns": [
