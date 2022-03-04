@@ -43,7 +43,7 @@ Templates are at the core of the nBold platform. As a rule of thumb, templates a
 A template may be created by yourself and saved in your private corporate catalog for internal use. We call this kind of template `Catalog Template`.
 
 ::: tip Learn more
-- See [How to create a new template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.md).
+- See [How to create a new template](/collaboration-templates/create-a-new-collaboration-template.md).
 :::
 
 ### Corporate Catalog

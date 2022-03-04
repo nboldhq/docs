@@ -13,7 +13,7 @@ position: 6
 The nBold API SDKs are designed to simplify building high-quality, efficient, and resilient applications that access the nBold API.  
 The service library contains models and request builders that are generated from the nBold API metadata to provide a rich, strongly typed, and discoverable experience when working with the many datasets available in the nBold API.
 
-To learn more about the nBold API, see [API Reference](https://docs.nbold.co/api) or try it online with our [API Explorer](https://docs.nbold.co/api/explorer).
+To learn more about the nBold API, see [API Reference](/api) or try it online with our [API Explorer](/api/explorer).
 
 ---
 

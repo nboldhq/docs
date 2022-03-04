@@ -41,7 +41,7 @@ Currently not supported with Private Channels in Collaboration Templates:
 
 ## 2. How to set up
 
-As described in the article [➕ Create a new Collaboration Template ](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html)you need first to create a Team that will stand for the Original Team, add everything needed as described. In addition, create the Private Channels needed.
+As described in the article [➕ Create a new Collaboration Template ](/collaboration-templates/create-a-new-collaboration-template..md)you need first to create a Team that will stand for the Original Team, add everything needed as described. In addition, create the Private Channels needed.
 
 Make sure you have added the Service Account as an owner of the team and the private channels.
 
@@ -71,4 +71,4 @@ So that as a result, in the team created with this template, this setting is off
 
 For a governance purpose, you may want to make sure that Private Channels are only created through Microsoft Template, and users won't be allowed to create a Private Channel for any purpose. With nBold you can enable that scenario.
 
-Learn more in this [dedicated article](/governance-policies/serve-private-channels.html) under the governance policy section.
+Learn more in this [dedicated article](/governance-policies/serve-private-channels.md) under the governance policy section.

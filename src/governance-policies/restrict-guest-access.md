@@ -27,7 +27,7 @@ Define external sharing and user access settings.
 
 2\. Go to Microsoft Teams and log into your **nBold account**.
 
-3\. Click on [**Create a Template**](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html)**.**
+3\. Click on [**Create a Template**](/collaboration-templates/create-a-new-collaboration-template.md)**.**
 
 4\. Go to the `Compliance` tab and choose the relevant sensitivity label.
 

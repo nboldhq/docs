@@ -195,7 +195,7 @@ graph BT
 ```
 
 ::: tip
-Learn more out how to operate a nBold infrastructure using our operations manual, especially [Updates management](../operations/updates_management) and [monitoring](../operations/monitoring)
+Learn more out how to operate a nBold infrastructure using our operations manual, especially [Updates management](/hosting/advanced/updating.md) and [monitoring](/hosting/advanced/monitoring.md)
 :::
 
 ## Design Principles

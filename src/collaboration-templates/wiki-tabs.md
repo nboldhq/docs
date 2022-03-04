@@ -38,7 +38,7 @@ Once the original team is created, you can remove the Wiki tab from it. Make sur
 
 ## **3. Add the team to the Template Catalog and configure Governance Policies**
 
-Here is [How to create a Collaboration Template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html) ⬅
+Here is [How to create a Collaboration Template](/collaboration-templates/create-a-new-collaboration-template.md) ⬅
 
 ## **4. Create a new team without Wiki tabs**
 

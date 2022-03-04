@@ -9,7 +9,7 @@ position: 5
 
 For a governance purpose, you may want to restrict Private Channels creation for users and make it available only through the ones you define in Templates. Users won't be allowed to create a Private Channel for any other purpose. Private Channels will be created only with the teams created through the defined templates.
 
-_If you want to know more on Private Channels in Collaboration Templates by nBold,_ [_learn more in the dedicated article_](https://docs.nbold.co/collaboration-templates/private-channels.html)_._
+_If you want to know more on Private Channels in Collaboration Templates by nBold,_ [_learn more in the dedicated article_](/collaboration-templates/private-channels.md)_._
 
 The only thing you need to do is first, to disable the ability for users to create a Private Channel, second, make sure that only _nBold_ App can create private channels.
 

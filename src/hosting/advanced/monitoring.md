@@ -93,7 +93,7 @@ To tailor this example, you can refer to Monika's [configuration](https://monika
 ### Azure Front Door
 [Azure Front Door](https://docs.microsoft.com/en-us/azure/frontdoor/) comes with health probes that are used to perform load-balancing and achieve failover in case of a container malfunction. Keep in mind that strictly speaking, **Azure Front Door is not an uptime monitoring app**.
 
-To see a detailed Azure Front Door configuration, see our [Azure resources reference](/hosting/references/azure-resources-reference) documentation.
+To see a detailed Azure Front Door configuration, see our [Azure resources reference](/hosting/references/azure-resources-reference.md) documentation.
 
 You can also refer to the Azure Front Door [Health probes](https://docs.microsoft.com/en-us/azure/frontdoor/front-door-health-probes) documentation.
 
@@ -105,19 +105,19 @@ For instance, with the default probe frequency of 30 seconds, the requests volum
 
 ## Logging
 
-Our platform comes with a configurable logging module that generates logs as configured by the [Logging configuration](/hosting/references/configuration-reference.html#logging).
+Our platform comes with a configurable logging module that generates logs as configured by the [Logging configuration](/hosting/references/configuration-reference.md).
 
 ::: warning Persisting log files
 Log files persistence is not enabled by default and we recommend to use an external log ingestion solution in production environments.
 :::
 
-As nBold comes with a native connector for Microsoft Application Insights, the easiest and recommended way to collect and centralize all the logs and traces, is to enable and configure the connector from the [Application Insights configuration](/hosting/references/configuration-reference.html#microsoft-application-insights).
+As nBold comes with a native connector for Microsoft Application Insights, the easiest and recommended way to collect and centralize all the logs and traces, is to enable and configure the connector from the [Application Insights configuration](/hosting/references/configuration-reference.md).
 
 Application Insights is part of the [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/overview) service and uses an Azure Log Analytics Workspace under the hood as a storage. From Application Insights, you can live-monitor the whole nBold platform, investigate issues using traces and events, detect performance bottlenecks... Learn more about [Microsoft Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
 
 ## Application Performance Monitoring (APM)
 
-As nBold comes with a native connector for Microsoft Application Insights, the easiest and recommended way to collect and centralize APM metrics, is to enable and configure the connector from the [Application Insights configuration](/hosting/references/configuration-reference.html#microsoft-application-insights).
+As nBold comes with a native connector for Microsoft Application Insights, the easiest and recommended way to collect and centralize APM metrics, is to enable and configure the connector from the [Application Insights configuration](/hosting/references/configuration-reference.md).
 
 Application Insights is part of the [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/overview) service and uses an Azure Log Analytics Workspace under the hood as a storage. From Application Insights, you can live-monitor the whole nBold platform, investigate issues using traces and events, detect performance bottlenecks... Learn more about [Microsoft Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
 
@@ -133,7 +133,7 @@ Prometheus has become widely known and used in software industries due to its op
 ### Collect application metrics
 To expose their metrics, each SalesTIm container exposes an HTTP endpoint at `/monitoring/metrics`, that answers to `GET` requests with a `200` response, using the [Prometheus](https://prometheus.io/) exporter format.
 
-Exported metrics could be configured from the [Prometheus Configuration](/references/configuration_reference.html#prometheus) options.
+Exported metrics could be configured from the [Prometheus Configuration](/references/configuration-reference.md) options.
 
 
 **Metrics exposed:**
@@ -149,7 +149,7 @@ Exported metrics could be configured from the [Prometheus Configuration](/refere
 :::
 
 ::: warning How to secure the metrics endpoint?
-In production, you can secure the `/monitoring/metrics` endpoint to prevent any technical information leak. To do so, define the `PROMETHEUS_EXPORTER_AUTH_TOKEN` property from the [Prometheus Configuration](/references/configuration_reference.html#prometheus) options.  
+In production, you can secure the `/monitoring/metrics` endpoint to prevent any technical information leak. To do so, define the `PROMETHEUS_EXPORTER_AUTH_TOKEN` property from the [Prometheus Configuration](/references/configuration-reference.md) options.  
 :::
 
 ::: tip
@@ -200,12 +200,12 @@ Of course, you can also use this technique to expose metrics from any Prometheus
 
 ## Auditing
 
-To see the list au audited events, you can refer to the [Events reference](/hosting/references/events_reference) documentation, and look for events with the `Tracking` configuration:
+To see the list au audited events, you can refer to the [Events reference](/hosting/references/events-reference.md) documentation, and look for events with the `Tracking` configuration:
 - Enabled: `true`
 - Audit trail: `true`
 
 ::: tip Exporting audit trails from the audit database
-Our [Events reference](/hosting/references/events_reference) documentation also specifies the mapping between an audited event and its representation in the audit database:
+Our [Events reference](/hosting/references/events-reference.md) documentation also specifies the mapping between an audited event and its representation in the audit database:
 - Table: Tracking `Code`
 - Columns: Tracking `Audited fields` 
 :::

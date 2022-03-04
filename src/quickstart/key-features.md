@@ -35,7 +35,7 @@ Features that IT will love! Microsoft Teams has been designed to address enterpr
 
 All the features described hereafter, are set at the template level:
 
-* [Naming Convention]( "https://docs.nbold.co/governance-policies/naming-conventions.html")
+* [Naming Convention]( "https://docs.nbold.co/governance-policies/naming-conventions.mdl")
 * [Teams Creation Approval]( "https://docs.nbold.co/governance-policies/approval.html")
 * [Template Audience Targeting]( "https://docs.nbold.co/governance-policies/audience-targeting.html")
 * Teams Compliance with [Sensitivity Labels](https://docs.nbold.co/governance-policies/sensitivity-labels.html)

@@ -432,7 +432,7 @@ function setUserAuthenticated(userInfos, profile) {
   userRoles.innerHTML = 'Roles:<br />'
   if (userInfos.roles && userInfos.roles.length > 0) {
     userInfos.roles.forEach((role, i) => {
-      userRoles.innerHTML += '<a href="/platform/rbac.html#roles">' +
+      userRoles.innerHTML += '<a href="/trust-center/authentication-and-access-control">' +
         '<span class="uk-label uk-text-small uk-text-lowercase uk-label-success">' +
         `<span uk-icon="icon: check; ratio: 0.7"></span>&nbsp;${role}&nbsp;` +
         '</span>' +
@@ -458,7 +458,7 @@ function setAppAuthenticated(token) {
   appRoles.innerHTML = 'Roles:<br />'
   if (token.roles && token.roles.length > 0) {
     token.roles.forEach((role, i) => {
-      appRoles.innerHTML += '<a href="/platform/rbac.html#roles">' +
+      appRoles.innerHTML += '<a href="/trust-center/authentication-and-access-control">' +
         '<span class="uk-label uk-text-small uk-text-lowercase uk-label-success">' +
         `<span uk-icon="icon: check; ratio: 0.7"></span>&nbsp;${role}&nbsp;` +
         '</span>' +

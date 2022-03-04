@@ -11,7 +11,7 @@ position: 1
 
 ## [1. Install nBold App on Microsoft Teams](https://docs.nbold.co/quickstart/install-the-app.html)
 
-## [2. Create a new Collaboration Template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html)
+## [2. Create a new Collaboration Template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.md)
 
 ###### You can find some inspiration in the **`Business Scenarios`** chapter.
 

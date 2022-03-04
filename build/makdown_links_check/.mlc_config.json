@@ -1,13 +1,19 @@
 {
   "ignorePatterns": [
     {
-      "pattern": "^/src/api/sdks"
+      "pattern": "^/src/api/latest/sdks"
+    },
+    {
+      "pattern": "^/src/api/latest/reference"
     },
     {
       "pattern":"^http://localhost"
     },
     {
       "pattern":"^https://localhost"
+    },
+    {
+      "pattern":"^https://api.salestim.io"
     }
   ],
   "replacementPatterns": [

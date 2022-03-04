@@ -40,7 +40,7 @@ N.B: To edit an existing Template, just click on its name from the list. The edi
 
 ## Create a Collaboration Template
 
-First, you would need to create the Original Team of the Template. This team will serve as a referral for the Template. Get in the dedicated [article all the steps to create the original team and the template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html).
+First, you would need to create the Original Team of the Template. This team will serve as a referral for the Template. Get in the dedicated [article all the steps to create the original team and the template](/collaboration-templates/create-a-new-collaboration-template.md).
 
 To create a new Collaboration Template, select "➕ New template"
 
@@ -70,7 +70,7 @@ Define the Naming settings with Team name, description and welcome message defau
 
 ![](/media/naming-convention.png)
 
-[Learn more about Naming Convention](https://docs.nbold.co/governance-policies/naming-conventions.html)
+[Learn more about Naming Convention](/governance-policies/naming-conventions.md)
 
 ### Teams Creation Approval Policy
 
@@ -78,7 +78,7 @@ Define the approval policy with an approver from your organization.
 
 ![](/media/teams-creation-approval-policy.png)
 
-[Learn more abo](https://docs.nbold.co/governance-policies/naming-conventions.html)
+[Learn more abo](/governance-policies/naming-conventions.md)
 
 ### Audience Targeting
 
@@ -94,7 +94,7 @@ Define sensitivity labels that are assigned to each team created from the Templa
 
 ![](/media/data-compliance.png)
 
-[Learn more about Sensitivity Labels](https://docs.nbold.co/governance-policies/sensitivity-labels.html)
+[Learn more about Sensitivity Labels](/governance-policies/sensitivity-labels.md)
 
 ### Teams Template Security Policy
 

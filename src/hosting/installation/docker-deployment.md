@@ -4,7 +4,7 @@
 Hosting nBold on a docker server is for educational purpose only and is not considered as a supported production environment.
 :::
 
-This tutorial assumes you've already installed the common prerequisites from the [Getting Started](./getting_started) guide.
+This tutorial assumes you've already installed the common prerequisites from the [Getting Started](/hosting/installation/get-started.md) guide.
 
 ## Docker prerequisites
 ::: tip

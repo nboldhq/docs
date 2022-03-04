@@ -56,7 +56,7 @@ Sign-in with your Microsoft 365 account from your organization that is granted t
 nBold does **NOT** supports personal Microsoft Accounts (for instance @outlook.com, @hotmail.com...).
 :::
 
-You're all set up! Now it's time to [create your first template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html) to try it out.
+You're all set up! Now it's time to [create your first template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.md) to try it out.
 
 You can also:
 

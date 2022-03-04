@@ -17,7 +17,7 @@ Based on your organization’s specific needs, you can create categories for var
 # How to apply them?
 
 1. Go to Microsoft Teams and log into your **_n_Bold account**.
-2. Click on [**Create a Template**](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html)**.**
+2. Click on [**Create a Template**](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.md)**.**
 3. Go to the **Compliance** tab.
 4. Simply type "**@**" and you'll be able to add any sensitivity label created in[ Microsoft 365 Security & Compliance Center ](https://protection.office.com/homepage)(in our example it is a Confidential Finance label that prevents people from sharing content in teams with externals).
 

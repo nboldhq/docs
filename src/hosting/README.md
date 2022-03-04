@@ -4,7 +4,7 @@ This documentation is for hosting our platform on your own servers and managing 
 
 This is different from [nBold Cloud](https://nbold.co) where we manage everything for your ease and convenience. Take a look at the [differences between nBold Cloud and Self-Hosted](./references/self_hosted_cloud_comparison).
 
-**To get started easily, please read our [Getting Started Guide](./deployment/getting_started).**
+**To get started easily, please read our [Getting Started Guide](/hosting/installation/get-started.md).**
 
 *Happy hosting!*
 

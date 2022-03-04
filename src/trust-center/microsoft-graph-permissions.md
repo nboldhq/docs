@@ -109,7 +109,7 @@ Examples of these kinds of permissions include the following:
 For nBold to access data in Microsoft Graph, your administrator must grant it the correct permissions via a consent process.  
 
 Learn more:
-- [nBold Install and Setup Guide...](https://docs.nbold.co/articles/3505270-install-salestim-app-on-microsoft-teams)
+- [nBold Install and Setup Guide...](/quickstart/install-the-app.md)
 - [Azure AD application consent experience...](https://docs.microsoft.com/en-us/azure/active-directory/develop/application-consent-experience)
 - [Microsoft Graph permissions reference...](https://docs.microsoft.com/en-us/graph/permissions-reference)
 :::
