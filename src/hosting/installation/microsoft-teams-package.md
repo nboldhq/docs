@@ -45,6 +45,4 @@ You can now go to Microsoft Teams and upload the package as a custom app.
 > Congrats! You can now use nBold from Microsoft Teams.
 
 ## Next steps
-At this stage, you should have a basic installation of nBold going. Optionally, with some extra configuration, you can add functionality to your instance:
-- To understand all the configuration options, see [Configuration Reference](../references/configuration_reference)
-- You can also [Setup our Connector for Power Platform](./power_platform_connector_deployment).
+At this stage, you should have a basic installation of nBold going. Optionally, with some extra configuration, you can add functionality to your instance. To understand all the configuration options, see [Configuration Reference](/hosting/references/configuration-reference.md)

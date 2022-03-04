@@ -138,7 +138,7 @@ user.groups.direct.some(group => group.id === ('a937979b-5dbb-4f54-a405-93604624
 ```
 
 ### Azure AD Schema Extension
-To use Azure AD schema extensions in your audience targeting rules, please refer to [this article](/nocode/ad-schema-extensions.md)
+To use Azure AD schema extensions in your audience targeting rules, please refer to [this article](/governance-policies/use-ad-schema-extensions.md)
 
 ## Validate and test your audience targeting rule
 

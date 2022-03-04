@@ -1,6 +1,6 @@
 # Azure Deployment
 
-This tutorial assumes you've already installed the common prerequisites from the [Getting Started](./getting_started) guide.
+This tutorial assumes you've already installed the common [prerequisites](/hosting/installation/prerequisites.md) guide.
 
 ## Azure prerequisites
 ::: tip
@@ -11,7 +11,7 @@ To follow this tutorial, you'll use the `az` [Azure Command-Line Interface](http
 
 ## Initialize the project
 
-After cloning our [Hosting](https://github.com/nboldhq/hosting) repository, open the azure project directory:
+After cloning our [Hosting](https://github.com/nboldhq) repository, open the azure project directory:
 ```bash
 cd ./terraform/azure
 ```
@@ -52,7 +52,7 @@ variable "MICROSOFT_APP_CLIENT_SECRET" {
 }
 ```
 
-For more information about all the available configuration settings, please refer to [Configuration Reference](../references/configuration_reference)
+For more information about all the available configuration settings, please refer to [Configuration Reference](/hosting/references/configuration-reference.md)
 
 ## Deploy
 Now that you've defined your minimal configuration, you're ready to deploy your brand new nBold environment.
@@ -80,4 +80,4 @@ docker ps
 > Congrats! You've now provisioned a full-featured nBold environment.
 
 ## Next steps
-At this stage, you should have a basic installation of nBold going. The latest step is to [generate your Microsoft Teams package](./teams_package)
+At this stage, you should have a basic installation of nBold going. The latest step is to [generate your Microsoft Teams package](/hosting/installation/microsoft-teams-package.md)

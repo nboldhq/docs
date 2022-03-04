@@ -7,7 +7,7 @@ author: Guillaume Meyer
 # How to use Active Directory Schema Extensions
 
 **ABSTRACT**  
-This article describes how you can leverage the nBold platform to create [naming conventions](/nocode/naming-conventions.md) and [audience targeting](/nocode/audience-targeting.md) rules based on user profiles Active Directory schema extensions (aka `extension attributes`).
+This article describes how you can leverage the nBold platform to create [naming conventions](/governance-policies/naming-conventions.md) and [audience targeting](/governance-policies/audience-targeting.md) rules based on user profiles Active Directory schema extensions (aka `extension attributes`).
 
 ::: warning
 This article only applies to `Azure Active Directory Schema Extensions`, that are different from the Microsoft Graph specific `Open extensions` and `Schema extensions`. To learn more about Microsoft Graph extensions, see [Add custom data to resources using extensions](https://docs.microsoft.com/en-us/graph/extensibility-overview).

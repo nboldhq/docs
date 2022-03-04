@@ -74,7 +74,7 @@ You need to enable the service account that you configured in nBold to be author
     ```xml
     <RSAKeyValue><Modulus>k0Qqob12HSdll52CbnXkQNW6nZO9477sE9pI8Y6z5M8hPtJinAf2r41Sxss3Y9oP1nzcfs3fHpi1AUjffyD44I2FxmqF+FGfgKsuWeYce/75Kb1QCEDOwTjP4kqgPD8NeJbWNIe2ZRRKilmxmmUZ6NErNEWvf8vzQvvpVeP9CLUIERuBxLlLlitjNTyCUjgTTkC+giKtmcxTnJ/lUav3erPsev8isS+IQwz6SaXCqj/eYnFkhM2ADF2UCL4ssgHEj6jYe4m8IyMQBgxxr4+4fziixn0uimGQqt54VbT4BToq7l7S8wSj3WNRwR7KBBWvo6pnx39fDMWazfLbe5NmsQ==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>
     ```
-    - Logo: **You can use the [nBold Logo](https://docs.nbold.co/color.png)**
+    - Logo: **You can use the [nBold Logo](https://docs.nbold.co/Logo_degrade_noir@4x.png)**
     
    ![nBold Approval Actionable Message New Provider Form](/img/nocode/approval-actionable-message-new-provider-form.png)
     
@@ -131,7 +131,7 @@ This options brings some valuable benefits and new options:
 - Dynamic approvers list (for instance based on the requester profile and manager) 
 - Integration with third-party apps
 
-To learn more about this option, please read the [Power Platform and Logic Apps Connectors](/connectors/) documentation, and refer to these connector's triggers that you can leverage from Microsoft Power Platform and Azure Logic Apps:
+To learn more about this option, please read the [Power Platform and Logic Apps Connectors](/automation/) documentation, and refer to these connector's triggers that you can leverage from Microsoft Power Platform and Azure Logic Apps:
 - [When a Team Creation Approval is Requested](/automation/automation-connectors-actions.md#when-a-team-creation-approval-is-requested-🛃)
 - [When a Team Creation is Approved](/automation/automation-connectors-actions.md#when-a-team-creation-is-approved-✅)
 - [When a Team Creation is Rejected](/automation/automation-connectors-actions.md#when-a-team-creation-is-rejected-🚫)

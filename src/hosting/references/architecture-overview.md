@@ -1,6 +1,6 @@
 # Architecture
 
-nBold is a multi-tier platform that relies on [independent services](./services_reference) to support high-availability and scale with ease.
+nBold is a multi-tier platform that relies on [independent services](/hosting/references/services-reference.md) to support high-availability and scale with ease.
 
 **TABLE OF CONTENTS**
 
@@ -125,8 +125,8 @@ graph TB
 
 Notes:
 - Azure containers could be hosted on either `Azure App Service` or `Azure Container Instances`
-- Deployment could be executed manually, using our Terraform [deployment project templates](../deployment/azure_deployment) for Azure, or using any orchestrator such as [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
-- A complete list of components is available in our [Azure deployment resources](../references/azure_resources_reference) documentation.
+- Deployment could be executed manually, using our Terraform [deployment project templates](/hosting/installation/azure-deployment.md) for Azure, or using any orchestrator such as [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
+- A complete list of components is available in our [Azure deployment resources](/hosting/references/azure-resources-reference.md) documentation.
 
 ## Monitoring components
 In addition to the previous architecture diagram, here we're presenting the most common additional operations services, for auditing, uptime monitoring and APM (Application Performance Management):

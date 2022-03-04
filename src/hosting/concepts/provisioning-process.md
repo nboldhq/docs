@@ -158,8 +158,8 @@ During the processing phase, the job provisions a new team and all the associate
 
 ::: tip Note
 Depending on the configuration defined from the `Settings` tab, the provisioning job could be executed in the security context of:
-- A registered service account. In this context, the provisioning job uses the permissions defined in the [Service account scope](../references/permissions.html#service-account-scope).
-- An Azure AD registered app. In this context, the provisioning job uses the permissions defined in the [Application scope](../references/permissions.html#application-scope).
+- A registered service account. In this context, the provisioning job uses the permissions defined in the [Service account scope](/trust-center/microsoft-graph-permissions.md.html#service-account-scope).
+- An Azure AD registered app. In this context, the provisioning job uses the permissions defined in the [Application scope](/trust-center/microsoft-graph-permissions.md.html#application-scope).
 :::
 
 ## Post-processing
@@ -176,4 +176,4 @@ During the different phases, the provisioning job generates events that are hand
 - The audit trails module creates a new record for each event
 - The notification module send a notification in the `general` channel of the created team
 
-To see the list of events generated during the provisioning process, please refer to our [events reference](../references/events_reference).
+To see the list of events generated during the provisioning process, please refer to our [events reference](/hosting/references/events_reference).

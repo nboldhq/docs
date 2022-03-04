@@ -176,8 +176,7 @@ module.exports = {
             { title: 'Prerequisites', path: '/hosting/installation/prerequisites' },
             { title: 'Docker deployment', path: '/hosting/installation/docker-deployment' },
             { title: 'Azure deployment', path: '/hosting/installation/azure-deployment' },
-            { title: 'Microsoft Teams package', path: '/hosting/installation/microsoft-teams-package' },
-            { title: 'Power Platform connector', path: '/hosting/installation/power-platform-connector' },
+            { title: 'Microsoft Teams package', path: '/hosting/installation/microsoft-teams-package' }
           ]
         },
         {
@@ -185,7 +184,7 @@ module.exports = {
           collapsable: true, // optional, defaults to true
           sidebarDepth: 1, // optional, defaults to 1
           children: [
-            { title: 'Grant consent on-behalf', path: '/hosting/advanced/grant-content-on-behalf-of-a-user' },
+            { title: 'Grant consent on-behalf', path: '/hosting/advanced/grant-consent-on-behalf-of-a-user' },
             { title: 'Monitoring', path: '/hosting/advanced/monitoring' },
             { title: 'Updating', path: '/hosting/advanced/updating' },
           ]
@@ -211,7 +210,6 @@ module.exports = {
             { title: 'Events', path: '/hosting/references/events-reference' },
             { title: 'Azure resources', path: '/hosting/references/azure-resources-reference' },
             { title: 'Docker resources', path: '/hosting/references/docker-resources-reference' },
-            { title: 'Permissions reference', path: '/hosting/references/permissions' },
             { title: 'Versioning', path: '/hosting/references/versioning' },
             { title: 'Cloud vs Self-Hosted', path: '/hosting/references/cloud-vs-self-hosted' },
           ]

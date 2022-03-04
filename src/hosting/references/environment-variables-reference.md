@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Thu, 24 Feb 2022 15:43:34 GMT*
+📆 *Generated: Fri, 04 Mar 2022 21:00:17 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -206,7 +206,7 @@ MICROSOFT_GRAPH_DEFAULT_SCOPE=https://graph.microsoft.com/.default
 --------------------------------------------------------------------------------
 
 # Mail
-# When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://docs.nbold.co/api/nocode/approval.html#approval-email-sent-by-your-organization
+# When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization
 
 # (boolean) Enable sending emails from the platform. Defaults to "false".
 MAIL_ENABLED=false
@@ -216,14 +216,14 @@ MAIL_PROVIDER=sendgrid
 MAIL_SECRET_KEY=
 # (string) Default email sender (FROM:). Defaults to "notifications@salestim.io".
 MAIL_SENDER=notifications@salestim.io
-# (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://docs.nbold.co/api/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "".
+# (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "".
 MAIL_ACTION_MSG_ORIGINATOR=
 
 # Webhooks
 # Webhooks advanced configuration
 
 # (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]".
-WEBHOOKS_USER_AGENT=nBold-Webhook/v4.16.0
+WEBHOOKS_USER_AGENT=nBold-Webhook/v4.17.0
 # (number) Interval in ms between two attempts. Defaults to "10000".
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to "2".
@@ -273,7 +273,7 @@ GITHUB_INTEGRATION_ENABLED=false
 # (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com".
 GITHUB_API_BASE_URL=https://api.github.com
 # (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]".
-GITHUB_USER_AGENT=nBold-GitHub/4.16.0
+GITHUB_USER_AGENT=nBold-GitHub/4.17.0
 # (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "".
 GITHUB_OWNER=
 # (string) GitHub repository where to create alert issues. Defaults to "".

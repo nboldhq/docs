@@ -44,7 +44,7 @@ terraform -v
 ```
 
 ## Get the deployment projects templates
-To get started quickly, clone locally the nBold [Hosting](https://github.com/nboldhq/hosting) repository as a starting point. It has everything you need to boot up your own nBold platform.
+To get started quickly, clone locally the nBold [Hosting](https://github.com/nboldhq) repository as a starting point. It has everything you need to boot up your own nBold platform.
 
 ```sh
 mkdir salestim && cd salestim
@@ -100,7 +100,7 @@ You should use the `Secret Value`, not the `Secret ID`!
 :::
 
 - Open the `API permissions` from the left menu and click `Add a permission` from the top bar
-- Select `Microsoft Graph`, then from the permissions list, select the appropriate permissions as described in our [Permissions References](../references/permissions) documentation.
+- Select `Microsoft Graph`, then from the permissions list, select the appropriate permissions as described in our [Permissions References](/trust-center/microsoft-graph-permissions.md) documentation.
 - Click `Add permissions`
 - Then click `Grant admin consent for...` then `Yes`
 
@@ -110,5 +110,5 @@ You're done, you've created your app registration for the nBold app. You should 
 
 ## Next steps
 Just follow the appropriate guide for your target deployment environment:
-- [Docker Deployment](./docker_deployment)
-- [Azure Deployment](./azure_deployment)
+- [Docker Deployment](/hosting/installation/docker-deployment.md)
+- [Azure Deployment](/hosting/installation/azure-deployment.md)

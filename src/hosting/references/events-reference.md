@@ -1,5 +1,5 @@
 # Events Reference
-📆 *Generated: Thu, 24 Feb 2022 15:43:34 GMT*
+📆 *Generated: Fri, 04 Mar 2022 21:00:17 GMT*
 
 
 This document lists all the events supported by the platform.

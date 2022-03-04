@@ -110,8 +110,8 @@ During the processing phase, the job applies if necessary the permanent membersh
 
 ::: tip Note
 Depending on the configuration defined from the `Settings` tab, the permanent membership policy job could be executed in the security context of:
-- A registered service account. In this context, the provisioning job uses the permissions defined in the [Service account scope](../references/permissions.html#service-account-scope).
-- An Azure AD registered app. In this context, the provisioning job uses the permissions defined in the [Application scope](../references/permissions.html#application-scope).
+- A registered service account. In this context, the provisioning job uses the permissions defined in the [Service account scope](/trust-center/microsoft-graph-permissions.md.html#service-account-scope).
+- An Azure AD registered app. In this context, the provisioning job uses the permissions defined in the [Application scope](/trust-center/microsoft-graph-permissions.md.html#application-scope).
 :::
 
 ## Post-processing
@@ -120,4 +120,4 @@ The permanent membership policy doesn't notify users directly to prevent duplica
 ## Outputs
 During the different phases, the permanent membership policy job generates events that are handled by the audit trails module, that creates a new record for each event.
 
-To see the list of events generated during the execution of the permanent membership policy job, please refer to our [events reference](../references/events_reference).
+To see the list of events generated during the execution of the permanent membership policy job, please refer to our [events reference](/hosting/references/events_reference).

@@ -18,8 +18,8 @@ It means that you can replicate all the folders' structure and documents across 
 
 ::: tip It's especially useful for:
 
-* [Project management templates](https://docs.nbold.co/business-scenarios/project-management-template.html)
-* [Sales proposal templates](https://docs.nbold.co/business-scenarios/deal-room-template.html)
+* [Project management templates](/business-scenarios/project-management.md)
+* [Sales proposal templates](/business-scenarios/deal-room.md)
   :::
 
 ## How to make it work?
@@ -28,8 +28,8 @@ It's so simple. Just add the files and the folders you want in each Teams channe
 
 This feature completes our preexisting files management capabilities for Microsoft Teams templates:
 
-* [📙📗📘 Office Documents and 💼 PDF Tabs in Microsoft Teams Template](https://help.salestim.com/articles/3561694-office-documents-and-pdf-tabs-in-microsoft-teams-template)
-* [📚 SharePoint Library Tab in Microsoft Teams Templates](https://help.salestim.com/articles/3561694-office-documents-and-pdf-tabs-in-microsoft-teams-template)
+* [📙📗📘 Office Documents and 💼 PDF Tabs in Microsoft Teams Template](/collaboration-templates/office-and-pdf-documents.md)
+* [📚 SharePoint Library Tab in Microsoft Teams Templates](/collaboration-templates/sharepoint-library.md)
 
 🙏🏼 Please try it and share your use case with us by 💬 chat.
 

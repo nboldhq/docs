@@ -1,9 +1,6 @@
 {
   "ignorePatterns": [
     {
-      "pattern": "^https://github.com/nboldhq/docs/"
-    },
-    {
       "pattern": "^/src/api/sdks"
     }
   ],
@@ -13,11 +10,11 @@
       "replacement": "{{BASEURL}}/src/"
     },
     {
-      "pattern": "^/img/",
+      "pattern": "^file:\/\/.*\/img\/",
       "replacement": "{{BASEURL}}/src/.vuepress/public/img/"
     },
     {
-      "pattern": "^/img/",
+      "pattern": "^file:\/\/.*\/media\/",
       "replacement": "{{BASEURL}}/src/.vuepress/public/media/"
     }
   ]

@@ -14,7 +14,7 @@ If your server doesn't come with Docker pre-installed, you can follow [their doc
 
 ## Initialize the project
 
-After cloning our [Hosting](https://github.com/nboldhq/hosting) repository, open the docker project directory:
+After cloning our [Hosting](https://github.com/nboldhq) repository, open the docker project directory:
 ```bash
 cd ./terraform/docker
 ```
@@ -55,7 +55,7 @@ variable "MICROSOFT_APP_CLIENT_SECRET" {
 }
 ```
 
-For more information about all the available configuration settings, please refer to [Configuration Reference](../references/configuration_reference)
+For more information about all the available configuration settings, please refer to [Configuration Reference](/hosting/references/configuration-reference.md)
 
 ## Deploy
 Now that you've defined your minimal configuration, you're ready to deploy your brand new nBold environment.

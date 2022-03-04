@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The job ID, auto-generated at creation | [optional] 
-**log** | **[String]** | A collection of JobLogsEntry. See [https://docs.nbold.co/api/reference/Models/JobLogs](https://docs.nbold.co/api/reference/Models/JobLogs) for more information. | [optional] 
+**log** | **[String]** | A collection of JobLogsEntry. See [https://docs.nbold.co/api/latest/reference/Models/JobLogs](https://docs.nbold.co/api/latest/reference/Models/JobLogs) for more information. | [optional] 
 **type** | **String** | The job type (for instance &#x60;ProvisioningRequest&#x60;) | [optional] 
 **status** | **String** | The job current status | [optional] 
 **progress** | **Number** | The job current progress | [optional] 

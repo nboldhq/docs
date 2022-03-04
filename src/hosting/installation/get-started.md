@@ -53,4 +53,4 @@ You should just have a basic understanding of the command-line and networking to
 This getting started tutorial will guide you through the different steps required to setup the minimal common prerequisites.
 
 ## Next steps
-Install the [common prerequisites](./common_prerequisites).
+Install the [common prerequisites](/hosting/installation/prerequisites.md).

@@ -93,7 +93,7 @@ To tailor this example, you can refer to Monika's [configuration](https://monika
 ### Azure Front Door
 [Azure Front Door](https://docs.microsoft.com/en-us/azure/frontdoor/) comes with health probes that are used to perform load-balancing and achieve failover in case of a container malfunction. Keep in mind that strictly speaking, **Azure Front Door is not an uptime monitoring app**.
 
-To see a detailed Azure Front Door configuration, see our [Azure resources reference](../references/azure_resources_reference) documentation.
+To see a detailed Azure Front Door configuration, see our [Azure resources reference](/hosting/references/azure-resources-reference) documentation.
 
 You can also refer to the Azure Front Door [Health probes](https://docs.microsoft.com/en-us/azure/frontdoor/front-door-health-probes) documentation.
 
@@ -105,19 +105,19 @@ For instance, with the default probe frequency of 30 seconds, the requests volum
 
 ## Logging
 
-Our platform comes with a configurable logging module that generates logs as configured by the [Logging configuration](../references/configuration_reference.html#logging).
+Our platform comes with a configurable logging module that generates logs as configured by the [Logging configuration](/hosting/references/configuration-reference.html#logging).
 
 ::: warning Persisting log files
 Log files persistence is not enabled by default and we recommend to use an external log ingestion solution in production environments.
 :::
 
-As nBold comes with a native connector for Microsoft Application Insights, the easiest and recommended way to collect and centralize all the logs and traces, is to enable and configure the connector from the [Application Insights configuration](../references/configuration_reference.html#microsoft-application-insights).
+As nBold comes with a native connector for Microsoft Application Insights, the easiest and recommended way to collect and centralize all the logs and traces, is to enable and configure the connector from the [Application Insights configuration](/hosting/references/configuration-reference.html#microsoft-application-insights).
 
 Application Insights is part of the [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/overview) service and uses an Azure Log Analytics Workspace under the hood as a storage. From Application Insights, you can live-monitor the whole nBold platform, investigate issues using traces and events, detect performance bottlenecks... Learn more about [Microsoft Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
 
 ## Application Performance Monitoring (APM)
 
-As nBold comes with a native connector for Microsoft Application Insights, the easiest and recommended way to collect and centralize APM metrics, is to enable and configure the connector from the [Application Insights configuration](../references/configuration_reference.html#microsoft-application-insights).
+As nBold comes with a native connector for Microsoft Application Insights, the easiest and recommended way to collect and centralize APM metrics, is to enable and configure the connector from the [Application Insights configuration](/hosting/references/configuration-reference.html#microsoft-application-insights).
 
 Application Insights is part of the [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/overview) service and uses an Azure Log Analytics Workspace under the hood as a storage. From Application Insights, you can live-monitor the whole nBold platform, investigate issues using traces and events, detect performance bottlenecks... Learn more about [Microsoft Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
 
@@ -200,12 +200,12 @@ Of course, you can also use this technique to expose metrics from any Prometheus
 
 ## Auditing
 
-To see the list au audited events, you can refer to the [Events reference](../references/events_reference) documentation, and look for events with the `Tracking` configuration:
+To see the list au audited events, you can refer to the [Events reference](/hosting/references/events_reference) documentation, and look for events with the `Tracking` configuration:
 - Enabled: `true`
 - Audit trail: `true`
 
 ::: tip Exporting audit trails from the audit database
-Our [Events reference](../references/events_reference) documentation also specifies the mapping between an audited event and its representation in the audit database:
+Our [Events reference](/hosting/references/events_reference) documentation also specifies the mapping between an audited event and its representation in the audit database:
 - Table: Tracking `Code`
 - Columns: Tracking `Audited fields` 
 :::
