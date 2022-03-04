@@ -1,4 +1,4 @@
-# Releases
+# Release process
 
 ---
 
@@ -18,7 +18,7 @@ Targeted release allows admins, change managers, or anyone else responsible for 
 - Use feature controls, where applicable, to control the release of updates to end users.
 
 ### Setup
-Access to targeted release is controlled by an [RBAC](/platform/rbac.md) policy. To grant a user access to targeted release features:
+Access to targeted release is controlled by an [RBAC](/trust-center/role-based-access-control.md) policy. To grant a user access to targeted release features:
 1. Open the `Settings` tab
 2. Open the `Roles (RBAC)` section
 3. Assign the `Change Manager` role to the user
@@ -49,13 +49,13 @@ Using this kind of rings has many advantages:
 
 Our versioning strategy adheres to [Semantic Versioning](https://semver.org/).  
 A version number may be comprised of 3 to 4 components and takes this form:
+
 ```
 MAJOR.MINOR.PATCH-BUILD
 ```
 
 Meaning of each component:
-  * MAJOR: version that includes incompatible changes (data schema, api signatures...)
-  * MINOR: version that includes functionality in a backwards-compatible manner
-  * PATCH: version that includes backwards-compatible bug fixes
-  * BUILD: incremental development-only version
-
+* MAJOR: version that includes incompatible changes (data schema, api signatures...)
+* MINOR: version that includes functionality in a backwards-compatible manner
+* PATCH: version that includes backwards-compatible bug fixes
+* BUILD: incremental development-only version

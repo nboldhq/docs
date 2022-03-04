@@ -1,41 +1,27 @@
 ---
 status: published
+tags: []
 author: Guillaume Meyer
-tags:
-- api
-- authentication
-- token
-position: 2
+
 ---
+# Network Security
 
-# Communication & Network Security
+**Abstract**
 
-## Network diagram
-In order to prepare your organization's network for nBold, here is an overview of the the different network flows involved:
+We understand that our customers need to be confident that they are communicating with nBold in a secure environment.
+This document outlines the key aspects of our network security.
 
-<img src="/img/platform/networkDiagram.png" style="width: 800px;">
+***
 
-This diagram is comprised of three forms of traffic.  
+**TABLE OF CONTENTS**
 
-### Regular Microsoft Teams flows (Purple lines)
+[[toc]]
 
-The Microsoft Teams client has two main flows, one for authentication against your Azure AD and one for Microsoft API.  
-**The flows are not impacted by nBold.**
+***
 
-### nBold's internal flows (Orange lines)
+## Communication security
 
-**These flows are entirely internal to nBold and have no impact on your network infrastructure.**
-
-### Flows between your organization's network and the nBold platform (Green lines)
-
-**All the traffic from and to the nBold platform uses HTTPS protocol on port 443.**  
-Here is a short description of each flow:
-1. *.salestim.io for the main app, *.nbold.co for online help contents
-2. *.msecnd.net and *..visualstudio.com for performance metrics analysis
-3. *.windows.net for blob cache storage
-4. *.microsoft.com for Microsoft Graph API access
-
-## Traffic encryption
+### Traffic encryption
 
 All the traffic from and to the nBold platform is encrypted (and HTTPS protocol enforced), using [TLS v1.2](https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices), ensuring secure communication between our customers and our platform. To do so, we’re using Azure Front Door as the only entry point to the app (web apps and API).
 
@@ -46,28 +32,30 @@ You can see a detailed report of our SSL certificate using this free online serv
 [Launch Qualys SSL Server Test](https://www.ssllabs.com/ssltest/analyze.html?d=app.salestim.io)
 :::
 
-## DDoS prevention
+### DDoS prevention
 
 While we've prevented rogue traffic from accessing our servers and network, it’s still possible for external services to block anyone else from using our service by creating a distributed, denial-of-service attack.  
 To prevent this, we're using Azure Traffic Manager as a first level of protection.  
 Learn more about [Azure Traffic Manager](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview)
 
-## Domains whitelisting
 
-We understand that our customers need to be confident that they are communicating with nBold in a secure environment. Domains whitelisting is one of the most effective methods of ensuring this and prevents any internet traffic intended for nBold from being hijacked or rerouted to a rogue website.  
-Our complete portfolio of domains are outlined below to help our customers configure their corporate web proxy.
+## Domains allow list
 
-::: tip Note
+Domains allow list is one of the most effective methods of ensuring this and prevents any internet traffic intended for nBold from being hijacked or rerouted to a rogue website.
+
+Our complete portfolio of domains is outlined below to help our customers configure their corporate network security components.
+
+::: warning Note
 This information is subject to change and we recommend that you check back quarterly for the addition of new domains.
 :::
 
-### nBold App
+### nBold App and API
 * Domains/Hosts: ***.salestim.io**
 * Justification/Purpose: nBold main web application for Microsoft Teams
 
-### nBold Docs
+### nBold Documentation
 * Domains/Hosts: ***.nbold.co**
-* Justification/Purpose: nBold documentation could be embedded into the Microsoft Teams app
+* Justification/Purpose: nBold documentation embedded into the Microsoft Teams app
 
 ### Microsoft Azure Application Insight
 * Domains/Hosts:
@@ -91,3 +79,37 @@ This information is subject to change and we recommend that you check back quart
   * ***.intercomcdn.com**
 * Justification/Purpose: Used by nBold to bring an embedded support system into the app, and connect end-users and administrators with our support team.
 
+## IP ranges
+
+IP ranges allow list is one of the most effective methods of ensuring this and prevents any internet traffic intended for nBold from being hijacked or rerouted to a rogue website.
+
+Our public app and API services are exposed and protected by Microsoft Azure Front Door. Therefore our public IP ranges are publicly documented by Microsoft.
+
+::: warning Note
+This information is subject to change and we recommend that you check back quarterly for the addition or update of IP ranges.
+:::
+
+### Manual download
+
+To retrieve them:
+- Download the [Azure IP Ranges and Service Tags](https://www.microsoft.com/en-us/download/details.aspx?id=56519) `json` file.
+- Locate the `AzureFrontDoor.Frontend` entry
+- Get IP ranges from the `addressPrefixes` property.
+
+You can also automate the extraction of these IP ranges, using one of these three options.
+
+### Automate via REST interface
+``` sh
+curl https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Network/locations/{location}/serviceTags?api-version=2020-07-01
+```
+
+### Automate via Powershell
+``` powershell
+Get-AzNetworkServiceTag -Location <String>
+```
+
+
+### Automate via az cli
+``` sh
+az network list-service-tags --location [--subscription]
+```

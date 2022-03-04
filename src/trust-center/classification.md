@@ -1,4 +1,4 @@
-# Classification Labels
+# Classification
 
 To get their work done, people at nBold collaborate with others both inside and outside the organization. This means that content roams everywhere, and when it roams, we want it to do so in a secure, protected way that meets our organization’s business and compliance policies.  
 

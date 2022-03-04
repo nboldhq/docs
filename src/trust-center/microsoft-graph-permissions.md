@@ -1,5 +1,12 @@
 # Microsoft Graph Permissions
 
+---
+
+**TABLE OF CONTENTS**
+[[toc]]
+
+---
+
 ## Admin-restricted permissions
 Depending on the permission type (Delegated or Application), some high-privilege permissions in the Microsoft ecosystem are set to admin-restricted.  
 Examples of these kinds of permissions include the following:
@@ -81,6 +88,7 @@ flowchart TB
 ```
 
 **Legend:**
+
 ```mermaid
 graph TB
     ext(Client)

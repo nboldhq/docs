@@ -1,4 +1,4 @@
-# Data Management Practices
+# Data management policy
 
 We understand that our customers need to be confident using our application, and be aware of our data collection practices.
 

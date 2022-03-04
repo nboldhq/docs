@@ -1,4 +1,4 @@
-# Known Issues
+# Known issues
 
 ::: tip
 In addition to this article that describes known issues with nBold, please refer to:
