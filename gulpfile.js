@@ -3,20 +3,21 @@
 // #region DECLARATIONS
 // Platform Dependencies
 const fs = require('fs')
+const path = require('path')
 const https = require('https')
+const { exec } = require('child_process')
 // External Dependencies
 const gulp = require('gulp')
+const glob = require('glob')
 const concat = require('gulp-concat')
 const YAML = require('yamljs')
 // Variables
-const ROOT_FOLDER = './'
-const SRC_FOLDER = ROOT_FOLDER + 'src/'
-const PUBLIC_FOLDER = SRC_FOLDER + '.vuepress/public/'
-const JS_FOLDER = PUBLIC_FOLDER + 'js/'
-const CSS_FOLDER = PUBLIC_FOLDER + 'css/'
+const ROOT_DIRECTORY = './'
+const SRC_DIRECTORY = ROOT_DIRECTORY + 'src/'
+const PUBLIC_DIRECTORY = SRC_DIRECTORY + '.vuepress/public/'
+const JS_DIRECTORY = PUBLIC_DIRECTORY + 'js/'
+const CSS_DIRECTORY = PUBLIC_DIRECTORY + 'css/'
 // #endregion DECLARATIONS
-
-// #region BUILD
 
 /**
  * Concatenate js dependencies in one file
@@ -30,14 +31,14 @@ const concatJs = (done) => {
     './node_modules/uikit/dist/js/uikit-icons.min.js'
   ])
     .pipe(concat('bundle.js'))
-    .pipe(gulp.dest(JS_FOLDER)).on('end', () => {
+    .pipe(gulp.dest(JS_DIRECTORY)).on('end', () => {
       done()
     })
   gulp.src([
     './node_modules/@microsoft/teams-js/dist/MicrosoftTeams.min.js'
   ])
     .pipe(concat('MicrosoftTeams.min.js'))
-    .pipe(gulp.dest(JS_FOLDER)).on('end', () => {
+    .pipe(gulp.dest(JS_DIRECTORY)).on('end', () => {
       done()
     })
   gulp.src([
@@ -45,7 +46,7 @@ const concatJs = (done) => {
     './node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js'
   ])
     .pipe(concat('swagger-viewer.bundle.js'))
-    .pipe(gulp.dest(JS_FOLDER)).on('end', () => {
+    .pipe(gulp.dest(JS_DIRECTORY)).on('end', () => {
       // done()
     })
   gulp.src([
@@ -54,7 +55,7 @@ const concatJs = (done) => {
     './src/.vuepress/public/js/authentication.js'
   ])
     .pipe(concat('authentication.bundle.js'))
-    .pipe(gulp.dest(JS_FOLDER)).on('end', () => {
+    .pipe(gulp.dest(JS_DIRECTORY)).on('end', () => {
       // done()
     })
 }
@@ -68,14 +69,14 @@ const concatCss = (done) => {
     './node_modules/uikit/dist/css/uikit.min.css'
   ])
     .pipe(concat('bundle.css'))
-    .pipe(gulp.dest(CSS_FOLDER)).on('end', () => {
+    .pipe(gulp.dest(CSS_DIRECTORY)).on('end', () => {
       done()
     })
   gulp.src([
     './node_modules/swagger-ui-dist/swagger-ui.css'
   ])
     .pipe(concat('swagger-viewer.bundle.css'))
-    .pipe(gulp.dest(CSS_FOLDER)).on('end', () => {
+    .pipe(gulp.dest(CSS_DIRECTORY)).on('end', () => {
       // done()
     })
 }
@@ -122,7 +123,7 @@ const convertOpenApiYamlToJson = (done) => {
 
 const downloadAssetsFromAppPlatformRepo = (done) => {
   try {
-    const REFERENCES_DIR = `${SRC_FOLDER}hosting/references`
+    const REFERENCES_DIR = `${SRC_DIRECTORY}hosting/references`
     const ASSETS_ROOT_URL = 'https://dist.salestim.io/assets'
     const assets = [
       'azure-resources-reference.md',
@@ -148,7 +149,62 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
   }
 }
 
-// #region EXPORTS
+const checkLinks = (done) => {
+  const files = glob.sync(`${ROOT_DIRECTORY}**/*.md`)
+
+  const items = []
+  files.forEach((file, i) => {
+    if (
+      file.indexOf('/node_modules/') === -1 && // Exclude node_modules
+      file.indexOf('/build/') === -1 &&
+      file.indexOf('/drafts/') === -1 &&
+      file.indexOf('/reference/') === -1 && // Exclude reference (auto-generated)
+      file.indexOf('/sdks/') === -1 // Exclude SDKs (auto-generated)
+    ) {
+      const filePath = path.join(__dirname, file)
+      const fileContent = fs.readFileSync(filePath, 'utf8')
+      items.push(
+        {
+          file: file,
+          content: fileContent
+        }
+      )
+    }
+  })
+
+  console.log(`✅ Analyzing ${items.length} markdown files...`)
+
+  let report = ''
+  let errorsCount = 0
+  items.forEach((item, i) => {
+    try {
+      console.log(`✅ Analyzing ${item.file} (#${i})...`)
+      const checkCommand = `npx --yes markdown-link-check ${item.file} --config ./build/makdown_links_check/.mlc_config.json --quiet`
+      exec(checkCommand, (error, stdout, stderr) => {
+        if (error) { // Only includes files containing errors
+          errorsCount++
+          report += stdout
+        }
+        // If it is the last file
+        if (i === items.length - 1) {
+          fs.writeFileSync('build/makdown_links_check/links_check.log', report)
+          console.log(`✅ ${items.length} markdown files analyzed, ${errorsCount} in error.`)
+          if (done) { done() }
+        }
+      })
+    } catch (err) { // Unexpected error
+      console.error('✅ Unexpected error in /gulpfile/checkLinks.', err)
+      // If it is the last one
+      if (i === items.length - 1) {
+        if (done) { done() }
+      }
+    }
+  })
+}
+
+exports.test = gulp.series(
+  checkLinks
+)
 
 exports.build = gulp.series(
   concatJs,
@@ -156,5 +212,3 @@ exports.build = gulp.series(
   convertOpenApiYamlToJson,
   downloadAssetsFromAppPlatformRepo
 )
-
-// #endregion EXPORTS

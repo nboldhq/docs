@@ -9,14 +9,14 @@ position: 1
 
 ##### In this article you'll find a recap of the steps needed to onboard on the app:
 
-## [1. Install nBold App on Microsoft Teams](https://docs.nbold.co/quickstart/install-the-app.html)
+## [1. Install nBold App on Microsoft Teams](/quickstart/install-the-app.md)
 
-## [2. Create a new Collaboration Template](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.md)
+## [2. Create a new Collaboration Template](/collaboration-templates/create-a-new-collaboration-template.md)
 
 ###### You can find some inspiration in the **`Business Scenarios`** chapter.
 
-## [3. Set up the Service Account](https://docs.nbold.co/quickstart/set-up-the-service-account.html)
+## [3. Set up the Service Account](/quickstart/set-up-the-service-account.md)
 
-## [4. Set up the Home Page](https://docs.nbold.co/quickstart/set-up-the-home-page.html) and deploy!
+## [4. Set up the Home Page](/quickstart/set-up-the-home-page.md) and deploy!
 
-You may need to whitelist the nBold domains, check 🏳 [Domain to whitelist](https://docs.nbold.co/trust-center/domainswhitelist.html)
+You may need to allow the nBold domains and IP ranges, check 🏳 [Network Security](/trust-center/network-security.md)
