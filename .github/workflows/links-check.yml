@@ -29,7 +29,7 @@ jobs:
       id: read_file
       uses: andstor/file-reader-action@v1
       with:
-        path: "build/makdown_links_check/links_check.log"
+        path: "./build/makdown_links_check/links_check.log"
 
     - name: Create report issue from log file
       uses: imjohnbo/issue-bot@v3
