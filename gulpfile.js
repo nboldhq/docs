@@ -186,7 +186,7 @@ const checkLinks = (done) => {
         processed++
         if (error) { // Only includes files containing errors
           errorsCount++
-          report += '📝 ' + stdout
+          report += '\n📝 ' + stdout
         }
         // If it is the last file
         if (processed === items.length - 1) {
