@@ -60,7 +60,7 @@ You're all set up! Now it's time to [create your first template](/collaboration-
 
 You can also:
 
-* [Set up the Home package](/quickstart/setup-the-home-package.md) to make it easier for your end-users.
+* [Set up the Home package](/quickstart/setup-the-home-page.md) to make it easier for your end-users.
 * [Delegate the Template Catalog administration](/quickstart/delegate-template-catalog-administration.md) to your business users.
 
 ***

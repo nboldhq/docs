@@ -752,7 +752,7 @@ resource "azurerm_app_service_plan" "monitoring" {
 ```
 
 ### Events Collector App Service
-The event collector app is used to collect and distribute the [application events](./EVENTS.md) and audit trails to a storage service.  
+The event collector app is used to collect and distribute the [application events](/hosting/references/events-reference.md) and audit trails to a storage service.  
 The following configuration creates a container for the [Jitsu](https://github.com/jitsucom/jitsu) service, using the [@jitsuco/server](https://jitsu.com/docs/deployment/deploy-with-docker/jitsu-server) standalone image.  
 It also creates a dedicated audit database for the events collector for isolation purposes.  
 [Learn more...](https://jitsu.com/docs/deployment/deploy-with-docker)

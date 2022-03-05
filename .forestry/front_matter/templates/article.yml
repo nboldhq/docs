@@ -51,5 +51,5 @@ pages:
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
 - src/quickstart/nbold-at-a-glance.md
 - src/quickstart/quick-steps-to-onboard.md
-- src/quickstart/set-up-the-service-account.md
+- src/quickstart/setup-the-service-account.md
 - src/quickstart/update-app-packages.md

@@ -35,14 +35,14 @@ Features that IT will love! Microsoft Teams has been designed to address enterpr
 
 All the features described hereafter, are set at the template level:
 
-* [Naming Convention]( "https://docs.nbold.co/governance-policies/naming-conventions.mdl")
-* [Teams Creation Approval]( "https://docs.nbold.co/governance-policies/approval.html")
-* [Template Audience Targeting]( "https://docs.nbold.co/governance-policies/audience-targeting.html")
-* Teams Compliance with [Sensitivity Labels](https://docs.nbold.co/governance-policies/sensitivity-labels.html)
-* Teams [Enforced Privacy Policy](https://docs.nbold.co/governance-policies/security-policy.html)
+* [Naming Convention](/governance-policies/naming-conventions.md)
+* [Teams Creation Approval](/governance-policies/approval.md)
+* [Template Audience Targeting](/governance-policies/audience-targeting.md)
+* Teams Compliance with [Sensitivity Labels](/governance-policies/sensitivity-labels.md)
+* Teams [Enforced Privacy Policy](/governance-policies/security-policy.md)
 * Teams Creation Requester as non-Owner
-* [Mandatory number of Owners and Members](https://docs.nbold.co/governance-policies/mandatory-number-of-owners-and-members.html)
-* [Permanent Owners and Permanent Members](https://docs.nbold.co/governance-policies/permanent-owners-and-members-policy.html)
+* [Mandatory number of Owners and Members](/governance-policies/mandatory-number-of-owners-and-members.md)
+* [Permanent Owners and Permanent Members](/governance-policies/permanent-owners-and-members-policy.md)
 
 ![](https://downloads.intercomcdn.com/i/o/462804740/66f3b89c10e5add4bf608298/Screenshot+2022-02-10+at+10.43.05.png)
 

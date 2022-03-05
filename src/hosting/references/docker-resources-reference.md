@@ -187,7 +187,7 @@ resource "docker_container" "cosmos_db" {
 ```
 
 ### Events collector service
-Jitsu may be used to collect and distribute the [application events](./EVENTS.md) and audit trails.
+Jitsu may be used to collect and distribute the [application events](/hosting/references/events-reference.md) and audit trails.
 The following configuration references an image and creates a container for the [Jitsu](https://github.com/jitsucom/jitsu) service, using the [@jitsuco/server](https://jitsu.com/docs/deployment/deploy-with-docker/jitsu-server) standalone image.
 For isolation purposes, it also provisions a specific PostgreSQL instance for the events database, based on the same image as the main database service.
 ```hcl
@@ -642,7 +642,7 @@ These optional services are used to monitor the performance of the application a
 ### Metrics collector
 ::: tip Tip
 In this example we're using [Prometheus](https://prometheus.io) as a metrics collector that could be used for alerting and basic reporting.
-For advanced dashboarding capabilities, you can use [Grafana](https://grafana.com) or [Kibana](https://kibana.com) connected to this Prometheus instance.
+For advanced dashboarding capabilities, you can use [Grafana](https://grafana.com) or [Kibana](https://www.elastic.co/kibana/) connected to this Prometheus instance.
 A similar configuration can be used to configure other services, such as [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor) and [Azure Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).
 :::
 

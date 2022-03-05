@@ -133,7 +133,7 @@ Prometheus has become widely known and used in software industries due to its op
 ### Collect application metrics
 To expose their metrics, each SalesTIm container exposes an HTTP endpoint at `/monitoring/metrics`, that answers to `GET` requests with a `200` response, using the [Prometheus](https://prometheus.io/) exporter format.
 
-Exported metrics could be configured from the [Prometheus Configuration](/references/configuration-reference.md) options.
+Exported metrics could be configured from the [Prometheus Configuration](/hosting/references/configuration-reference.md) options.
 
 
 **Metrics exposed:**
@@ -149,7 +149,7 @@ Exported metrics could be configured from the [Prometheus Configuration](/refere
 :::
 
 ::: warning How to secure the metrics endpoint?
-In production, you can secure the `/monitoring/metrics` endpoint to prevent any technical information leak. To do so, define the `PROMETHEUS_EXPORTER_AUTH_TOKEN` property from the [Prometheus Configuration](/references/configuration-reference.md) options.  
+In production, you can secure the `/monitoring/metrics` endpoint to prevent any technical information leak. To do so, define the `PROMETHEUS_EXPORTER_AUTH_TOKEN` property from the [Prometheus Configuration](/hosting/references/configuration-reference.md) options.  
 :::
 
 ::: tip

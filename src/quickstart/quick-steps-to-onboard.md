@@ -15,8 +15,8 @@ position: 1
 
 ###### You can find some inspiration in the **`Business Scenarios`** chapter.
 
-## [3. Set up the Service Account](/quickstart/set-up-the-service-account.md)
+## [3. Set up the Service Account](/quickstart/setup-the-service-account.md)
 
-## [4. Set up the Home Page](/quickstart/set-up-the-home-page.md) and deploy!
+## [4. Set up the Home Page](/quickstart/setup-the-home-page.md) and deploy!
 
 You may need to allow the nBold domains and IP ranges, check 🏳 [Network Security](/trust-center/network-security.md)

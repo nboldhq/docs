@@ -222,7 +222,7 @@ Service account optional requirements:
   * Why: To apply sensitivity labels to your teams/groups
 
 ::: tip
-Learn how to [setup the service account](/quickstart/set-up-the-service-account.md)
+Learn how to [setup the service account](/quickstart/setup-the-service-account.md)
 :::
 
 ::: warning Password update and MFA (Multi-factor authentication)

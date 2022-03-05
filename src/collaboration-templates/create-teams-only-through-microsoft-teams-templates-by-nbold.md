@@ -19,4 +19,4 @@ Yes, it is. The thing you need to know before proceeding is that you can't restr
 
 Following this [documentation by Microsoft](https://docs.microsoft.com/en-us/microsoft-365/solutions/manage-creation-of-groups), you'll be able to set only a group user (based on a security group) who will be able to create Office 365 and therefore teams, through the regular way.
 
-The only thing you must do is to make sure that the [Service Account](/quickstart/set-up-the-home-page.md) belongs to the security group that can create Office 365 Group in the tenant.
+The only thing you must do is to make sure that the [Service Account](/quickstart/setup-the-home-page.md) belongs to the security group that can create Office 365 Group in the tenant.
