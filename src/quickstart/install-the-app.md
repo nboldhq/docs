@@ -60,8 +60,8 @@ You're all set up! Now it's time to [create your first template](/collaboration-
 
 You can also:
 
-* [Set up the Home package](https://docs.nbold.co/quickstart/setup-the-home-package.html) to make it easier for your end-users.
-* [Delegate the Template Catalog administration](https://docs.nbold.co/quickstart/delegate-template-catalog-administration.html) to your business users.
+* [Set up the Home package](/quickstart/setup-the-home-package.md) to make it easier for your end-users.
+* [Delegate the Template Catalog administration](/quickstart/delegate-template-catalog-administration.md) to your business users.
 
 ***
 
