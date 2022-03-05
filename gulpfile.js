@@ -187,8 +187,10 @@ const checkLinks = (done) => {
         }
         // If it is the last file
         if (i === items.length - 1) {
-          fs.writeFileSync('build/makdown_links_check/links_check.log', report)
+          const outputFile = path.join(__dirname, './build/makdown_links_check/links_check.log')
+          fs.writeFileSync(outputFile, report)
           console.log(`✅ ${items.length} markdown files analyzed, ${errorsCount} in error.`)
+          console.log(`✅ Report written to ${outputFile} (wd: ${__dirname})`)
           if (done) { done() }
         }
       })

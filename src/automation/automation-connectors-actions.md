@@ -94,7 +94,7 @@ Get teams templates accessible to the connected user filtered by the audience ta
 * Rate Limit: <Badge text="Tier 2" type="warning" vertical="middle"/>
 * Roles: `AUTHENTICATED_USER`
 
-See [API Documentation](/api/latest/reference/Apis/CatalogApi.md#getmycatalogtemplates)
+See [API Documentation](/api/latest/reference/Apis/TeamsCatalogApi.md#getmycatalogtemplates)
 
 ### Get My Sensitivity Labels
 
@@ -105,7 +105,7 @@ Get my Microsoft 365 sensitivity labels.
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: `AUTHENTICATED_USER`
 
-See [API Documentation](/api/latest/reference/Apis/LabelsApi.md#getmylabels)
+See [API Documentation](/api/latest/reference/Apis/SensitivityLabelsApi.md#getmylabels)
 
 ### Get Users
 
@@ -281,4 +281,4 @@ Generate a signature from a secret and a webhook payload
 * Rate Limit: <Badge text="Tier 3" type="tip" vertical="middle"/>
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/latest/reference/Apis/HooksApi.md#generatehooksignature)
+See [API Documentation](/api/latest/reference/Apis/WebhooksApi.md#generatehooksignature)

@@ -83,4 +83,4 @@ docker ps
 > Congrats! You've now provisioned a full-featured nBold environment.
 
 ## Next steps
-At this stage, you should have a basic installation of nBold going. The latest step is to [generate your Microsoft Teams package](./teams_package)
+At this stage, you should have a basic installation of nBold going. The latest step is to [generate your Microsoft Teams package](/hosting/installation/microsoft-teams-package.md)

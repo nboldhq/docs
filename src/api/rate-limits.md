@@ -37,5 +37,5 @@ The specific limits described here are subject to change.
 
 When a threshold is exceeded, nBold API limits any further requests from that client for a period of time. When throttling occurs, nBold API returns HTTP status code 429 (Too many requests), and the requests fail.
 
-See the [Throttling Guidance](/api/throttling) article to understand how to properly handle throttled requests.
+See the [Throttling Guidance](/api/throttling.md) article to understand how to properly handle throttled requests.
 
