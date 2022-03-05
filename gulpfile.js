@@ -178,7 +178,7 @@ const checkLinks = (done) => {
   let errorsCount = 0
   items.forEach((item, i) => {
     try {
-      console.log(`✅ Analyzing ${item.file} (#${i})...`)
+      // console.log(`✅ Analyzing ${item.file} (#${i})...`)
       const checkCommand = `npx --yes markdown-link-check ${item.file} --config ./build/makdown_links_check/.mlc_config.json --quiet`
       exec(checkCommand, (error, stdout, stderr) => {
         if (error) { // Only includes files containing errors
@@ -187,10 +187,14 @@ const checkLinks = (done) => {
         }
         // If it is the last file
         if (i === items.length - 1) {
-          const outputFile = path.join(__dirname, './build/makdown_links_check/links_check.log')
-          fs.writeFileSync(outputFile, report)
-          console.log(`✅ ${items.length} markdown files analyzed, ${errorsCount} in error.`)
-          console.log(`✅ Report written to ${outputFile} (wd: ${__dirname})`)
+          const headerMessage = `✅ ${items.length} markdown files analyzed, ${errorsCount} in error.`
+          report = headerMessage + report
+          console.log(headerMessage)
+
+          // const outputFile = path.join(__dirname, './build/makdown_links_check/links_check.log')
+          // fs.writeFileSync(outputFile, report)
+          // console.log(`✅ Report written to ${outputFile} (wd: ${__dirname})`)
+
           if (done) { done() }
         }
       })

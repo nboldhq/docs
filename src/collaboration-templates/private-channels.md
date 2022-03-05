@@ -41,7 +41,7 @@ Currently not supported with Private Channels in Collaboration Templates:
 
 ## 2. How to set up
 
-As described in the article [➕ Create a new Collaboration Template ](/collaboration-templates/create-a-new-collaboration-template..md)you need first to create a Team that will stand for the Original Team, add everything needed as described. In addition, create the Private Channels needed.
+As described in the article [➕ Create a new Collaboration Template ](/collaboration-templates/create-a-new-collaboration-template.md)you need first to create a Team that will stand for the Original Team, add everything needed as described. In addition, create the Private Channels needed.
 
 Make sure you have added the Service Account as an owner of the team and the private channels.
 

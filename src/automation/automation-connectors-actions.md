@@ -94,7 +94,7 @@ Get teams templates accessible to the connected user filtered by the audience ta
 * Rate Limit: <Badge text="Tier 2" type="warning" vertical="middle"/>
 * Roles: `AUTHENTICATED_USER`
 
-See [API Documentation](/api/latest/reference/Apis/TeamsCatalogApi.md#getmycatalogtemplates)
+See [API Documentation](/api/latest/reference/Apis/TemplatesCatalogApi.md#getmycatalogtemplates)
 
 ### Get My Sensitivity Labels
 
