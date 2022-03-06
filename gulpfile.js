@@ -12,11 +12,14 @@ const glob = require('glob')
 const concat = require('gulp-concat')
 const YAML = require('yamljs')
 // Variables
-const ROOT_DIRECTORY = './'
-const SRC_DIRECTORY = ROOT_DIRECTORY + 'src/'
-const PUBLIC_DIRECTORY = SRC_DIRECTORY + '.vuepress/public/'
-const JS_DIRECTORY = PUBLIC_DIRECTORY + 'js/'
-const CSS_DIRECTORY = PUBLIC_DIRECTORY + 'css/'
+const ROOT_DIRECTORY = '.'
+const SRC_DIRECTORY = `${ROOT_DIRECTORY}/src`
+const PUBLIC_DIRECTORY = `${SRC_DIRECTORY}/.vuepress/public`
+const JS_DIRECTORY = `${PUBLIC_DIRECTORY}/js`
+const CSS_DIRECTORY = `${PUBLIC_DIRECTORY}/css`
+const API_DEFINITION_DIRECTORY = `${SRC_DIRECTORY}/api/latest/definition`
+const TRUST_CENTER_DIRECTORY = `${SRC_DIRECTORY}/trust-center`
+const REFERENCES_DIRECTORY = `${SRC_DIRECTORY}/hosting/references`
 // #endregion DECLARATIONS
 
 /**
@@ -25,8 +28,8 @@ const CSS_DIRECTORY = PUBLIC_DIRECTORY + 'css/'
  */
 const concatJs = (done) => {
   gulp.src([
-    './src/.vuepress/public/js/ga.js',
-    './src/.vuepress/public/js/intercom.js',
+    `${JS_DIRECTORY}/ga.js`,
+    `${JS_DIRECTORY}/intercom.js`,
     './node_modules/uikit/dist/js/uikit.min.js',
     './node_modules/uikit/dist/js/uikit-icons.min.js'
   ])
@@ -52,7 +55,7 @@ const concatJs = (done) => {
   gulp.src([
     './node_modules/msal/dist/msal.min.js',
     './node_modules/moment/min/moment.min.js',
-    './src/.vuepress/public/js/authentication.js'
+    `${JS_DIRECTORY}/authentication.js`
   ])
     .pipe(concat('authentication.bundle.js'))
     .pipe(gulp.dest(JS_DIRECTORY)).on('end', () => {
@@ -84,8 +87,8 @@ const concatCss = (done) => {
 const convertOpenApiYamlToJson = (done) => {
   try {
     const srcYamlFiles = [
-      './src/api/latest/definition/nbold-openapi.yaml',
-      './src/api/latest/definition/power-platform/apiDefinition.swagger.yaml'
+      `${API_DEFINITION_DIRECTORY}/nbold-openapi.yaml`,
+      `${API_DEFINITION_DIRECTORY}/power-platform/apiDefinition.swagger.yaml`
     ]
     for (let index = 0; index < srcYamlFiles.length; index++) {
       const srcYamlFile = srcYamlFiles[index] // eslint-disable-line
@@ -95,7 +98,7 @@ const convertOpenApiYamlToJson = (done) => {
         if (!err) {
           console.log('JSON file has been saved.')
           const openApiJson = YAML.parse(data)
-          fs.writeFile(targetJsonFile, JSON.stringify(openApiJson, null, 2), 'utf8', function (err) { // eslint-disable-line
+          fs.writeFile(targetJsonFile, JSON.stringify(openApiJson, null, 2), 'utf8', (err) => { // eslint-disable-line
             if (!err) {
               console.log('JSON file has been saved.')
               if (index === srcYamlFiles.length - 1) {
@@ -123,19 +126,48 @@ const convertOpenApiYamlToJson = (done) => {
 
 const downloadAssetsFromAppPlatformRepo = (done) => {
   try {
-    const REFERENCES_DIR = `${SRC_DIRECTORY}hosting/references`
-    const ASSETS_ROOT_URL = 'https://dist.salestim.io/assets'
+    const CDN_ROOT_URL = 'https://dist.salestim.io'
+    const ASSETS_ROOT_URL = `${CDN_ROOT_URL}/assets`
     const assets = [
-      'azure-resources-reference.md',
-      'configuration-reference.md',
-      'docker-resources-reference.md',
-      'environment-variables-reference.md',
-      'events-reference.md',
-      'services-reference.md'
+      {
+        file_name: 'CHANGELOG.md',
+        source: CDN_ROOT_URL,
+        destination: TRUST_CENTER_DIRECTORY
+      },
+      {
+        file_name: 'azure-resources-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'configuration-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'docker-resources-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'environment-variables-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'events-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'services-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      }
     ]
     assets.forEach((asset, i) => {
-      const file = fs.createWriteStream(`${REFERENCES_DIR}/${asset}`)
-      https.get(`${ASSETS_ROOT_URL}/${asset}`, (response) => {
+      const file = fs.createWriteStream(`${asset.destination}/${asset.file_name}`)
+      https.get(`${asset.source}/${asset.file_name}`, (response) => {
         response.pipe(file)
         if (i === assets.length - 1) {
           done()
@@ -150,7 +182,7 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
 }
 
 const checkLinks = (done) => {
-  const files = glob.sync(`${ROOT_DIRECTORY}**/*.md`)
+  const files = glob.sync(`${ROOT_DIRECTORY}/**/*.md`)
 
   const items = []
   files.forEach((file, i) => {
@@ -187,6 +219,9 @@ const checkLinks = (done) => {
         if (error) { // Only includes files containing errors
           errorsCount++
           report += stdout
+          console.log(`❌ Error in ${item.file}`)
+          console.log(error)
+          console.log(stderr)
         }
         // If it is the last file
         if (processed === items.length - 1) {

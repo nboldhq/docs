@@ -227,7 +227,28 @@ module.exports = {
         getSideBar('/governance-policies', 'Governance policies'),
         getSideBar('/automation', 'Automation'),
         getSideBar('/api', 'API'),
-        getSideBar('/trust-center', 'Trust center')
+        {
+          title: 'Trust Center',
+          collapsable: true, // optional, defaults to true
+          sidebarDepth: 1, // optional, defaults to 1
+          children: [
+            { title: 'Infrastructure services', path: '/trust-center/infrastructure-services' },
+            { title: 'Supported clients', path: '/trust-center/supported-clients' },
+            { title: 'Authentication and access control', path: '/trust-center/authentication-and-access-control' },
+            { title: 'Microsoft Graph permissions', path: '/trust-center/microsoft-graph-permissions' },
+            { title: 'Network security', path: '/trust-center/network-security' },
+            { title: 'Security policy', path: '/trust-center/security-policy' },
+            { title: 'Anti-malware policy', path: '/trust-center/anti-malware-policy' },
+            { title: 'Compliance and certifications', path: '/trust-center/compliance-and-certifications' },
+            { title: 'Privacy policy', path: '/trust-center/privacy-policy' },
+            { title: 'Secure software development lifecycle', path: '/trust-center/secure-software-development-life-cycle' },
+            { title: 'Release process', path: '/trust-center/release-process' },
+            { title: 'Changelog', path: '/trust-center/CHANGELOG' },
+            { title: 'Known issues', path: '/trust-center/known-issues' },
+            { title: 'Classification', path: '/trust-center/classification' },
+
+          ]
+        }
       ]
     }
   }
