@@ -39,7 +39,7 @@ To prevent this, we're using Azure Traffic Manager as a first level of protectio
 Learn more about [Azure Traffic Manager](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview)
 
 
-## Domains allow list
+## Trusted domains
 
 Domains allow list is one of the most effective methods of ensuring this and prevents any internet traffic intended for nBold from being hijacked or rerouted to a rogue website.
 
@@ -79,7 +79,7 @@ This information is subject to change and we recommend that you check back quart
   * ***.intercomcdn.com**
 * Justification/Purpose: Used by nBold to bring an embedded support system into the app, and connect end-users and administrators with our support team.
 
-## IP ranges
+## IP ranges allow list
 
 IP ranges allow list is one of the most effective methods of ensuring this and prevents any internet traffic intended for nBold from being hijacked or rerouted to a rogue website.
 
