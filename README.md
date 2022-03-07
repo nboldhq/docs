@@ -26,6 +26,9 @@ Deployment is automated by the [cicd](./.github/workflows/cicd.yml) GitHub Actio
 3. Push changes to the `published` branch
 4. The website is deployed by GitHub Pages
 
+### Links check
+After every push, a check is done from the public website at https://docs.nbold.co
+
 ## 📃 Change Log
 See [CHANGELOG](./CHANGELOG.md).
 
