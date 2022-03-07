@@ -41,3 +41,7 @@ jobs:
           app_location: "/dist"
           skip_app_build: true
           output_location: ""
+
+  # Call the links check workflow
+  call-links-check:
+    uses: ./.github/workflows/links-check.yml

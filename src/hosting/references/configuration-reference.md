@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Sat, 05 Mar 2022 04:04:53 GMT*
+📆 *Generated: Mon, 07 Mar 2022 01:42:23 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -8,7 +8,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 - **Status**: Defines if the option is required or optional.
 - **Description**: Description of the option mentionning its type and default value
 
-To help you get started, you can also download our [.env file template](./environment_variables) that you can use with any infrastructure-as-code solution.
+To help you get started, you can also download our [.env file template](/hosting/references/environment-variables-reference.md) that you can use with any infrastructure-as-code solution.
 
 
 **TABLE OF CONTENTS:**
