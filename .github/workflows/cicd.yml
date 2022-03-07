@@ -44,4 +44,5 @@ jobs:
 
   # Call the links check workflow
   call-links-check:
+    needs: build_deploy
     uses: ./.github/workflows/links-check.yml

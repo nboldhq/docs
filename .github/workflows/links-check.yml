@@ -40,7 +40,7 @@ jobs:
         with:
           assignees: "guillaumemeyer"
           labels: "links_check"
-          title: "Markdown Links Report"
+          title: "Website broken links report"
           body: ${{ steps.read_file.outputs.contents }}
           pinned: true
           close-previous: true
