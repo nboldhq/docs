@@ -16,7 +16,8 @@
   "scripts": {
     "ngrok": "./bin/ngrok/ngrok start std -config=./bin/ngrok/ngrok.yml",
     "dev": "node ./node_modules/vuepress/cli.js dev ./src  --port 3000 --no-clear-screen",
-    "test": "npm install -g markdown-link-check && gulp test > ./build/makdown_links_check/links_check.log",
+    "test:markdown": "npm install -g markdown-link-check && gulp test > ./build/makdown_links_check/links_check.log",
+    "test": "npx --yes broken-link-checker https://docs.nbold.co --recursive --ordered --exclude https://www.linkedin.com/company/nbold | grep 'Getting\\|BROKEN\\|Finished' > ./build/website_links_check/links_check.log",
     "build": "gulp build && npx openapi-generator-cli generate && node ./node_modules/vuepress/cli.js build ./src --no-cache",
     "export:docx": "bash ./build/exports/export_docx.sh",
     "export:pdf": "bash ./build/exports/export_pdf.sh",
@@ -33,7 +34,6 @@
     "@mr-hope/vuepress-plugin-copy-code": "^1.26.0",
     "@openapitools/openapi-generator-cli": "^2.4.26",
     "front-matter": "^4.0.2",
-    "glob": "^7.2.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "moment": "^2.29.1",

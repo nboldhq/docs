@@ -1,4 +1,4 @@
-name: Generate static assets, deploy to Azure Static Website and check for dead links in markdown files
+name: Generate static assets and deploy to Azure Static Website
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
         run: |
           npm install
 
-      - name: Build with VuePress
+      - name: Build static assets
         run: |
           npm run build
 
@@ -41,27 +41,3 @@ jobs:
           app_location: "/dist"
           skip_app_build: true
           output_location: ""
-
-      - name: Check all links in markdown files
-        id: check_markdown_links
-        run: |
-          npm run test
-
-      - name: "Read markdown-link-check log file"
-        id: read_file
-        uses: andstor/file-reader-action@v1
-        with:
-          path: "./build/makdown_links_check/links_check.log"
-
-      - name: Create report issue from log file
-        uses: imjohnbo/issue-bot@v3
-        with:
-          assignees: "guillaumemeyer"
-          labels: "links_check"
-          title: "Markdown Links Report"
-          body: ${{ steps.read_file.outputs.contents }}
-          pinned: true
-          close-previous: true
-          linked-comments: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

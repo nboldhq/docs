@@ -3,12 +3,9 @@
 // #region DECLARATIONS
 // Platform Dependencies
 const fs = require('fs')
-const path = require('path')
 const https = require('https')
-const { exec } = require('child_process')
 // External Dependencies
 const gulp = require('gulp')
-const glob = require('glob')
 const concat = require('gulp-concat')
 const YAML = require('yamljs')
 // Variables
@@ -180,70 +177,6 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
     done(err)
   }
 }
-
-const checkLinks = (done) => {
-  const files = glob.sync(`${ROOT_DIRECTORY}/**/*.md`)
-
-  const items = []
-  files.forEach((file, i) => {
-    if (
-      file.indexOf('/node_modules/') === -1 && // Exclude node_modules
-      file.indexOf('/build/') === -1 &&
-      file.indexOf('/drafts/') === -1 &&
-      file.indexOf('/reference/') === -1 && // Exclude reference (auto-generated)
-      file.indexOf('/sdks/') === -1 // Exclude SDKs (auto-generated)
-    ) {
-      const filePath = path.join(__dirname, file)
-      const fileContent = fs.readFileSync(filePath, 'utf8')
-      items.push(
-        {
-          file: file,
-          content: fileContent
-        }
-      )
-    }
-  })
-
-  console.log(`✅ Analyzing ${items.length} markdown files...`)
-
-  let report = ''
-  let processed = 0
-  let errorsCount = 0
-
-  items.forEach((item, i) => {
-    try {
-      // const checkCommand = `npx --yes markdown-link-check ${item.file} --config ./build/makdown_links_check/.mlc_config.json --quiet`
-      const checkCommand = `markdown-link-check ${item.file} --config ./build/makdown_links_check/.mlc_config.json --quiet`
-
-      exec(checkCommand, (error, stdout, stderr) => {
-        processed++
-        if (error) { // Only includes files containing errors
-          errorsCount++
-          report += stdout
-          console.log(`❌ Error in ${item.file}`)
-          console.log(error)
-          console.log(stderr)
-        }
-        // If it is the last file
-        if (processed === items.length - 1) {
-          const headerMessage = `✅ ${items.length} markdown files analyzed, ${errorsCount} in error.`
-          console.log(headerMessage + report)
-          if (done) { done() }
-        }
-      })
-    } catch (err) { // Unexpected error
-      console.error('✅ Unexpected error in /gulpfile/checkLinks.', err)
-      // If it is the last one
-      if (i === items.length - 1) {
-        if (done) { done() }
-      }
-    }
-  })
-}
-
-exports.test = gulp.series(
-  checkLinks
-)
 
 exports.build = gulp.series(
   concatJs,
