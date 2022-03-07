@@ -42,41 +42,26 @@ jobs:
           skip_app_build: true
           output_location: ""
 
-  markdown-link-check:
-    name: Check for dead links
-    needs: build_deploy
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        ref: main
+      - name: Check all links in markdown files
+        id: check_markdown_links
+        run: |
+          npm run test
 
-    - name: Install dependencies
-      run: |
-        npm install
+      - name: "Read markdown-link-check log file"
+        id: read_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: "./build/makdown_links_check/links_check.log"
 
-    - name: Check all links in markdown files
-      id: check_markdown_links
-      run: |
-        npm run test
-
-    - name: "Read markdown-link-check log file"
-      id: read_file
-      uses: andstor/file-reader-action@v1
-      with:
-        path: "./build/makdown_links_check/links_check.log"
-
-    - name: Create report issue from log file
-      uses: imjohnbo/issue-bot@v3
-      with:
-       assignees: "guillaumemeyer"
-       labels: "links_check"
-       title: "Markdown Links Report"
-       body: ${{ steps.read_file.outputs.contents }}
-       pinned: true
-       close-previous: true
-       linked-comments: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create report issue from log file
+        uses: imjohnbo/issue-bot@v3
+        with:
+          assignees: "guillaumemeyer"
+          labels: "links_check"
+          title: "Markdown Links Report"
+          body: ${{ steps.read_file.outputs.contents }}
+          pinned: true
+          close-previous: true
+          linked-comments: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

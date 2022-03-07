@@ -212,8 +212,9 @@ const checkLinks = (done) => {
 
   items.forEach((item, i) => {
     try {
-      // console.log(`✅ Analyzing ${item.file} (#${i})...`)
-      const checkCommand = `npx --yes markdown-link-check ${item.file} --config ./build/makdown_links_check/.mlc_config.json --quiet`
+      // const checkCommand = `npx --yes markdown-link-check ${item.file} --config ./build/makdown_links_check/.mlc_config.json --quiet`
+      const checkCommand = `markdown-link-check ${item.file} --config ./build/makdown_links_check/.mlc_config.json --quiet`
+
       exec(checkCommand, (error, stdout, stderr) => {
         processed++
         if (error) { // Only includes files containing errors
@@ -227,11 +228,6 @@ const checkLinks = (done) => {
         if (processed === items.length - 1) {
           const headerMessage = `✅ ${items.length} markdown files analyzed, ${errorsCount} in error.`
           console.log(headerMessage + report)
-
-          // const outputFile = path.join(__dirname, './build/makdown_links_check/links_check.log')
-          // fs.writeFileSync(outputFile, report)
-          // console.log(`✅ Report written to ${outputFile} (wd: ${__dirname})`)
-
           if (done) { done() }
         }
       })
