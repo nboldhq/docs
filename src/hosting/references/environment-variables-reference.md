@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Mon, 07 Mar 2022 01:42:23 GMT*
+📆 *Generated: Mon, 07 Mar 2022 01:49:47 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).

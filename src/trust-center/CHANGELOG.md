@@ -2,582 +2,582 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [4.17.0](https://github.com/SalesTim/app-platform/compare/v4.16.0...v4.17.0) (2022-03-04)
+## [4.17.0](https://github.com/nboldhq/app-platform/compare/v4.16.0...v4.17.0) (2022-03-04)
 
 
 ### 🐛 Bug Fixes
 
-* **packages:** fixed manifest rendering in json format ([f489706](https://github.com/SalesTim/app-platform/commit/f4897064885478af584b39956e693d10a464796d))
-* **packages:** fixed settings tab name in manifests ([e033c49](https://github.com/SalesTim/app-platform/commit/e033c498f257a4b210805f2329fff2e4cd6adb6f))
-* **provisioning:** fix planner provisioning issue ([7d9b83a](https://github.com/SalesTim/app-platform/commit/7d9b83aab74f314f6192a2738d991196f807d637))
+* **packages:** fixed manifest rendering in json format ([f489706](https://github.com/nboldhq/app-platform/commit/f4897064885478af584b39956e693d10a464796d))
+* **packages:** fixed settings tab name in manifests ([e033c49](https://github.com/nboldhq/app-platform/commit/e033c498f257a4b210805f2329fff2e4cd6adb6f))
+* **provisioning:** fix planner provisioning issue ([7d9b83a](https://github.com/nboldhq/app-platform/commit/7d9b83aab74f314f6192a2738d991196f807d637))
 
 
 ### 🚀 Features
 
-* **onenote:** oneNote tabs are now cloned just as other Office tabs ([92ab7a7](https://github.com/SalesTim/app-platform/commit/92ab7a78be614077176625f8273f67beb3b0e5c8))
+* **onenote:** oneNote tabs are now cloned just as other Office tabs ([92ab7a7](https://github.com/nboldhq/app-platform/commit/92ab7a78be614077176625f8273f67beb3b0e5c8))
 
 
 ### 📚 Docs
 
-* **contributing:** updated contributing guide ([4dd9535](https://github.com/SalesTim/app-platform/commit/4dd9535867f610d5ff2bffe7ea41420bbc403662))
-* **docs references:** updated generated assets for docs site ([faa5d03](https://github.com/SalesTim/app-platform/commit/faa5d036a69bf282880e0bc657279df9046ba451))
+* **contributing:** updated contributing guide ([4dd9535](https://github.com/nboldhq/app-platform/commit/4dd9535867f610d5ff2bffe7ea41420bbc403662))
+* **docs references:** updated generated assets for docs site ([faa5d03](https://github.com/nboldhq/app-platform/commit/faa5d036a69bf282880e0bc657279df9046ba451))
 
-## [4.16.0](https://github.com/SalesTim/app-platform/compare/v4.15.0...v4.16.0) (2022-02-14)
-
-
-### 🐛 Bug Fixes
-
-* **packages:** updated packages to remove the docs tab and the configurable tab ([53352d0](https://github.com/SalesTim/app-platform/commit/53352d0e53f081dd7efb40cbcc536587ec397d25))
-
-
-### 🚀 Features
-
-* **i18n:** integrated updates from i18n ([4408e06](https://github.com/SalesTim/app-platform/commit/4408e06ee2691325a11ff6a0744e24db13ec2e4b))
-
-## [4.15.0](https://github.com/SalesTim/app-platform/compare/v4.14.0...v4.15.0) (2022-02-14)
-
-
-### 🚀 Features
-
-* **packages:** packages version is now synchronized with the platform version ([c1b37ff](https://github.com/SalesTim/app-platform/commit/c1b37ff13c12dcca3c7e2a137b6b980a26f9de91))
-
-## [4.14.0](https://github.com/SalesTim/app-platform/compare/v4.13.0...v4.14.0) (2022-02-13)
-
-## [4.13.0](https://github.com/SalesTim/app-platform/compare/v4.12.0...v4.13.0) (2022-02-13)
+## [4.16.0](https://github.com/nboldhq/app-platform/compare/v4.15.0...v4.16.0) (2022-02-14)
 
 
 ### 🐛 Bug Fixes
 
-* **cdn:** updated production cdn assets ([975dc30](https://github.com/SalesTim/app-platform/commit/975dc30d03f568894b652cab4c4b4aa25caaa1d1))
+* **packages:** updated packages to remove the docs tab and the configurable tab ([53352d0](https://github.com/nboldhq/app-platform/commit/53352d0e53f081dd7efb40cbcc536587ec397d25))
+
+
+### 🚀 Features
+
+* **i18n:** integrated updates from i18n ([4408e06](https://github.com/nboldhq/app-platform/commit/4408e06ee2691325a11ff6a0744e24db13ec2e4b))
+
+## [4.15.0](https://github.com/nboldhq/app-platform/compare/v4.14.0...v4.15.0) (2022-02-14)
+
+
+### 🚀 Features
+
+* **packages:** packages version is now synchronized with the platform version ([c1b37ff](https://github.com/nboldhq/app-platform/commit/c1b37ff13c12dcca3c7e2a137b6b980a26f9de91))
+
+## [4.14.0](https://github.com/nboldhq/app-platform/compare/v4.13.0...v4.14.0) (2022-02-13)
+
+## [4.13.0](https://github.com/nboldhq/app-platform/compare/v4.12.0...v4.13.0) (2022-02-13)
+
+
+### 🐛 Bug Fixes
+
+* **cdn:** updated production cdn assets ([975dc30](https://github.com/nboldhq/app-platform/commit/975dc30d03f568894b652cab4c4b4aa25caaa1d1))
 
 
 ### 📚 Docs
 
-* **licences:** updated licences mentions to SalesTim SAS ([85c71c7](https://github.com/SalesTim/app-platform/commit/85c71c7c2c50725e1e5ec78693a98c7ce0d79a7a))
+* **licences:** updated licences mentions to SalesTim SAS ([85c71c7](https://github.com/nboldhq/app-platform/commit/85c71c7c2c50725e1e5ec78693a98c7ce0d79a7a))
 
-## [4.12.0](https://github.com/SalesTim/app-platform/compare/v4.11.0...v4.12.0) (2022-02-10)
+## [4.12.0](https://github.com/nboldhq/app-platform/compare/v4.11.0...v4.12.0) (2022-02-10)
 
 
 ### 🐛 Bug Fixes
 
-* **homepage:** fixed issue preventing the homepage to load ([2344d13](https://github.com/SalesTim/app-platform/commit/2344d1334662256184448311486e27d51bb35015)), closes [#1096](https://github.com/SalesTim/app-platform/issues/1096)
+* **homepage:** fixed issue preventing the homepage to load ([2344d13](https://github.com/nboldhq/app-platform/commit/2344d1334662256184448311486e27d51bb35015)), closes [#1096](https://github.com/nboldhq/app-platform/issues/1096)
 
-## [4.11.0](https://github.com/SalesTim/app-platform/compare/v4.10.0...v4.11.0) (2022-02-10)
+## [4.11.0](https://github.com/nboldhq/app-platform/compare/v4.10.0...v4.11.0) (2022-02-10)
 
 
 ### 🏭 Build System
 
-* **packages:** updated dev packages to include a docs tab ([b62de1c](https://github.com/SalesTim/app-platform/commit/b62de1ccd071e44d18777f880b4c961fab0a0e28))
+* **packages:** updated dev packages to include a docs tab ([b62de1c](https://github.com/nboldhq/app-platform/commit/b62de1ccd071e44d18777f880b4c961fab0a0e28))
 
 
 ### 🐛 Bug Fixes
 
-* **docs:** fixed events_reference doc generation ([69efd2f](https://github.com/SalesTim/app-platform/commit/69efd2ff6582d32148c6a1f0c2b55f65568d6810))
+* **docs:** fixed events_reference doc generation ([69efd2f](https://github.com/nboldhq/app-platform/commit/69efd2ff6582d32148c6a1f0c2b55f65568d6810))
 
 
 ### 🚀 Features
 
-* **branding:** updated all references to salestim to nbold ([7fa4943](https://github.com/SalesTim/app-platform/commit/7fa494377e0320d431d20624685e48e76168e240))
+* **branding:** updated all references to salestim to nbold ([7fa4943](https://github.com/nboldhq/app-platform/commit/7fa494377e0320d431d20624685e48e76168e240))
 
-## [4.10.0](https://github.com/SalesTim/app-platform/compare/v4.9.0...v4.10.0) (2022-02-08)
+## [4.10.0](https://github.com/nboldhq/app-platform/compare/v4.9.0...v4.10.0) (2022-02-08)
 
 
 ### 🐛 Bug Fixes
 
-* **provisioning:** fixed tab configuration after MS graph update ([c57f24d](https://github.com/SalesTim/app-platform/commit/c57f24dfcb9edddbf24c37d2f5fa50bd7be45a65)), closes [#1108](https://github.com/SalesTim/app-platform/issues/1108)
+* **provisioning:** fixed tab configuration after MS graph update ([c57f24d](https://github.com/nboldhq/app-platform/commit/c57f24dfcb9edddbf24c37d2f5fa50bd7be45a65)), closes [#1108](https://github.com/nboldhq/app-platform/issues/1108)
 
 
 ### 📦 CI
 
-* **docs:** updated build script to generate docs assets ([ce7856f](https://github.com/SalesTim/app-platform/commit/ce7856f531606fd8d1d2732be926ae9be217c95f))
-* **references:** included all assets from app-platform repo into build ([977800b](https://github.com/SalesTim/app-platform/commit/977800becc75ffda4453707895b3de91a4d2a323))
+* **docs:** updated build script to generate docs assets ([ce7856f](https://github.com/nboldhq/app-platform/commit/ce7856f531606fd8d1d2732be926ae9be217c95f))
+* **references:** included all assets from app-platform repo into build ([977800b](https://github.com/nboldhq/app-platform/commit/977800becc75ffda4453707895b3de91a4d2a323))
 
-## [4.9.0](https://github.com/SalesTim/app-platform/compare/v4.8.1...v4.9.0) (2022-02-08)
+## [4.9.0](https://github.com/nboldhq/app-platform/compare/v4.8.1...v4.9.0) (2022-02-08)
 
 
 ### 📚 Docs
 
-* **changelog:** removed breaking change alert from a previous commit ([adabd64](https://github.com/SalesTim/app-platform/commit/adabd6404e926d2fdae51cb48798efe7bf1be57c))
-* **permissions:** updated the list of permissions scopes in the "hosting" documentation ([84d67d0](https://github.com/SalesTim/app-platform/commit/84d67d085eb06f62388ad6d501db6c9317d7e146))
+* **changelog:** removed breaking change alert from a previous commit ([adabd64](https://github.com/nboldhq/app-platform/commit/adabd6404e926d2fdae51cb48798efe7bf1be57c))
+* **permissions:** updated the list of permissions scopes in the "hosting" documentation ([84d67d0](https://github.com/nboldhq/app-platform/commit/84d67d085eb06f62388ad6d501db6c9317d7e146))
 
 
 ### 🛠️ Code Refactoring
 
-* **connected-apps:** removed references to the @salestim/connected-apps module ([31017ca](https://github.com/SalesTim/app-platform/commit/31017ca2d0a3dd4e9b98b4c8353362f7d558406a))
+* **connected-apps:** removed references to the @salestim/connected-apps module ([31017ca](https://github.com/nboldhq/app-platform/commit/31017ca2d0a3dd4e9b98b4c8353362f7d558406a))
 
 
 ### 🚀 Features
 
-* **branding:** updated packages logo and tabs to match the nbold brand ([1090604](https://github.com/SalesTim/app-platform/commit/1090604a46ef8abf35624702fc3a7853168d5591))
+* **branding:** updated packages logo and tabs to match the nbold brand ([1090604](https://github.com/nboldhq/app-platform/commit/1090604a46ef8abf35624702fc3a7853168d5591))
 
-### [4.8.1](https://github.com/SalesTim/app-platform/compare/v4.8.0...v4.8.1) (2022-01-25)
+### [4.8.1](https://github.com/nboldhq/app-platform/compare/v4.8.0...v4.8.1) (2022-01-25)
 
 
 ### 🏭 Build System
 
-* **dependencies:** bump node-fetch from 2.6.1 to 2.6.7 ([38458ce](https://github.com/SalesTim/app-platform/commit/38458ceee2f36407e9e330d588f4bd53fa9fb7e3))
-* **deps:** bump node-fetch from 2.6.1 to 2.6.7 in /src/libs/github ([c74459b](https://github.com/SalesTim/app-platform/commit/c74459bee88463e382bbc3a5caa24ab694c5deef))
-* **deps:** bump node-fetch from 2.6.1 to 2.6.7 in /src/libs/webhooks ([8a06244](https://github.com/SalesTim/app-platform/commit/8a06244e348f0abafbbafc73550d5e47a2cb2550))
+* **dependencies:** bump node-fetch from 2.6.1 to 2.6.7 ([38458ce](https://github.com/nboldhq/app-platform/commit/38458ceee2f36407e9e330d588f4bd53fa9fb7e3))
+* **deps:** bump node-fetch from 2.6.1 to 2.6.7 in /src/libs/github ([c74459b](https://github.com/nboldhq/app-platform/commit/c74459bee88463e382bbc3a5caa24ab694c5deef))
+* **deps:** bump node-fetch from 2.6.1 to 2.6.7 in /src/libs/webhooks ([8a06244](https://github.com/nboldhq/app-platform/commit/8a06244e348f0abafbbafc73550d5e47a2cb2550))
 
-## [4.8.0](https://github.com/SalesTim/app-platform/compare/v4.7.0...v4.8.0) (2022-01-25)
+## [4.8.0](https://github.com/nboldhq/app-platform/compare/v4.7.0...v4.8.0) (2022-01-25)
 
 ### 🏭 Build System
 
-* **npx:** updated all references to `npx` in `package.json` to include the `--yes` option ([10e69b0](https://github.com/SalesTim/app-platform/commit/10e69b0305c9c9fe6fd9850b0b37e4825587b8bc))
+* **npx:** updated all references to `npx` in `package.json` to include the `--yes` option ([10e69b0](https://github.com/nboldhq/app-platform/commit/10e69b0305c9c9fe6fd9850b0b37e4825587b8bc))
 
 
 ### 🚀 Features
 
-* **channels:** clone channel settings as part of the provisioning process [#592](https://github.com/SalesTim/app-platform/issues/592) ([f7369bc](https://github.com/SalesTim/app-platform/commit/f7369bc5b750d2553bbc44bf361d85df3f16a8f9))
-* **naming convention:** added console logging to preview naming conventions and see detailed errors ([9e30f7b](https://github.com/SalesTim/app-platform/commit/9e30f7bb5fc44aff8339c85a33f1956804126c98))
-* **service account:** force account selection during service account update ([3a1aed5](https://github.com/SalesTim/app-platform/commit/3a1aed5c2124d18e23373e014e1888c4260475bf))
-* **service account:** users granted as `teams_service_admin` now can access and manage app settings ([ac1d28b](https://github.com/SalesTim/app-platform/commit/ac1d28b6f0d3b98bf05666d4a858e8ca470bbcc6)), closes [#1062](https://github.com/SalesTim/app-platform/issues/1062)
+* **channels:** clone channel settings as part of the provisioning process [#592](https://github.com/nboldhq/app-platform/issues/592) ([f7369bc](https://github.com/nboldhq/app-platform/commit/f7369bc5b750d2553bbc44bf361d85df3f16a8f9))
+* **naming convention:** added console logging to preview naming conventions and see detailed errors ([9e30f7b](https://github.com/nboldhq/app-platform/commit/9e30f7bb5fc44aff8339c85a33f1956804126c98))
+* **service account:** force account selection during service account update ([3a1aed5](https://github.com/nboldhq/app-platform/commit/3a1aed5c2124d18e23373e014e1888c4260475bf))
+* **service account:** users granted as `teams_service_admin` now can access and manage app settings ([ac1d28b](https://github.com/nboldhq/app-platform/commit/ac1d28b6f0d3b98bf05666d4a858e8ca470bbcc6)), closes [#1062](https://github.com/nboldhq/app-platform/issues/1062)
 
 
 ### 🐛 Bug Fixes
 
-* **provisioning:** fix: Settings not copied as part of the provisioning ([1b98c41](https://github.com/SalesTim/app-platform/commit/1b98c417319cf32a326b4ace042ae4d4ab0cf067)), closes [#1079](https://github.com/SalesTim/app-platform/issues/1079)
-* **security:** any unexpected error in web or app is now managed to prevent debug info leak ([4c3191a](https://github.com/SalesTim/app-platform/commit/4c3191a6a316c98f4e87782bb5988a5726a10360))
-* **security:** excessive error verbosity (ISMS [#39](https://github.com/SalesTim/app-platform/issues/39)) ([86a208d](https://github.com/SalesTim/app-platform/commit/86a208d890b8b1a5ffbe7731fc3aa3672da3179c))
-* **security:** preparation for fixing potential XSS security issue ([14b0212](https://github.com/SalesTim/app-platform/commit/14b0212ee77cc1cc73f4b444ce240fcba7191537))
-* **service account:** disabled cache for `organization` API endpoints ([6626ce5](https://github.com/SalesTim/app-platform/commit/6626ce545a8d68711d1f6f65bbc9d549e7a74987)), closes [#1086](https://github.com/SalesTim/app-platform/issues/1086)
+* **provisioning:** fix: Settings not copied as part of the provisioning ([1b98c41](https://github.com/nboldhq/app-platform/commit/1b98c417319cf32a326b4ace042ae4d4ab0cf067)), closes [#1079](https://github.com/nboldhq/app-platform/issues/1079)
+* **security:** any unexpected error in web or app is now managed to prevent debug info leak ([4c3191a](https://github.com/nboldhq/app-platform/commit/4c3191a6a316c98f4e87782bb5988a5726a10360))
+* **security:** excessive error verbosity (ISMS [#39](https://github.com/nboldhq/app-platform/issues/39)) ([86a208d](https://github.com/nboldhq/app-platform/commit/86a208d890b8b1a5ffbe7731fc3aa3672da3179c))
+* **security:** preparation for fixing potential XSS security issue ([14b0212](https://github.com/nboldhq/app-platform/commit/14b0212ee77cc1cc73f4b444ce240fcba7191537))
+* **service account:** disabled cache for `organization` API endpoints ([6626ce5](https://github.com/nboldhq/app-platform/commit/6626ce545a8d68711d1f6f65bbc9d549e7a74987)), closes [#1086](https://github.com/nboldhq/app-platform/issues/1086)
 
-## [4.7.0](https://github.com/SalesTim/app-platform/compare/v4.6.0...v4.7.0) (2021-12-11)
+## [4.7.0](https://github.com/nboldhq/app-platform/compare/v4.6.0...v4.7.0) (2021-12-11)
 
 
 ### 🐛 Bug Fixes
 
-* **permanent_membership:** fixed help label displaying the maximum number of permanent members ([683048e](https://github.com/SalesTim/app-platform/commit/683048e52043e721699614ef159a80b31036a001))
+* **permanent_membership:** fixed help label displaying the maximum number of permanent members ([683048e](https://github.com/nboldhq/app-platform/commit/683048e52043e721699614ef159a80b31036a001))
 
-## [4.6.0](https://github.com/SalesTim/app-platform/compare/v4.5.0...v4.6.0) (2021-12-11)
+## [4.6.0](https://github.com/nboldhq/app-platform/compare/v4.5.0...v4.6.0) (2021-12-11)
 
-## [4.5.0](https://github.com/SalesTim/app-platform/compare/v4.4.1...v4.5.0) (2021-12-11)
+## [4.5.0](https://github.com/nboldhq/app-platform/compare/v4.4.1...v4.5.0) (2021-12-11)
 
 
 ### 🚀 Features
 
-* **permanent_membership:** updated permanent membership limit to 30 owners and 50 members ([3f2b24b](https://github.com/SalesTim/app-platform/commit/3f2b24b004c700d663b64c6f42a235894e71d23a)), closes [#1068](https://github.com/SalesTim/app-platform/issues/1068)
+* **permanent_membership:** updated permanent membership limit to 30 owners and 50 members ([3f2b24b](https://github.com/nboldhq/app-platform/commit/3f2b24b004c700d663b64c6f42a235894e71d23a)), closes [#1068](https://github.com/nboldhq/app-platform/issues/1068)
 
 
 ### 🐛 Bug Fixes
 
-* **private_channels:** fixed reuester not added to private channels ([85e983d](https://github.com/SalesTim/app-platform/commit/85e983d1b370b2e26d2fc713abae71f9a5115e71)), closes [#914](https://github.com/SalesTim/app-platform/issues/914)
-* **provisioning:** fixed app installation issue ([0450461](https://github.com/SalesTim/app-platform/commit/0450461ab84210cf53746a66478e42a4607ede10))
+* **private_channels:** fixed reuester not added to private channels ([85e983d](https://github.com/nboldhq/app-platform/commit/85e983d1b370b2e26d2fc713abae71f9a5115e71)), closes [#914](https://github.com/nboldhq/app-platform/issues/914)
+* **provisioning:** fixed app installation issue ([0450461](https://github.com/nboldhq/app-platform/commit/0450461ab84210cf53746a66478e42a4607ede10))
 
-### [4.4.1](https://github.com/SalesTim/app-platform/compare/v4.4.0...v4.4.1) (2021-12-09)
+### [4.4.1](https://github.com/nboldhq/app-platform/compare/v4.4.0...v4.4.1) (2021-12-09)
 
 
 ### 🐛 Bug Fixes
 
-* **cdn:** fixed cdn production version ([e56f9e1](https://github.com/SalesTim/app-platform/commit/e56f9e1a93c96347781569d38f11474d5166dc6e))
-* **jobs:** prevent jobs deletion on complete ([7d13b2b](https://github.com/SalesTim/app-platform/commit/7d13b2b24276d35626662a7864d021befd6ca129))
+* **cdn:** fixed cdn production version ([e56f9e1](https://github.com/nboldhq/app-platform/commit/e56f9e1a93c96347781569d38f11474d5166dc6e))
+* **jobs:** prevent jobs deletion on complete ([7d13b2b](https://github.com/nboldhq/app-platform/commit/7d13b2b24276d35626662a7864d021befd6ca129))
 
-## [4.4.0](https://github.com/SalesTim/app-platform/compare/v4.3.0...v4.4.0) (2021-12-09)
+## [4.4.0](https://github.com/nboldhq/app-platform/compare/v4.3.0...v4.4.0) (2021-12-09)
 
 
 ### 🧪 Tests
 
-* **auth:** added mocks for Microsoft Identity platform API to fully isolate tests ([858269e](https://github.com/SalesTim/app-platform/commit/858269eb0e398af9a029192666e57cca540590c0))
-* **db:** mocked Sequelize module using `sequelize-mock` to isolate unit tests ([f5c8386](https://github.com/SalesTim/app-platform/commit/f5c8386c940d4b27aeea328c10579f3454fa46ff))
-* **github:** mocked github api to isolate unit tests ([4e2a5db](https://github.com/SalesTim/app-platform/commit/4e2a5db28bcebc53d79cf3ec0017cd3950c3540f))
+* **auth:** added mocks for Microsoft Identity platform API to fully isolate tests ([858269e](https://github.com/nboldhq/app-platform/commit/858269eb0e398af9a029192666e57cca540590c0))
+* **db:** mocked Sequelize module using `sequelize-mock` to isolate unit tests ([f5c8386](https://github.com/nboldhq/app-platform/commit/f5c8386c940d4b27aeea328c10579f3454fa46ff))
+* **github:** mocked github api to isolate unit tests ([4e2a5db](https://github.com/nboldhq/app-platform/commit/4e2a5db28bcebc53d79cf3ec0017cd3950c3540f))
 
 
 ### Others
 
-* **merge:** fixed merge issue ([4bc341c](https://github.com/SalesTim/app-platform/commit/4bc341c2ef062e8a8e5776d15d7beec53ee12b18))
+* **merge:** fixed merge issue ([4bc341c](https://github.com/nboldhq/app-platform/commit/4bc341c2ef062e8a8e5776d15d7beec53ee12b18))
 
 
 ### 🚀 Features
 
-* **analytics:** included analytics script based on plausible (self-hosted) ([6e4f841](https://github.com/SalesTim/app-platform/commit/6e4f841705a472a25dfb73625eba6ffb1a675fdf))
-* **analytics:** new analytics capabilities based on self-hosted [Plausible](https://plausible.io) ([89f8607](https://github.com/SalesTim/app-platform/commit/89f8607636d7a6091bd4a313f62bb2e344117bbe))
-* **logs:** added LOG_PERSISTENCY_DIRECTORY option to define logs location if persistency is enabled ([d4a5c2a](https://github.com/SalesTim/app-platform/commit/d4a5c2aaac90e6c668611d1d6bcd3b3d28458e8a))
-* **prometheus:** prometheus exporter now supports X-Auth-Token to secure the /metrics endpoint ([239043d](https://github.com/SalesTim/app-platform/commit/239043dbb18d59fd741527e45bfefe5ec73b5f9c))
+* **analytics:** included analytics script based on plausible (self-hosted) ([6e4f841](https://github.com/nboldhq/app-platform/commit/6e4f841705a472a25dfb73625eba6ffb1a675fdf))
+* **analytics:** new analytics capabilities based on self-hosted [Plausible](https://plausible.io) ([89f8607](https://github.com/nboldhq/app-platform/commit/89f8607636d7a6091bd4a313f62bb2e344117bbe))
+* **logs:** added LOG_PERSISTENCY_DIRECTORY option to define logs location if persistency is enabled ([d4a5c2a](https://github.com/nboldhq/app-platform/commit/d4a5c2aaac90e6c668611d1d6bcd3b3d28458e8a))
+* **prometheus:** prometheus exporter now supports X-Auth-Token to secure the /metrics endpoint ([239043d](https://github.com/nboldhq/app-platform/commit/239043dbb18d59fd741527e45bfefe5ec73b5f9c))
 
 
 ### ⚡ Performance Improvements
 
-* **prometheus:** disabled gc metrics as there is a dep incompatibility with `prometheus-gc-stats` ([9f58ae1](https://github.com/SalesTim/app-platform/commit/9f58ae1b9ce965aa5d74a560d30647779746460f))
+* **prometheus:** disabled gc metrics as there is a dep incompatibility with `prometheus-gc-stats` ([9f58ae1](https://github.com/nboldhq/app-platform/commit/9f58ae1b9ce965aa5d74a560d30647779746460f))
 
 
 ### 📦 CI
 
-* **dependabot:** updated dependabot.yml to not exclude dev-dependencies and improve PR tagging ([8ad1c9f](https://github.com/SalesTim/app-platform/commit/8ad1c9f3daf9eccde437b5b071aa7106d10635b1))
-* **deps:** assets rebuilt ([67cf5cc](https://github.com/SalesTim/app-platform/commit/67cf5cc6df31f1f00b039befd635885f0137dc25))
-* **docker:** added github action to build push docker image to azure and gh registries ([f9d4386](https://github.com/SalesTim/app-platform/commit/f9d4386b75d6bc329018886aac811d88c9f17b1d))
-* **jobs:** reschedules jobs in PRD ([3bd4469](https://github.com/SalesTim/app-platform/commit/3bd4469a052c10bf818d8ba069c9cda01a5e326d))
-* **prometheus:** enabled prometheus exporter for all environments ([9045259](https://github.com/SalesTim/app-platform/commit/9045259b7c2aeb656d2ec1a3c2cebb384bbe3515))
-* **prometheus:** included npm rebuild in GH action for INT to rebuild native components ([36010fc](https://github.com/SalesTim/app-platform/commit/36010fcf84b71dfc444b50057aa997ef094131cb))
-* **redis:** pPR now targets the non-production redis server ([e7fe447](https://github.com/SalesTim/app-platform/commit/e7fe4472e9a8e0959fda92caf6cc8b1065c6421d))
-* **terraform:** updated terraform azure provider and added new resources ([0931ff7](https://github.com/SalesTim/app-platform/commit/0931ff7e6632db2489f74f34dad5a75691f48f97))
+* **dependabot:** updated dependabot.yml to not exclude dev-dependencies and improve PR tagging ([8ad1c9f](https://github.com/nboldhq/app-platform/commit/8ad1c9f3daf9eccde437b5b071aa7106d10635b1))
+* **deps:** assets rebuilt ([67cf5cc](https://github.com/nboldhq/app-platform/commit/67cf5cc6df31f1f00b039befd635885f0137dc25))
+* **docker:** added github action to build push docker image to azure and gh registries ([f9d4386](https://github.com/nboldhq/app-platform/commit/f9d4386b75d6bc329018886aac811d88c9f17b1d))
+* **jobs:** reschedules jobs in PRD ([3bd4469](https://github.com/nboldhq/app-platform/commit/3bd4469a052c10bf818d8ba069c9cda01a5e326d))
+* **prometheus:** enabled prometheus exporter for all environments ([9045259](https://github.com/nboldhq/app-platform/commit/9045259b7c2aeb656d2ec1a3c2cebb384bbe3515))
+* **prometheus:** included npm rebuild in GH action for INT to rebuild native components ([36010fc](https://github.com/nboldhq/app-platform/commit/36010fcf84b71dfc444b50057aa997ef094131cb))
+* **redis:** pPR now targets the non-production redis server ([e7fe447](https://github.com/nboldhq/app-platform/commit/e7fe4472e9a8e0959fda92caf6cc8b1065c6421d))
+* **terraform:** updated terraform azure provider and added new resources ([0931ff7](https://github.com/nboldhq/app-platform/commit/0931ff7e6632db2489f74f34dad5a75691f48f97))
 
 
 ### 🛠️ Code Refactoring
 
-* **i18n:** removed references to DE in packages ([4e95d1a](https://github.com/SalesTim/app-platform/commit/4e95d1a94711dd055b524831a7b1f02baff9a9c1))
-* **webclient:** moved webclient to /src/client to isolate it from the web service ([4ef4e50](https://github.com/SalesTim/app-platform/commit/4ef4e50329536e21bd7d468e6b7036f707f6aaba))
+* **i18n:** removed references to DE in packages ([4e95d1a](https://github.com/nboldhq/app-platform/commit/4e95d1a94711dd055b524831a7b1f02baff9a9c1))
+* **webclient:** moved webclient to /src/client to isolate it from the web service ([4ef4e50](https://github.com/nboldhq/app-platform/commit/4ef4e50329536e21bd7d468e6b7036f707f6aaba))
 
 
 ### 📚 Docs
 
-* **adr:** added proposed adr for redis connections (cache and queues) monitoring ([511d000](https://github.com/SalesTim/app-platform/commit/511d000e96455380fc752821f35646b8d0b537d7))
-* **analytics:** added ADR 0006-web-analytics to validate our app analytics platform ([72ba99a](https://github.com/SalesTim/app-platform/commit/72ba99a66ebcb1d0e63f22e8206f2721751d79f6))
-* **audits:** rebuild audit log files ([372775c](https://github.com/SalesTim/app-platform/commit/372775c9443a1b20f61b60706a780f7a2f443a7f))
-* **hosting:** changed site navigation to cope with long toc ([71dbc22](https://github.com/SalesTim/app-platform/commit/71dbc2278bace014f7a8a53ab29a36b531364615))
-* **hosting:** updated the description of all the services and events of the platform ([932f16c](https://github.com/SalesTim/app-platform/commit/932f16c6a71089df2c37b0a07206cc3330d84844))
-* **package:** added :help entries to package.json to describe each script ([b25aed4](https://github.com/SalesTim/app-platform/commit/b25aed42ef54830284e4ca958e953270a246f98e))
-* **records:** finalized importing all records as md ([11f3191](https://github.com/SalesTim/app-platform/commit/11f3191efce14936b74fb0e5db53eb3969a7f117))
-* **self-hosted:** added diagram for additional operations services (uptime, metrics...) ([35c8d47](https://github.com/SalesTim/app-platform/commit/35c8d47bb3003c36fbf4caea8d3c4f5ece6799f7))
-* **self-hosted:** added draft of architecture data-flow ([bc91ee6](https://github.com/SalesTim/app-platform/commit/bc91ee6c6ba62e4f5a3e8dfe8fbaf93405811089))
-* **self-hosted:** added power-platform setup documentation ([ee9cf9c](https://github.com/SalesTim/app-platform/commit/ee9cf9c9acf3deb0f76b4c2a69adb702fbf9309f))
-* **self-hosted:** created new pages for permissions, provisioning and permanent membership jobs ([d2def02](https://github.com/SalesTim/app-platform/commit/d2def024bf8facde3aa427bd41df294129c1c4b1))
-* **self-hosted:** fixed broken links and intercom integration ([14f5ff4](https://github.com/SalesTim/app-platform/commit/14f5ff48c1149f207023ad19e31c96150275f922))
-* **self-hosted:** fixed nav ([1e4bfa2](https://github.com/SalesTim/app-platform/commit/1e4bfa23d35de1c4f82fa493501bf66c1fe51c28))
-* **self-hosted:** included an export to docx and pdf script as part of the docs npm script ([18e3be6](https://github.com/SalesTim/app-platform/commit/18e3be63426e9febb9948cc7e2c915ca9e9685d4))
-* **self-hosted:** self-hosted docs rebuild ([8de66f5](https://github.com/SalesTim/app-platform/commit/8de66f5df6aee6ee1b261711832cac75d56ae492))
-* **self-hosted:** updated Azure resources from the terraform script ([6103a0b](https://github.com/SalesTim/app-platform/commit/6103a0bd61d90f830d5c21febc6610a7ec70d305))
-* **self-hosted:** updated azure resources with additional monitoring services ([32febe3](https://github.com/SalesTim/app-platform/commit/32febe3cb453f3afcf0cb73ea20c129728868438))
-* **self-hosted:** updated cloud vs self comparison by including networking differences ([1e910a2](https://github.com/SalesTim/app-platform/commit/1e910a2d6d2a754aec3ffe578033ab6b3e4794e7))
-* **self-hosted:** updated core architecture documents ([7855b2c](https://github.com/SalesTim/app-platform/commit/7855b2cdd6f74e5a20823a0b5679e46013f5992c))
-* **self-hosted:** updated novigation structure and included azure docs ([7072734](https://github.com/SalesTim/app-platform/commit/707273453c6772d47d4d9df3ab2e8ef1fa753c65))
-* **self-hosted:** updated self-host documentation with terraform projects and docker guide ([5d15ef1](https://github.com/SalesTim/app-platform/commit/5d15ef1520be40289e22927abf53be30450d1d66))
-* **self-hosted:** updated the `updates management` doc describing upgrade options ([d249331](https://github.com/SalesTim/app-platform/commit/d24933175ef21933a82065322635a76acec04474))
+* **adr:** added proposed adr for redis connections (cache and queues) monitoring ([511d000](https://github.com/nboldhq/app-platform/commit/511d000e96455380fc752821f35646b8d0b537d7))
+* **analytics:** added ADR 0006-web-analytics to validate our app analytics platform ([72ba99a](https://github.com/nboldhq/app-platform/commit/72ba99a66ebcb1d0e63f22e8206f2721751d79f6))
+* **audits:** rebuild audit log files ([372775c](https://github.com/nboldhq/app-platform/commit/372775c9443a1b20f61b60706a780f7a2f443a7f))
+* **hosting:** changed site navigation to cope with long toc ([71dbc22](https://github.com/nboldhq/app-platform/commit/71dbc2278bace014f7a8a53ab29a36b531364615))
+* **hosting:** updated the description of all the services and events of the platform ([932f16c](https://github.com/nboldhq/app-platform/commit/932f16c6a71089df2c37b0a07206cc3330d84844))
+* **package:** added :help entries to package.json to describe each script ([b25aed4](https://github.com/nboldhq/app-platform/commit/b25aed42ef54830284e4ca958e953270a246f98e))
+* **records:** finalized importing all records as md ([11f3191](https://github.com/nboldhq/app-platform/commit/11f3191efce14936b74fb0e5db53eb3969a7f117))
+* **self-hosted:** added diagram for additional operations services (uptime, metrics...) ([35c8d47](https://github.com/nboldhq/app-platform/commit/35c8d47bb3003c36fbf4caea8d3c4f5ece6799f7))
+* **self-hosted:** added draft of architecture data-flow ([bc91ee6](https://github.com/nboldhq/app-platform/commit/bc91ee6c6ba62e4f5a3e8dfe8fbaf93405811089))
+* **self-hosted:** added power-platform setup documentation ([ee9cf9c](https://github.com/nboldhq/app-platform/commit/ee9cf9c9acf3deb0f76b4c2a69adb702fbf9309f))
+* **self-hosted:** created new pages for permissions, provisioning and permanent membership jobs ([d2def02](https://github.com/nboldhq/app-platform/commit/d2def024bf8facde3aa427bd41df294129c1c4b1))
+* **self-hosted:** fixed broken links and intercom integration ([14f5ff4](https://github.com/nboldhq/app-platform/commit/14f5ff48c1149f207023ad19e31c96150275f922))
+* **self-hosted:** fixed nav ([1e4bfa2](https://github.com/nboldhq/app-platform/commit/1e4bfa23d35de1c4f82fa493501bf66c1fe51c28))
+* **self-hosted:** included an export to docx and pdf script as part of the docs npm script ([18e3be6](https://github.com/nboldhq/app-platform/commit/18e3be63426e9febb9948cc7e2c915ca9e9685d4))
+* **self-hosted:** self-hosted docs rebuild ([8de66f5](https://github.com/nboldhq/app-platform/commit/8de66f5df6aee6ee1b261711832cac75d56ae492))
+* **self-hosted:** updated Azure resources from the terraform script ([6103a0b](https://github.com/nboldhq/app-platform/commit/6103a0bd61d90f830d5c21febc6610a7ec70d305))
+* **self-hosted:** updated azure resources with additional monitoring services ([32febe3](https://github.com/nboldhq/app-platform/commit/32febe3cb453f3afcf0cb73ea20c129728868438))
+* **self-hosted:** updated cloud vs self comparison by including networking differences ([1e910a2](https://github.com/nboldhq/app-platform/commit/1e910a2d6d2a754aec3ffe578033ab6b3e4794e7))
+* **self-hosted:** updated core architecture documents ([7855b2c](https://github.com/nboldhq/app-platform/commit/7855b2cdd6f74e5a20823a0b5679e46013f5992c))
+* **self-hosted:** updated novigation structure and included azure docs ([7072734](https://github.com/nboldhq/app-platform/commit/707273453c6772d47d4d9df3ab2e8ef1fa753c65))
+* **self-hosted:** updated self-host documentation with terraform projects and docker guide ([5d15ef1](https://github.com/nboldhq/app-platform/commit/5d15ef1520be40289e22927abf53be30450d1d66))
+* **self-hosted:** updated the `updates management` doc describing upgrade options ([d249331](https://github.com/nboldhq/app-platform/commit/d24933175ef21933a82065322635a76acec04474))
 
 
 ### 🐛 Bug Fixes
 
-* **approval:** fixed error during loading of the avatar picture in initApprovalsConsumer ([57e1224](https://github.com/SalesTim/app-platform/commit/57e1224b47abe5d9bcd78cee4a0710aee9cf5864))
-* **flow:** fixed flow storage location by including the /vomules/flow/storage empty folder in git ([9614eca](https://github.com/SalesTim/app-platform/commit/9614eca9f2228e2367429e0a01a2057b222b4fdb))
-* **i18n:** added support for nl-be, nl-nl and da-dk as fallbacks to en-us to i18n module ([329e417](https://github.com/SalesTim/app-platform/commit/329e417f5756d41073505e15ecb6de4d354951aa)), closes [#968](https://github.com/SalesTim/app-platform/issues/968)
-* **logging:** better error management when the log file transport can't access the target directory ([916e765](https://github.com/SalesTim/app-platform/commit/916e765104b035915e66d6fcff8cd6d652a34802))
-* **prometheus:** fixed express exporter issue by explicitely including `prom-client` in deps ([a19478c](https://github.com/SalesTim/app-platform/commit/a19478c9cabfcc8637c6fb405a98a2b02c54bfde))
-* **provisioning:** fixed issue with channel calendar and yammer tabs provisioning ([742c6f6](https://github.com/SalesTim/app-platform/commit/742c6f63b61a4546f43368eb915866f7138608dd)), closes [#1054](https://github.com/SalesTim/app-platform/issues/1054)
-* **tab-config:** fixed tab configuration page when adding the app as a custom tab in a team ([df588eb](https://github.com/SalesTim/app-platform/commit/df588eb74b75d4a867c2393bed1a6007752bedee))
+* **approval:** fixed error during loading of the avatar picture in initApprovalsConsumer ([57e1224](https://github.com/nboldhq/app-platform/commit/57e1224b47abe5d9bcd78cee4a0710aee9cf5864))
+* **flow:** fixed flow storage location by including the /vomules/flow/storage empty folder in git ([9614eca](https://github.com/nboldhq/app-platform/commit/9614eca9f2228e2367429e0a01a2057b222b4fdb))
+* **i18n:** added support for nl-be, nl-nl and da-dk as fallbacks to en-us to i18n module ([329e417](https://github.com/nboldhq/app-platform/commit/329e417f5756d41073505e15ecb6de4d354951aa)), closes [#968](https://github.com/nboldhq/app-platform/issues/968)
+* **logging:** better error management when the log file transport can't access the target directory ([916e765](https://github.com/nboldhq/app-platform/commit/916e765104b035915e66d6fcff8cd6d652a34802))
+* **prometheus:** fixed express exporter issue by explicitely including `prom-client` in deps ([a19478c](https://github.com/nboldhq/app-platform/commit/a19478c9cabfcc8637c6fb405a98a2b02c54bfde))
+* **provisioning:** fixed issue with channel calendar and yammer tabs provisioning ([742c6f6](https://github.com/nboldhq/app-platform/commit/742c6f63b61a4546f43368eb915866f7138608dd)), closes [#1054](https://github.com/nboldhq/app-platform/issues/1054)
+* **tab-config:** fixed tab configuration page when adding the app as a custom tab in a team ([df588eb](https://github.com/nboldhq/app-platform/commit/df588eb74b75d4a867c2393bed1a6007752bedee))
 
 
 ### 🏭 Build System
 
-* **deps-dev:** bump @jest/globals from 27.2.4 to 27.2.5 ([9a31712](https://github.com/SalesTim/app-platform/commit/9a31712de740ee29d88afb529c049b37c33b6e28))
-* **deps-dev:** bump @jest/globals from 27.2.5 to 27.3.0 ([bfd4179](https://github.com/SalesTim/app-platform/commit/bfd41796370981d664191da7eb82fb7e1c11f98c))
-* **deps-dev:** bump @jest/globals from 27.3.0 to 27.3.1 ([e648460](https://github.com/SalesTim/app-platform/commit/e6484608076d61c1646678cb3f85c643b4c2d8ec))
-* **deps-dev:** bump eslint-plugin-import from 2.24.2 to 2.25.1 ([6343d25](https://github.com/SalesTim/app-platform/commit/6343d258707731b0d2c8b662a344c45673cd813a))
-* **deps-dev:** bump eslint-plugin-import from 2.25.1 to 2.25.2 ([37c5e46](https://github.com/SalesTim/app-platform/commit/37c5e4605ed9c0878d77bad14ce7e15322da4e50))
-* **deps-dev:** bump eslint-plugin-jest from 24.5.0 to 24.6.0 ([1df9017](https://github.com/SalesTim/app-platform/commit/1df9017e5c0ea4561d6c3bf8f855c51648527c21))
-* **deps-dev:** bump eslint-plugin-jest from 24.6.0 to 25.0.1 ([9b0be3b](https://github.com/SalesTim/app-platform/commit/9b0be3bdb5ae3a126853214ecdfe4dc33ebd036a))
-* **deps-dev:** bump eslint-plugin-jest from 25.0.1 to 25.0.5 ([483820b](https://github.com/SalesTim/app-platform/commit/483820b6d9cbfe55ed39a44a3b9296a1f0670716))
-* **deps-dev:** bump eslint-plugin-jest from 25.0.5 to 25.0.6 ([9e44516](https://github.com/SalesTim/app-platform/commit/9e445165b8d67b2298ac457e251acfcbca97b7a2))
-* **deps-dev:** bump eslint-plugin-jest from 25.0.6 to 25.2.1 ([6e46bf9](https://github.com/SalesTim/app-platform/commit/6e46bf988217a3c977c49d4916c666d13d649bcf))
-* **deps-dev:** bump eslint-plugin-jest from 25.2.1 to 25.2.2 ([945aff5](https://github.com/SalesTim/app-platform/commit/945aff5b85a13e5d6eb0ef8dafb7533c50142338))
-* **deps-dev:** bump eslint-plugin-jest from 25.2.2 to 25.3.0 ([75f7e0c](https://github.com/SalesTim/app-platform/commit/75f7e0c74ead6f39a1aa9be5a8a0247611834fe9))
-* **deps-dev:** bump eslint-plugin-promise from 5.1.0 to 5.1.1 ([8fcb63f](https://github.com/SalesTim/app-platform/commit/8fcb63f652cd671ecabdae8847c65e17c6f2ca5c))
-* **deps-dev:** bump jest from 27.2.4 to 27.2.5 ([f6d2fa4](https://github.com/SalesTim/app-platform/commit/f6d2fa438acb0e09c74e25495a9e376a109477ba))
-* **deps-dev:** bump jest from 27.2.5 to 27.3.0 ([84d40b0](https://github.com/SalesTim/app-platform/commit/84d40b0f13063cd0dbd404ff8aef85aa4e0f788a))
-* **deps-dev:** bump jest from 27.3.0 to 27.3.1 ([671c0bb](https://github.com/SalesTim/app-platform/commit/671c0bb59e18f2f7831f3d279ef852d7f0707e14))
-* **deps:** bump @microsoft/microsoft-graph-client from 3.0.0 to 3.0.1 ([be275e5](https://github.com/SalesTim/app-platform/commit/be275e58fd7b342b71bdb9f00aeb35e807fb0b1c))
-* **deps:** bump @salestim/i18n from `16e383e` to `a00fb74` ([0f82811](https://github.com/SalesTim/app-platform/commit/0f82811474c8e89848ba6b58b6b66e948d49204c))
-* **deps:** bump ajv from 8.6.3 to 8.8.0 ([fa25f0f](https://github.com/SalesTim/app-platform/commit/fa25f0fd43003b0458776933d9b4b1be63d6d028))
-* **deps:** bump bull from 3.29.2 to 3.29.3 ([439a537](https://github.com/SalesTim/app-platform/commit/439a5378f2d959d7f2c56a56b4fc3fe779fa5c1a))
-* **deps:** bump cronstrue from 1.117.0 to 1.119.0 ([72e25ea](https://github.com/SalesTim/app-platform/commit/72e25ea0b77c459fc3630cfbd757c6f78296c989))
-* **deps:** bump cronstrue from 1.119.0 to 1.122.0 ([9fb7623](https://github.com/SalesTim/app-platform/commit/9fb7623af94ed102f07bdf2ee9440f165e3b316d))
-* **deps:** bump express-rate-limit from 5.4.0 to 5.4.1 ([231d6b1](https://github.com/SalesTim/app-platform/commit/231d6b15511b21c0412176746bf51158e420a4a0))
-* **deps:** bump express-rate-limit from 5.4.1 to 5.5.0 ([676997b](https://github.com/SalesTim/app-platform/commit/676997b8e4d229363e8710cb548ec314940e3362))
-* **deps:** bump express-rate-limit from 5.5.0 to 5.5.1 ([54e406e](https://github.com/SalesTim/app-platform/commit/54e406e80ded3c7c29e944d654de1701eff66c2c))
-* **deps:** bump ioredis from 4.27.10 to 4.27.11 ([f3d71a7](https://github.com/SalesTim/app-platform/commit/f3d71a7413bf76823d3b4c9858935d39aa8e7595))
-* **deps:** bump ioredis from 4.27.11 to 4.28.0 ([b70e63c](https://github.com/SalesTim/app-platform/commit/b70e63c385db040789d389921d4ff8704e07d64f))
-* **deps:** bump ioredis from 4.28.0 to 4.28.1 ([3e0d236](https://github.com/SalesTim/app-platform/commit/3e0d23666808a8f3b3bbb4ddbba62c53dc5bf72d))
-* **deps:** bump nock from 13.1.3 to 13.1.4 ([ca6d9a0](https://github.com/SalesTim/app-platform/commit/ca6d9a08933aff233700c7f7194865445df7c8ed))
-* **deps:** bump node from 16-alpine to 17-alpine ([65cf3e7](https://github.com/SalesTim/app-platform/commit/65cf3e71670478afb042086b8825a143eaf76503))
-* **deps:** bump node-red from 2.0.6 to 2.1.3 ([2b8da2f](https://github.com/SalesTim/app-platform/commit/2b8da2f10cf2e4667d479c92a8b180e230cbd03a))
-* **deps:** bump pg-mem from 2.0.1 to 2.1.5 ([30b319b](https://github.com/SalesTim/app-platform/commit/30b319b2820b5b0f8ff18512280b3d93ddcbf9db))
-* **deps:** bump pg-mem from 2.1.5 to 2.1.6 ([0dc4493](https://github.com/SalesTim/app-platform/commit/0dc4493f6404cee6172882cca9ca3234d0f5bcbb))
-* **deps:** bump sequelize from 6.6.5 to 6.7.0 ([5856381](https://github.com/SalesTim/app-platform/commit/5856381f1294a7549e268f0b3e65799b7eba3d50))
-* **deps:** bump sequelize from 6.7.0 to 6.8.0 ([c786a3e](https://github.com/SalesTim/app-platform/commit/c786a3e7f3904570047164dfff28d1906dbaac39))
-* **deps:** bump ua-parser-js from 0.7.28 to 1.0.2 ([aea2625](https://github.com/SalesTim/app-platform/commit/aea2625ef74ab357bf419451c4c5fe5977c8069a))
-* **deps:** bump unleash-proxy-client from 1.5.2 to 1.6.0 ([f754f28](https://github.com/SalesTim/app-platform/commit/f754f28ec8b17273b24705310c6a801a9c747082))
-* **deps:** bump validator from 13.6.0 to 13.7.0 ([aad99b0](https://github.com/SalesTim/app-platform/commit/aad99b0df7425aee9ed54880fd993d7c28b54ef7))
-* **deps:** bump validator from 13.6.0 to 13.7.0 in /src/libs/db ([9210bf9](https://github.com/SalesTim/app-platform/commit/9210bf9f9d7c7bfa10fdb26ae8359151d59c809f))
-* **deps:** bump zaproxy/action-baseline from 0.5.0 to 0.6.1 ([42b9253](https://github.com/SalesTim/app-platform/commit/42b9253f4953135b390c4a6422a84ccbf04670d8))
-* **deps:** updated deps from dependabot ([86f3d90](https://github.com/SalesTim/app-platform/commit/86f3d90d00b9b741d9e25d677874994a792e0c88))
-* **docker:** changed from npm ci to npm install ([09fd42b](https://github.com/SalesTim/app-platform/commit/09fd42b5cecba4de315dd6843ecbe60da1343dde))
-* **github:** added github token for remote dependencies ([059d4a7](https://github.com/SalesTim/app-platform/commit/059d4a7f8775687a8677a94adb8ef85dac587824))
-* **ngrok:** excluded /bin/ngrok directory from git ([0c79ac0](https://github.com/SalesTim/app-platform/commit/0c79ac00e6f694501c35dc22fe16b7c7b6e5b3bd))
-* **node:** locking app with a specific node.js version using `nvm` and `.nvmrc` ([3d3af0e](https://github.com/SalesTim/app-platform/commit/3d3af0ebf176c4360235f9c787eb420cba49ae5b))
-* **npm:** fixed npm install issue due to wrong npm version ([f5593fe](https://github.com/SalesTim/app-platform/commit/f5593fee6c6c82d6ec1d821960dbec6c099ebc8f))
-* **packages:** rebuilt packages ([bef89fb](https://github.com/SalesTim/app-platform/commit/bef89fbf342a0f72292898d3a9e8432527fc9f33))
-* **terraform:** added monika, redis-exporter and bull-exporter to the dev iac ([8c49630](https://github.com/SalesTim/app-platform/commit/8c49630f58e9b527ac39acf369fa74cedb56bd76))
+* **deps-dev:** bump @jest/globals from 27.2.4 to 27.2.5 ([9a31712](https://github.com/nboldhq/app-platform/commit/9a31712de740ee29d88afb529c049b37c33b6e28))
+* **deps-dev:** bump @jest/globals from 27.2.5 to 27.3.0 ([bfd4179](https://github.com/nboldhq/app-platform/commit/bfd41796370981d664191da7eb82fb7e1c11f98c))
+* **deps-dev:** bump @jest/globals from 27.3.0 to 27.3.1 ([e648460](https://github.com/nboldhq/app-platform/commit/e6484608076d61c1646678cb3f85c643b4c2d8ec))
+* **deps-dev:** bump eslint-plugin-import from 2.24.2 to 2.25.1 ([6343d25](https://github.com/nboldhq/app-platform/commit/6343d258707731b0d2c8b662a344c45673cd813a))
+* **deps-dev:** bump eslint-plugin-import from 2.25.1 to 2.25.2 ([37c5e46](https://github.com/nboldhq/app-platform/commit/37c5e4605ed9c0878d77bad14ce7e15322da4e50))
+* **deps-dev:** bump eslint-plugin-jest from 24.5.0 to 24.6.0 ([1df9017](https://github.com/nboldhq/app-platform/commit/1df9017e5c0ea4561d6c3bf8f855c51648527c21))
+* **deps-dev:** bump eslint-plugin-jest from 24.6.0 to 25.0.1 ([9b0be3b](https://github.com/nboldhq/app-platform/commit/9b0be3bdb5ae3a126853214ecdfe4dc33ebd036a))
+* **deps-dev:** bump eslint-plugin-jest from 25.0.1 to 25.0.5 ([483820b](https://github.com/nboldhq/app-platform/commit/483820b6d9cbfe55ed39a44a3b9296a1f0670716))
+* **deps-dev:** bump eslint-plugin-jest from 25.0.5 to 25.0.6 ([9e44516](https://github.com/nboldhq/app-platform/commit/9e445165b8d67b2298ac457e251acfcbca97b7a2))
+* **deps-dev:** bump eslint-plugin-jest from 25.0.6 to 25.2.1 ([6e46bf9](https://github.com/nboldhq/app-platform/commit/6e46bf988217a3c977c49d4916c666d13d649bcf))
+* **deps-dev:** bump eslint-plugin-jest from 25.2.1 to 25.2.2 ([945aff5](https://github.com/nboldhq/app-platform/commit/945aff5b85a13e5d6eb0ef8dafb7533c50142338))
+* **deps-dev:** bump eslint-plugin-jest from 25.2.2 to 25.3.0 ([75f7e0c](https://github.com/nboldhq/app-platform/commit/75f7e0c74ead6f39a1aa9be5a8a0247611834fe9))
+* **deps-dev:** bump eslint-plugin-promise from 5.1.0 to 5.1.1 ([8fcb63f](https://github.com/nboldhq/app-platform/commit/8fcb63f652cd671ecabdae8847c65e17c6f2ca5c))
+* **deps-dev:** bump jest from 27.2.4 to 27.2.5 ([f6d2fa4](https://github.com/nboldhq/app-platform/commit/f6d2fa438acb0e09c74e25495a9e376a109477ba))
+* **deps-dev:** bump jest from 27.2.5 to 27.3.0 ([84d40b0](https://github.com/nboldhq/app-platform/commit/84d40b0f13063cd0dbd404ff8aef85aa4e0f788a))
+* **deps-dev:** bump jest from 27.3.0 to 27.3.1 ([671c0bb](https://github.com/nboldhq/app-platform/commit/671c0bb59e18f2f7831f3d279ef852d7f0707e14))
+* **deps:** bump @microsoft/microsoft-graph-client from 3.0.0 to 3.0.1 ([be275e5](https://github.com/nboldhq/app-platform/commit/be275e58fd7b342b71bdb9f00aeb35e807fb0b1c))
+* **deps:** bump @salestim/i18n from `16e383e` to `a00fb74` ([0f82811](https://github.com/nboldhq/app-platform/commit/0f82811474c8e89848ba6b58b6b66e948d49204c))
+* **deps:** bump ajv from 8.6.3 to 8.8.0 ([fa25f0f](https://github.com/nboldhq/app-platform/commit/fa25f0fd43003b0458776933d9b4b1be63d6d028))
+* **deps:** bump bull from 3.29.2 to 3.29.3 ([439a537](https://github.com/nboldhq/app-platform/commit/439a5378f2d959d7f2c56a56b4fc3fe779fa5c1a))
+* **deps:** bump cronstrue from 1.117.0 to 1.119.0 ([72e25ea](https://github.com/nboldhq/app-platform/commit/72e25ea0b77c459fc3630cfbd757c6f78296c989))
+* **deps:** bump cronstrue from 1.119.0 to 1.122.0 ([9fb7623](https://github.com/nboldhq/app-platform/commit/9fb7623af94ed102f07bdf2ee9440f165e3b316d))
+* **deps:** bump express-rate-limit from 5.4.0 to 5.4.1 ([231d6b1](https://github.com/nboldhq/app-platform/commit/231d6b15511b21c0412176746bf51158e420a4a0))
+* **deps:** bump express-rate-limit from 5.4.1 to 5.5.0 ([676997b](https://github.com/nboldhq/app-platform/commit/676997b8e4d229363e8710cb548ec314940e3362))
+* **deps:** bump express-rate-limit from 5.5.0 to 5.5.1 ([54e406e](https://github.com/nboldhq/app-platform/commit/54e406e80ded3c7c29e944d654de1701eff66c2c))
+* **deps:** bump ioredis from 4.27.10 to 4.27.11 ([f3d71a7](https://github.com/nboldhq/app-platform/commit/f3d71a7413bf76823d3b4c9858935d39aa8e7595))
+* **deps:** bump ioredis from 4.27.11 to 4.28.0 ([b70e63c](https://github.com/nboldhq/app-platform/commit/b70e63c385db040789d389921d4ff8704e07d64f))
+* **deps:** bump ioredis from 4.28.0 to 4.28.1 ([3e0d236](https://github.com/nboldhq/app-platform/commit/3e0d23666808a8f3b3bbb4ddbba62c53dc5bf72d))
+* **deps:** bump nock from 13.1.3 to 13.1.4 ([ca6d9a0](https://github.com/nboldhq/app-platform/commit/ca6d9a08933aff233700c7f7194865445df7c8ed))
+* **deps:** bump node from 16-alpine to 17-alpine ([65cf3e7](https://github.com/nboldhq/app-platform/commit/65cf3e71670478afb042086b8825a143eaf76503))
+* **deps:** bump node-red from 2.0.6 to 2.1.3 ([2b8da2f](https://github.com/nboldhq/app-platform/commit/2b8da2f10cf2e4667d479c92a8b180e230cbd03a))
+* **deps:** bump pg-mem from 2.0.1 to 2.1.5 ([30b319b](https://github.com/nboldhq/app-platform/commit/30b319b2820b5b0f8ff18512280b3d93ddcbf9db))
+* **deps:** bump pg-mem from 2.1.5 to 2.1.6 ([0dc4493](https://github.com/nboldhq/app-platform/commit/0dc4493f6404cee6172882cca9ca3234d0f5bcbb))
+* **deps:** bump sequelize from 6.6.5 to 6.7.0 ([5856381](https://github.com/nboldhq/app-platform/commit/5856381f1294a7549e268f0b3e65799b7eba3d50))
+* **deps:** bump sequelize from 6.7.0 to 6.8.0 ([c786a3e](https://github.com/nboldhq/app-platform/commit/c786a3e7f3904570047164dfff28d1906dbaac39))
+* **deps:** bump ua-parser-js from 0.7.28 to 1.0.2 ([aea2625](https://github.com/nboldhq/app-platform/commit/aea2625ef74ab357bf419451c4c5fe5977c8069a))
+* **deps:** bump unleash-proxy-client from 1.5.2 to 1.6.0 ([f754f28](https://github.com/nboldhq/app-platform/commit/f754f28ec8b17273b24705310c6a801a9c747082))
+* **deps:** bump validator from 13.6.0 to 13.7.0 ([aad99b0](https://github.com/nboldhq/app-platform/commit/aad99b0df7425aee9ed54880fd993d7c28b54ef7))
+* **deps:** bump validator from 13.6.0 to 13.7.0 in /src/libs/db ([9210bf9](https://github.com/nboldhq/app-platform/commit/9210bf9f9d7c7bfa10fdb26ae8359151d59c809f))
+* **deps:** bump zaproxy/action-baseline from 0.5.0 to 0.6.1 ([42b9253](https://github.com/nboldhq/app-platform/commit/42b9253f4953135b390c4a6422a84ccbf04670d8))
+* **deps:** updated deps from dependabot ([86f3d90](https://github.com/nboldhq/app-platform/commit/86f3d90d00b9b741d9e25d677874994a792e0c88))
+* **docker:** changed from npm ci to npm install ([09fd42b](https://github.com/nboldhq/app-platform/commit/09fd42b5cecba4de315dd6843ecbe60da1343dde))
+* **github:** added github token for remote dependencies ([059d4a7](https://github.com/nboldhq/app-platform/commit/059d4a7f8775687a8677a94adb8ef85dac587824))
+* **ngrok:** excluded /bin/ngrok directory from git ([0c79ac0](https://github.com/nboldhq/app-platform/commit/0c79ac00e6f694501c35dc22fe16b7c7b6e5b3bd))
+* **node:** locking app with a specific node.js version using `nvm` and `.nvmrc` ([3d3af0e](https://github.com/nboldhq/app-platform/commit/3d3af0ebf176c4360235f9c787eb420cba49ae5b))
+* **npm:** fixed npm install issue due to wrong npm version ([f5593fe](https://github.com/nboldhq/app-platform/commit/f5593fee6c6c82d6ec1d821960dbec6c099ebc8f))
+* **packages:** rebuilt packages ([bef89fb](https://github.com/nboldhq/app-platform/commit/bef89fbf342a0f72292898d3a9e8432527fc9f33))
+* **terraform:** added monika, redis-exporter and bull-exporter to the dev iac ([8c49630](https://github.com/nboldhq/app-platform/commit/8c49630f58e9b527ac39acf369fa74cedb56bd76))
 
-## [4.3.0](https://github.com/SalesTim/app-platform/compare/v4.2.0...v4.3.0) (2021-10-03)
+## [4.3.0](https://github.com/nboldhq/app-platform/compare/v4.2.0...v4.3.0) (2021-10-03)
 
 
 ### 🛠️ Code Refactoring
 
-* **azure-storage:** migrated from `azure-storage` to `@azure/storage-blob` ([9cafb1c](https://github.com/SalesTim/app-platform/commit/9cafb1c0f3d0f8cecd52978dd4c66574e7b28add))
+* **azure-storage:** migrated from `azure-storage` to `@azure/storage-blob` ([9cafb1c](https://github.com/nboldhq/app-platform/commit/9cafb1c0f3d0f8cecd52978dd4c66574e7b28add))
 
 
 ### 🏭 Build System
 
-* **deps:** updated npm deps ([1b9af06](https://github.com/SalesTim/app-platform/commit/1b9af060f48ab0d34fb70358b05a317a263063e4))
+* **deps:** updated npm deps ([1b9af06](https://github.com/nboldhq/app-platform/commit/1b9af060f48ab0d34fb70358b05a317a263063e4))
 
 
 ### 🐛 Bug Fixes
 
-* **libs:** now using exclusively relative paths to require internal modules ([d74b1fe](https://github.com/SalesTim/app-platform/commit/d74b1fea9364428c70a23355af45ff6957b51921))
+* **libs:** now using exclusively relative paths to require internal modules ([d74b1fe](https://github.com/nboldhq/app-platform/commit/d74b1fea9364428c70a23355af45ff6957b51921))
 
 
 ### 📦 CI
 
-* **github-actions:** updated PRD scripts to use npm install instead of npm ci ([f9fdfa0](https://github.com/SalesTim/app-platform/commit/f9fdfa02830bb8bdc703d188a9817089f1e3fa91))
-* **terraform:** first terraform iac project to host the the entire platform on a local docker server ([33a1b01](https://github.com/SalesTim/app-platform/commit/33a1b01fc50cc8bc840cbe5207e3d439b8679d03))
+* **github-actions:** updated PRD scripts to use npm install instead of npm ci ([f9fdfa0](https://github.com/nboldhq/app-platform/commit/f9fdfa02830bb8bdc703d188a9817089f1e3fa91))
+* **terraform:** first terraform iac project to host the the entire platform on a local docker server ([33a1b01](https://github.com/nboldhq/app-platform/commit/33a1b01fc50cc8bc840cbe5207e3d439b8679d03))
 
-## [4.2.0](https://github.com/SalesTim/app-platform/compare/v4.1.0...v4.2.0) (2021-10-02)
+## [4.2.0](https://github.com/nboldhq/app-platform/compare/v4.1.0...v4.2.0) (2021-10-02)
 
 
 ### 🚀 Features
 
-* **logs:** enable log files persistency through a new LOG_PERSISTENCY_ENABLED environment variable ([8aaede5](https://github.com/SalesTim/app-platform/commit/8aaede5e95a363c00404be8ab61bf55807c67762))
+* **logs:** enable log files persistency through a new LOG_PERSISTENCY_ENABLED environment variable ([8aaede5](https://github.com/nboldhq/app-platform/commit/8aaede5e95a363c00404be8ab61bf55807c67762))
 
 
 ### 📚 Docs
 
-* **events:** docs auto-generation for events and services ([3a8d9c7](https://github.com/SalesTim/app-platform/commit/3a8d9c791cd4b97df722ddff35e52b450baaafb5))
+* **events:** docs auto-generation for events and services ([3a8d9c7](https://github.com/nboldhq/app-platform/commit/3a8d9c791cd4b97df722ddff35e52b450baaafb5))
 
 
 ### 🛠️ Code Refactoring
 
-* **dist:** removed all references to global variables ([f9527e8](https://github.com/SalesTim/app-platform/commit/f9527e89fcdf4ba3e70df5ea59c29c0806fe476f))
-* **teardown:** when an exit signal is catched, the service tries to shutdown gracefully ([532c0a0](https://github.com/SalesTim/app-platform/commit/532c0a0c85c55efd9692449d9378cd3083b27b04))
+* **dist:** removed all references to global variables ([f9527e8](https://github.com/nboldhq/app-platform/commit/f9527e89fcdf4ba3e70df5ea59c29c0806fe476f))
+* **teardown:** when an exit signal is catched, the service tries to shutdown gracefully ([532c0a0](https://github.com/nboldhq/app-platform/commit/532c0a0c85c55efd9692449d9378cd3083b27b04))
 
 
 ### 🧪 Tests
 
-* **jest:** excluded tests folders from the dist generation ([b282624](https://github.com/SalesTim/app-platform/commit/b28262489db60f3ebefdb570f80a7d154cfdae79))
-* **jest:** included jest option modulePathIgnorePatterns to prevent inclusion of the /dist path ([0a4951b](https://github.com/SalesTim/app-platform/commit/0a4951b9cb542efb22a0845d056263789e013ec0))
-* **jest:** tests (unit and e2e) and now running with the --silent switch ([767902b](https://github.com/SalesTim/app-platform/commit/767902b30ffbd4ebd4eb2ae0bc7f6cef79e41c91))
-* **redis:** using ioredis-mock instead of the INT redis instance for unit tests ([748f712](https://github.com/SalesTim/app-platform/commit/748f712b4e306d48f5ceab62c1dca53835945f99))
-* **unit-tests:** re-enabled the whole unit tests suite ([dd83840](https://github.com/SalesTim/app-platform/commit/dd838401e5d8c04a6ee3249e560a441048a7719f))
+* **jest:** excluded tests folders from the dist generation ([b282624](https://github.com/nboldhq/app-platform/commit/b28262489db60f3ebefdb570f80a7d154cfdae79))
+* **jest:** included jest option modulePathIgnorePatterns to prevent inclusion of the /dist path ([0a4951b](https://github.com/nboldhq/app-platform/commit/0a4951b9cb542efb22a0845d056263789e013ec0))
+* **jest:** tests (unit and e2e) and now running with the --silent switch ([767902b](https://github.com/nboldhq/app-platform/commit/767902b30ffbd4ebd4eb2ae0bc7f6cef79e41c91))
+* **redis:** using ioredis-mock instead of the INT redis instance for unit tests ([748f712](https://github.com/nboldhq/app-platform/commit/748f712b4e306d48f5ceab62c1dca53835945f99))
+* **unit-tests:** re-enabled the whole unit tests suite ([dd83840](https://github.com/nboldhq/app-platform/commit/dd838401e5d8c04a6ee3249e560a441048a7719f))
 
 
 ### 🏭 Build System
 
-* **changelog:** updated standard-version scripts for better changelog generation ([71321b3](https://github.com/SalesTim/app-platform/commit/71321b3bfbfc8c170e3554751eaf9f0d7911b29e))
-* **deps:** bump unleash-server from 4.2.0-0 to 4.2.0-2 ([28b7f8e](https://github.com/SalesTim/app-platform/commit/28b7f8e23e588e3906d4533df3b307d00adcb962))
-* **dist:** removed /dist contents from git tracking ([83b50fb](https://github.com/SalesTim/app-platform/commit/83b50fbad9a8b8514985b20d42b4bc09aadb2875))
-* **tests:** reenabled unit tests in GitHub Actions build steps ([20c3cc5](https://github.com/SalesTim/app-platform/commit/20c3cc5b3e476bd73632e746bc9f64827bd28c8b))
+* **changelog:** updated standard-version scripts for better changelog generation ([71321b3](https://github.com/nboldhq/app-platform/commit/71321b3bfbfc8c170e3554751eaf9f0d7911b29e))
+* **deps:** bump unleash-server from 4.2.0-0 to 4.2.0-2 ([28b7f8e](https://github.com/nboldhq/app-platform/commit/28b7f8e23e588e3906d4533df3b307d00adcb962))
+* **dist:** removed /dist contents from git tracking ([83b50fb](https://github.com/nboldhq/app-platform/commit/83b50fbad9a8b8514985b20d42b4bc09aadb2875))
+* **tests:** reenabled unit tests in GitHub Actions build steps ([20c3cc5](https://github.com/nboldhq/app-platform/commit/20c3cc5b3e476bd73632e746bc9f64827bd28c8b))
 
-## [4.1.0](https://github.com/SalesTim/app-platform/compare/v3.10.2...v4.1.0) (2021-10-01)
+## [4.1.0](https://github.com/nboldhq/app-platform/compare/v3.10.2...v4.1.0) (2021-10-01)
 
 
 ### 🚀 Features
 
-* **monitoring:** added Express Prometheus middleware, accessible at /monitoring/metrics ([d22e8af](https://github.com/SalesTim/app-platform/commit/d22e8af0525bce2d73e673a13552e8fdd36d6544))
-* **prometheus:** included a new setting to enable the prometheus exporter + options ([e42c9f7](https://github.com/SalesTim/app-platform/commit/e42c9f7a6bfe24771a8b508a861ad0dac340d489))
+* **monitoring:** added Express Prometheus middleware, accessible at /monitoring/metrics ([d22e8af](https://github.com/nboldhq/app-platform/commit/d22e8af0525bce2d73e673a13552e8fdd36d6544))
+* **prometheus:** included a new setting to enable the prometheus exporter + options ([e42c9f7](https://github.com/nboldhq/app-platform/commit/e42c9f7a6bfe24771a8b508a861ad0dac340d489))
 
 
 ### 📚 Docs
 
-* **discovery:** removed references to the discovery service ([8fb9b9d](https://github.com/SalesTim/app-platform/commit/8fb9b9d600a87729c33737c1645cf8211bffeb1b))
-* **self-hosted:** created the minimal documentation for self-hosting the platform ([b47a524](https://github.com/SalesTim/app-platform/commit/b47a524a92722ccf087ed14b023b48a251210569))
+* **discovery:** removed references to the discovery service ([8fb9b9d](https://github.com/nboldhq/app-platform/commit/8fb9b9d600a87729c33737c1645cf8211bffeb1b))
+* **self-hosted:** created the minimal documentation for self-hosting the platform ([b47a524](https://github.com/nboldhq/app-platform/commit/b47a524a92722ccf087ed14b023b48a251210569))
 
 
 ### 🛠️ Code Refactoring
 
-* **config:** included addition logs during config loading ([e92e622](https://github.com/SalesTim/app-platform/commit/e92e622ceed63738a53b71f94e93284a551e6573))
-* **config:** included loaded config details in startup logs ([51ab21d](https://github.com/SalesTim/app-platform/commit/51ab21deac02fb2f48603a4144adb6893c45e6ae))
-* **config:** reviewed all the settings and .env files for DEV and INT ([2351802](https://github.com/SalesTim/app-platform/commit/23518029b5f000c8cf1d7ebd9472c29c394afcaf))
-* **feature-toggles:** feature toggles service and proxy are now disabled by default ([8bb306f](https://github.com/SalesTim/app-platform/commit/8bb306f7e4bb0a90336f1ed4b54d89a9eb167e3d))
-* **logging:** better error handling by using the serialize-error module ([e34d863](https://github.com/SalesTim/app-platform/commit/e34d86302d05a1f12cac130e35780ba617aeaf79))
-* **redis:** implemented Redis retry strategy to retry on connection error ([ed56b69](https://github.com/SalesTim/app-platform/commit/ed56b6915f44f983f01a6efc2d304e9a94890fe0))
-* **scripts:** made scripts independent from the core engine ([374473c](https://github.com/SalesTim/app-platform/commit/374473cba77f8a819467586a14c6f324296fc235))
+* **config:** included addition logs during config loading ([e92e622](https://github.com/nboldhq/app-platform/commit/e92e622ceed63738a53b71f94e93284a551e6573))
+* **config:** included loaded config details in startup logs ([51ab21d](https://github.com/nboldhq/app-platform/commit/51ab21deac02fb2f48603a4144adb6893c45e6ae))
+* **config:** reviewed all the settings and .env files for DEV and INT ([2351802](https://github.com/nboldhq/app-platform/commit/23518029b5f000c8cf1d7ebd9472c29c394afcaf))
+* **feature-toggles:** feature toggles service and proxy are now disabled by default ([8bb306f](https://github.com/nboldhq/app-platform/commit/8bb306f7e4bb0a90336f1ed4b54d89a9eb167e3d))
+* **logging:** better error handling by using the serialize-error module ([e34d863](https://github.com/nboldhq/app-platform/commit/e34d86302d05a1f12cac130e35780ba617aeaf79))
+* **redis:** implemented Redis retry strategy to retry on connection error ([ed56b69](https://github.com/nboldhq/app-platform/commit/ed56b6915f44f983f01a6efc2d304e9a94890fe0))
+* **scripts:** made scripts independent from the core engine ([374473c](https://github.com/nboldhq/app-platform/commit/374473cba77f8a819467586a14c6f324296fc235))
 
 
 ### 🎨 Styling
 
-* **configuration:** refactored all .env files ([577f323](https://github.com/SalesTim/app-platform/commit/577f323dd6225364986baac072c1706137127b78))
+* **configuration:** refactored all .env files ([577f323](https://github.com/nboldhq/app-platform/commit/577f323dd6225364986baac072c1706137127b78))
 
 
 ### 🐛 Bug Fixes
 
-* **authentication:** fixed issue authenticating against the api after client-side session expiration ([3aaad5a](https://github.com/SalesTim/app-platform/commit/3aaad5ad9d853c02c0a1099b0fc562775e0dbd11))
-* **config:** fixed dynamic PORT environment variable used by Azure for its containers ([74cae14](https://github.com/SalesTim/app-platform/commit/74cae14f443d9c0024f294c1dd98f95a103c03db))
-* **deps:** fixed missing references in api ([829c293](https://github.com/SalesTim/app-platform/commit/829c293e40e7a8be98674977eda3f81b60ca59f0))
-* **github:** fixed github assignees issue when ther's only one assignee ([e9662a8](https://github.com/SalesTim/app-platform/commit/e9662a84eb1584d667b750c68c1674a21e15f855))
-* **logging:** better errors logs through tags and payload parsing/formatting ([474a3c1](https://github.com/SalesTim/app-platform/commit/474a3c17b960b94c0f3762f54a14c6f29551a994))
-* **prometheus:** express-prometheus-middleware module is now only loaded if the option is enabled ([0889241](https://github.com/SalesTim/app-platform/commit/0889241fd6afe5f98352e50dbdb574e77dae3b32))
-* **prometheus:** fixed redis exporter and bull queue exporter configuration from docker compose file ([fb36586](https://github.com/SalesTim/app-platform/commit/fb3658690726f7daa4e42629e0d7b2bababe5bc3))
-* **webclient:** fixed issue [#932](https://github.com/SalesTim/app-platform/issues/932) Deeplinks from home app are sending the users to the wrong team ([f5ac611](https://github.com/SalesTim/app-platform/commit/f5ac61109f04950ac4329a7b04579e41cd425cb7))
+* **authentication:** fixed issue authenticating against the api after client-side session expiration ([3aaad5a](https://github.com/nboldhq/app-platform/commit/3aaad5ad9d853c02c0a1099b0fc562775e0dbd11))
+* **config:** fixed dynamic PORT environment variable used by Azure for its containers ([74cae14](https://github.com/nboldhq/app-platform/commit/74cae14f443d9c0024f294c1dd98f95a103c03db))
+* **deps:** fixed missing references in api ([829c293](https://github.com/nboldhq/app-platform/commit/829c293e40e7a8be98674977eda3f81b60ca59f0))
+* **github:** fixed github assignees issue when ther's only one assignee ([e9662a8](https://github.com/nboldhq/app-platform/commit/e9662a84eb1584d667b750c68c1674a21e15f855))
+* **logging:** better errors logs through tags and payload parsing/formatting ([474a3c1](https://github.com/nboldhq/app-platform/commit/474a3c17b960b94c0f3762f54a14c6f29551a994))
+* **prometheus:** express-prometheus-middleware module is now only loaded if the option is enabled ([0889241](https://github.com/nboldhq/app-platform/commit/0889241fd6afe5f98352e50dbdb574e77dae3b32))
+* **prometheus:** fixed redis exporter and bull queue exporter configuration from docker compose file ([fb36586](https://github.com/nboldhq/app-platform/commit/fb3658690726f7daa4e42629e0d7b2bababe5bc3))
+* **webclient:** fixed issue [#932](https://github.com/nboldhq/app-platform/issues/932) Deeplinks from home app are sending the users to the wrong team ([f5ac611](https://github.com/nboldhq/app-platform/commit/f5ac61109f04950ac4329a7b04579e41cd425cb7))
 
 
 ### 🏭 Build System
 
-* **build:** updated INT build ([215aea4](https://github.com/SalesTim/app-platform/commit/215aea4cd12cac9ff9f30250a45faa2c976344bf))
-* **build:** updated int script ([0c2c2d2](https://github.com/SalesTim/app-platform/commit/0c2c2d21bbfd20b1dd20f75c0f92dca79e8a37c9))
-* **deps-dev:** bump @jest/globals from 27.2.0 to 27.2.1 ([298d8a6](https://github.com/SalesTim/app-platform/commit/298d8a668b4c0edc44e4bf2d735522a0991ffc0f))
-* **deps:** bump @salestim/i18n from `9ac2bf7` to `174838e` ([c9fa7e6](https://github.com/SalesTim/app-platform/commit/c9fa7e61e97c28a8f4758829e71ba7026af12e50))
-* **deps:** bump @yaireo/tagify from 4.7.2 to 4.8.0 ([5be4dcb](https://github.com/SalesTim/app-platform/commit/5be4dcbf68385b119474e775223ed2be1ece8749))
-* **deps:** bump alpinejs from 3.3.4 to 3.4.0 ([1f3501d](https://github.com/SalesTim/app-platform/commit/1f3501db1875c12964e329aaa30232bb134897b4))
-* **deps:** bump unleash-proxy-client from 1.4.0 to 1.5.2 ([e426ebe](https://github.com/SalesTim/app-platform/commit/e426ebeb7f6afb1e7f35e46163dd78e51160a233))
-* **deps:** fix deps issue between express prometheus and unleash server with prom-client ([3c72949](https://github.com/SalesTim/app-platform/commit/3c7294981fe376e6054a48a5a8f2a2b035e0d425))
-* **deps:** updated dependencies from GitHub ([501d78c](https://github.com/SalesTim/app-platform/commit/501d78cdcc7dfb236153376a6cdd00e528cc2ad7))
-* **npm:** updated npm dependencies to their latest version ([358c20b](https://github.com/SalesTim/app-platform/commit/358c20be28a7926261f1966fa89c943958373a1f))
-* **npm:** using npm ci instead of npm install in INT + added npm rebuild for native packages ([e511c01](https://github.com/SalesTim/app-platform/commit/e511c01c2d90d847dc33d0382784dcc7e8624f2e))
-* **teams-packages:** fixed Teams packages build after introducing publisher/product constants ([0672f80](https://github.com/SalesTim/app-platform/commit/0672f80408114bf8f0b754a85dd311d7d172cf04))
-* **tests:** disabled unit tests for testing in INT ([77daeee](https://github.com/SalesTim/app-platform/commit/77daeee2098c11593a6c95fc0b9fc822a108c641))
-* **version:** updated major version number to 4 ([3e72aab](https://github.com/SalesTim/app-platform/commit/3e72aab218debde3b36da3835ff5b10b48e74616))
+* **build:** updated INT build ([215aea4](https://github.com/nboldhq/app-platform/commit/215aea4cd12cac9ff9f30250a45faa2c976344bf))
+* **build:** updated int script ([0c2c2d2](https://github.com/nboldhq/app-platform/commit/0c2c2d21bbfd20b1dd20f75c0f92dca79e8a37c9))
+* **deps-dev:** bump @jest/globals from 27.2.0 to 27.2.1 ([298d8a6](https://github.com/nboldhq/app-platform/commit/298d8a668b4c0edc44e4bf2d735522a0991ffc0f))
+* **deps:** bump @salestim/i18n from `9ac2bf7` to `174838e` ([c9fa7e6](https://github.com/nboldhq/app-platform/commit/c9fa7e61e97c28a8f4758829e71ba7026af12e50))
+* **deps:** bump @yaireo/tagify from 4.7.2 to 4.8.0 ([5be4dcb](https://github.com/nboldhq/app-platform/commit/5be4dcbf68385b119474e775223ed2be1ece8749))
+* **deps:** bump alpinejs from 3.3.4 to 3.4.0 ([1f3501d](https://github.com/nboldhq/app-platform/commit/1f3501db1875c12964e329aaa30232bb134897b4))
+* **deps:** bump unleash-proxy-client from 1.4.0 to 1.5.2 ([e426ebe](https://github.com/nboldhq/app-platform/commit/e426ebeb7f6afb1e7f35e46163dd78e51160a233))
+* **deps:** fix deps issue between express prometheus and unleash server with prom-client ([3c72949](https://github.com/nboldhq/app-platform/commit/3c7294981fe376e6054a48a5a8f2a2b035e0d425))
+* **deps:** updated dependencies from GitHub ([501d78c](https://github.com/nboldhq/app-platform/commit/501d78cdcc7dfb236153376a6cdd00e528cc2ad7))
+* **npm:** updated npm dependencies to their latest version ([358c20b](https://github.com/nboldhq/app-platform/commit/358c20be28a7926261f1966fa89c943958373a1f))
+* **npm:** using npm ci instead of npm install in INT + added npm rebuild for native packages ([e511c01](https://github.com/nboldhq/app-platform/commit/e511c01c2d90d847dc33d0382784dcc7e8624f2e))
+* **teams-packages:** fixed Teams packages build after introducing publisher/product constants ([0672f80](https://github.com/nboldhq/app-platform/commit/0672f80408114bf8f0b754a85dd311d7d172cf04))
+* **tests:** disabled unit tests for testing in INT ([77daeee](https://github.com/nboldhq/app-platform/commit/77daeee2098c11593a6c95fc0b9fc822a108c641))
+* **version:** updated major version number to 4 ([3e72aab](https://github.com/nboldhq/app-platform/commit/3e72aab218debde3b36da3835ff5b10b48e74616))
 
-### [3.10.2](https://github.com/SalesTim/app-platform/compare/v3.10.1...v3.10.2) (2021-09-21)
+### [3.10.2](https://github.com/nboldhq/app-platform/compare/v3.10.1...v3.10.2) (2021-09-21)
 
 
 ### 📚 Docs
 
-* **self-hosting:** initialized the self-hosting docs published to dist ([9f96583](https://github.com/SalesTim/app-platform/commit/9f965839c8295c72b969c0242db5e652f08cb673))
+* **self-hosting:** initialized the self-hosting docs published to dist ([9f96583](https://github.com/nboldhq/app-platform/commit/9f965839c8295c72b969c0242db5e652f08cb673))
 
-### [3.10.1](https://github.com/SalesTim/app-platform/compare/v3.10.0...v3.10.1) (2021-09-21)
+### [3.10.1](https://github.com/nboldhq/app-platform/compare/v3.10.0...v3.10.1) (2021-09-21)
 
 
 ### 🏭 Build System
 
-* **deps:** bump alpinejs from 3.3.3 to 3.3.4 ([14b2230](https://github.com/SalesTim/app-platform/commit/14b22304e6221182cd7eab9c0c72b84334712103))
+* **deps:** bump alpinejs from 3.3.3 to 3.3.4 ([14b2230](https://github.com/nboldhq/app-platform/commit/14b22304e6221182cd7eab9c0c72b84334712103))
 
 
 ### 🐛 Bug Fixes
 
-* **cache:** fixed massive redis session keys creation for each http request ([01d1edd](https://github.com/SalesTim/app-platform/commit/01d1edd74f210602954573814b45251a7cdc5582))
-* **catalog:** fix catalog audience targeting check feature ([f87d465](https://github.com/SalesTim/app-platform/commit/f87d465de5782cac13539e85d96b9a18ca6a6730))
-* **cdn:** added README.md root file to support UptimeRobot monitoring ([e35db66](https://github.com/SalesTim/app-platform/commit/e35db6693ef8d62e9515c4af5f2f36fb9450a6f7))
-* **feature-toggles:** fixed issue preventing catalog to launch ([8a09416](https://github.com/SalesTim/app-platform/commit/8a094165ec6f068b972096bc966514f1483fed2b))
-* **service-account:** fixed service account refresh after update ([d149a6b](https://github.com/SalesTim/app-platform/commit/d149a6b781616844355664d3b940ae5f85c2f1dd))
+* **cache:** fixed massive redis session keys creation for each http request ([01d1edd](https://github.com/nboldhq/app-platform/commit/01d1edd74f210602954573814b45251a7cdc5582))
+* **catalog:** fix catalog audience targeting check feature ([f87d465](https://github.com/nboldhq/app-platform/commit/f87d465de5782cac13539e85d96b9a18ca6a6730))
+* **cdn:** added README.md root file to support UptimeRobot monitoring ([e35db66](https://github.com/nboldhq/app-platform/commit/e35db6693ef8d62e9515c4af5f2f36fb9450a6f7))
+* **feature-toggles:** fixed issue preventing catalog to launch ([8a09416](https://github.com/nboldhq/app-platform/commit/8a094165ec6f068b972096bc966514f1483fed2b))
+* **service-account:** fixed service account refresh after update ([d149a6b](https://github.com/nboldhq/app-platform/commit/d149a6b781616844355664d3b940ae5f85c2f1dd))
 
 
 ### 🛠️ Code Refactoring
 
-* **api:** moved api root from /v1.0 to /api/v1.0 ([77b6f10](https://github.com/SalesTim/app-platform/commit/77b6f1038c3ef5297b38b7eaf9f4dfffb3e506da))
-* **cdn:** renamed /cdn/staging to cdn/integration ([b282470](https://github.com/SalesTim/app-platform/commit/b28247025fb25db4ed86338546d50185feae5583))
-* **environment variables:** refactored environment variables management ([83e04f8](https://github.com/SalesTim/app-platform/commit/83e04f805d8b9e8725ac8b833caf247f19fafa78))
-* **environments:** environment variables preprocessing is now done from environment.js ([ef9f499](https://github.com/SalesTim/app-platform/commit/ef9f499fb17d6dde69131b02d796476119947667))
-* **guthub:** migrated github ops token to the new format ([0a7b5b9](https://github.com/SalesTim/app-platform/commit/0a7b5b95bc0dff5540a15bb37e402a13e614a35f))
-* **monitoring:** moved appinsights initialization to the instrumentation module ([a6d342c](https://github.com/SalesTim/app-platform/commit/a6d342c9a0e06d6dcc1f54ca2e6718f93d35e32e))
-* **ms-graph:** improved logging in getUserDirectoryRole function ([3ca8863](https://github.com/SalesTim/app-platform/commit/3ca886314ef552063e8e467cbce8af0a778bd295))
-* **ms-lists:** removed ms-lists dependency ([eb3c3d4](https://github.com/SalesTim/app-platform/commit/eb3c3d4aeb85a3e318ff377bc56c07c535dc033f))
-* **packages:** renamed packages zip file name without "automation" for easier readibility ([b8481ca](https://github.com/SalesTim/app-platform/commit/b8481ca918f94fb906b287b4761656379151a45d))
+* **api:** moved api root from /v1.0 to /api/v1.0 ([77b6f10](https://github.com/nboldhq/app-platform/commit/77b6f1038c3ef5297b38b7eaf9f4dfffb3e506da))
+* **cdn:** renamed /cdn/staging to cdn/integration ([b282470](https://github.com/nboldhq/app-platform/commit/b28247025fb25db4ed86338546d50185feae5583))
+* **environment variables:** refactored environment variables management ([83e04f8](https://github.com/nboldhq/app-platform/commit/83e04f805d8b9e8725ac8b833caf247f19fafa78))
+* **environments:** environment variables preprocessing is now done from environment.js ([ef9f499](https://github.com/nboldhq/app-platform/commit/ef9f499fb17d6dde69131b02d796476119947667))
+* **guthub:** migrated github ops token to the new format ([0a7b5b9](https://github.com/nboldhq/app-platform/commit/0a7b5b95bc0dff5540a15bb37e402a13e614a35f))
+* **monitoring:** moved appinsights initialization to the instrumentation module ([a6d342c](https://github.com/nboldhq/app-platform/commit/a6d342c9a0e06d6dcc1f54ca2e6718f93d35e32e))
+* **ms-graph:** improved logging in getUserDirectoryRole function ([3ca8863](https://github.com/nboldhq/app-platform/commit/3ca886314ef552063e8e467cbce8af0a778bd295))
+* **ms-lists:** removed ms-lists dependency ([eb3c3d4](https://github.com/nboldhq/app-platform/commit/eb3c3d4aeb85a3e318ff377bc56c07c535dc033f))
+* **packages:** renamed packages zip file name without "automation" for easier readibility ([b8481ca](https://github.com/nboldhq/app-platform/commit/b8481ca918f94fb906b287b4761656379151a45d))
 
 
 ### 📚 Docs
 
-* **audits:** added an automatically generated [Audits Index](./docs/audits/README.md) ([c8bd5d7](https://github.com/SalesTim/app-platform/commit/c8bd5d74fab8bed5ca9cf2e67d43a8b9eeca43b8))
-* **audits:** added uptimerobot data export to npm run audit script ([c1a6bd4](https://github.com/SalesTim/app-platform/commit/c1a6bd4a8dfb166e71b92a43976dc92793ccfb8d))
-* **audits:** updated audit index format ([dcda3e4](https://github.com/SalesTim/app-platform/commit/dcda3e414b2921c93598b57bc0dbd0f19074c76f))
-* **depcheck:** included depcheck as part of the audit reports generated from `npm run audit` ([8fa391b](https://github.com/SalesTim/app-platform/commit/8fa391b824ebba34a397c1e389285ca89ecdad1e))
-* **environment variables:** moved ENVIRONMENT_VARIABLES.md to the root to prevent jekyll errors ([50c9f3d](https://github.com/SalesTim/app-platform/commit/50c9f3dc7d75c5911ba1f21ca51514c0d9395d12))
-* **packages:** new [packages index](https://dist.salestim.io/packages/) ([4742bd7](https://github.com/SalesTim/app-platform/commit/4742bd7fc23223d0547b81889d926344adc2283c))
+* **audits:** added an automatically generated [Audits Index](./docs/audits/README.md) ([c8bd5d7](https://github.com/nboldhq/app-platform/commit/c8bd5d74fab8bed5ca9cf2e67d43a8b9eeca43b8))
+* **audits:** added uptimerobot data export to npm run audit script ([c1a6bd4](https://github.com/nboldhq/app-platform/commit/c1a6bd4a8dfb166e71b92a43976dc92793ccfb8d))
+* **audits:** updated audit index format ([dcda3e4](https://github.com/nboldhq/app-platform/commit/dcda3e414b2921c93598b57bc0dbd0f19074c76f))
+* **depcheck:** included depcheck as part of the audit reports generated from `npm run audit` ([8fa391b](https://github.com/nboldhq/app-platform/commit/8fa391b824ebba34a397c1e389285ca89ecdad1e))
+* **environment variables:** moved ENVIRONMENT_VARIABLES.md to the root to prevent jekyll errors ([50c9f3d](https://github.com/nboldhq/app-platform/commit/50c9f3dc7d75c5911ba1f21ca51514c0d9395d12))
+* **packages:** new [packages index](https://dist.salestim.io/packages/) ([4742bd7](https://github.com/nboldhq/app-platform/commit/4742bd7fc23223d0547b81889d926344adc2283c))
 
 
-## [3.10.0](https://github.com/SalesTim/app-platform/compare/v3.9.0...v3.10.0) (2021-09-16)
+## [3.10.0](https://github.com/nboldhq/app-platform/compare/v3.9.0...v3.10.0) (2021-09-16)
 
 
 ### 🚀 Features
 
-* **feature-toggles:** enabled feature toggles service in all envs in std and role-specific mode ([d139535](https://github.com/SalesTim/app-platform/commit/d13953547b5a8ae0cd9d6f589b6317129e97ee67))
+* **feature-toggles:** enabled feature toggles service in all envs in std and role-specific mode ([d139535](https://github.com/nboldhq/app-platform/commit/d13953547b5a8ae0cd9d6f589b6317129e97ee67))
 
 
 ### 🛠️ Code Refactoring
 
-* **feature-toggles:** refactored service ([40b92d9](https://github.com/SalesTim/app-platform/commit/40b92d9b1d3ef3ca683c1e73e5b054aace6e46bd))
-* **mail-alerts:** disabled mail alerts for all environments, keeping github for ppr and prd ([a801824](https://github.com/SalesTim/app-platform/commit/a801824fa26f2a07ad09940d845f0faf696bcb8b))
+* **feature-toggles:** refactored service ([40b92d9](https://github.com/nboldhq/app-platform/commit/40b92d9b1d3ef3ca683c1e73e5b054aace6e46bd))
+* **mail-alerts:** disabled mail alerts for all environments, keeping github for ppr and prd ([a801824](https://github.com/nboldhq/app-platform/commit/a801824fa26f2a07ad09940d845f0faf696bcb8b))
 
 
 ### 📦 CI
 
-* 🎡 updated gh action scripts to use npm install for std ([1f70df5](https://github.com/SalesTim/app-platform/commit/1f70df58a2954763f9780bd1982e6ee99f469273))
-* **feature-toggles:** added st-featuretoggles-prd-01 to GitHub actions CI/CD ([0b4f397](https://github.com/SalesTim/app-platform/commit/0b4f39773be4f790624887d306ba66e3ffdd9107))
-* **feature-toggles:** updated int gh action script to use npm install instead of npm ci ([e133481](https://github.com/SalesTim/app-platform/commit/e133481daa2bc8b730b9d151a14b179db17d20ce))
-* **infrastructure:** added two new audit scripts db:stats and cache:stats ([24e7e0a](https://github.com/SalesTim/app-platform/commit/24e7e0a3bdfefc3cf5346d26fd1d926407858b91))
+* 🎡 updated gh action scripts to use npm install for std ([1f70df5](https://github.com/nboldhq/app-platform/commit/1f70df58a2954763f9780bd1982e6ee99f469273))
+* **feature-toggles:** added st-featuretoggles-prd-01 to GitHub actions CI/CD ([0b4f397](https://github.com/nboldhq/app-platform/commit/0b4f39773be4f790624887d306ba66e3ffdd9107))
+* **feature-toggles:** updated int gh action script to use npm install instead of npm ci ([e133481](https://github.com/nboldhq/app-platform/commit/e133481daa2bc8b730b9d151a14b179db17d20ce))
+* **infrastructure:** added two new audit scripts db:stats and cache:stats ([24e7e0a](https://github.com/nboldhq/app-platform/commit/24e7e0a3bdfefc3cf5346d26fd1d926407858b91))
 
 
 ### 🏭 Build System
 
-* **appservice:** added `.deployment` and `deploy.sh` scripts for fastest deployment ([34e4980](https://github.com/SalesTim/app-platform/commit/34e49807b7d165dc99e877a62ee8c3d572c5fc2c))
-* **ci-cd:** updated github action scripts to use npm install instead of ci ([ca1e403](https://github.com/SalesTim/app-platform/commit/ca1e40339245df666c15644e1a12478f984449e8))
-* **deps-dev:** bump adm-zip from 0.5.5 to 0.5.6 ([ee38d21](https://github.com/SalesTim/app-platform/commit/ee38d21cb5012018865a56b6fcec17443bd56ba7))
-* **deps:** bump ajv from 8.6.2 to 8.6.3 ([c37d3c6](https://github.com/SalesTim/app-platform/commit/c37d3c6b0d279e6e7d8091f524e76e906f25a453))
-* **deps:** bump alpinejs from 3.3.2 to 3.3.3 ([722d7b3](https://github.com/SalesTim/app-platform/commit/722d7b3fe170e6aa199975bdbdd23bc14f22b566))
-* **deps:** bump applicationinsights from 2.1.6 to 2.1.7 ([a57ffe2](https://github.com/SalesTim/app-platform/commit/a57ffe26ffd401e0bcc9b1dbe6982cf7f9d29f95))
-* **deps:** bump unleash-proxy-client from 1.3.0 to 1.4.0 ([1242b6e](https://github.com/SalesTim/app-platform/commit/1242b6edb491926b91a56d3eb46114216607b61a))
-* **deps:** bump zaproxy/action-baseline from 0.4.0 to 0.5.0 ([2b37e25](https://github.com/SalesTim/app-platform/commit/2b37e2503ba6f54109c78f49fb5e0f12d39aec20))
-* **deps:** bump zaproxy/action-full-scan from 0.2.0 to 0.3.0 ([dae08b1](https://github.com/SalesTim/app-platform/commit/dae08b177bc9de813d369bcc5397d1b0a2e47612))
-* **feature-toggles:** removed github action yml file ([75cb6fa](https://github.com/SalesTim/app-platform/commit/75cb6fa873cfaf1e5882604c09218c9b047332d2))
+* **appservice:** added `.deployment` and `deploy.sh` scripts for fastest deployment ([34e4980](https://github.com/nboldhq/app-platform/commit/34e49807b7d165dc99e877a62ee8c3d572c5fc2c))
+* **ci-cd:** updated github action scripts to use npm install instead of ci ([ca1e403](https://github.com/nboldhq/app-platform/commit/ca1e40339245df666c15644e1a12478f984449e8))
+* **deps-dev:** bump adm-zip from 0.5.5 to 0.5.6 ([ee38d21](https://github.com/nboldhq/app-platform/commit/ee38d21cb5012018865a56b6fcec17443bd56ba7))
+* **deps:** bump ajv from 8.6.2 to 8.6.3 ([c37d3c6](https://github.com/nboldhq/app-platform/commit/c37d3c6b0d279e6e7d8091f524e76e906f25a453))
+* **deps:** bump alpinejs from 3.3.2 to 3.3.3 ([722d7b3](https://github.com/nboldhq/app-platform/commit/722d7b3fe170e6aa199975bdbdd23bc14f22b566))
+* **deps:** bump applicationinsights from 2.1.6 to 2.1.7 ([a57ffe2](https://github.com/nboldhq/app-platform/commit/a57ffe26ffd401e0bcc9b1dbe6982cf7f9d29f95))
+* **deps:** bump unleash-proxy-client from 1.3.0 to 1.4.0 ([1242b6e](https://github.com/nboldhq/app-platform/commit/1242b6edb491926b91a56d3eb46114216607b61a))
+* **deps:** bump zaproxy/action-baseline from 0.4.0 to 0.5.0 ([2b37e25](https://github.com/nboldhq/app-platform/commit/2b37e2503ba6f54109c78f49fb5e0f12d39aec20))
+* **deps:** bump zaproxy/action-full-scan from 0.2.0 to 0.3.0 ([dae08b1](https://github.com/nboldhq/app-platform/commit/dae08b177bc9de813d369bcc5397d1b0a2e47612))
+* **feature-toggles:** removed github action yml file ([75cb6fa](https://github.com/nboldhq/app-platform/commit/75cb6fa873cfaf1e5882604c09218c9b047332d2))
 
 
 ### 🐛 Bug Fixes
 
-* **feature-toggles:** disabled unleash on client-side ([bdb73be](https://github.com/SalesTim/app-platform/commit/bdb73bed16315514ea89a1fe2320855e230fc238))
-* **feature-toggles:** updated gh action deployment script to use npm install instead of ci ([56cbd0f](https://github.com/SalesTim/app-platform/commit/56cbd0f5e5ee02b1cc1071e5231a60af1fdc9fb2))
-* **service-account:** fixed refresh issue after updating or removing a service account ([558eed7](https://github.com/SalesTim/app-platform/commit/558eed760be68eeae87051ee59fe3f291c5d451e))
-* **service-account:** fixed service account update from the settings tab ([ce6732e](https://github.com/SalesTim/app-platform/commit/ce6732e5b05befeefcd1a49fdef3a342db7da8c9)), closes [#946](https://github.com/SalesTim/app-platform/issues/946)
+* **feature-toggles:** disabled unleash on client-side ([bdb73be](https://github.com/nboldhq/app-platform/commit/bdb73bed16315514ea89a1fe2320855e230fc238))
+* **feature-toggles:** updated gh action deployment script to use npm install instead of ci ([56cbd0f](https://github.com/nboldhq/app-platform/commit/56cbd0f5e5ee02b1cc1071e5231a60af1fdc9fb2))
+* **service-account:** fixed refresh issue after updating or removing a service account ([558eed7](https://github.com/nboldhq/app-platform/commit/558eed760be68eeae87051ee59fe3f291c5d451e))
+* **service-account:** fixed service account update from the settings tab ([ce6732e](https://github.com/nboldhq/app-platform/commit/ce6732e5b05befeefcd1a49fdef3a342db7da8c9)), closes [#946](https://github.com/nboldhq/app-platform/issues/946)
 
-## [3.9.0](https://github.com/SalesTim/app-platform/compare/v3.8.1...v3.9.0) (2021-09-09)
+## [3.9.0](https://github.com/nboldhq/app-platform/compare/v3.8.1...v3.9.0) (2021-09-09)
 
 
 ### 🚀 Features
 
-* **feature-toggles:** configured smtp parameters for emailing from the Unleash service ([2d191a2](https://github.com/SalesTim/app-platform/commit/2d191a2d6a184cc45fc019d43d7ab5ec16e369d1))
-* **feature-toggles:** feature-toggles service is now enabled and available in standalone mode ([ce4776d](https://github.com/SalesTim/app-platform/commit/ce4776db080c0c0aec747d8024b92a62ebc411f3))
-* **feature-toggles:** installed "Unleash" to implement feature toggles ([cbcc222](https://github.com/SalesTim/app-platform/commit/cbcc22207719372bcc95d081a3dd963f0480cfcd))
+* **feature-toggles:** configured smtp parameters for emailing from the Unleash service ([2d191a2](https://github.com/nboldhq/app-platform/commit/2d191a2d6a184cc45fc019d43d7ab5ec16e369d1))
+* **feature-toggles:** feature-toggles service is now enabled and available in standalone mode ([ce4776d](https://github.com/nboldhq/app-platform/commit/ce4776db080c0c0aec747d8024b92a62ebc411f3))
+* **feature-toggles:** installed "Unleash" to implement feature toggles ([cbcc222](https://github.com/nboldhq/app-platform/commit/cbcc22207719372bcc95d081a3dd963f0480cfcd))
 
 
 ### 🐛 Bug Fixes
 
-* **i18n:** locales not loaded from the login and main pages ([022e716](https://github.com/SalesTim/app-platform/commit/022e716991472e0415f5ad2a6ec91d7f8d0210ec))
+* **i18n:** locales not loaded from the login and main pages ([022e716](https://github.com/nboldhq/app-platform/commit/022e716991472e0415f5ad2a6ec91d7f8d0210ec))
 
-## [3.8.1](https://github.com/SalesTim/app-platform/compare/v3.7.20...v3.8.1) (2021-09-09)
+## [3.8.1](https://github.com/nboldhq/app-platform/compare/v3.7.20...v3.8.1) (2021-09-09)
 
 ### 🏭 Build System
 
-* **deps:** bump axios from 0.21.1 to 0.21.4 ([d38112b](https://github.com/SalesTim/app-platform/commit/d38112b64b541502846e47eddb84442bd2199a68))
-* **deps:** updated axios ([69f672b](https://github.com/SalesTim/app-platform/commit/69f672b41c1f926e6f01b9c081360139495631b2))
+* **deps:** bump axios from 0.21.1 to 0.21.4 ([d38112b](https://github.com/nboldhq/app-platform/commit/d38112b64b541502846e47eddb84442bd2199a68))
+* **deps:** updated axios ([69f672b](https://github.com/nboldhq/app-platform/commit/69f672b41c1f926e6f01b9c081360139495631b2))
 
 ### 🐛 Bug Fixes
 
-* **i18n:** reintegrated locales to the cdn legacy folder in /dist ([2b5159e](https://github.com/SalesTim/app-platform/commit/2b5159ed26a01d89181203b1cd9ff0389c8b5e93))
-* **package:** fixed issue with old teams home packages that were using query parameters ([01d8897](https://github.com/SalesTim/app-platform/commit/01d8897c83daa891f4ebcd7045a424d9cbb561c4))
+* **i18n:** reintegrated locales to the cdn legacy folder in /dist ([2b5159e](https://github.com/nboldhq/app-platform/commit/2b5159ed26a01d89181203b1cd9ff0389c8b5e93))
+* **package:** fixed issue with old teams home packages that were using query parameters ([01d8897](https://github.com/nboldhq/app-platform/commit/01d8897c83daa891f4ebcd7045a424d9cbb561c4))
 
 
 ### 🛠️ Code Refactoring
 
-* **cdn:** cdn assets are now distincts between staging and production ([691a629](https://github.com/SalesTim/app-platform/commit/691a629f4975628d8f3e0e77486eb812a4482a7e))
-* **i18n:** changed dist / cdn folder structure to enable "staging" and "production" ([5652d38](https://github.com/SalesTim/app-platform/commit/5652d38e9f0913dcdbb2daa115efd678aeff956b))
+* **cdn:** cdn assets are now distincts between staging and production ([691a629](https://github.com/nboldhq/app-platform/commit/691a629f4975628d8f3e0e77486eb812a4482a7e))
+* **i18n:** changed dist / cdn folder structure to enable "staging" and "production" ([5652d38](https://github.com/nboldhq/app-platform/commit/5652d38e9f0913dcdbb2daa115efd678aeff956b))
 
 
 ## [3.7] (2021-09-09)
 
 ### 🛠️ Code Refactoring
 
-* **cdn:** updated cdn root url for each environment([c52139e](https://github.com/SalesTim/app-platform/commit/c52139e0ea5affe103099aebe503cafae28bddd2))
+* **cdn:** updated cdn root url for each environment([c52139e](https://github.com/nboldhq/app-platform/commit/c52139e0ea5affe103099aebe503cafae28bddd2))
   * https://dist.salestim.io/cdn/staging
   * https://dist.salestim.io/cdn/production
 
-* **web:** removed all legacy unused code ([3e1893c](https://github.com/SalesTim/app-platform/commit/3e1893ca71ca480ffdd0c2f187bbcc773d7f6335))
+* **web:** removed all legacy unused code ([3e1893c](https://github.com/nboldhq/app-platform/commit/3e1893ca71ca480ffdd0c2f187bbcc773d7f6335))
 
 ### Build System
 
-* **changelog:** integrated commitzen and standard-version ([ffe2d89](https://github.com/SalesTim/app-platform/commit/ffe2d8916c6cba89a5585ee2c2a60233696ed3c9))
+* **changelog:** integrated commitzen and standard-version ([ffe2d89](https://github.com/nboldhq/app-platform/commit/ffe2d8916c6cba89a5585ee2c2a60233696ed3c9))
   * New changelog format generated from commits
-* **npm:** updated npm scripts for the build/release process ([823f430](https://github.com/SalesTim/app-platform/commit/823f430ae6117678c236e66cb2e0ead18211fd79))
-* **changelog:** added .versionrc to configure changelog generation ([215156e](https://github.com/SalesTim/app-platform/commit/215156e599217899b7db8e0c41226ec9dd012fe4))
-* **deps:** bump @salestim/i18n from `abe8038` to `3ec1717` ([b70238f](https://github.com/SalesTim/app-platform/commit/b70238f7133312e8cf51592a28dad98ee1aa4b72))
-* **deps:** bump alpinejs from 3.3.1 to 3.3.2 ([ff2d1c3](https://github.com/SalesTim/app-platform/commit/ff2d1c303802b0345592a10aaa577f9c021f947b))
-* **versions:** extracted version bump from npm build scripts ([73c9191](https://github.com/SalesTim/app-platform/commit/73c919184a1282e9df8614bda569c8a403d16dde))
+* **npm:** updated npm scripts for the build/release process ([823f430](https://github.com/nboldhq/app-platform/commit/823f430ae6117678c236e66cb2e0ead18211fd79))
+* **changelog:** added .versionrc to configure changelog generation ([215156e](https://github.com/nboldhq/app-platform/commit/215156e599217899b7db8e0c41226ec9dd012fe4))
+* **deps:** bump @salestim/i18n from `abe8038` to `3ec1717` ([b70238f](https://github.com/nboldhq/app-platform/commit/b70238f7133312e8cf51592a28dad98ee1aa4b72))
+* **deps:** bump alpinejs from 3.3.1 to 3.3.2 ([ff2d1c3](https://github.com/nboldhq/app-platform/commit/ff2d1c303802b0345592a10aaa577f9c021f947b))
+* **versions:** extracted version bump from npm build scripts ([73c9191](https://github.com/nboldhq/app-platform/commit/73c919184a1282e9df8614bda569c8a403d16dde))
 
 ### Bug Fixes
 
-* **login:** fix issue with login attempts without admin consent ([63f6f6b](https://github.com/SalesTim/app-platform/commit/63f6f6bc255d2c103998d600e5bdb5ac25a280b6))
-* **rbac:** fixed rbac control for restricted tabs ([3206c06](https://github.com/SalesTim/app-platform/commit/3206c06c554fc65bf7f2a9bfe13a8c6a82827e3d))
-* **npm:** removed segfault-handler dependency ([e08826e](https://github.com/SalesTim/app-platform/commit/e08826e9d433c54bae3f899f5a4332d281ac2308))
+* **login:** fix issue with login attempts without admin consent ([63f6f6b](https://github.com/nboldhq/app-platform/commit/63f6f6bc255d2c103998d600e5bdb5ac25a280b6))
+* **rbac:** fixed rbac control for restricted tabs ([3206c06](https://github.com/nboldhq/app-platform/commit/3206c06c554fc65bf7f2a9bfe13a8c6a82827e3d))
+* **npm:** removed segfault-handler dependency ([e08826e](https://github.com/nboldhq/app-platform/commit/e08826e9d433c54bae3f899f5a4332d281ac2308))
 
 
 ## [3.6] (2021-09-02)
 
 - fixed: API Error Solution for "413 Request Entity Too Large" error
-  - Probably the origin of this issue "Impossible to create a new template in PPR" [#897](https://github.com/SalesTim/app-platform/issues/897)
+  - Probably the origin of this issue "Impossible to create a new template in PPR" [#897](https://github.com/nboldhq/app-platform/issues/897)
   - Resolution: update express middlewares by specifying a body content limit to 50mb
   ```js
   app.use(bodyParser.json({limit: '50mb'}))
@@ -608,13 +608,13 @@ All notable changes to this project will be documented in this file. See [standa
           app_display_name: appDisplayName
         })
       ```
-- fixed: Team creation getting stuck at 10% [#888](https://github.com/SalesTim/app-platform/issues/888)
+- fixed: Team creation getting stuck at 10% [#888](https://github.com/nboldhq/app-platform/issues/888)
   - Changed the behavior of requests limiters by setting the `maxConcurrent` option to `null`.
   - It appears that with a non-null value defined, some requests were leaked.
   - See: https://github.com/SGrondin/bottleneck#constructor
   - Also fixes:
-    - Teams creation provisioning blocked at Planner tab [#896](https://github.com/SalesTim/app-platform/issues/896)
-    - Impossible to create a new template in PPR [#897](https://github.com/SalesTim/app-platform/issues/897)
+    - Teams creation provisioning blocked at Planner tab [#896](https://github.com/nboldhq/app-platform/issues/896)
+    - Impossible to create a new template in PPR [#897](https://github.com/nboldhq/app-platform/issues/897)
 - added: Team provisioning audit trails are now saved in the events db from the `team_provisioning_audit_entry_created` event (in addition to beeing saved in the job)
 - changed: Error alerts are now temporarily sent by email in addition to as a GitHub issue in all environments for debugging purposes.
 - changed: Group updates operations for email nickname and sensitivity labels are now executed through distincts functions
@@ -792,7 +792,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Before: json resources files were downloaded from the public repository as part of the build process using a custom code
   - Now:
     - The resources are integrated as a private npm package through a standard `npm install` (see `package.json`)
-- fixed: Membership policies not reflected on the existing teams [#788](https://github.com/SalesTim/app-platform/issues/788)
+- fixed: Membership policies not reflected on the existing teams [#788](https://github.com/nboldhq/app-platform/issues/788)
   - fixed: Create/Update record in the teams directory table on creation
   - changed: The Governance job "Permanent membership policy" is now triggered by our scheduler (every 5 min)
   - Supported scenarios:
@@ -832,14 +832,14 @@ All notable changes to this project will be documented in this file. See [standa
     - Mail
     - Sandbox
     - Webhooks
-- changed: Team name now supports the "_" character. See: [#849](https://github.com/SalesTim/app-platform/issues/849)
+- changed: Team name now supports the "_" character. See: [#849](https://github.com/nboldhq/app-platform/issues/849)
 - added: PPR and PRD GitHub Actions full deployment scripts
   - 2 new scipts:
     - `st-ppr-all`: Rebuild and deploy the full PPR environment from the `ppr` branch
     - `st-prd-all`: Rebuild and deploy the full PRD environment from the `production` branch
   - They are NOT triggered by a push NOR other GitHub events, but the they could be manually triggered from the GitHub Actions page:
-    - https://github.com/SalesTim/app-platform/actions/workflows/st-ppr-all.yml
-    - https://github.com/SalesTim/app-platform/actions/workflows/st-prd-all.yml
+    - https://github.com/nboldhq/app-platform/actions/workflows/st-ppr-all.yml
+    - https://github.com/nboldhq/app-platform/actions/workflows/st-prd-all.yml
 - changed: OWASP ZAP Baseline Scan
   - Static analysis checking. See rules: https://www.zaproxy.org/docs/alerts/
   - GitHub action updated to v0.4.0 `zaproxy/action-baseline@v0.4.0`
@@ -856,7 +856,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [3.4] (2021-07-05)
 
-- fixed: Channels are not provisioned [#828](https://github.com/SalesTim/app-platform/issues/828)
+- fixed: Channels are not provisioned [#828](https://github.com/nboldhq/app-platform/issues/828)
   - Detected in Ops:
     - Error in /graphServices/cloningMissingChannels/createChannel. (PRD) #1757382
       ```
@@ -990,16 +990,16 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [3.3] (2021-06-18)
 
-- fixed: Issue with flags on template language [#814](https://github.com/SalesTim/app-platform/issues/814)
-- fixed: Salestim display in Pl-Pl fails to default to english [#813](https://github.com/SalesTim/app-platform/issues/813)
-- fixed: Planner Provisioning not Working in PPR [#812](https://github.com/SalesTim/app-platform/issues/812)
+- fixed: Issue with flags on template language [#814](https://github.com/nboldhq/app-platform/issues/814)
+- fixed: Salestim display in Pl-Pl fails to default to english [#813](https://github.com/nboldhq/app-platform/issues/813)
+- fixed: Planner Provisioning not Working in PPR [#812](https://github.com/nboldhq/app-platform/issues/812)
   - Updated the app installation process, but the root cause seems to be that the service account didn't had access to the app (or may it needs to open it once... to be checked)
-  - Fixes this other related issue: "Planner provisioning failing with same planner added in the tab in PPR" [#815](https://github.com/SalesTim/app-platform/issues/815)
-- fixed: Provisioning stucked at "Processing Request" [#807](https://github.com/SalesTim/app-platform/issues/807)
+  - Fixes this other related issue: "Planner provisioning failing with same planner added in the tab in PPR" [#815](https://github.com/nboldhq/app-platform/issues/815)
+- fixed: Provisioning stucked at "Processing Request" [#807](https://github.com/nboldhq/app-platform/issues/807)
   - The provisioning engine does not rely on the standard cloning feature anymore
   - Fixed multiple 401 errors with token renewal
   - Now the service account access token is refreshed on provisioning startup
-- fixed: SalesTim app & SalesTim home: BLANK [#801](https://github.com/SalesTim/app-platform/issues/801)
+- fixed: SalesTim app & SalesTim home: BLANK [#801](https://github.com/nboldhq/app-platform/issues/801)
   - Analysis:
     - Looks like the issue only affects some tenants (Maybe related to waves of migrations/deployments on MS side)
     - Browser console stack trace:
@@ -1035,7 +1035,7 @@ All notable changes to this project will be documented in this file. See [standa
         - secret
         - payload
     ``` 
-- fixed: Folders Copy not working for a specific Template [#749](https://github.com/SalesTim/app-platform/issues/749)
+- fixed: Folders Copy not working for a specific Template [#749](https://github.com/nboldhq/app-platform/issues/749)
   - Reference:
     - Error in graphServices/cloneFiles/copyDriveItem/waitForTeamsAsyncOperation: https://github.com/SalesTim/Ops/issues/487448
   - Reported failed requests:
@@ -1111,7 +1111,7 @@ All notable changes to this project will be documented in this file. See [standa
       }
       ```
   - Control: Try to refresh an audit trail more than 6 times in a row to see the warning message.
-- added: Advanced error diagnostic for issue: Error in graphHelper/userHasDirectoryRole/getDirectoryRoles [#787](https://github.com/SalesTim/app-platform/issues/787)
+- added: Advanced error diagnostic for issue: Error in graphHelper/userHasDirectoryRole/getDirectoryRoles [#787](https://github.com/nboldhq/app-platform/issues/787)
   - Role Template Id reference: https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#all-roles
   - Additional debug infos added at /home/site/wwwroot/src/microsoft/graph/graphHelper.js:1297:17
 - changed: JS bundles and mins are now excluded from eslint and standard audit reports
@@ -1324,10 +1324,10 @@ All notable changes to this project will be documented in this file. See [standa
   - New "Copy Code" plugin that doesn't interfer with the language tag + Complete review of all the code blocks
 - changed: Naming convention page #techhub
   - Naming conventions page in Tech Hub was updated to reflect the new team name length (to 264) and authorized characters (such as "|")
-- fixed: Approval workflow: multiple and unreadable automated emails [#629](https://github.com/SalesTim/app-platform/issues/629)
+- fixed: Approval workflow: multiple and unreadable automated emails [#629](https://github.com/nboldhq/app-platform/issues/629)
 - added GitHub actions have now a `workflow_dispatch` trigger so that actions could be started manually
-- fixed: Audience Targeting - syntax display issue [#739](https://github.com/SalesTim/app-platform/issues/739)
-- fixed: Naming Convention - policy display issue [#737](https://github.com/SalesTim/app-platform/issues/737)
+- fixed: Audience Targeting - syntax display issue [#739](https://github.com/nboldhq/app-platform/issues/739)
+- fixed: Naming Convention - policy display issue [#737](https://github.com/nboldhq/app-platform/issues/737)
 - changed: Azure Application Insights configuration #AAI
   - Client-side events
     - New "Page View" events to track pages and high UI-level activities:
@@ -1621,7 +1621,7 @@ All notable changes to this project will be documented in this file. See [standa
 - added: Webhooks
   - Webhooks enable organizations to trigger automated operations outside of the SalesTim platform, such as in a custom application, or in an automation tool such as Power Automate or Zapier.
   - See the online doc: https://developers.salestim.com/api/webhooks
-- Power Platform Connector v1 [#534](https://github.com/SalesTim/app-platform/issues/534)
+- Power Platform Connector v1 [#534](https://github.com/nboldhq/app-platform/issues/534)
   - Available actions:
     - GetMyCatalogTemplates: Returns a collection of catalog templates, filtered by the audience targeting rules for the connected user
     - GetCatalogTemplates: Returns all the catalog templates, restricted to catalog administrators
@@ -1641,7 +1641,7 @@ All notable changes to this project will be documented in this file. See [standa
   https://dist.salestim.com/packages/io.salestim.automation.targeted.home.ppr.zip
   https://dist.salestim.com/packages/io.salestim.automation.targeted.home.prd.zip      # PRD with SSO
   ```
-- changed: Migrate to the New Microsoft Graph Team Membership Management API in v1 [#624](https://github.com/SalesTim/app-platform/issues/624)
+- changed: Migrate to the New Microsoft Graph Team Membership Management API in v1 [#624](https://github.com/nboldhq/app-platform/issues/624)
   - Now members are added through teams membership, instead of groups memberships
   - Add member to channel: https://docs.microsoft.com/en-us/graph/api/channel-post-members?view=graph-rest-beta&tabs=http
   - Create channel: https://docs.microsoft.com/en-us/graph/api/channel-post?view=graph-rest-1.0&tabs=http
@@ -1682,17 +1682,17 @@ All notable changes to this project will be documented in this file. See [standa
 - fix: Show channel by default for requesters / owners / members [#350](https://github.com/microsoftgraph/microsoft-graph-docs/issues/6792)
   - The `IsFavoriteByDefault` channel property is now officially supported by Microsoft: See [#6792](https://github.com/microsoftgraph/microsoft-graph-docs/issues/6792)
   - During the provisioning process, SalesTim replicate the `IsFavoriteByDefault` property value from the original channel to the cloned/created one.
-- fixed: JOB RENEWSERVICEACCOUNTTOKENS: Task execution failed: Error in renewServiceAccountTokens/cosmosDbServices/updateCustomer: {"code":429,"body":"{\"code\":\"429\",\"message\":\"Message: {\\\"Errors\\\":[ (PRD) [#655](https://github.com/SalesTim/app-platform/issues/655)
+- fixed: JOB RENEWSERVICEACCOUNTTOKENS: Task execution failed: Error in renewServiceAccountTokens/cosmosDbServices/updateCustomer: {"code":429,"body":"{\"code\":\"429\",\"message\":\"Message: {\\\"Errors\\\":[ (PRD) [#655](https://github.com/nboldhq/app-platform/issues/655)
   - This exception was causing global service interruption because this job was putting access to cosmosdb in throttled mode
   - Implemented a rate limiter for update operations (similar to the graph limiter) using the [Bottleneck](https://www.npmjs.com/package/bottleneck) package
   - Job rescheduled every sunday at 6am throught cron `0 6 * * 0`
-- changed: Enable Microsoft Teams App SSO for the Home package [#393](https://github.com/SalesTim/app-platform/issues/393)
-- added: Role-Based Access Control (RBAC) for Catalog Management [#625](https://github.com/SalesTim/app-platform/issues/625)
+- changed: Enable Microsoft Teams App SSO for the Home package [#393](https://github.com/nboldhq/app-platform/issues/393)
+- added: Role-Based Access Control (RBAC) for Catalog Management [#625](https://github.com/nboldhq/app-platform/issues/625)
 - added: Events Services (events.salestim.io)
   - Abstract:
     - Why: We're too tied to Intercom today, and Intercom lacks many ad-hoc reporting capabilities
     - Purpose: Having a self-hosted events collector, a multiplexer, a Data Warehouse and a reports server
-    - Preliminary analysis: See [New events data collection platform #636](https://github.com/SalesTim/app-platform/issues/636)
+    - Preliminary analysis: See [New events data collection platform #636](https://github.com/nboldhq/app-platform/issues/636)
     - Relies on [EventNative](https://github.com/jitsucom/eventnative)
   - The events service is comprised of two main workloads:
     - **Events Collector API**: A global and unified events collector API for the whole SalesTim application platform.
@@ -1721,12 +1721,12 @@ All notable changes to this project will be documented in this file. See [standa
       - An embedded Redis instance
       - An embedded PostgreSQL instance
     - The Azure VM is `st-reports-prd`
-- added: Mandatory Owners & Members (Security Policy) [#623](https://github.com/SalesTim/app-platform/issues/623)
+- added: Mandatory Owners & Members (Security Policy) [#623](https://github.com/nboldhq/app-platform/issues/623)
 - changed: Pre-production Home Package
   - A new home package for the pre-production environment is now accessible here: https://dist.salestim.com/packages/io.salestim.automation.targeted.home.ppr.zip
-- fixed: Mobile Icon format issue [#642](https://github.com/SalesTim/app-platform/issues/642)
+- fixed: Mobile Icon format issue [#642](https://github.com/nboldhq/app-platform/issues/642)
   - Fixed by updating the `accentColor` property from manifests files from `#a60a2d` to `#000000`
-- fixed: #security Dependency Alert: build(deps): bump find-my-way from 2.2.3 to 2.2.5 [#627](https://github.com/SalesTim/app-platform/pull/627)
+- fixed: #security Dependency Alert: build(deps): bump find-my-way from 2.2.3 to 2.2.5 [#627](https://github.com/nboldhq/app-platform/pull/627)
 - changed: Status monitoring
   - Services status is now monitored by both UptimeRobot and Azure Front Door
   - Alerts are now sent to:
@@ -1747,10 +1747,10 @@ All notable changes to this project will be documented in this file. See [standa
       - ***Since Front Door has many edge environments globally, health probe volume for your backends can be quite high - ranging from 25 requests every minute to as high as 1200 requests per minute, depending on the health probe frequency configured. With the default probe frequency of 30 seconds, the probe volume on your backend should be about 200 requests per minute.***
       - PPR health probe frequency: 255 seconds (higher possible value)
       - PRD health probe frequency: 30 seconds
-- fixed: An unhandledRejection has been detected. (PRD) [#607](https://github.com/SalesTim/app-platform/issues/607)
+- fixed: An unhandledRejection has been detected. (PRD) [#607](https://github.com/nboldhq/app-platform/issues/607)
   - Impact: In some circumstances, the provisioning service may shutdown unexpectedly if the cloning operation raises an unknown error
   - Resolution: Better processing of the error raised by Microsoft Graph
-- fixed: [Provisionning Issue] - Impossible to create a team [#604](https://github.com/SalesTim/app-platform/issues/604)
+- fixed: [Provisionning Issue] - Impossible to create a team [#604](https://github.com/nboldhq/app-platform/issues/604)
   - related ops issue: Error cloning missing tabs in /graphServices/cloneTabsSettingsAndContents/cloningMissingChannelsAndTabs. (PRD) [#357899](https://github.com/SalesTim/Ops/issues/357899)
   - Impacted code: GraphServices.js line 3100
     ```js
@@ -1783,7 +1783,7 @@ All notable changes to this project will be documented in this file. See [standa
         }
       }
     ```
-- fixed: End-users are not able to see templates [#594](https://github.com/SalesTim/app-platform/issues/594)
+- fixed: End-users are not able to see templates [#594](https://github.com/nboldhq/app-platform/issues/594)
   - Implementation
     - app.js:
       - Updated bodyParser json and urlencoded to a limitof '200mb'
@@ -1796,7 +1796,7 @@ All notable changes to this project will be documented in this file. See [standa
     - http://jsandersblog.azurewebsites.net/2020/04/23/azure-app-service-authentication-cors-error-easy-auth/
     - https://social.msdn.microsoft.com/Forums/en-US/ffd280ce-323d-4083-bfef-3cba7b02de09/linux-app-service-throwing-request-body-too-large-when-uploading-file-to-my-service?forum=windowsazurewebsitespreview
     - Fetch behavior: https://javascript.info/fetch-crossorigin
-- fixed: Issue in templates Title in catalog [#584](https://github.com/SalesTim/app-platform/issues/584)
+- fixed: Issue in templates Title in catalog [#584](https://github.com/nboldhq/app-platform/issues/584)
   - Removed 'UrlEncoding' in display
 - changed: Support for the German language, both inside the product and for the manifests
   - Supported language / countries:
@@ -1810,24 +1810,24 @@ All notable changes to this project will be documented in this file. See [standa
 - changed: Teams packages generation
   - Now during the build, teams manifests are generated using a template that inserts localized strings from our internationalization repo.
   - Purpose, avoid future errors and make our localization process more simple
-  - Related issue [#585](https://github.com/SalesTim/app-platform/issues/585)
+  - Related issue [#585](https://github.com/nboldhq/app-platform/issues/585)
 - fixed: Build process is never ending, generating deployment errors
   - Origin: Due to the new use of i18n server in the build process to dynamically insert locales variables to the teams manifests files, the default dev mode was using an "auto-reload" mode that prevented the build process to stop as it cas constantly listening for changes. 
   - fix: Disable the live-reload mode of the i18n module even in dev mode
-- fixed: #security [INFODISC01] Verbosity errors leaks internal infrastructure information [#566](https://github.com/SalesTim/app-platform/issues/566)
+- fixed: #security [INFODISC01] Verbosity errors leaks internal infrastructure information [#566](https://github.com/nboldhq/app-platform/issues/566)
   - Rationale:
     - During the audit of uat.salestim.io, SYNETIS auditors have identified a medium vulnerability, allowing them to disclose some internal information about “CosmoDB” and more.
     - When a POST request is made to the endpoint “/updateUser” if a value of a field is incorrectly set, the server return an error in JSON. Instead of a simple message, the error display lot of interesting information regarding the infrastructure of CosmoDB and the Azure Storage. This could be useful to perform another attack like SSRF (Server-Side Request Forgery).
     - Example of POST request sent to the server with a bad value in “user%5Bid%5D=”:
   - Implementation:
     - Returned errors from CosmosDB are not returned anymore, replaced by custom one
-- fixed: #security [INFODISC02] The endpoint “/refreshToken” send a JWT token in GET [#565](https://github.com/SalesTim/app-platform/issues/565)
+- fixed: #security [INFODISC02] The endpoint “/refreshToken” send a JWT token in GET [#565](https://github.com/nboldhq/app-platform/issues/565)
   - Rationale:
     - During the audit of uat.salestim.io, SYNETIS auditors have identified a medium vulnerability, which could be dangerous if the request was intercepted or if the content of this request was logged by a tool.
     - Sometimes, the application made a GET request to “/refreshToken/[TOKEN_HERE]” to ask a Bearer token to Microsoft Graph API. The problem is, because the token is sent in GET, this could be present in logs and could be dangerous in case of compromising of the server, because all JWT tokens could be easily readable.
   - Implementation:
     - The /refreshToken endpoint is now implemented to only accept POST requests with the refresh token as the POST body
-- fixed: #security [IMPROP02] Admin of an organization can modify the data of another admin (not in the same org) which can lead to account takeover [#564](https://github.com/SalesTim/app-platform/issues/564)
+- fixed: #security [IMPROP02] Admin of an organization can modify the data of another admin (not in the same org) which can lead to account takeover [#564](https://github.com/nboldhq/app-platform/issues/564)
   - Rationale:
     - During the audit of uat.salestim.io, SYNETIS auditors have identified a high vulnerability, allowing them to modify the data of another admin which is in another organization.
     - Modification to such data could compromise customers and users. This vulnerability can also be used to craft a malicious payload and to create a Cross-Site Scripting (XSS) stored on the victim profil configuration.
@@ -1836,7 +1836,7 @@ All notable changes to this project will be documented in this file. See [standa
     - /updateCatalog
     - /updateApprovalSettings
     - /deleteServiceAccount
-- fixed: #security [IMPROP03] A user can impersonate another user when sending the approval email for creating a team [#563](https://github.com/SalesTim/app-platform/issues/563)
+- fixed: #security [IMPROP03] A user can impersonate another user when sending the approval email for creating a team [#563](https://github.com/nboldhq/app-platform/issues/563)
   - Rationale:
     - During the audit of uat.salestim.io, SYNETIS auditors have identified a high vulnerability, allowing them to impersonate another user when a team creation need an approval step.
     - When a user create a new team, if the template used is configured to have a team approved, an email is sent to the user with the “approval” role for the team.
@@ -1860,7 +1860,7 @@ All notable changes to this project will be documented in this file. See [standa
       }
       ```
     - On the server side (/jobs/createProvisioningJob), the requester information, template information and the organization information are retreived directly from the bearer token instead of passed by the client
-- fixed: #security [SXSS01] Cross-Site Scripting (XSS) stored on 'name' and 'description' field in template creation [#567](https://github.com/SalesTim/app-platform/issues/567)
+- fixed: #security [SXSS01] Cross-Site Scripting (XSS) stored on 'name' and 'description' field in template creation [#567](https://github.com/nboldhq/app-platform/issues/567)
   - Rationale:
     - During the audit of uat.salestim.io, SYNETIS auditors have identified a medium vulnerability, allowing them to create a stored Cross-Site Scripting (XSS) on templates by using a weakness in the field “description.
     - This stored XSS could be dangerous because it’s reflected on all users. In case of admin account compromised, this could be impactful against the organization.
@@ -1872,7 +1872,7 @@ All notable changes to this project will be documented in this file. See [standa
     - team name
     - team description
   - N.B: Code injection is still possible through naming conventions as it is the expected and the main purpose of the application
-- fixed: #security Disable attachments in /Updateuser POST and other CosmosDB interactions [#572](https://github.com/SalesTim/app-platform/issues/572)
+- fixed: #security Disable attachments in /Updateuser POST and other CosmosDB interactions [#572](https://github.com/nboldhq/app-platform/issues/572)
   - Rationale:
     - The user object (and the organization object too) have an `_attachment` property that may permit to upload attachments. As it's not required and may be used to inject malicious files, it should be disabled.
     - Also, in addition to _attachments, we'll also hide other system defined elements such as `_rid`, `_ts`, `_self`, `_etag` to prevent the leak of information about the underlying system.
@@ -1888,7 +1888,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.1.0] Codename "Hakuho" - (2020-09-03)
 
-- fixed: Approval not working in PPR (issue not identified) [#569](https://github.com/SalesTim/app-platform/issues/569)
+- fixed: Approval not working in PPR (issue not identified) [#569](https://github.com/nboldhq/app-platform/issues/569)
   - `/locales/i18nServer.js` was not initialized in `api` role (as opposed to the standalone role)
 - changed: GitHub security integration with SalesTim's Azure AD
   - Login through SAML SSO is now mandatory (excluding outside collaborators), therefore GitHub standard authentification is permanently disabled.
@@ -1898,14 +1898,14 @@ All notable changes to this project will be documented in this file. See [standa
     - [Production Environments Maintainers](https://github.com/orgs/SalesTim/teams/production-environments-maintainers) <-- "Core Team" group
     - [Open-Source Maintainers](https://github.com/orgs/SalesTim/teams/open-source-maintainers) <-- To be discussed
   - N.B: It means that by allowing/restricting access to specific teams in Microsoft Teams (and therefore their underlying groups), it automatically adds/removes a user to the related GitHub teams.
-- fixed: Error 404 in function: getUserPhoto with arguments [#558](https://github.com/SalesTim/app-platform/issues/558)
+- fixed: Error 404 in function: getUserPhoto with arguments [#558](https://github.com/nboldhq/app-platform/issues/558)
   - Happens when the requester has no profile picture.
     - Handle empty user photo properly (404 error in graphServices, returning a null response)
     - Use a generic avatar picture instead: https://uat.salestim.io/img/avatar-neutral-blue.png
 - fixed: Invalid token when pushing alerts to the GitHub "ops" repository.
   - Update to the private token (code "SalesTimOpsAlerts") used to coneect to the ops repository to support the SSO authentication
     - Reference: https://docs.github.com/en/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on
-- fixed: Error when saving approval settings when no template is present [#551](https://github.com/SalesTim/app-platform/issues/551)
+- fixed: Error when saving approval settings when no template is present [#551](https://github.com/nboldhq/app-platform/issues/551)
   - Original Ops issue: An unhandledRejection has been detected. (UAT) [#240102](https://github.com/SalesTim/Ops/issues/240102)
 - added: New UI to use tags in naming conventions and audience targeting
   - While editing a naming convention (Name, description, email, welcome message) in a template, the user can select pre-made tags by typing either "@" or "#", then selecting the tag from the list.
@@ -2115,7 +2115,7 @@ All notable changes to this project will be documented in this file. See [standa
     - Configuration:
       - Approval is disabled until the security configuration is done. In the meantime, a warning message is shown in the template UI.
       - Published configuration procedure: https://developers.salestim.com/nocode/approval.html
-- fixed: graphServices/createTeamFromTemplate/sendMessage error. (PRD) [#540](https://github.com/SalesTim/app-platform/issues/540)
+- fixed: graphServices/createTeamFromTemplate/sendMessage error. (PRD) [#540](https://github.com/nboldhq/app-platform/issues/540)
   - added a control to check if a message to send is not empty
   - added: control to replace some characters with their html code counterpart:
     - `.replace(/'/gim, '&apos;')`
@@ -2123,9 +2123,9 @@ All notable changes to this project will be documented in this file. See [standa
 - added: New security report available online about our SSL certificates
   - Accessible from: https://dist.salestim.com/audits/certificates_report.log
 - added: Daily security scan using [OWASP ZAP scan](https://www.zaproxy.org/blog/2020-04-09-automate-security-testing-with-zap-and-github-actions/)
-  - This scan is performed every day at 1am and generates a detailed report as a new issue in the main repository (see [#538](https://github.com/SalesTim/app-platform/issues/538) as an example)
+  - This scan is performed every day at 1am and generates a detailed report as a new issue in the main repository (see [#538](https://github.com/nboldhq/app-platform/issues/538) as an example)
 - changed: checked compatibility of our Redis client with TLS 1.2 that will be enforced by Microsoft soon
-- fixed: Requester not added in private channels [#528](https://github.com/SalesTim/app-platform/issues/528)
+- fixed: Requester not added in private channels [#528](https://github.com/nboldhq/app-platform/issues/528)
   - We were using the requester ID from the request object which is SalesTim ID. Now, instead, we use the msUserId (from AD) from the user object.
 - fixed: Error 404 in function: addChannelOwner [#192827](https://github.com/SalesTim/Ops/issues/192827)
   - Manage 404 error in case of bad provisioning
@@ -2144,28 +2144,28 @@ All notable changes to this project will be documented in this file. See [standa
     - The new schema is taken into account in both the naming convention and the audience targeting, server-side and client-side.
     - All customers have been automatically upgraded to the new schema, and their configuration updated (for instance, `user.msEmail` is replaced by `user.mail`)
   - The tech hub documentation has been updated to reflect these changes.
-- fixed: Implement an option to fix the security issue: "EJS server-side templating is vulnerable to code injection" [#477](https://github.com/SalesTim/app-platform/issues/477)
-  - Related security alert: [EJS server-side templating is vulnerable to code injection](https://github.com/SalesTim/app-platform/security/advisories/GHSA-jq59-4wc7-p87x)
+- fixed: Implement an option to fix the security issue: "EJS server-side templating is vulnerable to code injection" [#477](https://github.com/nboldhq/app-platform/issues/477)
+  - Related security alert: [EJS server-side templating is vulnerable to code injection](https://github.com/nboldhq/app-platform/security/advisories/GHSA-jq59-4wc7-p87x)
   - Resolution:
     - Removed all the direct server-side calls to EJS `ejs.render()` that may use the `eval` function (N.B: client-side use of ejs is safe and therefore is not impacted) in the following files:
       - `requests-processer.js`: was using ejs to apply naming conventions
       - `catalog.js`: was using ejs to apply audience targeting in our api
     - Implementation of a new `sandbox.js` module that encapsulates the [vm2](https://www.npmjs.com/package/vm2) npm package which seems the most secure
-- fixed: Private channel name is truncated after using our new workaround [#516](https://github.com/SalesTim/app-platform/issues/516)
+- fixed: Private channel name is truncated after using our new workaround [#516](https://github.com/nboldhq/app-platform/issues/516)
 Avoid planner throttling
 - changed: Upgraded all environments to node.js v12 LTS
   - Rationale: Better support for the enforcement of TLS v1.2 on Cosmos DB (and probably Redis too)
   - See [Announcement](https://nodejs.org/en/blog/release/v12.13.0/)
-- fixed: Naming Convention Issue in Welcome Message and Description [#287](https://github.com/SalesTim/app-platform/issues/287)
+- fixed: Naming Convention Issue in Welcome Message and Description [#287](https://github.com/nboldhq/app-platform/issues/287)
   - Symptom: about the request.team.name Naming convention on the welcome message and description is good at the preview level on the form but when the team is generated it's taking the whole team name and not only what the user enter in text
   - Resolution: The request object was updated by reference not by value. THe code is updated to clone values before applying any naming convention.
 - added: Deletion of automatically generated wiki tabs
   - During the provisioning, the process controls the number of wiki tabs in the source channel, and keeps only the same number of wiki tabs (keeping the first one in priority, that should be the original one with the right tab name)
-- fixed: Requester and Permanent owner not added in private channel [#408](https://github.com/SalesTim/app-platform/issues/408)
+- fixed: Requester and Permanent owner not added in private channel [#408](https://github.com/nboldhq/app-platform/issues/408)
   - Related issue: Unexpected error in postProcessRequest: {"status":500,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/teams/1c406dc9-17bf-4ca8-b084-61e90a2d72e4/channels/19:04f7a80043744d16 (PRD) [188674](https://github.com/SalesTim/Ops/issues/188674)
   - Related to a microsoft Graph bug.
   - Workaround: Implemented a retry mechanism (3 retry with a 10000ms interval) in case of error `500` in the `addChannelOwner` function + delays before execution of sequential tasts (such as "create a PCH" > "create a tab" and "install an app" > "create a tab")
-- changed: Planner provisioning is too long due to multiple throttled requests [#515](https://github.com/SalesTim/app-platform/issues/515)
+- changed: Planner provisioning is too long due to multiple throttled requests [#515](https://github.com/nboldhq/app-platform/issues/515)
   - Resolution: Created a new `plannerLimiter` similar to `graphLimiter` with specific default configuration values, especially:
     ```sh
     MICROSOFT_PLANNER_LIMITER_MAXCONCURRENT=null # No concurrency
@@ -2180,16 +2180,16 @@ Avoid planner throttling
 - fixed: Unable to save template in PPR
   - Cause: Misconfigured blob container for PPR in `stsaprd` storage account
   - Related issue: Unexpected error in /blobServices/savePicture/createBlockBlobFromStream. (PPR) [#188030](https://github.com/SalesTim/Ops/issues/188030)
-- security: bump standard-version from 7.1.0 to 8.0.1 [#505](https://github.com/SalesTim/app-platform/pull/505)
+- security: bump standard-version from 7.1.0 to 8.0.1 [#505](https://github.com/nboldhq/app-platform/pull/505)
 - added: PPR dedicated app, api and jobs roles
   - PPR is now hosted with an architecture similar to PRD, with dedicated instances for each role
   - Now dynamically assigning the right service URL based on environment:
     - `WEB_PUBLICURL_PRD`
     - `API_PUBLICURL_PRD`
     - `JOB_PUBLICURL_PRD`
-- security: bump jquery from 3.4.1 to 3.5.0 [#460](https://github.com/SalesTim/app-platform/pull/460)
+- security: bump jquery from 3.4.1 to 3.5.0 [#460](https://github.com/nboldhq/app-platform/pull/460)
   - Related issue:
-    - Audit Button in My Request - not working [#452](https://github.com/SalesTim/app-platform/issues/452)
+    - Audit Button in My Request - not working [#452](https://github.com/nboldhq/app-platform/issues/452)
     - Cause: Incompatibility between bootstrap v4.4.1 and jquery v3.5.0 > Downgraded jquery to v3.4.1. See [Bootstrap Issue](https://github.com/twbs/bootstrap/issues/30553)
     - Resolution: Upgraded JQuery to 3.5.1 to avoid conflicts with bootstrap
 - fixed: Infinite retry loop when trying to clone a team where the service account is not an owner
@@ -2270,7 +2270,7 @@ Avoid planner throttling
     - Power BI tabs
     - Wiki tabs
     - OneNote tabs
-- fixed: #provisioning 1 Private Channel Missing - Systra [#480](https://github.com/SalesTim/app-platform/issues/480)
+- fixed: #provisioning 1 Private Channel Missing - Systra [#480](https://github.com/nboldhq/app-platform/issues/480)
   - Symptom: Sometimes, the Graph accepts to create a channel (and returns an ID), but then the channel is not visible anymore from the graph.
   - See "Error in graphHelper/updateTabConfiguration" [#169114](https://github.com/SalesTim/Ops/issues/169114)
     ```yaml
@@ -2291,9 +2291,9 @@ Avoid planner throttling
         - Restart the private channel provisioning process (every 10 sec, max 3 times), using a different name:
           - Adding " (1)", " (2)" or " (3)" respectively for retry #1, #2 and #3
         - Retest the /tabs endpoint
-- fixed: #provisioning Missing Tabs [481](https://github.com/SalesTim/app-platform/issues/481)
-- fixed: #provisioning 3 tabs missing in the provisionning [#482](https://github.com/SalesTim/app-platform/issues/482)
-- fixed: #ui My requests not working correctly [#484](https://github.com/SalesTim/app-platform/issues/484)
+- fixed: #provisioning Missing Tabs [481](https://github.com/nboldhq/app-platform/issues/481)
+- fixed: #provisioning 3 tabs missing in the provisionning [#482](https://github.com/nboldhq/app-platform/issues/482)
+- fixed: #ui My requests not working correctly [#484](https://github.com/nboldhq/app-platform/issues/484)
   - Happened when the requests list was empty due to a bug in the /me/jobs api
 - fixed: #provisioning Tabs provisioned in the wrong channel
   - Fixed by reordering (alphabetically on the displayName) channels after the full provisioning, as they may have been created in a different order.
@@ -2323,7 +2323,7 @@ Avoid planner throttling
   - Fixed the cloningMissingTabs function to add a "tabs" property when it is missing to private channels
 - fixed: Provisioning process crashes with wrong number of provate channels
   - Updated the cloningMissingChannels function to take into account the asynchronous private channels creation
-- fixed: Planner tab plans are not provisioned [#462](https://github.com/SalesTim/app-platform/issues/462)
+- fixed: Planner tab plans are not provisioned [#462](https://github.com/nboldhq/app-platform/issues/462)
   - Planner tabs configuration is now temporarly not supported anymore. See [Configuring the built-in tab types in Microsoft Teams](https://docs.microsoft.com/en-us/graph/teams-configuring-builtin-tabs#planner-tabs)
   - After a retro-engineering phase, here is the new formats for the 3 main tab configuration properties:
   ```js
@@ -2333,7 +2333,7 @@ Avoid planner throttling
   const targetRemoveUrl = `https://tasks.teams.microsoft.com/teamsui/{tid}/Home/PlannerFrame?page=13&auth_pvr=OrgId&auth_upn={userPrincipalName}&groupId={groupId}&planId=${targetPlannerPlan.id}&channelId={channelId}&entityId={entityId}&tid={tid}&userObjectId={userObjectId}&subEntityId={subEntityId}&sessionId={sessionId}&theme={theme}&mkt={locale}&ringId={ringId}&PlannerRouteHint={tid}${tabVersion}`
   ```
   - In addition, the plan id is not set as the entityId of the tab configuration... For reference, see [Identifiers in Planner](https://docs.microsoft.com/en-us/graph/api/resources/planner-identifiers-disclaimer?view=graph-rest-1.0)
-- fixed: Tabs created in wrong private channels [#441](https://github.com/SalesTim/app-platform/issues/441)
+- fixed: Tabs created in wrong private channels [#441](https://github.com/nboldhq/app-platform/issues/441)
   - updated code to reflect the new graph schema
 - changed: Template Store: SEO, social sharing and categories
   - Header Metadata
@@ -2361,10 +2361,10 @@ Avoid planner throttling
   - Categories now have a `description` that appears between the category page title and the templates cards.
 - fixed: Requester and membership not fully provisioned
   - Related issues:
-    - Team Not Fully Provisioned - IQ Business [#449](https://github.com/SalesTim/app-platform/issues/449)
-    - Requester not added to membership list, provisioning blocked @ 80% [#451](https://github.com/SalesTim/app-platform/issues/451)
+    - Team Not Fully Provisioned - IQ Business [#449](https://github.com/nboldhq/app-platform/issues/449)
+    - Requester not added to membership list, provisioning blocked @ 80% [#451](https://github.com/nboldhq/app-platform/issues/451)
 - fixed: Cannot access audit trail from the "My Requests" screen
-  - Related issue: Audit Button in My Request - not working [#452](https://github.com/SalesTim/app-platform/issues/452)
+  - Related issue: Audit Button in My Request - not working [#452](https://github.com/nboldhq/app-platform/issues/452)
   - Fixed incompatibility between bootstrap v4.4.1 and jquery v3.5.0 > Downgraded jquery to v3.4.1. See [Bootstrap Issue](https://github.com/twbs/bootstrap/issues/30553)
 - added: New open source repository [tech-hub](https://github.com/SalesTim/tech-hub)
   - Contains multiple SDKs for various clients and servers
@@ -2551,12 +2551,12 @@ Avoid planner throttling
         },
       ```
 - fixed: The same template may appear multiple times in the "New team" form in the "Catalog" tab after creating a new template
-  - Related issue: Not able to search for the Original Team in creating a template [#360](https://github.com/SalesTim/app-platform/issues/360)
+  - Related issue: Not able to search for the Original Team in creating a template [#360](https://github.com/nboldhq/app-platform/issues/360)
 - fixed: When creating a new template, the template picture remains the same as a previously created or updated template
-- fixed: Salestim Web Experience Appears in Microsoft Teams App [#363](https://github.com/SalesTim/app-platform/issues/363)
+- fixed: Salestim Web Experience Appears in Microsoft Teams App [#363](https://github.com/nboldhq/app-platform/issues/363)
 - fixed: Check service account screen is empty
-- fixed: Freeze when adding Permanent owner - Members [#354](https://github.com/SalesTim/app-platform/issues/354)
-- fixed: Teams Picture not added  [#355](https://github.com/SalesTim/app-platform/issues/355)
+- fixed: Freeze when adding Permanent owner - Members [#354](https://github.com/nboldhq/app-platform/issues/354)
+- fixed: Teams Picture not added  [#355](https://github.com/nboldhq/app-platform/issues/355)
 - fixed: Unexpected error in I18n __(). (DEV) [#115582](https://github.com/SalesTim/Ops/issues/115582)
   - Created i18n keys for crm configuration
 - fixed: Error in isOwnerOf: Resource 'ad9d747a-737a-4f72-b1d1-fceaffaa54ba' does not exist or one of its queried reference-property objects are not present. Detail: {"statusCode":404,"code":"Request_Resource (PRD) [#115535](https://github.com/SalesTim/Ops/issues/115535)
@@ -3067,12 +3067,12 @@ Avoid planner throttling
 
 ## [1.2.23]
 
-- improvement: Notifications messages localization [#231](https://github.com/SalesTim/app-platform/issues/231)
+- improvement: Notifications messages localization [#231](https://github.com/nboldhq/app-platform/issues/231)
   - Service Account provisioning messages are now generated using:
     - The associated template language.
     - As a first-level fallback the requester language
     - As a second-level fallback to 'en-us'
-- fixed: Error in postProcessRequest: {} (DEV) [#4634](https://github.com/SalesTim/app-platform/issues/4634)
+- fixed: Error in postProcessRequest: {} (DEV) [#4634](https://github.com/nboldhq/app-platform/issues/4634)
   - Error message: Cannot read property 'length' of undefined
 - fixed: Prevent error in loadIntercomAuthenticated when a user has empty profile fields (such as preferredLanguage)
 
@@ -3111,7 +3111,7 @@ Avoid planner throttling
     - Error cloning team photo: {"statusCode":504,"code":"UnknownError","message":"","requestId":"REDACTED","date":"REDACTED","body":"{\"code\":\"UnknownError\",\ (UAT) [#4452](https://github.com/SalesTim/Ops/issues/4452)
     - graphServices/updateTeamPhotoByFile error (UAT) [#4451](https://github.com/SalesTim/Ops/issues/4451)
     - Error in generateTeamLogo/cloneTeamLogo: {"statusCode":504,"code":"UnknownError","message":"","requestId":"REDACTED,"date":"REDACTED","body":"{\"code\":\"U (UAT) [#4450](https://github.com/SalesTim/Ops/issues/4450)
-- improvement: During the provisioning process, cloned Planner tabs are now configured to use the user language [#213](https://github.com/SalesTim/app-platform/issues/213)
+- improvement: During the provisioning process, cloned Planner tabs are now configured to use the user language [#213](https://github.com/nboldhq/app-platform/issues/213)
   - Planer tab configuration now respects the following scheme:
   ``` javascript
   {
@@ -3282,8 +3282,8 @@ Avoid planner throttling
 - fixed: Analytics Events
   - References:
     - Error creating analytics event [#2322](https://github.com/SalesTim/Ops/issues/2322)
-    - fixed: Events: "Template Created" event is not raised [#271](https://github.com/SalesTim/app-platform/issues/271)
-    - fixed: Intercom exception: Multiple existing users match this email address REDACTED [#255](https://github.com/SalesTim/app-platform/issues/255)
+    - fixed: Events: "Template Created" event is not raised [#271](https://github.com/nboldhq/app-platform/issues/271)
+    - fixed: Intercom exception: Multiple existing users match this email address REDACTED [#255](https://github.com/nboldhq/app-platform/issues/255)
   - Fixes:
     - user email and id are now forced to lower case to prevent duplicates
     - Intercom user id is now based on: 
@@ -3301,7 +3301,7 @@ Avoid planner throttling
       ```
     - Tracking new attributes on company profile:
       - 'company_customer_id': SalesTim internal customer id
-      - 'serviceaccount_initialized': Initialized to 'true' the first time a service account is defined [#259](https://github.com/SalesTim/app-platform/issues/259)
+      - 'serviceaccount_initialized': Initialized to 'true' the first time a service account is defined [#259](https://github.com/nboldhq/app-platform/issues/259)
 - fixed: Planner cloning exceptions in case of empty planner or empty buckets
   - Error in allTasksProcessed: {} [#1139](https://github.com/SalesTim/Ops/issues/1139)
   - Error in allTasksProcessed: Cannot read property 'length' of undefined [#2076](https://github.com/SalesTim/Ops/issues/2076)
@@ -3351,10 +3351,10 @@ Avoid planner throttling
         "hash": "REDACTED"
     }
     ```
-- fixed: 2 teams created per Request [#247](https://github.com/SalesTim/app-platform/issues/247)
+- fixed: 2 teams created per Request [#247](https://github.com/nboldhq/app-platform/issues/247)
   - The "Send request" button is now disabled immediately while processing the request to prevent double clicks
   - Better "click" handlers to prevent multiple registrations
-- fixed: Messages in 2 different languages appear on the same page [#260](https://github.com/SalesTim/app-platform/issues/260)
+- fixed: Messages in 2 different languages appear on the same page [#260](https://github.com/nboldhq/app-platform/issues/260)
 - improvement: Locale is now set using a fallback mechanism, that uses the following order of priority to determine the right locale to be used:
   1. From Microsoft Teams context (Language defined in the Microsoft Teams client)
   2. From the browser client language
@@ -3386,17 +3386,17 @@ Avoid planner throttling
     - Two-letter country code: [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 
 ## [1.2.11]
-- fixed: Deep links not working on home page [#261](https://github.com/SalesTim/app-platform/issues/261)
-- fixed: Naming convention not shown in request form [#262](https://github.com/SalesTim/app-platform/issues/262)
+- fixed: Deep links not working on home page [#261](https://github.com/nboldhq/app-platform/issues/261)
+- fixed: Naming convention not shown in request form [#262](https://github.com/nboldhq/app-platform/issues/262)
   - Updated online documentation about [Naming Conventions](https://help.salestim.com/salestimautomation/templatesNamingConventions.html#request-form)
   - Includes a descriptive error message in case of bad naming convention configuration
-- fixed: Deep links not working on home page [#261](https://github.com/SalesTim/app-platform/issues/261)
+- fixed: Deep links not working on home page [#261](https://github.com/nboldhq/app-platform/issues/261)
 - improvement: Better management of template configuration issues:
   - Tabs cannot be cloned without cloning Apps as well
-  - Reference: [#265](https://github.com/SalesTim/app-platform/issues/265)
+  - Reference: [#265](https://github.com/nboldhq/app-platform/issues/265)
 - improvement: Better management of service account configuration issues:
   - Managed exception: "User Login. Teams is disabled in user licenses"
-  - Reference: [#264](https://github.com/SalesTim/app-platform/issues/264)
+  - Reference: [#264](https://github.com/nboldhq/app-platform/issues/264)
 - improvement: Deeplink visual feedback
   - From the homepage, when clicking on a deeplink (open or talk), the button text is updated to reflect the action
 - ops: Browser alerts are now raised in our GitHub ops platform, including:
@@ -3419,8 +3419,8 @@ Avoid planner throttling
   - Externalized Microsoft tenant id
 - fixed: User events tracking in case of duplicates
   - "Multiple existing users match this email address REDACTED - must be more specific using user_id
-[#255](https://github.com/SalesTim/app-platform/issues/255)
-- fixed: Error caching picture [#254](https://github.com/SalesTim/app-platform/issues/254)
+[#255](https://github.com/nboldhq/app-platform/issues/255)
+- fixed: Error caching picture [#254](https://github.com/nboldhq/app-platform/issues/254)
   - Added new logging capabilities to blob storage helper
 - ops: An alert is now raised in our GitHub Ops when a login attempt is made without admin consent.
   - This alert includes session id, locale and tenant id
@@ -3461,11 +3461,11 @@ Avoid planner throttling
 - fixed: Non-admins accessing admin-restricted tabs (Catalog, Settings) are just seeing a blank page
   - Now non-admins are presented with a clear message requesting them to log as an Office 365 administrator, and a "back to home" button
 - ops: Approval button and Adoption tab are hidden for now in ppr/prd
-- ops: Set up pre-production environment - Ring 3.5 [#228](https://github.com/SalesTim/app-platform/issues/228)
+- ops: Set up pre-production environment - Ring 3.5 [#228](https://github.com/nboldhq/app-platform/issues/228)
   - New standalone + targeted packages
 - fixed: The export / import feature is now hidden in UAT, PPR & PRD
-- fixed: Not Able to Create New Solution [#216](https://github.com/SalesTim/app-platform/issues/216)
-- fixed: Issue with Account Creation - account in de-de [#229](https://github.com/SalesTim/app-platform/issues/229)
+- fixed: Not Able to Create New Solution [#216](https://github.com/nboldhq/app-platform/issues/216)
+- fixed: Issue with Account Creation - account in de-de [#229](https://github.com/nboldhq/app-platform/issues/229)
   - All languages and regions variants [supported by Office 365](https://support.office.com/en-us/article/what-languages-is-office-available-in-26d30382-9fba-45dd-bf55-02ab03e2a7ec), either with a proper translation, or through a fallback to english.
 - security: prototype pollution in _.defaultsDeep
   - Dependency: [lodash](https://github.com/lodash/lodash/pull/4336)
@@ -3475,15 +3475,15 @@ Avoid planner throttling
 - security: disallow access to the constructor in templates to prevent RCE
   - Dependency: [handlebar]((https://github.com/wycats/handlebars.js/commit/edc6220d51139b32c28e51641fadad59a543ae57))
   - Upgrade handlebar to 4.1.2
-- fixed: <%> in description in Teams Template creation forms #126 https://github.com/SalesTim/app-platform/issues/126
-- improvement: Improved SalesTim Targeting Package 1st connection experience [#207](https://github.com/SalesTim/app-platform/issues/207)
-- fix All tabs not replicated [#155](https://github.com/SalesTim/app-platform/issues/155)
-- fixed: Events not raised in intercom [#203](https://github.com/SalesTim/app-platform/issues/203)
+- fixed: <%> in description in Teams Template creation forms #126 https://github.com/nboldhq/app-platform/issues/126
+- improvement: Improved SalesTim Targeting Package 1st connection experience [#207](https://github.com/nboldhq/app-platform/issues/207)
+- fix All tabs not replicated [#155](https://github.com/nboldhq/app-platform/issues/155)
+- fixed: Events not raised in intercom [#203](https://github.com/nboldhq/app-platform/issues/203)
 - fixed: Internationalization issues
-  - Locale issue : Issue with package language and App [#204](https://github.com/SalesTim/app-platform/issues/204)
-  - fr-fr : issue with french and english in same page [#202](https://github.com/SalesTim/app-platform/issues/202)
-  - fr-fr : packaging showing up settings and paramètres [#200](https://github.com/SalesTim/app-platform/issues/200)
-  - FR version : Talk to owners and open in home are not translated [#187](https://github.com/SalesTim/app-platform/issues/187)
+  - Locale issue : Issue with package language and App [#204](https://github.com/nboldhq/app-platform/issues/204)
+  - fr-fr : issue with french and english in same page [#202](https://github.com/nboldhq/app-platform/issues/202)
+  - fr-fr : packaging showing up settings and paramètres [#200](https://github.com/nboldhq/app-platform/issues/200)
+  - FR version : Talk to owners and open in home are not translated [#187](https://github.com/nboldhq/app-platform/issues/187)
   - Language in teams desktop client is always en-us
   - "New Team" form: Tooltips, Preview...
 - improvement: My Teams cards "Tags"
@@ -3580,7 +3580,7 @@ Avoid planner throttling
       ```      
 - improvement: "My Teams" deep links for "💬 Talk to owners" and "👓 Open"
   - Now links are opened without opening a new browser window
-- fixed: Issue with login in browser [#186](https://github.com/SalesTim/app-platform/issues/186)
+- fixed: Issue with login in browser [#186](https://github.com/nboldhq/app-platform/issues/186)
 - refactor: Dynamic teams packages generation
 - security: salestim.com is now a verified publisher domain
   - [Reference](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-configure-publisher-domain)
@@ -3590,7 +3590,7 @@ Avoid planner throttling
   - Added french localization file
     - [Apps Localization](https://docs.microsoft.com/fr-fr/microsoftteams/platform/publishing/apps-localization)
   - Added MPN id
-- fixed: New Template in Business Solution creation [#194](https://github.com/SalesTim/app-platform/issues/194)
+- fixed: New Template in Business Solution creation [#194](https://github.com/nboldhq/app-platform/issues/194)
 - ops: Cosmos DB Throttling Management
   - Each environment has its own configuration (connectionPolicy)
     ```
@@ -3615,12 +3615,12 @@ Avoid planner throttling
       🛸 Unknown: 'REQ_STA_UNKNOWN' // Unknown
     }
     ```
-  - fixed: Request card doesn't take into account the naming convention [#112](https://github.com/SalesTim/app-platform/issues/112)
-  - fixed: My Request showing all Teams request created with no approval in Pending [#110](https://github.com/SalesTim/app-platform/issues/110)
-  - fixed: No information for Teams Request with error, displayed in "pending" [#111](https://github.com/SalesTim/app-platform/issues/111)
+  - fixed: Request card doesn't take into account the naming convention [#112](https://github.com/nboldhq/app-platform/issues/112)
+  - fixed: My Request showing all Teams request created with no approval in Pending [#110](https://github.com/nboldhq/app-platform/issues/110)
+  - fixed: No information for Teams Request with error, displayed in "pending" [#111](https://github.com/nboldhq/app-platform/issues/111)
 - improvement: Search for teams processing is now delayed by 500ms before each typing, to prevent multiple executions
 - feat: My Teams are now sorted by display name (including in search results)
-- fixed: Service Account processing [#189](https://github.com/SalesTim/app-platform/issues/189)
+- fixed: Service Account processing [#189](https://github.com/nboldhq/app-platform/issues/189)
 - refactoring: All scheduled jobs are now using the CRON syntax
   - Allowed fields:
     ```
@@ -3711,7 +3711,7 @@ Avoid planner throttling
   - Using:
     - Server-side: [i18n](https://www.npmjs.com/package/i18n)
     - Client-side: custom i18n module
-- improvement: Improve experience with "enabled" / "disabled" in catalog [#133](https://github.com/SalesTim/app-platform/issues/133)
+- improvement: Improve experience with "enabled" / "disabled" in catalog [#133](https://github.com/nboldhq/app-platform/issues/133)
 - improvement: Text truncating for teams and templates cards
   - Templates cards texte are truncated to one single line
   - Fully responsive, truncating is recalculated on window resize event
@@ -3724,9 +3724,9 @@ Avoid planner throttling
   - [Domain-based targeting: users with @contoso.com or @contoso.fr in their domain name](https://help.salestim.com/salestimautomation/templatesAudienceTargeting.html#domain-based-targeting-users-with-contoso-com-or-contoso-fr-in-their-domain-name)
 - doc: New conditional naming convention scenario
   - [Use a specific suffix for users from a specific domain, use the domain name for the others](https://help.salestim.com/salestimautomation/templatesNamingConventions.html#use-a-specific-suffix-for-users-from-a-specific-domain-use-the-domain-name-for-the-others)
-- fixed: Issue with "male icone" that appears only in client [#151](https://github.com/SalesTim/app-platform/issues/151)
+- fixed: Issue with "male icone" that appears only in client [#151](https://github.com/nboldhq/app-platform/issues/151)
 - improvement: Prevent user to login with a Microsoft Account and demand an Office 365 account.
-- fixed: Intercom not displayed correctly [#168](https://github.com/SalesTim/app-platform/issues/168)
+- fixed: Intercom not displayed correctly [#168](https://github.com/nboldhq/app-platform/issues/168)
   - Error message:
     ```
     "something's wrong", "we're unable to load the messenger"
@@ -3752,7 +3752,7 @@ Avoid planner throttling
   - Dependency: concat-with-sourcemaps
     - fixed: Upgraded to v1.1.0
     - [WS-2018-0100](https://hackerone.com/reports/320166)
-- fixed: Width issue in template creation [#169](https://github.com/SalesTim/app-platform/issues/169)
+- fixed: Width issue in template creation [#169](https://github.com/nboldhq/app-platform/issues/169)
   - form width is now at 75%
 - ops: UAT deployed with Azure DevOps Pipeline
 - refactor: Teams Apps Packaging
@@ -3762,14 +3762,14 @@ Avoid planner throttling
   - [Secure Development](https://help.salestim.com/salestimplatform/securedevelopment.html)
 - ops: Static Code Analysis in BO
   - Using [Plato](https://www.npmjs.com/package/plato)
-- improvement: Templates in the Catalog now have a fixed height [#128](https://github.com/SalesTim/app-platform/issues/128)
+- improvement: Templates in the Catalog now have a fixed height [#128](https://github.com/nboldhq/app-platform/issues/128)
   - Description and cloned team name are now truncated to fit into one single line
 - ops: Automated GitHub Release Process (Bump, Commit, Push, Tag) using Gulp
 - ops: Updated Back-Office with docs, process, operations manual and logs
 - refactor: Globally Applying [Standard](https://www.npmjs.com/package/standard#usage) JavaScript Style Guide
   - See [Enforced Rules](https://github.com/standard/standard/blob/HEAD/RULES.md)
 - improvement: Template Form Design
-- fixed: Salestim Admin shown to regular users [#113](https://github.com/SalesTim/app-platform/issues/113)
+- fixed: Salestim Admin shown to regular users [#113](https://github.com/nboldhq/app-platform/issues/113)
   - Enforced security checks with additional server controls
   - Security improvement using the current user directory role for tabs catalog, reports and settings. 
     ```json
@@ -3849,7 +3849,7 @@ Avoid planner throttling
   - 💥 CONFIDENTIAL: Secret and privy
   ```
 - docs: Internal and External Documents
-  - [🔐 Internal Documentation](https://github.com/SalesTim/app-platform/blob/master/docs-internal/)
+  - [🔐 Internal Documentation](https://github.com/nboldhq/app-platform/blob/master/docs-internal/)
   - [📢 External Documents](https://salestim.github.io/app-platform/)
 
 
@@ -3880,7 +3880,7 @@ Avoid planner throttling
 - feat: Targeted packages to use Teams App Policies
   - A specific package is now available for each key feature
   - Tabs now has its own unique URL per environment to enable Intercom onboarding
-- fixed: Template pictures disappear after a few days [#124](https://github.com/SalesTim/app-platform/issues/124)
+- fixed: Template pictures disappear after a few days [#124](https://github.com/nboldhq/app-platform/issues/124)
   - Now template pictures are stored in an Azure Blob Storage instead of Redis Cache
   - Using [Azure Storage SDK V10 for JavaScript](https://www.npmjs.com/package/@azure/storage-blob)
 
@@ -3896,7 +3896,7 @@ Avoid planner throttling
     - /forms?stEntityId=io.salestim.automation.settings
     - https://help.salestim.com/salestimautomation/
     - https://status.salestim.com
-- fixed: Intercom - Multiple Company entities [#121](https://github.com/SalesTim/app-platform/issues/121)
+- fixed: Intercom - Multiple Company entities [#121](https://github.com/nboldhq/app-platform/issues/121)
   - Updated the Intercom company tracking code with company json payload:
     ```json
     {
@@ -3945,7 +3945,7 @@ Avoid planner throttling
     }
     ```
   - Resolution: Exception catched and operation replayed
-- improvement: Unauthorized access to admin-restricted tabs [118](https://github.com/SalesTim/app-platform/issues/118)
+- improvement: Unauthorized access to admin-restricted tabs [118](https://github.com/nboldhq/app-platform/issues/118)
   - Now the "Unauthorized message" has a specific button with a deeplink to the "🏠 Home" tab
   - The popin cannot be closed (nor by ESC keyboard, nor by the close button or "x" button)
   - [Deeplinks reference...](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deep-links)
@@ -3989,12 +3989,12 @@ Avoid planner throttling
     - reservoirIncreaseAmount: The increment applied to reservoir when reservoirIncreaseInterval is in use.
     - reservoirIncreaseMaximum: The maximum value that reservoir can reach when reservoirIncreaseInterval is in use.
   - [Constructor Options References...](https://www.npmjs.com/package/bottleneck#constructor)
-- fixed: Team Creation not working (ownership error) [#108](https://github.com/SalesTim/app-platform/issues/108)
+- fixed: Team Creation not working (ownership error) [#108](https://github.com/nboldhq/app-platform/issues/108)
   - This issue is due to a requirement from the MS Graph that expects the logged in user to be an owner of the team to operate on it. [Ref...](https://stackoverflow.com/questions/51943098/access-denied-when-querying-teams-in-microsoft-graph)
 - fixed: Sync delay between O365 Group owners and members with Team owners and members
   - To prevent this out-of-sync issue, moved to beta endpoint: https://graph.microsoft.com/v1.0/groups/{groupId}/owners/$ref
   - [Reference...](https://sharepoint.stackexchange.com/questions/227716/team-and-groups-members-out-of-sync)
-- fixed: Preview info issue for Template with no default name and no naming convention [#109](https://github.com/SalesTim/app-platform/issues/109)
+- fixed: Preview info issue for Template with no default name and no naming convention [#109](https://github.com/nboldhq/app-platform/issues/109)
   - The default system templates now are using the new dynamic tagging convention based on the EJS templatinf syntax: https://ejs.co/
 - doc: Known issues
   - A KNOWNISSUES.md file is now released as part of our release process in the "dist" folder
@@ -4008,7 +4008,7 @@ Avoid planner throttling
     - [List All Team endpoint](https://docs.microsoft.com/en-us/graph/teams-list-all-teams?toc=./ref/toc.json&view=graph-rest-1.0)
     - [Call Beta](https://github.com/microsoftgraph/msgraph-sdk-javascript/blob/dev/docs/OtherAPIs.md)
   - Knowk issue [Missing teams in list all teams when creating a new template](./KNOWNISSUES.md)
-- fixed: Text preview not displayed when no info is entered with a Naming Convention configured Template [#107](https://github.com/SalesTim/app-platform/issues/107)
+- fixed: Text preview not displayed when no info is entered with a Naming Convention configured Template [#107](https://github.com/nboldhq/app-platform/issues/107)
   - Now the previews for name, description and welcome message are shown even if the related fields are empty.
 
 
@@ -4024,15 +4024,15 @@ Avoid planner throttling
   - stlic: SalesTim License
   - environment: Last Visited Environment
   - version: Last Visited Version
-- fixed: Salestim Admin shown to regular users [#113](https://github.com/SalesTim/app-platform/issues/113)
+- fixed: Salestim Admin shown to regular users [#113](https://github.com/nboldhq/app-platform/issues/113)
   - Now access is restricted to Office 365 global administrators
 - improvement: Check Service Account
   - Now service account check results are displayed in the Tim message popin
-- fixed: Approver configured template not displayed for users in "+Team" [#115](https://github.com/SalesTim/app-platform/issues/115)
-- fixed: Requester not added as a Team Owner [#114](https://github.com/SalesTim/app-platform/issues/114)
+- fixed: Approver configured template not displayed for users in "+Team" [#115](https://github.com/nboldhq/app-platform/issues/115)
+- fixed: Requester not added as a Team Owner [#114](https://github.com/nboldhq/app-platform/issues/114)
 - fixed: Handle empty email convention error and email alias bad format
   - Better error handling with end-user message
-- fixed: Teams Creation not working (deleted team error) [#108](https://github.com/SalesTim/app-platform/issues/108)
+- fixed: Teams Creation not working (deleted team error) [#108](https://github.com/nboldhq/app-platform/issues/108)
   - Better error handling with end-user message
 - improvement: Better exception handling
   - Visibility of the underlying exception and technical infos
@@ -4050,7 +4050,7 @@ Avoid planner throttling
 ## [0.9.5]
 
 - improvement: App package including tabs with emojis
-- fixed: Sessions isolation enforcement [#102](https://github.com/SalesTim/app-platform/issues/102)
+- fixed: Sessions isolation enforcement [#102](https://github.com/nboldhq/app-platform/issues/102)
 
 
 ## [0.9.4]
@@ -4103,10 +4103,10 @@ Avoid planner throttling
 ## [0.9.1]
 
 - doc: README-PUBLIC, LICENSE, THIRDPARTY and CHANGELOG in Dist folder
-- fixed: Default templates appears disabled on first launch [#103](https://github.com/SalesTim/app-platform/issues/103)
-- improvement: Services Account Login [#104](https://github.com/SalesTim/app-platform/issues/104)
+- fixed: Default templates appears disabled on first launch [#103](https://github.com/nboldhq/app-platform/issues/103)
+- improvement: Services Account Login [#104](https://github.com/nboldhq/app-platform/issues/104)
   - When login for the first time the service account in the app, the app automatically refreshs just after the login so that Admin are seeing that the account is actually connected.
-- fixed: Template info card update with false informations [#105](https://github.com/SalesTim/app-platform/issues/105)
+- fixed: Template info card update with false informations [#105](https://github.com/nboldhq/app-platform/issues/105)
 - fixed: Preview of naming conventions
 - improvement: Enabled Azure App Insights Live Metrics
   - Application Insights Live Metrics allows to view telemetry like CPU and memory in real time.
