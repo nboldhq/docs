@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.18.0](https://github.com/nboldhq/app-platform/compare/v4.17.0...v4.18.0) (2022-03-08)
+
+
+### 🐛 Bug Fixes
+
+* **github organization:** updated refs to our previous GitHub org ([f94bd83](https://github.com/nboldhq/app-platform/commit/f94bd838b6694584f0109fa97eca729c3f9495bc))
+
+
+### 📚 Docs
+
+* **changelog:** fixed changelog broken links ([e1673bc](https://github.com/nboldhq/app-platform/commit/e1673bc79559fc343e241620d164ebc82b5e9a97))
+* **changelog:** fixed refs to our former GitHub org ([281311d](https://github.com/nboldhq/app-platform/commit/281311d325944984d2080ff5d29c929970eac456))
+* **docs:** fixed invalid links in generated docs ([275269f](https://github.com/nboldhq/app-platform/commit/275269f2db202406eb63f1a77195befe72b83b7a))
+* **docs:** updated WEBSITES_DOCS constant URL ([fae4f33](https://github.com/nboldhq/app-platform/commit/fae4f33e57ec5b95bb9182d5f6d5fe9f3d497239))
+
+
+### 🛠️ Code Refactoring
+
+* **github:** updated deps for our new GitHub org ([ddba4c7](https://github.com/nboldhq/app-platform/commit/ddba4c78c11e3275d3509319ea389a5f2044b5e9))
+
 ## [4.17.0](https://github.com/nboldhq/app-platform/compare/v4.16.0...v4.17.0) (2022-03-04)
 
 
@@ -274,7 +294,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **deps-dev:** bump jest from 27.2.5 to 27.3.0 ([84d40b0](https://github.com/nboldhq/app-platform/commit/84d40b0f13063cd0dbd404ff8aef85aa4e0f788a))
 * **deps-dev:** bump jest from 27.3.0 to 27.3.1 ([671c0bb](https://github.com/nboldhq/app-platform/commit/671c0bb59e18f2f7831f3d279ef852d7f0707e14))
 * **deps:** bump @microsoft/microsoft-graph-client from 3.0.0 to 3.0.1 ([be275e5](https://github.com/nboldhq/app-platform/commit/be275e58fd7b342b71bdb9f00aeb35e807fb0b1c))
-* **deps:** bump @salestim/i18n from `16e383e` to `a00fb74` ([0f82811](https://github.com/nboldhq/app-platform/commit/0f82811474c8e89848ba6b58b6b66e948d49204c))
+* **deps:** bump @nboldhq/i18n from `16e383e` to `a00fb74` ([0f82811](https://github.com/nboldhq/app-platform/commit/0f82811474c8e89848ba6b58b6b66e948d49204c))
 * **deps:** bump ajv from 8.6.3 to 8.8.0 ([fa25f0f](https://github.com/nboldhq/app-platform/commit/fa25f0fd43003b0458776933d9b4b1be63d6d028))
 * **deps:** bump bull from 3.29.2 to 3.29.3 ([439a537](https://github.com/nboldhq/app-platform/commit/439a5378f2d959d7f2c56a56b4fc3fe779fa5c1a))
 * **deps:** bump cronstrue from 1.117.0 to 1.119.0 ([72e25ea](https://github.com/nboldhq/app-platform/commit/72e25ea0b77c459fc3630cfbd757c6f78296c989))
@@ -412,7 +432,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **build:** updated INT build ([215aea4](https://github.com/nboldhq/app-platform/commit/215aea4cd12cac9ff9f30250a45faa2c976344bf))
 * **build:** updated int script ([0c2c2d2](https://github.com/nboldhq/app-platform/commit/0c2c2d21bbfd20b1dd20f75c0f92dca79e8a37c9))
 * **deps-dev:** bump @jest/globals from 27.2.0 to 27.2.1 ([298d8a6](https://github.com/nboldhq/app-platform/commit/298d8a668b4c0edc44e4bf2d735522a0991ffc0f))
-* **deps:** bump @salestim/i18n from `9ac2bf7` to `174838e` ([c9fa7e6](https://github.com/nboldhq/app-platform/commit/c9fa7e61e97c28a8f4758829e71ba7026af12e50))
+* **deps:** bump @nboldhq/i18n from `9ac2bf7` to `174838e` ([c9fa7e6](https://github.com/nboldhq/app-platform/commit/c9fa7e61e97c28a8f4758829e71ba7026af12e50))
 * **deps:** bump @yaireo/tagify from 4.7.2 to 4.8.0 ([5be4dcb](https://github.com/nboldhq/app-platform/commit/5be4dcbf68385b119474e775223ed2be1ece8749))
 * **deps:** bump alpinejs from 3.3.4 to 3.4.0 ([1f3501d](https://github.com/nboldhq/app-platform/commit/1f3501db1875c12964e329aaa30232bb134897b4))
 * **deps:** bump unleash-proxy-client from 1.4.0 to 1.5.2 ([e426ebe](https://github.com/nboldhq/app-platform/commit/e426ebeb7f6afb1e7f35e46163dd78e51160a233))
@@ -463,7 +483,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 📚 Docs
 
-* **audits:** added an automatically generated [Audits Index](./docs/audits/README.md) ([c8bd5d7](https://github.com/nboldhq/app-platform/commit/c8bd5d74fab8bed5ca9cf2e67d43a8b9eeca43b8))
+* **audits:** added an automatically generated [Audits Index](https://dist.salestim.io/audits) ([c8bd5d7](https://github.com/nboldhq/app-platform/commit/c8bd5d74fab8bed5ca9cf2e67d43a8b9eeca43b8))
 * **audits:** added uptimerobot data export to npm run audit script ([c1a6bd4](https://github.com/nboldhq/app-platform/commit/c1a6bd4a8dfb166e71b92a43976dc92793ccfb8d))
 * **audits:** updated audit index format ([dcda3e4](https://github.com/nboldhq/app-platform/commit/dcda3e414b2921c93598b57bc0dbd0f19074c76f))
 * **depcheck:** included depcheck as part of the audit reports generated from `npm run audit` ([8fa391b](https://github.com/nboldhq/app-platform/commit/8fa391b824ebba34a397c1e389285ca89ecdad1e))
@@ -563,7 +583,7 @@ All notable changes to this project will be documented in this file. See [standa
   * New changelog format generated from commits
 * **npm:** updated npm scripts for the build/release process ([823f430](https://github.com/nboldhq/app-platform/commit/823f430ae6117678c236e66cb2e0ead18211fd79))
 * **changelog:** added .versionrc to configure changelog generation ([215156e](https://github.com/nboldhq/app-platform/commit/215156e599217899b7db8e0c41226ec9dd012fe4))
-* **deps:** bump @salestim/i18n from `abe8038` to `3ec1717` ([b70238f](https://github.com/nboldhq/app-platform/commit/b70238f7133312e8cf51592a28dad98ee1aa4b72))
+* **deps:** bump @nboldhq/i18n from `abe8038` to `3ec1717` ([b70238f](https://github.com/nboldhq/app-platform/commit/b70238f7133312e8cf51592a28dad98ee1aa4b72))
 * **deps:** bump alpinejs from 3.3.1 to 3.3.2 ([ff2d1c3](https://github.com/nboldhq/app-platform/commit/ff2d1c303802b0345592a10aaa577f9c021f947b))
 * **versions:** extracted version bump from npm build scripts ([73c9191](https://github.com/nboldhq/app-platform/commit/73c919184a1282e9df8614bda569c8a403d16dde))
 
@@ -585,7 +605,7 @@ All notable changes to this project will be documented in this file. See [standa
   ```
 - changed: Better error handling in tabs configuration
   - Example:
-    - Error in in graphServices/getPlannerPlan. (PRD) [#2002851](https://github.com/SalesTim/Ops/issues/2002851)
+    - Error in in graphServices/getPlannerPlan. (PRD) [#2002851](https://github.com/nboldhq/Ops/issues/2002851)
     - Origin: Happens when the service account doesn't have access to the original plan
   - Error:
     - Error message: Forbidden
@@ -629,14 +649,14 @@ All notable changes to this project will be documented in this file. See [standa
   - Scope: repo
   - Has Access to the Ops repo with write access
 - changed: The Connected Apps module is now managed from a dedicated repo to enable external contributors
-  - See: https://github.com/SalesTim/connected-apps
+  - See: https://github.com/nboldhq/connected-apps
 - added: Admin Dashboard
   - Removed previously used AdminJs
   - Purpose: Read/Write access to the `production` environment DB (Organizations, users, options, events and audit trails...)
   - The admin dashboard is provided by the [Forest Admin](https://www.forestadmin.com/) service.
     - The admin backend is hosted from our Azure platform by the `st-admin-backend-prd` app service and published to `https://admin-backend.salestim.io` by Azure FrontDoor.
     - The service is monitored by Uptime robot as `Admin Backend` from our [Status Page](https://status.salestim.com/). It uses the `/forest/healthcheck` endpoint. See https://docs.forestadmin.com/documentation/how-tos/maintain/monitor-your-forests-status
-    - See the [Admin Backend](https://github.com/SalesTim/admin-backend) README for more information.
+    - See the [Admin Backend](https://github.com/nboldhq/admin-backend) README for more information.
   - The Forest Admin UI for the production environment is accessible from: [https://app.forestadmin.com/st-admin-backend/Production](https://app.forestadmin.com/st-admin-backend/Production).
 - added: `cloc` code statistics report generated as part of the build (lines, comments, code...)
   - Report available from https://dist.salestim.io/audits/code/loc.log
@@ -649,10 +669,10 @@ All notable changes to this project will be documented in this file. See [standa
   - Accessible from the admin dashboard (`Queues` page) or /admin/queues
   - Protected with the same authentication than the whole /admin portal
 - added: Tests and documentation for the `i18n` repo
-  - Initial test suite using [Jest](https://jestjs.io/). See [tests](https://github.com/SalesTim/i18n/tree/master/tests).
-  - Uses [Jupyter notebook](https://jupyter.org/) and the [iJavascript kernel](https://github.com/n-riesco/ijavascript) as an interactive documentation. See [docs](https://github.com/SalesTim/i18n/tree/master/docs).
+  - Initial test suite using [Jest](https://jestjs.io/). See [tests](https://github.com/nboldhq/i18n/tree/master/tests).
+  - Uses [Jupyter notebook](https://jupyter.org/) and the [iJavascript kernel](https://github.com/n-riesco/ijavascript) as an interactive documentation. See [docs](https://github.com/nboldhq/i18n/tree/master/docs).
 - changed: Private GitHub Packages
-  - Our individual packages are now published in our organization [GitHub Packages](https://github.com/orgs/SalesTim/packages)
+  - Our individual packages are now published in our organization [GitHub Packages](https://github.com/orgs/nboldhq/packages)
   - For instance with the `@salestim/ms-lists` repo.
     - `package.json` Incldes a `publishConfig` property that sets the access to `restricted` (to our organization) and defines GitHub Packages as the registry
       ```json
@@ -675,8 +695,8 @@ All notable changes to this project will be documented in this file. See [standa
           - Scopes: `read:packages`
     - The `@salestim/ms-lists` package can be referenced as a dependency using `"@salestim/ms-lists": "^1.0.X"`
 - changed: Remote git repo dependencies management
-  - The `@salestim/i18n` is public, and can therefore be referenced as a dependency by:
-    - `"@salestim/i18n": "SalesTim/i18n"`
+  - The `@nboldhq/i18n` is public, and can therefore be referenced as a dependency by:
+    - `"@nboldhq/i18n": "nBold/i18n"`
     - NPM assumes that this is a public GitHub repo, therefore no protocol has to be defined
 - fixed: Default values future deprecation for `express-session` middleware was generating warnings
   - Errors:
@@ -809,7 +829,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Known issues:
     - For the "Permanent membership policy" to work, the service account must be signed-in again
     - The "Permanent membership policy" will only apply to new created teams (See the "Governance"\"Teams Management" tab)
-- added: Run SalesTim platform using Docker
+- added: Run nBold platform using Docker
   - Migrated development environment from "Docker for WSL" (WSL using the docker service hosted by Windows) to a native linux docker daemon (started on boot using `service` instead of `systemd`)
   - Updated the `CONTRIBUTING.md` guide
   - Created npm scripts for building and starting each environment/role
@@ -892,7 +912,7 @@ All notable changes to this project will be documented in this file. See [standa
       })
     )
     ```
-- changed: /dist folder now accessible from dist.salestim.io instead of dist.salestim.com
+- changed: /dist folder now accessible from dist.salestim.io instead of dist.salestim.io
   - Related documents have been updated on tech hub and handbook
 - changed: Static assets (Images, fonts, css, compiled js...) are now distributed through GitHub Pages as a CDN
   - Static assets are now loaded from https://dist.salestim.io/clients/web
@@ -903,17 +923,17 @@ All notable changes to this project will be documented in this file. See [standa
 - fixed: Coding style / security best practices issues
   - Standard JS coding style linter: From 1600 to 8 identified issues
   - ESLint security issues: From 1866 to 10 identified issues (only from the recent connected apps modules)
-- changed: https://dist.salestim.com public assets
+- changed: https://dist.salestim.io public assets
   - About "Dist"
     - All these assets are regenerated during each commit
     - These assets are public (but theoritically not crawled by search engines)
   - Added: Third-party licenses reports.
-    - https://dist.salestim.com/audits/third_party/license_summary.txt
+    - https://dist.salestim.io/audits/third_party/license_summary.txt
       - Summarises the number of third-party dependencies for each license type
-    - https://dist.salestim.com/audits/third_party/license_report.csv
+    - https://dist.salestim.io/audits/third_party/license_report.csv
       - Detailed report of all the third-party dependencies with their license type
   - Added: SSL Certificate report for www.salestim.com (in addition to app.salestim.io)
-    - https://dist.salestim.com/audits/license_summary.txt
+    - https://dist.salestim.io/audits/license_summary.txt
 - changed: Dependency cleaning
   - Why: A lot of dependencies are not used anymore (mostly replaced by another one, sometimes the associated feature is not implemented anymore) 
   - Results:
@@ -999,7 +1019,7 @@ All notable changes to this project will be documented in this file. See [standa
   - The provisioning engine does not rely on the standard cloning feature anymore
   - Fixed multiple 401 errors with token renewal
   - Now the service account access token is refreshed on provisioning startup
-- fixed: SalesTim app & SalesTim home: BLANK [#801](https://github.com/nboldhq/app-platform/issues/801)
+- fixed: nBold app & nBold home: BLANK [#801](https://github.com/nboldhq/app-platform/issues/801)
   - Analysis:
     - Looks like the issue only affects some tenants (Maybe related to waves of migrations/deployments on MS side)
     - Browser console stack trace:
@@ -1037,7 +1057,7 @@ All notable changes to this project will be documented in this file. See [standa
     ``` 
 - fixed: Folders Copy not working for a specific Template [#749](https://github.com/nboldhq/app-platform/issues/749)
   - Reference:
-    - Error in graphServices/cloneFiles/copyDriveItem/waitForTeamsAsyncOperation: https://github.com/SalesTim/Ops/issues/487448
+    - Error in graphServices/cloneFiles/copyDriveItem/waitForTeamsAsyncOperation: https://github.com/nboldhq/Ops/issues/487448
   - Reported failed requests:
     - Tuesday, April 6, 2021 7:13 AM:32:  Saved : Request saved with id 'e89081d1-955c-4ad4-b734-d0311bb21e7b-72bc4e4a-d71b-4a36-a2eb-40ff2a8a19f8-ed396cce-b38a-4b01-b2a4-5d4b68225031'
     - Monday, April 5, 2021 5:39 PM:56:  Saved : Request saved with id 'e89081d1-955c-4ad4-b734-d0311bb21e7b-72bc4e4a-d71b-4a36-a2eb-40ff2a8a19f8-359c8faf-fb5a-4c82-9853-a8612b71594b'
@@ -1064,7 +1084,7 @@ All notable changes to this project will be documented in this file. See [standa
     at Object.getUser (/home/site/wwwroot/src/microsoft/db/cosmosDB/cosmosDbServices.js:44:28)
     ```
   - Root cause:
-    - At line 633 of approvals.js, the function is expecting a SalesTim internal user ID, and receives instead an Azure AD object ID.
+    - At line 633 of approvals.js, the function is expecting a nBold internal user ID, and receives instead an Azure AD object ID.
 - added: In-product release notes
   - Implemented using the [Headway app](https://headwayapp.co/)
   - Public release notes page: https://headwayapp.co/salestim-changelog
@@ -1183,7 +1203,7 @@ All notable changes to this project will be documented in this file. See [standa
 - changed: The "GetJob" operation is now only visible in connectors through search
 - changed: Approval documentation on Tech Hub
   - Now includes these options:
-      - Approval email sent by SalesTim: This is the default and easiest option, works without any configuration.
+      - Approval email sent by nBold: This is the default and easiest option, works without any configuration.
       - Approval email sent by your organization: If you need advanced security/compliance control over your notification emails.
       - Microsoft Teams Approval App: A Microsoft Teams native experience, that you can customize using Power Automate or Logic Apps.
       - Use your own custom app: Bring your own aproval workflow as a custom application.
@@ -1192,8 +1212,8 @@ All notable changes to this project will be documented in this file. See [standa
   - Example:
     ```json
     "name": {
-      "short": "SalesTim-(PPR)",
-      "full": "SalesTim Governance Automation-(PPR)"
+      "short": "nBold-(PPR)",
+      "full": "nBold Governance Automation-(PPR)"
     }
     ```
 - changed: Audience targeting Syntax Test is restricted to users with the "Change Manager" role
@@ -1237,7 +1257,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Actions:
     - Approve team creation: https://developers.salestim.com/api/reference/Apis/ApprovalsApi.html#approveteamcreation
     - Reject team creation: https://developers.salestim.com/api/reference/Apis/ApprovalsApi.html#rejectteamcreation
-- added: SalesTim Connector for Azure Logic Apps documentation #logicapps
+- added: nBold Connector for Azure Logic Apps documentation #logicapps
   - https://developers.salestim.com/connectors/logic-apps-connector
 
 ## [2.2] Codename "Kakuryu" - (2021-04-07)
@@ -1296,13 +1316,13 @@ All notable changes to this project will be documented in this file. See [standa
     - Add a "When a HTTP request is received" trigger
       - Paste a payload schema from: https://developers.salestim.com/api/webhooks.html#supported-events
     - Add a "Compose" action and name it "Get Webhook Signature Header"
-      - Retreive the "X-SalesTim-Signature" header using this formula `triggerOutputs()['headers']['X-SalesTim-Signature']`
+      - Retreive the "X-nBold-Signature" header using this formula `triggerOutputs()['headers']['X-nBold-Signature']`
     - Add a "Compose" action and name it "Get Webhook Payload"
       - Retreive the payload using this formula `triggerBody()`
-    - Add a SalesTim action "Generate a signature from a secret and a webhook payload"
+    - Add a nBold action "Generate a signature from a secret and a webhook payload"
       - Set the secret value previously used during the webhook creation
       - Set the "Webhook payload" to the result of the "Get Webhook Payload" action
-    - You can then compare the signature retreived from the "Get Webhook Signature Header" action with the signature calculated from the SalesTim "GenerateHookSignature" action. If they match, it means that the request was effectively coming from SalesTim.
+    - You can then compare the signature retreived from the "Get Webhook Signature Header" action with the signature calculated from the nBold "GenerateHookSignature" action. If they match, it means that the request was effectively coming from nBold.
 - added: Webhooks payloads examples and schema #api
   - The documentation now includes payload examples for the following events `team_created` and `team_provisioning_completed`.
   - See: https://developers.salestim.com/api/webhooks.html#supported-events
@@ -1449,15 +1469,15 @@ All notable changes to this project will be documented in this file. See [standa
         Session Id: 'nyoxDPSyVJGI17qyptv5hg'
         // User and Auth ID defined through appInsights.setAuthenticatedUserContext
         User Id: 'uASTl' // Anonymous user id generated by AAI
-        Auth Id: 'gmeyer@salestimelite100.onmicrosoft.com' // Set by SalesTim as the user UPN
-        Account Id: 'af54e9f5-6b9e-488f-b1e7-d97ff21b1cf3' // Set by SalesTim as the tenant ID
+        Auth Id: 'gmeyer@salestimelite100.onmicrosoft.com' // Set by nBold as the user UPN
+        Account Id: 'af54e9f5-6b9e-488f-b1e7-d97ff21b1cf3' // Set by nBold as the tenant ID
         Device type: 'Browser'
         Device model: 'Other'
         Operating system: 'Windows 10'
         Client IP address: '0.0.0.0'
         // Cloud role and instance defined through envelope.tags['ai.cloud.role'] and  envelope.tags['ai.cloud.roleInstance']
-        Cloud role name: 'webclient' // Set by SalesTim for the web app
-        Cloud role instance: 'gmeyer@salestimelite100.onmicrosoft.com' // Set by SalesTim as the user UPN
+        Cloud role name: 'webclient' // Set by nBold for the web app
+        Cloud role instance: 'gmeyer@salestimelite100.onmicrosoft.com' // Set by nBold as the user UPN
         SDK version: 'javascript:2.5.11'
         Sample rate: '1'
         ```
@@ -1578,7 +1598,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Audience targeting: Included docs and example for the `user.groups.direct` tag
   - Updated RBAC docs to include our new roles, catalog managers and integration managers
 - changed: TechHub now uses Algolia for its full-text search engine.
-- changed: [SalesTim Connector for Power Platform](https://developers.salestim.com/nocode/power-platform) documentation
+- changed: [nBold Connector for Power Platform](https://docs.nbold.co/automation/power-platform-automation-connector) documentation
   - Updated the "Abstract" section
   - Added an introductory message describing the purpose of each step
   - Added a few minor additional steps
@@ -1605,7 +1625,7 @@ All notable changes to this project will be documented in this file. See [standa
   - The multiplicity of packages to generate, based on so many files, generated issues and made this process tedious and prone to errors.
   - Now all the packages (Standalone and Home) are automatically generated from only two template files.
   - All the variables are stored in the .env configuration file
-  - Here is the up-to-date list of generated packages (we now have the home package for `int` and `uat` too), all of them still accessible from `https://dist.salestim.com/packages/[PACKAGE_FILE]`:
+  - Here is the up-to-date list of generated packages (we now have the home package for `int` and `uat` too), all of them still accessible from `https://dist.salestim.io/packages/[PACKAGE_FILE]`:
   ```
   io.salestim.automation.standalone.dev.zip
   io.salestim.automation.standalone.int.zip
@@ -1619,7 +1639,7 @@ All notable changes to this project will be documented in this file. See [standa
   io.salestim.automation.targeted.home.uat.zip
   ```
 - added: Webhooks
-  - Webhooks enable organizations to trigger automated operations outside of the SalesTim platform, such as in a custom application, or in an automation tool such as Power Automate or Zapier.
+  - Webhooks enable organizations to trigger automated operations outside of the nBold platform, such as in a custom application, or in an automation tool such as Power Automate or Zapier.
   - See the online doc: https://developers.salestim.com/api/webhooks
 - Power Platform Connector v1 [#534](https://github.com/nboldhq/app-platform/issues/534)
   - Available actions:
@@ -1630,16 +1650,16 @@ All notable changes to this project will be documented in this file. See [standa
   - Documentation: https://developers.salestim.com/nocode/power-platform.html
 - changed: Updated list of downloadable packages:
   ```
-  https://dist.salestim.com/packages/io.salestim.automation.standalone.dev.zip
-  https://dist.salestim.com/packages/io.salestim.automation.standalone.int.zip
-  https://dist.salestim.com/packages/io.salestim.automation.standalone.ppr-pre-sso.zip # PPR without sso
-  https://dist.salestim.com/packages/io.salestim.automation.standalone.ppr.zip         # PPR with SSO
-  https://dist.salestim.com/packages/io.salestim.automation.standalone.prd-pre-sso.zip # PRD without SSO
-  https://dist.salestim.com/packages/io.salestim.automation.standalone.prd.zip         # PRD with SSO
-  https://dist.salestim.com/packages/io.salestim.automation.standalone.uat.zip
-  https://dist.salestim.com/packages/io.salestim.automation.targeted.home.dev.zip
-  https://dist.salestim.com/packages/io.salestim.automation.targeted.home.ppr.zip
-  https://dist.salestim.com/packages/io.salestim.automation.targeted.home.prd.zip      # PRD with SSO
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.dev.zip
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.int.zip
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.ppr-pre-sso.zip # PPR without sso
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.ppr.zip         # PPR with SSO
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.prd-pre-sso.zip # PRD without SSO
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.prd.zip         # PRD with SSO
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.uat.zip
+  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.dev.zip
+  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.ppr.zip
+  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.prd.zip      # PRD with SSO
   ```
 - changed: Migrate to the New Microsoft Graph Team Membership Management API in v1 [#624](https://github.com/nboldhq/app-platform/issues/624)
   - Now members are added through teams membership, instead of groups memberships
@@ -1681,7 +1701,7 @@ All notable changes to this project will be documented in this file. See [standa
 - added: Connected Apps server in production
 - fix: Show channel by default for requesters / owners / members [#350](https://github.com/microsoftgraph/microsoft-graph-docs/issues/6792)
   - The `IsFavoriteByDefault` channel property is now officially supported by Microsoft: See [#6792](https://github.com/microsoftgraph/microsoft-graph-docs/issues/6792)
-  - During the provisioning process, SalesTim replicate the `IsFavoriteByDefault` property value from the original channel to the cloned/created one.
+  - During the provisioning process, nBold replicate the `IsFavoriteByDefault` property value from the original channel to the cloned/created one.
 - fixed: JOB RENEWSERVICEACCOUNTTOKENS: Task execution failed: Error in renewServiceAccountTokens/cosmosDbServices/updateCustomer: {"code":429,"body":"{\"code\":\"429\",\"message\":\"Message: {\\\"Errors\\\":[ (PRD) [#655](https://github.com/nboldhq/app-platform/issues/655)
   - This exception was causing global service interruption because this job was putting access to cosmosdb in throttled mode
   - Implemented a rate limiter for update operations (similar to the graph limiter) using the [Bottleneck](https://www.npmjs.com/package/bottleneck) package
@@ -1695,7 +1715,7 @@ All notable changes to this project will be documented in this file. See [standa
     - Preliminary analysis: See [New events data collection platform #636](https://github.com/nboldhq/app-platform/issues/636)
     - Relies on [EventNative](https://github.com/jitsucom/eventnative)
   - The events service is comprised of two main workloads:
-    - **Events Collector API**: A global and unified events collector API for the whole SalesTim application platform.
+    - **Events Collector API**: A global and unified events collector API for the whole nBold application platform.
       - Examples of collected events:
         - Client-side: navigation across pages, clicks...
         - Server-side: containers start/stop, exceptions, new team provisioned, team template created...
@@ -1709,7 +1729,7 @@ All notable changes to this project will be documented in this file. See [standa
     - `st-events-prd` app service that hosts the API and multiplexer
     - Azure Front Door exposes the `st-events-prd` app service to `events.salestim.io`
     - Events collected from `events.salestim.io` are pushed to our DWH, an Azure-managed PostgreSQL service, exposed at `st-pgsql-prd.postgres.database.azure.com`, in the `events` database.
-  - Learn more: See the [README](https://github.com/SalesTim/st-events-server#readme) file from the [Events Server](https://github.com/SalesTim/st-events-server) repository.
+  - Learn more: See the [README](https://github.com/nboldhq/st-events-server#readme) file from the [Events Server](https://github.com/nboldhq/st-events-server) repository.
 - added: Reports Server (reports.salestim.io)
   - Abstract:
     - A self-service report server that may query multiple data source, especially our DWH
@@ -1723,7 +1743,7 @@ All notable changes to this project will be documented in this file. See [standa
     - The Azure VM is `st-reports-prd`
 - added: Mandatory Owners & Members (Security Policy) [#623](https://github.com/nboldhq/app-platform/issues/623)
 - changed: Pre-production Home Package
-  - A new home package for the pre-production environment is now accessible here: https://dist.salestim.com/packages/io.salestim.automation.targeted.home.ppr.zip
+  - A new home package for the pre-production environment is now accessible here: https://dist.salestim.io/packages/io.salestim.automation.targeted.home.ppr.zip
 - fixed: Mobile Icon format issue [#642](https://github.com/nboldhq/app-platform/issues/642)
   - Fixed by updating the `accentColor` property from manifests files from `#a60a2d` to `#000000`
 - fixed: #security Dependency Alert: build(deps): bump find-my-way from 2.2.3 to 2.2.5 [#627](https://github.com/nboldhq/app-platform/pull/627)
@@ -1751,7 +1771,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Impact: In some circumstances, the provisioning service may shutdown unexpectedly if the cloning operation raises an unknown error
   - Resolution: Better processing of the error raised by Microsoft Graph
 - fixed: [Provisionning Issue] - Impossible to create a team [#604](https://github.com/nboldhq/app-platform/issues/604)
-  - related ops issue: Error cloning missing tabs in /graphServices/cloneTabsSettingsAndContents/cloningMissingChannelsAndTabs. (PRD) [#357899](https://github.com/SalesTim/Ops/issues/357899)
+  - related ops issue: Error cloning missing tabs in /graphServices/cloneTabsSettingsAndContents/cloningMissingChannelsAndTabs. (PRD) [#357899](https://github.com/nboldhq/Ops/issues/357899)
   - Impacted code: GraphServices.js line 3100
     ```js
     // Depending on App Id
@@ -1890,14 +1910,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 - fixed: Approval not working in PPR (issue not identified) [#569](https://github.com/nboldhq/app-platform/issues/569)
   - `/locales/i18nServer.js` was not initialized in `api` role (as opposed to the standalone role)
-- changed: GitHub security integration with SalesTim's Azure AD
-  - Login through SAML SSO is now mandatory (excluding outside collaborators), therefore GitHub standard authentification is permanently disabled.
-  - SAML SSO is enforced (no more standard GitHub users could be members of the SalesTim organization)
-  - Team synchronization is enabled, meaning that the following GitHub teams membership roster is synchronized from our IdP (Azure AD):
-    - [All SalesTim](https://github.com/orgs/SalesTim/teams/all-salestim) <-- "SalesTim - All Team" group
-    - [Production Environments Maintainers](https://github.com/orgs/SalesTim/teams/production-environments-maintainers) <-- "Core Team" group
-    - [Open-Source Maintainers](https://github.com/orgs/SalesTim/teams/open-source-maintainers) <-- To be discussed
-  - N.B: It means that by allowing/restricting access to specific teams in Microsoft Teams (and therefore their underlying groups), it automatically adds/removes a user to the related GitHub teams.
 - fixed: Error 404 in function: getUserPhoto with arguments [#558](https://github.com/nboldhq/app-platform/issues/558)
   - Happens when the requester has no profile picture.
     - Handle empty user photo properly (404 error in graphServices, returning a null response)
@@ -1906,7 +1918,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Update to the private token (code "SalesTimOpsAlerts") used to coneect to the ops repository to support the SSO authentication
     - Reference: https://docs.github.com/en/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on
 - fixed: Error when saving approval settings when no template is present [#551](https://github.com/nboldhq/app-platform/issues/551)
-  - Original Ops issue: An unhandledRejection has been detected. (UAT) [#240102](https://github.com/SalesTim/Ops/issues/240102)
+  - Original Ops issue: An unhandledRejection has been detected. (UAT) [#240102](https://github.com/nboldhq/Ops/issues/240102)
 - added: New UI to use tags in naming conventions and audience targeting
   - While editing a naming convention (Name, description, email, welcome message) in a template, the user can select pre-made tags by typing either "@" or "#", then selecting the tag from the list.
   - Tags could be mixed with static content
@@ -2008,7 +2020,7 @@ All notable changes to this project will be documented in this file. See [standa
     ```js
     user.extension_e3049e305790413ca1b11bb53526f057_extensionAttribute10
     ```
-    2. In the `onPremisesExtensionAttributes` property of the user profile for attributes synchronized by Azure Ad Connect (Also available from the M365 Exchange Admin UI as mailbox properties), such as:
+    1. In the `onPremisesExtensionAttributes` property of the user profile for attributes synchronized by Azure Ad Connect (Also available from the M365 Exchange Admin UI as mailbox properties), such as:
     ```yaml
     { 
       "onPremisesExtensionAttributes": {
@@ -2121,18 +2133,18 @@ All notable changes to this project will be documented in this file. See [standa
     - `.replace(/'/gim, '&apos;')`
     - `.replace(/[\r\n]/gim, '<br/>')`
 - added: New security report available online about our SSL certificates
-  - Accessible from: https://dist.salestim.com/audits/certificates_report.log
+  - Accessible from: https://dist.salestim.io/audits/certificates_report.log
 - added: Daily security scan using [OWASP ZAP scan](https://www.zaproxy.org/blog/2020-04-09-automate-security-testing-with-zap-and-github-actions/)
   - This scan is performed every day at 1am and generates a detailed report as a new issue in the main repository (see [#538](https://github.com/nboldhq/app-platform/issues/538) as an example)
 - changed: checked compatibility of our Redis client with TLS 1.2 that will be enforced by Microsoft soon
 - fixed: Requester not added in private channels [#528](https://github.com/nboldhq/app-platform/issues/528)
-  - We were using the requester ID from the request object which is SalesTim ID. Now, instead, we use the msUserId (from AD) from the user object.
-- fixed: Error 404 in function: addChannelOwner [#192827](https://github.com/SalesTim/Ops/issues/192827)
+  - We were using the requester ID from the request object which is nBold ID. Now, instead, we use the msUserId (from AD) from the user object.
+- fixed: Error 404 in function: addChannelOwner [#192827](https://github.com/nboldhq/Ops/issues/192827)
   - Manage 404 error in case of bad provisioning
 - changed: Updated manifests to v1.7, including the following properties:
   - `showLoadingIndicator`: `false` (always `false` as it seems to break the app)
   - `isFullScreen`: `false` for standalone packages, `true` for targeted packages
-- changed: Handbook is now restricted to "Members" (aka employees) from the SalesTim tenant
+- changed: Handbook is now restricted to "Members" (aka employees) from the nBold tenant
 - changed: Documentation about naming convention and audience targeting tags
   - The tech hub documentation has been updated to reflect these changes.
 - fixed: Audience targeting issue
@@ -2162,7 +2174,7 @@ Avoid planner throttling
 - added: Deletion of automatically generated wiki tabs
   - During the provisioning, the process controls the number of wiki tabs in the source channel, and keeps only the same number of wiki tabs (keeping the first one in priority, that should be the original one with the right tab name)
 - fixed: Requester and Permanent owner not added in private channel [#408](https://github.com/nboldhq/app-platform/issues/408)
-  - Related issue: Unexpected error in postProcessRequest: {"status":500,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/teams/1c406dc9-17bf-4ca8-b084-61e90a2d72e4/channels/19:04f7a80043744d16 (PRD) [188674](https://github.com/SalesTim/Ops/issues/188674)
+  - Related issue: Unexpected error in postProcessRequest: {"status":500,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/teams/1c406dc9-17bf-4ca8-b084-61e90a2d72e4/channels/19:04f7a80043744d16 (PRD) [188674](https://github.com/nboldhq/Ops/issues/188674)
   - Related to a microsoft Graph bug.
   - Workaround: Implemented a retry mechanism (3 retry with a 10000ms interval) in case of error `500` in the `addChannelOwner` function + delays before execution of sequential tasts (such as "create a PCH" > "create a tab" and "install an app" > "create a tab")
 - changed: Planner provisioning is too long due to multiple throttled requests [#515](https://github.com/nboldhq/app-platform/issues/515)
@@ -2174,12 +2186,12 @@ Avoid planner throttling
     ```
 - changed: Rendering of templates in the catalog tab is now vastly faster, especially with a large number of templates
   - Code optimization of rendering that was previously doing an ajax request for each template.
-- fixed: Unknown and undocumented error in function: cloneTeamLogo. (PPR) [#188236](https://github.com/SalesTim/Ops/issues/188236)
+- fixed: Unknown and undocumented error in function: cloneTeamLogo. (PPR) [#188236](https://github.com/nboldhq/Ops/issues/188236)
   - Cause: Locale files were not loaded as the `jobs` role was not loading the webapp.
   - Resolution: The `workersLauncher.js` service is now requiring `i18nServer.js` so that it's loaded systematically
 - fixed: Unable to save template in PPR
   - Cause: Misconfigured blob container for PPR in `stsaprd` storage account
-  - Related issue: Unexpected error in /blobServices/savePicture/createBlockBlobFromStream. (PPR) [#188030](https://github.com/SalesTim/Ops/issues/188030)
+  - Related issue: Unexpected error in /blobServices/savePicture/createBlockBlobFromStream. (PPR) [#188030](https://github.com/nboldhq/Ops/issues/188030)
 - security: bump standard-version from 7.1.0 to 8.0.1 [#505](https://github.com/nboldhq/app-platform/pull/505)
 - added: PPR dedicated app, api and jobs roles
   - PPR is now hosted with an architecture similar to PRD, with dedicated instances for each role
@@ -2216,19 +2228,19 @@ Avoid planner throttling
   - Resolution: better error management in the tabs configuration process
 - changed: Tabs types that doesn't support configuration (Wiki, PowerBI, OneNote) are now visible in the audit trail with a descriptive message
 - fixed: Unsupported tabs names in the audit trails are now "URL-decoded", preventing weird codes to be visible such as `%20`, 
-- fixed: graphServices/createTeamFromTemplate/sendMessage error. (INT) [#174802](https://github.com/SalesTim/Ops/issues/174802)
+- fixed: graphServices/createTeamFromTemplate/sendMessage error. (INT) [#174802](https://github.com/nboldhq/Ops/issues/174802)
   - Added a token refresh handler in case of expiration during a provisioning process
 - fixed: Redis connectivity issue in UAT
   - Related issues:
-    - Alert job error (UAT) [#174317](https://github.com/SalesTim/Ops/issues/174317): Error initializing Lua scripts
-    - Job Logging job error (UAT) [#174234](https://github.com/SalesTim/Ops/issues/174234): connect ETIMEDOUT
-    - An unhandledRejection has been detected. (UAT) [#174236](https://github.com/SalesTim/Ops/issues/174236): connect ETIMEDOUT
+    - Alert job error (UAT) [#174317](https://github.com/nboldhq/Ops/issues/174317): Error initializing Lua scripts
+    - Job Logging job error (UAT) [#174234](https://github.com/nboldhq/Ops/issues/174234): connect ETIMEDOUT
+    - An unhandledRejection has been detected. (UAT) [#174236](https://github.com/nboldhq/Ops/issues/174236): connect ETIMEDOUT
   - Resources: See "Connection time out during queue add" [#1366](https://github.com/OptimalBits/bull/issues/1366#issuecomment-506734828)
   - Fix: Increase the ioredis connectTimeout property to 30000 (ms) so that queues have time to connect during startup
-- fixed: Unknown and undocumented error in function: getMyRequestsCount. (INT) [#174131](https://github.com/SalesTim/Ops/issues/174131)
+- fixed: Unknown and undocumented error in function: getMyRequestsCount. (INT) [#174131](https://github.com/nboldhq/Ops/issues/174131)
   - Better error management in case of network latency issues
 - changed: jobs queues are now prefixed with the current environment for better isolation
-- fixed: An unhandledRejection has been detected. (UAT) [#172834](https://github.com/SalesTim/Ops/issues/172834)
+- fixed: An unhandledRejection has been detected. (UAT) [#172834](https://github.com/nboldhq/Ops/issues/172834)
   - The service is now restarted if an unhandledRejection is detected, for instance a Redis connectivity issue during boot.
 - changed: better log levels management with distinction between verbose and debug
   - Now using the `npm` logging levels prioritized from 0 to 6 (highest to lowest):
@@ -2244,24 +2256,24 @@ Avoid planner throttling
     }
     ```
   - Reference: [Winston logger logging levels](https://github.com/winstonjs/winston#logging-levels) 
-- added: Support for `en-my` locale (English - Malaysia) [#172551](https://github.com/SalesTim/Ops/issues/172551)
-- fixed: typo in `es-es` locale, replaced "% s" by "%s" [#172547](https://github.com/SalesTim/Ops/issues/172547)
+- added: Support for `en-my` locale (English - Malaysia) [#172551](https://github.com/nboldhq/Ops/issues/172551)
+- fixed: typo in `es-es` locale, replaced "% s" by "%s" [#172547](https://github.com/nboldhq/Ops/issues/172547)
 - added: Support of italian language
   - Applies to:
-    - SalesTim UI based on Teams / Browser language
+    - nBold UI based on Teams / Browser language
     - Template lang for notifications
   - The following lang / region pairs are supported:
     - it-IT	Italian (Italy)
     - it-CH	Italian (Switzerland)
 - changed: #provisioning Tabs configuration support
-  - Supported tabs: Tab cloning and configuration works and is officially supported by SalesTim (SUPPORTED by Microsoft)
+  - Supported tabs: Tab cloning and configuration works and is officially supported by nBold (SUPPORTED by Microsoft)
     - Custom tabs
     - Website tabs
     - Word, Excel, PowerPoint, and PDF tabs
     - Document library tabs
     - YouTube tabs
     - Yammer tabs
-  - Unsupported tabs: Tab cloning and configuration SHOULD work but cannot be officially supported by SalesTim (UNSUPPORTED by Microsoft)
+  - Unsupported tabs: Tab cloning and configuration SHOULD work but cannot be officially supported by nBold (UNSUPPORTED by Microsoft)
     - Planner tabs
     - Microsoft Stream tabs
     - Microsoft Forms tabs
@@ -2272,7 +2284,7 @@ Avoid planner throttling
     - OneNote tabs
 - fixed: #provisioning 1 Private Channel Missing - Systra [#480](https://github.com/nboldhq/app-platform/issues/480)
   - Symptom: Sometimes, the Graph accepts to create a channel (and returns an ID), but then the channel is not visible anymore from the graph.
-  - See "Error in graphHelper/updateTabConfiguration" [#169114](https://github.com/SalesTim/Ops/issues/169114)
+  - See "Error in graphHelper/updateTabConfiguration" [#169114](https://github.com/nboldhq/Ops/issues/169114)
     ```yaml
     {
       "statusCode":404,
@@ -2298,7 +2310,7 @@ Avoid planner throttling
 - fixed: #provisioning Tabs provisioned in the wrong channel
   - Fixed by reordering (alphabetically on the displayName) channels after the full provisioning, as they may have been created in a different order.
 - fixed: #provisioning Apps not cloned in private channels
-  - Error undefined in function: createTab with arguments: [#165395](https://github.com/SalesTim/Ops/issues/165395)
+  - Error undefined in function: createTab with arguments: [#165395](https://github.com/nboldhq/Ops/issues/165395)
   - Resolution: Implement a control process that install missing apps automatically during the provisioning
 - fixed: #login Unable to login in dev mode when using wsl
   - Cause: WSL internal clock stops synchronizing with the host, resulting in a JWT check error.
@@ -2317,7 +2329,7 @@ Avoid planner throttling
   - Replaced error by warn level in case of error 502 to reduce noise in the ops repo
 - changed: Store performance optimizations
   - Removed all JQuery dependency in components and removed the library from bundle.min.js
-- added: Doc procedure to [optimize templates assets](https://github.com/SalesTim/template-manifests/blob/master/README.md#4-optimize-your-assets)
+- added: Doc procedure to [optimize templates assets](https://github.com/nboldhq/template-manifests/blob/master/README.md#4-optimize-your-assets)
 - added: Intercom chat UI is now available from the template store
 - fixed: Tabs in private  channels are sometimes not provisioned
   - Fixed the cloningMissingTabs function to add a "tabs" property when it is missing to private channels
@@ -2366,7 +2378,7 @@ Avoid planner throttling
 - fixed: Cannot access audit trail from the "My Requests" screen
   - Related issue: Audit Button in My Request - not working [#452](https://github.com/nboldhq/app-platform/issues/452)
   - Fixed incompatibility between bootstrap v4.4.1 and jquery v3.5.0 > Downgraded jquery to v3.4.1. See [Bootstrap Issue](https://github.com/twbs/bootstrap/issues/30553)
-- added: New open source repository [tech-hub](https://github.com/SalesTim/tech-hub)
+- added: New open source repository [tech-hub](https://github.com/nboldhq/tech-hub)
   - Contains multiple SDKs for various clients and servers
   - Levels of support:
     - `javascript`: beta (Target as GA in API v1)
@@ -2375,50 +2387,26 @@ Avoid planner throttling
     - `csharp-netcore`: experimental
     - `aspnetcore`: experimental
     - `nodejs-express-server`: experimental
-  Public URL: https://sdk.salestim.io
-- added: New open source repository [tech-hub](https://github.com/SalesTim/tech-hub)
-  - Contains the contents of the [SalesTim Tech Hub website](https://developers.Salestim.com)
 - security: Audit reports are now generated as part of the `app-platform` build.
-  - [JavaScript Standard Style Report](https://dist.salestim.com/audits/standard_report.log)
-  - [ESLint Security Report](https://dist.salestim.com/audits/eslint_security_report.log)
-  - [NPM Audit Report](https://dist.salestim.com/audits/npm_audit_report.log)
-- added: New open source repository [internationalization](https://github.com/SalesTim/internationalization)
-  - Contains the raw json files resource files used by the SalesTim Platform
+  - [JavaScript Standard Style Report](https://dist.salestim.io/audits/standard_report.log)
+  - [ESLint Security Report](https://dist.salestim.io/audits/eslint_security_report.log)
+  - [NPM Audit Report](https://dist.salestim.io/audits/npm_audit_report.log)
+- added: New open source repository [internationalization](https://github.com/nboldhq/internationalization)
+  - Contains the raw json files resource files used by the nBold Platform
   - Now updated versions of the resource files are automatically downloaded during build (taking the latest release)
   - Public URL: https://i18n.salestim.io
   - Governed by:
-    - [SalesTim Security Policy](https://developers.salestim.com/platform/securitypolicy)
-    - [SalesTim Open Source Code of Conduct](https://codeofconduct.salestim.com)
-  - Usage instructions are detailed in the [README file](https://github.com/SalesTim/internationalization/blob/master/README.md)
-- added: New open source repository [template-manifests](https://github.com/SalesTim/template-manifests)
-  - Contains the raw json files templates used by the [SalesTim Template Store](https://store.salestim.com)
-  - Public URL: https://manifests.salestim.io
-  - Governed by:
-    - [SalesTim Security Policy](https://developers.salestim.com/platform/securitypolicy)
-    - [SalesTim Open Source Code of Conduct](https://codeofconduct.salestim.com)
-  - Usage instructions are detailed in the [README file](https://github.com/SalesTim/template-manifests/blob/master/README.md)
-- added: SalesTim API Explorer
+    - [nBold Security Policy](https://docs.nbold.co/trust-center/security-policy)
+    - [nBold Open Source Code of Conduct](https://docs.nbold.co/open-source/code-of-conduct)
+  - Usage instructions are detailed in the [README file](https://github.com/nboldhq/internationalization/blob/master/README.md)
+- added: nBold API Explorer
   - Similar to the Microsoft Graph Explorer
   - Currently exposes the /store endpoints
   - Public URL: https://developers.salestim.com/api/explorer
   - Deeplinks to specific operations are supported, for example [getStoreCategories](https://developers.salestim.com/api/explorer.html#/store/getStoreCategories)
-- added: SalesTim Template Store
-  - Repo: [template-store](https://github.com/SalesTim/template-store)
-  - Consumes the json files from the public repo [template-manifests](https://github.com/SalesTim/template-manifests)
-  - Features
-    - Editors picks
-    - View templates from the same category as the current template
-    - Navigation by category
-    - Multiple options to get a template:
-      - Download
-      - Install with SalesTim
-    - Fully responsive
-    - Google integration with Google Analytics and Google Search Console
-    - Social sharing capabilities (Teams, LinkedIn, Twitter, WhatsApp, Mail)
-    - SEO optimization: robots.txt + sitemap.xml
-- added: SalesTim Open Source Code of conduct
-  - Repo: [code-of-conduct](https://github.com/SalesTim/code-of-conduct)
-  - Public URL: https://codeofconduct.salestim.com/
+- added: nBold Open Source Code of conduct
+  - Repo: [code-of-conduct](https://github.com/nboldhq/code-of-conduct)
+  - Public URL: https://docs.nbold.co/open-source/code-of-conduct/
   - A new distribution list is available to receive requests at [codeofconduct@salestim.com](mailto:codeofconduct@salestim.com)
 - fixed: Logs files naming convention
   - The switch to a fully global architecture generated conflicts in github
@@ -2453,7 +2441,7 @@ Avoid planner throttling
       - api.salestim.io
       - jobs.salestim.io
 - added: New "/dist" directory
-  - Public URL: https://dist.salestim.com/
+  - Public URL: https://dist.salestim.io/
   - Exposes:
     - App packages (Related links are up to date here https://developers.salestim.com/releases/releases)
       - io.salestim.automation.standalone.dev.zip	
@@ -2475,18 +2463,18 @@ Avoid planner throttling
   - Why: Previously, sites "tech-hub" and "template-store" were hosted in the main "app-platform" repo, resulting in longer build times and possible issues.
   - How: Now techhub and template-store sources are hosted in their own isolated repos:
     - tech-hub:
-      - New [Repo](https://github.com/SalesTim/tech-hub)
+      - New [Repo](https://github.com/nboldhq/tech-hub)
       - The website is still available [here](https://developers.salestim.com/), and is hosted right from the repository through the GitHub Pages service.
     - template-store:
-      - New [Repo](https://github.com/SalesTim/template-store)
+      - New [Repo](https://github.com/nboldhq/template-store)
       - Now hosts both .json templates and the template-store website
       - The store website is now available [here](https://store.salestim.com/) instead of `prd.salestim.io/store`
-      - N.B: The [template-gallery](https://github.com/SalesTim/template-gallery) repo previously hosting .json templates is now archived and should not be used anymore
-- fixed: Fallback language for sv-SE generates i18n errors [#135919](https://github.com/SalesTim/Ops/issues/135919)
+      - N.B: The [template-gallery](https://github.com/nboldhq/template-gallery) repo previously hosting .json templates is now archived and should not be used anymore
+- fixed: Fallback language for sv-SE generates i18n errors [#135919](https://github.com/nboldhq/Ops/issues/135919)
   - How: Added a specific fallback entry for sv-se in `i18nConfig.js`
 - added: Support of spanish language
   - Applies to:
-    - SalesTim UI based on Teams / Browser language
+    - nBold UI based on Teams / Browser language
     - Template lang for notifications
   - The following lang / region pairs are supported:
     - es-AR	Spanish (Argentina)
@@ -2520,13 +2508,13 @@ Avoid planner throttling
     - email
     - userPrincipalName
 - changed: The "approval" tab in templates is now flagged with a "Pro" badge
-- fixed: Error updating mail nickname. (PRD) [#121353](https://github.com/SalesTim/Ops/issues/121353)
+- fixed: Error updating mail nickname. (PRD) [#121353](https://github.com/nboldhq/Ops/issues/121353)
   - Implemented a retry on 404 error (if the mailbox is not yet fully provisioned)
 - fixed: email naming conventions
   - Replace accentuated characters using Lodash Deburr function (see https://lodash.com/docs/4.17.15#deburr)
   - Deburrs string by converting [Latin-1 Supplement](https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)#Character_table) and [Latin Extended-A](https://en.wikipedia.org/wiki/Latin_Extended-A) letters to basic Latin letters and removing combining [diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks).
 - changed: Updated doc "Service Account" and "Data Management Practices" sections
-- fixed: Unexpected error in /sameSiteMiddleware/ensureCookieCompatibility. [#120782](https://github.com/SalesTim/Ops/issues/120782)
+- fixed: Unexpected error in /sameSiteMiddleware/ensureCookieCompatibility. [#120782](https://github.com/nboldhq/Ops/issues/120782)
   - The issue was raised in case of empty user-agent header for some browsers
 
 ## [1.5.0] Codename "Yokozuna"
@@ -2557,24 +2545,24 @@ Avoid planner throttling
 - fixed: Check service account screen is empty
 - fixed: Freeze when adding Permanent owner - Members [#354](https://github.com/nboldhq/app-platform/issues/354)
 - fixed: Teams Picture not added  [#355](https://github.com/nboldhq/app-platform/issues/355)
-- fixed: Unexpected error in I18n __(). (DEV) [#115582](https://github.com/SalesTim/Ops/issues/115582)
+- fixed: Unexpected error in I18n __(). (DEV) [#115582](https://github.com/nboldhq/Ops/issues/115582)
   - Created i18n keys for crm configuration
-- fixed: Error in isOwnerOf: Resource 'ad9d747a-737a-4f72-b1d1-fceaffaa54ba' does not exist or one of its queried reference-property objects are not present. Detail: {"statusCode":404,"code":"Request_Resource (PRD) [#115535](https://github.com/SalesTim/Ops/issues/115535)
+- fixed: Error in isOwnerOf: Resource 'ad9d747a-737a-4f72-b1d1-fceaffaa54ba' does not exist or one of its queried reference-property objects are not present. Detail: {"statusCode":404,"code":"Request_Resource (PRD) [#115535](https://github.com/nboldhq/Ops/issues/115535)
   - Resolution: Better graph error management
-- fixed: Error in requestsEventsQueueListener/processRequestEvent/requestsProcesser/processNewRequest: {} (DEV) [#115312](https://github.com/SalesTim/Ops/issues/115312)
+- fixed: Error in requestsEventsQueueListener/processRequestEvent/requestsProcesser/processNewRequest: {} (DEV) [#115312](https://github.com/nboldhq/Ops/issues/115312)
   - Error message: Error message: waitForTeamsAsyncOperation status is "failed"
   - Resolution: Implement retry mechanism
 - fixed: Jobs execution error
   - Related issues:
-    - index/exitHandler received a signal: SIGINT. Message: SIGINT Description: User pressing Ctrl+C and is an interrupt App will exit in 30000ms. (DEV) [#115116](https://github.com/SalesTim/Ops/issues/115116)
-    - JOB DELETETESTTEAMSDEV: Task execution failed with unexpected error: {} (DEV) [#115110](https://github.com/SalesTim/Ops/issues/115110)
-    - Task executed with errors (DEV) [#115111](https://github.com/SalesTim/Ops/issues/115111)
+    - index/exitHandler received a signal: SIGINT. Message: SIGINT Description: User pressing Ctrl+C and is an interrupt App will exit in 30000ms. (DEV) [#115116](https://github.com/nboldhq/Ops/issues/115116)
+    - JOB DELETETESTTEAMSDEV: Task execution failed with unexpected error: {} (DEV) [#115110](https://github.com/nboldhq/Ops/issues/115110)
+    - Task executed with errors (DEV) [#115111](https://github.com/nboldhq/Ops/issues/115111)
   - Root cause: Bad async loading of jobs module instance, resulting in an uncatched exception in jobScheduler trying to call the 'start' method.
 - fixed: Client-side exceptions
-  - Error in getGeneralChannelId: Failed to execute backend request. Detail: {"statusCode":502,"code":"BadGateway","message":"Failed to execute backend request.","requestId":"7d898e23-7baf-4dae-b3ae-08fe (PRD) [#114249](https://github.com/SalesTim/Ops/issues/114249)
-  - Error in getTeamProperties: Failed to execute backend request. Detail: {"statusCode":502,"code":"BadGateway","message":"Failed to execute backend request.","requestId":"a8ad671b-3d90-4eee-9556-86ec8e (PRD) [#114251](https://github.com/SalesTim/Ops/issues/114251)
+  - Error in getGeneralChannelId: Failed to execute backend request. Detail: {"statusCode":502,"code":"BadGateway","message":"Failed to execute backend request.","requestId":"7d898e23-7baf-4dae-b3ae-08fe (PRD) [#114249](https://github.com/nboldhq/Ops/issues/114249)
+  - Error in getTeamProperties: Failed to execute backend request. Detail: {"statusCode":502,"code":"BadGateway","message":"Failed to execute backend request.","requestId":"a8ad671b-3d90-4eee-9556-86ec8e (PRD) [#114251](https://github.com/nboldhq/Ops/issues/114251)
   - Resolution: Implemented a graphErrorHandler client-side global error handler
-- fixed: An unhandledRejection has been detected. (INT) [#114867](https://github.com/SalesTim/Ops/issues/114867)
+- fixed: An unhandledRejection has been detected. (INT) [#114867](https://github.com/nboldhq/Ops/issues/114867)
   - Error message: Error message: scroll already exists for this workspace
   - Resolution: Prevent parralel queries that use paging (scroll) in extrectIntercomData job
   - Schedule jobs more evenly to prevent conflicts:
@@ -2588,11 +2576,11 @@ Avoid planner throttling
   }
   ```
 - fixed: Enable / Disable template is now working properly
-- fixed: An uncaught exception has been detected at origin: undefined (DEV) [#113328](https://github.com/SalesTim/Ops/issues/113328)
+- fixed: An uncaught exception has been detected at origin: undefined (DEV) [#113328](https://github.com/nboldhq/Ops/issues/113328)
   - Resolution: Better andling of Intercom API exceptions
 - feat: new 📡 Stream tabs content cloning capability.
   - Now you can clone Stream tabs as part of your teams templates.
-- fixed: Intermittently user is not able to clone a team [#112477](https://github.com/SalesTim/Ops/issues/112477) and [#112481](https://github.com/SalesTim/Ops/issues/112481)
+- fixed: Intermittently user is not able to clone a team [#112477](https://github.com/nboldhq/Ops/issues/112477) and [#112481](https://github.com/nboldhq/Ops/issues/112481)
   - Error:
   ``` javascript
   {"status":502,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/v1.0/teams/3756ec9b-ae79-4f14-a8b5-9af49134c9a7/clone","data":"{\"displayName\":\"Test team janapp2-TIM","description":"Team created by jantestapp2. Description: test","mailNickname":"TIM-Test-team-janapp2-TIM-EN","partsToClone":"apps,tabs,settings,channels","visibility":"private"}",
@@ -2604,7 +2592,7 @@ Avoid planner throttling
   - Web Store categories are now multilingual
   - Template pages now have recommendations "Other templates from the same category" and "Other templates from the same publisher"
 - fixed: User without preferred language in their Office 365 profile.
-  - Root cause: Under certain circumstances, for instance with accounts automatically provisionned from Office 365 demo/test tenants, a user may have an empty empty preferred language. Therefore the user profile property in SalesTim is 
+  - Root cause: Under certain circumstances, for instance with accounts automatically provisionned from Office 365 demo/test tenants, a user may have an empty empty preferred language. Therefore the user profile property in nBold is 
     ``` javascript
     { msPreferredLanguage: null }
     ```
@@ -2617,7 +2605,7 @@ Avoid planner throttling
 - security: Teams packages manifests updates
   - in DEV environments, both root and sub-domains are now authorized ``` *. ``` and ``` *.\- ```, to cope with NGROK sub-domains such as ``` eu ``` in ``` dev.eu.ngrok.io ```
   - in non-DEV environments, we're now using wildcards to authorize ``` *.salestim.io ``` and ``` *.salestim.com ```
-  - Added the ``` openExternal ``` permission to ``` devicePermissions ``` to future-proof SalesTim on mobile devices.
+  - Added the ``` openExternal ``` permission to ``` devicePermissions ``` to future-proof nBold on mobile devices.
   ``` javascript
   {
     validDomains: [
@@ -2639,8 +2627,8 @@ Avoid planner throttling
     - Language
   - Store categories and industries hav their own landing pages.
 - fixed: Job Scheduler
-  - Source error: Error writing jobs audit trail. (UAT) [#97625](https://github.com/SalesTim/Ops/issues/97625)
-- fixed: Error in getGroupImage: null Detail: {"statusCode":404,"code":null,"message":null,"requestId":null,"date":"2019-12-05T07:12:35.019Z","body":null} (PRD) [#100049](https://github.com/SalesTim/Ops/issues/100049)
+  - Source error: Error writing jobs audit trail. (UAT) [#97625](https://github.com/nboldhq/Ops/issues/97625)
+- fixed: Error in getGroupImage: null Detail: {"statusCode":404,"code":null,"message":null,"requestId":null,"date":"2019-12-05T07:12:35.019Z","body":null} (PRD) [#100049](https://github.com/nboldhq/Ops/issues/100049)
   - Better handling of 404 error when a team has no associated photo
 - improvement: Mail nickname formatter
   - Mail nickname generated from the email naming convention is now automatically formatted using the following rules:
@@ -2669,7 +2657,7 @@ Avoid planner throttling
 ## [1.4.0] Codename "Ozeki"
 
 - feat: API /jobs endpoints
-  - Manage SalesTim's platform jobs
+  - Manage nBold's platform jobs
   - Operations:
     - GET /jobs
       - Get all available jobs for the current environment (Meaning all jobs that is authorized to be executed in the current environment, actually scheduled or not)
@@ -2684,13 +2672,13 @@ Avoid planner throttling
   - Now we're using the webUrl generated after tab configuration
 - improvement: Use $expand=teamsApp QSP when calling "/tabs" endpoint to get more infos about cloned tabs
 - feat: Improved onboarding
-  - New customers now have two default templates, one for FR language and one for EN language, automatically enabled and configured with 2 source teams with a "General" channel and a "🙋🏼‍♀️ Discover SalesTim" channel
+  - New customers now have two default templates, one for FR language and one for EN language, automatically enabled and configured with 2 source teams with a "General" channel and a "🙋🏼‍♀️ Discover nBold" channel
 - security: Enforce TLS v1.2
   - Why: TLS v1.0 and v1.1 will soon be deprecated. Reference: [SSL Labs Grade Change for TLS 1.0 and TLS 1.1 Protocols](https://blog.qualys.com/ssllabs/2018/11/19/grade-change-for-tls-1-0-and-tls-1-1-protocols)
   - Resolution: [Configuration of TLS versions in App Service and Functions apps now available](https://azure.microsoft.com/en-au/updates/app-service-and-functions-hosted-apps-can-now-update-tls-versions/)
   - Validation: Use [SSL Labs Report](https://www.ssllabs.com/ssltest/analyze.html?d=prd.salestim.io)
   - Updated documentation: [Secure communication with HTTPS & SSL](https://developers.salestim.com/platform/access.html#secure-communication-with-https-ssl)
-- ops: New environments. SalesTim now has 4 fully-functional Azure environments.
+- ops: New environments. nBold now has 4 fully-functional Azure environments.
   | 💍 Ring  | Environments    | Code | Root URL        | Deployment                                                              |
   | :-----: | --------------- | ---- | --------------- | ----------------------------------------------------------------------- |
   |  **4*-  | **production*-  | PRD  | prd.salestim.io | Pull request from the "ppr" branch to the protected "production" branch |
@@ -2717,8 +2705,8 @@ Avoid planner throttling
   - In case of empty or wrong naming convention expression, a nickname is generated from the requested team name
 - fixed: Cannot clone an archived team
   - Related errors:
-    - Unable to retrieve tabs in getTeamStructure/listTabs. [#99924](https://github.com/SalesTim/Ops/issues/99924)
-    - Error in graphHelper/listTabs. [#7723](https://github.com/SalesTim/Ops/issues/7723)
+    - Unable to retrieve tabs in getTeamStructure/listTabs. [#99924](https://github.com/nboldhq/Ops/issues/99924)
+    - Error in graphHelper/listTabs. [#7723](https://github.com/nboldhq/Ops/issues/7723)
       - Error: Unable to retrieve tabs in getTeamStructure/listTabs.
         ``` javascript
         {
@@ -2740,7 +2728,7 @@ Avoid planner throttling
 - fix PowerApps audit log labels in fr-fr
   - In fr-fr locale, PowerApps logs message were wrong (handled as a generic tab)
 - refactor: Login process
-  - Usins SalesTim outside of Microsoft Teams is now supported (prepping a future SharePoint component for integration in an Intranet for instance)
+  - Usins nBold outside of Microsoft Teams is now supported (prepping a future SharePoint component for integration in an Intranet for instance)
   - Original requested URL including parameters ("?" "#") are now preserved after login
   - Page size optimization through JS and CSS minification, resulting in a slightly faster response time.
   - "Please wait" animated logo is smaller and aligned with the new cleaner design
@@ -2863,7 +2851,7 @@ Avoid planner throttling
 
 ## [1.2.46]
 
-- fixed: Unexpected error in searchMyTeams. (PRD) [#7098](https://github.com/SalesTim/Ops/issues/7098)
+- fixed: Unexpected error in searchMyTeams. (PRD) [#7098](https://github.com/nboldhq/Ops/issues/7098)
 - fixed: "My Requests" counter badge breaks toolbar alignment
 
 
@@ -2886,8 +2874,8 @@ Avoid planner throttling
   - fixed: An error appeared after a first login into an unthorized page.
     - Error message: Unexpected error in isAdminFromSession. (UAT) #6837
     - Related issues:
-      - Error in /loadComponent route: TypeError ERR_INVALID_ARG_VALUE: The argument 'id' must be a non-empty string. Received '' (UAT) [#6838](https://github.com/SalesTim/Ops/issues/6838)
-      - Error in /loadComponent route: AssertionError ERR_ASSERTION: missing path (PRD) [#6845](https://github.com/SalesTim/Ops/issues/6845)
+      - Error in /loadComponent route: TypeError ERR_INVALID_ARG_VALUE: The argument 'id' must be a non-empty string. Received '' (UAT) [#6838](https://github.com/nboldhq/Ops/issues/6838)
+      - Error in /loadComponent route: AssertionError ERR_ASSERTION: missing path (PRD) [#6845](https://github.com/nboldhq/Ops/issues/6845)
 - improvement: The "New team" button is now disabled if there is no service account configured
 - improvement: Template creation
   - The "Clone members" option is now disabled by default when creating a new template 
@@ -2901,7 +2889,7 @@ Avoid planner throttling
 
 ## [1.2.36]
 
-- feat: New tabs cloning capabilities. SalesTim now supports the cloning of the following tabs type:
+- feat: New tabs cloning capabilities. nBold now supports the cloning of the following tabs type:
   - 💬 Yammer tabs: both configured for Yammer groups and Yammer topics
   - 📋 Microsoft Forms tabs: both data collect through questions and responses view
   - 📚 SharePoint Document Library
@@ -2995,16 +2983,16 @@ Avoid planner throttling
 
 ## [1.2.30]
 
-- ops: Error: Admin Consent is required. [#5894](https://github.com/SalesTim/Ops/issues/5894)
+- ops: Error: Admin Consent is required. [#5894](https://github.com/nboldhq/Ops/issues/5894)
   - When a user tries to login without admin consent, an alert is sent to the CSM team
-- fixed: Error in getGeneralChannelId: Failed to execute Skype backend request GetThreadsRequest. [#5917](https://github.com/SalesTim/Ops/issues/5917)
+- fixed: Error in getGeneralChannelId: Failed to execute Skype backend request GetThreadsRequest. [#5917](https://github.com/nboldhq/Ops/issues/5917)
   - Detail: {"statusCode":500,"code":"GeneralException","message":"Failed to execute Skype backend requestt..."}
   - Root cause: Microsoft Graph may send a 500 error sometimes
 - fixed: Microsoft Graph error status code
   - The Microsoft Graph api sometimes generates error status code as a "status" property, sometimes as a "statusCode" property
 - fixed: Microsoft Planner API throttling
-  - Related issue: graphHelper/getPlannerPlanDetails error: {"status":429,"response":{"req":{"method":"GET","url":"https://graph.microsoft.com/v1.0/planner/plans/REDACTED","headers":{"user-agent":"no (DEV) [#5263](https://github.com/SalesTim/Ops/issues/5263)
-- fixed: Microsoft Graph Error 404 in function: waitForTeamsAsyncOperation with arguments (PRD) [#5419](https://github.com/SalesTim/Ops/issues/5419)
+  - Related issue: graphHelper/getPlannerPlanDetails error: {"status":429,"response":{"req":{"method":"GET","url":"https://graph.microsoft.com/v1.0/planner/plans/REDACTED","headers":{"user-agent":"no (DEV) [#5263](https://github.com/nboldhq/Ops/issues/5263)
+- fixed: Microsoft Graph Error 404 in function: waitForTeamsAsyncOperation with arguments (PRD) [#5419](https://github.com/nboldhq/Ops/issues/5419)
   - Root cause: Sometimes, there is a delay between starting cloning a team and the moment where you can call the /operations endpoint
   - Solution: In case of error 404, try to replay call to /operations later
 - ops: Issues are now affected to different teams depending on their type.
@@ -3024,24 +3012,24 @@ Avoid planner throttling
   ```
   - Resolution: Implement bottleneck retry mechanism for some Graph exceptions
 - fixed: Error generating notification message
-  - Related issue: graphHelper/createChatThread error: {"status":400,"response":{"req":{"method":"POST","url":"" (PRD) [#5219](https://github.com/SalesTim/Ops/issues/5219)
+  - Related issue: graphHelper/createChatThread error: {"status":400,"response":{"req":{"method":"POST","url":"" (PRD) [#5219](https://github.com/nboldhq/Ops/issues/5219)
   - Root cause: The /chatThreads endpoint is deprecated
   - Solution: Moved to the /messages endpoint
 - fixed: Error getting team photo
-  - Related issue: Error in generateTeamLogo/cloneTeamLogo: {"statusCode":406,"code":null,"message":null,"requestId":null,"date":"2019-11-24T19:09:58.789Z","body":null,"arguments":[""] (PRD) [#5203](https://github.com/SalesTim/Ops/issues/5203)
+  - Related issue: Error in generateTeamLogo/cloneTeamLogo: {"statusCode":406,"code":null,"message":null,"requestId":null,"date":"2019-11-24T19:09:58.789Z","body":null,"arguments":[""] (PRD) [#5203](https://github.com/nboldhq/Ops/issues/5203)
   - Root cause: The /beta/teams/TEAM_ID/photo/$value endpoint raise an error 406
   - Solution: Moved to the v1.0 version
 - fixed: Error saving jobs audit trails
   - Related issues:
-    - JOBSSCHEDULER: Error writing jobs audit trail: {"errno":-2,"code":"ENOENT","syscall":"open","path":"./audit/jobs/uat-renewServiceAccountTokens-2019-11-24.csv"} (UAT) [#5119](https://github.com/SalesTim/Ops/issues/5119)
-    - JOBSSCHEDULER: Cleaning Job: Error in saveTaskExecutionHistory (UAT) [#5148](https://github.com/SalesTim/Ops/issues/5148)
+    - JOBSSCHEDULER: Error writing jobs audit trail: {"errno":-2,"code":"ENOENT","syscall":"open","path":"./audit/jobs/uat-renewServiceAccountTokens-2019-11-24.csv"} (UAT) [#5119](https://github.com/nboldhq/Ops/issues/5119)
+    - JOBSSCHEDULER: Cleaning Job: Error in saveTaskExecutionHistory (UAT) [#5148](https://github.com/nboldhq/Ops/issues/5148)
 - fixed: Error saving extractIntercomData job export data
   - Related issues:
-    - JOB extractIntercomData: Error writing events export file: {"errno":-2,"code":"ENOENT","syscall":"open","path":"REDACTED"} (PRD) [#5413](https://github.com/SalesTim/Ops/issues/5413)
-    - JOB EXTRACTINTERCOMDATA: Task execution failed: extractIntercomData done (PRD) [#5412](https://github.com/SalesTim/Ops/issues/5412)
-    - JOB extractIntercomData: Error writing companies export file: {"errno":-2,"code":"ENOENT","syscall":"open","path":"REDACTED"} (PRD) [#5411](https://github.com/SalesTim/Ops/issues/5411
+    - JOB extractIntercomData: Error writing events export file: {"errno":-2,"code":"ENOENT","syscall":"open","path":"REDACTED"} (PRD) [#5413](https://github.com/nboldhq/Ops/issues/5413)
+    - JOB EXTRACTINTERCOMDATA: Task execution failed: extractIntercomData done (PRD) [#5412](https://github.com/nboldhq/Ops/issues/5412)
+    - JOB extractIntercomData: Error writing companies export file: {"errno":-2,"code":"ENOENT","syscall":"open","path":"REDACTED"} (PRD) [#5411](https://github.com/nboldhq/Ops/issues/5411
     )
-    - JOB extractIntercomData: Error writing users export file: {"errno":-2,"code":"ENOENT","syscall":"open","path":"REDACTED"} (PRD) [#5410](https://github.com/SalesTim/Ops/issues/5410)
+    - JOB extractIntercomData: Error writing users export file: {"errno":-2,"code":"ENOENT","syscall":"open","path":"REDACTED"} (PRD) [#5410](https://github.com/nboldhq/Ops/issues/5410)
 
 
 ## [1.2.25]
@@ -3082,35 +3070,35 @@ Avoid planner throttling
 - fixed: Microsoft Graph exception: isTenantAdmin error
   - Error 504 on /directoryRoles endpoint
   - Related exceptions:
-    - office365Services/isTenantAdmin/graphHelper.isTenantAdmin error. (UAT) [#4475](https://github.com/SalesTim/Ops/issues/4475)
-    - {"status":504,"response":{"req":{"method":"GET","url":"https://graph.microsoft.com/v1.0/directoryRoles?$filter=roleTemplateId eq 'REDACTED'","headers":{"user-agent":"node-s (UAT) [#4474](https://github.com/SalesTim/Ops/issues/4474)
-    - Error in isTenantAdmin / directoryRoles: {"status":504,"response":{"req":{"method":"GET","url":"https://graph.microsoft.com/v1.0/directoryRoles?$filter=roleTemplateId eq 'REDACTED (UAT) [#4473](https://github.com/SalesTim/Ops/issues/4473)
+    - office365Services/isTenantAdmin/graphHelper.isTenantAdmin error. (UAT) [#4475](https://github.com/nboldhq/Ops/issues/4475)
+    - {"status":504,"response":{"req":{"method":"GET","url":"https://graph.microsoft.com/v1.0/directoryRoles?$filter=roleTemplateId eq 'REDACTED'","headers":{"user-agent":"node-s (UAT) [#4474](https://github.com/nboldhq/Ops/issues/4474)
+    - Error in isTenantAdmin / directoryRoles: {"status":504,"response":{"req":{"method":"GET","url":"https://graph.microsoft.com/v1.0/directoryRoles?$filter=roleTemplateId eq 'REDACTED (UAT) [#4473](https://github.com/nboldhq/Ops/issues/4473)
 - fixed: Microsoft Graph exception: addGroupMember error
   - Error 503 on /groups / members endpoint
   - Related exceptions:
-    - office365Services/addGroupMember error: {"status":503,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/groups/REDACTED/members/$ref","data":"{\"@o (UAT) [#4469](https://github.com/SalesTim/Ops/issues/4469)
-    - Error in postProcessRequest: {"status":503,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/groups/REDACTED/members/$ref","data":"{\"@odata.id\":\ (UAT) [#4468](https://github.com/SalesTim/Ops/issues/4468)
-    - graphHelper/addGroupMember error: {"status":503,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/groups/REDACTED/members/$ref","data":"{\"@odata.i (UAT) [#4467](https://github.com/SalesTim/Ops/issues/4467)
+    - office365Services/addGroupMember error: {"status":503,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/groups/REDACTED/members/$ref","data":"{\"@o (UAT) [#4469](https://github.com/nboldhq/Ops/issues/4469)
+    - Error in postProcessRequest: {"status":503,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/groups/REDACTED/members/$ref","data":"{\"@odata.id\":\ (UAT) [#4468](https://github.com/nboldhq/Ops/issues/4468)
+    - graphHelper/addGroupMember error: {"status":503,"response":{"req":{"method":"POST","url":"https://graph.microsoft.com/beta/groups/REDACTED/members/$ref","data":"{\"@odata.i (UAT) [#4467](https://github.com/nboldhq/Ops/issues/4467)
 - fixed: Microsoft Graph exception: getPlannerPlanDetails error
   - Error 503 on /planner/plans endpoint
   - Related exceptions:
-    - graphHelper/getPlannerPlanDetails error: {"status":503,"response":{"req":{"method":"GET","url":"https://graph.microsoft.com/v1.0/planner/plans/REDACTED/details","headers":{"user-ag (UAT) [#4466](https://github.com/SalesTim/Ops/issues/4466)
-    - Error cloning a planner tab. (UAT) [#4465](https://github.com/SalesTim/Ops/issues/4465)
-    - Error cloning tab settings and contents. (UAT) [#4464](https://github.com/SalesTim/Ops/issues/4464)
-    - Error in clonePlannerTab/getPlannerPlanDetails. (UAT) [#4463](https://github.com/SalesTim/Ops/issues/4463)
+    - graphHelper/getPlannerPlanDetails error: {"status":503,"response":{"req":{"method":"GET","url":"https://graph.microsoft.com/v1.0/planner/plans/REDACTED/details","headers":{"user-ag (UAT) [#4466](https://github.com/nboldhq/Ops/issues/4466)
+    - Error cloning a planner tab. (UAT) [#4465](https://github.com/nboldhq/Ops/issues/4465)
+    - Error cloning tab settings and contents. (UAT) [#4464](https://github.com/nboldhq/Ops/issues/4464)
+    - Error in clonePlannerTab/getPlannerPlanDetails. (UAT) [#4463](https://github.com/nboldhq/Ops/issues/4463)
 - fixed: Microsoft Graph exception: getTeamStructure error
   - Error 503 on /teams /channels / tabs endpoint
   - Related exceptions:
-    - Error exporting source team structure in getTeamStructure. (UAT) [#4458](https://github.com/SalesTim/Ops/issues/4458)
-    - Unable to retrieve tabs in getTeamStructure/listTabs. (UAT) [#4457](https://github.com/SalesTim/Ops/issues/4457)
-    - Error in graphHelper/listTabs. (UAT) [#4456](https://github.com/SalesTim/Ops/issues/4456)
-    - Error in graphHelper/listTabs. (UAT) [#4455](https://github.com/SalesTim/Ops/issues/4455)
+    - Error exporting source team structure in getTeamStructure. (UAT) [#4458](https://github.com/nboldhq/Ops/issues/4458)
+    - Unable to retrieve tabs in getTeamStructure/listTabs. (UAT) [#4457](https://github.com/nboldhq/Ops/issues/4457)
+    - Error in graphHelper/listTabs. (UAT) [#4456](https://github.com/nboldhq/Ops/issues/4456)
+    - Error in graphHelper/listTabs. (UAT) [#4455](https://github.com/nboldhq/Ops/issues/4455)
 - fixed: Microsoft Graph exception: cloneTeamLogo error
   - Error 504 on /teams /photo/$value endpoint
   - Related exceptions:
-    - Error cloning team photo: {"statusCode":504,"code":"UnknownError","message":"","requestId":"REDACTED","date":"REDACTED","body":"{\"code\":\"UnknownError\",\ (UAT) [#4452](https://github.com/SalesTim/Ops/issues/4452)
-    - graphServices/updateTeamPhotoByFile error (UAT) [#4451](https://github.com/SalesTim/Ops/issues/4451)
-    - Error in generateTeamLogo/cloneTeamLogo: {"statusCode":504,"code":"UnknownError","message":"","requestId":"REDACTED,"date":"REDACTED","body":"{\"code\":\"U (UAT) [#4450](https://github.com/SalesTim/Ops/issues/4450)
+    - Error cloning team photo: {"statusCode":504,"code":"UnknownError","message":"","requestId":"REDACTED","date":"REDACTED","body":"{\"code\":\"UnknownError\",\ (UAT) [#4452](https://github.com/nboldhq/Ops/issues/4452)
+    - graphServices/updateTeamPhotoByFile error (UAT) [#4451](https://github.com/nboldhq/Ops/issues/4451)
+    - Error in generateTeamLogo/cloneTeamLogo: {"statusCode":504,"code":"UnknownError","message":"","requestId":"REDACTED,"date":"REDACTED","body":"{\"code\":\"U (UAT) [#4450](https://github.com/nboldhq/Ops/issues/4450)
 - improvement: During the provisioning process, cloned Planner tabs are now configured to use the user language [#213](https://github.com/nboldhq/app-platform/issues/213)
   - Planer tab configuration now respects the following scheme:
   ``` javascript
@@ -3121,18 +3109,18 @@ Avoid planner throttling
   }
   ```
 - fixed: An arror was generated for user profiles without photo
-  - Related exception: {"statusCode":404,"code":null,"message":null,"requestId":null,"date":"2019-11-20T11:28:31.129Z","body":null} (UAT) [#4632](https://github.com/SalesTim/Ops/issues/4632)
+  - Related exception: {"statusCode":404,"code":null,"message":null,"requestId":null,"date":"2019-11-20T11:28:31.129Z","body":null} (UAT) [#4632](https://github.com/nboldhq/Ops/issues/4632)
 
 
 ## [1.2.21]
 
-- fixed: Planner plan creation error [#4192](https://github.com/SalesTim/Ops/issues/4192)
-  - When a Graph api internal error occurs during the creation of a Planner plan, the function that handles the creation of a new audit log may fail due to an empty callback. [#4195](https://github.com/SalesTim/Ops/issues/4195)
+- fixed: Planner plan creation error [#4192](https://github.com/nboldhq/Ops/issues/4192)
+  - When a Graph api internal error occurs during the creation of a Planner plan, the function that handles the creation of a new audit log may fail due to an empty callback. [#4195](https://github.com/nboldhq/Ops/issues/4195)
 
 
 ## [1.2.20]
 
-- improvement: SalesTim's publisher domain validation by Microsoft
+- improvement: nBold's publisher domain validation by Microsoft
   - Configuring the publisher domain has an impact on what users see on the app consent prompt.
   - Especially, an application’s publisher domain is displayed to users on the application’s consent prompt to let users know where their information is being sent.
   - [Implications on the app consent prompt](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-configure-publisher-domain#implications-on-the-app-consent-prompt)
@@ -3247,7 +3235,7 @@ Avoid planner throttling
 - fixed: Missing requests from the "My requests" page
   - Root cause: For certain users, the number of requests returned from our cache may vary
   - Resolution: Fix the SCAN Redis operations
-- fixed: Error generating team logo [#2409](https://github.com/SalesTim/Ops/issues/2409)
+- fixed: Error generating team logo [#2409](https://github.com/nboldhq/Ops/issues/2409)
   - Now using the "teams" Microsoft Graph beta API endpoints
 - improvement: Team photo update in requests audit trail
   - Now the "Team photo updated" event is visible in audit trail as part of post-processing operations
@@ -3281,7 +3269,7 @@ Avoid planner throttling
 
 - fixed: Analytics Events
   - References:
-    - Error creating analytics event [#2322](https://github.com/SalesTim/Ops/issues/2322)
+    - Error creating analytics event [#2322](https://github.com/nboldhq/Ops/issues/2322)
     - fixed: Events: "Template Created" event is not raised [#271](https://github.com/nboldhq/app-platform/issues/271)
     - fixed: Intercom exception: Multiple existing users match this email address REDACTED [#255](https://github.com/nboldhq/app-platform/issues/255)
   - Fixes:
@@ -3300,11 +3288,11 @@ Avoid planner throttling
       }
       ```
     - Tracking new attributes on company profile:
-      - 'company_customer_id': SalesTim internal customer id
+      - 'company_customer_id': nBold internal customer id
       - 'serviceaccount_initialized': Initialized to 'true' the first time a service account is defined [#259](https://github.com/nboldhq/app-platform/issues/259)
 - fixed: Planner cloning exceptions in case of empty planner or empty buckets
-  - Error in allTasksProcessed: {} [#1139](https://github.com/SalesTim/Ops/issues/1139)
-  - Error in allTasksProcessed: Cannot read property 'length' of undefined [#2076](https://github.com/SalesTim/Ops/issues/2076)
+  - Error in allTasksProcessed: {} [#1139](https://github.com/nboldhq/Ops/issues/1139)
+  - Error in allTasksProcessed: Cannot read property 'length' of undefined [#2076](https://github.com/nboldhq/Ops/issues/2076)
 - improvement: Better anomaly tracking. The following exceptions are now properly logged and surfaced with a meaningful message in audit log:
   - **400_INVALIDREQUEST_MAILNICKNAME**:
     - Message: The generated email address for this team is empty or incorrect...
@@ -3328,8 +3316,8 @@ Avoid planner throttling
       - Associate template with another team
     - Processing behavior: The provisioning process is stopped and flagged in an "error" stage
   - **403_ACCESSDENIED_TEAMSLICENSES**:
-    - Message: SalesTim Service account doesn not have Teams licences...
-    - Explanation: The service account defined in SalesTim's settings doesn't have the required licenses to access Microsoft Teams
+    - Message: nBold Service account doesn not have Teams licences...
+    - Explanation: The service account defined in nBold's settings doesn't have the required licenses to access Microsoft Teams
     - Required action: Add the required Microsoft Teams licences to your service account
     - Processing behavior: The provisioning process is stopped and flagged in an "error" stage
   - **504_UNKNOWNERROR_INNERERROR**:
@@ -3360,7 +3348,7 @@ Avoid planner throttling
   2. From the browser client language
   3. Set to en-us in any other case
 - improvement: Locale is now detected and updated during each request.
-  - Therefore you can update the language of your Microsoft Teams client, and you don't need to logout from SalesTim to see change.
+  - Therefore you can update the language of your Microsoft Teams client, and you don't need to logout from nBold to see change.
 - feat: Template Language
   - You can now associate a language with each template, within the following list:
     - en-au
@@ -3406,14 +3394,14 @@ Avoid planner throttling
   - Teams Context
   - Screenshot
 - security: Self-hosted fonts.
-  - Now all fonts resources are loaded from the SalesTim platform instead of using Google Fonts CDN
+  - Now all fonts resources are loaded from the nBold platform instead of using Google Fonts CDN
   - Not necessarily a security issue, but:
     - Reduces the number of domains to whitelist
     - Prevents any data flow with Google
   - Updated doc: [🏳 Domains to whitelist](https://help.salestim.com/salestimplatform/domainsWhitelist.html)
-- refactor: Improved CheckSalesTimTenant method
+- refactor: Improved ChecknBoldTenant method
   - New logging capabilities
-  - Externalized SalesTim tenant id per environment
+  - Externalized nBold tenant id per environment
 - refactor: Check for Microsoft Accounts (personal accounts)
   - New logging capabilities
   - Externalized Microsoft tenant id
@@ -3432,7 +3420,7 @@ Avoid planner throttling
   - Our analytics platform is now collecting users sign-in and sign-out events
   - When an alert is raised, it's now collected to our GitHub Ops platform
   - Log files are now collected and persisted in our GitHub Ops platform
-  - The SalesTim app and services are now handling gracefully process shutdown, on any platform.
+  - The nBold app and services are now handling gracefully process shutdown, on any platform.
     - This technical update will helps us improve resiliency and our SLA. 
     - [Reference Best Practice](https://medium.com/faun/nodejs-graceful-start-shutdown-3ed16418ede3)
 - improvement: When defining security policies for a specific template, you can now select up to:
@@ -3476,7 +3464,7 @@ Avoid planner throttling
   - Dependency: [handlebar]((https://github.com/wycats/handlebars.js/commit/edc6220d51139b32c28e51641fadad59a543ae57))
   - Upgrade handlebar to 4.1.2
 - fixed: <%> in description in Teams Template creation forms #126 https://github.com/nboldhq/app-platform/issues/126
-- improvement: Improved SalesTim Targeting Package 1st connection experience [#207](https://github.com/nboldhq/app-platform/issues/207)
+- improvement: Improved nBold Targeting Package 1st connection experience [#207](https://github.com/nboldhq/app-platform/issues/207)
 - fix All tabs not replicated [#155](https://github.com/nboldhq/app-platform/issues/155)
 - fixed: Events not raised in intercom [#203](https://github.com/nboldhq/app-platform/issues/203)
 - fixed: Internationalization issues
@@ -3493,7 +3481,7 @@ Avoid planner throttling
     - Classification
 - fixed: Login page
   - Outside links in login menu to help and status
-  - SalesTim version number in menu
+  - nBold version number in menu
 
 
 ## [1.0.0] Codename "Makuuchi"
@@ -3503,13 +3491,13 @@ Avoid planner throttling
     - Client-side implementation
     - Attributes structure: ``` OBJECT_PROPERTY ```
     - Attributes sources:
-      - Environment: SalesTim App environment-based information
+      - Environment: nBold App environment-based information
       - Context: Microsoft Teams context-based information
       - Profile: Microsoft Graph user profile-based information
     - Attributes by stage (Additive):
       - Anonymous: (If used outside of Teams)
         - None
-      - Identified: (Using Teams context, before SalesTim login)
+      - Identified: (Using Teams context, before nBold login)
         ```javascript
         {
           "profile.intercomId": context.upn, // Not yet authenticated, use the upn
@@ -3523,7 +3511,7 @@ Avoid planner throttling
           "profile.version": env.environments.manifest.version
         }
         ```
-      - Authenticated: (Using Microsoft Graph Profile, after SalesTim login)
+      - Authenticated: (Using Microsoft Graph Profile, after nBold login)
         ```javascript
         {
           "profile.intercomId": user.msEmail, // Once authenticated, use the email instead of UPN
@@ -3584,7 +3572,7 @@ Avoid planner throttling
 - refactor: Dynamic teams packages generation
 - security: salestim.com is now a verified publisher domain
   - [Reference](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-configure-publisher-domain)
-- ops: Production App is now called "SalesTim"
+- ops: Production App is now called "nBold"
 - refactor: Update manifest to v1.5 schema
   - [Manifest Schema v1.5](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema)
   - Added french localization file
@@ -3674,8 +3662,8 @@ Avoid planner throttling
       console.log('running on Sundays of January and September')
     })
     ```
-- feat: SalesTim tab configuration page
-  - When adding SalesTim as a tab in a channel, a new configuration page is available
+- feat: nBold tab configuration page
+  - When adding nBold as a tab in a channel, a new configuration page is available
     - Choose your tab name + "save" button status control
     - ToS reminder
     - New design
@@ -3691,7 +3679,7 @@ Avoid planner throttling
   - Client-side:
     - Tokens are only used in memory, and never stored in cookies or browser local storage.
     - Access to tokens via API is protected using Azure AD authentication.
-- refactor: Enabled sign-in to SalesTim from a webpage outside of the Teams Clients
+- refactor: Enabled sign-in to nBold from a webpage outside of the Teams Clients
   - Now, in addition to our ```stEntityId``` parameter, tabs urls have the following parameters dynamically provided by Teams clients:
     ```
     entityId
@@ -3797,7 +3785,7 @@ Avoid planner throttling
   - Rules could be defined using standard javascript expressions.
   - Known Issue:
     - Due to our caching mechanism, an update to the user profile may not be reflected immediately and therefore the targeting rule may not be applied immediately.
-    - Known Workaround: Login to SalesTim from a browser window in "inprivate/incognito" mode to force user profile refresh.
+    - Known Workaround: Login to nBold from a browser window in "inprivate/incognito" mode to force user profile refresh.
 - ops: Persisted logs in UAT and PRD environments
   - Using [winston-daily-rotate-file](https://www.npmjs.com/package/winston-daily-rotate-file)
   - UAT and PRD default configuration
@@ -3871,7 +3859,7 @@ Avoid planner throttling
     - Requester is now also explicitely added as members (in addition to owner is the option is enabled)
     - Requested owners are now also explicitely added as members
     - Permanent owners are now also explicitely added as members 
-- refactor: Tracking SalesTim build number as a pre-release version number
+- refactor: Tracking nBold build number as a pre-release version number
   - Respects the [semver Semantic Versioning](https://semver.org/)
     ```
     MAJOR.MINOR.PATCH-PRERELEASE
@@ -3888,7 +3876,7 @@ Avoid planner throttling
 ## [0.9.9] Codename "Sandanme"
 
 - improvement: Unique tabs URLS
-  - Each SalesTim tab now has it's own unique url
+  - Each nBold tab now has it's own unique url
     - /forms?stEntityId=io.salestim.automation.home
     - /forms?stEntityId=io.salestim.automation.approval
     - /forms?stEntityId=io.salestim.automation.catalog
@@ -4019,9 +4007,9 @@ Avoid planner throttling
   - tid: Azure AD Tenant ID
   - upn: Azure AD User UPN
   - uid: Azure AD User ID
-  - stuid: SalesTim User ID
-  - sttid: SalesTim Customer ID
-  - stlic: SalesTim License
+  - stuid: nBold User ID
+  - sttid: nBold Customer ID
+  - stlic: nBold License
   - environment: Last Visited Environment
   - version: Last Visited Version
 - fixed: Salestim Admin shown to regular users [#113](https://github.com/nboldhq/app-platform/issues/113)
@@ -4036,7 +4024,7 @@ Avoid planner throttling
   - Better error handling with end-user message
 - improvement: Better exception handling
   - Visibility of the underlying exception and technical infos
-  - Direct talk to SalesTim support through Intercom
+  - Direct talk to nBold support through Intercom
 - improvement: Empty / invalid email nickname used for team provisionning
   - Better error handling + End-user message
   - The error is logged into the related request
@@ -4058,7 +4046,7 @@ Avoid planner throttling
 - feat: Check requirements for the service account
   - A new "Check Requirements" button is available from the "⚙ Settings \ Service Account" tab
 - feat: Logout button from the "⚙ Settings" tabs
-  - N.B: Kills the SalesTim session, not AAD session used by Microsoft 365
+  - N.B: Kills the nBold session, not AAD session used by Microsoft 365
 - fixed: the "My Requests" menu sometimes doesn't work properly
 - improvement: No more popin flickering when loading the "🏠 Home" tab
 - improvement: User are notified when trying to enable a template without associated team to clone

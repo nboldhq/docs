@@ -31,6 +31,12 @@ After every push:
 1. A check is done from the public website (from https://docs.nbold.co) to identify broken links using the [Broken Link Checker](https://www.npmjs.com/package/broken-link-checker) module.
 2. The result of this check is published as a new issue, automatically pinned to the top of the [Issues page](https://github.com/nboldhq/docs/issues).
 
+## 🆘 Support
+See [SUPPORT](./SUPPORT.md)
+
+## 📝 Contributing
+See [CONTRIBUTING](./CONTRIBUTING.md)
+
 ## 📃 Change Log
 See [CHANGELOG](./CHANGELOG.md).
 
