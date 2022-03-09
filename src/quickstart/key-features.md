@@ -23,11 +23,11 @@ Build any Microsoft Teams Templates, to address any collaboration need in the or
 
 * List of Channels
 * List of Tabs
-* Files and Folders
+* [Files and Folders](https://docs.nbold.co/collaboration-templates/files-and-folders.html)
 * Pre-configured Website Tabs
-* Pre-configured Planner with Tasks, Buckets, Description, Buckets and Labels
-* Pre-configured Forms Tab
-* Pre-configured SharePoint Online Documentation Library
+* Pre-configured [Planner](https://docs.nbold.co/collaboration-templates/microsoft-planner.html) with Tasks, Buckets, Description, Buckets and Labels
+* Pre-configured [Forms](https://docs.nbold.co/collaboration-templates/microsoft-forms.html) Tab
+* Pre-configured [SharePoint Online Documentation Library](https://docs.nbold.co/collaboration-templates/sharepoint-library.html)
 
 ## Collaboration Governance rule
 
@@ -72,10 +72,10 @@ Get an overview of all the Teams you belong to, search for the good one with a s
 
 ## Teams Approval
 
-* Approval Dashboard: see the requests that are Pending, Approved or Rejected
+* [Approval](https://docs.nbold.co/governance-policies/approval.html) Dashboard: see the requests that are Pending, Approved or Rejected
 * Request Review: update request information, approve or reject requests
 * Notification: email received by the approver to act, link to the teams created
 
 ## Compliance
 
-* Protect your data with the help of sensitivity labels
+* Protect your data with the help of [sensitivity labels](https://docs.nbold.co/governance-policies/security-policy.html)
