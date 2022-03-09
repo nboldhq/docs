@@ -12,10 +12,10 @@ In this article, we simply list the different features supported on Microsoft Te
 Microsoft Teams Templates Features:
 
 * Standard Channels Cloning
-* Private Channels Cloning
+* [Private Channels](https://docs.nbold.co/collaboration-templates/private-channels.html) Cloning
 * Tabs Cloning
 * [Files Tabs Cloning with Files and Folders in each channel](/collaboration-templates/files-and-folders.md) in standard channels
-* Planner Tabs with Buckets, Tasks, Description, Checklist and Label
+* [Planner ](https://docs.nbold.co/collaboration-templates/microsoft-planner.html)Tabs with Buckets, Tasks, Description, Checklist and Label
 * Website Tabs
 * [Forms Tabs](/collaboration-templates/microsoft-forms.md)
 * [Office Files Tabs](/collaboration-templates/office-and-pdf-documents.md) with the same configuration from one team to another
