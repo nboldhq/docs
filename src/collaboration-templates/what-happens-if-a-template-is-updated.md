@@ -23,14 +23,14 @@ Will change for the Teams created **in the future**:
 
 * Standard Channels Cloning
 * Tabs Cloning
-* Files Tabs Cloning with Files and Folders in each standard channel
-* Planner Tabs with Buckets, Tasks, Description, Checklist and Label
+* [Files Tabs](https://docs.nbold.co/collaboration-templates/files-and-folders.html) Cloning with Files and Folders in each standard channel
+* [Planner](https://docs.nbold.co/collaboration-templates/microsoft-planner.html) Tabs with Buckets, Tasks, Description, Checklist and Label
 * Website Tabs
-* Forms Tabs
-* Office Files Tabs
-* SharePoint Online Document Library
-* Naming Convention
-* Audience Targeting
+* [Forms Tabs](https://docs.nbold.co/collaboration-templates/microsoft-forms.html)
+* [Office Files Tabs](https://docs.nbold.co/collaboration-templates/office-and-pdf-documents.html)
+* [SharePoint Online Document Library](https://docs.nbold.co/collaboration-templates/sharepoint-library.html)
+* [Naming Convention](https://docs.nbold.co/governance-policies/naming-conventions.html)
+* [Audience Targeting](https://docs.nbold.co/governance-policies/audience-targeting.html)
 * Teams Creation Requester Membership Policy
-* Minimum Number of Owner and Members
-* Sensivity Label
+* [Minimum Number of Owner and Members](https://docs.nbold.co/governance-policies/mandatory-number-of-owners-and-members.html)
+* [Sensitivity Label](https://docs.nbold.co/governance-policies/sensitivity-labels.html)
