@@ -11,9 +11,17 @@ You may have already implemented sensitivity labels in a [Microsoft 365 Security
 
 So now we will show how you can apply them at the Collaboration Template level.
 
+***
+
+**TABLE OF CONTENTS**
+
+\[\[toc\]\]
+
+***
+
 ## How to restrict guest access to teams at a Template level?
 
-1. Make sure your IT department created **sensitivity labels** with the right configuration.
+#### 1. Make sure your IT department created sensitivity labels with the right configuration.
 
 ![](/media/screenshot-2022-01-27-at-10-17-53.png)
 
@@ -25,15 +33,15 @@ Define external sharing and user access settings.
 
 ![](/media/screenshot-2022-01-27-at-10-22-51.png)
 
-2\. Go to Microsoft Teams and log into your **nBold account**.
+#### 2. Go to Microsoft Teams and log into your **nBold account**.
 
-3\. Click on [**Create a Template**](/collaboration-templates/create-a-new-collaboration-template.md)**.**
+#### 3. Click on [**Create a Template**](/collaboration-templates/create-a-new-collaboration-template.md)**.**
 
-4\. Go to the `Compliance` tab and choose the relevant sensitivity label.
+#### 4. Go to the `Compliance` tab and choose the relevant sensitivity label.
 
 ![](/media/gif-restrict-guest-access.gif)
 
-5\. Create a **new team** **from this Template** and check out new features.
+#### 5. Create a **new team** **from this Template** and check out new features.
 
 So, with this sensitivity label applied, users won't be able to add externals to new teams created.
 
