@@ -19,13 +19,13 @@ There are some simple steps for that:
 
 **TABLE OF CONTENTS**
 
-[[toc]]
+\[\[toc\]\]
 
 ***
 
 ## **1. Create a team that will serve as the Original team for the template**
 
-* Create a team and call it the regular way "NAME OF THE USE CASE - Template" (Deal Room - Template; New Center - Template; Marketing Department - Template) with different channels, files and folders in Files tab, different Website tabs, Planner with predefined tasks, checklist, description, labels and buckets, etc.
+* Create a team and call it the regular way "NAME OF THE USE CASE - Template" (Deal Room - Template; New Center - Template; Marketing Department - Template) with different channels, files, and folders in Files tab, different Website tabs, Planner with predefined tasks, checklist, description, labels, and buckets, etc.
 * Add the nBold Service Account as the owner of the team
 
 ![](/media/team-creation.png)
