@@ -23,4 +23,8 @@ The "Security & Privacy" tab defines the main security and privacy policy of you
 
 ## Permanent Owners and Members
 
-[Go to the article](https://help.salestim.com/en/articles/4149874-permanent-owners-and-members-policy).
+[Go to the article](Permanent owners and members policy policy).
+
+## Mandatory Ownership and Membership
+
+[Go to the article](Mandatory number of owners and members).
