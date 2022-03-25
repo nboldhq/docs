@@ -15,7 +15,7 @@ So now we will show how you can apply them at the Collaboration Template level.
 
 **TABLE OF CONTENTS**
 
-\[\[toc\]\]
+[[toc]]
 
 ***
 
