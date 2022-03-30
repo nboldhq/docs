@@ -10,15 +10,15 @@ position: 9
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
-## 📚 Microsoft Teams Templates Catalog
+## 📚 Collaboration Templates Catalog
 
 ### View and manage all the Teams templates
 
-The "Catalog" gathers all the Templates defined for your organization. You can manage your Corporate Catalog of Microsoft Teams Template. These Templates enable you to ensure a strong Teamwork adoption and set up a differentiated Governance at the template level.
+The "Catalog" gathers all the Templates defined for your organization. You can manage your Corporate Catalog of Collaboration Templates. These Templates enable you to ensure a strong Teamwork adoption and set up a differentiated Governance at the template level.
 
 First, you'll find this tab with all the existing Templates for your organization:
 
