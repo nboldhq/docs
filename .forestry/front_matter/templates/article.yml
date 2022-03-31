@@ -38,6 +38,8 @@ fields:
     step: 1
 pages:
 - drafts/hello-world.md
+- src/administrator-guide/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
+- src/administrator-guide/delegate-template-catalog-administration.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/collaboration-templates/create-teams-only-through-microsoft-teams-templates-by-nbold.md
 - src/collaboration-templates/wiki-tabs.md
