@@ -47,6 +47,7 @@ pages:
 - src/governance-policies/security-policy.md
 - src/governance-policies/sensitivity-labels.md
 - src/governance-policies/serve-private-channels.md
+- src/introduction/welcome-to-nbold.md
 - src/quickstart/administrator-guide.md
 - src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
 - src/quickstart/nbold-at-a-glance.md
