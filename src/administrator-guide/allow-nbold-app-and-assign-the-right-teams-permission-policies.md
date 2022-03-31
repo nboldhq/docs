@@ -9,7 +9,7 @@ author: Kristina Konstantnyova
 
 ***
 
-**TABLE OF CONTENTS** \[\[toc\]\]
+**TABLE OF CONTENTS** [[toc]]
 
 ***
 
