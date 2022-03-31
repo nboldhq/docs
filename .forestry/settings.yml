@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: src/.vuepress/public/admin
 webhook_url: 
 sections:
+- type: directory
+  path: src/introduction
+  label: Introduction
+  create: documents
+  match: "**/*"
 - type: document
   path: src/README.md
   label: Homepage
@@ -15,8 +20,22 @@ sections:
   templates:
   - article
 - type: directory
+  path: src/administrator-guide
+  label: 'Administrator Guide '
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
   path: src/collaboration-templates
   label: Collaboration templates
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/governance-policies
+  label: Governance policies
   create: documents
   match: "**/*"
   templates:
@@ -41,13 +60,6 @@ sections:
 - type: directory
   path: src/solutions/marketing
   label: Solutions - Marketing
-  create: documents
-  match: "**/*"
-  templates:
-  - article
-- type: directory
-  path: src/governance-policies
-  label: Governance policies
   create: documents
   match: "**/*"
   templates:
