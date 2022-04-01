@@ -38,6 +38,7 @@ fields:
     step: 1
 pages:
 - drafts/hello-world.md
+- src/administrator-guide/administrator-guide.md
 - src/administrator-guide/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
 - src/administrator-guide/delegate-template-catalog-administration.md
 - src/administrator-guide/quick-steps-to-onboard-on-nbold.md
