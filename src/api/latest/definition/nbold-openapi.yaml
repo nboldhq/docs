@@ -19,6 +19,10 @@ servers:
     description: Production environment
 
 tags:
+  - name: Connected Apps
+    description: Apps connected to your collaboration processes
+    externalDocs:
+      url: https://docs.nbold.co/api/latest/reference/Apis/ConnectedAppsApi
   - name: Templates Catalog
     description: Your corporate catalog of teams templates and governance policies.
     externalDocs:
@@ -53,6 +57,51 @@ tags:
       url: https://docs.nbold.co/api/latest/reference/Apis/HooksApi
 
 paths:
+
+  /connected-apps/create-new-user:
+    post:
+      tags:
+        - Connected Apps
+      summary: Create a connected apps user
+      description: Create a connected apps user | Tier 2 | ROLES - AUTHORIZED_APP / INTEGRATION_MANAGER.
+      operationId: CreateNewConnectedAppsUser
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/ConnectedAppsApi.html#createnewconnectedappuser
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: NewConnectedAppUser.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TeamMembershipPayload"
+        required: true
+      responses:
+        "201":
+          description: Accepted - The response will also contain a Location header, which contains the location of the teamsAsyncOperation that was created to handle archiving of the team. Check the status of the archiving operation by making a GET request to this location.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TeamMember"
+          "400":
+          $ref: "#/components/responses/400"
+        "401":
+          $ref: "#/components/responses/401"
+        "402":
+          $ref: "#/components/responses/402"
+        "403":
+          $ref: "#/components/responses/403"
+        "404":
+          $ref: "#/components/responses/404"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+        "503":
+          $ref: "#/components/responses/503"
+        default:
+          $ref: "#/components/responses/500"
+
   /audittrails:
     get:
       tags:

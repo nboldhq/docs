@@ -220,7 +220,8 @@ module.exports = {
         // getSideBar('/hosting/references', 'References')
       ],
       '/': [
-        { title: 'Introduction', path: '/' },
+        // { title: 'Introduction', path: '/' },
+        getSideBar('/introduction', 'Introduction'),
         getSideBar('/quickstart', 'Quickstart'),
         getSideBar('/collaboration-templates', 'Collaboration templates'),
         getSideBar('/business-scenarios', 'Business scenarios'),

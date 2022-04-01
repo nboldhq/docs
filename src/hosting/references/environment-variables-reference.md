@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Tue, 08 Mar 2022 01:08:56 GMT*
+📆 *Generated: Tue, 22 Mar 2022 10:36:57 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -223,7 +223,7 @@ MAIL_ACTION_MSG_ORIGINATOR=
 # Webhooks advanced configuration
 
 # (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]".
-WEBHOOKS_USER_AGENT=nBold-Webhook/v4.17.0
+WEBHOOKS_USER_AGENT=nBold-Webhook/v4.18.0
 # (number) Interval in ms between two attempts. Defaults to "10000".
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to "2".
@@ -273,7 +273,7 @@ GITHUB_INTEGRATION_ENABLED=false
 # (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com".
 GITHUB_API_BASE_URL=https://api.github.com
 # (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]".
-GITHUB_USER_AGENT=nBold-GitHub/4.17.0
+GITHUB_USER_AGENT=nBold-GitHub/4.18.0
 # (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "".
 GITHUB_OWNER=
 # (string) GitHub repository where to create alert issues. Defaults to "".
