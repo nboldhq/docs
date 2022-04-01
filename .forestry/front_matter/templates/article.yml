@@ -53,7 +53,5 @@ pages:
 - src/introduction/key-feautures.md
 - src/introduction/nbold-at-a-glance.md
 - src/introduction/welcome-to-nbold.md
-- src/quickstart/administrator-guide.md
-- src/quickstart/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
 - src/quickstart/quick-steps-to-onboard.md
 - src/quickstart/setup-the-service-account.md
