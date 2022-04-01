@@ -2,7 +2,7 @@
 status: published
 tags: []
 author: Kristina Konstantynova
-position: 6
+position: 2
 
 ---
 # Set up the Home Page
