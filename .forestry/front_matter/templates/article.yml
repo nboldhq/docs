@@ -40,6 +40,7 @@ pages:
 - drafts/hello-world.md
 - src/administrator-guide/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
 - src/administrator-guide/delegate-template-catalog-administration.md
+- src/administrator-guide/quick-steps-to-onboard-on-nbold.md
 - src/administrator-guide/update-app-packages.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/collaboration-templates/create-teams-only-through-microsoft-teams-templates-by-nbold.md
