@@ -2,7 +2,7 @@
 tags: []
 author: Kristina Konstantynova
 status: published
-position: 4
+position: 1
 
 ---
 # Install nBold for Microsoft Teams
