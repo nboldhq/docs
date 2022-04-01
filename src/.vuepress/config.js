@@ -223,6 +223,7 @@ module.exports = {
         // { title: 'Introduction', path: '/' },
         getSideBar('/introduction', 'Introduction'),
         getSideBar('/quickstart', 'Quickstart'),
+        getSideBar('/administrator-guide', 'Administrator Guide'),
         getSideBar('/collaboration-templates', 'Collaboration templates'),
         getSideBar('/business-scenarios', 'Business scenarios'),
         getSideBar('/governance-policies', 'Governance policies'),
