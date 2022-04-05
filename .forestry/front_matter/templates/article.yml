@@ -52,7 +52,7 @@ pages:
 - src/governance-policies/security-policy.md
 - src/governance-policies/sensitivity-labels.md
 - src/governance-policies/serve-private-channels.md
-- src/introduction/key-feautures.md
+- src/introduction/key-features.md
 - src/introduction/nbold-at-a-glance.md
 - src/introduction/welcome-to-nbold.md
 - src/quickstart/create-a-new-collaboration-template.md
