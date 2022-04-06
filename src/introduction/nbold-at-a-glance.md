@@ -9,18 +9,18 @@ author: Kristina Konstantnyova
 
 ***
 
-**TABLE OF CONTENTS** [[toc]]
+**TABLE OF CONTENTS** \[\[toc\]\]
 
 ***
 
-nBold helps every organization to improve their Collaborative Processes in making it easy to build Microsoft Teams Templates and automate it. You can build a template for any Collaborative purpose:
+nBold helps every organization to improve their Collaborative Processes in making it easy to build Collaboration Templates and automate it. You can build a template for any Collaborative purpose:
 
 * Repetitive processes such as Proposal Management, Crisis Management, Recruitment, etc.
 * Organization Collaboration such as collaboration at a Department level, Region, etc.
 
 nBold is built with a love for IT. It automates Microsoft Teams provisioning with many Governance Rules, so that you can scale in enterprise organizations.
 
-![](https://salestim.intercom-attachments-1.com/i/o/163970142/6c6ce79227d8934e8eeb81c9/automationConcept.png)
+![](/media/screenshot-2022-04-06-at-12-38-50.png)
 
 ## Collaboration Templates
 
