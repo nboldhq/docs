@@ -9,7 +9,7 @@ author: Kristina Konstantnyova
 
 ***
 
-**TABLE OF CONTENTS** [[toc]]
+**TABLE OF CONTENTS** \[\[toc\]\]
 
 ***
 
@@ -20,7 +20,7 @@ nBold helps every organization to improve their Collaborative Processes in makin
 
 nBold is built with a love for IT. It automates Microsoft Teams provisioning with many Governance Rules, so that you can scale in enterprise organizations.
 
-![](/media/nbold-picture.png)
+![](/media/microsoftteams-image-7.png)
 
 ## Collaboration Templates
 
