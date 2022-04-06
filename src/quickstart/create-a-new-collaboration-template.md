@@ -11,7 +11,7 @@ You want to create a Microsoft Teams Template to support any Collaborative Proce
 
 ***
 
-**TABLE OF CONTENTS** \[\[toc\]\]
+**TABLE OF CONTENTS** [[toc]]
 
 ***
 
