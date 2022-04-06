@@ -11,7 +11,7 @@ You want to create a Microsoft Teams Template to support any Collaborative Proce
 
 ***
 
-**TABLE OF CONTENTS** [[toc]]
+**TABLE OF CONTENTS** \[\[toc\]\]
 
 ***
 
@@ -29,7 +29,9 @@ You want to create a Microsoft Teams Template to support any Collaborative Proce
 ::: tip
 
 On Windows 10 or Windows 11, launch the emoji keyboard clicking `Win + ;` and pimp the channel name with emoji 💪💯👌😍.  
-For Mac devices, type `Control + Command + Space`. :::
+For Mac devices, type `Control + Command + Space`. 
+
+:::
 
 ![](https://downloads.intercomcdn.com/i/o/462347098/2f4dddfcdc1c025f4f781728/Screenshot+2022-02-09+at+16.54.12.png)
 
