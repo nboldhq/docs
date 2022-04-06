@@ -20,7 +20,7 @@ nBold helps every organization to improve their Collaborative Processes in makin
 
 nBold is built with a love for IT. It automates Microsoft Teams provisioning with many Governance Rules, so that you can scale in enterprise organizations.
 
-![](/media/screenshot-2022-04-06-at-12-38-50.png)
+![](/media/nbold-picture.png)
 
 ## Collaboration Templates
 
