@@ -1,6 +1,10 @@
 Apis/ApprovalsApi.md
 Apis/AuditTrailsApi.md
 Apis/JobsApi.md
+Apis/MetadataApi.md
+Apis/MicrosoftTeamsChannelsApi.md
+Apis/MicrosoftTeamsMessagesApi.md
+Apis/MicrosoftTeamsTeamsApi.md
 Apis/SensitivityLabelsApi.md
 Apis/TeamsApi.md
 Apis/TemplatesCatalogApi.md
@@ -35,6 +39,7 @@ Models/Job.md
 Models/Label.md
 Models/Labels.md
 Models/MemberUserIdentifier.md
+Models/MetadataQueryResult.md
 Models/OwnerUserIdentifier.md
 Models/PermanentMember.md
 Models/RejectedApprovalResponsePayload.md

@@ -165,10 +165,18 @@
 
 <script>
   export default {
-    mounted() {
+    mounted () {
       console.debug("API Explorer Mounted");
       var pOpenApiFileUrl =
         "https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/nbold-openapi.yaml";
+
+      if (
+        window.location.host.indexOf("localhost", 0) > -1 ||
+        window.location.host.indexOf("gme-dev", 0) > -1 ||
+        devmode === "true"
+      ) {
+        pOpenApiFileUrl="/nbold-openapi.yaml"
+      }
 
       var s = document.createElement("script");
       s.setAttribute("src", "/js/authentication.bundle.js");
@@ -188,7 +196,7 @@
       //   }
       // };
 
-      function loadUi(url) {
+      function loadUi (url) {
         // Build a system
         const ui = SwaggerUIBundle({
           url: url,
@@ -223,7 +231,7 @@
                         const devmode = urlParams.get("dev");
                         if (
                           window.location.host.indexOf("localhost", 0) > -1 ||
-                          window.location.host.indexOf("devgme", 0) > -1 ||
+                          window.location.host.indexOf("gme-dev", 0) > -1 ||
                           devmode === "true"
                         ) {
                           // change spec.servers here to add new entry, use concat to put it as the first & default one

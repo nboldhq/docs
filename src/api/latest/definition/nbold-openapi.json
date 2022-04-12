@@ -23,6 +23,13 @@
   ],
   "tags": [
     {
+      "name": "Metadata",
+      "description": "Metadata for collaboration processes artefacts",
+      "externalDocs": {
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/MetadataApi"
+      }
+    },
+    {
       "name": "Templates Catalog",
       "description": "Your corporate catalog of teams templates and governance policies.",
       "externalDocs": {
@@ -44,8 +51,15 @@
       }
     },
     {
-      "name": "Teams",
+      "name": "Microsoft Teams teams",
       "description": "Teams from your Microsoft Teams environment.",
+      "externalDocs": {
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi"
+      }
+    },
+    {
+      "name": "Microsoft Teams channels",
+      "description": "Microsoft Teams channels.",
       "externalDocs": {
         "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi"
       }
@@ -792,6 +806,652 @@
           },
           "default": {
             "$ref": "#/components/responses/500"
+          }
+        }
+      }
+    },
+    "/teams/{teamId}/metadata/{namespace}": {
+      "get": {
+        "tags": [
+          "Microsoft Teams teams",
+          "Metadata"
+        ],
+        "summary": "Get a team metadata",
+        "description": "Get metadata for a team for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "GetTeamNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#namespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a Team object for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Microsoft Teams teams",
+          "Metadata"
+        ],
+        "summary": "Set team metadata",
+        "description": "Set team metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "SetTeamNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setteamnamespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Supply a JSON representation of your metadata.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a Team object for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Microsoft Teams teams",
+          "Metadata"
+        ],
+        "summary": "Update a team metadata",
+        "description": "Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "UpdateTeamNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updateteamnamespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Supply a JSON representation of your metadata.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a Team object for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/teams/{teamId}/channels/{channelId}/metadata/{namespace}": {
+      "get": {
+        "tags": [
+          "Microsoft Teams channels",
+          "Metadata"
+        ],
+        "summary": "Get a channel metadata",
+        "description": "Get metadata for a channel for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "GetTeamsChannelNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteamschannelnamespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "channelId",
+            "in": "path",
+            "description": "The channel ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a Microsoft Teams channel object for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Microsoft Teams channels",
+          "Metadata"
+        ],
+        "summary": "Set channel metadata",
+        "description": "Set channel metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "SetMicrosoftTeamsChannelNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamschannelnamespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "channelId",
+            "in": "path",
+            "description": "The channel ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Supply a JSON representation of your metadata.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a channel object for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Microsoft Teams channels",
+          "Metadata"
+        ],
+        "summary": "Update a channel metadata",
+        "description": "Update a channel metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "UpdateMicrosoftTeamsChannelNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamschannelnamespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "channelId",
+            "in": "path",
+            "description": "The channel ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Supply a JSON representation of your metadata.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a channel object for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace}": {
+      "get": {
+        "tags": [
+          "Microsoft Teams messages",
+          "Metadata"
+        ],
+        "summary": "Get a message metadata",
+        "description": "Get metadata for a message for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "GetMicrosoftTeamsMessageNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getmicrosoftteamsmessagenamespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "channelId",
+            "in": "path",
+            "description": "The channel ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "message_id",
+            "in": "path",
+            "description": "The message ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a Microsoft Teams message for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Microsoft Teams messages",
+          "Metadata"
+        ],
+        "summary": "Set message metadata",
+        "description": "Set message metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "SetMicrosoftTeamsMessageNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamsmessagenamespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "channelId",
+            "in": "path",
+            "description": "The channel ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "message_id",
+            "in": "path",
+            "description": "The message ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Supply a JSON representation of your metadata.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a message object for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Microsoft Teams messages",
+          "Metadata"
+        ],
+        "summary": "Update a message metadata",
+        "description": "Update a message metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "UpdateMicrosoftTeamsMessageNamespaceMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamsmessagenamespacemetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "channelId",
+            "in": "path",
+            "description": "The channel ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "message_id",
+            "in": "path",
+            "description": "The message ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Supply a JSON representation of your metadata.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK - Returns the metadata of a message object for a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metadata"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/metadata/{namespace}/query": {
+      "post": {
+        "tags": [
+          "Metadata"
+        ],
+        "summary": "Query metadata",
+        "description": "Query metadata for a specific namespace. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.",
+        "operationId": "QueryMetadata",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/MetadataApi.html#querymetadata"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "namespace",
+            "in": "path",
+            "description": "The metadata namespace.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Supply a JSON representation of your query.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK - Returns a list of artefacts from a query on their metadata from a specific namespace.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetadataQueryResults"
+                }
+              }
+            }
           }
         }
       }
@@ -2351,6 +3011,34 @@
                 "type": "string"
               }
             }
+          }
+        }
+      },
+      "Metadata": {
+        "title": "Metadata",
+        "description": "Metadata for a collaboration process artefact.",
+        "type": "object"
+      },
+      "MetadataQueryResults": {
+        "title": "Metadata query results",
+        "description": "Results of a metadata query.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MetadataQueryResult"
+        }
+      },
+      "MetadataQueryResult": {
+        "title": "Metadata query result",
+        "description": "ResultsMetadata for a collaboration process artefact.",
+        "type": "object",
+        "properties": {
+          "artefact_type": {
+            "description": "Artefact type (Among \"MicrosoftTeamsTeam\", \"MicrosoftTeamsChannel\", \"MicrosoftTeamsConversation\")",
+            "type": "string"
+          },
+          "artefact_id": {
+            "description": "Artefact ID",
+            "type": "string"
           }
         }
       },

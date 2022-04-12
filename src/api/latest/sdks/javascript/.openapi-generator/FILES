@@ -34,6 +34,11 @@ docs/JobsApi.md
 docs/Label.md
 docs/Labels.md
 docs/MemberUserIdentifier.md
+docs/MetadataApi.md
+docs/MetadataQueryResult.md
+docs/MicrosoftTeamsChannelsApi.md
+docs/MicrosoftTeamsMessagesApi.md
+docs/MicrosoftTeamsTeamsApi.md
 docs/OwnerUserIdentifier.md
 docs/PermanentMember.md
 docs/RejectedApprovalResponsePayload.md
@@ -66,6 +71,10 @@ src/ApiClient.js
 src/api/ApprovalsApi.js
 src/api/AuditTrailsApi.js
 src/api/JobsApi.js
+src/api/MetadataApi.js
+src/api/MicrosoftTeamsChannelsApi.js
+src/api/MicrosoftTeamsMessagesApi.js
+src/api/MicrosoftTeamsTeamsApi.js
 src/api/SensitivityLabelsApi.js
 src/api/TeamsApi.js
 src/api/TemplatesCatalogApi.js
@@ -101,6 +110,7 @@ src/model/Job.js
 src/model/Label.js
 src/model/Labels.js
 src/model/MemberUserIdentifier.js
+src/model/MetadataQueryResult.js
 src/model/OwnerUserIdentifier.js
 src/model/PermanentMember.js
 src/model/RejectedApprovalResponsePayload.js
@@ -121,3 +131,8 @@ src/model/TeamProvisioningRequestTeamMembership.js
 src/model/TeamProvisioningRequestTemplate.js
 src/model/User1.js
 src/model/Users.js
+test/api/MetadataApi.spec.js
+test/api/MicrosoftTeamsChannelsApi.spec.js
+test/api/MicrosoftTeamsMessagesApi.spec.js
+test/api/MicrosoftTeamsTeamsApi.spec.js
+test/model/MetadataQueryResult.spec.js

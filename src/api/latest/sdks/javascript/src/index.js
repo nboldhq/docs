@@ -42,6 +42,7 @@ import Job from './model/Job';
 import Label from './model/Label';
 import Labels from './model/Labels';
 import MemberUserIdentifier from './model/MemberUserIdentifier';
+import MetadataQueryResult from './model/MetadataQueryResult';
 import OwnerUserIdentifier from './model/OwnerUserIdentifier';
 import PermanentMember from './model/PermanentMember';
 import RejectedApprovalResponsePayload from './model/RejectedApprovalResponsePayload';
@@ -65,6 +66,10 @@ import Users from './model/Users';
 import ApprovalsApi from './api/ApprovalsApi';
 import AuditTrailsApi from './api/AuditTrailsApi';
 import JobsApi from './api/JobsApi';
+import MetadataApi from './api/MetadataApi';
+import MicrosoftTeamsChannelsApi from './api/MicrosoftTeamsChannelsApi';
+import MicrosoftTeamsMessagesApi from './api/MicrosoftTeamsMessagesApi';
+import MicrosoftTeamsTeamsApi from './api/MicrosoftTeamsTeamsApi';
 import SensitivityLabelsApi from './api/SensitivityLabelsApi';
 import TeamsApi from './api/TeamsApi';
 import TemplatesCatalogApi from './api/TemplatesCatalogApi';
@@ -285,6 +290,12 @@ export {
     MemberUserIdentifier,
 
     /**
+     * The MetadataQueryResult model constructor.
+     * @property {module:model/MetadataQueryResult}
+     */
+    MetadataQueryResult,
+
+    /**
      * The OwnerUserIdentifier model constructor.
      * @property {module:model/OwnerUserIdentifier}
      */
@@ -421,6 +432,30 @@ export {
     * @property {module:api/JobsApi}
     */
     JobsApi,
+
+    /**
+    * The MetadataApi service constructor.
+    * @property {module:api/MetadataApi}
+    */
+    MetadataApi,
+
+    /**
+    * The MicrosoftTeamsChannelsApi service constructor.
+    * @property {module:api/MicrosoftTeamsChannelsApi}
+    */
+    MicrosoftTeamsChannelsApi,
+
+    /**
+    * The MicrosoftTeamsMessagesApi service constructor.
+    * @property {module:api/MicrosoftTeamsMessagesApi}
+    */
+    MicrosoftTeamsMessagesApi,
+
+    /**
+    * The MicrosoftTeamsTeamsApi service constructor.
+    * @property {module:api/MicrosoftTeamsTeamsApi}
+    */
+    MicrosoftTeamsTeamsApi,
 
     /**
     * The SensitivityLabelsApi service constructor.
