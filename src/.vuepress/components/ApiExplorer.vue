@@ -170,12 +170,13 @@
       var pOpenApiFileUrl =
         "https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/nbold-openapi.yaml";
 
+      const devmode = urlParams.get("dev");
       if (
         window.location.host.indexOf("localhost", 0) > -1 ||
         window.location.host.indexOf("gme-dev", 0) > -1 ||
         devmode === "true"
       ) {
-        pOpenApiFileUrl="/nbold-openapi.yaml"
+        pOpenApiFileUrl = "/nbold-openapi.yaml"
       }
 
       var s = document.createElement("script");
