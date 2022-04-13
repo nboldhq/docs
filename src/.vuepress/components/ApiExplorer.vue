@@ -170,6 +170,9 @@
       var pOpenApiFileUrl =
         "https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/nbold-openapi.yaml";
 
+      const urlParams = new URLSearchParams(
+        window.location.search
+      );
       const devmode = urlParams.get("dev");
       if (
         window.location.host.indexOf("localhost", 0) > -1 ||
