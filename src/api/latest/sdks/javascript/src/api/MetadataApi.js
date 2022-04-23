@@ -383,7 +383,7 @@ export default class MetadataApi {
 
     /**
      * Set team metadata
-     * Set team metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+     * Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
      * @param {String} teamId The team ID.
      * @param {String} namespace The metadata namespace.
      * @param {Object.<String, Object>} body Supply a JSON representation of your metadata.
@@ -421,7 +421,7 @@ export default class MetadataApi {
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
-        '/teams/{teamId}/metadata/{namespace}', 'POST',
+        '/teams/{teamId}/metadata/{namespace}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

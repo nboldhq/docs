@@ -18,7 +18,7 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**queryMetadata**](Apis/MetadataApi.md#querymetadata) | **POST** /metadata/{namespace}/query | Query metadata
 *MetadataApi* | [**setMicrosoftTeamsChannelNamespaceMetadata**](Apis/MetadataApi.md#setmicrosoftteamschannelnamespacemetadata) | **POST** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Set channel metadata
 *MetadataApi* | [**setMicrosoftTeamsMessageNamespaceMetadata**](Apis/MetadataApi.md#setmicrosoftteamsmessagenamespacemetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
-*MetadataApi* | [**setTeamNamespaceMetadata**](Apis/MetadataApi.md#setteamnamespacemetadata) | **POST** /teams/{teamId}/metadata/{namespace} | Set team metadata
+*MetadataApi* | [**setTeamNamespaceMetadata**](Apis/MetadataApi.md#setteamnamespacemetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 *MetadataApi* | [**updateMicrosoftTeamsChannelNamespaceMetadata**](Apis/MetadataApi.md#updatemicrosoftteamschannelnamespacemetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Update a channel metadata
 *MetadataApi* | [**updateMicrosoftTeamsMessageNamespaceMetadata**](Apis/MetadataApi.md#updatemicrosoftteamsmessagenamespacemetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
 *MetadataApi* | [**updateTeamNamespaceMetadata**](Apis/MetadataApi.md#updateteamnamespacemetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
@@ -29,7 +29,7 @@ Class | Method | HTTP request | Description
 *MicrosoftTeamsMessagesApi* | [**setMicrosoftTeamsMessageNamespaceMetadata**](Apis/MicrosoftTeamsMessagesApi.md#setmicrosoftteamsmessagenamespacemetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
 *MicrosoftTeamsMessagesApi* | [**updateMicrosoftTeamsMessageNamespaceMetadata**](Apis/MicrosoftTeamsMessagesApi.md#updatemicrosoftteamsmessagenamespacemetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
 *MicrosoftTeamsTeamsApi* | [**getTeamNamespaceMetadata**](Apis/MicrosoftTeamsTeamsApi.md#getteamnamespacemetadata) | **GET** /teams/{teamId}/metadata/{namespace} | Get a team metadata
-*MicrosoftTeamsTeamsApi* | [**setTeamNamespaceMetadata**](Apis/MicrosoftTeamsTeamsApi.md#setteamnamespacemetadata) | **POST** /teams/{teamId}/metadata/{namespace} | Set team metadata
+*MicrosoftTeamsTeamsApi* | [**setTeamNamespaceMetadata**](Apis/MicrosoftTeamsTeamsApi.md#setteamnamespacemetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 *MicrosoftTeamsTeamsApi* | [**updateTeamNamespaceMetadata**](Apis/MicrosoftTeamsTeamsApi.md#updateteamnamespacemetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
 *SensitivityLabelsApi* | [**getMyLabels**](Apis/SensitivityLabelsApi.md#getmylabels) | **GET** /me/labels | Get my sensitivity labels
 *TeamsApi* | [**addTeamMember**](Apis/TeamsApi.md#addteammember) | **POST** /teams/{teamId}/members | Add a team member

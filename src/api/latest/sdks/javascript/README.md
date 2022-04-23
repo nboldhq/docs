@@ -140,7 +140,7 @@ Class | Method | HTTP request | Description
 *NBoldApi.MetadataApi* | [**queryMetadata**](docs/MetadataApi.md#queryMetadata) | **POST** /metadata/{namespace}/query | Query metadata
 *NBoldApi.MetadataApi* | [**setMicrosoftTeamsChannelNamespaceMetadata**](docs/MetadataApi.md#setMicrosoftTeamsChannelNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Set channel metadata
 *NBoldApi.MetadataApi* | [**setMicrosoftTeamsMessageNamespaceMetadata**](docs/MetadataApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
-*NBoldApi.MetadataApi* | [**setTeamNamespaceMetadata**](docs/MetadataApi.md#setTeamNamespaceMetadata) | **POST** /teams/{teamId}/metadata/{namespace} | Set team metadata
+*NBoldApi.MetadataApi* | [**setTeamNamespaceMetadata**](docs/MetadataApi.md#setTeamNamespaceMetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 *NBoldApi.MetadataApi* | [**updateMicrosoftTeamsChannelNamespaceMetadata**](docs/MetadataApi.md#updateMicrosoftTeamsChannelNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Update a channel metadata
 *NBoldApi.MetadataApi* | [**updateMicrosoftTeamsMessageNamespaceMetadata**](docs/MetadataApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
 *NBoldApi.MetadataApi* | [**updateTeamNamespaceMetadata**](docs/MetadataApi.md#updateTeamNamespaceMetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
@@ -151,7 +151,7 @@ Class | Method | HTTP request | Description
 *NBoldApi.MicrosoftTeamsMessagesApi* | [**setMicrosoftTeamsMessageNamespaceMetadata**](docs/MicrosoftTeamsMessagesApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
 *NBoldApi.MicrosoftTeamsMessagesApi* | [**updateMicrosoftTeamsMessageNamespaceMetadata**](docs/MicrosoftTeamsMessagesApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
 *NBoldApi.MicrosoftTeamsTeamsApi* | [**getTeamNamespaceMetadata**](docs/MicrosoftTeamsTeamsApi.md#getTeamNamespaceMetadata) | **GET** /teams/{teamId}/metadata/{namespace} | Get a team metadata
-*NBoldApi.MicrosoftTeamsTeamsApi* | [**setTeamNamespaceMetadata**](docs/MicrosoftTeamsTeamsApi.md#setTeamNamespaceMetadata) | **POST** /teams/{teamId}/metadata/{namespace} | Set team metadata
+*NBoldApi.MicrosoftTeamsTeamsApi* | [**setTeamNamespaceMetadata**](docs/MicrosoftTeamsTeamsApi.md#setTeamNamespaceMetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 *NBoldApi.MicrosoftTeamsTeamsApi* | [**updateTeamNamespaceMetadata**](docs/MicrosoftTeamsTeamsApi.md#updateTeamNamespaceMetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
 *NBoldApi.SensitivityLabelsApi* | [**getMyLabels**](docs/SensitivityLabelsApi.md#getMyLabels) | **GET** /me/labels | Get my sensitivity labels
 *NBoldApi.TeamsApi* | [**addTeamMember**](docs/TeamsApi.md#addTeamMember) | **POST** /teams/{teamId}/members | Add a team member

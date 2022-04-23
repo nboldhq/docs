@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**queryMetadata**](MetadataApi.md#queryMetadata) | **POST** /metadata/{namespace}/query | Query metadata
 [**setMicrosoftTeamsChannelNamespaceMetadata**](MetadataApi.md#setMicrosoftTeamsChannelNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Set channel metadata
 [**setMicrosoftTeamsMessageNamespaceMetadata**](MetadataApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
-[**setTeamNamespaceMetadata**](MetadataApi.md#setTeamNamespaceMetadata) | **POST** /teams/{teamId}/metadata/{namespace} | Set team metadata
+[**setTeamNamespaceMetadata**](MetadataApi.md#setTeamNamespaceMetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 [**updateMicrosoftTeamsChannelNamespaceMetadata**](MetadataApi.md#updateMicrosoftTeamsChannelNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Update a channel metadata
 [**updateMicrosoftTeamsMessageNamespaceMetadata**](MetadataApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
 [**updateTeamNamespaceMetadata**](MetadataApi.md#updateTeamNamespaceMetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 Set team metadata
 
-    Set team metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+    Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
 
 ### Parameters
 

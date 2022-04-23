@@ -560,12 +560,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Metadata"
-    post:
+    put:
       tags:
         - Microsoft Teams teams
         - Metadata
       summary: Set team metadata
-      description: Set team metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      description: Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
       operationId: SetTeamNamespaceMetadata
       externalDocs:
         url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setteamnamespacemetadata

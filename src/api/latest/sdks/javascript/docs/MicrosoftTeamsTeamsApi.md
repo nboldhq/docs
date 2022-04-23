@@ -5,7 +5,7 @@ All URIs are relative to *https://api.salestim.io/api/v1.0*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getTeamNamespaceMetadata**](MicrosoftTeamsTeamsApi.md#getTeamNamespaceMetadata) | **GET** /teams/{teamId}/metadata/{namespace} | Get a team metadata
-[**setTeamNamespaceMetadata**](MicrosoftTeamsTeamsApi.md#setTeamNamespaceMetadata) | **POST** /teams/{teamId}/metadata/{namespace} | Set team metadata
+[**setTeamNamespaceMetadata**](MicrosoftTeamsTeamsApi.md#setTeamNamespaceMetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 [**updateTeamNamespaceMetadata**](MicrosoftTeamsTeamsApi.md#updateTeamNamespaceMetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
 
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 Set team metadata
 
-Set team metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
 
 ### Example
 
