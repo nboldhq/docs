@@ -131,8 +131,3 @@ src/model/TeamProvisioningRequestTeamMembership.js
 src/model/TeamProvisioningRequestTemplate.js
 src/model/User1.js
 src/model/Users.js
-test/api/MetadataApi.spec.js
-test/api/MicrosoftTeamsChannelsApi.spec.js
-test/api/MicrosoftTeamsMessagesApi.spec.js
-test/api/MicrosoftTeamsTeamsApi.spec.js
-test/model/MetadataQueryResult.spec.js

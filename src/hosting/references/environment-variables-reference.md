@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Tue, 12 Apr 2022 20:53:33 GMT*
+📆 *Generated: Fri, 22 Apr 2022 00:36:06 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -43,12 +43,12 @@ DB_DATA_DIALECT_OPTIONS={}
 DB_DATA_HOST=localhost
 # (number) Database server port. Defaults to "5432".
 DB_DATA_PORT=5432
-# (string) Database user name. Defaults to "st_data_user".
-DB_DATA_USERNAME=st_data_user
-# (string) Database password. Defaults to "st_data_password".
-DB_DATA_PASSWORD=st_data_password
-# (string) Database name. Defaults to "st_data_db".
-DB_DATA_DATABASE_NAME=st_data_db
+# (string) Database user name. Defaults to "nb_user".
+DB_DATA_USERNAME=nb_user
+# (string) Database password. Defaults to "nb_password".
+DB_DATA_PASSWORD=nb_password
+# (string) Database name. Defaults to "nb_data_db".
+DB_DATA_DATABASE_NAME=nb_data_db
 # (boolean) Enable database advanced logging. Defaults to "false".
 DB_DATA_LOGGING=false
 
@@ -160,6 +160,8 @@ EVENTSCOLLECTOR_TRACK_METHOD=POST
 DB_EVENTS_CLIENT=postgres
 # (string) Database engine specific dialect options as a stringified json. Defaults to "{}".
 DB_EVENTS_DIALECT_OPTIONS={}
+# (string) Database engine SSL mode among "disable", "allow", "prefer", "require". Defaults to "disable".
+DB_EVENTS_SSL_MODE=disable
 # (string) Database server host. Defaults to "localhost".
 DB_EVENTS_HOST=localhost
 # (number) Database server port. Defaults to "5432".

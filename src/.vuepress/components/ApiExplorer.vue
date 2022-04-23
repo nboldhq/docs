@@ -166,8 +166,7 @@
 <script>
   export default {
     mounted () {
-      console.debug("API Explorer Mounted");
-      var pOpenApiFileUrl =
+      let pOpenApiFileUrl =
         "https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/nbold-openapi.yaml";
 
       const urlParams = new URLSearchParams(
@@ -179,13 +178,13 @@
         window.location.host.indexOf("gme-dev", 0) > -1 ||
         devmode === "true"
       ) {
-        pOpenApiFileUrl = "/nbold-openapi.yaml"
+        pOpenApiFileUrl = "/api/latest/definition/nbold-openapi.yaml"
       }
 
-      var s = document.createElement("script");
+      const s = document.createElement("script");
       s.setAttribute("src", "/js/authentication.bundle.js");
       s.onload = function () {
-        var t = document.createElement("script");
+        const t = document.createElement("script");
         t.setAttribute("src", "/js/swagger-viewer.bundle.js");
         t.onload = function () {
           loadUi(pOpenApiFileUrl);
@@ -193,12 +192,6 @@
         document.head.appendChild(t);
       };
       document.head.appendChild(s);
-
-      // window.onload = function () {
-      //   if (!window.ui) {
-      //     loadUi(pOpenApiFileUrl);
-      //   }
-      // };
 
       function loadUi (url) {
         // Build a system
@@ -241,12 +234,12 @@
                           // change spec.servers here to add new entry, use concat to put it as the first & default one
                           spec.servers = [
                             {
-                              url: "https://gme-dev-api.ngrok.io/api/v1.0",
+                              url: "https://gme-dev-app.ngrok.io/api/v1.0",
                               description: "Development Environment",
                             },
                             {
-                              url: "https://apippr.salestim.io/api/v1.0",
-                              description: "Pre-Production Environment",
+                              url: "https://int.salestim.io/api/v1.0",
+                              description: "Integration Environment",
                             },
                           ].concat(spec.servers || []);
                           // Show server list

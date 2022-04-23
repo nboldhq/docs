@@ -18,6 +18,21 @@
       "runtimeArgs": [
         "--nolazy"
       ]
+    },
+    {
+      "name": "Debug Gulp Build",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+      "stopOnEntry": false,
+      "console": "integratedTerminal",
+      "args": [
+        "build"
+      ],
+      "cwd": "${workspaceRoot}",
+      "runtimeArgs": [
+        "--nolazy"
+      ]
     }
   ]
 }

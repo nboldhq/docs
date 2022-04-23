@@ -14,7 +14,7 @@ const SRC_DIRECTORY = `${ROOT_DIRECTORY}/src`
 const PUBLIC_DIRECTORY = `${SRC_DIRECTORY}/.vuepress/public`
 const JS_DIRECTORY = `${PUBLIC_DIRECTORY}/js`
 const CSS_DIRECTORY = `${PUBLIC_DIRECTORY}/css`
-const API_DEFINITION_DIRECTORY = `${SRC_DIRECTORY}/api/latest/definition`
+const API_DEFINITION_DIRECTORY = `${PUBLIC_DIRECTORY}/api/latest/definition`
 const TRUST_CENTER_DIRECTORY = `${SRC_DIRECTORY}/trust-center`
 const REFERENCES_DIRECTORY = `${SRC_DIRECTORY}/hosting/references`
 // #endregion DECLARATIONS

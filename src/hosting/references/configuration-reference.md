@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Tue, 12 Apr 2022 20:53:33 GMT*
+📆 *Generated: Fri, 22 Apr 2022 00:36:06 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -48,9 +48,9 @@ To help you get started, you can also download our [.env file template](/hosting
 | `DB_DATA_DIALECT_OPTIONS` | Optional ☑️ | (string) Database engine specific dialect options as a stringified json. Defaults to "{}". |
 | `DB_DATA_HOST` | Optional ☑️ | (string) Database server host. Defaults to "localhost". |
 | `DB_DATA_PORT` | Optional ☑️ | (number) Database server port. Defaults to "5432". |
-| `DB_DATA_USERNAME` | Optional ☑️ | (string) Database user name. Defaults to "st_data_user". |
-| `DB_DATA_PASSWORD` | Optional ☑️ | (string) Database password. Defaults to "st_data_password". |
-| `DB_DATA_DATABASE_NAME` | Optional ☑️ | (string) Database name. Defaults to "st_data_db". |
+| `DB_DATA_USERNAME` | Optional ☑️ | (string) Database user name. Defaults to "nb_user". |
+| `DB_DATA_PASSWORD` | Optional ☑️ | (string) Database password. Defaults to "nb_password". |
+| `DB_DATA_DATABASE_NAME` | Optional ☑️ | (string) Database name. Defaults to "nb_data_db". |
 | `DB_DATA_LOGGING` | Optional ☑️ | (boolean) Enable database advanced logging. Defaults to "false". |
 
 
@@ -163,6 +163,7 @@ To help you get started, you can also download our [.env file template](/hosting
 |:---------------------|:-------|:------------|
 | `DB_EVENTS_CLIENT` | Optional ☑️ | (string) Database engine client among "mysql" / "mariadb" / "postgres" / "mssql" (Currently only supports "postgres"). Defaults to "postgres". |
 | `DB_EVENTS_DIALECT_OPTIONS` | Optional ☑️ | (string) Database engine specific dialect options as a stringified json. Defaults to "{}". |
+| `DB_EVENTS_SSL_MODE` | Optional ☑️ | (string) Database engine SSL mode among "disable", "allow", "prefer", "require". Defaults to "disable". |
 | `DB_EVENTS_HOST` | Optional ☑️ | (string) Database server host. Defaults to "localhost". |
 | `DB_EVENTS_PORT` | Optional ☑️ | (number) Database server port. Defaults to "5432". |
 | `DB_EVENTS_USERNAME` | Optional ☑️ | (string) Database user name. Defaults to "st_events_user". |
