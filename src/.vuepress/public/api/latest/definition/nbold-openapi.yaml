@@ -3,7 +3,7 @@ openapi: "3.0.3"
 info:
   title: nBold API
   description: >
-    Visit our [API documentation](https://docs.nbold.co/api/) for more information.
+    Visit our [API documentation](https://docs.nbold.co/api/get-started) for more information.
   version: "2.0.0"
   termsOfService: https://nbold.co/legal/tos
   contact:
@@ -603,9 +603,8 @@ paths:
     get:
       tags:
         - Microsoft Teams teams
-        - Metadata
       summary: Get a team metadata
-      description: Get metadata for a team for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      description: Get metadata for a team for a specific namespace.
       operationId: GetTeamNamespaceMetadata
       externalDocs:
         url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#namespacemetadata
@@ -634,9 +633,8 @@ paths:
     put:
       tags:
         - Microsoft Teams teams
-        - Metadata
       summary: Set team metadata
-      description: Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      description: Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata.
       operationId: SetTeamNamespaceMetadata
       externalDocs:
         url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setteamnamespacemetadata
@@ -661,6 +659,20 @@ paths:
           application/json:
             schema:
               type: object
+            examples:
+              1:
+                summary: Set a specific CRM opportunity ID as a single property
+                value:
+                  crm_opportunity_id: 123
+              2:
+                summary: Set a specific CRM opportunity ID as a single property using JSON dotted notation
+                value:
+                  crm_opportunity: { id: 123 }
+              3:
+                summary: Set multiple CRM opportunity and account properties using JSON dotted notation
+                value:
+                  crm_opportunity: { id: 123, name: 'Opty 1' }
+                  crm_account: { id: 456, name: 'Contoso Inc'  }
         required: true
       responses:
         "200":
@@ -672,9 +684,8 @@ paths:
     patch:
       tags:
         - Microsoft Teams teams
-        - Metadata
       summary: Update a team metadata
-      description: Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      description: Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata.
       operationId: UpdateTeamNamespaceMetadata
       externalDocs:
         url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updateteamnamespacemetadata
@@ -699,6 +710,20 @@ paths:
           application/json:
             schema:
               type: object
+            examples:
+              1:
+                summary: Add a specific CRM opportunity ID to existing metadata as a single property
+                value:
+                  crm_opportunity_id: 123
+              2:
+                summary: Add a specific CRM opportunity ID to existing metadata as a single property using JSON dotted notation
+                value:
+                  crm_opportunity: { id: 123 }
+              3:
+                summary: Add a multiple CRM opportunity and account properties to existing metadata using JSON dotted notation
+                value:
+                  crm_opportunity: { id: 123, name: 'Opty 1' }
+                  crm_account: { id: 456, name: 'Contoso Inc'  }
         required: true
       responses:
         "200":
@@ -708,277 +733,277 @@ paths:
               schema:
                 $ref: "#/components/schemas/Metadata"
 
-  /teams/{teamId}/channels/{channelId}/metadata/{namespace}:
-    get:
-      tags:
-        - Microsoft Teams channels
-        - Metadata
-      summary: Get a channel metadata
-      description: Get metadata for a channel for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-      operationId: GetTeamsChannelNamespaceMetadata
-      externalDocs:
-        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteamschannelnamespacemetadata
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: teamId
-          in: path
-          description: The team ID.
-          required: true
-          schema:
-            type: string
-        - name: channelId
-          in: path
-          description: The channel ID.
-          required: true
-          schema:
-            type: string
-        - name: namespace
-          in: path
-          description: The metadata namespace.
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: OK - Returns the metadata of a Microsoft Teams channel object for a specific namespace.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Metadata"
-    post:
-      tags:
-        - Microsoft Teams channels
-        - Metadata
-      summary: Set channel metadata
-      description: Set channel metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-      operationId: SetMicrosoftTeamsChannelNamespaceMetadata
-      externalDocs:
-        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamschannelnamespacemetadata
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: teamId
-          in: path
-          description: The team ID.
-          required: true
-          schema:
-            type: string
-        - name: channelId
-          in: path
-          description: The channel ID.
-          required: true
-          schema:
-            type: string
-        - name: namespace
-          in: path
-          description: The metadata namespace.
-          required: true
-          schema:
-            type: string
-      requestBody:
-        description: Supply a JSON representation of your metadata.
-        content:
-          application/json:
-            schema:
-              type: object
-        required: true
-      responses:
-        "200":
-          description: OK - Returns the metadata of a channel object for a specific namespace.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Metadata"
-    patch:
-      tags:
-        - Microsoft Teams channels
-        - Metadata
-      summary: Update a channel metadata
-      description: Update a channel metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-      operationId: UpdateMicrosoftTeamsChannelNamespaceMetadata
-      externalDocs:
-        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamschannelnamespacemetadata
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: teamId
-          in: path
-          description: The team ID.
-          required: true
-          schema:
-            type: string
-        - name: channelId
-          in: path
-          description: The channel ID.
-          required: true
-          schema:
-            type: string
-        - name: namespace
-          in: path
-          description: The metadata namespace.
-          required: true
-          schema:
-            type: string
-      requestBody:
-        description: Supply a JSON representation of your metadata.
-        content:
-          application/json:
-            schema:
-              type: object
-        required: true
-      responses:
-        "200":
-          description: OK - Returns the metadata of a channel object for a specific namespace.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Metadata"
+  # /teams/{teamId}/channels/{channelId}/metadata/{namespace}:
+  #   get:
+  #     tags:
+  #       - Microsoft Teams channels
+  #       - Metadata
+  #     summary: Get a channel metadata
+  #     description: Get metadata for a channel for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+  #     operationId: GetTeamsChannelNamespaceMetadata
+  #     externalDocs:
+  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteamschannelnamespacemetadata
+  #     security:
+  #       - bearerAuth: []
+  #     parameters:
+  #       - name: teamId
+  #         in: path
+  #         description: The team ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: channelId
+  #         in: path
+  #         description: The channel ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: namespace
+  #         in: path
+  #         description: The metadata namespace.
+  #         required: true
+  #         schema:
+  #           type: string
+  #     responses:
+  #       "200":
+  #         description: OK - Returns the metadata of a Microsoft Teams channel object for a specific namespace.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: "#/components/schemas/Metadata"
+  #   post:
+  #     tags:
+  #       - Microsoft Teams channels
+  #       - Metadata
+  #     summary: Set channel metadata
+  #     description: Set channel metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+  #     operationId: SetMicrosoftTeamsChannelNamespaceMetadata
+  #     externalDocs:
+  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamschannelnamespacemetadata
+  #     security:
+  #       - bearerAuth: []
+  #     parameters:
+  #       - name: teamId
+  #         in: path
+  #         description: The team ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: channelId
+  #         in: path
+  #         description: The channel ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: namespace
+  #         in: path
+  #         description: The metadata namespace.
+  #         required: true
+  #         schema:
+  #           type: string
+  #     requestBody:
+  #       description: Supply a JSON representation of your metadata.
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #       required: true
+  #     responses:
+  #       "200":
+  #         description: OK - Returns the metadata of a channel object for a specific namespace.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: "#/components/schemas/Metadata"
+  #   patch:
+  #     tags:
+  #       - Microsoft Teams channels
+  #       - Metadata
+  #     summary: Update a channel metadata
+  #     description: Update a channel metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+  #     operationId: UpdateMicrosoftTeamsChannelNamespaceMetadata
+  #     externalDocs:
+  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamschannelnamespacemetadata
+  #     security:
+  #       - bearerAuth: []
+  #     parameters:
+  #       - name: teamId
+  #         in: path
+  #         description: The team ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: channelId
+  #         in: path
+  #         description: The channel ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: namespace
+  #         in: path
+  #         description: The metadata namespace.
+  #         required: true
+  #         schema:
+  #           type: string
+  #     requestBody:
+  #       description: Supply a JSON representation of your metadata.
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #       required: true
+  #     responses:
+  #       "200":
+  #         description: OK - Returns the metadata of a channel object for a specific namespace.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: "#/components/schemas/Metadata"
 
-  /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace}:
-    get:
-      tags:
-        - Microsoft Teams messages
-        - Metadata
-      summary: Get a message metadata
-      description: Get metadata for a message for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-      operationId: GetMicrosoftTeamsMessageNamespaceMetadata
-      externalDocs:
-        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getmicrosoftteamsmessagenamespacemetadata
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: team_id
-          in: path
-          description: The team ID.
-          required: true
-          schema:
-            type: string
-        - name: channel_id
-          in: path
-          description: The channel ID.
-          required: true
-          schema:
-            type: string
-        - name: message_id
-          in: path
-          description: The message ID.
-          required: true
-          schema:
-            type: string
-        - name: namespace
-          in: path
-          description: The metadata namespace.
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: OK - Returns the metadata of a Microsoft Teams message for a specific namespace.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Metadata"
-    post:
-      tags:
-        - Microsoft Teams messages
-        - Metadata
-      summary: Set message metadata
-      description: Set message metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-      operationId: SetMicrosoftTeamsMessageNamespaceMetadata
-      externalDocs:
-        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamsmessagenamespacemetadata
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: team_id
-          in: path
-          description: The team ID.
-          required: true
-          schema:
-            type: string
-        - name: channel_id
-          in: path
-          description: The channel ID.
-          required: true
-          schema:
-            type: string
-        - name: message_id
-          in: path
-          description: The message ID.
-          required: true
-          schema:
-            type: string
-        - name: namespace
-          in: path
-          description: The metadata namespace.
-          required: true
-          schema:
-            type: string
-      requestBody:
-        description: Supply a JSON representation of your metadata.
-        content:
-          application/json:
-            schema:
-              type: object
-        required: true
-      responses:
-        "200":
-          description: OK - Returns the metadata of a message object for a specific namespace.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Metadata"
-    patch:
-      tags:
-        - Microsoft Teams messages
-        - Metadata
-      summary: Update a message metadata
-      description: Update a message metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-      operationId: UpdateMicrosoftTeamsMessageNamespaceMetadata
-      externalDocs:
-        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamsmessagenamespacemetadata
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: team_id
-          in: path
-          description: The team ID.
-          required: true
-          schema:
-            type: string
-        - name: channel_id
-          in: path
-          description: The channel ID.
-          required: true
-          schema:
-            type: string
-        - name: message_id
-          in: path
-          description: The message ID.
-          required: true
-          schema:
-            type: string
-        - name: namespace
-          in: path
-          description: The metadata namespace.
-          required: true
-          schema:
-            type: string
-      requestBody:
-        description: Supply a JSON representation of your metadata.
-        content:
-          application/json:
-            schema:
-              type: object
-        required: true
-      responses:
-        "200":
-          description: OK - Returns the metadata of a message object for a specific namespace.
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Metadata"
+  # /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace}:
+  #   get:
+  #     tags:
+  #       - Microsoft Teams messages
+  #       - Metadata
+  #     summary: Get a message metadata
+  #     description: Get metadata for a message for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+  #     operationId: GetMicrosoftTeamsMessageNamespaceMetadata
+  #     externalDocs:
+  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getmicrosoftteamsmessagenamespacemetadata
+  #     security:
+  #       - bearerAuth: []
+  #     parameters:
+  #       - name: team_id
+  #         in: path
+  #         description: The team ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: channel_id
+  #         in: path
+  #         description: The channel ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: message_id
+  #         in: path
+  #         description: The message ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: namespace
+  #         in: path
+  #         description: The metadata namespace.
+  #         required: true
+  #         schema:
+  #           type: string
+  #     responses:
+  #       "200":
+  #         description: OK - Returns the metadata of a Microsoft Teams message for a specific namespace.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: "#/components/schemas/Metadata"
+  #   post:
+  #     tags:
+  #       - Microsoft Teams messages
+  #       - Metadata
+  #     summary: Set message metadata
+  #     description: Set message metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+  #     operationId: SetMicrosoftTeamsMessageNamespaceMetadata
+  #     externalDocs:
+  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamsmessagenamespacemetadata
+  #     security:
+  #       - bearerAuth: []
+  #     parameters:
+  #       - name: team_id
+  #         in: path
+  #         description: The team ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: channel_id
+  #         in: path
+  #         description: The channel ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: message_id
+  #         in: path
+  #         description: The message ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: namespace
+  #         in: path
+  #         description: The metadata namespace.
+  #         required: true
+  #         schema:
+  #           type: string
+  #     requestBody:
+  #       description: Supply a JSON representation of your metadata.
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #       required: true
+  #     responses:
+  #       "200":
+  #         description: OK - Returns the metadata of a message object for a specific namespace.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: "#/components/schemas/Metadata"
+  #   patch:
+  #     tags:
+  #       - Microsoft Teams messages
+  #       - Metadata
+  #     summary: Update a message metadata
+  #     description: Update a message metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+  #     operationId: UpdateMicrosoftTeamsMessageNamespaceMetadata
+  #     externalDocs:
+  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamsmessagenamespacemetadata
+  #     security:
+  #       - bearerAuth: []
+  #     parameters:
+  #       - name: team_id
+  #         in: path
+  #         description: The team ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: channel_id
+  #         in: path
+  #         description: The channel ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: message_id
+  #         in: path
+  #         description: The message ID.
+  #         required: true
+  #         schema:
+  #           type: string
+  #       - name: namespace
+  #         in: path
+  #         description: The metadata namespace.
+  #         required: true
+  #         schema:
+  #           type: string
+  #     requestBody:
+  #       description: Supply a JSON representation of your metadata.
+  #       content:
+  #         application/json:
+  #           schema:
+  #             type: object
+  #       required: true
+  #     responses:
+  #       "200":
+  #         description: OK - Returns the metadata of a message object for a specific namespace.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: "#/components/schemas/Metadata"
 
   /metadata/{namespace}/query:
     post:
