@@ -4,14 +4,14 @@ All URIs are relative to *https://api.salestim.io/api/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Get a message metadata
-[**setMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
-[**updateMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
+[**getMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Get a message metadata
+[**setMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Set message metadata
+[**updateMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Update a message metadata
 
 
 <a name="getMicrosoftTeamsMessageNamespaceMetadata"></a>
 # **getMicrosoftTeamsMessageNamespaceMetadata**
-> Object getMicrosoftTeamsMessageNamespaceMetadata(teamId, channelId, message\_id, namespace)
+> Object getMicrosoftTeamsMessageNamespaceMetadata(team\_id, channel\_id, message\_id, namespace)
 
 Get a message metadata
 
@@ -21,8 +21,8 @@ Get a message metadata
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamId** | **String**| The team ID. | [default to null]
- **channelId** | **String**| The channel ID. | [default to null]
+ **team\_id** | **String**| The team ID. | [default to null]
+ **channel\_id** | **String**| The channel ID. | [default to null]
  **message\_id** | **String**| The message ID. | [default to null]
  **namespace** | **String**| The metadata namespace. | [default to null]
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 <a name="setMicrosoftTeamsMessageNamespaceMetadata"></a>
 # **setMicrosoftTeamsMessageNamespaceMetadata**
-> Object setMicrosoftTeamsMessageNamespaceMetadata(teamId, channelId, message\_id, namespace, body)
+> Object setMicrosoftTeamsMessageNamespaceMetadata(team\_id, channel\_id, message\_id, namespace, body)
 
 Set message metadata
 
@@ -51,8 +51,8 @@ Set message metadata
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamId** | **String**| The team ID. | [default to null]
- **channelId** | **String**| The channel ID. | [default to null]
+ **team\_id** | **String**| The team ID. | [default to null]
+ **channel\_id** | **String**| The channel ID. | [default to null]
  **message\_id** | **String**| The message ID. | [default to null]
  **namespace** | **String**| The metadata namespace. | [default to null]
  **body** | **Object**| Supply a JSON representation of your metadata. |
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 <a name="updateMicrosoftTeamsMessageNamespaceMetadata"></a>
 # **updateMicrosoftTeamsMessageNamespaceMetadata**
-> Object updateMicrosoftTeamsMessageNamespaceMetadata(teamId, channelId, message\_id, namespace, body)
+> Object updateMicrosoftTeamsMessageNamespaceMetadata(team\_id, channel\_id, message\_id, namespace, body)
 
 Update a message metadata
 
@@ -82,8 +82,8 @@ Update a message metadata
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamId** | **String**| The team ID. | [default to null]
- **channelId** | **String**| The channel ID. | [default to null]
+ **team\_id** | **String**| The team ID. | [default to null]
+ **channel\_id** | **String**| The channel ID. | [default to null]
  **message\_id** | **String**| The message ID. | [default to null]
  **namespace** | **String**| The metadata namespace. | [default to null]
  **body** | **Object**| Supply a JSON representation of your metadata. |

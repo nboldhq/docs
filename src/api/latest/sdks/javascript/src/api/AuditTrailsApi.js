@@ -73,7 +73,7 @@ export default class AuditTrailsApi {
       let accepts = ['application/json'];
       let returnType = AuditTrailRecords;
       return this.apiClient.callApi(
-        '/audittrails/{code}/records', 'GET',
+        '/audit_trails/{code}/records', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -110,7 +110,7 @@ export default class AuditTrailsApi {
       let accepts = ['application/json'];
       let returnType = AuditTrails;
       return this.apiClient.callApi(
-        '/audittrails', 'GET',
+        '/audit_trails/events', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

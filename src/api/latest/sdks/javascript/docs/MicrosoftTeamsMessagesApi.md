@@ -4,9 +4,9 @@ All URIs are relative to *https://api.salestim.io/api/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Get a message metadata
-[**setMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
-[**updateMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
+[**getMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Get a message metadata
+[**setMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Set message metadata
+[**updateMicrosoftTeamsMessageNamespaceMetadata**](MicrosoftTeamsMessagesApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Update a message metadata
 
 
 

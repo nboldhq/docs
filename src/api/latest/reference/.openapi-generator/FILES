@@ -5,6 +5,7 @@ Apis/MetadataApi.md
 Apis/MicrosoftTeamsChannelsApi.md
 Apis/MicrosoftTeamsMessagesApi.md
 Apis/MicrosoftTeamsTeamsApi.md
+Apis/ReportsApi.md
 Apis/SensitivityLabelsApi.md
 Apis/TeamsApi.md
 Apis/TemplatesCatalogApi.md
@@ -43,6 +44,9 @@ Models/MetadataQueryResult.md
 Models/OwnerUserIdentifier.md
 Models/PermanentMember.md
 Models/RejectedApprovalResponsePayload.md
+Models/Report.md
+Models/ReportUrl.md
+Models/ReportsCategory.md
 Models/Team.md
 Models/TeamChannel.md
 Models/TeamChannelTab.md

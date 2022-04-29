@@ -42,6 +42,10 @@ docs/MicrosoftTeamsTeamsApi.md
 docs/OwnerUserIdentifier.md
 docs/PermanentMember.md
 docs/RejectedApprovalResponsePayload.md
+docs/Report.md
+docs/ReportUrl.md
+docs/ReportsApi.md
+docs/ReportsCategory.md
 docs/SensitivityLabelsApi.md
 docs/Team.md
 docs/TeamChannel.md
@@ -75,6 +79,7 @@ src/api/MetadataApi.js
 src/api/MicrosoftTeamsChannelsApi.js
 src/api/MicrosoftTeamsMessagesApi.js
 src/api/MicrosoftTeamsTeamsApi.js
+src/api/ReportsApi.js
 src/api/SensitivityLabelsApi.js
 src/api/TeamsApi.js
 src/api/TemplatesCatalogApi.js
@@ -114,6 +119,9 @@ src/model/MetadataQueryResult.js
 src/model/OwnerUserIdentifier.js
 src/model/PermanentMember.js
 src/model/RejectedApprovalResponsePayload.js
+src/model/Report.js
+src/model/ReportUrl.js
+src/model/ReportsCategory.js
 src/model/Team.js
 src/model/TeamChannel.js
 src/model/TeamChannelTab.js
@@ -131,3 +139,7 @@ src/model/TeamProvisioningRequestTeamMembership.js
 src/model/TeamProvisioningRequestTemplate.js
 src/model/User1.js
 src/model/Users.js
+test/api/ReportsApi.spec.js
+test/model/Report.spec.js
+test/model/ReportUrl.spec.js
+test/model/ReportsCategory.spec.js

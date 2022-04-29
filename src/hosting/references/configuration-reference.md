@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Fri, 22 Apr 2022 00:36:06 GMT*
+📆 *Generated: Thu, 28 Apr 2022 04:25:27 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -152,6 +152,17 @@ To help you get started, you can also download our [.env file template](/hosting
 | `EVENTSCOLLECTOR_AUTH_ADMIN_TOKEN` | Optional ☑️ | (string) Token used to authenticate from servers (s2s) against the events collector service for administration operations. Defaults to "". |
 | `EVENTSCOLLECTOR_TRACK_ENDPOINT` | Optional ☑️ | (string) Tracking endpoint of the events collector service. Defaults to "/api/v1/s2s/event". |
 | `EVENTSCOLLECTOR_TRACK_METHOD` | Optional ☑️ | (string) HTTP verb used to post events. Defaults to "POST". |
+
+
+
+### Reports Server
+*Reports Server*
+
+---
+| Environment Variable | Status | Description |
+|:---------------------|:-------|:------------|
+| `REPORTS_SERVER_URL` | Optional ☑️ | (string) Reports server root URL. Defaults to "http://localhost:5001". |
+| `REPORTS_SERVER_SECRET_KEY` | Optional ☑️ | (string) Token used secure access to embedded reports. Defaults to "". |
 
 
 

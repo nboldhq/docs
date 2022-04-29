@@ -71,8 +71,8 @@ export default class MicrosoftTeamsMessagesApi {
       }
 
       let pathParams = {
-        'teamId': teamId,
-        'channelId': channelId,
+        'team_id': teamId,
+        'channel_id': channelId,
         'message_id': messageId,
         'namespace': namespace
       };
@@ -88,7 +88,7 @@ export default class MicrosoftTeamsMessagesApi {
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
-        '/teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace}', 'GET',
+        '/teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -137,8 +137,8 @@ export default class MicrosoftTeamsMessagesApi {
       }
 
       let pathParams = {
-        'teamId': teamId,
-        'channelId': channelId,
+        'team_id': teamId,
+        'channel_id': channelId,
         'message_id': messageId,
         'namespace': namespace
       };
@@ -154,7 +154,7 @@ export default class MicrosoftTeamsMessagesApi {
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
-        '/teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace}', 'POST',
+        '/teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -203,8 +203,8 @@ export default class MicrosoftTeamsMessagesApi {
       }
 
       let pathParams = {
-        'teamId': teamId,
-        'channelId': channelId,
+        'team_id': teamId,
+        'channel_id': channelId,
         'message_id': messageId,
         'namespace': namespace
       };
@@ -220,7 +220,7 @@ export default class MicrosoftTeamsMessagesApi {
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
-        '/teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace}', 'PATCH',
+        '/teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

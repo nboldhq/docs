@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Fri, 22 Apr 2022 00:36:06 GMT*
+📆 *Generated: Thu, 28 Apr 2022 04:25:27 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -152,6 +152,14 @@ EVENTSCOLLECTOR_AUTH_ADMIN_TOKEN=
 EVENTSCOLLECTOR_TRACK_ENDPOINT=/api/v1/s2s/event
 # (string) HTTP verb used to post events. Defaults to "POST".
 EVENTSCOLLECTOR_TRACK_METHOD=POST
+
+# Reports Server
+# Reports Server
+
+# (string) Reports server root URL. Defaults to "http://localhost:5001".
+REPORTS_SERVER_URL=http://localhost:5001
+# (string) Token used secure access to embedded reports. Defaults to "".
+REPORTS_SERVER_SECRET_KEY=
 
 # PostgreSQL Events Database
 # Database for application events and audit trails

@@ -131,28 +131,31 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *NBoldApi.ApprovalsApi* | [**approveTeamCreation**](docs/ApprovalsApi.md#approveTeamCreation) | **POST** /approvals/{approvalRequestId}/approve | Approve a team creation request
 *NBoldApi.ApprovalsApi* | [**rejectTeamCreation**](docs/ApprovalsApi.md#rejectTeamCreation) | **POST** /approvals/{approvalRequestId}/reject | Reject a team creation request
-*NBoldApi.AuditTrailsApi* | [**getAuditTrailRecords**](docs/AuditTrailsApi.md#getAuditTrailRecords) | **GET** /audittrails/{code}/records | Get all the records from an audit trail
-*NBoldApi.AuditTrailsApi* | [**getAuditTrails**](docs/AuditTrailsApi.md#getAuditTrails) | **GET** /audittrails | Get audit trails
+*NBoldApi.AuditTrailsApi* | [**getAuditTrailRecords**](docs/AuditTrailsApi.md#getAuditTrailRecords) | **GET** /audit_trails/{code}/records | Get all the records from an audit trail
+*NBoldApi.AuditTrailsApi* | [**getAuditTrails**](docs/AuditTrailsApi.md#getAuditTrails) | **GET** /audit_trails/events | Get audit trails
 *NBoldApi.JobsApi* | [**getJob**](docs/JobsApi.md#getJob) | **GET** /jobs/{jobId} | Get information about a job
-*NBoldApi.MetadataApi* | [**getMicrosoftTeamsMessageNamespaceMetadata**](docs/MetadataApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Get a message metadata
+*NBoldApi.MetadataApi* | [**getMicrosoftTeamsMessageNamespaceMetadata**](docs/MetadataApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Get a message metadata
 *NBoldApi.MetadataApi* | [**getTeamNamespaceMetadata**](docs/MetadataApi.md#getTeamNamespaceMetadata) | **GET** /teams/{teamId}/metadata/{namespace} | Get a team metadata
 *NBoldApi.MetadataApi* | [**getTeamsChannelNamespaceMetadata**](docs/MetadataApi.md#getTeamsChannelNamespaceMetadata) | **GET** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Get a channel metadata
 *NBoldApi.MetadataApi* | [**queryMetadata**](docs/MetadataApi.md#queryMetadata) | **POST** /metadata/{namespace}/query | Query metadata
 *NBoldApi.MetadataApi* | [**setMicrosoftTeamsChannelNamespaceMetadata**](docs/MetadataApi.md#setMicrosoftTeamsChannelNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Set channel metadata
-*NBoldApi.MetadataApi* | [**setMicrosoftTeamsMessageNamespaceMetadata**](docs/MetadataApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
+*NBoldApi.MetadataApi* | [**setMicrosoftTeamsMessageNamespaceMetadata**](docs/MetadataApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Set message metadata
 *NBoldApi.MetadataApi* | [**setTeamNamespaceMetadata**](docs/MetadataApi.md#setTeamNamespaceMetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 *NBoldApi.MetadataApi* | [**updateMicrosoftTeamsChannelNamespaceMetadata**](docs/MetadataApi.md#updateMicrosoftTeamsChannelNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Update a channel metadata
-*NBoldApi.MetadataApi* | [**updateMicrosoftTeamsMessageNamespaceMetadata**](docs/MetadataApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
+*NBoldApi.MetadataApi* | [**updateMicrosoftTeamsMessageNamespaceMetadata**](docs/MetadataApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Update a message metadata
 *NBoldApi.MetadataApi* | [**updateTeamNamespaceMetadata**](docs/MetadataApi.md#updateTeamNamespaceMetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
 *NBoldApi.MicrosoftTeamsChannelsApi* | [**getTeamsChannelNamespaceMetadata**](docs/MicrosoftTeamsChannelsApi.md#getTeamsChannelNamespaceMetadata) | **GET** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Get a channel metadata
 *NBoldApi.MicrosoftTeamsChannelsApi* | [**setMicrosoftTeamsChannelNamespaceMetadata**](docs/MicrosoftTeamsChannelsApi.md#setMicrosoftTeamsChannelNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Set channel metadata
 *NBoldApi.MicrosoftTeamsChannelsApi* | [**updateMicrosoftTeamsChannelNamespaceMetadata**](docs/MicrosoftTeamsChannelsApi.md#updateMicrosoftTeamsChannelNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Update a channel metadata
-*NBoldApi.MicrosoftTeamsMessagesApi* | [**getMicrosoftTeamsMessageNamespaceMetadata**](docs/MicrosoftTeamsMessagesApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Get a message metadata
-*NBoldApi.MicrosoftTeamsMessagesApi* | [**setMicrosoftTeamsMessageNamespaceMetadata**](docs/MicrosoftTeamsMessagesApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
-*NBoldApi.MicrosoftTeamsMessagesApi* | [**updateMicrosoftTeamsMessageNamespaceMetadata**](docs/MicrosoftTeamsMessagesApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
+*NBoldApi.MicrosoftTeamsMessagesApi* | [**getMicrosoftTeamsMessageNamespaceMetadata**](docs/MicrosoftTeamsMessagesApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Get a message metadata
+*NBoldApi.MicrosoftTeamsMessagesApi* | [**setMicrosoftTeamsMessageNamespaceMetadata**](docs/MicrosoftTeamsMessagesApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Set message metadata
+*NBoldApi.MicrosoftTeamsMessagesApi* | [**updateMicrosoftTeamsMessageNamespaceMetadata**](docs/MicrosoftTeamsMessagesApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Update a message metadata
 *NBoldApi.MicrosoftTeamsTeamsApi* | [**getTeamNamespaceMetadata**](docs/MicrosoftTeamsTeamsApi.md#getTeamNamespaceMetadata) | **GET** /teams/{teamId}/metadata/{namespace} | Get a team metadata
 *NBoldApi.MicrosoftTeamsTeamsApi* | [**setTeamNamespaceMetadata**](docs/MicrosoftTeamsTeamsApi.md#setTeamNamespaceMetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 *NBoldApi.MicrosoftTeamsTeamsApi* | [**updateTeamNamespaceMetadata**](docs/MicrosoftTeamsTeamsApi.md#updateTeamNamespaceMetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
+*NBoldApi.ReportsApi* | [**getReportUrl**](docs/ReportsApi.md#getReportUrl) | **GET** /reports/{resource_type}/{resource_id} | Get report secure URL
+*NBoldApi.ReportsApi* | [**getReports**](docs/ReportsApi.md#getReports) | **GET** /reports | Get reports
+*NBoldApi.ReportsApi* | [**getReportsCategories**](docs/ReportsApi.md#getReportsCategories) | **GET** /reports/categories | Get reports categories
 *NBoldApi.SensitivityLabelsApi* | [**getMyLabels**](docs/SensitivityLabelsApi.md#getMyLabels) | **GET** /me/labels | Get my sensitivity labels
 *NBoldApi.TeamsApi* | [**addTeamMember**](docs/TeamsApi.md#addTeamMember) | **POST** /teams/{teamId}/members | Add a team member
 *NBoldApi.TeamsApi* | [**archiveTeam**](docs/TeamsApi.md#archiveTeam) | **POST** /teams/{teamId}/archive | Archive a team
@@ -172,7 +175,7 @@ Class | Method | HTTP request | Description
 *NBoldApi.WebhooksApi* | [**createHook**](docs/WebhooksApi.md#createHook) | **POST** /hooks | Create a new webhook
 *NBoldApi.WebhooksApi* | [**deleteHook**](docs/WebhooksApi.md#deleteHook) | **DELETE** /hooks/{hookId} | Delete a webhook
 *NBoldApi.WebhooksApi* | [**generateHookSignature**](docs/WebhooksApi.md#generateHookSignature) | **POST** /hooks/signature | Generate a signature from a secret and a webhook payload
-*NBoldApi.WebhooksApi* | [**getHooksEvents**](docs/WebhooksApi.md#getHooksEvents) | **GET** /hooks/events | Get webhooks events
+*NBoldApi.WebhooksApi* | [**getHooksEvents**](docs/WebhooksApi.md#getHooksEvents) | **GET** /webhooks/events | Get webhooks events
 
 
 ## Documentation for Models
@@ -210,6 +213,9 @@ Class | Method | HTTP request | Description
  - [NBoldApi.OwnerUserIdentifier](docs/OwnerUserIdentifier.md)
  - [NBoldApi.PermanentMember](docs/PermanentMember.md)
  - [NBoldApi.RejectedApprovalResponsePayload](docs/RejectedApprovalResponsePayload.md)
+ - [NBoldApi.Report](docs/Report.md)
+ - [NBoldApi.ReportUrl](docs/ReportUrl.md)
+ - [NBoldApi.ReportsCategory](docs/ReportsCategory.md)
  - [NBoldApi.Team](docs/Team.md)
  - [NBoldApi.TeamChannel](docs/TeamChannel.md)
  - [NBoldApi.TeamChannelTab](docs/TeamChannelTab.md)

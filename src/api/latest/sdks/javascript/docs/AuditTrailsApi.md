@@ -4,8 +4,8 @@ All URIs are relative to *https://api.salestim.io/api/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAuditTrailRecords**](AuditTrailsApi.md#getAuditTrailRecords) | **GET** /audittrails/{code}/records | Get all the records from an audit trail
-[**getAuditTrails**](AuditTrailsApi.md#getAuditTrails) | **GET** /audittrails | Get audit trails
+[**getAuditTrailRecords**](AuditTrailsApi.md#getAuditTrailRecords) | **GET** /audit_trails/{code}/records | Get all the records from an audit trail
+[**getAuditTrails**](AuditTrailsApi.md#getAuditTrails) | **GET** /audit_trails/events | Get audit trails
 
 
 

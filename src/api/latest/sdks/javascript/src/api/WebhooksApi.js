@@ -197,7 +197,7 @@ export default class WebhooksApi {
       let accepts = ['application/json'];
       let returnType = HooksEvents;
       return this.apiClient.callApi(
-        '/hooks/events', 'GET',
+        '/webhooks/events', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

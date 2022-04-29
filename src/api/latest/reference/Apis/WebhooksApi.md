@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**createHook**](WebhooksApi.md#createHook) | **POST** /hooks | Create a new webhook
 [**deleteHook**](WebhooksApi.md#deleteHook) | **DELETE** /hooks/{hookId} | Delete a webhook
 [**generateHookSignature**](WebhooksApi.md#generateHookSignature) | **POST** /hooks/signature | Generate a signature from a secret and a webhook payload
-[**getHooksEvents**](WebhooksApi.md#getHooksEvents) | **GET** /hooks/events | Get webhooks events
+[**getHooksEvents**](WebhooksApi.md#getHooksEvents) | **GET** /webhooks/events | Get webhooks events
 
 
 <a name="createHook"></a>

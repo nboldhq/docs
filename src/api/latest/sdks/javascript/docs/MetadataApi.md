@@ -4,15 +4,15 @@ All URIs are relative to *https://api.salestim.io/api/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMicrosoftTeamsMessageNamespaceMetadata**](MetadataApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Get a message metadata
+[**getMicrosoftTeamsMessageNamespaceMetadata**](MetadataApi.md#getMicrosoftTeamsMessageNamespaceMetadata) | **GET** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Get a message metadata
 [**getTeamNamespaceMetadata**](MetadataApi.md#getTeamNamespaceMetadata) | **GET** /teams/{teamId}/metadata/{namespace} | Get a team metadata
 [**getTeamsChannelNamespaceMetadata**](MetadataApi.md#getTeamsChannelNamespaceMetadata) | **GET** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Get a channel metadata
 [**queryMetadata**](MetadataApi.md#queryMetadata) | **POST** /metadata/{namespace}/query | Query metadata
 [**setMicrosoftTeamsChannelNamespaceMetadata**](MetadataApi.md#setMicrosoftTeamsChannelNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Set channel metadata
-[**setMicrosoftTeamsMessageNamespaceMetadata**](MetadataApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Set message metadata
+[**setMicrosoftTeamsMessageNamespaceMetadata**](MetadataApi.md#setMicrosoftTeamsMessageNamespaceMetadata) | **POST** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Set message metadata
 [**setTeamNamespaceMetadata**](MetadataApi.md#setTeamNamespaceMetadata) | **PUT** /teams/{teamId}/metadata/{namespace} | Set team metadata
 [**updateMicrosoftTeamsChannelNamespaceMetadata**](MetadataApi.md#updateMicrosoftTeamsChannelNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/metadata/{namespace} | Update a channel metadata
-[**updateMicrosoftTeamsMessageNamespaceMetadata**](MetadataApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace} | Update a message metadata
+[**updateMicrosoftTeamsMessageNamespaceMetadata**](MetadataApi.md#updateMicrosoftTeamsMessageNamespaceMetadata) | **PATCH** /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace} | Update a message metadata
 [**updateTeamNamespaceMetadata**](MetadataApi.md#updateTeamNamespaceMetadata) | **PATCH** /teams/{teamId}/metadata/{namespace} | Update a team metadata
 
 
@@ -195,7 +195,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new NBoldApi.MetadataApi();
 let namespace = "namespace_example"; // String | The metadata namespace.
-let body = {key: null}; // Object | Supply a JSON representation of your query.
+let body = {"crm_opportunity_id":123}; // Object | Supply a JSON representation of your query.
 apiInstance.queryMetadata(namespace, body, (error, data, response) => {
   if (error) {
     console.error(error);

@@ -46,6 +46,9 @@ import MetadataQueryResult from './model/MetadataQueryResult';
 import OwnerUserIdentifier from './model/OwnerUserIdentifier';
 import PermanentMember from './model/PermanentMember';
 import RejectedApprovalResponsePayload from './model/RejectedApprovalResponsePayload';
+import Report from './model/Report';
+import ReportUrl from './model/ReportUrl';
+import ReportsCategory from './model/ReportsCategory';
 import Team from './model/Team';
 import TeamChannel from './model/TeamChannel';
 import TeamChannelTab from './model/TeamChannelTab';
@@ -70,6 +73,7 @@ import MetadataApi from './api/MetadataApi';
 import MicrosoftTeamsChannelsApi from './api/MicrosoftTeamsChannelsApi';
 import MicrosoftTeamsMessagesApi from './api/MicrosoftTeamsMessagesApi';
 import MicrosoftTeamsTeamsApi from './api/MicrosoftTeamsTeamsApi';
+import ReportsApi from './api/ReportsApi';
 import SensitivityLabelsApi from './api/SensitivityLabelsApi';
 import TeamsApi from './api/TeamsApi';
 import TemplatesCatalogApi from './api/TemplatesCatalogApi';
@@ -314,6 +318,24 @@ export {
     RejectedApprovalResponsePayload,
 
     /**
+     * The Report model constructor.
+     * @property {module:model/Report}
+     */
+    Report,
+
+    /**
+     * The ReportUrl model constructor.
+     * @property {module:model/ReportUrl}
+     */
+    ReportUrl,
+
+    /**
+     * The ReportsCategory model constructor.
+     * @property {module:model/ReportsCategory}
+     */
+    ReportsCategory,
+
+    /**
      * The Team model constructor.
      * @property {module:model/Team}
      */
@@ -456,6 +478,12 @@ export {
     * @property {module:api/MicrosoftTeamsTeamsApi}
     */
     MicrosoftTeamsTeamsApi,
+
+    /**
+    * The ReportsApi service constructor.
+    * @property {module:api/ReportsApi}
+    */
+    ReportsApi,
 
     /**
     * The SensitivityLabelsApi service constructor.

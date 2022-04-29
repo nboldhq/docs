@@ -23,6 +23,13 @@
   ],
   "tags": [
     {
+      "name": "Reports",
+      "description": "Reporting endpoints",
+      "externalDocs": {
+        "url": "https://docs.nbold.co/api/latest/reference/Apis/ReportsApi"
+      }
+    },
+    {
       "name": "Metadata",
       "description": "Metadata for collaboration processes artefacts",
       "externalDocs": {
@@ -94,7 +101,117 @@
     }
   ],
   "paths": {
-    "/audittrails": {
+    "/reports/categories": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Get reports categories",
+        "description": "Get reports categories",
+        "operationId": "GetReportsCategories",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/ReportsApi.html#getreportscategories"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a ReportsCategories object (Collection of ReportsCategory objects).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportsCategories"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Get reports",
+        "description": "Get reports",
+        "operationId": "GetReports",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/ReportsApi.html#getreports"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a Reports object (Collection of Report objects).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Reports"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports/{resource_type}/{resource_id}": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Get report secure URL",
+        "description": "Get report secure URL",
+        "operationId": "GetReportUrl",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/ReportsApi.html#getreporturl"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "resource_type",
+            "in": "path",
+            "description": "The resource type (dashboard / question).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resource_id",
+            "in": "path",
+            "description": "The resource id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a ReportUrl object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportUrl"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/audit_trails/events": {
       "get": {
         "tags": [
           "Audit Trails"
@@ -151,7 +268,7 @@
         }
       }
     },
-    "/audittrails/{code}/records": {
+    "/audit_trails/{code}/records": {
       "get": {
         "tags": [
           "Audit Trails"
@@ -1179,7 +1296,7 @@
         }
       }
     },
-    "/teams/{teamId}/channels/{channelId}/messages/{message-id}/metadata/{namespace}": {
+    "/teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace}": {
       "get": {
         "tags": [
           "Microsoft Teams messages",
@@ -1198,7 +1315,7 @@
         ],
         "parameters": [
           {
-            "name": "teamId",
+            "name": "team_id",
             "in": "path",
             "description": "The team ID.",
             "required": true,
@@ -1207,7 +1324,7 @@
             }
           },
           {
-            "name": "channelId",
+            "name": "channel_id",
             "in": "path",
             "description": "The channel ID.",
             "required": true,
@@ -1265,7 +1382,7 @@
         ],
         "parameters": [
           {
-            "name": "teamId",
+            "name": "team_id",
             "in": "path",
             "description": "The team ID.",
             "required": true,
@@ -1274,7 +1391,7 @@
             }
           },
           {
-            "name": "channelId",
+            "name": "channel_id",
             "in": "path",
             "description": "The channel ID.",
             "required": true,
@@ -1343,7 +1460,7 @@
         ],
         "parameters": [
           {
-            "name": "teamId",
+            "name": "team_id",
             "in": "path",
             "description": "The team ID.",
             "required": true,
@@ -1352,7 +1469,7 @@
             }
           },
           {
-            "name": "channelId",
+            "name": "channel_id",
             "in": "path",
             "description": "The channel ID.",
             "required": true,
@@ -1437,6 +1554,33 @@
             "application/json": {
               "schema": {
                 "type": "object"
+              },
+              "examples": {
+                "1": {
+                  "summary": "Search for an artefact associated with a specific CRM opportunity as a single property",
+                  "value": {
+                    "crm_opportunity_id": 123
+                  }
+                },
+                "2": {
+                  "summary": "Search for an artefact associated with a specific CRM opportunity using JSON dotted notation",
+                  "value": {
+                    "crm_opportunity": {
+                      "id": 123
+                    }
+                  }
+                },
+                "3": {
+                  "summary": "Search for an artefact associated with multiple CRM objects using JSON dotted notation",
+                  "value": {
+                    "crm_opportunity": {
+                      "id": 123
+                    },
+                    "crm_account": {
+                      "id": 456
+                    }
+                  }
+                }
               }
             }
           },
@@ -2179,7 +2323,7 @@
         }
       }
     },
-    "/hooks/events": {
+    "/webhooks/events": {
       "get": {
         "tags": [
           "Webhooks"
@@ -2954,6 +3098,90 @@
       }
     },
     "schemas": {
+      "ReportsCategories": {
+        "title": "Reports categories",
+        "description": "A collection of reports categories.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ReportsCategory"
+        }
+      },
+      "ReportsCategory": {
+        "title": "Reports category",
+        "description": "A category of reports.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Reports category ID",
+            "type": "string"
+          },
+          "title": {
+            "description": "Reports category title",
+            "type": "string"
+          },
+          "description": {
+            "description": "Reports category description",
+            "type": "string"
+          }
+        }
+      },
+      "Reports": {
+        "title": "Reports",
+        "description": "A collection of reports.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Report"
+        }
+      },
+      "Report": {
+        "title": "Report",
+        "description": "A report.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Report ID",
+            "type": "string"
+          },
+          "type": {
+            "description": "Report type (dashboard / question)",
+            "type": "string"
+          },
+          "title": {
+            "description": "Report title",
+            "type": "string"
+          },
+          "description": {
+            "description": "Report description",
+            "type": "string"
+          },
+          "logo": {
+            "description": "Report logo",
+            "type": "string"
+          },
+          "parameters": {
+            "description": "Report parameters (tenant_id / user_id)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "category_id": {
+            "description": "Report category ID",
+            "type": "string"
+          }
+        }
+      },
+      "ReportUrl": {
+        "title": "Report URL",
+        "description": "A report url.",
+        "type": "object",
+        "properties": {
+          "url": {
+            "description": "Report URL",
+            "type": "string"
+          }
+        }
+      },
       "ApprovedApprovalResponsePayload": {
         "title": "A positive approval response payload",
         "description": "A positive approval response payload.",
