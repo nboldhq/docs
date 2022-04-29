@@ -1,6 +1,6 @@
 /**
  * nBold API
- * Visit our [API documentation](https://docs.nbold.co/api/) for more information. 
+ * Visit our [API documentation](https://docs.nbold.co/api/get-started) for more information. 
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: support@nbold.co

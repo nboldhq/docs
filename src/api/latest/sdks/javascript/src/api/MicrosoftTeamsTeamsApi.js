@@ -1,6 +1,6 @@
 /**
  * nBold API
- * Visit our [API documentation](https://docs.nbold.co/api/) for more information. 
+ * Visit our [API documentation](https://docs.nbold.co/api/get-started) for more information. 
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: support@nbold.co
@@ -43,7 +43,7 @@ export default class MicrosoftTeamsTeamsApi {
 
     /**
      * Get a team metadata
-     * Get metadata for a team for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+     * Get metadata for a team for a specific namespace.
      * @param {String} teamId The team ID.
      * @param {String} namespace The metadata namespace.
      * @param {module:api/MicrosoftTeamsTeamsApi~getTeamNamespaceMetadataCallback} callback The callback function, accepting three arguments: error, data, response
@@ -92,7 +92,7 @@ export default class MicrosoftTeamsTeamsApi {
 
     /**
      * Set team metadata
-     * Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+     * Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata.
      * @param {String} teamId The team ID.
      * @param {String} namespace The metadata namespace.
      * @param {Object.<String, Object>} body Supply a JSON representation of your metadata.
@@ -146,7 +146,7 @@ export default class MicrosoftTeamsTeamsApi {
 
     /**
      * Update a team metadata
-     * Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+     * Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata.
      * @param {String} teamId The team ID.
      * @param {String} namespace The metadata namespace.
      * @param {Object.<String, Object>} body Supply a JSON representation of your metadata.

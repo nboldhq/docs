@@ -208,6 +208,8 @@ module.exports = {
             { title: 'Configuration options', path: '/hosting/references/configuration-reference' },
             { title: 'Environment variables', path: '/hosting/references/environment-variables-reference' },
             { title: 'Events', path: '/hosting/references/events-reference' },
+            { title: 'Events data model', path: '/hosting/references/events-data-model-reference' },
+            { title: 'Application data model', path: '/hosting/references/app-data-model-reference' },
             { title: 'Azure resources', path: '/hosting/references/azure-resources-reference' },
             { title: 'Docker resources', path: '/hosting/references/docker-resources-reference' },
             { title: 'Versioning', path: '/hosting/references/versioning' },

@@ -36,8 +36,6 @@ docs/Labels.md
 docs/MemberUserIdentifier.md
 docs/MetadataApi.md
 docs/MetadataQueryResult.md
-docs/MicrosoftTeamsChannelsApi.md
-docs/MicrosoftTeamsMessagesApi.md
 docs/MicrosoftTeamsTeamsApi.md
 docs/OwnerUserIdentifier.md
 docs/PermanentMember.md
@@ -76,8 +74,6 @@ src/api/ApprovalsApi.js
 src/api/AuditTrailsApi.js
 src/api/JobsApi.js
 src/api/MetadataApi.js
-src/api/MicrosoftTeamsChannelsApi.js
-src/api/MicrosoftTeamsMessagesApi.js
 src/api/MicrosoftTeamsTeamsApi.js
 src/api/ReportsApi.js
 src/api/SensitivityLabelsApi.js
@@ -139,7 +135,3 @@ src/model/TeamProvisioningRequestTeamMembership.js
 src/model/TeamProvisioningRequestTemplate.js
 src/model/User1.js
 src/model/Users.js
-test/api/ReportsApi.spec.js
-test/model/Report.spec.js
-test/model/ReportUrl.spec.js
-test/model/ReportsCategory.spec.js

@@ -1,6 +1,6 @@
 /**
  * nBold API
- * Visit our [API documentation](https://docs.nbold.co/api/) for more information. 
+ * Visit our [API documentation](https://docs.nbold.co/api/get-started) for more information. 
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: support@nbold.co
@@ -70,8 +70,6 @@ import ApprovalsApi from './api/ApprovalsApi';
 import AuditTrailsApi from './api/AuditTrailsApi';
 import JobsApi from './api/JobsApi';
 import MetadataApi from './api/MetadataApi';
-import MicrosoftTeamsChannelsApi from './api/MicrosoftTeamsChannelsApi';
-import MicrosoftTeamsMessagesApi from './api/MicrosoftTeamsMessagesApi';
 import MicrosoftTeamsTeamsApi from './api/MicrosoftTeamsTeamsApi';
 import ReportsApi from './api/ReportsApi';
 import SensitivityLabelsApi from './api/SensitivityLabelsApi';
@@ -82,7 +80,7 @@ import WebhooksApi from './api/WebhooksApi';
 
 
 /**
-* Visit_our__API_documentation_https__docs_nbold_co_api__for_more_information_.<br>
+* Visit_our__API_documentation_https__docs_nbold_co_api_get_started_for_more_information_.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
@@ -460,18 +458,6 @@ export {
     * @property {module:api/MetadataApi}
     */
     MetadataApi,
-
-    /**
-    * The MicrosoftTeamsChannelsApi service constructor.
-    * @property {module:api/MicrosoftTeamsChannelsApi}
-    */
-    MicrosoftTeamsChannelsApi,
-
-    /**
-    * The MicrosoftTeamsMessagesApi service constructor.
-    * @property {module:api/MicrosoftTeamsMessagesApi}
-    */
-    MicrosoftTeamsMessagesApi,
 
     /**
     * The MicrosoftTeamsTeamsApi service constructor.

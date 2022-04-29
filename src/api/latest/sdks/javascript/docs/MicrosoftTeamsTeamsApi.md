@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Get a team metadata
 
-Get metadata for a team for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+Get metadata for a team for a specific namespace.
 
 ### Example
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 Set team metadata
 
-Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata.
 
 ### Example
 
@@ -81,7 +81,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new NBoldApi.MicrosoftTeamsTeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 let namespace = "namespace_example"; // String | The metadata namespace.
-let body = {key: null}; // Object | Supply a JSON representation of your metadata.
+let body = {"crm_opportunity_id":123}; // Object | Supply a JSON representation of your metadata.
 apiInstance.setTeamNamespaceMetadata(teamId, namespace, body, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 Update a team metadata
 
-Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata.
 
 ### Example
 
@@ -134,7 +134,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new NBoldApi.MicrosoftTeamsTeamsApi();
 let teamId = "teamId_example"; // String | The team ID.
 let namespace = "namespace_example"; // String | The metadata namespace.
-let body = {key: null}; // Object | Supply a JSON representation of your metadata.
+let body = {"crm_opportunity_id":123}; // Object | Supply a JSON representation of your metadata.
 apiInstance.updateTeamNamespaceMetadata(teamId, namespace, body, (error, data, response) => {
   if (error) {
     console.error(error);

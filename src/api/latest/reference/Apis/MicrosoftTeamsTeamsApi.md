@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Get a team metadata
 
-    Get metadata for a team for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+    Get metadata for a team for a specific namespace.
 
 ### Parameters
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 Set team metadata
 
-    Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+    Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata.
 
 ### Parameters
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 Update a team metadata
 
-    Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+    Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata.
 
 ### Parameters
 

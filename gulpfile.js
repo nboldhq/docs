@@ -160,6 +160,16 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
         file_name: 'services-reference.md',
         source: ASSETS_ROOT_URL,
         destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'app-data-model-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'events-data-model-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
       }
     ]
     assets.forEach((asset, i) => {
