@@ -317,13 +317,6 @@ paths:
         url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getcatalogtemplates
       security:
         - bearerAuth: []
-      parameters:
-        - in: query
-          name: language
-          description: Optional. Default to 'en'. Language code to be used to filter the colection of templates, for instance 'en' or 'en-uk'.
-          required: false
-          schema:
-            type: string
       responses:
         "200":
           description: OK - Returns a CatalogTemplates object (Collection of CatalogTemplate objects).
@@ -331,26 +324,8 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CatalogTemplates"
-        "400":
-          $ref: "#/components/responses/400"
-        "401":
-          $ref: "#/components/responses/401"
-        "402":
-          $ref: "#/components/responses/402"
-        "403":
-          $ref: "#/components/responses/403"
-        "404":
-          $ref: "#/components/responses/404"
-        "429":
-          $ref: "#/components/responses/429"
-        "500":
-          $ref: "#/components/responses/500"
-        "503":
-          $ref: "#/components/responses/503"
-        default:
-          $ref: "#/components/responses/500"
 
-  /catalog/templates/template_id:
+  /catalog/templates/{template_id}:
     get:
       tags:
         - Templates Catalog
@@ -362,10 +337,10 @@ paths:
       security:
         - bearerAuth: []
       parameters:
-        - in: query
+        - in: path
           name: template_id
           description: The Microsoft Teams team template ID
-          required: false
+          required: true
           schema:
             type: string
       responses:
@@ -375,25 +350,164 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CatalogTemplate"
-        "400":
-          $ref: "#/components/responses/400"
-        "401":
-          $ref: "#/components/responses/401"
-        "402":
-          $ref: "#/components/responses/402"
-        "403":
-          $ref: "#/components/responses/403"
-        "404":
-          $ref: "#/components/responses/404"
-        "429":
-          $ref: "#/components/responses/429"
-        "500":
-          $ref: "#/components/responses/500"
-        "503":
-          $ref: "#/components/responses/503"
-        default:
-          $ref: "#/components/responses/500"
+    put:
+      tags:
+        - Templates Catalog
+      summary: Set a Microsoft Teams team template
+      description: Set a Microsoft Teams team template by its ID
+      operationId: SetMicrosoftTeamsTeamTemplate
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#setmicrosoftteamsteamtemplate
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: template_id
+          description: The Microsoft Teams team template ID
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: A JSON representation of a Microsoft Teams team template.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CatalogTemplate"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CatalogTemplate"
 
+  /catalog/templates/{template_id}/permanent_membership:
+    get:
+      tags:
+        - Templates Catalog
+      summary: Get permanent members and owners of a Microsoft Teams team template
+      description: Get permanent members and owners of a Microsoft Teams team template
+      operationId: GetMicrosoftTeamsTeamTemplatePermanentMembership
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmicrosoftteamsteamtemplatepermanentmembership
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: template_id
+          description: The Microsoft Teams team template ID
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK - Returns a PermanentMembership object.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PermanentMembership"
+    put:
+      tags:
+        - Templates Catalog
+      summary: Set permanent members and owners of a Microsoft Teams team template
+      description: Set permanent members and owners of a Microsoft Teams team template
+      operationId: SetMicrosoftTeamsTeamTemplatePermanentMembership
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#setmicrosoftteamsteamtemplatepermanentmembership
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: template_id
+          description: The Microsoft Teams team template ID
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: A JSON representation of a Microsoft Teams team template permanent membership settings.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PermanentMembership"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PermanentMembership"
+
+
+  /catalog/templates/{template_id}/permanent_membership/{role}:
+    get:
+      tags:
+        - Templates Catalog
+      summary: Get permanent members and owners of a Microsoft Teams team template
+      description: Get permanent members and owners of a Microsoft Teams team template
+      operationId: GetMicrosoftTeamsTeamTemplatePermanentMembershipByRole
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmicrosoftteamsteamtemplatepermanentmembershipbyrole
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: template_id
+          description: The Microsoft Teams team template ID
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: role
+          description: The Microsoft Teams ownership role (owners / members)
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK - Returns a PermanentMembers object.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PermanentMembers"
+    put:
+      tags:
+        - Templates Catalog
+      summary: Set permanent members and owners of a Microsoft Teams team template
+      description: Set permanent members and owners of a Microsoft Teams team template
+      operationId: SetMicrosoftTeamsTeamTemplatePermanentMembershipByRole
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#setmicrosoftteamsteamtemplatepermanentmembershipbyrole
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: template_id
+          description: The Microsoft Teams team template ID
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: role
+          description: The Microsoft Teams ownership role (owners / members)
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: A JSON representation of a Microsoft Teams team template permanent members.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PermanentMembers"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PermanentMembers"
 
   /me/catalog/templates:
     get:
@@ -406,13 +520,6 @@ paths:
         url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmycatalogtemplates
       security:
         - bearerAuth: []
-      parameters:
-        - in: query
-          name: language
-          description: Optional. Default to 'en'. Language code to be used to filter the colection of templates, for instance 'en' or 'en-uk'.
-          required: false
-          schema:
-            type: string
       responses:
         "200":
           description: OK - Returns a CatalogTemplates object (Collection of CatalogTemplate objects).
@@ -420,24 +527,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CatalogTemplates"
-        "400":
-          $ref: "#/components/responses/400"
-        "401":
-          $ref: "#/components/responses/401"
-        "402":
-          $ref: "#/components/responses/402"
-        "403":
-          $ref: "#/components/responses/403"
-        "404":
-          $ref: "#/components/responses/404"
-        "429":
-          $ref: "#/components/responses/429"
-        "500":
-          $ref: "#/components/responses/500"
-        "503":
-          $ref: "#/components/responses/503"
-        default:
-          $ref: "#/components/responses/500"
 
   /me/labels:
     get:
@@ -712,8 +801,8 @@ paths:
               3:
                 summary: Set multiple CRM opportunity and account properties using JSON dotted notation
                 value:
-                  crm_opportunity: { id: 123, name: 'Opty 1' }
-                  crm_account: { id: 456, name: 'Contoso Inc'  }
+                  crm_opportunity: { id: 123, name: "Opty 1" }
+                  crm_account: { id: 456, name: "Contoso Inc" }
         required: true
       responses:
         "200":
@@ -763,8 +852,8 @@ paths:
               3:
                 summary: Add a multiple CRM opportunity and account properties to existing metadata using JSON dotted notation
                 value:
-                  crm_opportunity: { id: 123, name: 'Opty 1' }
-                  crm_account: { id: 456, name: 'Contoso Inc'  }
+                  crm_opportunity: { id: 123, name: "Opty 1" }
+                  crm_account: { id: 456, name: "Contoso Inc" }
         required: true
       responses:
         "200":
@@ -3008,6 +3097,16 @@ components:
         signature:
           description: Calculated hook signature
           type: string
+
+    PermanentMembership:
+      title: Permanent membership settings
+      description: Owners and members of permanent membership settings.
+      type: object
+      properties:
+        members:
+          $ref: "#/components/schemas/PermanentMembers"
+        owners:
+          $ref: "#/components/schemas/PermanentMembers"
 
     PermanentMembers:
       title: Permanent Members
