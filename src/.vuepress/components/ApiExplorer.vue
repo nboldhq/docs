@@ -167,7 +167,7 @@
   export default {
     mounted () {
       let pOpenApiFileUrl =
-        "https://raw.githubusercontent.com/nboldhq/docs/main/src/.vuepress/public/api/latest/definition/nbold-openapi.yaml";
+        "/api/latest/definition/nbold-openapi.yaml";
 
       const urlParams = new URLSearchParams(
         window.location.search

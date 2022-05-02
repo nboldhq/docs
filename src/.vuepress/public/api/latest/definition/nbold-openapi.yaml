@@ -350,6 +350,51 @@ paths:
         default:
           $ref: "#/components/responses/500"
 
+  /catalog/templates/template_id:
+    get:
+      tags:
+        - Templates Catalog
+      summary: Get a Microsoft Teams team template
+      description: Get a Microsoft Teams team template by its ID
+      operationId: GetMicrosoftTeamsTeamTemplate
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmicrosoftteamsteamtemplate
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: template_id
+          description: The Microsoft Teams team template ID
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK - Returns a CatalogTemplate object.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CatalogTemplate"
+        "400":
+          $ref: "#/components/responses/400"
+        "401":
+          $ref: "#/components/responses/401"
+        "402":
+          $ref: "#/components/responses/402"
+        "403":
+          $ref: "#/components/responses/403"
+        "404":
+          $ref: "#/components/responses/404"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+        "503":
+          $ref: "#/components/responses/503"
+        default:
+          $ref: "#/components/responses/500"
+
+
   /me/catalog/templates:
     get:
       tags:

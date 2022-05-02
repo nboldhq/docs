@@ -142,7 +142,7 @@ Now that we've created both the app registration and the logic apps resource, we
 - From `Import mode`, select `OpenAPI URL` and and paste this URL:
 ---
 ```
-https://raw.githubusercontent.com/nboldhq/docs/main/src/api/latest/definition/power-platform/apiDefinition.swagger.json
+https://docs.nbold.co/api/latest/definition/power-platform/apiDefinition.swagger.json
 ```
 ---
 - Click `Import`
