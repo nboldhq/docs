@@ -43,10 +43,6 @@ tags:
     description: Teams from your Microsoft Teams environment.
     externalDocs:
       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi
-  - name: Microsoft Teams channels
-    description: Microsoft Teams channels.
-    externalDocs:
-      url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi
   - name: Users
     description: Users from your Microsoft 365 environment.
     externalDocs:
