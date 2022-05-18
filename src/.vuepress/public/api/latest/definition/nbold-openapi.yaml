@@ -445,7 +445,7 @@ paths:
       tags:
         - Templates Catalog
       summary: Get permanent members and owners of a Microsoft Teams team template
-      description: Get permanent members and owners of a Microsoft Teams team template
+      description: Get permanent members or owners of a Microsoft Teams team template
       operationId: GetMicrosoftTeamsTeamTemplatePermanentMembershipByRole
       externalDocs:
         url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmicrosoftteamsteamtemplatepermanentmembershipbyrole
@@ -475,7 +475,7 @@ paths:
       tags:
         - Templates Catalog
       summary: Set permanent members and owners of a Microsoft Teams team template
-      description: Set permanent members and owners of a Microsoft Teams team template
+      description: Set permanent members or owners of a Microsoft Teams team template
       operationId: SetMicrosoftTeamsTeamTemplatePermanentMembershipByRole
       externalDocs:
         url: https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#setmicrosoftteamsteamtemplatepermanentmembershipbyrole

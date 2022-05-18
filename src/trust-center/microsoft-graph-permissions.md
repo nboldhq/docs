@@ -114,7 +114,7 @@ Learn more:
 - [Microsoft Graph permissions reference...](https://docs.microsoft.com/en-us/graph/permissions-reference)
 :::
 
-## Basic scope
+### Basic scope
 
 From the nBold app for Microsoft Teams, a user is authenticated using the [Tabs SSO mechanism](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso). Through this SSO process, a limited set of user-level OpenID permissions is granted, namely `email`, `profile`, `offline_access`, and `openid`.
 
@@ -131,7 +131,7 @@ This basic scope is requested by the nBold app once the user is authenticated, t
 | `Channel.ReadBasic.All` | Delegated | Microsoft Graph | Allows nBold to retreive the list of channels from the teams a user is a member of, used to show the list of channels for each team from the `Home` tab of the nBold app. | No |
 
 
-## Home scope
+### Home scope
 
 In addition to the basic scope, when a user is trying to access the `Home` tab, nBold requests the following additional permissions:
 
@@ -144,7 +144,7 @@ In addition to the basic scope, when a user is trying to access the `Home` tab, 
 | `TeamsTab.Read.All` | Delegated | Microsoft Graph | Allows nBold to retreive the tabs included in channels from teams a user is a member of, used to show some tabs settings from the `Home` tab of the nBold app. | Yes |
 
 
-## Catalog scope
+### Catalog scope
 
 In addition to the basic scope, when a user is trying to access the `Catalog` tab (and of course if the user was granted the `Catalog Manager` role from the RBAC settings), nBold requests the following additional permissions:
 
@@ -153,12 +153,12 @@ In addition to the basic scope, when a user is trying to access the `Catalog` ta
 | `InformationProtectionPolicy.Read` | Delegated | Microsoft Graph | Allows the catalog manager to select a sensitivity label from a list (Seeing only the labels he has access to) to associate with a collaboration template. | Yes |
 
 
-## Settings scope
+### Settings scope
 
 When a user is trying to access the `Settings` tab (and of course if the user was granted the `Global Administrator` or the `Teams Administrator` role), nBold only requests the permissions from the `Basic scope` as the only required permission is `User.ReadBasic.All` (already included in `Basic scope`)
 
 
-## Service account scope
+### Service account scope
 
 If the application is executed in the context of a service account model, when an administrator is registering the service account from the `Settings` tab, nBold requests the following `delegated` permissions as part of the admin consent process:
 
@@ -203,6 +203,8 @@ Learn more about [Authentication and authorization basics for Microsoft Graph...
 - **Least-Privilege Administrative Models**: Every single requested permission scope is documented and justified.
 - **Authentication**: We're not storing any login / password combination, and service account configuration can only be performed by one of your administrators.
 
+### Prerequisites
+
 **Minimal requirements**  
 Service account minimal requirements:
 - Must be able to sign-in interactively
@@ -225,10 +227,6 @@ Service account optional requirements:
 Learn how to [setup the service account](/quickstart/setup-the-service-account.md)
 :::
 
-::: warning Password update and MFA (Multi-factor authentication)
-If you enforce MFA for the service account or update its password AFTER it has been configured in nBold, you MUST update it from the "Settings" tab using the "🎭 Update" button.
-:::
-
 **Is the service account visible to end-users?**  
 Even if the service account is performing actions in the background (Such as provisioning and other administrative operations), it may appear to end-user in some cases:
 - It is seen as the teams and associated resources (such as planner) creator
@@ -238,28 +236,40 @@ Even if the service account is performing actions in the background (Such as pro
 Choose the name you want, this can be the name of your IT Service for instance, and add a nice picture!
 :::
 
-## Security Best practices
+### Security Best practices
 
 This list is for sure not exhaustive, but may give you some guidelines on how to secure your service accounts:
 
-### 1. Enforce service account security with MFA
+#### Enforce service account security with MFA
 nBold service account supports Multi-Factor Authentication (MFA). MFA adds an additional layer of protection, ensuring that service account declaration or update is done by an authorized person.
 
-### 2. Keep access limited
+::: warning Password update and MFA (Multi-factor authentication)
+If you enforce MFA for the service account or update its password AFTER it has been configured in nBold, you MUST update it from the "Settings" tab using the "🎭 Update" button.
+:::
+
+#### Keep access limited
 Ensure you only allocate AD service accounts the minimum privileges they require for the tasks they need to carry out, and don’t give them any more access than is necessary. In many cases you can remove the functionality for remote access, terminal service login, internet access, and remote control rights.
 
-### 3. Create service accounts from scratch.
+#### Create service accounts from scratch
 Don’t create service accounts in Active Directory by copying old ones, as you might accidentally be copying from a service account with much higher privileges than you need. This could lead to security issues and account misuse if you give someone an account with access to resources or information they shouldn’t be privy to.
 
-### 4. Don’t put service accounts in built-in privileged groups.
+#### Don’t put service accounts in built-in privileged groups
 Putting service accounts in groups with built-in privileges can be risky, because each person in the group will have access to the service account’s credentials. If there’s account misuse, it can be hard to figure out who the offender is. If you need a service account for a privileged group, create a new group with the same privileges and allow access only to the service account.
 
-### 5. Control password configuration.
+#### Control password configuration
 You can set a service account so the user can’t change their own password. You can also set it so the account can’t be delegated to someone else. This ensures the administrator controls the password, and nobody other than authorized users has access to the account.
 
-### 6. Enable auditing.
+#### Enable auditing
 Be sure to enable auditing for all service accounts and related objects. Once auditing is enabled, regularly check the logs to see who’s using the accounts, when, and for what purposes. Auditing is one of the most important of the best practices: it helps ensure security, verifies internal processes and compliance measures are being followed, and can discover any issues or breaches before too much time passes.
 
-### 7. Implement access rights management software.
+You can leverage multiple sources of reports and audits:
+- Microsoft 365 and Microsoft Teams reports: As a regular user, some aspects of the service account activity are available from the standard [Microsoft 365 reports](https://admin.microsoft.com/#/reportsUsage) and [Microsoft Teams reports](https://admin.teams.microsoft.com/analytics/reports). This is especially useful to monitor the overall level of activity to detect unusual patterns (external file sharing, downloads...). N.B: These reports are also available from Power BI.
+- Microsoft 365 Defender: Detailed audit trails are accessible from the [Microsoft 365 Defender portal](https://security.microsoft.com/auditlogsearch)
+- Azure AD: From the [AAD portal)(https://aad.portal.azure.com), you have access to both signin-logs and audit logs
+- nBold: nBold provides its own trails of all the operations performed by the service account, especially through the provisioning audit trails.
+
+These audits trails could be integrated with an [SIEM](https://en.wikipedia.org/wiki/Security_information_and_event_management) solution such as [Microsoft Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/overview) for automated analysis and patterns recognition.
+
+#### Implement access rights management software
 Carefully managing your Active Directory service accounts is crucial to preventing misuse of broad access and privileges. An access rights management tool can be beneficial to ensure user accounts are set up and managed with appropriate permissions and access.
 
