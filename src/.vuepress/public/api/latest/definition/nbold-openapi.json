@@ -65,13 +65,6 @@
       }
     },
     {
-      "name": "Microsoft Teams channels",
-      "description": "Microsoft Teams channels.",
-      "externalDocs": {
-        "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi"
-      }
-    },
-    {
       "name": "Users",
       "description": "Users from your Microsoft 365 environment.",
       "externalDocs": {
@@ -496,17 +489,6 @@
             "bearerAuth": []
           }
         ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "language",
-            "description": "Optional. Default to 'en'. Language code to be used to filter the colection of templates, for instance 'en' or 'en-uk'.",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK - Returns a CatalogTemplates object (Collection of CatalogTemplate objects).",
@@ -517,33 +499,297 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/catalog/templates/{template_id}": {
+      "get": {
+        "tags": [
+          "Templates Catalog"
+        ],
+        "summary": "Get a Microsoft Teams team template",
+        "description": "Get a Microsoft Teams team template by its ID",
+        "operationId": "GetMicrosoftTeamsTeamTemplate",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmicrosoftteamsteamtemplate"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "template_id",
+            "description": "The Microsoft Teams team template ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a CatalogTemplate object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogTemplate"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Templates Catalog"
+        ],
+        "summary": "Set a Microsoft Teams team template",
+        "description": "Set a Microsoft Teams team template by its ID",
+        "operationId": "SetMicrosoftTeamsTeamTemplate",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#setmicrosoftteamsteamtemplate"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "template_id",
+            "description": "The Microsoft Teams team template ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A JSON representation of a Microsoft Teams team template.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CatalogTemplate"
+              }
+            }
           },
-          "400": {
-            "$ref": "#/components/responses/400"
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogTemplate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/catalog/templates/{template_id}/permanent_membership": {
+      "get": {
+        "tags": [
+          "Templates Catalog"
+        ],
+        "summary": "Get permanent members and owners of a Microsoft Teams team template",
+        "description": "Get permanent members and owners of a Microsoft Teams team template",
+        "operationId": "GetMicrosoftTeamsTeamTemplatePermanentMembership",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmicrosoftteamsteamtemplatepermanentmembership"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "template_id",
+            "description": "The Microsoft Teams team template ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a PermanentMembership object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermanentMembership"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Templates Catalog"
+        ],
+        "summary": "Set permanent members and owners of a Microsoft Teams team template",
+        "description": "Set permanent members and owners of a Microsoft Teams team template",
+        "operationId": "SetMicrosoftTeamsTeamTemplatePermanentMembership",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#setmicrosoftteamsteamtemplatepermanentmembership"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "template_id",
+            "description": "The Microsoft Teams team template ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A JSON representation of a Microsoft Teams team template permanent membership settings.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentMembership"
+              }
+            }
           },
-          "401": {
-            "$ref": "#/components/responses/401"
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermanentMembership"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/catalog/templates/{template_id}/permanent_membership/{role}": {
+      "get": {
+        "tags": [
+          "Templates Catalog"
+        ],
+        "summary": "Get permanent members and owners of a Microsoft Teams team template",
+        "description": "Get permanent members or owners of a Microsoft Teams team template",
+        "operationId": "GetMicrosoftTeamsTeamTemplatePermanentMembershipByRole",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#getmicrosoftteamsteamtemplatepermanentmembershipbyrole"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "template_id",
+            "description": "The Microsoft Teams team template ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
-          "402": {
-            "$ref": "#/components/responses/402"
+          {
+            "in": "path",
+            "name": "role",
+            "description": "The Microsoft Teams ownership role (owners / members)",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a PermanentMembers object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermanentMembers"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Templates Catalog"
+        ],
+        "summary": "Set permanent members and owners of a Microsoft Teams team template",
+        "description": "Set permanent members or owners of a Microsoft Teams team template",
+        "operationId": "SetMicrosoftTeamsTeamTemplatePermanentMembershipByRole",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/CatalogApi.html#setmicrosoftteamsteamtemplatepermanentmembershipbyrole"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "template_id",
+            "description": "The Microsoft Teams team template ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
-          "403": {
-            "$ref": "#/components/responses/403"
+          {
+            "in": "path",
+            "name": "role",
+            "description": "The Microsoft Teams ownership role (owners / members)",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "A JSON representation of a Microsoft Teams team template permanent members.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentMembers"
+              }
+            }
           },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "429": {
-            "$ref": "#/components/responses/429"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "default": {
-            "$ref": "#/components/responses/500"
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermanentMembers"
+                }
+              }
+            }
           }
         }
       }
@@ -564,17 +810,6 @@
             "bearerAuth": []
           }
         ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "language",
-            "description": "Optional. Default to 'en'. Language code to be used to filter the colection of templates, for instance 'en' or 'en-uk'.",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK - Returns a CatalogTemplates object (Collection of CatalogTemplate objects).",
@@ -585,33 +820,6 @@
                 }
               }
             }
-          },
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "402": {
-            "$ref": "#/components/responses/402"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "429": {
-            "$ref": "#/components/responses/429"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "default": {
-            "$ref": "#/components/responses/500"
           }
         }
       }
@@ -1366,6 +1574,45 @@
       }
     },
     "/teams/{teamId}/members": {
+      "get": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Get team members",
+        "description": "Get team members.",
+        "operationId": "GetTeamMembers",
+        "externalDocs": {
+          "url": "https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteammember"
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The team ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK - Returns a collection of team members object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamMembers"
+                }
+              }
+            }
+          }
+        }
+      },
       "post": {
         "tags": [
           "Teams"
@@ -3114,6 +3361,14 @@
           "role"
         ]
       },
+      "TeamMembers": {
+        "title": "Team members",
+        "description": "Collection of members of a Microsoft Teams team.",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TeamMember"
+        }
+      },
       "TeamMember": {
         "title": "Team Member",
         "description": "Team member.",
@@ -3918,6 +4173,19 @@
           "signature": {
             "description": "Calculated hook signature",
             "type": "string"
+          }
+        }
+      },
+      "PermanentMembership": {
+        "title": "Permanent membership settings",
+        "description": "Owners and members of permanent membership settings.",
+        "type": "object",
+        "properties": {
+          "members": {
+            "$ref": "#/components/schemas/PermanentMembers"
+          },
+          "owners": {
+            "$ref": "#/components/schemas/PermanentMembers"
           }
         }
       },

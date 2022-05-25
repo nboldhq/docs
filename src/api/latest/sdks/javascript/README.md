@@ -151,11 +151,18 @@ Class | Method | HTTP request | Description
 *NBoldApi.TeamsApi* | [**getTeam**](docs/TeamsApi.md#getTeam) | **GET** /teams/{teamId} | Get a team
 *NBoldApi.TeamsApi* | [**getTeamChannelTabs**](docs/TeamsApi.md#getTeamChannelTabs) | **GET** /teams/{teamId}/channels/{channelId}/tabs | Get team channel tabs
 *NBoldApi.TeamsApi* | [**getTeamChannels**](docs/TeamsApi.md#getTeamChannels) | **GET** /teams/{teamId}/channels | Get team channels
+*NBoldApi.TeamsApi* | [**getTeamMembers**](docs/TeamsApi.md#getTeamMembers) | **GET** /teams/{teamId}/members | Get team members
 *NBoldApi.TeamsApi* | [**getTeamPrimaryChannel**](docs/TeamsApi.md#getTeamPrimaryChannel) | **GET** /teams/{teamId}/channels/primary | Get the primary channel of a team
 *NBoldApi.TeamsApi* | [**unarchiveTeam**](docs/TeamsApi.md#unarchiveTeam) | **POST** /teams/{teamId}/unarchive | Unarchive a team
 *NBoldApi.TeamsApi* | [**updateTeam**](docs/TeamsApi.md#updateTeam) | **PATCH** /teams/{teamId} | Update a team
 *NBoldApi.TemplatesCatalogApi* | [**getCatalogTemplates**](docs/TemplatesCatalogApi.md#getCatalogTemplates) | **GET** /catalog/templates | Get teams templates
+*NBoldApi.TemplatesCatalogApi* | [**getMicrosoftTeamsTeamTemplate**](docs/TemplatesCatalogApi.md#getMicrosoftTeamsTeamTemplate) | **GET** /catalog/templates/{template_id} | Get a Microsoft Teams team template
+*NBoldApi.TemplatesCatalogApi* | [**getMicrosoftTeamsTeamTemplatePermanentMembership**](docs/TemplatesCatalogApi.md#getMicrosoftTeamsTeamTemplatePermanentMembership) | **GET** /catalog/templates/{template_id}/permanent_membership | Get permanent members and owners of a Microsoft Teams team template
+*NBoldApi.TemplatesCatalogApi* | [**getMicrosoftTeamsTeamTemplatePermanentMembershipByRole**](docs/TemplatesCatalogApi.md#getMicrosoftTeamsTeamTemplatePermanentMembershipByRole) | **GET** /catalog/templates/{template_id}/permanent_membership/{role} | Get permanent members and owners of a Microsoft Teams team template
 *NBoldApi.TemplatesCatalogApi* | [**getMyCatalogTemplates**](docs/TemplatesCatalogApi.md#getMyCatalogTemplates) | **GET** /me/catalog/templates | Get my teams templates
+*NBoldApi.TemplatesCatalogApi* | [**setMicrosoftTeamsTeamTemplate**](docs/TemplatesCatalogApi.md#setMicrosoftTeamsTeamTemplate) | **PUT** /catalog/templates/{template_id} | Set a Microsoft Teams team template
+*NBoldApi.TemplatesCatalogApi* | [**setMicrosoftTeamsTeamTemplatePermanentMembership**](docs/TemplatesCatalogApi.md#setMicrosoftTeamsTeamTemplatePermanentMembership) | **PUT** /catalog/templates/{template_id}/permanent_membership | Set permanent members and owners of a Microsoft Teams team template
+*NBoldApi.TemplatesCatalogApi* | [**setMicrosoftTeamsTeamTemplatePermanentMembershipByRole**](docs/TemplatesCatalogApi.md#setMicrosoftTeamsTeamTemplatePermanentMembershipByRole) | **PUT** /catalog/templates/{template_id}/permanent_membership/{role} | Set permanent members and owners of a Microsoft Teams team template
 *NBoldApi.UsersApi* | [**getUsers**](docs/UsersApi.md#getUsers) | **GET** /users | Retreive users from your Microsoft 365 environment
 *NBoldApi.WebhooksApi* | [**createHook**](docs/WebhooksApi.md#createHook) | **POST** /hooks | Create a new webhook
 *NBoldApi.WebhooksApi* | [**deleteHook**](docs/WebhooksApi.md#deleteHook) | **DELETE** /hooks/{hookId} | Delete a webhook
@@ -197,6 +204,7 @@ Class | Method | HTTP request | Description
  - [NBoldApi.MetadataQueryResult](docs/MetadataQueryResult.md)
  - [NBoldApi.OwnerUserIdentifier](docs/OwnerUserIdentifier.md)
  - [NBoldApi.PermanentMember](docs/PermanentMember.md)
+ - [NBoldApi.PermanentMembership](docs/PermanentMembership.md)
  - [NBoldApi.RejectedApprovalResponsePayload](docs/RejectedApprovalResponsePayload.md)
  - [NBoldApi.Report](docs/Report.md)
  - [NBoldApi.ReportUrl](docs/ReportUrl.md)

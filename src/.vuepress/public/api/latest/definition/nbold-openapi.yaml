@@ -1270,6 +1270,30 @@ paths:
           $ref: "#/components/responses/500"
 
   /teams/{teamId}/members:
+    get:
+      tags:
+        - Teams
+      summary: Get team members
+      description: Get team members.
+      operationId: GetTeamMembers
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteammember
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: teamId
+          in: path
+          description: The team ID.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK - Returns a collection of team members object.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TeamMembers"
     post:
       tags:
         - Teams
@@ -2465,6 +2489,13 @@ components:
           type: string
       required:
         - role
+
+    TeamMembers:
+      title: Team members
+      description: Collection of members of a Microsoft Teams team.
+      type: array
+      items:
+        $ref: "#/components/schemas/TeamMember"
 
     TeamMember:
       title: Team Member

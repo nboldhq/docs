@@ -45,6 +45,7 @@ import MemberUserIdentifier from './model/MemberUserIdentifier';
 import MetadataQueryResult from './model/MetadataQueryResult';
 import OwnerUserIdentifier from './model/OwnerUserIdentifier';
 import PermanentMember from './model/PermanentMember';
+import PermanentMembership from './model/PermanentMembership';
 import RejectedApprovalResponsePayload from './model/RejectedApprovalResponsePayload';
 import Report from './model/Report';
 import ReportUrl from './model/ReportUrl';
@@ -308,6 +309,12 @@ export {
      * @property {module:model/PermanentMember}
      */
     PermanentMember,
+
+    /**
+     * The PermanentMembership model constructor.
+     * @property {module:model/PermanentMembership}
+     */
+    PermanentMembership,
 
     /**
      * The RejectedApprovalResponsePayload model constructor.

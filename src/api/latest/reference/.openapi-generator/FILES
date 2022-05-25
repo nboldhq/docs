@@ -41,6 +41,7 @@ Models/MemberUserIdentifier.md
 Models/MetadataQueryResult.md
 Models/OwnerUserIdentifier.md
 Models/PermanentMember.md
+Models/PermanentMembership.md
 Models/RejectedApprovalResponsePayload.md
 Models/Report.md
 Models/ReportUrl.md

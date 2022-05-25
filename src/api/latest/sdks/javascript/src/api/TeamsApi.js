@@ -455,6 +455,49 @@ export default class TeamsApi {
     }
 
     /**
+     * Callback function to receive the result of the getTeamMembers operation.
+     * @callback module:api/TeamsApi~getTeamMembersCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get team members
+     * Get team members.
+     * @param {String} teamId The team ID.
+     * @param {module:api/TeamsApi~getTeamMembersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<Object>}
+     */
+    getTeamMembers(teamId, callback) {
+      let postBody = null;
+      // verify the required parameter 'teamId' is set
+      if (teamId === undefined || teamId === null) {
+        throw new Error("Missing the required parameter 'teamId' when calling getTeamMembers");
+      }
+
+      let pathParams = {
+        'teamId': teamId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [Object];
+      return this.apiClient.callApi(
+        '/teams/{teamId}/members', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getTeamPrimaryChannel operation.
      * @callback module:api/TeamsApi~getTeamPrimaryChannelCallback
      * @param {String} error Error message, if any.

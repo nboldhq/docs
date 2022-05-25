@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getTeam**](TeamsApi.md#getTeam) | **GET** /teams/{teamId} | Get a team
 [**getTeamChannelTabs**](TeamsApi.md#getTeamChannelTabs) | **GET** /teams/{teamId}/channels/{channelId}/tabs | Get team channel tabs
 [**getTeamChannels**](TeamsApi.md#getTeamChannels) | **GET** /teams/{teamId}/channels | Get team channels
+[**getTeamMembers**](TeamsApi.md#getTeamMembers) | **GET** /teams/{teamId}/members | Get team members
 [**getTeamPrimaryChannel**](TeamsApi.md#getTeamPrimaryChannel) | **GET** /teams/{teamId}/channels/primary | Get the primary channel of a team
 [**unarchiveTeam**](TeamsApi.md#unarchiveTeam) | **POST** /teams/{teamId}/unarchive | Unarchive a team
 [**updateTeam**](TeamsApi.md#updateTeam) | **PATCH** /teams/{teamId} | Update a team
@@ -257,6 +258,33 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List**](../Models/TeamChannel.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="getTeamMembers"></a>
+# **getTeamMembers**
+> List getTeamMembers(teamId)
+
+Get team members
+
+    Get team members.
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **teamId** | **String**| The team ID. | [default to null]
+
+### Return type
+
+**List**
 
 ### Authorization
 

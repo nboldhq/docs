@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.23.0](https://github.com/nboldhq/app-platform/compare/v4.22.0...v4.23.0) (2022-05-19)
+
+
+### Bug Fixes
+
+* **app-instghts:** disabled app-instghts client-side script ([4d9f792](https://github.com/nboldhq/app-platform/commit/4d9f792cecc721196f34d61e86203eaa6d30c5bf))
+
+## [4.22.0](https://github.com/nboldhq/app-platform/compare/v4.21.0...v4.22.0) (2022-05-19)
+
+
+### Bug Fixes
+
+* **app-insights:** disabled client-side app-insights integration ([ceef679](https://github.com/nboldhq/app-platform/commit/ceef6795c2863677f8e170ace3e78976d425b1c2))
+
+## [4.21.0](https://github.com/nboldhq/app-platform/compare/v4.20.0...v4.21.0) (2022-05-19)
+
+
+### Bug Fixes
+
+* **build:** updated production cdn scripts ([9ac4a51](https://github.com/nboldhq/app-platform/commit/9ac4a5132bc5c642dda9686512ce6cb860b64477))
+
+## [4.20.0](https://github.com/nboldhq/app-platform/compare/v4.19.0...v4.20.0) (2022-05-19)
+
+## [4.19.0](https://github.com/nboldhq/app-platform/compare/v4.18.0...v4.19.0) (2022-05-19)
+
+
+### Features
+
+* **api:** added /catalog/templates endpoints for granular management ([922da0e](https://github.com/nboldhq/app-platform/commit/922da0eb4a8593637f307eef1cb8863d6e3bd363))
+* **bot:** added bot packages ([ac7b42f](https://github.com/nboldhq/app-platform/commit/ac7b42f0d659357c409bfe48e1a67b39f4a5dc8f))
+* **connected-apps:** added connected-apps button + embed ([1a578c8](https://github.com/nboldhq/app-platform/commit/1a578c8b683dbcb6fa11d666721708c2e3cfb16d)), closes [#1176](https://github.com/nboldhq/app-platform/issues/1176)
+* **events:** fixed connectivity to events server ([3c5e8f5](https://github.com/nboldhq/app-platform/commit/3c5e8f5e4ec25f2b048c2b4061241eb995faaf8f))
+* **metadata:** added metadata query api ([612a66f](https://github.com/nboldhq/app-platform/commit/612a66fe589468a31875e692062bb4ecde86277a))
+* **rbac:** added governance manager role in rbac settings ([1c4ae58](https://github.com/nboldhq/app-platform/commit/1c4ae5886f1070e4b3f9653ecb9c17e897a59ddb)), closes [#1178](https://github.com/nboldhq/app-platform/issues/1178)
+* **reports:** added "user_report_viewed" analytics event ([4610b4d](https://github.com/nboldhq/app-platform/commit/4610b4df991209d32a8d9500f3f0124d319df415))
+* **reports:** added reports categorization + dynamic reports height ([a4b72b2](https://github.com/nboldhq/app-platform/commit/a4b72b27dcc428d7954cda4735815ccb924541d5))
+* **reports:** added reports navigation and dynamic loading ([b9e9aca](https://github.com/nboldhq/app-platform/commit/b9e9aca29923f1ec6a0e8cd30ddaf1c0c8615543))
+* **webhooks:** updated webhook creation to support Tray ([0c48af7](https://github.com/nboldhq/app-platform/commit/0c48af768b4a1e24073f6875ff9696a9a5b4567d))
+
+
+### Bug Fixes
+
+* **api:** fixed issue with delete archive and rename teams operations ([7b61164](https://github.com/nboldhq/app-platform/commit/7b6116479f338c4d96821bc49f8ca6244c31bc5d)), closes [#78](https://github.com/nboldhq/app-platform/issues/78)
+* **connected-apps:** fixed iframe to host communication ([18a3c8b](https://github.com/nboldhq/app-platform/commit/18a3c8b3ca3757e7142dc56f18e77032a3f9d2eb))
+* **connected-apps:** whitelisted connected-apps test environment url ([95d1730](https://github.com/nboldhq/app-platform/commit/95d17309d9918e129959456caa04831b2d9432e6))
+* **db:** fixed events db name in PRD ([469fab5](https://github.com/nboldhq/app-platform/commit/469fab52b59ce5b5ae3948cb1589e5442649e20f))
+* **git:** fixed large log files in commits ([0093061](https://github.com/nboldhq/app-platform/commit/0093061160fecc4a5b3e94f5f42d7f6f595a3441))
+
 ## [4.18.0](https://github.com/nboldhq/app-platform/compare/v4.17.0...v4.18.0) (2022-03-08)
 
 

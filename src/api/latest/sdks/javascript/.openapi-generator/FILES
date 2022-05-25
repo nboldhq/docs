@@ -39,6 +39,7 @@ docs/MetadataQueryResult.md
 docs/MicrosoftTeamsTeamsApi.md
 docs/OwnerUserIdentifier.md
 docs/PermanentMember.md
+docs/PermanentMembership.md
 docs/RejectedApprovalResponsePayload.md
 docs/Report.md
 docs/ReportUrl.md
@@ -114,6 +115,7 @@ src/model/MemberUserIdentifier.js
 src/model/MetadataQueryResult.js
 src/model/OwnerUserIdentifier.js
 src/model/PermanentMember.js
+src/model/PermanentMembership.js
 src/model/RejectedApprovalResponsePayload.js
 src/model/Report.js
 src/model/ReportUrl.js
@@ -135,3 +137,4 @@ src/model/TeamProvisioningRequestTeamMembership.js
 src/model/TeamProvisioningRequestTemplate.js
 src/model/User1.js
 src/model/Users.js
+test/model/PermanentMembership.spec.js

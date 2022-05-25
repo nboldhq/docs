@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Fri, 29 Apr 2022 23:23:55 GMT*
+📆 *Generated: Wed, 25 May 2022 01:07:26 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -108,6 +108,7 @@ To help you get started, you can also download our [.env file template](/hosting
 | `WEB_PUBLICURL` | Optional ☑️ | (string) Web server public URL. Defaults "http://localhost". |
 | `WEB_CDN_PUBLICURL` | Optional ☑️ | (string) Root URL of the CDN used by the web server. Defaults to "" (means that the web server is serving the static assets itself). |
 | `WEB_SESSION_SECRET` | Optional ☑️ | (string) Secret server-side string used to encrypt session data. Defaults to "secret" |
+| `WEB_TIMEOUT` | Optional ☑️ | (string) Web server connection timeout, can be a string accepted by the ms (https://www.npmjs.com/package/ms#readme) module. Defaults to "5s". |
 
 
 
@@ -118,6 +119,7 @@ To help you get started, you can also download our [.env file template](/hosting
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
 | `API_PUBLICURL` | Optional ☑️ | (string) API server public URL. Defaults to "http://localhost/api/v1.0". |
+| `API_TIMEOUT` | Optional ☑️ | (string) Web server connection timeout, can be a string accepted by the ms (https://www.npmjs.com/package/ms#readme) module. Defaults to "5s". |
 
 
 
@@ -161,8 +163,20 @@ To help you get started, you can also download our [.env file template](/hosting
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
+| `REPORTS_ENABLED` | Optional ☑️ | (boolean) Enable reporting features. Defaults to "true". |
 | `REPORTS_SERVER_URL` | Optional ☑️ | (string) Reports server root URL. Defaults to "http://localhost:5001". |
 | `REPORTS_SERVER_SECRET_KEY` | Optional ☑️ | (string) Token used secure access to embedded reports. Defaults to "". |
+
+
+
+### Connected Apps
+*Connected Apps Server*
+
+---
+| Environment Variable | Status | Description |
+|:---------------------|:-------|:------------|
+| `CONNECTEDAPPS_ENABLED` | Optional ☑️ | (boolean) Enable integration with our connected apps platform. Defaults to "true". |
+| `CONNECTEDAPPS_URL` | Optional ☑️ | (string) Connected apps server root URL. Defaults to "https://connected-apps.nbold.io/connected-apps". |
 
 
 
@@ -249,18 +263,6 @@ To help you get started, you can also download our [.env file template](/hosting
 
 
 
-### Analytics
-*Analytics configuration*
-
----
-| Environment Variable | Status | Description |
-|:---------------------|:-------|:------------|
-| `ANALYTICS_ENABLED` | Optional ☑️ | (boolean) Enable integration with our analytics platform based on [Plausible Analytics](https://plausible.io/) that collects only anonymous data. Defaults to "false". |
-| `ANALYTICS_BASEURL` | Optional ☑️ | (string) Base URL of the analytics service. Defaults to "https://analytics.salestim.io". |
-| `ANALYTICS_DATA_DOMAIN` | Optional ☑️ | (string) Data domain as defined in the analytics server, useful if there are multiple analysed domains. Defaults to "". |
-
-
-
 ### Microsoft Application Insights
 *Microsoft Application Insights*
 
@@ -343,35 +345,6 @@ To help you get started, you can also download our [.env file template](/hosting
 | `MICROSOFT_MARKETPLACE_BACKEND_APP_ID` | Optional ☑️ | (string) Microsoft Azure client ID used for interactions with the Microsoft Marketplace API. Defaults to "". |
 | `MICROSOFT_MARKETPLACE_PUBLISHER_ID` | Optional ☑️ | (string) Publisher ID from the Microsoft Marketplace registration. Defaults to "". |
 | `MICROSOFT_MARKETPLACE_OFFER_ID` | Optional ☑️ | (string) Offer ID from the Microsoft Marketplace registration. Defaults to "". |
-
-
-
-### Feature Toggles Service
-*[Feature Toggles](https://en.wikipedia.org/wiki/Feature_toggle) Service build on the [Unleash](https://docs.getunleash.io/) service.  This service brings advanced options to enable/disable features for specific audiences of users, such as a pilot group of users that needs to validate a new feature of the platform.*
-
----
-| Environment Variable | Status | Description |
-|:---------------------|:-------|:------------|
-| `FEATURE_TOGGLES_SERVICE_ENABLED` | Optional ☑️ | (boolean) Enable the feature toggles server services. Defaults to "false". |
-| `FEATURE_TOGGLES_SERVICE_URL` | Optional ☑️ | (string) Absolute URL of the feature toggles service. Defaults to "http://localhost/feature-toggles/server". |
-| `FEATURE_TOGGLES_SERVICE_BASEPATH` | Optional ☑️ | (string) Relative URL of the feature toggles service. Defaults to "/feature-toggles/server". |
-| `FEATURE_TOGGLES_SERVICE_SMTP_HOST_ADDR` | Optional ☑️ | (string) SMTP host used by the feature toggles service. Defaults to "localhost". |
-| `FEATURE_TOGGLES_SERVICE_SMTP_HOST_PORT` | Optional ☑️ | (number) SMTP port used by the feature toggles service. Defaults to "465". |
-| `FEATURE_TOGGLES_SERVICE_SMTP_HOST_SSL_ENABLED` | Optional ☑️ | (boolean) Defines if it is required to use SSL to connected to the SMTP server used by the feature toggles service. Defaults to "false". |
-| `FEATURE_TOGGLES_SERVICE_SMTP_USER_NAME` | Optional ☑️ | (string) User used to authenticate against the SMTP server used by the feature toggles service. Defaults to "". |
-| `FEATURE_TOGGLES_SERVICE_SMTP_USER_PASSWORD` | Optional ☑️ | (string) Password used to authenticate against the SMTP server used by the feature toggles service. Defaults to "". |
-| `FEATURE_TOGGLES_SERVICE_SMTP_SENDER` | Optional ☑️ | (string) Serder (FROM:) of the emails emitted by the feature toggles service. Defaults to "notifications@salestim.io". |
-| `FEATURE_TOGGLES_DB_HOST` | Optional ☑️ | (string) PostgreSql host used by the feature toggles service. Defaults to "localhost". |
-| `FEATURE_TOGGLES_DB_PORT` | Optional ☑️ | (number) PostgreSql port used by the feature toggles service. Defaults to "5432". |
-| `FEATURE_TOGGLES_DB_SSL` | Optional ☑️ | (boolean) Defines if it is required to use SSL to connected to the PostgreSql server used by of the feature toggles service. Defaults to "false". |
-| `FEATURE_TOGGLES_DB_NAME` | Optional ☑️ | (string) Database used by the feature toggles service. Defaults to "st_featuretoggles_db". |
-| `FEATURE_TOGGLES_DB_SCHEMA` | Optional ☑️ | (string) Database schema used by the feature toggles service. Defaults to "public". |
-| `FEATURE_TOGGLES_DB_USERNAME` | Optional ☑️ | (string) User used to authenticate against PostgreSql server used by the feature toggles service. Defaults to "". |
-| `FEATURE_TOGGLES_DB_PASSWORD` | Optional ☑️ | (string) Password used to authenticate against PostgreSql server used by the feature toggles service. Defaults to "". |
-| `FEATURE_TOGGLES_PROXY_ENABLED` | Optional ☑️ | (boolean) Enable the feature toggles proxy service for client-side requests. Defaults to "false". |
-| `FEATURE_TOGGLES_PROXY_SERVICE_URL` | Optional ☑️ | (string) Absolute URL of the feature toggles proxy. Defaults to "http://localhost/feature-toggles/proxy". |
-| `FEATURE_TOGGLES_PROXY_CLIENT_USERNAME` | Optional ☑️ | (string) User used to authenticate client-side against the feature toggles proxy service. Defaults to "". |
-| `FEATURE_TOGGLES_PROXY_CLIENT_SECRET` | Optional ☑️ | (string) Password used to authenticate client-side against the feature toggles proxy service. Defaults to "". |
 
 
 

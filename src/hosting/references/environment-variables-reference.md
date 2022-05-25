@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Fri, 29 Apr 2022 23:23:55 GMT*
+📆 *Generated: Wed, 25 May 2022 01:07:26 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -106,12 +106,16 @@ WEB_PUBLICURL=http://localhost
 WEB_CDN_PUBLICURL=
 # (string) Secret server-side string used to encrypt session data. Defaults to "secret"
 WEB_SESSION_SECRET=secret
+# (string) Web server connection timeout, can be a string accepted by the ms (https://www.npmjs.com/package/ms#readme) module. Defaults to "5s".
+WEB_TIMEOUT=5s
 
 # API Services
 # API services (REST API)
 
 # (string) API server public URL. Defaults to "http://localhost/api/v1.0".
 API_PUBLICURL=http://localhost/api/v1.0
+# (string) Web server connection timeout, can be a string accepted by the ms (https://www.npmjs.com/package/ms#readme) module. Defaults to "5s".
+API_TIMEOUT=5s
 
 # Scheduler Services
 # Scheduler services (Manages execution plans for scheduled jobs)
@@ -156,10 +160,20 @@ EVENTSCOLLECTOR_TRACK_METHOD=POST
 # Reports Server
 # Reports Server
 
+# (boolean) Enable reporting features. Defaults to "true".
+REPORTS_ENABLED=true
 # (string) Reports server root URL. Defaults to "http://localhost:5001".
 REPORTS_SERVER_URL=http://localhost:5001
 # (string) Token used secure access to embedded reports. Defaults to "".
 REPORTS_SERVER_SECRET_KEY=
+
+# Connected Apps
+# Connected Apps Server
+
+# (boolean) Enable integration with our connected apps platform. Defaults to "true".
+CONNECTEDAPPS_ENABLED=true
+# (string) Connected apps server root URL. Defaults to "https://connected-apps.nbold.io/connected-apps".
+CONNECTEDAPPS_URL=https://connected-apps.nbold.io/connected-apps
 
 # PostgreSQL Events Database
 # Database for application events and audit trails
@@ -233,23 +247,13 @@ MAIL_ACTION_MSG_ORIGINATOR=
 # Webhooks advanced configuration
 
 # (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]".
-WEBHOOKS_USER_AGENT=nBold-Webhook/v4.18.0
+WEBHOOKS_USER_AGENT=nBold-Webhook/v4.23.41
 # (number) Interval in ms between two attempts. Defaults to "10000".
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to "2".
 WEBHOOKS_MAX_RETRY=2
 # (number) Timeout in ms before aborting the request if the server is unresponsive. Defaults to "5000".
 WEBHOOKS_TIMEOUT=5000
-
-# Analytics
-# Analytics configuration
-
-# (boolean) Enable integration with our analytics platform based on [Plausible Analytics](https://plausible.io/) that collects only anonymous data. Defaults to "false".
-ANALYTICS_ENABLED=false
-# (string) Base URL of the analytics service. Defaults to "https://analytics.salestim.io".
-ANALYTICS_BASEURL=https://analytics.salestim.io
-# (string) Data domain as defined in the analytics server, useful if there are multiple analysed domains. Defaults to "".
-ANALYTICS_DATA_DOMAIN=
 
 # Microsoft Application Insights
 # Microsoft Application Insights
@@ -283,7 +287,7 @@ GITHUB_INTEGRATION_ENABLED=false
 # (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com".
 GITHUB_API_BASE_URL=https://api.github.com
 # (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]".
-GITHUB_USER_AGENT=nBold-GitHub/4.18.0
+GITHUB_USER_AGENT=nBold-GitHub/4.23.41
 # (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "".
 GITHUB_OWNER=
 # (string) GitHub repository where to create alert issues. Defaults to "".
@@ -336,50 +340,6 @@ MICROSOFT_MARKETPLACE_BACKEND_APP_ID=
 MICROSOFT_MARKETPLACE_PUBLISHER_ID=
 # (string) Offer ID from the Microsoft Marketplace registration. Defaults to "".
 MICROSOFT_MARKETPLACE_OFFER_ID=
-
-# Feature Toggles Service
-# [Feature Toggles](https://en.wikipedia.org/wiki/Feature_toggle) Service build on the [Unleash](https://docs.getunleash.io/) service.  This service brings advanced options to enable/disable features for specific audiences of users, such as a pilot group of users that needs to validate a new feature of the platform.
-
-# (boolean) Enable the feature toggles server services. Defaults to "false".
-FEATURE_TOGGLES_SERVICE_ENABLED=false
-# (string) Absolute URL of the feature toggles service. Defaults to "http://localhost/feature-toggles/server".
-FEATURE_TOGGLES_SERVICE_URL=http://localhost/feature-toggles/server
-# (string) Relative URL of the feature toggles service. Defaults to "/feature-toggles/server".
-FEATURE_TOGGLES_SERVICE_BASEPATH=/feature-toggles/server
-# (string) SMTP host used by the feature toggles service. Defaults to "localhost".
-FEATURE_TOGGLES_SERVICE_SMTP_HOST_ADDR=localhost
-# (number) SMTP port used by the feature toggles service. Defaults to "465".
-FEATURE_TOGGLES_SERVICE_SMTP_HOST_PORT=465
-# (boolean) Defines if it is required to use SSL to connected to the SMTP server used by the feature toggles service. Defaults to "false".
-FEATURE_TOGGLES_SERVICE_SMTP_HOST_SSL_ENABLED=false
-# (string) User used to authenticate against the SMTP server used by the feature toggles service. Defaults to "".
-FEATURE_TOGGLES_SERVICE_SMTP_USER_NAME=
-# (string) Password used to authenticate against the SMTP server used by the feature toggles service. Defaults to "".
-FEATURE_TOGGLES_SERVICE_SMTP_USER_PASSWORD=
-# (string) Serder (FROM:) of the emails emitted by the feature toggles service. Defaults to "notifications@salestim.io".
-FEATURE_TOGGLES_SERVICE_SMTP_SENDER=notifications@salestim.io
-# (string) PostgreSql host used by the feature toggles service. Defaults to "localhost".
-FEATURE_TOGGLES_DB_HOST=localhost
-# (number) PostgreSql port used by the feature toggles service. Defaults to "5432".
-FEATURE_TOGGLES_DB_PORT=5432
-# (boolean) Defines if it is required to use SSL to connected to the PostgreSql server used by of the feature toggles service. Defaults to "false".
-FEATURE_TOGGLES_DB_SSL=false
-# (string) Database used by the feature toggles service. Defaults to "st_featuretoggles_db".
-FEATURE_TOGGLES_DB_NAME=st_featuretoggles_db
-# (string) Database schema used by the feature toggles service. Defaults to "public".
-FEATURE_TOGGLES_DB_SCHEMA=public
-# (string) User used to authenticate against PostgreSql server used by the feature toggles service. Defaults to "".
-FEATURE_TOGGLES_DB_USERNAME=
-# (string) Password used to authenticate against PostgreSql server used by the feature toggles service. Defaults to "".
-FEATURE_TOGGLES_DB_PASSWORD=
-# (boolean) Enable the feature toggles proxy service for client-side requests. Defaults to "false".
-FEATURE_TOGGLES_PROXY_ENABLED=false
-# (string) Absolute URL of the feature toggles proxy. Defaults to "http://localhost/feature-toggles/proxy".
-FEATURE_TOGGLES_PROXY_SERVICE_URL=http://localhost/feature-toggles/proxy
-# (string) User used to authenticate client-side against the feature toggles proxy service. Defaults to "".
-FEATURE_TOGGLES_PROXY_CLIENT_USERNAME=
-# (string) Password used to authenticate client-side against the feature toggles proxy service. Defaults to "".
-FEATURE_TOGGLES_PROXY_CLIENT_SECRET=
 
 --------------------------------------------------------------------------------
 # Advanced Tuning (Optional)

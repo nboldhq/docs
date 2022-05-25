@@ -1,5 +1,5 @@
 # App Data Model Reference
-📆 *Generated: Fri, 29 Apr 2022 23:23:55 GMT*
+📆 *Generated: Wed, 25 May 2022 01:07:26 GMT*
 
 
 This document lists all the tables and their columns available from our database.
@@ -97,7 +97,7 @@ Each column is specified with:
 | `channel_oid` | STRING | false | false | false |
 | `metadata` | JSONB | true | false | false |
 
-## MICROSOFT_TEAMS_CHAT_MESSAGE
+## MICROSOFT_TEAMS_CHANNEL_MESSAGES
 *Table: messages*
 
 | Name | Type | Allow null | Auto increment | Primary key |
