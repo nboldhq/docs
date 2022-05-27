@@ -33,7 +33,7 @@ To complete these steps, you MUST be a Microsoft Teams Administrator or a Micros
 
 This "targeted" package is a personal Microsoft Teams app comprised of only one tab (Home).
 
-[nBold Home package](https://dist.salestim.io/packages/io.nbold.targeted.home.prd.zip)
+[nBold Home package](https://dist.salestim.io/packages/io.nbold.home.prd.zip)
 
 ### 2. Connect to Microsoft Teams as an administrator
 

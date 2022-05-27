@@ -40,7 +40,7 @@ This "targeted" package is a personal Microsoft Teams app comprised of 1 tab (Ho
 
 | Package name | Download link |
 |--------------|---------------|
-| nBold Home | [![](https://img.shields.io/badge/Microsoft_Teams-Download_nBold_Home_Package-darkslateblue?logo=microsoft-teams&logoColor=white&style=flat)](https://dist.salestim.io/packages/io.nbold.targeted.home.prd.zip) |
+| nBold Home | [![](https://img.shields.io/badge/Microsoft_Teams-Download_nBold_Home_Package-darkslateblue?logo=microsoft-teams&logoColor=white&style=flat)](https://dist.salestim.io/packages/io.nbold.home.prd.zip) |
 
 ::: tip Deployment procedure
 [Setup pinned apps](https://docs.nbold.co/articles/3507463-set-up-the-home-page)
