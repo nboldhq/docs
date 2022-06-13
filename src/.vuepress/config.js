@@ -159,11 +159,6 @@ module.exports = {
 
     // Sidebar: Vertical navigation
     sidebar: {
-      '/solutions/': [
-        { title: 'About', path: '/solutions/' },
-        getSideBar('/solutions/sales', 'Sales'),
-        getSideBar('/solutions/marketing', 'Marketing')
-      ],
       '/hosting/': [
         { title: 'About', path: '/hosting/' },
         {

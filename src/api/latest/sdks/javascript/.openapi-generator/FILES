@@ -137,4 +137,3 @@ src/model/TeamProvisioningRequestTeamMembership.js
 src/model/TeamProvisioningRequestTemplate.js
 src/model/User1.js
 src/model/Users.js
-test/model/PermanentMembership.spec.js

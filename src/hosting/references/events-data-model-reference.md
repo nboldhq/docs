@@ -1,5 +1,5 @@
 # Events Data Model Reference
-📆 *Generated: Wed, 25 May 2022 01:07:26 GMT*
+📆 *Generated: Fri, 03 Jun 2022 05:20:52 GMT*
 
 
 This document lists all the events tracked in our events database.
@@ -28,13 +28,13 @@ Each event is specified with:
 | Services stopped | When a server instance has stopped its services | evt_services_stopped |
 | Scheduled job completed | When a scheduled job has been executed and is done | evt_scheduled_job_run_completed |
 | Webhook executed | When a webhook has been executed | evt_webhook_run_executed |
-| Team created | When a team has been created | evt_microsoft_teams_team_provisioning_started |
-| Team provisioning audit entry created | When a team provisioning job has created a new entry in its audit trail | evt_microsoft_teams_team_provisioning_audit_trails |
-| Team created | When a team has been created | evt_microsoft_teams_team_created |
-| Team provisioning completed | When the provisioning of a team has been completed | evt_microsoft_teams_team_provisioning_completed |
-| Team template attached | When a template has been attached to a team | evt_microsoft_teams_team_template_attached |
-| Team deletion detected | When the deletion of a team has been detected | evt_microsoft_teams_team_deleted |
-| Template deletion detected | When the deletion of a template has been detected | evt_microsoft_teams_team_template_deleted |
+| Team created | When a team has been created | evt_team_provisioning_started |
+| Team provisioning audit entry created | When a team provisioning job has created a new entry in its audit trail | evt_team_provisioning_audit_trails |
+| Team created | When a team has been created | evt_team_created |
+| Team provisioning completed | When the provisioning of a team has been completed | evt_team_provisioning_completed |
+| Team template attached | When a template has been attached to a team | evt_team_template_attached |
+| Team deletion detected | When the deletion of a team has been detected | evt_team_deleted |
+| Template deletion detected | When the deletion of a template has been detected | evt_team_template_deleted |
 | Permanent membership policy control completed | When the permenent membership policy control job is done for a specific tenant | evt_microsoft_teams_permanent_membership_policy_control_completed |
 | Permanent membership policy team user invited | When the permanent membership policy control job has invited a user to a team (as a member or as an owner) | evt_microsoft_teams_permanent_membership_policy_team_user_invited |
 | Permanent membership policy channel user invited | When the permanent membership policy control job has invited a user to a channel (as a member or as an owner) | evt_microsoft_teams_permanent_membership_policy_channel_user_invited |
@@ -44,9 +44,9 @@ Each event is specified with:
 | Microsoft Marketplace subscription reinstated | When a Microsoft Marketplace subscription has been reinstated | evt_microsoft_marketplace_subscription_reinstated |
 | Microsoft Marketplace subscription unsubscribed | When a Microsoft Marketplace subscription has been unsubscribed | evt_microsoft_marketplace_subscription_unsubscribed |
 | Microsoft Marketplace subscription unknown action detected | When an unknown Microsoft Marketplace subscription action has been detected | evt_microsoft_marketplace_subscription_unknown_action_detected |
-| Team creation approval requested | When a team creation approval workflow is requested | evt_microsoft_teams_team_creation_approval_requested |
-| Team creation approved | When a team creation was approved from an approval workflow | evt_microsoft_teams_team_creation_approved |
-| Team creation rejected | When a team creation was rejected from an approval workflow | evt_microsoft_teams_team_creation_rejected |
+| Team creation approval requested | When a team creation approval workflow is requested | evt_team_creation_approval_requested |
+| Team creation approved | When a team creation was approved from an approval workflow | evt_team_creation_approved |
+| Team creation rejected | When a team creation was rejected from an approval workflow | evt_team_creation_rejected |
 | Admin consent performed | When a user has performed the Microsft Teams admin consent process | evt_user_microsoft_teams_admin_consent_performed |
 | Service account registration performed | When a user has performed the Microsoft Teams service account registration process | evt_user_microsoft_teams_service_account_registration_performed |
 | RBAC settings updated | A user has updated role-based access control settings | evt_user_rbac_settings_updated |

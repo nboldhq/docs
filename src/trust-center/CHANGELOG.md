@@ -809,7 +809,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Cached infos used to authenticate calls to the platform's API
     - All the server-side methods used during the authentication of api requests are now cached
       - Retreive the organization from Cosmos DB:
-        - `cosmosDbServices.getOrganizationByTenantId`
+        - `cosmosDbServices.getCustomerByTenantId`
         - `ORGANIZATION_CACHE_DURATION: 1000 * 60 * 5, // 5 minutes`
       - Calculate the roles of the current user from its token
         - `graphServices.userHasDirectoryRole`

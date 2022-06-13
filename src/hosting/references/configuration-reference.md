@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Wed, 25 May 2022 01:07:26 GMT*
+📆 *Generated: Fri, 03 Jun 2022 05:20:52 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -65,7 +65,6 @@ To help you get started, you can also download our [.env file template](/hosting
 | `MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY` | Optional ☑️ | (string) Secret key used to authenticate against Microsoft Azure Storage. Defaults to the default Azure Storage secret key. |
 | `MICROSOFT_AZURE_STORAGE_ENDPOINT` | Optional ☑️ | (string) Microsoft Azure Storage service endpoint. Defaults to the default Azure Storage emulator endpoint. |
 | `MICROSOFT_AZURE_STORAGE_TEMPLATES_PICTURES_CONTAINER` | Optional ☑️ | (string) Name of the container that hosts catalog templates pictures (Has to be created manually), for instance "sttemplatespictures". Defaults to "sttemplatespictures". |
-| `MICROSOFT_AZURE_STORAGE_SCREENSHOTS_CONTAINER` | Optional ☑️ | (string) Name of the container that hosts screenshots generated from the UI when GitHub alerting is enabled (Has to be created manually), for instance "stscreenshots". Defaults to "stscreenshots". |
 
 
 
@@ -81,6 +80,7 @@ To help you get started, you can also download our [.env file template](/hosting
 | `MICROSOFT_COSMOSDB_CONTAINER_PARTITION_KEY` | Optional ☑️ | (string) Property action as a partition key in each collection. Defaults to "/tenantId". |
 | `MICROSOFT_COSMOSDB_MAXRETRYATTEMPTSONTHROTTLEDREQUESTS` | Optional ☑️ | (number) Maximum number of retries in the case where the request fails because the Azure Cosmos DB service has applied rate limiting on the client. Defaults to "9". |
 | `MICROSOFT_COSMOSDB_MAXRETRYWAITTIMEINSECONDS` | Optional ☑️ | (number) Maximum retry time in seconds for the Azure Cosmos DB service. Defaults to "60". |
+| `MICROSOFT_COSMOSDB_DISABLE_SSL_VERIFICATION` | Optional ☑️ | (boolean) Disable SSL verification when connecting to Cosmos DB. This option should not be set to `true` in production. Defaults to "false". |
 
 
 
@@ -93,9 +93,9 @@ To help you get started, you can also download our [.env file template](/hosting
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
-| `APP_DEPLOY` | Optional ☑️ | (string) Deployment environment. Could be "dev", "int", "uat", "ppr", "prd", "self". Defaults to "self". |
-| `APP_ROLE` | Optional ☑️ | (string) Server role. Could be "standalone", "web", "api", "jobs", "scheduler", "integration", "featuretogglesserver", "featuretogglesproxy", "flowserver". Defaults to "standalone". |
-| `APP_PORT` | Optional ☑️ | (number) Application server port. Defaults to the PORT environment variable set by the Azure app service box (or other server/container hosting providers) or to "3000". |
+| `APP_DEPLOY` | Optional ☑️ | (string) Arbitrary string to identify the current deploy, such as "dev", "uat", "production". Defaults to "". |
+| `APP_ROLE` | Required ✅ | (string) Server role. Could be "standalone", "web", "api", "jobs", "scheduler". Defaults to "". |
+| `APP_PORT` | Optional ☑️ | (number) Application server port. Defaults to the PORT environment variable if defined or to "3000". |
 
 
 

@@ -1,14 +1,14 @@
 # Environment Variables
-📆 *Generated: Wed, 25 May 2022 01:07:26 GMT*
+📆 *Generated: Fri, 03 Jun 2022 05:20:52 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
 
 ```sh
---------------------------------------------------------------------------------
+---
 # Backing services
 # Mandatory infrastructure
---------------------------------------------------------------------------------
+---
 
 # Redis
 # Redis service used for caching and queuing
@@ -63,8 +63,6 @@ MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT
 MICROSOFT_AZURE_STORAGE_ENDPOINT=http://localhost:10000/devstoreaccount1
 # (string) Name of the container that hosts catalog templates pictures (Has to be created manually), for instance "sttemplatespictures". Defaults to "sttemplatespictures".
 MICROSOFT_AZURE_STORAGE_TEMPLATES_PICTURES_CONTAINER=sttemplatespictures
-# (string) Name of the container that hosts screenshots generated from the UI when GitHub alerting is enabled (Has to be created manually), for instance "stscreenshots". Defaults to "stscreenshots".
-MICROSOFT_AZURE_STORAGE_SCREENSHOTS_CONTAINER=stscreenshots
 
 # Microsoft Cosmos DB
 # Nosql database used to manage user and organization data.
@@ -81,20 +79,22 @@ MICROSOFT_COSMOSDB_CONTAINER_PARTITION_KEY=/tenantId
 MICROSOFT_COSMOSDB_MAXRETRYATTEMPTSONTHROTTLEDREQUESTS=9
 # (number) Maximum retry time in seconds for the Azure Cosmos DB service. Defaults to "60".
 MICROSOFT_COSMOSDB_MAXRETRYWAITTIMEINSECONDS=60
+# (boolean) Disable SSL verification when connecting to Cosmos DB. This option should not be set to `true` in production. Defaults to "false".
+MICROSOFT_COSMOSDB_DISABLE_SSL_VERIFICATION=false
 
---------------------------------------------------------------------------------
+---
 # Core Services
 # Core platform services
---------------------------------------------------------------------------------
+---
 
 # Application Services
 # Common HTTP Server for all the platform services (Web, API, Jobs...)
 
-# (string) Deployment environment. Could be "dev", "int", "uat", "ppr", "prd", "self". Defaults to "self".
-APP_DEPLOY=self
-# (string) Server role. Could be "standalone", "web", "api", "jobs", "scheduler", "integration", "featuretogglesserver", "featuretogglesproxy", "flowserver". Defaults to "standalone".
-APP_ROLE=standalone
-# (number) Application server port. Defaults to the PORT environment variable set by the Azure app service box (or other server/container hosting providers) or to "3000".
+# (string) Arbitrary string to identify the current deploy, such as "dev", "uat", "production". Defaults to "".
+APP_DEPLOY=
+# (string) Server role. Could be "standalone", "web", "api", "jobs", "scheduler". Defaults to "".
+APP_ROLE={PLACEHOLDER}
+# (number) Application server port. Defaults to the PORT environment variable if defined or to "3000".
 APP_PORT=3000
 
 # Web Services
@@ -197,10 +197,10 @@ DB_EVENTS_DATABASE_NAME=st_events_db
 # (boolean) Enable database advanced logging. Defaults to "false".
 DB_EVENTS_LOGGING=false
 
---------------------------------------------------------------------------------
+---
 # Core Integrations
 # Mandatory platform integrations
---------------------------------------------------------------------------------
+---
 
 # Microsoft Identity Platform
 # Microsoft Identity Platform
@@ -224,10 +224,10 @@ MICROSOFT_GRAPH_BASEURL=https://graph.microsoft.com
 # (string) Default requested scope during authentication to the Microsoft Graph service in client credential authentication mode. Defaults to "https://graph.microsoft.com/.default".
 MICROSOFT_GRAPH_DEFAULT_SCOPE=https://graph.microsoft.com/.default
 
---------------------------------------------------------------------------------
+---
 # Advanced Integrations (Optional)
 # Advanced Integrations
---------------------------------------------------------------------------------
+---
 
 # Mail
 # When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization
@@ -247,7 +247,7 @@ MAIL_ACTION_MSG_ORIGINATOR=
 # Webhooks advanced configuration
 
 # (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]".
-WEBHOOKS_USER_AGENT=nBold-Webhook/v4.23.41
+WEBHOOKS_USER_AGENT=nBold-Webhook/v4.23.83
 # (number) Interval in ms between two attempts. Defaults to "10000".
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to "2".
@@ -287,7 +287,7 @@ GITHUB_INTEGRATION_ENABLED=false
 # (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com".
 GITHUB_API_BASE_URL=https://api.github.com
 # (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]".
-GITHUB_USER_AGENT=nBold-GitHub/4.23.41
+GITHUB_USER_AGENT=nBold-GitHub/4.23.83
 # (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "".
 GITHUB_OWNER=
 # (string) GitHub repository where to create alert issues. Defaults to "".
@@ -341,10 +341,10 @@ MICROSOFT_MARKETPLACE_PUBLISHER_ID=
 # (string) Offer ID from the Microsoft Marketplace registration. Defaults to "".
 MICROSOFT_MARKETPLACE_OFFER_ID=
 
---------------------------------------------------------------------------------
+---
 # Advanced Tuning (Optional)
 # Performance Tuning
---------------------------------------------------------------------------------
+---
 
 # Templates Business Rules
 # Templates
