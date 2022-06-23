@@ -28,7 +28,7 @@ This "standalone" package is a personal Microsoft Teams app comprised of the fol
 
 | Package name | Download link |
 |--------------|---------------|
-| nBold Standalone | [![](https://img.shields.io/badge/Microsoft_Teams-Download_nBold_Standalone_Package-darkslateblue?logo=microsoft-teams&logoColor=white&style=flat)](https://dist.salestim.io/packages/io.nbold.standalone.prd.zip) |
+| nBold Standalone | [![](https://img.shields.io/badge/Microsoft_Teams-Download_nBold_Standalone_Package-darkslateblue?logo=microsoft-teams&logoColor=white&style=flat)](https://assets.nbold.io/packages/io.nbold.standalone.prd.zip) |
 
 ::: tip
 Deployment procedure: [Install nBold in Microsoft Teams](https://docs.nbold.co/articles/3505270-install-salestim-app-on-microsoft-teams)
@@ -40,7 +40,7 @@ This "targeted" package is a personal Microsoft Teams app comprised of 1 tab (Ho
 
 | Package name | Download link |
 |--------------|---------------|
-| nBold Home | [![](https://img.shields.io/badge/Microsoft_Teams-Download_nBold_Home_Package-darkslateblue?logo=microsoft-teams&logoColor=white&style=flat)](https://dist.salestim.io/packages/io.nbold.home.prd.zip) |
+| nBold Home | [![](https://img.shields.io/badge/Microsoft_Teams-Download_nBold_Home_Package-darkslateblue?logo=microsoft-teams&logoColor=white&style=flat)](https://assets.nbold.io/packages/io.nbold.home.prd.zip) |
 
 ::: tip Deployment procedure
 [Setup pinned apps](https://docs.nbold.co/articles/3507463-set-up-the-home-page)

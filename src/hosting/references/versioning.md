@@ -15,4 +15,4 @@ Please note that **database schema changes require running migrations when you'r
 as an internal API and therefore schema changes are not considered a breaking change.
 :::
 
-Version changes are documented in our [Changelog](https://dist.salestim.io/CHANGELOG).
+Version changes are documented in our [Changelog](https://assets.nbold.io/CHANGELOG).

@@ -531,12 +531,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 📚 Docs
 
-* **audits:** added an automatically generated [Audits Index](https://dist.salestim.io/audits) ([c8bd5d7](https://github.com/nboldhq/app-platform/commit/c8bd5d74fab8bed5ca9cf2e67d43a8b9eeca43b8))
+* **audits:** added an automatically generated [Audits Index](https://assets.nbold.io/audits) ([c8bd5d7](https://github.com/nboldhq/app-platform/commit/c8bd5d74fab8bed5ca9cf2e67d43a8b9eeca43b8))
 * **audits:** added uptimerobot data export to npm run audit script ([c1a6bd4](https://github.com/nboldhq/app-platform/commit/c1a6bd4a8dfb166e71b92a43976dc92793ccfb8d))
 * **audits:** updated audit index format ([dcda3e4](https://github.com/nboldhq/app-platform/commit/dcda3e414b2921c93598b57bc0dbd0f19074c76f))
 * **depcheck:** included depcheck as part of the audit reports generated from `npm run audit` ([8fa391b](https://github.com/nboldhq/app-platform/commit/8fa391b824ebba34a397c1e389285ca89ecdad1e))
 * **environment variables:** moved ENVIRONMENT_VARIABLES.md to the root to prevent jekyll errors ([50c9f3d](https://github.com/nboldhq/app-platform/commit/50c9f3dc7d75c5911ba1f21ca51514c0d9395d12))
-* **packages:** new [packages index](https://dist.salestim.io/packages/) ([4742bd7](https://github.com/nboldhq/app-platform/commit/4742bd7fc23223d0547b81889d926344adc2283c))
+* **packages:** new [packages index](https://assets.nbold.io/packages/) ([4742bd7](https://github.com/nboldhq/app-platform/commit/4742bd7fc23223d0547b81889d926344adc2283c))
 
 
 ## [3.10.0](https://github.com/nboldhq/app-platform/compare/v3.9.0...v3.10.0) (2021-09-16)
@@ -620,8 +620,8 @@ All notable changes to this project will be documented in this file. See [standa
 ### 🛠️ Code Refactoring
 
 * **cdn:** updated cdn root url for each environment([c52139e](https://github.com/nboldhq/app-platform/commit/c52139e0ea5affe103099aebe503cafae28bddd2))
-  * https://dist.salestim.io/cdn/staging
-  * https://dist.salestim.io/cdn/production
+  * https://assets.nbold.io/cdn/staging
+  * https://assets.nbold.io/cdn/production
 
 * **web:** removed all legacy unused code ([3e1893c](https://github.com/nboldhq/app-platform/commit/3e1893ca71ca480ffdd0c2f187bbcc773d7f6335))
 
@@ -707,7 +707,7 @@ All notable changes to this project will be documented in this file. See [standa
     - See the [Admin Backend](https://github.com/nboldhq/admin-backend) README for more information.
   - The Forest Admin UI for the production environment is accessible from: [https://app.forestadmin.com/st-admin-backend/Production](https://app.forestadmin.com/st-admin-backend/Production).
 - added: `cloc` code statistics report generated as part of the build (lines, comments, code...)
-  - Report available from https://dist.salestim.io/audits/code/loc.log
+  - Report available from https://assets.nbold.io/audits/code/loc.log
   - Includes both absolute and relative (% of code) metrics
 - changed: Migrated alpinejs from v2 to v3
 - added: `auth` module
@@ -837,7 +837,7 @@ All notable changes to this project will be documented in this file. See [standa
 - added: Jest test framework + coverage analysis
   - Run test manually (also triggered by CI/CD GitHub action): `npm run test`
   - Test report generated as part of the `build:dist` npm script
-  - Report is generated at `./docs/audits/tests/tests_report.txt` and available from https://dist.salestim.io/audits/tests/tests_report.txt
+  - Report is generated at `./docs/audits/tests/tests_report.txt` and available from https://assets.nbold.io/audits/tests/tests_report.txt
     - How to tead the report:
       - Statement (Stmts) coverage Has each statement in the program been executed?
       - Branch coverage Has each branch (also called DD-path) of each control structure (such as in if and case statements) been executed? For example, given an if statement, have both the true and false branches been executed? Another way of saying this is, has every edge in the program been executed?
@@ -883,7 +883,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Created npm scripts for building and starting each environment/role
     - Build: `npm run build:docker:[ENV]:[ROLE]`
     - Start: `npm run start:docker:[ENV]:[ROLE]`
-- added: `dist.salestim.io` is now monitored by UptimeRobot as `CDN`. See [https://status.salestim.com](https://status.salestim.com)
+- added: `assets.nbold.io` is now monitored by UptimeRobot as `CDN`. See [https://status.salestim.com](https://status.salestim.com)
 - refactor: Externalization of key features as private NPM modules
   - Why:
     - Self-contained, better isolation
@@ -952,18 +952,18 @@ All notable changes to this project will be documented in this file. See [standa
           directives: {
             'frame-ancestors': ["'self'", 'https://teams.microsoft.com'],
             'default-src': ["'self'", 'https://*.salestim.io', 'https://gme-dev-app.ngrok.io', 'https://graph.microsoft.com', 'https://api-iam.intercom.io', 'wss://nexus-websocket-a.intercom.io', 'https://*.applicationinsights.azure.com/'],
-            'script-src': ["'self'", 'https://dist.salestim.io', 'https://teams.microsoft.com', 'https://widget.intercom.io', 'https://js.intercomcdn.com', 'https://api-iam.intercom.io', "'unsafe-eval'", "'unsafe-inline'"],
-            'script-src-attr': ["'self'", 'https://dist.salestim.io', 'https://teams.microsoft.com', "'unsafe-eval'", "'unsafe-inline'"],
-            'img-src': ["'self'", 'data:', 'https://dist.salestim.io', 'https://developers.salestim.com/', 'https://teams.microsoft.com', 'https://stsaprd.blob.core.windows.net', 'https://static.intercomassets.com']
+            'script-src': ["'self'", 'https://assets.nbold.io', 'https://teams.microsoft.com', 'https://widget.intercom.io', 'https://js.intercomcdn.com', 'https://api-iam.intercom.io', "'unsafe-eval'", "'unsafe-inline'"],
+            'script-src-attr': ["'self'", 'https://assets.nbold.io', 'https://teams.microsoft.com', "'unsafe-eval'", "'unsafe-inline'"],
+            'img-src': ["'self'", 'data:', 'https://assets.nbold.io', 'https://developers.salestim.com/', 'https://teams.microsoft.com', 'https://stsaprd.blob.core.windows.net', 'https://static.intercomassets.com']
           }
         }
       })
     )
     ```
-- changed: /dist folder now accessible from dist.salestim.io instead of dist.salestim.io
+- changed: /dist folder now accessible from assets.nbold.io instead of assets.nbold.io
   - Related documents have been updated on tech hub and handbook
 - changed: Static assets (Images, fonts, css, compiled js...) are now distributed through GitHub Pages as a CDN
-  - Static assets are now loaded from https://dist.salestim.io/clients/web
+  - Static assets are now loaded from https://assets.nbold.io/clients/web
 - changed: finalize dependency updates
   - All our third-party dependencies are now up to date with their respective latest version, excluding:
     - Alpine.js: migration impacts from v2 to v3 have to be evaluated
@@ -971,17 +971,17 @@ All notable changes to this project will be documented in this file. See [standa
 - fixed: Coding style / security best practices issues
   - Standard JS coding style linter: From 1600 to 8 identified issues
   - ESLint security issues: From 1866 to 10 identified issues (only from the recent connected apps modules)
-- changed: https://dist.salestim.io public assets
+- changed: https://assets.nbold.io public assets
   - About "Dist"
     - All these assets are regenerated during each commit
     - These assets are public (but theoritically not crawled by search engines)
   - Added: Third-party licenses reports.
-    - https://dist.salestim.io/audits/third_party/license_summary.txt
+    - https://assets.nbold.io/audits/third_party/license_summary.txt
       - Summarises the number of third-party dependencies for each license type
-    - https://dist.salestim.io/audits/third_party/license_report.csv
+    - https://assets.nbold.io/audits/third_party/license_report.csv
       - Detailed report of all the third-party dependencies with their license type
   - Added: SSL Certificate report for www.salestim.com (in addition to app.salestim.io)
-    - https://dist.salestim.io/audits/license_summary.txt
+    - https://assets.nbold.io/audits/license_summary.txt
 - changed: Dependency cleaning
   - Why: A lot of dependencies are not used anymore (mostly replaced by another one, sometimes the associated feature is not implemented anymore) 
   - Results:
@@ -1673,7 +1673,7 @@ All notable changes to this project will be documented in this file. See [standa
   - The multiplicity of packages to generate, based on so many files, generated issues and made this process tedious and prone to errors.
   - Now all the packages (Standalone and Home) are automatically generated from only two template files.
   - All the variables are stored in the .env configuration file
-  - Here is the up-to-date list of generated packages (we now have the home package for `int` and `uat` too), all of them still accessible from `https://dist.salestim.io/packages/[PACKAGE_FILE]`:
+  - Here is the up-to-date list of generated packages (we now have the home package for `int` and `uat` too), all of them still accessible from `https://assets.nbold.io/packages/[PACKAGE_FILE]`:
   ```
   io.salestim.automation.standalone.dev.zip
   io.salestim.automation.standalone.int.zip
@@ -1698,16 +1698,16 @@ All notable changes to this project will be documented in this file. See [standa
   - Documentation: https://developers.salestim.com/nocode/power-platform.html
 - changed: Updated list of downloadable packages:
   ```
-  https://dist.salestim.io/packages/io.salestim.automation.standalone.dev.zip
-  https://dist.salestim.io/packages/io.salestim.automation.standalone.int.zip
-  https://dist.salestim.io/packages/io.salestim.automation.standalone.ppr-pre-sso.zip # PPR without sso
-  https://dist.salestim.io/packages/io.salestim.automation.standalone.ppr.zip         # PPR with SSO
-  https://dist.salestim.io/packages/io.salestim.automation.standalone.prd-pre-sso.zip # PRD without SSO
-  https://dist.salestim.io/packages/io.salestim.automation.standalone.prd.zip         # PRD with SSO
-  https://dist.salestim.io/packages/io.salestim.automation.standalone.uat.zip
-  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.dev.zip
-  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.ppr.zip
-  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.prd.zip      # PRD with SSO
+  https://assets.nbold.io/packages/io.salestim.automation.standalone.dev.zip
+  https://assets.nbold.io/packages/io.salestim.automation.standalone.int.zip
+  https://assets.nbold.io/packages/io.salestim.automation.standalone.ppr-pre-sso.zip # PPR without sso
+  https://assets.nbold.io/packages/io.salestim.automation.standalone.ppr.zip         # PPR with SSO
+  https://assets.nbold.io/packages/io.salestim.automation.standalone.prd-pre-sso.zip # PRD without SSO
+  https://assets.nbold.io/packages/io.salestim.automation.standalone.prd.zip         # PRD with SSO
+  https://assets.nbold.io/packages/io.salestim.automation.standalone.uat.zip
+  https://assets.nbold.io/packages/io.salestim.automation.targeted.home.dev.zip
+  https://assets.nbold.io/packages/io.salestim.automation.targeted.home.ppr.zip
+  https://assets.nbold.io/packages/io.salestim.automation.targeted.home.prd.zip      # PRD with SSO
   ```
 - changed: Migrate to the New Microsoft Graph Team Membership Management API in v1 [#624](https://github.com/nboldhq/app-platform/issues/624)
   - Now members are added through teams membership, instead of groups memberships
@@ -1791,7 +1791,7 @@ All notable changes to this project will be documented in this file. See [standa
     - The Azure VM is `st-reports-prd`
 - added: Mandatory Owners & Members (Security Policy) [#623](https://github.com/nboldhq/app-platform/issues/623)
 - changed: Pre-production Home Package
-  - A new home package for the pre-production environment is now accessible here: https://dist.salestim.io/packages/io.salestim.automation.targeted.home.ppr.zip
+  - A new home package for the pre-production environment is now accessible here: https://assets.nbold.io/packages/io.salestim.automation.targeted.home.ppr.zip
 - fixed: Mobile Icon format issue [#642](https://github.com/nboldhq/app-platform/issues/642)
   - Fixed by updating the `accentColor` property from manifests files from `#a60a2d` to `#000000`
 - fixed: #security Dependency Alert: build(deps): bump find-my-way from 2.2.3 to 2.2.5 [#627](https://github.com/nboldhq/app-platform/pull/627)
@@ -2181,7 +2181,7 @@ All notable changes to this project will be documented in this file. See [standa
     - `.replace(/'/gim, '&apos;')`
     - `.replace(/[\r\n]/gim, '<br/>')`
 - added: New security report available online about our SSL certificates
-  - Accessible from: https://dist.salestim.io/audits/certificates_report.log
+  - Accessible from: https://assets.nbold.io/audits/certificates_report.log
 - added: Daily security scan using [OWASP ZAP scan](https://www.zaproxy.org/blog/2020-04-09-automate-security-testing-with-zap-and-github-actions/)
   - This scan is performed every day at 1am and generates a detailed report as a new issue in the main repository (see [#538](https://github.com/nboldhq/app-platform/issues/538) as an example)
 - changed: checked compatibility of our Redis client with TLS 1.2 that will be enforced by Microsoft soon
@@ -2436,9 +2436,9 @@ Avoid planner throttling
     - `aspnetcore`: experimental
     - `nodejs-express-server`: experimental
 - security: Audit reports are now generated as part of the `app-platform` build.
-  - [JavaScript Standard Style Report](https://dist.salestim.io/audits/standard_report.log)
-  - [ESLint Security Report](https://dist.salestim.io/audits/eslint_security_report.log)
-  - [NPM Audit Report](https://dist.salestim.io/audits/npm_audit_report.log)
+  - [JavaScript Standard Style Report](https://assets.nbold.io/audits/standard_report.log)
+  - [ESLint Security Report](https://assets.nbold.io/audits/eslint_security_report.log)
+  - [NPM Audit Report](https://assets.nbold.io/audits/npm_audit_report.log)
 - added: New open source repository [internationalization](https://github.com/nboldhq/internationalization)
   - Contains the raw json files resource files used by the nBold Platform
   - Now updated versions of the resource files are automatically downloaded during build (taking the latest release)
@@ -2489,7 +2489,7 @@ Avoid planner throttling
       - api.salestim.io
       - jobs.salestim.io
 - added: New "/dist" directory
-  - Public URL: https://dist.salestim.io/
+  - Public URL: https://assets.nbold.io/
   - Exposes:
     - App packages (Related links are up to date here https://developers.salestim.com/releases/releases)
       - io.salestim.automation.standalone.dev.zip	

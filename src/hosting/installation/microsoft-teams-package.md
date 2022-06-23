@@ -3,7 +3,7 @@
 Start by downloading our latest package template:
 ```bash
 mkdir -p packages/standalone && cd packages/standalone
-curl https://dist.salestim.io/packages/io.nbold.standalone.self.zip -o io.nbold.standalone.self.zip
+curl https://assets.nbold.io/packages/io.nbold.standalone.self.zip -o io.nbold.standalone.self.zip
 ```
 
 Then unzip the package:

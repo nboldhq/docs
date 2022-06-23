@@ -37,7 +37,7 @@ This module enforces JavaScript development best practices in different ways:
 * Catch style issues & programmer errors early: Save precious code review time by eliminating back-and-forth between reviewer & contributor, avoiding common style issues that may impact security.
 
 ::: tip
-See our latest JavaScript Style Report: [![JavaScript Style Report](https://img.shields.io/badge/code_style-standard-success.svg)](https://dist.salestim.io/audits/code/code_linting_report.log)
+See our latest JavaScript Style Report: [![JavaScript Style Report](https://img.shields.io/badge/code_style-standard-success.svg)](https://assets.nbold.io/audits/code/code_linting_report.log)
 :::
 
 Learn more about [Standard JavaScript Style](https://www.npmjs.com/package/standard#usage) and its [Enforced Rules](https://github.com/standard/standard/blob/HEAD/RULES.md)
@@ -46,7 +46,7 @@ Learn more about [Standard JavaScript Style](https://www.npmjs.com/package/stand
 
 This security plugin helps us to identify potential security hotspots during development, take proactive countermeasure and therefore enforce our security best practices.  
 ::: tip
-See our latest ESLint Security Report: [![ESLint Security](https://img.shields.io/badge/eslint_security-audited-success.svg)](https://dist.salestim.io/audits/code/code_security_report.log)
+See our latest ESLint Security Report: [![ESLint Security](https://img.shields.io/badge/eslint_security-audited-success.svg)](https://assets.nbold.io/audits/code/code_security_report.log)
 :::
 
 Learn more about [ESLint Security Plugin](https://github.com/nodesecurity/eslint-plugin-security) and [Security Rules](https://github.com/nodesecurity/eslint-plugin-security#rules)
@@ -57,7 +57,7 @@ This tool performs a moment-in-time security review of our project’s dependenc
 Audit reports contain information about potential security vulnerabilities in our dependencies and helps us fix a potential vulnerability by providing recommendations for further troubleshooting.  
 
 ::: tip
-See our latest NPM Audit Report: [![NPM Audit Report](https://img.shields.io/badge/npm_audit-audited-success.svg)](https://dist.salestim.io/audits/third_party/third_party_security_report.log)
+See our latest NPM Audit Report: [![NPM Audit Report](https://img.shields.io/badge/npm_audit-audited-success.svg)](https://assets.nbold.io/audits/third_party/third_party_security_report.log)
 :::
 
 Learn more about [NPM Audit](https://docs.npmjs.com/cli/audit)

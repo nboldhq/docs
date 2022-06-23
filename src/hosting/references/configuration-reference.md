@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Fri, 03 Jun 2022 05:20:52 GMT*
+📆 *Generated: Thu, 16 Jun 2022 00:50:00 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -131,8 +131,8 @@ To help you get started, you can also download our [.env file template](/hosting
 |:---------------------|:-------|:------------|
 | `SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_ENABLED` | Optional ☑️ | (boolean) Enable the RENEW_SERVICE_ACCOUNT_TOKENS scheduling. Defaults to "true" |
 | `SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to "0 6 * * 0" (At 06:00 on Sunday). |
-| `SCHEDULER_PERMANENT_MEMBERSHIP_POLICY_ENABLED` | Optional ☑️ | (boolean) Enable the PERMANENT_MEMBERSHIP_POLICY scheduling. Defaults to "true" |
-| `SCHEDULER_PERMANENT_MEMBERSHIP_POLICY_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to */15 * * * *" (At every 15th minute). |
+| `SCHEDULER_MICROSOFT_TEAMS_PERMANENT_MEMBERSHIP_POLICY_ENABLED` | Optional ☑️ | (boolean) Enable the PERMANENT_MEMBERSHIP_POLICY scheduling. Defaults to "true" |
+| `SCHEDULER_MICROSOFT_TEAMS_PERMANENT_MEMBERSHIP_POLICY_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to */15 * * * *" (At every 15th minute). |
 | `SCHEDULER_QUEUES_RETENTION_POLICY_ENABLED` | Optional ☑️ | (boolean) Enable the QUEUES_RETENTION scheduling. Defaults to "true" |
 | `SCHEDULER_QUEUES_RETENTION_POLICY_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 1 * * *" (Every day at 01:00). |
 | `SCHEDULER_GRAPH_SUBSCRIPTIONS_RENEWAL_ENABLED` | Optional ☑️ | (boolean) Enable the GRAPH_SUBSCRIPTIONS_MANAGER scheduling. Defaults to "true" |

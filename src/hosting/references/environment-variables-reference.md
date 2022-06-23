@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Fri, 03 Jun 2022 05:20:52 GMT*
+📆 *Generated: Thu, 16 Jun 2022 00:50:00 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -125,9 +125,9 @@ SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_ENABLED=true
 # (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to "0 6 * * 0" (At 06:00 on Sunday).
 SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_SCHEDULE=0 6 * * 0
 # (boolean) Enable the PERMANENT_MEMBERSHIP_POLICY scheduling. Defaults to "true"
-SCHEDULER_PERMANENT_MEMBERSHIP_POLICY_ENABLED=true
+SCHEDULER_MICROSOFT_TEAMS_PERMANENT_MEMBERSHIP_POLICY_ENABLED=true
 # (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to */15 * * * *" (At every 15th minute).
-SCHEDULER_PERMANENT_MEMBERSHIP_POLICY_SCHEDULE=*/15 * * * *
+SCHEDULER_MICROSOFT_TEAMS_PERMANENT_MEMBERSHIP_POLICY_SCHEDULE=*/15 * * * *
 # (boolean) Enable the QUEUES_RETENTION scheduling. Defaults to "true"
 SCHEDULER_QUEUES_RETENTION_POLICY_ENABLED=true
 # (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 1 * * *" (Every day at 01:00).
@@ -247,7 +247,7 @@ MAIL_ACTION_MSG_ORIGINATOR=
 # Webhooks advanced configuration
 
 # (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]".
-WEBHOOKS_USER_AGENT=nBold-Webhook/v4.23.83
+WEBHOOKS_USER_AGENT=nBold-Webhook/v4.23.94
 # (number) Interval in ms between two attempts. Defaults to "10000".
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to "2".
@@ -287,7 +287,7 @@ GITHUB_INTEGRATION_ENABLED=false
 # (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com".
 GITHUB_API_BASE_URL=https://api.github.com
 # (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]".
-GITHUB_USER_AGENT=nBold-GitHub/4.23.83
+GITHUB_USER_AGENT=nBold-GitHub/4.23.94
 # (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "".
 GITHUB_OWNER=
 # (string) GitHub repository where to create alert issues. Defaults to "".

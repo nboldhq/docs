@@ -123,7 +123,7 @@ const convertOpenApiYamlToJson = (done) => {
 
 const downloadAssetsFromAppPlatformRepo = (done) => {
   try {
-    const CDN_ROOT_URL = 'https://dist.salestim.io'
+    const CDN_ROOT_URL = 'https://assets.nbold.io'
     const ASSETS_ROOT_URL = `${CDN_ROOT_URL}/assets`
     const assets = [
       {

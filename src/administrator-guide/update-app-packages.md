@@ -36,7 +36,7 @@ Here are all the cases:
 
 Download these packages locally and do not unzip them:
 
-* [Home Page](https://dist.salestim.io/packages/io.nbold.standalone.prd.zip)
+* [Home Page](https://assets.nbold.io/packages/io.nbold.standalone.prd.zip)
 
 ### 2. Upload to your app catalog
 

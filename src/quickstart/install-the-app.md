@@ -73,7 +73,7 @@ This "standalone" package is a personal Microsoft Teams app comprised of the fol
 
 | Package name | Download link |
 | --- | --- |
-| nBold Standalone | [![](https://img.shields.io/badge/Microsoft_Teams-nBold_Standalone-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://dist.salestim.io/packages/io.nbold.standalone.prd.zip) |
+| nBold Standalone | [![](https://img.shields.io/badge/Microsoft_Teams-nBold_Standalone-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://assets.nbold.io/packages/io.nbold.standalone.prd.zip) |
 
 ### Package customization
 
