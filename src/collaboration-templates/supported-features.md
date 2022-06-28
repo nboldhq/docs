@@ -46,5 +46,5 @@ We do not support yet:
 * Configured [Wiki Tabs](/collaboration-templates/wiki-tabs.md)
 * Configured OneNote Tabs
 * Configured new List
-* Office Files Tab pointing to new files created in the new team files tab
+* Office Files Tab 
 * Files and folder cloning in Private Channels
