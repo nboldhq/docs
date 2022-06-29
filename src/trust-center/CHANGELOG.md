@@ -2,6 +2,62 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.24.0](https://github.com/nboldhq/app-platform/compare/v4.23.0...v4.24.0) (2022-06-23)
+
+
+### Features
+
+* **api:** added getTeamMembers api endpoint ([bce1257](https://github.com/nboldhq/app-platform/commit/bce1257bc6d4b87b81f1fbea66c830589bfc4900))
+* **application-insights:** reenabled application insights in build ([2383038](https://github.com/nboldhq/app-platform/commit/23830382de5ce25994647887c2a504a595a95120))
+* **docker:** added monitoring components to docker stack (prometheus, exporters...) ([d6417aa](https://github.com/nboldhq/app-platform/commit/d6417aadb059752a6d95b201e2f55b2cf4966d94))
+* **docker:** docker image now runs without a root-level account ([419d3b1](https://github.com/nboldhq/app-platform/commit/419d3b1cfb8b2853846a7142dc5f214fc15e93f6))
+* **indexing:** added robots.txt to prevent indexation from search bots ([fb955b7](https://github.com/nboldhq/app-platform/commit/fb955b7561ef3da585750b70c23755633b0acb74))
+* **microsoft-lists:** microsoft Lists cloning support in provisioning ([98d2b33](https://github.com/nboldhq/app-platform/commit/98d2b33754ea26983abd4cb20856e76ee57609cf))
+* **npm:** added NODE_ENV to npm start commands for each deploy ([493f823](https://github.com/nboldhq/app-platform/commit/493f82314be48e4b2d570d3f956e516a55afdf1a))
+* **packages:** enabled configurable properties for the targeted home package ([7bf6d28](https://github.com/nboldhq/app-platform/commit/7bf6d285b3df020828bffcc57256427e0f89316f))
+* **rbac:** prevent early access to connected apps and reports to admins ([273c4db](https://github.com/nboldhq/app-platform/commit/273c4db1b412e3a04e20aeb98e0e4cfa156d2953))
+* **reports:** updated /reports endpoints to reflect roles requirements ([01535b6](https://github.com/nboldhq/app-platform/commit/01535b6ed977de97ed2e5f009abcf9dce9f179aa))
+* **templates:** available teams when creating a template is now from `/me/joinedTeams` ([fc5adbb](https://github.com/nboldhq/app-platform/commit/fc5adbb6b06fba7a5232b5d6d85834f4b74ed055)), closes [#1219](https://github.com/nboldhq/app-platform/issues/1219)
+
+
+### Bug Fixes
+
+* **api:** fixed api / webhooks codes ([6341937](https://github.com/nboldhq/app-platform/commit/6341937ed72f856c6dc396e93b91f8f746412f16))
+* **api:** re-enaled cache for user roles + changed error management ([a55164a](https://github.com/nboldhq/app-platform/commit/a55164a3a396405f88f2d9e14acfdf50c7fb4676))
+* **app-instghts:** disabled legacy page tracking ([572b182](https://github.com/nboldhq/app-platform/commit/572b18215fdff69c0f01079af77a2cdaff26a87a))
+* **assets:** rebuilt cdn assets ([7ccd6ce](https://github.com/nboldhq/app-platform/commit/7ccd6ceea72a0d342628021054f941039b6c208a))
+* **assets:** reverted cdn assets to previous build ([0ee187e](https://github.com/nboldhq/app-platform/commit/0ee187e4949ac8e7bfc1702164b258ca0035ab2b))
+* **audit-trails:** fixed provisioning audit trails stucked at 0% ([291351b](https://github.com/nboldhq/app-platform/commit/291351be884b96a2b262b70062c5da19fb172a73)), closes [#1231](https://github.com/nboldhq/app-platform/issues/1231)
+* **cdn:** removed cdn directory from docker image ([aecaeb3](https://github.com/nboldhq/app-platform/commit/aecaeb36ac283210377e85a6218a06ef6ca6a544))
+* **cdn:** removed cdn from .env config files ([1bc13c6](https://github.com/nboldhq/app-platform/commit/1bc13c6fabfec563e57fd30a71e7e19c0e2d4c6e))
+* **cicd:** fixed cicd image name for integration ([5d46063](https://github.com/nboldhq/app-platform/commit/5d460638b91c889a3bb5a36ffb8318c7e9a5b613))
+* **cicd:** updated cicd docker image ([a7f94a5](https://github.com/nboldhq/app-platform/commit/a7f94a554ce4d377962658da2a606e8aab9a95df))
+* **cicd:** updated cicd script to build and push using github sha as version ([fa5492e](https://github.com/nboldhq/app-platform/commit/fa5492e8617dde2136106027536156e4d741e6ca))
+* **deps:** added explicit deps to vm2 and he modules ([e1ed798](https://github.com/nboldhq/app-platform/commit/e1ed798611f426e0af411b0846bf2b69553647cf))
+* **docker:** fixed docker image build ([df9f75e](https://github.com/nboldhq/app-platform/commit/df9f75e9a4043cc315da0d43621dec62ce0c03d2))
+* **docker:** reverted dockerfile until issue with the api service resolution ([b0eb106](https://github.com/nboldhq/app-platform/commit/b0eb10693942ea9219eda7cb5eccedb3c899e009))
+* **intercom:** fixed intercom access from login page in case of admin consent request ([4ca430a](https://github.com/nboldhq/app-platform/commit/4ca430a9e291b5b3b69a0cc3358016246ceeb232))
+* **license:** fixed display of license from the settings tab ([345f5b5](https://github.com/nboldhq/app-platform/commit/345f5b5d74583f218da68fa0de857eee02224917))
+* **locales:** fixed cdn locales url ([bf65051](https://github.com/nboldhq/app-platform/commit/bf65051ed486c336adbf1526001ea5a9c3321c1e))
+* **manifests:** fixed manifests loading directory in configuration module ([d42f887](https://github.com/nboldhq/app-platform/commit/d42f887deb6bc8e93b475620cc507a8822f0de6c))
+* **packages:** added missing images in packages ([703ebd8](https://github.com/nboldhq/app-platform/commit/703ebd88f55ee7cb2dc58686ef25afe038dba104))
+* **permissions:** added `Sites.Manage.All` to the service account required permissions ([d09a8cc](https://github.com/nboldhq/app-platform/commit/d09a8cc161c94f8b90ca5b731ee4b7dd7bf85078))
+* **planner:** fixed Planner tab configuration URLs using the latest version ([6dc419f](https://github.com/nboldhq/app-platform/commit/6dc419fed82d4cdffe6d418b8a2e4adcc4b81339)), closes [#1222](https://github.com/nboldhq/app-platform/issues/1222)
+* **planner:** provisioning now preserves tasks checklists order ([26fe2e4](https://github.com/nboldhq/app-platform/commit/26fe2e410fb210515787483f3de6c032b2721a45)), closes [#1150](https://github.com/nboldhq/app-platform/issues/1150)
+* **power-automate:** fixed issue with power automate triggers ([d66a883](https://github.com/nboldhq/app-platform/commit/d66a88366ac4e63d0adae3a66139781402a282d2))
+* **power-automate:** fixed Power Automate issues with API and webhooks ([15d6d0c](https://github.com/nboldhq/app-platform/commit/15d6d0c4e25c9b2d95fa1f43e2ffdef777f52212))
+* **provisioning:** updated /provisioning validation schema to accept members display names ([5ed8a47](https://github.com/nboldhq/app-platform/commit/5ed8a475d287d9437b972cd7fcbc01dd82369ec7))
+* **rate-limiter:** replaces rate limiter redis store with the default in-memory ([2172036](https://github.com/nboldhq/app-platform/commit/21720363e5911d730eda8ae21437a0d6dd9512b8))
+* **redis:** updated redis cache client initialization from `connect` to `ready` ([ccd59bf](https://github.com/nboldhq/app-platform/commit/ccd59bf93f223d1258596a3c366d75982b49c5a8))
+* **search:** fixed in-app search from the homepage ([d4254e7](https://github.com/nboldhq/app-platform/commit/d4254e763a80245e7215af038d30cd1427e8cfcf)), closes [#1224](https://github.com/nboldhq/app-platform/issues/1224)
+* **service-account:** fixed issue with service account registration ([1bc33ee](https://github.com/nboldhq/app-platform/commit/1bc33ee09b1b57015efaa0fe38c0226bc1f56842))
+* **services:** updated services loading logging ([238034e](https://github.com/nboldhq/app-platform/commit/238034ee7fc4b573cbb2f9ba20a1ed9f4267f14f))
+* **setup:** fixed setup scripts path in package.json ([258a15c](https://github.com/nboldhq/app-platform/commit/258a15c8179861bdd1d326f2ca2e5a0b28b39f3e))
+* **teardown:** fixed case when the service doesn't start properly and exits ([86beb45](https://github.com/nboldhq/app-platform/commit/86beb45fbe4043806bc5cafaa4e600f30771bf18))
+* **timeout:** disabled timeout module until further investigation ([90e0e32](https://github.com/nboldhq/app-platform/commit/90e0e32bf0d8298569ead9b5ef9cd46e43549101))
+* **timeout:** reenabled timeout in web and api service ([226becb](https://github.com/nboldhq/app-platform/commit/226becbacbdcc6454b192ef43b12e2f4b5e481c6))
+* **timeout:** updated timeout behavior for web and api ([192ddde](https://github.com/nboldhq/app-platform/commit/192dddea7452c5357371dc0fd0a5b888c2dcd18f))
+
 ## [4.23.0](https://github.com/nboldhq/app-platform/compare/v4.22.0...v4.23.0) (2022-05-19)
 
 
@@ -531,12 +587,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 📚 Docs
 
-* **audits:** added an automatically generated [Audits Index](https://assets.nbold.io/audits) ([c8bd5d7](https://github.com/nboldhq/app-platform/commit/c8bd5d74fab8bed5ca9cf2e67d43a8b9eeca43b8))
+* **audits:** added an automatically generated [Audits Index](https://dist.salestim.io/audits) ([c8bd5d7](https://github.com/nboldhq/app-platform/commit/c8bd5d74fab8bed5ca9cf2e67d43a8b9eeca43b8))
 * **audits:** added uptimerobot data export to npm run audit script ([c1a6bd4](https://github.com/nboldhq/app-platform/commit/c1a6bd4a8dfb166e71b92a43976dc92793ccfb8d))
 * **audits:** updated audit index format ([dcda3e4](https://github.com/nboldhq/app-platform/commit/dcda3e414b2921c93598b57bc0dbd0f19074c76f))
 * **depcheck:** included depcheck as part of the audit reports generated from `npm run audit` ([8fa391b](https://github.com/nboldhq/app-platform/commit/8fa391b824ebba34a397c1e389285ca89ecdad1e))
 * **environment variables:** moved ENVIRONMENT_VARIABLES.md to the root to prevent jekyll errors ([50c9f3d](https://github.com/nboldhq/app-platform/commit/50c9f3dc7d75c5911ba1f21ca51514c0d9395d12))
-* **packages:** new [packages index](https://assets.nbold.io/packages/) ([4742bd7](https://github.com/nboldhq/app-platform/commit/4742bd7fc23223d0547b81889d926344adc2283c))
+* **packages:** new [packages index](https://dist.salestim.io/packages/) ([4742bd7](https://github.com/nboldhq/app-platform/commit/4742bd7fc23223d0547b81889d926344adc2283c))
 
 
 ## [3.10.0](https://github.com/nboldhq/app-platform/compare/v3.9.0...v3.10.0) (2021-09-16)
@@ -620,8 +676,8 @@ All notable changes to this project will be documented in this file. See [standa
 ### 🛠️ Code Refactoring
 
 * **cdn:** updated cdn root url for each environment([c52139e](https://github.com/nboldhq/app-platform/commit/c52139e0ea5affe103099aebe503cafae28bddd2))
-  * https://assets.nbold.io/cdn/staging
-  * https://assets.nbold.io/cdn/production
+  * https://dist.salestim.io/cdn/staging
+  * https://dist.salestim.io/cdn/production
 
 * **web:** removed all legacy unused code ([3e1893c](https://github.com/nboldhq/app-platform/commit/3e1893ca71ca480ffdd0c2f187bbcc773d7f6335))
 
@@ -707,7 +763,7 @@ All notable changes to this project will be documented in this file. See [standa
     - See the [Admin Backend](https://github.com/nboldhq/admin-backend) README for more information.
   - The Forest Admin UI for the production environment is accessible from: [https://app.forestadmin.com/st-admin-backend/Production](https://app.forestadmin.com/st-admin-backend/Production).
 - added: `cloc` code statistics report generated as part of the build (lines, comments, code...)
-  - Report available from https://assets.nbold.io/audits/code/loc.log
+  - Report available from https://dist.salestim.io/audits/code/loc.log
   - Includes both absolute and relative (% of code) metrics
 - changed: Migrated alpinejs from v2 to v3
 - added: `auth` module
@@ -837,7 +893,7 @@ All notable changes to this project will be documented in this file. See [standa
 - added: Jest test framework + coverage analysis
   - Run test manually (also triggered by CI/CD GitHub action): `npm run test`
   - Test report generated as part of the `build:dist` npm script
-  - Report is generated at `./docs/audits/tests/tests_report.txt` and available from https://assets.nbold.io/audits/tests/tests_report.txt
+  - Report is generated at `./docs/audits/tests/tests_report.txt` and available from https://dist.salestim.io/audits/tests/tests_report.txt
     - How to tead the report:
       - Statement (Stmts) coverage Has each statement in the program been executed?
       - Branch coverage Has each branch (also called DD-path) of each control structure (such as in if and case statements) been executed? For example, given an if statement, have both the true and false branches been executed? Another way of saying this is, has every edge in the program been executed?
@@ -883,7 +939,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Created npm scripts for building and starting each environment/role
     - Build: `npm run build:docker:[ENV]:[ROLE]`
     - Start: `npm run start:docker:[ENV]:[ROLE]`
-- added: `assets.nbold.io` is now monitored by UptimeRobot as `CDN`. See [https://status.salestim.com](https://status.salestim.com)
+- added: `dist.salestim.io` is now monitored by UptimeRobot as `CDN`. See [https://status.salestim.com](https://status.salestim.com)
 - refactor: Externalization of key features as private NPM modules
   - Why:
     - Self-contained, better isolation
@@ -952,18 +1008,18 @@ All notable changes to this project will be documented in this file. See [standa
           directives: {
             'frame-ancestors': ["'self'", 'https://teams.microsoft.com'],
             'default-src': ["'self'", 'https://*.salestim.io', 'https://gme-dev-app.ngrok.io', 'https://graph.microsoft.com', 'https://api-iam.intercom.io', 'wss://nexus-websocket-a.intercom.io', 'https://*.applicationinsights.azure.com/'],
-            'script-src': ["'self'", 'https://assets.nbold.io', 'https://teams.microsoft.com', 'https://widget.intercom.io', 'https://js.intercomcdn.com', 'https://api-iam.intercom.io', "'unsafe-eval'", "'unsafe-inline'"],
-            'script-src-attr': ["'self'", 'https://assets.nbold.io', 'https://teams.microsoft.com', "'unsafe-eval'", "'unsafe-inline'"],
-            'img-src': ["'self'", 'data:', 'https://assets.nbold.io', 'https://developers.salestim.com/', 'https://teams.microsoft.com', 'https://stsaprd.blob.core.windows.net', 'https://static.intercomassets.com']
+            'script-src': ["'self'", 'https://dist.salestim.io', 'https://teams.microsoft.com', 'https://widget.intercom.io', 'https://js.intercomcdn.com', 'https://api-iam.intercom.io', "'unsafe-eval'", "'unsafe-inline'"],
+            'script-src-attr': ["'self'", 'https://dist.salestim.io', 'https://teams.microsoft.com', "'unsafe-eval'", "'unsafe-inline'"],
+            'img-src': ["'self'", 'data:', 'https://dist.salestim.io', 'https://developers.salestim.com/', 'https://teams.microsoft.com', 'https://stsaprd.blob.core.windows.net', 'https://static.intercomassets.com']
           }
         }
       })
     )
     ```
-- changed: /dist folder now accessible from assets.nbold.io instead of assets.nbold.io
+- changed: /dist folder now accessible from dist.salestim.io instead of dist.salestim.io
   - Related documents have been updated on tech hub and handbook
 - changed: Static assets (Images, fonts, css, compiled js...) are now distributed through GitHub Pages as a CDN
-  - Static assets are now loaded from https://assets.nbold.io/clients/web
+  - Static assets are now loaded from https://dist.salestim.io/clients/web
 - changed: finalize dependency updates
   - All our third-party dependencies are now up to date with their respective latest version, excluding:
     - Alpine.js: migration impacts from v2 to v3 have to be evaluated
@@ -971,17 +1027,17 @@ All notable changes to this project will be documented in this file. See [standa
 - fixed: Coding style / security best practices issues
   - Standard JS coding style linter: From 1600 to 8 identified issues
   - ESLint security issues: From 1866 to 10 identified issues (only from the recent connected apps modules)
-- changed: https://assets.nbold.io public assets
+- changed: https://dist.salestim.io public assets
   - About "Dist"
     - All these assets are regenerated during each commit
     - These assets are public (but theoritically not crawled by search engines)
   - Added: Third-party licenses reports.
-    - https://assets.nbold.io/audits/third_party/license_summary.txt
+    - https://dist.salestim.io/audits/third_party/license_summary.txt
       - Summarises the number of third-party dependencies for each license type
-    - https://assets.nbold.io/audits/third_party/license_report.csv
+    - https://dist.salestim.io/audits/third_party/license_report.csv
       - Detailed report of all the third-party dependencies with their license type
   - Added: SSL Certificate report for www.salestim.com (in addition to app.salestim.io)
-    - https://assets.nbold.io/audits/license_summary.txt
+    - https://dist.salestim.io/audits/license_summary.txt
 - changed: Dependency cleaning
   - Why: A lot of dependencies are not used anymore (mostly replaced by another one, sometimes the associated feature is not implemented anymore) 
   - Results:
@@ -1673,7 +1729,7 @@ All notable changes to this project will be documented in this file. See [standa
   - The multiplicity of packages to generate, based on so many files, generated issues and made this process tedious and prone to errors.
   - Now all the packages (Standalone and Home) are automatically generated from only two template files.
   - All the variables are stored in the .env configuration file
-  - Here is the up-to-date list of generated packages (we now have the home package for `int` and `uat` too), all of them still accessible from `https://assets.nbold.io/packages/[PACKAGE_FILE]`:
+  - Here is the up-to-date list of generated packages (we now have the home package for `int` and `uat` too), all of them still accessible from `https://dist.salestim.io/packages/[PACKAGE_FILE]`:
   ```
   io.salestim.automation.standalone.dev.zip
   io.salestim.automation.standalone.int.zip
@@ -1698,16 +1754,16 @@ All notable changes to this project will be documented in this file. See [standa
   - Documentation: https://developers.salestim.com/nocode/power-platform.html
 - changed: Updated list of downloadable packages:
   ```
-  https://assets.nbold.io/packages/io.salestim.automation.standalone.dev.zip
-  https://assets.nbold.io/packages/io.salestim.automation.standalone.int.zip
-  https://assets.nbold.io/packages/io.salestim.automation.standalone.ppr-pre-sso.zip # PPR without sso
-  https://assets.nbold.io/packages/io.salestim.automation.standalone.ppr.zip         # PPR with SSO
-  https://assets.nbold.io/packages/io.salestim.automation.standalone.prd-pre-sso.zip # PRD without SSO
-  https://assets.nbold.io/packages/io.salestim.automation.standalone.prd.zip         # PRD with SSO
-  https://assets.nbold.io/packages/io.salestim.automation.standalone.uat.zip
-  https://assets.nbold.io/packages/io.salestim.automation.targeted.home.dev.zip
-  https://assets.nbold.io/packages/io.salestim.automation.targeted.home.ppr.zip
-  https://assets.nbold.io/packages/io.salestim.automation.targeted.home.prd.zip      # PRD with SSO
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.dev.zip
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.int.zip
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.ppr-pre-sso.zip # PPR without sso
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.ppr.zip         # PPR with SSO
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.prd-pre-sso.zip # PRD without SSO
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.prd.zip         # PRD with SSO
+  https://dist.salestim.io/packages/io.salestim.automation.standalone.uat.zip
+  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.dev.zip
+  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.ppr.zip
+  https://dist.salestim.io/packages/io.salestim.automation.targeted.home.prd.zip      # PRD with SSO
   ```
 - changed: Migrate to the New Microsoft Graph Team Membership Management API in v1 [#624](https://github.com/nboldhq/app-platform/issues/624)
   - Now members are added through teams membership, instead of groups memberships
@@ -1791,7 +1847,7 @@ All notable changes to this project will be documented in this file. See [standa
     - The Azure VM is `st-reports-prd`
 - added: Mandatory Owners & Members (Security Policy) [#623](https://github.com/nboldhq/app-platform/issues/623)
 - changed: Pre-production Home Package
-  - A new home package for the pre-production environment is now accessible here: https://assets.nbold.io/packages/io.salestim.automation.targeted.home.ppr.zip
+  - A new home package for the pre-production environment is now accessible here: https://dist.salestim.io/packages/io.salestim.automation.targeted.home.ppr.zip
 - fixed: Mobile Icon format issue [#642](https://github.com/nboldhq/app-platform/issues/642)
   - Fixed by updating the `accentColor` property from manifests files from `#a60a2d` to `#000000`
 - fixed: #security Dependency Alert: build(deps): bump find-my-way from 2.2.3 to 2.2.5 [#627](https://github.com/nboldhq/app-platform/pull/627)
@@ -2181,7 +2237,7 @@ All notable changes to this project will be documented in this file. See [standa
     - `.replace(/'/gim, '&apos;')`
     - `.replace(/[\r\n]/gim, '<br/>')`
 - added: New security report available online about our SSL certificates
-  - Accessible from: https://assets.nbold.io/audits/certificates_report.log
+  - Accessible from: https://dist.salestim.io/audits/certificates_report.log
 - added: Daily security scan using [OWASP ZAP scan](https://www.zaproxy.org/blog/2020-04-09-automate-security-testing-with-zap-and-github-actions/)
   - This scan is performed every day at 1am and generates a detailed report as a new issue in the main repository (see [#538](https://github.com/nboldhq/app-platform/issues/538) as an example)
 - changed: checked compatibility of our Redis client with TLS 1.2 that will be enforced by Microsoft soon
@@ -2436,9 +2492,9 @@ Avoid planner throttling
     - `aspnetcore`: experimental
     - `nodejs-express-server`: experimental
 - security: Audit reports are now generated as part of the `app-platform` build.
-  - [JavaScript Standard Style Report](https://assets.nbold.io/audits/standard_report.log)
-  - [ESLint Security Report](https://assets.nbold.io/audits/eslint_security_report.log)
-  - [NPM Audit Report](https://assets.nbold.io/audits/npm_audit_report.log)
+  - [JavaScript Standard Style Report](https://dist.salestim.io/audits/standard_report.log)
+  - [ESLint Security Report](https://dist.salestim.io/audits/eslint_security_report.log)
+  - [NPM Audit Report](https://dist.salestim.io/audits/npm_audit_report.log)
 - added: New open source repository [internationalization](https://github.com/nboldhq/internationalization)
   - Contains the raw json files resource files used by the nBold Platform
   - Now updated versions of the resource files are automatically downloaded during build (taking the latest release)
@@ -2489,7 +2545,7 @@ Avoid planner throttling
       - api.salestim.io
       - jobs.salestim.io
 - added: New "/dist" directory
-  - Public URL: https://assets.nbold.io/
+  - Public URL: https://dist.salestim.io/
   - Exposes:
     - App packages (Related links are up to date here https://developers.salestim.com/releases/releases)
       - io.salestim.automation.standalone.dev.zip	

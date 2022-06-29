@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Thu, 16 Jun 2022 00:50:00 GMT*
+📆 *Generated: Wed, 29 Jun 2022 18:59:34 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -33,8 +33,6 @@ To help you get started, you can also download our [.env file template](/hosting
 | `REDIS_TIMEOUT` | Optional ☑️ | (number) Redis connection timeout in ms. Defaults to "30000". |
 | `REDIS_SECRET_KEY` | Optional ☑️ | (string) Key used to connect to Redis server. Defaults to "". |
 | `REDIS_KEYS_PREFIX` | Optional ☑️ | (string) Global partition key for all redis keys. Defaults to "st:". |
-| `REDIS_SESSIONS_PREFIX` | Optional ☑️ | (string) Partition sub-key for the sessions keys. Defaults to "sessions:". |
-| `REDIS_QUEUES_PREFIX` | Optional ☑️ | (string) Prefix for queues names. Defaults to "queue_". |
 
 
 
@@ -61,9 +59,7 @@ To help you get started, you can also download our [.env file template](/hosting
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
-| `MICROSOFT_AZURE_STORAGE_ACCOUNT_NAME` | Optional ☑️ | (string) Microsoft Azure Storage account name. Defaults to the default Azure Storage emulator account. |
-| `MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY` | Optional ☑️ | (string) Secret key used to authenticate against Microsoft Azure Storage. Defaults to the default Azure Storage secret key. |
-| `MICROSOFT_AZURE_STORAGE_ENDPOINT` | Optional ☑️ | (string) Microsoft Azure Storage service endpoint. Defaults to the default Azure Storage emulator endpoint. |
+| `MICROSOFT_AZURE_STORAGE_CONNECTION_STRING` | Optional ☑️ | (string) Microsoft Azure Storage connection string. Defaults to the default Azure Storage emulator connection string. |
 | `MICROSOFT_AZURE_STORAGE_TEMPLATES_PICTURES_CONTAINER` | Optional ☑️ | (string) Name of the container that hosts catalog templates pictures (Has to be created manually), for instance "sttemplatespictures". Defaults to "sttemplatespictures". |
 
 
@@ -135,8 +131,8 @@ To help you get started, you can also download our [.env file template](/hosting
 | `SCHEDULER_MICROSOFT_TEAMS_PERMANENT_MEMBERSHIP_POLICY_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to */15 * * * *" (At every 15th minute). |
 | `SCHEDULER_QUEUES_RETENTION_POLICY_ENABLED` | Optional ☑️ | (boolean) Enable the QUEUES_RETENTION scheduling. Defaults to "true" |
 | `SCHEDULER_QUEUES_RETENTION_POLICY_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 1 * * *" (Every day at 01:00). |
-| `SCHEDULER_GRAPH_SUBSCRIPTIONS_RENEWAL_ENABLED` | Optional ☑️ | (boolean) Enable the GRAPH_SUBSCRIPTIONS_MANAGER scheduling. Defaults to "true" |
-| `SCHEDULER_GRAPH_SUBSCRIPTIONS_RENEWAL_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 2 * * *" (Every day at 02:00). |
+| `SCHEDULER_MICROSOFT_GRAPH_SUBSCRIPTIONS_MANAGER_ENABLED` | Optional ☑️ | (boolean) Enable the GRAPH_SUBSCRIPTIONS_MANAGER scheduling. Defaults to "true" |
+| `SCHEDULER_MICROSOFT_GRAPH_SUBSCRIPTIONS_MANAGER_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 2 * * *" (Every day at 02:00). |
 
 
 
@@ -147,7 +143,7 @@ To help you get started, you can also download our [.env file template](/hosting
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
 | `EVENTSCOLLECTOR_ENABLED` | Optional ☑️ | (boolean) Enable integration with the events collector service. Defaults to "false". |
-| `EVENTSCOLLECTOR_ROOT_URL` | Optional ☑️ | (string) Events collector root URL. Defaults to "https://events.salestim.io". |
+| `EVENTSCOLLECTOR_ROOT_URL` | Optional ☑️ | (string) Events collector root URL. Defaults to "https://events.nbold.io". |
 | `EVENTSCOLLECTOR_AUTH_HEADER` | Optional ☑️ | (string) HTTP header used to pass the authentication token to the events collector service. Defaults to "X-Auth-Token". |
 | `EVENTSCOLLECTOR_AUTH_CLIENT_TOKEN` | Optional ☑️ | (string) Token used to authenticate from clients against the events collector service for tracking operations. Defaults to "". |
 | `EVENTSCOLLECTOR_AUTH_SERVER_TOKEN` | Optional ☑️ | (string) Token used to authenticate from servers (s2s) against the events collector service for tracking operations. Defaults to "". |

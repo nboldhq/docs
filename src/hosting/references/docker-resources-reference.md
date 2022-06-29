@@ -252,7 +252,7 @@ resource "docker_container" "jitsu" {
 
 ### Application image
 ::: tip Note
-All the application services are based on the same `nboldhq/app-platform` image.
+All the application services are based on the same `nboldhq/nbold` image.
 Contact us to access our secured [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) or integrate this image to your own private container registry such as [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry) to access advanced CI/CD capabilities.
 :::
 

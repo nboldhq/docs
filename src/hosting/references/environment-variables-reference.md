@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Thu, 16 Jun 2022 00:50:00 GMT*
+📆 *Generated: Wed, 29 Jun 2022 18:59:34 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -27,10 +27,6 @@ REDIS_TIMEOUT=30000
 REDIS_SECRET_KEY=
 # (string) Global partition key for all redis keys. Defaults to "st:".
 REDIS_KEYS_PREFIX=st:
-# (string) Partition sub-key for the sessions keys. Defaults to "sessions:".
-REDIS_SESSIONS_PREFIX=sessions:
-# (string) Prefix for queues names. Defaults to "queue_".
-REDIS_QUEUES_PREFIX=queue_
 
 # Configuration database
 # Main data storage for the application configuration (PostgreSQL)
@@ -55,12 +51,8 @@ DB_DATA_LOGGING=false
 # Microsoft Azure Storage
 # Blob storage used for storing images (templates pictures and screenshots).
 
-# (string) Microsoft Azure Storage account name. Defaults to the default Azure Storage emulator account.
-MICROSOFT_AZURE_STORAGE_ACCOUNT_NAME=devstoreaccount1
-# (string) Secret key used to authenticate against Microsoft Azure Storage. Defaults to the default Azure Storage secret key.
-MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
-# (string) Microsoft Azure Storage service endpoint. Defaults to the default Azure Storage emulator endpoint.
-MICROSOFT_AZURE_STORAGE_ENDPOINT=http://localhost:10000/devstoreaccount1
+# (string) Microsoft Azure Storage connection string. Defaults to the default Azure Storage emulator connection string.
+MICROSOFT_AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://localhost:10000/devstoreaccount1
 # (string) Name of the container that hosts catalog templates pictures (Has to be created manually), for instance "sttemplatespictures". Defaults to "sttemplatespictures".
 MICROSOFT_AZURE_STORAGE_TEMPLATES_PICTURES_CONTAINER=sttemplatespictures
 
@@ -133,16 +125,16 @@ SCHEDULER_QUEUES_RETENTION_POLICY_ENABLED=true
 # (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 1 * * *" (Every day at 01:00).
 SCHEDULER_QUEUES_RETENTION_POLICY_SCHEDULE=0 1 * * *
 # (boolean) Enable the GRAPH_SUBSCRIPTIONS_MANAGER scheduling. Defaults to "true"
-SCHEDULER_GRAPH_SUBSCRIPTIONS_RENEWAL_ENABLED=true
+SCHEDULER_MICROSOFT_GRAPH_SUBSCRIPTIONS_MANAGER_ENABLED=true
 # (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to *0 2 * * *" (Every day at 02:00).
-SCHEDULER_GRAPH_SUBSCRIPTIONS_RENEWAL_SCHEDULE=0 2 * * *
+SCHEDULER_MICROSOFT_GRAPH_SUBSCRIPTIONS_MANAGER_SCHEDULE=0 2 * * *
 
 # Events Collector
 # Events Collector
 
 # (boolean) Enable integration with the events collector service. Defaults to "false".
 EVENTSCOLLECTOR_ENABLED=false
-# (string) Events collector root URL. Defaults to "https://events.salestim.io".
+# (string) Events collector root URL. Defaults to "https://events.nbold.io".
 EVENTSCOLLECTOR_ROOT_URL=https://events.salestim.io
 # (string) HTTP header used to pass the authentication token to the events collector service. Defaults to "X-Auth-Token".
 EVENTSCOLLECTOR_AUTH_HEADER=X-Auth-Token
@@ -247,7 +239,7 @@ MAIL_ACTION_MSG_ORIGINATOR=
 # Webhooks advanced configuration
 
 # (string) HTTP user agent passed as a header with each request. Defaults to "nBold-Webhook/v[MAJOR].[MINOR].[PATCH]".
-WEBHOOKS_USER_AGENT=nBold-Webhook/v4.23.94
+WEBHOOKS_USER_AGENT=nBold-Webhook/v4.24.27
 # (number) Interval in ms between two attempts. Defaults to "10000".
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times. Defaults to "2".
@@ -287,7 +279,7 @@ GITHUB_INTEGRATION_ENABLED=false
 # (string) Base URL of the Microsoft Graph service (May vary in some environments). Defaults to "https://api.github.com".
 GITHUB_API_BASE_URL=https://api.github.com
 # (string) HTTP user agent passed as a header to the GitHub API. Defaults to "nBold-GitHub/v[MAJOR].[MINOR].[PATCH]".
-GITHUB_USER_AGENT=nBold-GitHub/4.23.94
+GITHUB_USER_AGENT=nBold-GitHub/4.24.27
 # (string) Owner (user or organization) of the GitHub repository where to create alert issues. Defaults to "".
 GITHUB_OWNER=
 # (string) GitHub repository where to create alert issues. Defaults to "".

@@ -1,5 +1,4 @@
 'use strict'
-
 // #region DECLARATIONS
 // Platform Dependencies
 const fs = require('fs')
