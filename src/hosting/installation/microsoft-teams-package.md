@@ -12,7 +12,7 @@ unzip io.nbold.standalone.self.zip
 ```
 
 Each package is comprised of the following files:
-- `manifest.json`:The main package manifest
+- `manifest.json`: The main package manifest
 - `es-es.json`: Spanish localization file
 - `fr-fr.json`: French localization file
 - `it-it.json`: Italian localization file
