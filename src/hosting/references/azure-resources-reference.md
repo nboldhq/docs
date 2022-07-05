@@ -306,37 +306,37 @@ resource "azurerm_app_service" "web_tier" {
     "WEB_PUBLICURL" = "https://web-${var.resource_group.location_code}.${var.product.domain}"
     "API_PUBLICURL" = "https://api-${var.resource_group.location_code}.${var.product.domain}/api/v1.0"
 
-    "MICROSOFT_APP_CLIENT_ID"     = "${var.microsoft_appreg.client_id}"
-    "MICROSOFT_APP_CLIENT_SECRET" = "${var.microsoft_appreg.client_secret}"
+    "MICROSOFT_AZURE_AD_APP_CLIENT_ID"     = "${var.microsoft_appreg.client_id}"
+    "MICROSOFT_AZURE_AD_APP_CLIENT_SECRET" = "${var.microsoft_appreg.client_secret}"
 
     "REDIS_HOST"       = azurerm_redis_cache.redis.hostname
     "REDIS_PORT"       = azurerm_redis_cache.redis.ssl_port
-    "REDIS_DB"         = 0
+    "REDIS_DATABASE_INDEX"         = 0
     "REDIS_TLS"        = "true"
-    "REDIS_SECRET_KEY" = azurerm_redis_cache.redis.primary_access_key
+    "REDIS_PASSWORD" = azurerm_redis_cache.redis.primary_access_key
 
-    "DB_DATA_HOST"            = azurerm_postgresql_server.postgres.fqdn
-    "DB_DATA_DIALECT_OPTIONS" = "{\"ssl\": true}"
-    "DB_DATA_DATABASE_NAME"   = azurerm_postgresql_database.config_db.name
-    "DB_DATA_USERNAME"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}" # "${var.postgres.db_username}@${azurerm_postgresql_server.postgres.name}"
-    "DB_DATA_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password                                        # var.postgres.db_password
+    "DB_APPLICATION_HOST"            = azurerm_postgresql_server.postgres.fqdn
+    "DB_APPLICATION_DIALECT_OPTIONS" = "{\"ssl\": true}"
+    "DB_APPLICATION_DATABASE_NAME"   = azurerm_postgresql_database.config_db.name
+    "DB_APPLICATION_USER"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}" # "${var.postgres.db_username}@${azurerm_postgresql_server.postgres.name}"
+    "DB_APPLICATION_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password                                        # var.postgres.db_password
 
-    "DB_EVENTS_HOST"            = azurerm_postgresql_server.postgres.fqdn
-    "DB_EVENTS_DIALECT_OPTIONS" = "{\"ssl\": true}"
-    "DB_EVENTS_DATABASE_NAME"   = azurerm_postgresql_database.audit_db.name
-    "DB_EVENTS_USERNAME"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
-    "DB_EVENTS_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
+    "AUDITING_SERVICE_DB_AUDIT_HOST"            = azurerm_postgresql_server.postgres.fqdn
+    "AUDITING_SERVICE_DB_AUDIT_DIALECT_OPTIONS" = "{\"ssl\": true}"
+    "AUDITING_SERVICE_DB_AUDIT_DATABASE_NAME"   = azurerm_postgresql_database.audit_db.name
+    "AUDITING_SERVICE_DB_AUDIT_USER"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
+    "AUDITING_SERVICE_DB_AUDIT_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
 
     "MICROSOFT_AZURE_STORAGE_ACCOUNT_NAME"       = azurerm_storage_account.azure_storage.name
-    "MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY" = azurerm_storage_account.azure_storage.primary_access_key
+    "MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET" = azurerm_storage_account.azure_storage.primary_access_key
     "MICROSOFT_AZURE_STORAGE_ENDPOINT"           = azurerm_storage_account.azure_storage.primary_blob_endpoint
 
     "MICROSOFT_COSMOSDB_ENDPOINT"   = azurerm_cosmosdb_account.cosmosdb.endpoint
-    "MICROSOFT_COSMOSDB_SECRET_KEY" = azurerm_cosmosdb_account.cosmosdb.primary_key
+    "MICROSOFT_COSMOSDB_SECRET" = azurerm_cosmosdb_account.cosmosdb.primary_key
 
     "MICROSOFT_APPINSIGHTS_INTEGRATION_ENABLED"        = true
     "MICROSOFT_APPINSIGHTS_LIVE_METRICS_ENABLED"       = true
-    "MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET_KEY" = azurerm_application_insights.app_insights.instrumentation_key
+    "MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET" = azurerm_application_insights.app_insights.instrumentation_key
     "MICROSOFT_APPINSIGHTS_CONNECTION_STRING"          = azurerm_application_insights.app_insights.connection_string
   }
 }
@@ -376,36 +376,36 @@ resource "azurerm_app_service" "api_tier" {
     "WEB_PUBLICURL" = "https://web-${var.resource_group.location_code}.${var.product.domain}"
     "API_PUBLICURL" = "https://api-${var.resource_group.location_code}.${var.product.domain}/api/v1.0"
 
-    "MICROSOFT_APP_CLIENT_ID"     = "${var.microsoft_appreg.client_id}"
-    "MICROSOFT_APP_CLIENT_SECRET" = "${var.microsoft_appreg.client_secret}"
+    "MICROSOFT_AZURE_AD_APP_CLIENT_ID"     = "${var.microsoft_appreg.client_id}"
+    "MICROSOFT_AZURE_AD_APP_CLIENT_SECRET" = "${var.microsoft_appreg.client_secret}"
 
     "REDIS_HOST"       = azurerm_redis_cache.redis.hostname
     "REDIS_PORT"       = azurerm_redis_cache.redis.ssl_port
     "REDIS_TLS"        = "true"
-    "REDIS_SECRET_KEY" = azurerm_redis_cache.redis.primary_access_key
+    "REDIS_PASSWORD" = azurerm_redis_cache.redis.primary_access_key
 
-    "DB_DATA_HOST"            = azurerm_postgresql_server.postgres.fqdn
-    "DB_DATA_DIALECT_OPTIONS" = "{\"ssl\": true}"
-    "DB_DATA_DATABASE_NAME"   = azurerm_postgresql_database.config_db.name
-    "DB_DATA_USERNAME"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
-    "DB_DATA_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
+    "DB_APPLICATION_HOST"            = azurerm_postgresql_server.postgres.fqdn
+    "DB_APPLICATION_DIALECT_OPTIONS" = "{\"ssl\": true}"
+    "DB_APPLICATION_DATABASE_NAME"   = azurerm_postgresql_database.config_db.name
+    "DB_APPLICATION_USER"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
+    "DB_APPLICATION_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
 
-    "DB_EVENTS_HOST"            = azurerm_postgresql_server.postgres.fqdn
-    "DB_EVENTS_DIALECT_OPTIONS" = "{\"ssl\": true}"
-    "DB_EVENTS_DATABASE_NAME"   = azurerm_postgresql_database.audit_db.name
-    "DB_EVENTS_USERNAME"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
-    "DB_EVENTS_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
+    "AUDITING_SERVICE_DB_AUDIT_HOST"            = azurerm_postgresql_server.postgres.fqdn
+    "AUDITING_SERVICE_DB_AUDIT_DIALECT_OPTIONS" = "{\"ssl\": true}"
+    "AUDITING_SERVICE_DB_AUDIT_DATABASE_NAME"   = azurerm_postgresql_database.audit_db.name
+    "AUDITING_SERVICE_DB_AUDIT_USER"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
+    "AUDITING_SERVICE_DB_AUDIT_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
 
     "MICROSOFT_AZURE_STORAGE_ACCOUNT_NAME"       = azurerm_storage_account.azure_storage.name
-    "MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY" = azurerm_storage_account.azure_storage.primary_access_key
+    "MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET" = azurerm_storage_account.azure_storage.primary_access_key
     "MICROSOFT_AZURE_STORAGE_ENDPOINT"           = azurerm_storage_account.azure_storage.primary_blob_endpoint
 
     "MICROSOFT_COSMOSDB_ENDPOINT"   = azurerm_cosmosdb_account.cosmosdb.endpoint
-    "MICROSOFT_COSMOSDB_SECRET_KEY" = azurerm_cosmosdb_account.cosmosdb.primary_key
+    "MICROSOFT_COSMOSDB_SECRET" = azurerm_cosmosdb_account.cosmosdb.primary_key
 
     "MICROSOFT_APPINSIGHTS_INTEGRATION_ENABLED"        = true
     "MICROSOFT_APPINSIGHTS_LIVE_METRICS_ENABLED"       = true
-    "MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET_KEY" = azurerm_application_insights.app_insights.instrumentation_key
+    "MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET" = azurerm_application_insights.app_insights.instrumentation_key
     "MICROSOFT_APPINSIGHTS_CONNECTION_STRING"          = azurerm_application_insights.app_insights.connection_string
   }
 }
@@ -445,36 +445,36 @@ resource "azurerm_app_service" "jobs_tier" {
     "WEB_PUBLICURL" = "https://web-${var.resource_group.location_code}.${var.product.domain}"
     "API_PUBLICURL" = "https://api-${var.resource_group.location_code}.${var.product.domain}/api/v1.0"
 
-    "MICROSOFT_APP_CLIENT_ID"     = "${var.microsoft_appreg.client_id}"
-    "MICROSOFT_APP_CLIENT_SECRET" = "${var.microsoft_appreg.client_secret}"
+    "MICROSOFT_AZURE_AD_APP_CLIENT_ID"     = "${var.microsoft_appreg.client_id}"
+    "MICROSOFT_AZURE_AD_APP_CLIENT_SECRET" = "${var.microsoft_appreg.client_secret}"
 
     "REDIS_HOST"       = azurerm_redis_cache.redis.hostname
     "REDIS_PORT"       = azurerm_redis_cache.redis.ssl_port
     "REDIS_TLS"        = "true"
-    "REDIS_SECRET_KEY" = azurerm_redis_cache.redis.primary_access_key
+    "REDIS_PASSWORD" = azurerm_redis_cache.redis.primary_access_key
 
-    "DB_DATA_HOST"            = azurerm_postgresql_server.postgres.fqdn
-    "DB_DATA_DIALECT_OPTIONS" = "{\"ssl\": true}"
-    "DB_DATA_DATABASE_NAME"   = azurerm_postgresql_database.config_db.name
-    "DB_DATA_USERNAME"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
-    "DB_DATA_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
+    "DB_APPLICATION_HOST"            = azurerm_postgresql_server.postgres.fqdn
+    "DB_APPLICATION_DIALECT_OPTIONS" = "{\"ssl\": true}"
+    "DB_APPLICATION_DATABASE_NAME"   = azurerm_postgresql_database.config_db.name
+    "DB_APPLICATION_USER"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
+    "DB_APPLICATION_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
 
-    "DB_EVENTS_HOST"            = azurerm_postgresql_server.postgres.fqdn
-    "DB_EVENTS_DIALECT_OPTIONS" = "{\"ssl\": true}"
-    "DB_EVENTS_DATABASE_NAME"   = azurerm_postgresql_database.audit_db.name
-    "DB_EVENTS_USERNAME"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
-    "DB_EVENTS_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
+    "AUDITING_SERVICE_DB_AUDIT_HOST"            = azurerm_postgresql_server.postgres.fqdn
+    "AUDITING_SERVICE_DB_AUDIT_DIALECT_OPTIONS" = "{\"ssl\": true}"
+    "AUDITING_SERVICE_DB_AUDIT_DATABASE_NAME"   = azurerm_postgresql_database.audit_db.name
+    "AUDITING_SERVICE_DB_AUDIT_USER"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
+    "AUDITING_SERVICE_DB_AUDIT_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
 
     "MICROSOFT_AZURE_STORAGE_ACCOUNT_NAME"       = azurerm_storage_account.azure_storage.name
-    "MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY" = azurerm_storage_account.azure_storage.primary_access_key
+    "MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET" = azurerm_storage_account.azure_storage.primary_access_key
     "MICROSOFT_AZURE_STORAGE_ENDPOINT"           = azurerm_storage_account.azure_storage.primary_blob_endpoint
 
     "MICROSOFT_COSMOSDB_ENDPOINT"   = azurerm_cosmosdb_account.cosmosdb.endpoint
-    "MICROSOFT_COSMOSDB_SECRET_KEY" = azurerm_cosmosdb_account.cosmosdb.primary_key
+    "MICROSOFT_COSMOSDB_SECRET" = azurerm_cosmosdb_account.cosmosdb.primary_key
 
     "MICROSOFT_APPINSIGHTS_INTEGRATION_ENABLED"        = true
     "MICROSOFT_APPINSIGHTS_LIVE_METRICS_ENABLED"       = true
-    "MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET_KEY" = azurerm_application_insights.app_insights.instrumentation_key
+    "MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET" = azurerm_application_insights.app_insights.instrumentation_key
     "MICROSOFT_APPINSIGHTS_CONNECTION_STRING"          = azurerm_application_insights.app_insights.connection_string
   }
 }
@@ -513,36 +513,36 @@ resource "azurerm_app_service" "scheduler" {
     "WEB_PUBLICURL" = "https://web-${var.resource_group.location_code}.${var.product.domain}"
     "API_PUBLICURL" = "https://api-${var.resource_group.location_code}.${var.product.domain}/api/v1.0"
 
-    "MICROSOFT_APP_CLIENT_ID"     = "${var.microsoft_appreg.client_id}"
-    "MICROSOFT_APP_CLIENT_SECRET" = "${var.microsoft_appreg.client_secret}"
+    "MICROSOFT_AZURE_AD_APP_CLIENT_ID"     = "${var.microsoft_appreg.client_id}"
+    "MICROSOFT_AZURE_AD_APP_CLIENT_SECRET" = "${var.microsoft_appreg.client_secret}"
 
     "REDIS_HOST"       = azurerm_redis_cache.redis.hostname
     "REDIS_PORT"       = azurerm_redis_cache.redis.ssl_port
     "REDIS_TLS"        = "true"
-    "REDIS_SECRET_KEY" = azurerm_redis_cache.redis.primary_access_key
+    "REDIS_PASSWORD" = azurerm_redis_cache.redis.primary_access_key
 
-    "DB_DATA_HOST"            = azurerm_postgresql_server.postgres.fqdn
-    "DB_DATA_DIALECT_OPTIONS" = "{\"ssl\": true}"
-    "DB_DATA_DATABASE_NAME"   = azurerm_postgresql_database.config_db.name
-    "DB_DATA_USERNAME"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
-    "DB_DATA_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
+    "DB_APPLICATION_HOST"            = azurerm_postgresql_server.postgres.fqdn
+    "DB_APPLICATION_DIALECT_OPTIONS" = "{\"ssl\": true}"
+    "DB_APPLICATION_DATABASE_NAME"   = azurerm_postgresql_database.config_db.name
+    "DB_APPLICATION_USER"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
+    "DB_APPLICATION_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
 
-    "DB_EVENTS_HOST"            = azurerm_postgresql_server.postgres.fqdn
-    "DB_EVENTS_DIALECT_OPTIONS" = "{\"ssl\": true}"
-    "DB_EVENTS_DATABASE_NAME"   = azurerm_postgresql_database.audit_db.name
-    "DB_EVENTS_USERNAME"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
-    "DB_EVENTS_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
+    "AUDITING_SERVICE_DB_AUDIT_HOST"            = azurerm_postgresql_server.postgres.fqdn
+    "AUDITING_SERVICE_DB_AUDIT_DIALECT_OPTIONS" = "{\"ssl\": true}"
+    "AUDITING_SERVICE_DB_AUDIT_DATABASE_NAME"   = azurerm_postgresql_database.audit_db.name
+    "AUDITING_SERVICE_DB_AUDIT_USER"        = "${azurerm_postgresql_server.postgres.administrator_login}@${azurerm_postgresql_server.postgres.name}"
+    "AUDITING_SERVICE_DB_AUDIT_PASSWORD"        = azurerm_postgresql_server.postgres.administrator_login_password # var.postgres.db_password
 
     "MICROSOFT_AZURE_STORAGE_ACCOUNT_NAME"       = azurerm_storage_account.azure_storage.name
-    "MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET_KEY" = azurerm_storage_account.azure_storage.primary_access_key
+    "MICROSOFT_AZURE_STORAGE_ACCOUNT_SECRET" = azurerm_storage_account.azure_storage.primary_access_key
     "MICROSOFT_AZURE_STORAGE_ENDPOINT"           = azurerm_storage_account.azure_storage.primary_blob_endpoint
 
     "MICROSOFT_COSMOSDB_ENDPOINT"   = azurerm_cosmosdb_account.cosmosdb.endpoint
-    "MICROSOFT_COSMOSDB_SECRET_KEY" = azurerm_cosmosdb_account.cosmosdb.primary_key
+    "MICROSOFT_COSMOSDB_SECRET" = azurerm_cosmosdb_account.cosmosdb.primary_key
 
     "MICROSOFT_APPINSIGHTS_INTEGRATION_ENABLED"        = true
     "MICROSOFT_APPINSIGHTS_LIVE_METRICS_ENABLED"       = true
-    "MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET_KEY" = azurerm_application_insights.app_insights.instrumentation_key
+    "MICROSOFT_APPINSIGHTS_INSTRUMENTATION_SECRET" = azurerm_application_insights.app_insights.instrumentation_key
     "MICROSOFT_APPINSIGHTS_CONNECTION_STRING"          = azurerm_application_insights.app_insights.connection_string
   }
 }
@@ -794,7 +794,7 @@ resource "azurerm_app_service" "events_collector" {
     "REDIS_URL"                           = "redis:${azurerm_redis_cache.redis.hostname}:${azurerm_redis_cache.redis.ssl_port}?db=0&password=${azurerm_redis_cache.redis.primary_access_key}"
     "TLS_SKIP_VERIFY"                     = true
     "USER_RECOGNITION_ENABLED"            = false
-    "SERVER_ADMIN_TOKEN"                  = "${var.events_collector.EVENTSCOLLECTOR_AUTH_ADMIN_TOKEN}"
+    "SERVER_ADMIN_TOKEN"                  = "${var.events_collector.AUDITING_SERVICE_AUTH_ADMIN_TOKEN}"
   }
 }
 ```

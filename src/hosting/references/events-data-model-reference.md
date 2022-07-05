@@ -1,5 +1,5 @@
 # Events Data Model Reference
-📆 *Generated: Wed, 29 Jun 2022 18:59:34 GMT*
+📆 *Generated: Tue, 05 Jul 2022 07:03:47 GMT*
 
 
 This document lists all the events tracked in our events database.
@@ -23,12 +23,14 @@ Each event is specified with:
 | Connected apps solutions search | When a user has searched for a connected apps solution | evt_user_connected_apps_solutions_search |
 | Connected apps solution viewed | When a user has viewed a solution | evt_user_connected_apps_solution_viewed |
 | Scheduled job completed | When a scheduled job has been executed and is done | evt_scheduled_job_run_completed |
+| Microsoft Teams list tab cloned | When a Microsoft Teams list tab has been cloned | evt_microsoft_teams_list_tab_cloned |
 | Microsoft Marketplace subscription plan updated | When a Microsoft Marketplace subscription plan has been updated | evt_microsoft_marketplace_subscription_plan_changed |
 | Microsoft Marketplace subscription quantity updated | When a Microsoft Marketplace subscription quantity has been updated | evt_microsoft_marketplace_subscription_quantity_changed |
 | Microsoft Marketplace subscription suspended | When a Microsoft Marketplace subscription has been suspended | evt_microsoft_marketplace_subscription_suspended |
 | Microsoft Marketplace subscription reinstated | When a Microsoft Marketplace subscription has been reinstated | evt_microsoft_marketplace_subscription_reinstated |
 | Microsoft Marketplace subscription unsubscribed | When a Microsoft Marketplace subscription has been unsubscribed | evt_microsoft_marketplace_subscription_unsubscribed |
 | Microsoft Marketplace subscription unknown action detected | When an unknown Microsoft Marketplace subscription action has been detected | evt_microsoft_marketplace_subscription_unknown_action_detected |
+| Microsoft Teams OneNote tab cloned | When a Microsoft Teams OneNote tab has been cloned | evt_microsoft_teams_onenote_tab_cloned |
 | Microsoft Teams admin consent success | When an administrator has successfully granted consent to a Microsoft Teams service account | evt_microsoft_teams_admin_consent_success |
 | Microsoft Teams admin consent error | When an administrator has failed to grant consent to a Microsoft Teams service account | evt_microsoft_teams_admin_consent_error |
 | Microsoft Teams teams searched | When a user starts a search for teams from the Microsoft Teams app | evt_microsoft_teams_teams_searched |

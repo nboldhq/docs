@@ -39,13 +39,13 @@ variable "API_PUBLICURL" {
   default     = ""
 }
 
-variable "MICROSOFT_APP_CLIENT_ID" {
+variable "MICROSOFT_AZURE_AD_APP_CLIENT_ID" {
   description = "Microsoft Azure AD app registration client ID."
   type        = string
   default     = ""
 }
 
-variable "MICROSOFT_APP_CLIENT_SECRET" {
+variable "MICROSOFT_AZURE_AD_APP_CLIENT_SECRET" {
   description = "Microsoft Azure AD app registration client Secret."
   type        = string
   default     = ""
