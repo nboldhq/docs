@@ -14,7 +14,7 @@ Here is a video tutorial: [https://nbold.co/wp-content/uploads/2022/04/Create-Co
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
