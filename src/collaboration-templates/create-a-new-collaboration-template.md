@@ -14,7 +14,7 @@ Here is a video tutorial: [https://nbold.co/wp-content/uploads/2022/04/Create-Co
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -60,4 +60,4 @@ Test your new Collaboration Template from the home page! Click on `+New Team`
 
 Here is a video on how to create a **team from a Collaboration Template:**
 
-[create-team-from-template-demo-center.mp4](/media/create-team-from-template-demo-center.mp4 "create-team-from-template-demo-center.mp4")
+[https://nbold.co/wp-content/uploads/2022/04/create-team-from-template-demo-center.mp4](https://nbold.co/wp-content/uploads/2022/04/create-team-from-template-demo-center.mp4 "Create team from template")
