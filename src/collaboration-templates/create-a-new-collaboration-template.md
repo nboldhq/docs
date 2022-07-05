@@ -9,10 +9,12 @@ position: 1
 
 You want to create a Microsoft Teams Template to support any Collaborative Process in your organization? You'll be able to build it in just a few minutes and help your organization with: New Recruitment, Business Proposals, New Store opening, Business Department Collaboration, etc.
 
+Here is a video tutorial:[create-collaboration-template-demo-center.mp4](/media/create-collaboration-template-demo-center.mp4 "create-collaboration-template-demo-center.mp4")
+
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -43,14 +45,14 @@ For Mac devices, type `Control + Command + Space`.
  4. Enter the **name of the Team** created before
  5. Adapt the name of the Template to be shown to end-users in the catalog
  6. Select what to be cloned (most of the time uncheck "Members")
- 7. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example). 
+ 7. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example).
 
     More details about [Naming Convention](/governance-policies/naming-conventions.md).
  8. [**Approval**](/governance-policies/approval.md): select who will be the approver of the creation (currently disabled by default)
  9. [**Audience**](/governance-policies/audience-targeting.md): define who will be able to create a team with this template
-1.  **Compliance**: define additional [sensitivity labels](/governance-policies/sensitivity-labels.md) to protect your data.
-2.  [**Security policy**](/governance-policies/security-policy.md): define the enforced privacy policy, membership policy and Permanent owners/members policy
-3.  Click "Save"
+10. **Compliance**: define additional [sensitivity labels](/governance-policies/sensitivity-labels.md) to protect your data.
+11. [**Security policy**](/governance-policies/security-policy.md): define the enforced privacy policy, membership policy and Permanent owners/members policy
+12. Click "Save"
 
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)
 
