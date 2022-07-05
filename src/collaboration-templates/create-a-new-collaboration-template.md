@@ -57,3 +57,7 @@ For Mac devices, type `Control + Command + Space`.
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)
 
 Test your new Collaboration Template from the home page! Click on `+New Team`
+
+Here is a video on how to create a **team from a Collaboration Template:** 
+
+[create-team-from-template-demo-center.mp4](/media/create-team-from-template-demo-center.mp4 "create-team-from-template-demo-center.mp4")
