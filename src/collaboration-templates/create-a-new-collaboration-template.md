@@ -9,12 +9,12 @@ position: 1
 
 You want to create a Microsoft Teams Template to support any Collaborative Process in your organization? You'll be able to build it in just a few minutes and help your organization with: New Recruitment, Business Proposals, New Store opening, Business Department Collaboration, etc.
 
-Here is a video tutorial: [https://nbold.co/wp-content/uploads/2022/04/Create-Collaboration-Template-Demo-Center.mp4](https://nbold.co/wp-content/uploads/2022/04/Create-Collaboration-Template-Demo-Center.mp4 "Create-Collaboration-Template")
+Here is a video tutorial: [https://nbold.co/wp-content/uploads/2022/04/Create-Collaboration-Template-Demo-Center.mp4](https://nbold.co/wp-content/uploads/2022/04/Create-Collaboration-Template-Demo-Center.mp4 "Create")
 
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -60,4 +60,4 @@ Test your new Collaboration Template from the home page! Click on `+New Team`
 
 Here is a video on how to create a **team from a Collaboration Template:**
 
-[create-team-from-template-demo-center.mp4](/media/create-team-from-template-demo-center.mp4 "create-team-from-template-demo-center.mp4")
+[https://nbold.co/wp-content/uploads/2022/04/create-team-from-template-demo-center.mp4](https://nbold.co/wp-content/uploads/2022/04/create-team-from-template-demo-center.mp4 "Create team from template")
