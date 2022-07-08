@@ -288,7 +288,7 @@ You can check it by looking at your client secret expiration date in Azure Activ
   * Go to the Security tab, scroll down, and click edit 
 
   ![](/media/screenshot-2022-07-08-at-16-56-09.png)
-  * Change Client secret with a new secret value
+  * Change **Client secret** with a new secret value from a new client secret that you just created in Azure Active Directory.
   * Update a connector
 
 ![](/media/screenshot-2022-07-08-at-16-57-09.png)
