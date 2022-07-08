@@ -261,7 +261,7 @@ You can check it by looking at your client secret expiration date in Azure Activ
 
 #### **To check it:**
 
-* Go to App registration in your Azure Active Directory portal [https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/\~/RegisteredApps](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/\~/RegisteredApps "https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps")
+* Go to [App registration in your Azure Active Directory portal]( https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/\~/RegisteredApps)
 * Select your connector ![](/media/screenshot-2022-07-08-at-13-29-50.png)
 * Click on Certificates & Secrets and check if your client secret has expired.![](/media/screenshot-2022-07-08-at-13-31-30.png)
 
@@ -277,8 +277,8 @@ You can check it by looking at your client secret expiration date in Azure Activ
 ![](/media/screenshot-2022-07-08-at-13-44-10.png)
 
 * And then re-try the authentification:
-  * Go to Power Automate [https://emea.flow.microsoft.com/en-us/](https://emea.flow.microsoft.com/en-us/ "https://emea.flow.microsoft.com/en-us/")
-  * Click Data ==> Custom Connectors
+  * Go to [Power Automate](https://emea.flow.microsoft.com/en-us/) 
+  * Click on Data ==> Custom Connectors
   * Select your nBold connector
 
   ![](/media/screenshot-2022-07-08-at-16-54-25.png)
