@@ -253,9 +253,9 @@ Here are a few interesting articles that may give you some guidelines and new id
 
 ## Update your connector authentication
 
-**Issue:**
+#### **Issue:**
 
-In case your Power Automate flow stops working, one of the possible reasons for that issue can be an expiration of a Power Automate connector authentification.
+In case your Power Automate flow stops working, one of the possible reasons for that issue can be an **expiration of a Power Automate connector authentification.**
 
 You can check it by looking at your client secret expiration date in Azure Active Directory.
 
@@ -263,11 +263,11 @@ You can check it by looking at your client secret expiration date in Azure Activ
 * Select your connector ![](/media/screenshot-2022-07-08-at-13-29-50.png)
 * Click on Certificates & Secrets and check when your client secret has expired.![](/media/screenshot-2022-07-08-at-13-31-30.png)
 
-**Solution :**
+#### **Solution :**
 
 * If it is the case, you need to modify a secret value in the already excising connector in Power Automate, so that it is valid for 24 months.
 
-**Actions to do :**
+#### **Actions to do :**
 
 * Go to Azure Active Directory portal ==> App registration ==> Select your connector ==> Certificates & Secrets
 * Add a new client secret that expires in 24 months
