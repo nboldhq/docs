@@ -259,6 +259,8 @@ In case your Power Automate flow stops working, one of the possible reasons for 
 
 You can check it by looking at your client secret expiration date in Azure Active Directory.
 
+#### **To check it:**
+
 * Go to App registration in your Azure Active Directory portal [https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/\~/RegisteredApps](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/\~/RegisteredApps "https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps")
 * Select your connector ![](/media/screenshot-2022-07-08-at-13-29-50.png)
 * Click on Certificates & Secrets and check when your client secret has expired.![](/media/screenshot-2022-07-08-at-13-31-30.png)
