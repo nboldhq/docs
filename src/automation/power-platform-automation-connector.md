@@ -275,13 +275,20 @@ You can check it by looking at your client secret expiration date in Azure Activ
 ![](/media/screenshot-2022-07-08-at-13-44-10.png)
 
 * And then re-try the authentification:
-  * Go to Power Automate
-
-
-  * Data ==> Custom Connectors
+  * Go to Power Automate [https://emea.flow.microsoft.com/en-us/](https://emea.flow.microsoft.com/en-us/ "https://emea.flow.microsoft.com/en-us/")
+  * Click Data ==> Custom Connectors
   * Select your nBold connector
-  * Go to the Security tab
+
+  ![](/media/screenshot-2022-07-08-at-16-54-25.png)
+  * Click on Edit 
+
+  ![](/media/screenshot-2022-07-08-at-16-55-38.png)
+  * Go to the Security tab, scroll down, and click edit 
+
+  ![](/media/screenshot-2022-07-08-at-16-56-09.png)
   * Change Client secret with a new secret value
   * Update a connector
+
+![](/media/screenshot-2022-07-08-at-16-57-09.png)
 
 It should be all up and running now 😉
