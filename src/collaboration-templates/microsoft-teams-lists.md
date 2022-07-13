@@ -1,5 +1,5 @@
 ---
-status: draft
+status: published
 tags:
 - mslists
 position: 11
@@ -10,7 +10,7 @@ author: Microsoft Lists
 
 ***
 
-#### How to clone Microsoft Lists as part of Collaboration templates
+### How to clone Microsoft Lists as part of Collaboration templates
 
 Finally, we're happy to announce that now you can clone your MS Lists across the Collaboration Templates 🎉
 
