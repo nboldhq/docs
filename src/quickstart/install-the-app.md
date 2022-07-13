@@ -12,7 +12,7 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 ***
 
 **TABLE OF CONTENTS**
-\[\[toc\]\]
+[[toc]]
 
 ***
 
