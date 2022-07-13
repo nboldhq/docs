@@ -46,6 +46,7 @@ pages:
 - src/administrator-guide/update-app-packages.md
 - src/collaboration-templates/create-a-new-collaboration-template.md
 - src/collaboration-templates/create-teams-only-through-microsoft-teams-templates-by-nbold.md
+- src/collaboration-templates/microsoft-teams-lists.md
 - src/collaboration-templates/wiki-tabs.md
 - src/governance-policies/mandatory-number-of-owners-and-members.md
 - src/governance-policies/permanent-owners-and-members-policy.md
