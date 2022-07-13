@@ -6,7 +6,7 @@ position: 8
 author: Microsoft Lists
 
 ---
-# Microsoft Lists
+# Microsoft Teams Lists
 
 ***
 
