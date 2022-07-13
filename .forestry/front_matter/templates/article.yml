@@ -37,6 +37,7 @@ fields:
     max: 100
     step: 1
 pages:
+- drafts/deal-room-with-salesforce.md
 - drafts/hello-world.md
 - src/administrator-guide/administrator-guide.md
 - src/administrator-guide/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
