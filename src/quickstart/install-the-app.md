@@ -12,7 +12,7 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 ***
 
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
@@ -24,7 +24,7 @@ You can install the latest version of nBold from the Microsoft Teams store:
 
 | Package name | Download link |
 | --- | --- |
-| nBold | [![](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link) |
+| nBold |  |
 
 ***
 
@@ -61,7 +61,7 @@ You're all set up! Now it's time to [create your first template](/collaboration-
 You can also:
 
 * [Set up the Home package](/quickstart/setup-the-home-page.md) to make it easier for your end-users.
-* [Delegate the Template Catalog administration](/quickstart/delegate-template-catalog-administration.md) to your business users.
+* [Delegate the Template Catalog administration](https://docs.nbold.co/administrator-guide/delegate-template-catalog-administration.html) to your business users.
 
 ***
 
@@ -73,7 +73,7 @@ This "standalone" package is a personal Microsoft Teams app comprised of the fol
 
 | Package name | Download link |
 | --- | --- |
-| nBold Standalone | [![](https://img.shields.io/badge/Microsoft_Teams-nBold_Standalone-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://assets.nbold.io/packages/io.nbold.standalone.prd.zip) |
+| nBold Standalone |  |
 
 ### Package customization
 
