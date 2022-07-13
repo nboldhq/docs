@@ -246,7 +246,7 @@ Now that you've created the nBold connector, you can use it from [Power Apps](ht
 ::: tip 💡 To Go Further
 Here are a few interesting articles that may give you some guidelines and new ideas on how to use the nBold Connector:
 
-* [Power Automate with Microsoft Teams: The Full Tutorial with Examples](https://nbold.co/power-automate-with-microsoft-teams-the-full-tutorial-with-examples/)
+* [Top 5 Power Automate Flow Examples for Microsoft Teams - nBold](https://nbold.co/top-5-power-automate-flow-examples-for-microsoft-teams/)
 * [Get started with Power Automate](https://docs.microsoft.com/en-us/power-automate/getting-started)
 * [Power BI with Microsoft Teams: How to Manage Reports Effectively](https://nbold.co/power-bi-with-microsoft-teams-how-to-manage-reports-effectively/)
   :::
@@ -261,7 +261,7 @@ You can check it by looking at your client secret expiration date in Azure Activ
 
 #### **To check it:**
 
-* Go to [App registration in your Azure Active Directory portal]( https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/\~/RegisteredApps)
+* Go to [App registration in your Azure Active Directory portal](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/\~/RegisteredApps)
 * Select your connector ![](/media/screenshot-2022-07-08-at-13-29-50.png)
 * Click on Certificates & Secrets and check if your client secret has expired.![](/media/screenshot-2022-07-08-at-13-31-30.png)
 
@@ -277,15 +277,15 @@ You can check it by looking at your client secret expiration date in Azure Activ
 ![](/media/screenshot-2022-07-08-at-13-44-10.png)
 
 * And then re-try the authentification:
-  * Go to [Power Automate](https://emea.flow.microsoft.com/en-us/) 
+  * Go to [Power Automate](https://emea.flow.microsoft.com/en-us/)
   * Click on Data ==> Custom Connectors
   * Select your nBold connector
 
   ![](/media/screenshot-2022-07-08-at-16-54-25.png)
-  * Click on Edit 
+  * Click on Edit
 
   ![](/media/screenshot-2022-07-08-at-16-55-38.png)
-  * Go to the Security tab, scroll down, and click edit 
+  * Go to the Security tab, scroll down, and click edit
 
   ![](/media/screenshot-2022-07-08-at-16-56-09.png)
   * Change **Client secret** with a new secret value from a new client secret that you just created in Azure Active Directory.
