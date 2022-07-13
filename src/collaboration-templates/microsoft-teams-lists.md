@@ -2,7 +2,7 @@
 status: published
 tags:
 - mslists
-position: 12
+position: 8
 author: Microsoft Lists
 
 ---
@@ -16,7 +16,7 @@ Finally, we're happy to announce that now you can clone your MS Lists across the
 
 To include your List, just add a new tab to your Original team (template team).
 
-![](/media/screenshot-2022-07-13-at-18-43-14.png)
+![](/media/screenshot-2022-07-13-at-18-57-13.png)
 
 ***
 
