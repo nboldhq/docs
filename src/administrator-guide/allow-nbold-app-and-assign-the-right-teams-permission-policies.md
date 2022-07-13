@@ -9,7 +9,7 @@ author: Kristina Konstantnyova
 
 ***
 
-**TABLE OF CONTENTS** [[toc]]
+**TABLE OF CONTENTS** \[\[toc\]\]
 
 ***
 
@@ -47,7 +47,7 @@ Then you'll have this:
 
 ![](/media/allow-1-1.png)
 
-Then repeat this for the Home App [_(assuming you already added the App as described in Step 1 and 2 of this doc)_](https://docs.nbold.co/quickstart/set-up-the-home-page.html)
+Then repeat this for the Home App _(assuming you already added the App as described in Step 1 and 2 of this doc)_
 
 ![](/media/allow2-2.png)
 
