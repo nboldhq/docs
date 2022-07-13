@@ -25,3 +25,4 @@ We're supporting the following tab types:
 * 📗 Excel
 * 📕 PowerPoint
 * 💼 PDF
+* 📒 Lists
