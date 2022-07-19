@@ -24,7 +24,7 @@ You can install the latest version of nBold from the Microsoft Teams store:
 
 | Package name | Download link |
 | --- | --- |
-| nBold |  |
+| nBold | [![](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link) |
 
 ***
 
@@ -69,11 +69,9 @@ You can also:
 
 ### Install nBold in your Corporate App Catalog
 
-This "standalone" package is a personal Microsoft Teams app comprised of the following tabs (Home, Catalog, Settings, Docs), that you can manually upload to your Microsoft Teams App Catalog.
+This "standalone" package is a personal Microsoft Teams app comprised of the following tabs (Home, Catalog, Settings, Docs), that you can manually upload to your Microsoft Teams App Catalog:
+[📦 nBold Standalone](https://assets.nbold.io/packages/io.nbold.standalone.prd.zip)
 
-| Package name | Download link |
-| --- | --- |
-| nBold Standalone |  |
 
 ### Package customization
 
