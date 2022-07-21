@@ -72,6 +72,13 @@ sections:
   templates:
   - article
 - type: directory
+  path: src/connected-apps
+  label: Connected Apps
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
   path: src/api
   label: API
   create: documents
