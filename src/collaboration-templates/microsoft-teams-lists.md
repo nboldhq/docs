@@ -7,7 +7,12 @@ author: Microsoft Lists
 
 ---
 # Microsoft Teams Lists
+***
 
+**TABLE OF CONTENTS**
+[[toc]]
+
+***
 ***
 
 ### How to clone Microsoft Lists as part of Collaboration templates
