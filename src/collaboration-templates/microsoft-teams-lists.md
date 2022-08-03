@@ -3,7 +3,7 @@ status: published
 tags:
 - mslists
 position: 8
-author: Microsoft Lists
+author: Guillaume Meyer
 
 ---
 # Microsoft Teams Lists
@@ -15,17 +15,17 @@ author: Microsoft Lists
 ***
 ***
 
-### How to clone Microsoft Lists as part of Collaboration templates
+## How to clone Microsoft Lists as part of collaboration templates?
 
-Finally, we're happy to announce that now you can clone your MS Lists across the Collaboration Templates 🎉
+Finally, we're happy to announce that now you can clone your 📑 Microsoft Lists across collaboration templates 🎉
 
-To include your List, just add a new tab to your Original team (template team).
+To include your List, just add a new tab to your original team.
 
 ![](/media/screenshot-2022-07-13-at-18-57-13.png)
 
 ***
 
-## Supported Microsoft Lists features
+## Key features
 
 These elements will be created as part of the provisioning process:
 
@@ -50,20 +50,20 @@ More specifically, here are the column types currently supported:
 
 ***
 
-## Non supported Microsoft Lists features
+## Non-supported features
 
-The following column types are not supported (and will not be cloned as part of the provisioning process):
+The following column types are NOT supported (and will not be cloned as part of the provisioning process):
 
 * lookup
 * term
 * contentApprovalStatus
 
-These elements are not preserved during items cloning:
+These elements are NOT preserved during items cloning:
 
 * Versions
 * Attachments
 
-These views characteristics are not supported:
+These views characteristics are NOT supported:
 
 * Custom formatting
 * Conditional formatting

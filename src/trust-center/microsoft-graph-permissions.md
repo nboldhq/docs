@@ -180,6 +180,7 @@ If the application is executed in the context of a service account model, when a
 | `Channel.Create` | Delegated | Microsoft Graph | Allows the service account to create and manage channels as part of the provisioning process. | Yes |
 | `ChannelSettings.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage channels settings. | Yes |
 | `ChannelMember.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage channels members. | Yes |
+| `Notes.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to OneNote notebooks. | No |
 
 
 ## Service Account
