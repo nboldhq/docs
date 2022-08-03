@@ -3,9 +3,8 @@ status: published
 tags: []
 author: Kristina Konstantynova
 position: 7
-
 ---
-# **Office Documents and PDF Tabs in Microsoft Teams Templates**
+# Office and PDF Documents Tabs in Microsoft Teams Templates
 
 How to clone Office documents Tabs with Microsoft Teams Templates?  
 What if you want to bring reference documents and materials in a tab to every team created?

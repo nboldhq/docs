@@ -4,15 +4,12 @@ tags:
 - mslists
 position: 8
 author: Guillaume Meyer
-
 ---
 # Microsoft Teams Lists
-***
 
 **TABLE OF CONTENTS**
 [[toc]]
 
-***
 ***
 
 ## How to clone Microsoft Lists as part of collaboration templates?
@@ -23,7 +20,9 @@ To include your List, just add a new tab to your original team.
 
 ![](/media/screenshot-2022-07-13-at-18-57-13.png)
 
-***
+:::warning ⚠️ Note
+For this feature to work, you need to grant the nBold app the `Sites.FullControl.All` permission. To do so, use the `Check admin consent` command from the `Settings` tab.
+:::
 
 ## Key features
 
@@ -47,8 +46,6 @@ More specifically, here are the column types currently supported:
 * text
 * hyperlinkOrPicture
 * thumbnail
-
-***
 
 ## Non-supported features
 
