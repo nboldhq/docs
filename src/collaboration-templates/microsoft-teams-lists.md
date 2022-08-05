@@ -4,21 +4,36 @@ tags:
 - mslists
 position: 8
 author: Guillaume Meyer
+
 ---
 # Microsoft Teams Lists
 
+We're happy to announce that now you can clone your MS Lists across the Collaboration Templates 🎉
+
+***
+
 **TABLE OF CONTENTS**
-[[toc]]
+\[\[toc\]\]
 
 ***
 
 ## How to clone Microsoft Lists as part of collaboration templates?
 
-Finally, we're happy to announce that now you can clone your 📑 Microsoft Lists across collaboration templates 🎉
-
-To include your List, just add a new tab to your original team.
+* To include your List, just add a new tab to any channel in your Original team from the "Add a tab" menu as shown on the screenshot. ( [Create an original team](https://docs.nbold.co/quickstart/create-a-new-collaboration-template.html))
 
 ![](/media/screenshot-2022-07-13-at-18-57-13.png)
+
+* Create a new one from scratch or templates
+
+![](/media/screenshot-2022-08-05-at-17-45-34.png)
+
+![](/media/screenshot-2022-08-05-at-18-06-09.png)
+
+* Or choose an existing list
+
+![](/media/screenshot-2022-08-05-at-18-03-32.png)
+
+And now your Lists tab is automatically replicated to any team created from this template!
 
 :::warning ⚠️ Note
 For this feature to work, you need to grant the nBold app the `Sites.FullControl.All` permission. To do so, use the `Check admin consent` command from the `Settings` tab.
