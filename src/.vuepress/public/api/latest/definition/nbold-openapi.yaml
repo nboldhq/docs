@@ -59,8 +59,192 @@ tags:
     description: Platform Webhooks.
     externalDocs:
       url: https://docs.nbold.co/api/latest/reference/Apis/HooksApi
+  - name: Connected Apps
+    description: Automation solutions
 
 paths:
+  /connected-apps/get-user-access-token:
+    post:
+      tags:
+        - Connected Apps
+      summary: Get a user access token
+      description: Get a user access token TIER 3 | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GLOBAL_ADMIN
+      operationId: getUserAccessToken
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Supply a JSON with an external user id your metadata.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConnectedAppsExternalUserId" 
+        required: true
+      responses:
+        "200":
+          description: OK - Returns the access token and a Connected Apps user ID.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConnectedAppsGetAccessToken"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+  
+  /connected-apps/get-solutions:
+    post:
+      tags:
+        - Connected Apps
+      summary: Get all solutions
+      description: Get all solutions TIER 3 | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GLOBAL_ADMIN
+      operationId: getSolutions
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Supply a JSON with an tags to selects solutions.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConnectedAppsSolutionsTags" 
+        required: true
+      responses:
+        "200":
+          description: OK - Returns solutions from Connected Apps.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConnectedAppsGetSolutions"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+
+  /connected-apps/get-solution-instances:
+    post:
+      tags:
+        - Connected Apps
+      summary: Get all solution instances
+      description: Get all solution instances by externalUserId TIER 3 | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GLOBAL_ADMIN
+      operationId: getSolutionsInstances
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Supply a JSON with an external user id.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConnectedAppsExternalUserId" 
+        required: true
+      responses:
+        "200":
+          description: OK - Returns solution instances from Connected Apps.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConnectedAppsGetSolutionInstances"
+        "403":
+          $ref: "#/components/responses/403"
+        "404":
+          $ref: "#/components/responses/404"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+
+  /connected-apps/delete-solution-instance:
+    post:
+      tags:
+        - Connected Apps
+      summary: Delete a solution instance by solutionInstanceId
+      description: Delete a solution instance by solutionInstanceId TIER 2 | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GLOBAL_ADMIN
+      operationId: deleteSolutionInstance
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Supply a JSON with an Solution instance id and a user access token.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConnectedAppsSolutionInstanceId" 
+        required: true
+      responses:
+        "200":
+          description: OK - Returns delete statement from Connected Apps.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConnectedAppsDeleteSolutionInstance"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+
+  /connected-apps/update-solution-instance:
+    post:
+      tags:
+        - Connected Apps
+      summary: Update a solution instance
+      description: Update a solution instance by solutionInstanceId TIER 1 | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GLOBAL_ADMIN
+      operationId: updateSolutionInstance
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Supply a JSON with solutionInstanceId, userAccessToken, instanceName.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConnectedAppsSolutionInstanceIdUpdate" 
+        required: true
+      responses:
+        "200":
+          description: OK - Returns update statement from Connected Apps.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConnectedAppsUpdateSolutionInstance"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+    
+  /connected-apps/upgrade-solution-instance:
+    post:
+      tags:
+        - Connected Apps
+      summary: Upgrade a solution instance
+      description: Upgrade a solution instance by solutionInstanceId TIER 1 | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GLOBAL_ADMIN
+      operationId: upgradeSolutionInstance
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Supply a JSON with solutionInstanceId, userAccessToken, instanceName.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConnectedAppsSolutionInstanceId" 
+        required: true
+      responses:
+        "200":
+          description: OK - Returns upgrade statement from Connected Apps.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConnectedAppsUpdateSolutionInstance"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+
   /reports/categories:
     get:
       tags:
@@ -733,15 +917,16 @@ paths:
     get:
       tags:
         - Microsoft Teams teams
+        - Metadata
       summary: Get a team metadata
-      description: Get metadata for a team for a specific namespace.
-      operationId: GetTeamNamespaceMetadata
+      description: Get metadata for a team for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      operationId: GetMicrosoftTeamNamespaceMetadata
       externalDocs:
         url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#namespacemetadata
       security:
         - bearerAuth: []
       parameters:
-        - name: teamId
+        - name: team_id
           in: path
           description: The team ID.
           required: true
@@ -760,9 +945,21 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+        
     put:
       tags:
         - Microsoft Teams teams
+        - Metadata
       summary: Set team metadata
       description: Set team metadata for a specific namespace. N.B Using the PUT method will replace all pre-existing metadata.
       operationId: SetTeamNamespaceMetadata
@@ -771,7 +968,7 @@ paths:
       security:
         - bearerAuth: []
       parameters:
-        - name: teamId
+        - name: team_id
           in: path
           description: The team ID.
           required: true
@@ -784,26 +981,7 @@ paths:
           schema:
             type: string
       requestBody:
-        description: Supply a JSON representation of your metadata.
-        content:
-          application/json:
-            schema:
-              type: object
-            examples:
-              1:
-                summary: Set a specific CRM opportunity ID as a single property
-                value:
-                  crm_opportunity_id: 123
-              2:
-                summary: Set a specific CRM opportunity ID as a single property using JSON dotted notation
-                value:
-                  crm_opportunity: { id: 123 }
-              3:
-                summary: Set multiple CRM opportunity and account properties using JSON dotted notation
-                value:
-                  crm_opportunity: { id: 123, name: "Opty 1" }
-                  crm_account: { id: 456, name: "Contoso Inc" }
-        required: true
+        $ref: '#/components/requestBodies/MetadataRequestBody'
       responses:
         "200":
           description: OK - Returns the metadata of a Team object for a specific namespace.
@@ -811,9 +989,20 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
     patch:
       tags:
         - Microsoft Teams teams
+        - Metadata
       summary: Update a team metadata
       description: Update a team metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata.
       operationId: UpdateTeamNamespaceMetadata
@@ -822,7 +1011,7 @@ paths:
       security:
         - bearerAuth: []
       parameters:
-        - name: teamId
+        - name: team_id
           in: path
           description: The team ID.
           required: true
@@ -862,278 +1051,338 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
 
-  # /teams/{teamId}/channels/{channelId}/metadata/{namespace}:
-  #   get:
-  #     tags:
-  #       - Microsoft Teams channels
-  #       - Metadata
-  #     summary: Get a channel metadata
-  #     description: Get metadata for a channel for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-  #     operationId: GetTeamsChannelNamespaceMetadata
-  #     externalDocs:
-  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteamschannelnamespacemetadata
-  #     security:
-  #       - bearerAuth: []
-  #     parameters:
-  #       - name: teamId
-  #         in: path
-  #         description: The team ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: channelId
-  #         in: path
-  #         description: The channel ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: namespace
-  #         in: path
-  #         description: The metadata namespace.
-  #         required: true
-  #         schema:
-  #           type: string
-  #     responses:
-  #       "200":
-  #         description: OK - Returns the metadata of a Microsoft Teams channel object for a specific namespace.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: "#/components/schemas/Metadata"
-  #   post:
-  #     tags:
-  #       - Microsoft Teams channels
-  #       - Metadata
-  #     summary: Set channel metadata
-  #     description: Set channel metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-  #     operationId: SetMicrosoftTeamsChannelNamespaceMetadata
-  #     externalDocs:
-  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamschannelnamespacemetadata
-  #     security:
-  #       - bearerAuth: []
-  #     parameters:
-  #       - name: teamId
-  #         in: path
-  #         description: The team ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: channelId
-  #         in: path
-  #         description: The channel ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: namespace
-  #         in: path
-  #         description: The metadata namespace.
-  #         required: true
-  #         schema:
-  #           type: string
-  #     requestBody:
-  #       description: Supply a JSON representation of your metadata.
-  #       content:
-  #         application/json:
-  #           schema:
-  #             type: object
-  #       required: true
-  #     responses:
-  #       "200":
-  #         description: OK - Returns the metadata of a channel object for a specific namespace.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: "#/components/schemas/Metadata"
-  #   patch:
-  #     tags:
-  #       - Microsoft Teams channels
-  #       - Metadata
-  #     summary: Update a channel metadata
-  #     description: Update a channel metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-  #     operationId: UpdateMicrosoftTeamsChannelNamespaceMetadata
-  #     externalDocs:
-  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamschannelnamespacemetadata
-  #     security:
-  #       - bearerAuth: []
-  #     parameters:
-  #       - name: teamId
-  #         in: path
-  #         description: The team ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: channelId
-  #         in: path
-  #         description: The channel ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: namespace
-  #         in: path
-  #         description: The metadata namespace.
-  #         required: true
-  #         schema:
-  #           type: string
-  #     requestBody:
-  #       description: Supply a JSON representation of your metadata.
-  #       content:
-  #         application/json:
-  #           schema:
-  #             type: object
-  #       required: true
-  #     responses:
-  #       "200":
-  #         description: OK - Returns the metadata of a channel object for a specific namespace.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: "#/components/schemas/Metadata"
+  /teams/{teamId}/channels/{channelId}/metadata/{namespace}:
+    get:
+      tags:
+        - Microsoft Teams channels
+        - Metadata
+      summary: Get a channel metadata
+      description: Get metadata for a channel for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      operationId: GetMicrosoftTeamsChannelNamespaceMetadata authorized_app
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getteamschannelnamespacemetadata
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: team_id
+          in: path
+          description: The team ID.
+          required: true
+          schema:
+            type: string
+        - name: channel_id
+          in: path
+          description: The channel ID.
+          required: true
+          schema:
+            type: string
+        - name: namespace
+          in: path
+          description: The metadata namespace.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK - Returns the metadata of a Microsoft Teams channel object for a specific namespace.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+    post:
+      tags:
+        - Microsoft Teams channels
+        - Metadata
+      summary: Set channel metadata
+      description: Set channel metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      operationId: SetMicrosoftTeamsChannelNamespaceMetadata
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamschannelnamespacemetadata
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: team_id
+          in: path
+          description: The team ID.
+          required: true
+          schema:
+            type: string
+        - name: channel_id
+          in: path
+          description: The channel ID.
+          required: true
+          schema:
+            type: string
+        - name: namespace
+          in: path
+          description: The metadata namespace.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/MetadataRequestBody'
+      responses:
+        "200":
+          description: OK - Returns the metadata of a channel object for a specific namespace.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+    patch:
+      tags:
+        - Microsoft Teams channels
+        - Metadata
+      summary: Update a channel metadata
+      description: Update a channel metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      operationId: UpdateMicrosoftTeamsChannelNamespaceMetadata
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamschannelnamespacemetadata
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: team_id
+          in: path
+          description: The team ID.
+          required: true
+          schema:
+            type: string
+        - name: channel_id
+          in: path
+          description: The channel ID.
+          required: true
+          schema:
+            type: string
+        - name: namespace
+          in: path
+          description: The metadata namespace.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/MetadataRequestBody'
+      responses:
+        "200":
+          description: OK - Returns the metadata of a channel object for a specific namespace.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
 
-  # /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace}:
-  #   get:
-  #     tags:
-  #       - Microsoft Teams messages
-  #       - Metadata
-  #     summary: Get a message metadata
-  #     description: Get metadata for a message for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-  #     operationId: GetMicrosoftTeamsMessageNamespaceMetadata
-  #     externalDocs:
-  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getmicrosoftteamsmessagenamespacemetadata
-  #     security:
-  #       - bearerAuth: []
-  #     parameters:
-  #       - name: team_id
-  #         in: path
-  #         description: The team ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: channel_id
-  #         in: path
-  #         description: The channel ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: message_id
-  #         in: path
-  #         description: The message ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: namespace
-  #         in: path
-  #         description: The metadata namespace.
-  #         required: true
-  #         schema:
-  #           type: string
-  #     responses:
-  #       "200":
-  #         description: OK - Returns the metadata of a Microsoft Teams message for a specific namespace.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: "#/components/schemas/Metadata"
-  #   post:
-  #     tags:
-  #       - Microsoft Teams messages
-  #       - Metadata
-  #     summary: Set message metadata
-  #     description: Set message metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-  #     operationId: SetMicrosoftTeamsMessageNamespaceMetadata
-  #     externalDocs:
-  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamsmessagenamespacemetadata
-  #     security:
-  #       - bearerAuth: []
-  #     parameters:
-  #       - name: team_id
-  #         in: path
-  #         description: The team ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: channel_id
-  #         in: path
-  #         description: The channel ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: message_id
-  #         in: path
-  #         description: The message ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: namespace
-  #         in: path
-  #         description: The metadata namespace.
-  #         required: true
-  #         schema:
-  #           type: string
-  #     requestBody:
-  #       description: Supply a JSON representation of your metadata.
-  #       content:
-  #         application/json:
-  #           schema:
-  #             type: object
-  #       required: true
-  #     responses:
-  #       "200":
-  #         description: OK - Returns the metadata of a message object for a specific namespace.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: "#/components/schemas/Metadata"
-  #   patch:
-  #     tags:
-  #       - Microsoft Teams messages
-  #       - Metadata
-  #     summary: Update a message metadata
-  #     description: Update a message metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
-  #     operationId: UpdateMicrosoftTeamsMessageNamespaceMetadata
-  #     externalDocs:
-  #       url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamsmessagenamespacemetadata
-  #     security:
-  #       - bearerAuth: []
-  #     parameters:
-  #       - name: team_id
-  #         in: path
-  #         description: The team ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: channel_id
-  #         in: path
-  #         description: The channel ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: message_id
-  #         in: path
-  #         description: The message ID.
-  #         required: true
-  #         schema:
-  #           type: string
-  #       - name: namespace
-  #         in: path
-  #         description: The metadata namespace.
-  #         required: true
-  #         schema:
-  #           type: string
-  #     requestBody:
-  #       description: Supply a JSON representation of your metadata.
-  #       content:
-  #         application/json:
-  #           schema:
-  #             type: object
-  #       required: true
-  #     responses:
-  #       "200":
-  #         description: OK - Returns the metadata of a message object for a specific namespace.
-  #         content:
-  #           application/json:
-  #             schema:
-  #               $ref: "#/components/schemas/Metadata"
+  /teams/{team_id}/channels/{channel_id}/messages/{message_id}/metadata/{namespace}:
+    get:
+      tags:
+        - Microsoft Teams messages
+        - Metadata
+      summary: Get a message metadata
+      description: Get metadata for a message for a specific namespace. TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      operationId: GetMicrosoftTeamsMessageNamespaceMetadata
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#getmicrosoftteamsmessagenamespacemetadata
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: team_id
+          in: path
+          description: The team ID.
+          required: true
+          schema:
+            type: string
+        - name: channel_id
+          in: path
+          description: The channel ID.
+          required: true
+          schema:
+            type: string
+        - name: message_id
+          in: path
+          description: The message ID.
+          required: true
+          schema:
+            type: string
+        - name: namespace
+          in: path
+          description: The metadata namespace.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK - Returns the metadata of a Microsoft Teams message for a specific namespace.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+    post:
+      tags:
+        - Microsoft Teams messages
+        - Metadata
+      summary: Set message metadata
+      description: Set message metadata for a specific namespace. N.B Using the POST method will replace all pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      operationId: SetMicrosoftTeamsMessageNamespaceMetadata
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#setmicrosoftteamsmessagenamespacemetadata
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: team_id
+          in: path
+          description: The team ID.
+          required: true
+          schema:
+            type: string
+        - name: channel_id
+          in: path
+          description: The channel ID.
+          required: true
+          schema:
+            type: string
+        - name: message_id
+          in: path
+          description: The message ID.
+          required: true
+          schema:
+            type: string
+        - name: namespace
+          in: path
+          description: The metadata namespace.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Supply a JSON representation of your metadata.
+        content:
+          application/json:
+            schema:
+              type: object
+        required: true
+      responses:
+        "200":
+          description: OK - Returns the metadata of a message object for a specific namespace.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
+    patch:
+      tags:
+        - Microsoft Teams messages
+        - Metadata
+      summary: Update a message metadata
+      description: Update a message metadata for a specific namespace. N.B Using the PATCH method will merge supplied body with pre-existing metadata. TIER 2️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, GOVERNANCE_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      operationId: UpdateMicrosoftTeamsMessageNamespaceMetadata
+      externalDocs:
+        url: https://docs.nbold.co/api/latest/reference/Apis/TeamsApi.html#updatemicrosoftteamsmessagenamespacemetadata
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: team_id
+          in: path
+          description: The team ID.
+          required: true
+          schema:
+            type: string
+        - name: channel_id
+          in: path
+          description: The channel ID.
+          required: true
+          schema:
+            type: string
+        - name: message_id
+          in: path
+          description: The message ID.
+          required: true
+          schema:
+            type: string
+        - name: namespace
+          in: path
+          description: The metadata namespace.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Supply a JSON representation of your metadata.
+        content:
+          application/json:
+            schema:
+              type: object
+        required: true
+      responses:
+        "200":
+          description: OK - Returns the metadata of a message object for a specific namespace.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Metadata"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
 
   /metadata/{namespace}/query:
     post:
@@ -1893,6 +2142,28 @@ components:
       bearerFormat: JWT
 
   requestBodies:
+    MetadataRequestBody:
+      description: Supply a JSON representation of your metadata.
+      content:
+        application/json:
+          schema:
+            type: object
+          examples:
+            1:
+              summary: Set a specific CRM opportunity ID as a single property
+              value:
+                crm_opportunity_id: 123
+            2:
+              summary: Set a specific CRM opportunity ID as a single property using JSON dotted notation
+              value:
+                crm_opportunity: { id: 123 }
+            3:
+              summary: Set multiple CRM opportunity and account properties using JSON dotted notation
+              value:
+                crm_opportunity: { id: 123, name: "Opty 1" }
+                crm_account: { id: 456, name: "Contoso Inc" }
+      required: true
+
     TeamCreationApprovalRequestedNotificationPayload:
       description: Team Creation Approval Requested Notification Payload.
       content:
@@ -2190,6 +2461,297 @@ components:
                 type: object
 
   schemas:
+    ConnectedAppsUpdateSolutionInstance:
+      title: delete a solution instance response
+      description: delete a solution instance response
+      type: object
+      properties:
+        data: 
+          type: object
+          properties: 
+            updateSolutionInstance: 
+              type: object
+              properties: 
+                solutionInstance: 
+                  type: object
+                  properties: 
+                    id: 
+                      type: string
+                    name: 
+                      type: string
+                    enabled: 
+                      type: boolean
+                    created: 
+                      type: string
+    ConnectedAppsDeleteSolutionInstance:
+      title: delete a solution instance response
+      description: delete a solution instance response
+      type: object
+      properties:
+        data: 
+          type: object
+          properties: 
+            removeSolutionInstance: 
+              type: object
+              properties: 
+                clientMutationId: 
+                  type: string
+
+    ConnectedAppsGetSolutionInstances:
+      title: Solution instances
+      description: list of Solution instances
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            viewer:
+              type: object
+              properties:
+                solutionInstances:
+                  type: object
+                  properties:
+                    edges:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          node:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                              name:
+                                type: string
+                              enabled:
+                                type: boolean
+                              owner:
+                                type: string
+                              created:
+                                type: string
+                              solution:
+                                type: object
+                                properties:
+                                  id:
+                                    type: string
+                                  title:
+                                    type: string
+                                  description:
+                                    type: string
+                                  tags:
+                                    type: array
+                                    items:
+                                      type: string
+                                  authSlots:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        externalId:
+                                          type: string
+                                  customFields:
+                                    type: array
+                                    items: {}
+                                  configSlots:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        externalId:
+                                          type: string
+                                        title:
+                                          type: string
+                                        defaultValue:
+                                          type: string
+                              solutionVersionFlags:
+                                type: object
+                                properties:
+                                  hasNewerVersion:
+                                    type: boolean
+                                  requiresUserInputToUpdateVersion:
+                                    type: boolean
+                                  requiresSystemInputToUpdateVersion:
+                                    type: boolean
+                              workflows:
+                                type: object
+                                properties:
+                                  edges:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        node:
+                                          type: object
+                                          properties:
+                                            triggerUrl:
+                                              type: string
+                                            id:
+                                              type: string
+                              authValues:
+                                type: array
+                                items: {}
+                              configValues:
+                                type: array
+                                items: {}
+                          cursor:
+                            type: string
+                    pageInfo:
+                      type: object
+                      properties:
+                        startCursor:
+                          type: string
+                        endCursor:
+                          type: string
+                        hasNextPage:
+                          type: boolean
+                        hasPreviousPage:
+                          type: boolean
+
+    ConnectedAppsSolutionsTags:
+      title: Tags to search
+      description: Tags to search
+      type: object
+      properties:
+        tags:
+          description: tags to search
+          type: array
+          items:
+            type: string
+    
+    ConnectedAppsGetSolutions:
+      title: Solutions data
+      description: Solutions 
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            viewer:
+              type: object
+              properties:
+                solutions:
+                  type: object
+                  properties:
+                    edges:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          node:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                              title:
+                                type: string
+                              description:
+                                type: string
+                              tags:
+                                type: array
+                                items:
+                                  type: string
+                              authSlots:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    externalId:
+                                      type: string
+                              customFields:
+                                type: array
+                                items: {}
+                              configSlots:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    externalId:
+                                      type: string
+                                    title:
+                                      type: string
+                                    defaultValue:
+                                      type: string
+                          cursor:
+                            type: string
+                    pageInfo:
+                      type: object
+                      properties:
+                        hasNextPage:
+                          type: boolean
+                        endCursor:
+                          type: string
+                        hasPreviousPage:
+                          type: boolean
+                        startCursor:
+                          type: string
+    ConnectedAppsSolutionInstanceIdUpdate:
+      title: Connected Apps Solution instance id and a user access token
+      description: the user access token as to be link with the solution instance in Connected Apps
+      type: object
+      properties:
+        solutionInstanceId:
+          description: solution instance id
+          type: string
+        userAccessToken: 
+          description: user access token
+          type: string
+        instanceName: 
+          type: string
+        enabled: 
+          type: boolean
+        configValues: 
+          type: array
+          items: 
+            type: object
+            properties: 
+              externalId: 
+                type: string
+              value: 
+                type: string
+        authValues: 
+          type: array
+          items:
+            type: object
+            properties:
+              externalId: 
+                type: string
+              authId: 
+                type: string
+
+    ConnectedAppsSolutionInstanceId:
+      title: Connected Apps Solution instance id and a user access token
+      description: the user access token as to be link with the solution instance in Connected Apps
+      type: object
+      properties:
+        solutionInstanceId:
+          description: solution instance id
+          type: string
+        userAccessToken: 
+          description: user access token
+          type: string
+        
+
+    ConnectedAppsExternalUserId:
+      title: Connected Apps external user ID 
+      description: not a connected Apps user ID
+      type: object
+      properties:
+        externalUserId:
+          description:  Connected Apps external user ID
+          type: string
+
+    ConnectedAppsGetAccessToken:
+      title: Access token from Connected Apps 
+      description: Recieved a Connected Apps user ID and an access token 
+      type: object
+      properties:
+        accessToken:
+          description: Connected Apps access token
+          type: string
+        userId: 
+          description: Connected Apps user ID
+          type: string
+
     ReportsCategories:
       title: Reports categories
       description: A collection of reports categories.
@@ -2306,6 +2868,7 @@ components:
       title: Metadata
       description: Metadata for a collaboration process artefact.
       type: object
+
 
     MetadataQueryResults:
       title: Metadata query results
