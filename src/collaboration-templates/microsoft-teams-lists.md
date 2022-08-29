@@ -3,24 +3,43 @@ status: published
 tags:
 - mslists
 position: 8
-author: Microsoft Lists
+author: Guillaume Meyer
 
 ---
 # Microsoft Teams Lists
 
+We're happy to announce that now you can clone your MS Lists across the Collaboration Templates 🎉
+
 ***
 
-### How to clone Microsoft Lists as part of Collaboration templates
+**TABLE OF CONTENTS**
+\[\[toc\]\]
 
-Finally, we're happy to announce that now you can clone your MS Lists across the Collaboration Templates 🎉
+***
 
-To include your List, just add a new tab to your Original team (template team).
+## How to clone Microsoft Lists as part of collaboration templates?
+
+* To include your List, just add a new tab to any channel in your Original team from the "Add a tab" menu as shown on the screenshot. ( [Create an original team](https://docs.nbold.co/quickstart/create-a-new-collaboration-template.html))
 
 ![](/media/screenshot-2022-07-13-at-18-57-13.png)
 
-***
+* Create a new one from scratch or templates
 
-## Supported Microsoft Lists features
+![](/media/screenshot-2022-08-05-at-17-45-34.png)
+
+![](/media/screenshot-2022-08-05-at-18-06-09.png)
+
+* Or choose an existing list
+
+![](/media/screenshot-2022-08-05-at-18-03-32.png)
+
+And now your Lists tab is automatically replicated to any team created from this template!
+
+:::warning ⚠️ Note
+For this feature to work, you need to grant the nBold app the `Sites.FullControl.All` permission. To do so, use the `Check admin consent` command from the `Settings` tab.
+:::
+
+## Key features
 
 These elements will be created as part of the provisioning process:
 
@@ -43,22 +62,20 @@ More specifically, here are the column types currently supported:
 * hyperlinkOrPicture
 * thumbnail
 
-***
+## Non-supported features
 
-## Non supported Microsoft Lists features
-
-The following column types are not supported (and will not be cloned as part of the provisioning process):
+The following column types are NOT supported (and will not be cloned as part of the provisioning process):
 
 * lookup
 * term
 * contentApprovalStatus
 
-These elements are not preserved during items cloning:
+These elements are NOT preserved during items cloning:
 
 * Versions
 * Attachments
 
-These views characteristics are not supported:
+These views characteristics are NOT supported:
 
 * Custom formatting
 * Conditional formatting
