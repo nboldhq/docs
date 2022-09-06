@@ -913,7 +913,7 @@ paths:
         default:
           $ref: "#/components/responses/500"
 
-  /teams/{teamId}/metadata/{namespace}:
+  /teams/{team_id}/metadata/{namespace}:
     get:
       tags:
         - Microsoft Teams teams
@@ -1062,7 +1062,7 @@ paths:
         "500":
           $ref: "#/components/responses/500"
 
-  /teams/{teamId}/channels/{channelId}/metadata/{namespace}:
+  /teams/{team_id}/channels/{channel_id}/metadata/{namespace}:
     get:
       tags:
         - Microsoft Teams channels
@@ -1383,7 +1383,54 @@ paths:
           $ref: "#/components/responses/429"
         "500":
           $ref: "#/components/responses/500"
-
+  /teams/{team_id}/channels/{channel_id}/messages:
+    post:
+      tags:
+        - Microsoft Teams messages
+      summary: send message
+      description: send a message to the specified channel TIER 3️⃣ | ROLES - AUTHORIZED_APP, INTEGRATION_MANAGER, TEAMS_SERVICE_ADMIN, GLOBAL_ADMIN.
+      operationId: sendMessage
+      externalDocs:
+        url: https://docs.microsoft.com/en-us/graph/api/channel-post-messages?view=graph-rest-1.0&tabs=http
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: team_id
+          in: path
+          description: The team ID.
+          required: true
+          schema:
+            type: string
+        - name: channel_id
+          in: path
+          description: The channel ID.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Supply a JSON representation of your message from and body field required.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SendMessageRequest"
+        required: true
+      responses:
+        "200":
+          description: OK - Returns the metadata of a message object for a specific namespace.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SendMessageResponse"
+        "401":
+          $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
+        "403":
+          $ref: "#/components/responses/403"
+        "429":
+          $ref: "#/components/responses/429"
+        "500":
+          $ref: "#/components/responses/500"
   /metadata/{namespace}/query:
     post:
       tags:
@@ -2461,9 +2508,155 @@ components:
                 type: object
 
   schemas:
+    SendMessageRequest:
+      title:  message json request
+      description: a JSON representation of a message object
+      type: object
+      properties:
+        messageType: 
+          type: string
+        subject: 
+          type: string
+        summary: 
+          type: string
+        chatId: 
+          type: string
+        importance: 
+          type: string
+        locale: 
+          type: string
+        policyViolation: 
+          type: string
+        from: 
+          type: object
+          properties: 
+            application: 
+              type: string
+            device: 
+              type: string
+            user: 
+              type: object
+              properties: 
+                id: 
+                  type: string
+                displayName: 
+                  type: string
+                userIdentityType: 
+                  type: string
+        body:
+          type: object
+          properties: 
+            contentType: 
+              type: string
+            content: 
+              type: string
+        channelIdentity: 
+          type: object
+          properties: 
+            teamId: 
+              type: string
+            channelId: 
+              type: string
+        attachments: 
+          type: array
+          items: {}
+        mentions: 
+          type: array
+          items: {}
+        reactions: 
+          type: array
+          items: {}
+    SendMessageResponse:
+      title:  message json response
+      description: a JSON representation of a message object
+      type: object
+      properties:
+        odata.context: 
+          type: string
+        id: 
+          type: string
+        replyToId: 
+          type: string
+          format: nullable
+        etag: 
+          type: string
+        messageType: 
+          type: string
+        createdDateTime: 
+          type: string
+        lastModifiedDateTime: 
+          type: string
+        lastEditedDateTime: 
+          type: string
+          format: nullable
+        deletedDateTime: 
+          type: string
+          format: nullable
+        subject: 
+          type: string
+          format: nullable
+        summary: 
+          type: string
+          format: nullable
+        chatId: 
+          type: string
+          format: nullable
+        importance: 
+          type: string
+        locale: 
+          type: string
+        webUrl: 
+          type: string
+        policyViolation: 
+          type: string
+          format: nullable
+        eventDetail: 
+          type: string
+          format: nullable
+        from: 
+          type: object
+          properties: 
+            application: 
+              type: string
+              format: nullable
+            device: 
+              type: string
+              format: nullable
+            user: 
+              type: object
+              properties: 
+                id: 
+                  type: string
+                displayName: 
+                  type: string
+                userIdentityType: 
+                  type: string
+        body: 
+          type: object
+          properties: 
+            contentType: 
+              type: string
+            content: 
+              type: string
+        channelIdentity: 
+          type: object
+          properties: 
+            teamId: 
+              type: string
+            channelId: 
+              type: string
+        attachments: 
+          type: array
+          items: {}
+        mentions: 
+          type: array
+          items: {}
+        reactions: 
+          type: array
+          items: {}
     ConnectedAppsUpdateSolutionInstance:
-      title: delete a solution instance response
-      description: delete a solution instance response
+      title: update a solution instance response
+      description: update a solution instance response
       type: object
       properties:
         data: 
