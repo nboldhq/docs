@@ -13,8 +13,8 @@ const config = {
   tagline: 'nBold documentation',
   url: 'https://docs.nbold.co',
   baseUrl: '/',
-  onBrokenLinks: 'warn', // 'ignore' | 'log' | 'warn' | 'throw'
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'ignore', // 'ignore' | 'log' | 'warn' | 'throw'
+  onBrokenMarkdownLinks: 'ignore',
   favicon: 'favicon.ico',
 
   trailingSlash: false, // Prevent GitHub pages to add slash
