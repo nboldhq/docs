@@ -14,55 +14,46 @@ sections:
   label: Quickstart
   create: documents
   match: "**/*"
-  templates:
 - type: directory
   path: contents/30-administrator-guide
   label: 'Administrator Guide '
   create: documents
   match: "**/*"
-  templates:
 - type: directory
   path: contents/40-collaboration-templates
   label: Collaboration templates
   create: documents
   match: "**/*"
-  templates:
 - type: directory
   path: contents/50-governance-policies
   label: Governance policies
   create: documents
   match: "**/*"
-  templates:
 - type: directory
   path: contents/60-business-scenarios
   label: Business scenarios
   create: documents
   match: "**/*"
-  templates:
 - type: directory
   path: contents/70-automation
   label: Automation
   create: documents
   match: "**/*"
-  templates:
 - type: directory
   path: contents/75-api
   label: API
   create: documents
   match: "**/*"
-  templates:
 - type: directory
   path: contents/80-open-source
   label: Open-source
   create: documents
   match: "**/*"
-  templates:
 - type: directory
   path: contents/90-trust-center
   label: Trust Center
   create: documents
   match: "**/*"
-  templates:
 upload_dir: static/media
 public_path: "/media"
 front_matter_path: ''
