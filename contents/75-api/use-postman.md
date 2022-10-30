@@ -10,7 +10,7 @@ tags:
 
 **ABSTRACT**  
 You can use the nBold API Postman collection to get started with the nBold API in minutes.  
-This article explains how to get up and running with Postman and nBold (You can also explore nBold APIs directly in your web browser by using [API Explorer](/api/explorer.md)).
+This article explains how to get up and running with Postman and nBold (You can also explore nBold APIs directly in your web browser by using [API Explorer](/api/explorer)).
 
 ## How to import the collection
 To import the Postman collection:
@@ -20,7 +20,7 @@ To import the Postman collection:
 4. Paste the following URL and choose **Import**.
 
 ```
-https://docs.nbold.co/api/latest/definition/nbold-openapi.json
+https://assets.nbold.io/api/nbold-api-openapi-latest.yaml
 ```
 
 You are now up and running with the nBold API collection.

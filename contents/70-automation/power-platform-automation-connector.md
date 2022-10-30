@@ -224,7 +224,7 @@ https://assets.nbold.io/api/nbold-api-openapi-latest.json
 
 ## 4. Next Steps
 
-Now that you've created the nBold connector, you can use it from [Power Apps](https://powerapps.com), [Power Automate](https://flow.microsoft.com), and [Power BI](https://powerbi.microsoft.com). See the available [Triggers and Actions](/automation/automation-connectors-actions.md) for reference.
+Now that you've created the nBold connector, you can use it from [Power Apps](https://powerapps.com), [Power Automate](https://flow.microsoft.com), and [Power BI](https://powerbi.microsoft.com). See the available [Triggers and Actions](/automation/automation-connectors-actions) for reference.
 
 :::tip 💡 To Go Further
 Here are a few interesting articles that may give you some guidelines and new ideas on how to use the nBold Connector:

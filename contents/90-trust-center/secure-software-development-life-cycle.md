@@ -13,7 +13,7 @@ We at nBold know you care about how your personal information is used and shared
 These best practices are gounded by the [OWASP Security Design Principles](https://www.owasp.org):
 * Minimize attack surface area : The aim for secure development is to reduce the overall risk by reducing the attack surface area.
 * Establish secure defaults: By default, the experience should be secure, and it should be up to the user to reduce their security – if they are allowed.
-* Principle of Least privilege: The principle of least privilege recommends that accounts have the least amount of privilege required to perform their business processes. See [Microsoft Graph Permissions](/trust-center/microsoft-graph-permissions.md) as an example.
+* Principle of Least privilege: The principle of least privilege recommends that accounts have the least amount of privilege required to perform their business processes. See [Microsoft Graph Permissions](/trust-center/microsoft-graph-permissions) as an example.
 * Principle of Defense in depth: The principle of defense in depth suggests that where one control would be reasonable, more controls that approach risks in different fashions are better.
 * Fail securely: Applications regularly fail to process transactions for many reasons. How they fail can determine if an application is secure or not.
 * Don’t trust services: Many organizations utilize the processing capabilities of third party partners, who more than likely have differing security policies and posture than you. Therefore, implicit trust of externally run systems is not warranted. All external systems should be treated in a similar fashion.
@@ -33,7 +33,7 @@ This module enforces JavaScript development best practices in different ways:
 See our latest JavaScript Style Report: [![JavaScript Style Report](https://img.shields.io/badge/code_style-standard-success.svg)](https://assets.nbold.io/audits/code/code_linting_report.log)
 :::
 
-Learn more about [Standard JavaScript Style](https://www.npmjs.com/package/standard#usage) and its [Enforced Rules](https://github.com/standard/standard/blob/HEAD/RULES.md)
+Learn more about [Standard JavaScript Style](https://www.npmjs.com/package/standard#usage) and its [Enforced Rules](https://github.com/standard/standard/blob/HEAD/RULES)
 
 ## ESLint Security
 

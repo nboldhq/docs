@@ -60,7 +60,7 @@ Define the Naming settings with Team name, description, and welcome message defa
 
 ![](/media/naming-convention.png)
 
-[Learn more about Naming Convention](https://docs.nbold.co/governance-policies/naming-conventions.html)
+[Learn more about Naming Convention](/governance-policies/naming-conventions)
 
 ## Teams Creation Approval Policy
 
@@ -68,7 +68,7 @@ Define the approval policy with an approver from your organization.
 
 ![](/media/teams-creation-approval-policy.png)
 
-[Learn more about Approval](https://docs.nbold.co/governance-policies/approval.html)
+[Learn more about Approval](/governance-policies/approval)
 
 ## Audience Targeting
 
@@ -76,7 +76,7 @@ Define the audience you want to target for this Template.
 
 ![](/media/audience-targeting.png)
 
-[Learn more about Audience Targeting](https://docs.nbold.co/governance-policies/audience-targeting.html)
+[Learn more about Audience Targeting](/governance-policies/audience-targeting)
 
 ## Teams Template Security Policy
 
@@ -84,7 +84,7 @@ Define the Security Policy with Teams Privacy, Permanent Owners and Permanent Me
 
 ![](/media/teams-template-security-policy.png)
 
-[Learn more about Security Policy](https://docs.nbold.co/governance-policies/security-policy.html)
+[Learn more about Security Policy](/governance-policies/security-policy)
 
 # ⚙ Settings" Dashboard
 

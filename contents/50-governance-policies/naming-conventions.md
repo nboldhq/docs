@@ -119,7 +119,7 @@ or
 
 ### Azure AD Schema Extension
 
-To use Azure AD schema extensions in your naming conventions, please refer to [this article](/governance-policies/use-ad-schema-extensions.md)
+To use Azure AD schema extensions in your naming conventions, please refer to [this article](/governance-policies/use-ad-schema-extensions)
 
 ## Tips
 

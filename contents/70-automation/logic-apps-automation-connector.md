@@ -182,7 +182,7 @@ For reference, see [Import the OpenAPI definition for Logic Apps](https://docs.m
 :::
 
 ## 4. Next Steps
-Now that you've created the nBold connector, you can use it from your Azure [Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/) environment. See the available [Triggers and Actions](/automation/automation-connectors-actions.md) for reference.
+Now that you've created the nBold connector, you can use it from your Azure [Logic Apps](https://docs.microsoft.com/en-us/azure/logic-apps/) environment. See the available [Triggers and Actions](/automation/automation-connectors-actions) for reference.
 
 :::tip 💡 To Go Further
 Here are a few interesting articles that may give you some guidelines and new ideas on how to use the the nBold Connector:

@@ -22,7 +22,7 @@ Single Sign On (SSO) for Microsoft Teams custom apps such as nBold is not yet fu
 For further reference, see [Microsoft Teams SSO for custom apps known limitations](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#known-limitations)
 
 :::tip Service account authentication details 
-For service account authentication details, please refer to [Microsoft Graph Permissions](/trust-center/microsoft-graph-permissions.md)
+For service account authentication details, please refer to [Microsoft Graph Permissions](/trust-center/microsoft-graph-permissions)
 :::
 
 ## Role Based Access Control (RBAC)

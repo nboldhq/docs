@@ -9,7 +9,7 @@ We're happy to announce that now you can clone your MS Lists across the Collabor
 
 ## How to clone Microsoft Lists as part of collaboration templates?
 
-* To include your List, just add a new tab to any channel in your Original team from the "Add a tab" menu as shown on the screenshot. ( [Create an original team](https://docs.nbold.co/quickstart/create-a-new-collaboration-template.html))
+* To include your List, just add a new tab to any channel in your Original team from the "Add a tab" menu as shown on the screenshot. ( [Create an original team](/quickstart/create-a-new-collaboration-template))
 
 ![](/media/screenshot-2022-07-13-at-18-57-13.png)
 

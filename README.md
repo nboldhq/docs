@@ -4,7 +4,7 @@
 # 👋 Welcome to the nBold documentation repository
 
 ## ABSTRACT
-This repository hosts the contents of the [nBold Docs](https://docs.nbold.co/) website.
+This repository hosts the contents of the [nBold Docs](https://docs.nbold.co) website.
 
 ## 🚀 CONTRIBUTE
 

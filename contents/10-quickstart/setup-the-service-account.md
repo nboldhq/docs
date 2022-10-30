@@ -7,7 +7,7 @@ To set up or change the Service Account, you just need to follow these steps:
 
 _While we invite you to create a dedicated Service Account for nBold_, you can rely on an existing one if you prefer. In that case, you can jump to point 2.
 
-_To learn more about why we rely on a Service Account and what are the best practices to secure it, please visit our_ [_Trust Center_](https://docs.nbold.co/trust-center/)_._
+_To learn more about why we rely on a Service Account and what are the best practices to secure it, please visit our_ [_Trust Center_](/trust-center/trust-center)_._
 
 ***
 

@@ -3,12 +3,6 @@
   "spaces": 2,
   "generator-cli": {
     "version": "6.2.0",
-    "generators": {
-      "api_reference": {
-        "generatorName": "markdown",
-        "glob": "./temp/nbold-api-openapi-latest.yaml",
-        "output": "#{cwd}/contents/75-api/reference"
-      }
-    }
+    "generators": {}
   }
 }

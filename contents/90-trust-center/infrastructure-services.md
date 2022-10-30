@@ -45,7 +45,7 @@ Here is a summary of the key architecture components involved:
 | Azure Blob Storage | Azure Blob Storage is a massively scalable object storage for unstructured data that allows the nBold Platform to store securely blobs contents such as images. [Learn more...](https://azure.microsoft.com/en-us/services/storage/blobs/) |
 
 :::tip
-Learn more about Azure Data Residency from our [Privacy policy](/trust-center/privacy-policy.md) page
+Learn more about Azure Data Residency from our [Privacy policy](/trust-center/privacy-policy) page
 :::
 
 ## GitHub

@@ -102,7 +102,7 @@ Examples of these kinds of permissions include the following:
 For nBold to access data in Microsoft Graph, your administrator must grant it the correct permissions via a consent process.  
 
 Learn more:
-- [nBold Install and Setup Guide...](/quickstart/install-the-app.md)
+- [nBold Install and Setup Guide...](/quickstart/install-the-app)
 - [Azure AD application consent experience...](https://docs.microsoft.com/en-us/azure/active-directory/develop/application-consent-experience)
 - [Microsoft Graph permissions reference...](https://docs.microsoft.com/en-us/graph/permissions-reference)
 :::
@@ -218,7 +218,7 @@ Service account optional requirements:
   * Why: To apply sensitivity labels to your teams/groups
 
 :::tip
-Learn how to [setup the service account](/quickstart/setup-the-service-account.md)
+Learn how to [setup the service account](/quickstart/setup-the-service-account)
 :::
 
 **Is the service account visible to end-users?**  

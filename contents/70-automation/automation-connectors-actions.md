@@ -13,8 +13,8 @@ This article describes the Power Platform and Logic Apps triggers and actions av
 :::tip
 This article refers to connex concepts. If required, please refer to:
 
-* [Rate Limits](/api/rate-limits.md)
-* [Role-Based Access Control (RBAC)](/trust-center/authentication-and-access-control.md)
+* [Rate Limits](/api/rate-limits)
+* [Role-Based Access Control (RBAC)](/trust-center/authentication-and-access-control)
 
 :::
 
@@ -30,7 +30,7 @@ Triggered when a team is created, whatever the creation origin (manual, api, usi
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
 
-See [Webhook Documentation](/api/webhooks.md#team-created)
+See [Webhook Documentation](/api/webhooks#team-created)
 
 ### When a Team Provisioning is Completed
 
@@ -41,7 +41,7 @@ Triggered when a team provisioning request based on a template is complete (weth
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
 
-See [Webhook Documentation](/api/webhooks.md#team-provisioning-completed)
+See [Webhook Documentation](/api/webhooks#team-provisioning-completed)
 
 ### When a Team Creation Approval is Requested
 
@@ -52,7 +52,7 @@ Triggered when a user is requesting the creation of a new team using a template 
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
 
-See [Webhook Documentation](/api/webhooks.md#team-creation-approval-requested)
+See [Webhook Documentation](/api/webhooks#team-creation-approval-requested)
 
 ### When a Team Creation is Approved
 
@@ -63,7 +63,7 @@ Triggered when a team creation approval is approved.
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
 
-See [Webhook Documentation](/api/webhooks.md#team-creation-approved)
+See [Webhook Documentation](/api/webhooks#team-creation-approved)
 
 ### When a Team Creation is Rejected
 
@@ -74,7 +74,7 @@ Triggered when a team creation approval is rejected.
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
 
-See [Webhook Documentation](/api/webhooks.md#team-creation-rejected)
+See [Webhook Documentation](/api/webhooks#team-creation-rejected)
 
 ## Actions
 
@@ -87,8 +87,6 @@ Get teams templates accessible to the connected user filtered by the audience ta
 * Rate Limit: Tier 2
 * Roles: `AUTHENTICATED_USER`
 
-See [API Documentation](/api/latest/reference/Apis/TemplatesCatalogApi.md#getmycatalogtemplates)
-
 ### Get My Sensitivity Labels
 
 Get my Microsoft 365 sensitivity labels.
@@ -97,8 +95,6 @@ Get my Microsoft 365 sensitivity labels.
 * Category: `labels`
 * Rate Limit: Tier 3
 * Roles: `AUTHENTICATED_USER`
-
-See [API Documentation](/api/latest/reference/Apis/SensitivityLabelsApi.md#getmylabels)
 
 ### Get Users
 
@@ -109,8 +105,6 @@ Retreive users from your Microsoft 365 environment.
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS.
 
-See [API Documentation](/api/latest/reference/Apis/UsersApi.md#getUsers)
-
 ### Get Team
 
 Get detailed information about a team.
@@ -119,8 +113,6 @@ Get detailed information about a team.
 * Category: `teams`
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS
-
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#getteam)
 
 ### Delete Team
 
@@ -131,8 +123,6 @@ Delete a team.
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#deleteteam)
-
 ### Archive Team
 
 Archive a team.
@@ -141,8 +131,6 @@ Archive a team.
 * Category: `teams`
 * Rate Limit: Tier 1
 * Roles: All_AUTHENTICATED_USERS
-
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#archiveteam)
 
 ### Unarchive Team
 
@@ -153,8 +141,6 @@ Unarchive a team.
 * Rate Limit: Tier 1
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#unarchiveteam)
-
 ### Invite Team Member
 
 Invite a member to a team.
@@ -163,8 +149,6 @@ Invite a member to a team.
 * Category: `teams`
 * Rate Limit: Tier 2
 * Roles: All_AUTHENTICATED_USERS
-
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#addteammember)
 
 ### Create Team Based on Template
 
@@ -175,8 +159,6 @@ Create a new team provisioning job.
 * Rate Limit: Tier 1
 * Roles: All_AUTHENTICATED_USERS.
 
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#createteamprovisioningjob)
-
 ### Approve Team Creation
 
 Approve a team creation request.
@@ -185,8 +167,6 @@ Approve a team creation request.
 * Category: `approvals`
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS.
-
-See [API Documentation](/api/latest/reference/Apis/ApprovalsApi.md#approveteamcreation)
 
 ### Reject Team Creation
 
@@ -197,8 +177,6 @@ Reject a team creation request.
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS.
 
-See [API Documentation](/api/latest/reference/Apis/ApprovalsApi.md#rejectteamcreation)
-
 ### Get Team Channels
 
 Get team channels.
@@ -207,8 +185,6 @@ Get team channels.
 * Category: `teams`
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS.
-
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#getteamchannels)
 
 ### Create Team Channel
 
@@ -219,8 +195,6 @@ Create a new team channel.
 * Rate Limit: Tier 2
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#createteamchannel)
-
 ### Get Team Primary Channel
 
 Get the primary channel of a team
@@ -229,8 +203,6 @@ Get the primary channel of a team
 * Category: `teams`
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS
-
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#getteamprimarychannel)
 
 ### Get Team Channel Tabs
 
@@ -241,8 +213,6 @@ Get team channel tabs
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#getteamchanneltabs)
-
 ### Create Team Channel Tab
 
 Create a new team channel tab
@@ -251,8 +221,6 @@ Create a new team channel tab
 * Category: `teams`
 * Rate Limit: Tier 2
 * Roles: All_AUTHENTICATED_USERS
-
-See [API Documentation](/api/latest/reference/Apis/TeamsApi.md#createteamchanneltab)
 
 ### Get Job
 
@@ -263,8 +231,6 @@ Get detailed information about a job, including its status, progress, logs...
 * Rate Limit: Tier 2
 * Roles: All_AUTHENTICATED_USERS
 
-See [API Documentation](/api/latest/reference/Apis/JobsApi.md#getjob)
-
 ### Generate Hook Signature
 
 Generate a signature from a secret and a webhook payload
@@ -273,5 +239,3 @@ Generate a signature from a secret and a webhook payload
 * Category: `hooks`
 * Rate Limit: Tier 3
 * Roles: All_AUTHENTICATED_USERS
-
-See [API Documentation](/api/latest/reference/Apis/WebhooksApi.md#generatehooksignature)

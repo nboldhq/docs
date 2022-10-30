@@ -14,8 +14,8 @@ It means that you can replicate all the folders' structure and documents across 
 
 :::tip It's especially useful for:
 
-* [Project management templates](/business-scenarios/project-management.md)
-* [Sales proposal templates](/business-scenarios/deal-room.md)
+* [Project management templates](/business-scenarios/project-management)
+* [Sales proposal templates](/business-scenarios/deal-room)
   :::
 
 ## How to make it work?
@@ -24,8 +24,8 @@ It's so simple. Just add the files and the folders you want in each Teams channe
 
 This feature completes our preexisting files management capabilities for Microsoft Teams templates:
 
-* [📙📗📘 Office Documents and 💼 PDF Tabs in Microsoft Teams Template](/collaboration-templates/office-and-pdf-documents.md)
-* [📚 SharePoint Library Tab in Microsoft Teams Templates](/collaboration-templates/sharepoint-library.md)
+* [📙📗📘 Office Documents and 💼 PDF Tabs in Microsoft Teams Template](/collaboration-templates/office-and-pdf-documents)
+* [📚 SharePoint Library Tab in Microsoft Teams Templates](/collaboration-templates/sharepoint-library)
 
 🙏🏼 Please try it and share your use case with us by 💬 chat.
 

@@ -15,7 +15,7 @@ const CONTENTS_DIRECTORY = `${ROOT_DIRECTORY}/contents`
 // const CSS_DIRECTORY = `${PUBLIC_DIRECTORY}/css`
 // const API_DEFINITION_DIRECTORY = `${PUBLIC_DIRECTORY}/api/latest/definition`
 const TRUST_CENTER_DIRECTORY = `${CONTENTS_DIRECTORY}/90-trust-center`
-// const REFERENCES_DIRECTORY = `${CONTENTS_DIRECTORY}/hosting/references`
+const REFERENCES_DIRECTORY = `${CONTENTS_DIRECTORY}/75-api/references`
 // #endregion DECLARATIONS
 
 // /**
@@ -122,64 +122,64 @@ const TRUST_CENTER_DIRECTORY = `${CONTENTS_DIRECTORY}/90-trust-center`
 
 const downloadAssetsFromAppPlatformRepo = (done) => {
   // Make sure the target directory exists
-  fs.mkdirSync(`${TEMP_DIRECTORY}`, { recursive: true })
-  fs.rmSync(`${TEMP_DIRECTORY}`, { recursive: true, force: true })
-  fs.mkdirSync(`${TEMP_DIRECTORY}`, { recursive: true })
+  // fs.mkdirSync(`${TEMP_DIRECTORY}`, { recursive: true })
+  // fs.rmSync(`${TEMP_DIRECTORY}`, { recursive: true, force: true })
+  // fs.mkdirSync(`${TEMP_DIRECTORY}`, { recursive: true })
 
   try {
     const CDN_ROOT_URL = 'https://assets.nbold.io'
-    const ASSETS_ROOT_URL = `${CDN_ROOT_URL}/assets`
+    const ASSETS_ROOT_URL = `${CDN_ROOT_URL}/documentation`
     const assets = [
       {
         file_name: 'CHANGELOG.md',
         source: CDN_ROOT_URL,
         destination: TRUST_CENTER_DIRECTORY
       },
-      {
-        file_name: 'nbold-api-openapi-latest.yaml',
-        source: `${CDN_ROOT_URL}/api`,
-        destination: TEMP_DIRECTORY
-      },
+      // {
+      //   file_name: 'nbold-api-openapi-latest.yaml',
+      //   source: `${CDN_ROOT_URL}/api`,
+      //   destination: TEMP_DIRECTORY
+      // },
       // {
       //   file_name: 'azure-resources-reference.md',
       //   source: ASSETS_ROOT_URL,
       //   destination: REFERENCES_DIRECTORY
       // },
-      // {
-      //   file_name: 'configuration-reference.md',
-      //   source: ASSETS_ROOT_URL,
-      //   destination: REFERENCES_DIRECTORY
-      // },
+      {
+        file_name: 'configuration-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
       // {
       //   file_name: 'docker-resources-reference.md',
       //   source: ASSETS_ROOT_URL,
       //   destination: REFERENCES_DIRECTORY
       // },
-      // {
-      //   file_name: 'environment-variables-reference.md',
-      //   source: ASSETS_ROOT_URL,
-      //   destination: REFERENCES_DIRECTORY
-      // },
-      // {
-      //   file_name: 'events-reference.md',
-      //   source: ASSETS_ROOT_URL,
-      //   destination: REFERENCES_DIRECTORY
-      // },
-      // {
-      //   file_name: 'services-reference.md',
-      //   source: ASSETS_ROOT_URL,
-      //   destination: REFERENCES_DIRECTORY
-      // },
-      // {
-      //   file_name: 'app-data-model-reference.md',
-      //   source: ASSETS_ROOT_URL,
-      //   destination: REFERENCES_DIRECTORY
-      // },
-      // {
-      //   file_name: 'events-data-model-reference.md',
-      //   source: ASSETS_ROOT_URL,
-      //   destination: REFERENCES_DIRECTORY
-      // }
+      {
+        file_name: 'environment-variables-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'events-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'services-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'app-data-model-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      },
+      {
+        file_name: 'events-data-model-reference.md',
+        source: ASSETS_ROOT_URL,
+        destination: REFERENCES_DIRECTORY
+      }
     ]
     assets.forEach((asset, i) => {
       const file = fs.createWriteStream(`${asset.destination}/${asset.file_name}`)

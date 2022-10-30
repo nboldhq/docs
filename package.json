@@ -16,7 +16,7 @@
   "scripts": {
     "start": "docusaurus start",
     "swizzle": "docusaurus swizzle",
-    "build": "gulp build && npx openapi-generator-cli generate && docusaurus build && rm -rf docs && mkdir docs && cp -r build/**/* docs",
+    "build": "gulp build && docusaurus build && rm -rf docs && mkdir docs && cp -r build/**/* docs",
     "serve": "docusaurus serve"
   },
   "dependencies": {

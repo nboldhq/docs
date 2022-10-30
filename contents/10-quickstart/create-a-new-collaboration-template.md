@@ -35,11 +35,11 @@ For Mac devices, type `Control + Command + Space`.
  6. Select what to be cloned (most of the time uncheck "Members")
  7. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example).
 
-    More details about [Naming Convention](/governance-policies/naming-conventions.md).
- 8. [**Approval**](/governance-policies/approval.md): select who will be the approver of the creation (currently disabled by default)
- 9. [**Audience**](/governance-policies/audience-targeting.md): define who will be able to create a team with this template
-10. **Compliance**: define additional [sensitivity labels](/governance-policies/sensitivity-labels.md) to protect your data.
-11. [**Security policy**](/governance-policies/security-policy.md): define the enforced privacy policy, membership policy and Permanent owners/members policy
+    More details about [Naming Convention](/governance-policies/naming-conventions).
+ 8. [**Approval**](/governance-policies/approval): select who will be the approver of the creation (currently disabled by default)
+ 9. [**Audience**](/governance-policies/audience-targeting): define who will be able to create a team with this template
+10. **Compliance**: define additional [sensitivity labels](/governance-policies/sensitivity-labels) to protect your data.
+11. [**Security policy**](/governance-policies/security-policy): define the enforced privacy policy, membership policy and Permanent owners/members policy
 12. Click "Save"
 
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)

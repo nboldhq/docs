@@ -121,7 +121,7 @@ This options brings some valuable benefits and new options:
 - Dynamic approvers list (for instance based on the requester profile and manager) 
 - Integration with third-party apps
 
-To learn more about this option, please read the [Power Platform and Logic Apps Connectors](/automation/get-started.md) documentation, and refer to these connector's triggers that you can leverage from Microsoft Power Platform and Azure Logic Apps:
+To learn more about this option, please read the [Power Platform and Logic Apps Connectors](/automation/get-started) documentation, and refer to these connector's triggers that you can leverage from Microsoft Power Platform and Azure Logic Apps:
 - When a Team Creation Approval is Requested
 - When a Team Creation is Approved
 - When a Team Creation is Rejected
@@ -131,7 +131,7 @@ Instead of relying on Outlook actionable emails, you can use your own custom app
 
 ![nBold Approval Workflow with Custom App](/img/nocode/custom-approval.png)
 
-To learn more about this option, please read the [nBold API](/api/get-started.md) documentation, and refer to these webhooks that you can leverage from your custom application:
-- [Team Creation Approval Requested](/api/webhooks.md#team-creation-approval-requested)
-- [Team Creation Approved](/api/webhooks.md#supported-events)
-- [Team Creation Rejected](/api/webhooks.md#team-creation-rejected)
+To learn more about this option, please read the [nBold API](/api/get-started) documentation, and refer to these webhooks that you can leverage from your custom application:
+- [Team Creation Approval Requested](/api/webhooks#team-creation-approval-requested)
+- [Team Creation Approved](/api/webhooks#supported-events)
+- [Team Creation Rejected](/api/webhooks#team-creation-rejected)
