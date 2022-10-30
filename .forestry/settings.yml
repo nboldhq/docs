@@ -1,0 +1,113 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: src/.vuepress/public/admin
+webhook_url: 
+sections:
+- type: directory
+  path: src/introduction
+  label: Introduction
+  create: documents
+  match: "**/*"
+- type: document
+  path: src/README.md
+  label: Homepage
+- type: directory
+  path: src/quickstart
+  label: Quickstart
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/administrator-guide
+  label: 'Administrator Guide '
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/collaboration-templates
+  label: Collaboration templates
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/governance-policies
+  label: Governance policies
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/business-scenarios
+  label: Business scenarios
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: document
+  path: src/solutions/README.md
+  label: Solutions - Homepage
+- type: directory
+  path: src/solutions/sales
+  label: Solutions - Sales
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/solutions/marketing
+  label: Solutions - Marketing
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/automation
+  label: Automation
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/connected-apps
+  label: Connected Apps
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/api
+  label: API
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: src/trust-center
+  label: Trust Center
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+- type: directory
+  path: drafts
+  label: Drafts
+  create: documents
+  match: "**/*"
+  templates:
+  - article
+upload_dir: src/.vuepress/public/media
+public_path: "/media"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_output_directory: docs
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run preview

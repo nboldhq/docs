@@ -6,7 +6,7 @@
 
  @font-face {
   font-family: "Everett Regular";
-  src: url('/fonts/Everett-Regular.otf') format('otf');
+  src: url('/static/fonts/Everett-Regular.otf') format('otf');
 }
 
 /* You can override the default Infima variables here. */

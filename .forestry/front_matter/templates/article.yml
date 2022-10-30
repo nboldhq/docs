@@ -1,0 +1,62 @@
+---
+label: Article
+hide_body: false
+fields:
+- name: author
+  type: text
+  config:
+    required: true
+  label: Author
+- name: status
+  type: select
+  default: draft
+  config:
+    required: true
+    options:
+    - draft
+    - published
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Status
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: position
+  type: number
+  label: Position
+  description: Use the position field to define the position of the article in its
+    category.<br>Lowest values will make the article to appear first.
+  default: 0
+  required: true
+  config:
+    min: 0
+    max: 100
+    step: 1
+pages:
+- drafts/deal-room-with-salesforce.md
+- drafts/hello-world.md
+- src/administrator-guide/administrator-guide.md
+- src/administrator-guide/allow-nbold-app-and-assign-the-right-teams-permission-policies.md
+- src/administrator-guide/delegate-template-catalog-administration.md
+- src/administrator-guide/quick-steps-to-onboard-on-nbold.md
+- src/administrator-guide/update-app-packages.md
+- src/collaboration-templates/create-a-new-collaboration-template.md
+- src/collaboration-templates/create-teams-only-through-microsoft-teams-templates-by-nbold.md
+- src/collaboration-templates/microsoft-teams-lists.md
+- src/collaboration-templates/wiki-tabs.md
+- src/governance-policies/mandatory-number-of-owners-and-members.md
+- src/governance-policies/permanent-owners-and-members-policy.md
+- src/governance-policies/restrict-guest-access.md
+- src/governance-policies/security-policy.md
+- src/governance-policies/sensitivity-labels.md
+- src/governance-policies/serve-private-channels.md
+- src/introduction/key-features.md
+- src/introduction/nbold-at-a-glance.md
+- src/introduction/welcome-to-nbold.md
+- src/quickstart/create-a-new-collaboration-template.md
+- src/quickstart/quick-steps-to-onboard.md
+- src/quickstart/setup-the-service-account.md
