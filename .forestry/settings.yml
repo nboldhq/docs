@@ -5,13 +5,10 @@ admin_path: static/admin
 webhook_url: 
 sections:
 - type: directory
-  path: src/introduction
+  path: contents/00-introduction
   label: Introduction
   create: documents
   match: "**/*"
-- type: document
-  path: src/README.md
-  label: Homepage
 - type: directory
   path: src/quickstart
   label: Quickstart
@@ -47,33 +44,9 @@ sections:
   match: "**/*"
   templates:
   - article
-- type: document
-  path: src/solutions/README.md
-  label: Solutions - Homepage
-- type: directory
-  path: src/solutions/sales
-  label: Solutions - Sales
-  create: documents
-  match: "**/*"
-  templates:
-  - article
-- type: directory
-  path: src/solutions/marketing
-  label: Solutions - Marketing
-  create: documents
-  match: "**/*"
-  templates:
-  - article
 - type: directory
   path: src/automation
   label: Automation
-  create: documents
-  match: "**/*"
-  templates:
-  - article
-- type: directory
-  path: src/connected-apps
-  label: Connected Apps
   create: documents
   match: "**/*"
   templates:
@@ -88,13 +61,6 @@ sections:
 - type: directory
   path: src/trust-center
   label: Trust Center
-  create: documents
-  match: "**/*"
-  templates:
-  - article
-- type: directory
-  path: drafts
-  label: Drafts
   create: documents
   match: "**/*"
   templates:
