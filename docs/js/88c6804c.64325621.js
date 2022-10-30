@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4836],{67417:e=>{e.exports=JSON.parse('{"label":"introduction","permalink":"/docs/tags/introduction","allTagsPath":"/docs/tags","count":1,"items":[{"id":"introduction/home","title":"Welcome to nBold","description":"Templatize your processes","permalink":"/docs/"}]}')}}]);

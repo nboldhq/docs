@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5881],{64595:t=>{t.exports=JSON.parse('{"label":"throttling","permalink":"/docs/tags/throttling","allTagsPath":"/docs/tags","count":1,"items":[{"id":"api/throttling","title":"Throttling Guidance","description":"ABSTRACT","permalink":"/docs/api/throttling"}]}')}}]);
