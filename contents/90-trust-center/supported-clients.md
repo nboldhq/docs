@@ -1,10 +1,11 @@
 ---
-position: 2
+position: ''
 author: Guillaume Meyer
 tags:
 - microsoftteams
 - microsoft
-status: published
+status: ''
+
 ---
 # Supported Clients
 
