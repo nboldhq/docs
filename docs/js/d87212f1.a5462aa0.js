@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[343],{8651:s=>{s.exports=JSON.parse('{"label":"versions","permalink":"/tags/versions","allTagsPath":"/tags","count":1,"items":[{"id":"api/versions","title":"Versions","description":"The nBold API currently supports two versions: v1.0 and beta.","permalink":"/api/versions"}]}')}}]);

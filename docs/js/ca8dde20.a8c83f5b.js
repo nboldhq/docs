@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[6890],{70128:t=>{t.exports=JSON.parse('{"label":"actions","permalink":"/tags/actions","allTagsPath":"/tags","count":1,"items":[{"id":"automation/automation-connectors-actions","title":"Available triggers and actions","description":"Abstract","permalink":"/automation/automation-connectors-actions"}]}')}}]);

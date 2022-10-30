@@ -1,2 +1,2 @@
 # Contributing guidelines
-To contribute to this project, please refer to its [Wiki](https://github.com/nboldhq/docs/wiki).
+To contribute to this project, please refer to the Handbook "Docs contributing guide" article.

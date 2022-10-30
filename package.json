@@ -14,22 +14,27 @@
   },
   "homepage": "https://github.com/nboldhq/docs#readme",
   "scripts": {
-    "ngrok": "./bin/ngrok/ngrok start web api -config=./bin/ngrok/ngrok.yml",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider node ./node_modules/vuepress/cli.js dev ./src --port 3000 --no-clear-screen",
-    "test:markdown": "npm install -g markdown-link-check && gulp test > ./build/makdown_links_check/links_check.log",
-    "test": "broken-link-checker --input https://docs.nbold.co --recursive --ordered --exclude https://www.linkedin.com/company/nbold --exclude https://docs.nbold.co/api/latest/reference --exclude https://docs.nbold.co/api/latest/sdks --exclude https://github.com/nboldhq/ --exclude https://github.com/SalesTim/ | grep 'Getting\\|BROKEN' > ./build/website_links_check/links_check.log",
-    "build": "gulp build && npx openapi-generator-cli generate && NODE_OPTIONS=--openssl-legacy-provider node ./node_modules/vuepress/cli.js build ./src --no-cache",
-    "export:docx": "bash ./build/exports/export_docx.sh",
-    "export:pdf": "bash ./build/exports/export_pdf.sh",
-    "export": "npm run export:docx && npm run export:pdf",
-    "commit": "git add . && npx --yes git-cz",
-    "release": "npm run release:minor",
-    "release:patch": "npx --yes standard-version --release-as patch",
-    "release:minor": "npx --yes standard-version --release-as minor",
-    "release:major": "npx --yes standard-version --release-as major",
-    "push": "git push --follow-tags origin main"
+    "start": "docusaurus start",
+    "swizzle": "docusaurus swizzle",
+    "build": "gulp build && npx openapi-generator-cli generate && docusaurus build && rm -rf docs && mkdir docs && cp -r build/**/* docs",
+    "serve": "docusaurus serve"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^2.2.0",
+    "@docusaurus/preset-classic": "^2.2.0",
+    "@docusaurus/theme-search-algolia": "^2.2.0",
+    "@mdx-js/react": "^1.6.22",
+    "clsx": "^1.2.1",
+    "docusaurus-lunr-search": "^2.1.16",
+    "mdx-mermaid": "^1.3.2",
+    "mermaid": "^9.1.6",
+    "prism-react-renderer": "^1.3.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "redocusaurus": "^1.4.0"
   },
   "devDependencies": {
+    "@docusaurus/module-type-aliases": "^2.2.0",
     "@microsoft/teams-js": "^1.11.0",
     "@mr-hope/vuepress-plugin-copy-code": "^1.26.0",
     "@openapitools/openapi-generator-cli": "^2.4.26",
@@ -49,5 +54,17 @@
     "vuepress-plugin-mermaidjs": "^1.9.0",
     "vuepress-theme-yuu": "^3.1.1",
     "yamljs": "^0.3.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

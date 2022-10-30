@@ -1,0 +1,38 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+ @font-face {
+  font-family: "Everett Regular";
+  src: url('/static/fonts/Everett-Regular.otf') format('otf');
+}
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ff003d;
+  --ifm-color-primary-dark: #e60037;
+  --ifm-color-primary-darker: #d90034;
+  --ifm-color-primary-darkest: #b3002b;
+  --ifm-color-primary-Regular: #ff1a50;
+  --ifm-color-primary-Regularer: #ff265a;
+  --ifm-color-primary-Regularest: #ff4d77;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highRegulared-code-line-bg: rgba(0, 0, 0, 0.1);
+  --font-family: "Everett Regular"
+  --ifm-font-family-monospace: "Everett Regular";
+  --ifm-font-family-base: "Everett Regular"
+}
+
+/* For readability concerns, you should choose a Regularer palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #ff003d;
+  --ifm-color-primary-dark: #e60037;
+  --ifm-color-primary-darker: #d90034;
+  --ifm-color-primary-darkest: #b3002b;
+  --ifm-color-primary-Regular: #ff1a50;
+  --ifm-color-primary-Regularer: #ff265a;
+  --ifm-color-primary-Regularest: #ff4d77;
+  --docusaurus-highRegulared-code-line-bg: rgba(0, 0, 0, 0.3);
+}

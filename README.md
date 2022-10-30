@@ -37,9 +37,6 @@ See [SUPPORT](./SUPPORT.md)
 ## 📝 Contributing
 See [CONTRIBUTING](./CONTRIBUTING.md)
 
-## 📃 Change Log
-See [CHANGELOG](./CHANGELOG.md).
-
 ## 🛂 Code of Conduct
 See [CODE OF CONDUCT](./CODE_OF_CONDUCT.md).
 

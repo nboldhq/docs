@@ -2,17 +2,12 @@
   "$schema": "node_modules/@openapitools/openapi-generator-cli/config.schema.json",
   "spaces": 2,
   "generator-cli": {
-    "version": "5.4.0",
+    "version": "6.2.0",
     "generators": {
       "api_reference": {
         "generatorName": "markdown",
-        "glob": "./src/.vuepress/public/api/latest/definition/nbold-openapi.yaml",
-        "output": "#{cwd}/src/api/latest/reference"
-      },
-      "javascript_sdk": {
-        "generatorName": "javascript",
-        "glob": "./src/.vuepress/public/api/latest/definition/nbold-openapi.yaml",
-        "output": "#{cwd}/src/api/latest/sdks/javascript"
+        "glob": "./temp/nbold-api-openapi-latest.yaml",
+        "output": "#{cwd}/contents/75-api/reference"
       }
     }
   }
