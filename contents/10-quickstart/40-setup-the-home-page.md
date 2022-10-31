@@ -93,10 +93,9 @@ Give it a name, such as "nBold Home setup policy"
 
 Then follow the steps described in **"4. Add the home Page to everyone"** to add the Home Package to the Policy.
 
-## Optional: Package customization
+## Package customization (Optional)
 
 This package could be be customized to match your organization's branding or vertical approach, especially:
-
 * Package icons
 * Package title and description
 

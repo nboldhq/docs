@@ -52,6 +52,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        googleAnalytics: {
+          trackingID: 'UA-5688830-15',
+          anonymizeIP: true,
+        },
       }),
     ],
     [
@@ -66,6 +70,13 @@ const config = {
   ],
 
   plugins: [require.resolve('docusaurus-lunr-search')],
+
+  scripts: [
+    {
+      src: '/js/intercom.js',
+      async: true,
+    },
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

@@ -1,6 +1,8 @@
 ---
 id: quickstart
 author: Kristina Konstantynova
+tags:
+  - quickstart
 ---
 # Quickstart
 

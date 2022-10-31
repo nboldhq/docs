@@ -1,5 +1,7 @@
 ---
 author: Kristina Konstantynova
+tags:
+  - quickstart
 ---
 # Install nBold for Microsoft Teams
 
@@ -10,12 +12,7 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 ### 1. Get the nBold app
 
 You can install the latest version of nBold from the Microsoft Teams store:
-
-| Package name | Download link |
-| --- | --- |
-| nBold | [![](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?source=store-copy-link) |
-
-***
+![Microsoft Teams store](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?
 
 ### 2. Connect to Microsoft Teams as a Global Admin
 
@@ -25,13 +22,9 @@ Select it, click on `Install` and choose `Add`
 
 ![](/media/screenshot-2022-02-13-at-11-44-50.png)
 
-***
-
 ### 3. Give Permission for SSO Login
 
 ![](/media/screenshot-2022-02-13-at-11-48-38.png)
-
-***
 
 ### 4. Grant Admin Consent for all other permissions
 
@@ -52,15 +45,12 @@ You can also:
 * [Set up the Home package](/quickstart/setup-the-home-page) to make it easier for your end-users.
 * [Delegate the Template Catalog administration](/administrator-guide/delegate-template-catalog-administration) to your business users.
 
-***
-
-## Optional: Alternative deployment method
+## Alternative deployment method (Optional)
 
 ### Install nBold in your Corporate App Catalog
 
 This "standalone" package is a personal Microsoft Teams app comprised of the following tabs (Home, Catalog, Settings, Docs), that you can manually upload to your Microsoft Teams App Catalog:
 [📦 nBold Standalone](https://assets.nbold.io/packages/io.nbold.standalone.prd.zip)
-
 
 ### Package customization
 

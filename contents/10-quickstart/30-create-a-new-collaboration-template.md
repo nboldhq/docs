@@ -1,5 +1,7 @@
 ---
 author: Kristina Konstantnyova
+tags:
+  - quickstart
 ---
 # Create a new Collaboration Template
 
