@@ -63,6 +63,7 @@ const config = {
       {
         specs: [{
           route: '/api/explorer',
+          // spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-latest.yaml',
           spec: 'https://assets.nbold.io/api/nbold-api-openapi-latest.yaml',
         }],
       }

@@ -1,10 +1,12 @@
 ---
 id: administrator-guide
 author: Kristina Konstantnyova
+tags:
+  - administrators
 ---
 # Administrator guide
 
-## 📚 Collaboration Templates Catalog
+## Collaboration Templates Catalog
 
 ## View and Manage all the Teams templates
 
