@@ -4,9 +4,9 @@
  * work well for content-centric websites.
  */
 
- @font-face {
+@font-face {
   font-family: "Everett Regular";
-  src: url('/static/fonts/Everett-Regular.otf') format('otf');
+  src: url('/static/fonts/Everett-Regular.otf') format('opentype');
 }
 
 /* You can override the default Infima variables here. */
