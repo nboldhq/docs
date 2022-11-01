@@ -9,13 +9,14 @@ const gulp = require('gulp')
 // const YAML = require('yamljs')
 // Variables
 const ROOT_DIRECTORY = '.'
-const TEMP_DIRECTORY = `${ROOT_DIRECTORY}/temp`
+// const TEMP_DIRECTORY = `${ROOT_DIRECTORY}/temp`
 const CONTENTS_DIRECTORY = `${ROOT_DIRECTORY}/contents`
+const DRAFTS_DIRECTORY = `${ROOT_DIRECTORY}/drafts`
 // const JS_DIRECTORY = `${PUBLIC_DIRECTORY}/js`
 // const CSS_DIRECTORY = `${PUBLIC_DIRECTORY}/css`
 // const API_DEFINITION_DIRECTORY = `${PUBLIC_DIRECTORY}/api/latest/definition`
 const TRUST_CENTER_DIRECTORY = `${CONTENTS_DIRECTORY}/90-trust-center`
-const REFERENCES_DIRECTORY = `${CONTENTS_DIRECTORY}/75-api/references`
+const REFERENCES_DIRECTORY = `${DRAFTS_DIRECTORY}/references`
 // #endregion DECLARATIONS
 
 // /**

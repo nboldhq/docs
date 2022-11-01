@@ -62,10 +62,25 @@ const config = {
       'redocusaurus',
       {
         specs: [{
+          spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-latest.yaml',
+          // spec: 'https://assets.nbold.io/api/nbold-api-openapi-latest.yaml',
           route: '/api/explorer',
-          // spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-latest.yaml',
-          spec: 'https://assets.nbold.io/api/nbold-api-openapi-latest.yaml',
         }],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#ff003d',
+        },
+        // config: {
+        //   'features.openapi': {
+        //     generateCodeSamples: {
+        //       languages: [
+        //         { lang: 'curl', label: 'cURL' },
+        //         { lang: 'javascript', label: 'JavaScript' },
+        //       ]
+        //     }
+        //   }
+        // }
       }
     ],
   ],
@@ -76,7 +91,7 @@ const config = {
     {
       src: '/js/intercom.js',
       async: true,
-    },
+    }
   ],
 
   themeConfig:
