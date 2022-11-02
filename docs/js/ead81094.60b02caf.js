@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4116],{74428:t=>{t.exports=JSON.parse('{"label":"authentication","permalink":"/tags/authentication","allTagsPath":"/tags","count":1,"items":[{"id":"api/authentication","title":"Authentication","description":"ABSTRACT","permalink":"/api/authentication"}]}')}}]);

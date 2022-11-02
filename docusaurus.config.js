@@ -64,7 +64,7 @@ const config = {
         specs: [{
           // spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-latest.yaml',
           spec: 'https://assets.nbold.io/api/nbold-api-openapi-latest.yaml',
-          route: '/api/explorer',
+          route: '/api',
         }],
         // Theme Options for modifying how redoc renders them
         theme: {
@@ -123,16 +123,16 @@ const config = {
             label: '🤖 Automation',
           },
           {
-            type: 'doc',
-            docId: 'api/api',
+            // type: 'doc',
+            href: 'api',
             position: 'left',
             label: '📚 API Reference',
           },
-          {
-            to: '/api/explorer',
-            position: 'right',
-            label: '🧭 API Explorer',
-          },
+          // {
+          //   to: '/api/explorer',
+          //   position: 'right',
+          //   label: '🧭 API Explorer',
+          // },
           {
             type: 'doc',
             docId: 'trust-center/trust-center',

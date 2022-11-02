@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Mon, 31 Oct 2022 15:38:18 GMT*
+📆 *Generated: Wed, 02 Nov 2022 15:03:51 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -28,7 +28,7 @@ WEB_PUBLICURL=http://localhost
 # (string) Public URL of the CDN used by the web service to serve static assets. Defaults to `""` (means that the web server is serving the static assets itself).
 WEB_CDN_PUBLICURL=
 # (string) Secret string used to encrypt session data. Defaults to an UUID v4 string generated at runtime.
-WEB_SESSION_SECRET=d2f85df7-aa53-4d2c-9a80-15d3a88601b1
+WEB_SESSION_SECRET=5e4e4d2f-1dc3-45cd-b933-707832e297e3
 # (string) Web server requests timeout. Can be a string accepted by the ms (https://www.npmjs.com/package/ms) module. Defaults to `5s`.
 WEB_TIMEOUT=5s
 

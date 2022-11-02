@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[6090],{54041:e=>{e.exports=JSON.parse('{"label":"webhook","permalink":"/tags/webhook","allTagsPath":"/tags","count":1,"items":[{"id":"api/webhooks","title":"Webhooks Reference","description":"ABSTACT","permalink":"/api/webhooks"}]}')}}]);

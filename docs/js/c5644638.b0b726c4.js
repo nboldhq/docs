@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2677],{2528:s=>{s.exports=JSON.parse('{"label":"openapi","permalink":"/tags/openapi","allTagsPath":"/tags","count":1,"items":[{"id":"api/use-postman","title":"Use Postman with the nBold API","description":"ABSTRACT","permalink":"/api/use-postman"}]}')}}]);

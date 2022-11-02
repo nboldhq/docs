@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[3097],{69022:i=>{i.exports=JSON.parse('{"label":"limits","permalink":"/tags/limits","allTagsPath":"/tags","count":1,"items":[{"id":"api/rate-limits","title":"Rate limits","description":"ABSTRACT","permalink":"/api/rate-limits"}]}')}}]);
