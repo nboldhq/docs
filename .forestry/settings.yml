@@ -25,13 +25,18 @@ sections:
   create: documents
   match: "**/*"
 - type: directory
-  path: contents/50-governance-policies
-  label: Governance policies
+  path: contents/60-business-scenarios
+  label: Business scenarios
   create: documents
   match: "**/*"
 - type: directory
-  path: contents/60-business-scenarios
-  label: Business scenarios
+  path: contents/45-connected-apps
+  label: Connected apps
+  create: documents
+  match: "**/*"
+- type: directory
+  path: contents/50-governance-policies
+  label: Governance policies
   create: documents
   match: "**/*"
 - type: directory
