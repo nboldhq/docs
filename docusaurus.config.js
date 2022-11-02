@@ -62,8 +62,8 @@ const config = {
       'redocusaurus',
       {
         specs: [{
-          spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-latest.yaml',
-          // spec: 'https://assets.nbold.io/api/nbold-api-openapi-latest.yaml',
+          // spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-latest.yaml',
+          spec: 'https://assets.nbold.io/api/nbold-api-openapi-latest.yaml',
           route: '/api/explorer',
         }],
         // Theme Options for modifying how redoc renders them
