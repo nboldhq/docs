@@ -3,7 +3,9 @@
 ---
 # Connect HubSpot with Collaboration Templates
 
-Connect HubSpot with Collaboration Templates and improve your collaboration on sales deals. Scale automation across the company and boost your sales team's productivity.
+Connect HubSpot with Collaboration Templates and improve your collaboration on sales deals. Scale automation across the company and boost your sales team's productivity.  
+  
+If you have any questions or need any assistance, kindly write to us at [support@nbold.co](mailto:support@nbold.co)
 
 1. **Get Started**
 
@@ -43,7 +45,7 @@ You will land on this screen:
 >
 > Make sure to use the admin credentials for both, HubSpot and Microsoft Teams, and review the permissions.
 
-If you have any questions or need any assistance, kindly write to us at [support@nbold.co](mailto:support@nbold.co)
-
+  
+  
 Next Step: Configuring the HubSpot solution  
 To know how to Update the Solution, click here
