@@ -39,7 +39,7 @@ You will land on this screen:
 
 * Add the credentials to your own HubSpot environment, as well as to Microsoft 365.
 
-> ****Warning!__ **
+> **Warning!**
 >
 > Make sure to use the admin credentials for both, HubSpot and Microsoft Teams, and review the permissions.
 
