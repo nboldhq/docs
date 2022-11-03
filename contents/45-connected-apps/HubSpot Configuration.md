@@ -70,4 +70,6 @@ If you don’t need ownership synchronization, simply disable the option.
 
    ![](/media/screenshot-2022-11-03-at-15-09-57.png)
 
-   Now it’s time to enable your solution!
+Now it's time to enable your solution!
+
+If you have any questions, please write to us at support@nbold.co
