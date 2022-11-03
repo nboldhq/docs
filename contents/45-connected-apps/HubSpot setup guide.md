@@ -5,7 +5,7 @@
 
 Connect HubSpot with Collaboration Templates and improve your collaboration on sales deals. Scale automation across the company and boost your sales team's productivity.
 
-1.  **Get Started**
+1. **Get Started**
 
 Once you have created a template to use for the collaboration on sales deals, you can go ahead and install the collaboration solution.
 
@@ -26,7 +26,7 @@ You will land on this screen:
 
 ![](https://user-images.githubusercontent.com/112711544/197968520-bbb903b5-fe73-4e22-a7d5-ee1534965b1b.png)
 
-2. **Install the Deal Room with the HubSpot solution**
+1. **Install the Deal Room with the HubSpot solution**
 
 * Click on the Card which says "Deal Room Solution with HubSpot"
 * Next, Click the "Install Now" Button. Inside, you will see the solution description to learn more about the use cases covered for this specific solution.
