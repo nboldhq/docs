@@ -18,8 +18,6 @@
   --ifm-color-primary-Regular: #ff1a50;
   --ifm-color-primary-Regularer: #ff265a;
   --ifm-color-primary-Regularest: #ff4d77;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highRegulared-code-line-bg: rgba(0, 0, 0, 0.1);
   --font-family: "Everett Regular"
   --ifm-font-family-monospace: "Everett Regular";
   --ifm-font-family-base: "Everett Regular"
@@ -34,5 +32,9 @@
   --ifm-color-primary-Regular: #ff1a50;
   --ifm-color-primary-Regularer: #ff265a;
   --ifm-color-primary-Regularest: #ff4d77;
-  --docusaurus-highRegulared-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+a[href="https://redocly.com/redoc/"] {
+  /* opacity: 0; */
+  visibility: hidden;
 }

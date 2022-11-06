@@ -61,26 +61,44 @@ const config = {
     [
       'redocusaurus',
       {
-        specs: [{
-          // spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-latest.yaml',
-          spec: 'https://assets.nbold.io/api/nbold-api-openapi-latest.yaml',
-          route: '/api',
-        }],
+        specs: [
+          {
+            spec: 'https://assets.nbold.io/api/nbold-api-openapi-latest.yaml',
+            route: '/api',
+            layout: {
+              title: 'API reference',
+              description: 'nBold API reference',
+            }
+          },
+          {
+            spec: 'https://assets.nbold.io/api/nbold-api-openapi-v2.yaml',
+            route: '/api/v2',
+            layout: {
+              title: 'API reference',
+              description: 'nBold API reference',
+            }
+          },
+          {
+            spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-v2.yaml',
+            route: '/api/dev',
+            layout: {
+              title: 'API reference',
+              description: 'nBold API reference',
+            }
+          }
+        ],
         // Theme Options for modifying how redoc renders them
         theme: {
           // Change with your site colors
           primaryColor: '#ff003d',
-        },
-        // config: {
-        //   'features.openapi': {
-        //     generateCodeSamples: {
-        //       languages: [
-        //         { lang: 'curl', label: 'cURL' },
-        //         { lang: 'javascript', label: 'JavaScript' },
-        //       ]
-        //     }
-        //   }
-        // }
+          primaryColorDark: '#ff003d',
+          // Redoc Options for modifying how redoc renders them
+          options: {
+            nativeScrollbars: false,
+            hideLoading: false,
+            showExtensions: ['x-nbold-rate-limit', 'x-nbold-required-roles']
+          }
+        }
       }
     ],
   ],

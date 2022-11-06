@@ -23,10 +23,6 @@ While your application should handle all error responses (in the 400 and 500 ran
 |Throttling|429|APIs might throttle at any time for a variety of reasons, so your application must **always** be prepared to handle 429 responses. This error response includes the `Retry-After` field in the HTTP response header. Backing off requests using the `Retry-After` delay is the fastest way to recover from throttling. For more information, see the [Throttling](/api/throttling) article.|
 |Service unavailable| 503 | This is likely because the services is busy. You should employ a back-off strategy similar to 429. Additionally, you should **always** make new retry requests over a new HTTP connection.|
 
-### Evolvable enums
-
-Client applications can be broken by the addition of members to an existing enum. For some newer enums in nBold API, a mechanism is available to allow for adding new members without incurring a breaking change. On these newer enums, you'll see a common *sentinel* member called `unknownFutureValue` that demarcates known and unknown enum members. Known members will have a number less than the sentinel member, while unknown members will be greater in value.
-
 ## Reliability and support
 To ensure reliability and facilitate support for your application, generate a unique GUID and send it on each nBold API REST request. This will help nBold investigate any errors more easily if you need to report an issue with nBold API.
 To do so, on every request to nBold API, generate a unique GUID, send it in the `client-request-id` HTTP request header, and also log it in your application's logs.
