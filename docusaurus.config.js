@@ -71,6 +71,14 @@ const config = {
             }
           },
           // {
+          //   spec: 'http://127.0.0.1:5500/src/services/api/definitions/nbold-api-openapi-latest.yaml',
+          //   route: '/api/dev',
+          //   layout: {
+          //     title: 'API reference',
+          //     description: 'nBold API reference',
+          //   }
+          // },
+          // {
           //   spec: 'https://assets.nbold.io/api/nbold-api-openapi-v2.yaml',
           //   route: '/api/v2',
           //   layout: {
