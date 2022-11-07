@@ -19,7 +19,7 @@ Once you have created a template to use for the collaboration on sales deals, yo
 
 * Go to the Catalog tab and click on the Collaboration Processes tab on your right.
 
-![](https://user-images.githubusercontent.com/112711544/197967304-bafc9af8-e339-4d85-b24f-3685163716cc.png)
+![](/media/screenshot-2022-11-07-at-15-52-01.png)
 
 > **Caution**: This solution is only available for the integration manager, compliance manager and catalog manager.  
 > To know how to assign and delegate roles, click [here](https://docs.nbold.co/administrator-guide/delegate-template-catalog-administration.html)

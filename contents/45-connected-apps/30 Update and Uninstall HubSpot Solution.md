@@ -10,7 +10,7 @@ You can follow the below steps to update the solution:
 * Connect and go to the nBold application in Microsoft Teams.
 * Go to the Catalog tab and click on the Collaboration Processes tab on your right.
 
-![](https://user-images.githubusercontent.com/112711544/199469774-28ce9d29-0527-4328-a9bb-21e87ad9016f.png)
+![](/media/screenshot-2022-11-07-at-15-52-01.png)
 
 * From the menu on the left pane, select the option "Installed"
 * You will land on this screen:
