@@ -26,18 +26,18 @@ Once you have created a template to use for the collaboration on sales deals, yo
 
 You will land on this screen:
 
-![](https://user-images.githubusercontent.com/112711544/197968520-bbb903b5-fe73-4e22-a7d5-ee1534965b1b.png)
+![](/media/screenshot-2022-11-07-at-15-30-31.png)
 
 1. **Install the Deal Room with the HubSpot solution**
 
 * Click on the Card which says "Deal Room Solution with HubSpot"
 * Next, Click the "Install Now" Button. Inside, you will see the solution description to learn more about the use cases covered for this specific solution.
 
-![](https://user-images.githubusercontent.com/112711544/197969230-2b9e82f2-2340-40b6-83e8-8c227595fdb1.png)
+![](/media/screenshot-2022-11-07-at-15-32-10.png)
 
 * Create two authentications with your authentication name and instance type for both, HubSpot and Microsoft Teams.
 
-![](https://user-images.githubusercontent.com/112711544/197970225-dae1c9f5-3a72-4420-8df3-69dbc752e66b.png)
+![](/media/screenshot-2022-11-07-at-15-34-26.png)
 
 * Add the credentials to your own HubSpot environment, as well as to Microsoft 365.
 
