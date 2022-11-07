@@ -70,14 +70,14 @@ const config = {
               description: 'nBold API reference',
             }
           },
-          {
-            spec: 'https://assets.nbold.io/api/nbold-api-openapi-v2.yaml',
-            route: '/api/v2',
-            layout: {
-              title: 'API reference',
-              description: 'nBold API reference',
-            }
-          }
+          // {
+          //   spec: 'https://assets.nbold.io/api/nbold-api-openapi-v2.yaml',
+          //   route: '/api/v2',
+          //   layout: {
+          //     title: 'API reference',
+          //     description: 'nBold API reference',
+          //   }
+          // }
         ],
         // Theme Options for modifying how redoc renders them
         theme: {

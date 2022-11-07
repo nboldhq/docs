@@ -146,7 +146,7 @@ The custom connector you're about to create will be available for both PowerApps
 
 ***
 
-    https://assets.nbold.io/api/nbold-api-openapi-latest.json
+    https://assets.nbold.io/api/nbold-powerplatform-openapi-latest.json
 
 ***
 
@@ -211,7 +211,7 @@ To update your Power Platform connector:
 ***
 
 ```sh
-https://assets.nbold.io/api/nbold-api-openapi-latest.json
+https://assets.nbold.io/api/nbold-powerplatform-openapi-latest.json
 ```
 
 ***
