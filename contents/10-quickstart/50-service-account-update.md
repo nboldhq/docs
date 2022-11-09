@@ -11,7 +11,7 @@ To do this, you can follow the below steps:
 
 1. Log in to the nBold app using the Service Account credentials.
 
-   > **Important Note!** : The service account should also be a global admin or Teams admin at the Microsoft 365 level.
+   > **Important Note!** : The service account should also be a global admin or teams admin at the Microsoft 365 level.
 2. Select the settings tab and from the " Service Account" select update.
 
    ![](/media/screenshot-2022-11-09-at-12-53-51.png)
