@@ -3,7 +3,7 @@ label: Connected app
 hide_body: false
 fields: []
 pages:
-- contents/10-quickstart/Service Account Update.md
+- contents/10-quickstart/50-service-account-update.md
 - contents/45-connected-apps/10 HubSpot setup guide.md
 - contents/45-connected-apps/20 HubSpot Configuration.md
 - contents/45-connected-apps/30 Update and Uninstall HubSpot Solution.md
