@@ -33,15 +33,16 @@ Here, you can see a solution sorting list on your left bar menu.
 \- _Build for your organisation  
 \-_ There are also some Tags available to sort your solutions, for example, by department: “_sales”, “marketing_”, etc.
 
-1. **Install the Deal Room with the Salesforce solution**
-   * Click on the Card which says "Deal Room Solution with Salesforce"
-   * Next, Click the "Install Now" Button. Inside, you will see the solution description to learn more about the use cases covered for this specific solution.
+2. **Install the Deal Room with the Salesforce solution**
 
-     ![](/media/screenshot-2022-11-10-at-11-57-50.png)
-   * Create two authentications with your authentication name and instance type for both, Salesforce, and Microsoft Teams.
+* Click on the Card which says "Deal Room Solution with Salesforce"
+* Next, Click the "Install Now" Button. Inside, you will see the solution description to learn more about the use cases covered for this specific solution.
 
-     ![](/media/screenshot-2022-11-10-at-12-00-17.png)
-   * Add the credentials to your own Salesforce environment, as well as to Microsoft 365.
+  ![](/media/screenshot-2022-11-10-at-11-57-50.png)
+* Create two authentications with your authentication name and instance type for both, Salesforce, and Microsoft Teams.
+
+  ![](/media/screenshot-2022-11-10-at-12-00-17.png)
+* Add the credentials to your own Salesforce environment, as well as to Microsoft 365.
 
 > **Warning:** Make sure to use the admin credentials for both, Salesforce, and Microsoft Teams, and review the permissions.
 
