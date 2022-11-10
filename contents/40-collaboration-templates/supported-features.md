@@ -1,9 +1,11 @@
 ---
 author: Kristina Konstantynova
+
 ---
 # All supported features in Collaboration Templates
 
-In this article, we simply list the different features supported on Microsoft Teams Templates with nBold. For more details on how to create a Template, go to the dedicated page about [how to build a Collaboration Template](/collaboration-templates/create-a-new-collaboration-template).
+In this article, we simply list the unique features supported on Microsoft Teams Templates with nBold.   
+For more details on how to create a Template, go to the dedicated page about [how to build a Collaboration Template](/collaboration-templates/create-a-new-collaboration-template).
 
 #### Collaboration Templates Features:
 
@@ -11,35 +13,15 @@ In this article, we simply list the different features supported on Microsoft Te
 * [Private Channels](/collaboration-templates/private-channels) Cloning
 * Tabs Cloning:
   * [Files Tabs Cloning with Files and Folders in each channel](/collaboration-templates/files-and-folders) in standard channels
-
-
   * [Planner ](/collaboration-templates/microsoft-planner)Tabs with Buckets, Tasks, Description, Checklist and Label
-
-
   * Website Tabs
-
-
   * [Forms Tabs](/collaboration-templates/microsoft-forms)
-
-
   * [Lists Tabs](/collaboration-templates/microsoft-teams-lists.)
-
-
   * [Office Files Tabs](/collaboration-templates/office-and-pdf-documents) with the same configuration from one team to another
-
-
   * SharePoint Online Document Library
-
-
   * Channel Calendar Tab
-
-
   * Yammer Tab
-
-
   * Stream Tab
-
-
   * Any 3rd Party Tab with the same configuration from Original Team
 * Team Pictures
 * Teams Settings Cloning
@@ -61,7 +43,4 @@ In this article, we simply list the different features supported on Microsoft Te
 #### We do not support yet:
 
 * Configured [Wiki Tabs](/collaboration-templates/wiki-tabs)
-* Configured OneNote Tabs
-* Configured new List
-* Office Files Tab
 * Files and folder cloning in Private Channels
