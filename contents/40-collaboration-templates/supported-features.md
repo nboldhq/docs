@@ -4,7 +4,7 @@ author: Kristina Konstantynova
 ---
 # All supported features in Collaboration Templates
 
-In this article, we simply list the unique features supported on Microsoft Teams Templates with nBold.   
+In this article, we simply list the unique features supported on Microsoft Teams Templates with nBold.  
 For more details on how to create a Template, go to the dedicated page about [how to build a Collaboration Template](/collaboration-templates/create-a-new-collaboration-template).
 
 #### Collaboration Templates Features:
@@ -16,9 +16,10 @@ For more details on how to create a Template, go to the dedicated page about [ho
   * [Planner ](/collaboration-templates/microsoft-planner)Tabs with Buckets, Tasks, Description, Checklist and Label
   * Website Tabs
   * [Forms Tabs](/collaboration-templates/microsoft-forms)
-  * [Lists Tabs](/collaboration-templates/microsoft-teams-lists.)
+  * [Lists Tabs](https://docs.nbold.co/collaboration-templates/microsoft-teams-lists)
   * [Office Files Tabs](/collaboration-templates/office-and-pdf-documents) with the same configuration from one team to another
-  * SharePoint Online Document Library
+  * [SharePoint Online Document Library]()
+  * [OneNote Tab]()
   * Channel Calendar Tab
   * Yammer Tab
   * Stream Tab
