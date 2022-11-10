@@ -18,8 +18,8 @@ For more details on how to create a Template, go to the dedicated page about [ho
   * [Forms Tabs](/collaboration-templates/microsoft-forms)
   * [Lists Tabs](https://docs.nbold.co/collaboration-templates/microsoft-teams-lists)
   * [Office Files Tabs](/collaboration-templates/office-and-pdf-documents) with the same configuration from one team to another
-  * [SharePoint Online Document Library]()
-  * [OneNote Tab]()
+  * [SharePoint Online Document Library]
+  * [OneNote Tab](https://docs.nbold.co/collaboration-templates/onenote)
   * Channel Calendar Tab
   * Yammer Tab
   * Stream Tab
