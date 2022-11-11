@@ -142,7 +142,7 @@ const config = {
           },
           {
             // type: 'doc',
-            href: 'api',
+            href: '/api',
             position: 'left',
             label: '📚 API Reference',
           },

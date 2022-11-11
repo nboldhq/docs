@@ -1,5 +1,5 @@
 # App Data Model Reference
-📆 *Generated: Mon, 07 Nov 2022 12:47:36 GMT*
+📆 *Generated: Thu, 10 Nov 2022 13:15:07 GMT*
 
 
 This document lists all the tables and their columns available from our database.

@@ -8,23 +8,25 @@ author: Guillaume Meyer
 # Security policy
 
 ## How we handle security vulnerabilities
-
 As a provider of products and services for many organizations, we recognize how important it is to help protect user privacy and security.  
 We understand that secure products are instrumental in maintaining the trust users place in us and we strive to create innovative products that both serve user needs and operate in the user’s best interest.
 
 ## Supported Versions
-
 The following versions of nBold are currently being supported with security updates.
 
 | Version | Supported |
 | ------- | --------- |
-| 3.x.x   | ✅         |
-| 2.2.x   | 🚫         |
+| 5.1.x   | ✅         |
+| 4.24.x   | ✅         |
+| 3.x.x   | 🚫         |
+| 2.x.x   | 🚫         |
 | 1.x.x   | 🚫         |
 
 ## Reporting a Vulnerability
+If you believe you have discovered a vulnerability in our product or have a security incident to report, use the "Report a vulnerability" feature from the [security advisories](https://github.com/nboldhq/docs/security/advisories) section of our public docs repository.  
+Using this communication channel (english as a preferred languages), we will be able privately discuss and fix the security vulnerability.
 
-If you believe you have discovered a vulnerability in our product or have a security incident to report, please send us a message to **[security@nbold.co](mailto:security@nbold.co)** (english as a preferred languages) that includes a detailed reports with reproducible steps.  
+**❌ Never use any other communication channel to report a security vulnerability**
 
 ## Vulnerability disclosure policy
 We believe that vulnerability disclosure is a two-way street. Vendors, as well as researchers, must act responsibly.  
