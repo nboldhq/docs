@@ -32,7 +32,7 @@ sections:
 - type: directory
   path: contents/45-connected-apps
   label: Connected apps
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/50-governance-policies
