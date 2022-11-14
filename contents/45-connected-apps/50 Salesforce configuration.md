@@ -21,6 +21,7 @@ Read more about Collaboration Template [here](https://docs.nbold.co/collaboratio
 
 2. **Team Creation**
 
+     
    During the configuration process, you define the filters for the team creation. At this point, you need to set up the Opportunity Stage Name and Opportunity Amount.
 
    For the **Opportunity Stage** simply pick the desired stage from the dropdown list which is already synchronized with your Salesforce.
@@ -30,10 +31,11 @@ Read more about Collaboration Template [here](https://docs.nbold.co/collaboratio
 
 > **Note:** Teams will be created only for those Opportunity records that achieved the right Stage and with an Amount greater or equal to the defined amount.
 
-> **Tip**: If you don’t really need the Amount Filter, simply type 0 value. In this case, teams will be created even for those records, which have a “null” value for the Amount field.
+> **Tip**: If you don’t need the Amount Filter, simply type 0 value. In this case, teams will be created even for those records, which have a “null” value for the Amount field.
 
 3. **Define Naming Convention**
 
+     
    By default, your team will be named in a format Team Name: “Opportunity Name”.
 
    In addition to this, you can enable the “Naming Convention” option to add the Opportunity Stage to the team's name. So, each team created for your Opportunity Records will be named in a format Team Name:” Opportunity Name – Prospecting".
@@ -58,8 +60,21 @@ If you don’t need ownership synchronization, simply disable the option.
 
 > **Important note!** We highly recommend you disable the option if your users use different email addresses for HubSpot and Microsoft 365. Otherwise, nBold will not be able to create a team.
 
-5. **End of team life: Sunset**
+5. Manage Notification
 
+     
+   You can choose to receive adaptive cards as notifications on your team's channel.  
+   The available options are:  
+   \- Opportunity Stage Field is updated  
+   \- Opportunity Amount Field is updated  
+   \- Opportunity Stage is Closed Won or Closed Lost  
+     
+   ![](/media/screenshot-2022-11-14-at-13-26-32.png)  
+     
+   Once this is enabled, you will need to choose the teams and channel where you want adaptive cards to be sent (for example, notify your entire company about the closed deals). In this case, you can also change if you want adaptive cards posted with or without the GIFs. Please, see the examples below
+6. **End of team life: Sunset**
+
+     
    You can choose what to do with the team when the related Opportunity Record is Closed.
 
    ![](/media/screenshot-2022-11-10-at-13-01-14.png)  
@@ -71,12 +86,12 @@ If you don’t need ownership synchronization, simply disable the option.
    \- **Delete:** If you wish to delete the team, once the deal reaches the desired stage, you can select this option.  
    \- **Leave Unchanged:** If you don’t have any specific rules for the end of life, simply choose the “Leave Unchanged” option.
 
-And it’s done! All the fields in the configuration form are submitted. Now it’s time to enable your solution – simply click on the “**Update**” button and close the Solution Card.  
-  
+And it’s done! All the fields in the configuration form are submitted. Now it’s time to enable your solution – simply click on the “**Update**” button and close the Solution Card.
+
 ![](/media/screenshot-2022-11-10-at-13-03-36.png)
 
-Once **enabled** – Salesforce integration with Collaboration Templates is started.  
-  
+Once **enabled** – Salesforce integration with Collaboration Templates is started.
+
 ![](/media/screenshot-2022-11-10-at-13-07-28.png)
 
 If you have any questions, please write to us at [support@nbold.co](mailto:support@nbold.co)
