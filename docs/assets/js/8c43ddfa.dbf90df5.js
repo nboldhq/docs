@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[363],{97831:e=>{e.exports=JSON.parse('{"title":"API reference","description":"nBold API reference"}')}}]);
