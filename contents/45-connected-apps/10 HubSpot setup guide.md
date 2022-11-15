@@ -21,7 +21,9 @@ Once you have created a template to use for the collaboration on sales deals, yo
 
 ![](/media/screenshot-2022-11-07-at-15-52-01.png)
 
-> **Caution**: This solution is only available for the integration manager, compliance manager and catalog manager.  
+> **Caution**: For this solution to be visible, the user must be a Change Manager and at least one of the other three managers (catalog manager or compliance manager or integration manager)  
+> For eg: The user should be a change manager and catalog manager or a change manager and integration manager or all of them.  
+>   
 > To know how to assign and delegate roles, click [here](https://docs.nbold.co/administrator-guide/delegate-template-catalog-administration.html)
 
 You will land on this screen:
