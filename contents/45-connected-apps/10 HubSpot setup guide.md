@@ -7,10 +7,11 @@ Connect HubSpot with Collaboration Templates and improve your collaboration on s
 
 If you have any questions or need any assistance, kindly write to us at [support@nbold.co](mailto:support@nbold.co)
 
-#### 1. **Get Started**  
-   Once you have created a template to use for the collaboration on sales deals, you can go ahead and install the collaboration solution.
+#### 1. **Get Started**
 
-> **Please Note:** Currently, the solution is only available on the Web App client of Microsoft teams.
+Once you have created a template to use for the collaboration on sales deals, you can go ahead and install the collaboration solution.
+
+> **Please Note:** To install the solution for the first time, please use the browser version. Currently, the first-time setup can only be done via the Web App of Microsoft team. 
 
 * Connect and go to the nBold application in Microsoft Teams.
 
