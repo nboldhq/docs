@@ -7,7 +7,7 @@ Connect HubSpot with Collaboration Templates and improve your collaboration on s
 
 If you have any questions or need any assistance, kindly write to us at [support@nbold.co](mailto:support@nbold.co)
 
-1. **Get Started**  
+#### 1. **Get Started**  
    Once you have created a template to use for the collaboration on sales deals, you can go ahead and install the collaboration solution.
 
 > **Please Note:** Currently, the solution is only available on the Web App client of Microsoft teams.
@@ -31,7 +31,7 @@ You will land on this screen:
 
 ![](/media/screenshot-2022-11-07-at-15-30-31.png)
 
-2. **Install the Deal Room with the HubSpot solution**
+#### 2. **Install the Deal Room with the HubSpot solution**
 
 * Click on the Card which says "Deal Room Solution with HubSpot"
 * Next, Click the "Install Now" Button. Inside, you will see the solution description to learn more about the use cases covered for this specific solution.
