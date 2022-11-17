@@ -7,6 +7,8 @@ Connect HubSpot with Collaboration Templates and improve your collaboration on s
 
 If you have any questions or need any assistance, kindly write to us at [support@nbold.co](mailto:support@nbold.co)
 
+## Installation
+
 #### 1. **Get Started**
 
 Once you have created a template to use for the collaboration on sales deals, you can go ahead and install the collaboration solution.
@@ -48,6 +50,10 @@ You will land on this screen:
 > **Warning!**
 >
 > Make sure to use the admin credentials for both, HubSpot and Microsoft Teams, and review the permissions.
+
+
+## Configuration
+
 
 Next Step: Configuring the HubSpot solution  
 To know how to Update the Solution, click [here](https://docs.nbold.co/connected-apps/Update%20and%20Uninstall%20HubSpot%20Solution)
