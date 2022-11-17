@@ -1,7 +1,7 @@
 ---
 
 ---
-# Connect HubSpot with Collaboration Templates
+# Deal Room Solution with HubSpot: SetUp Guide
 
 Connect HubSpot with Collaboration Templates and improve your collaboration on sales deals. Scale automation across the company and boost your sales team's productivity.
 
