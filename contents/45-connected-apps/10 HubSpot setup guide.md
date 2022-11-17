@@ -121,6 +121,5 @@ You can choose to receive notifications at various stages of deals.
 Now it's time to enable your solution!
 
 If you have any questions, please write to us at support@nbold.co
-
-Next Step: Configuring the HubSpot solution  
+  
 To know how to Update the Solution, click [here](https://docs.nbold.co/connected-apps/Update%20and%20Uninstall%20HubSpot%20Solution)
