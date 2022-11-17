@@ -11,7 +11,7 @@ If you have any questions or need any assistance, kindly write to us at [support
 
 Once you have created a template to use for the collaboration on sales deals, you can go ahead and install the collaboration solution.
 
-> **Please Note:** To install the solution for the first time, please use the browser version. Currently, the first-time setup can only be done via the Web App of Microsoft team. 
+> **Please Note:** To install the solution for the first time, please use the browser version. Currently, the first-time setup can only be done via the browser version of Microsoft team.
 
 * Connect and go to the nBold application in Microsoft Teams.
 
