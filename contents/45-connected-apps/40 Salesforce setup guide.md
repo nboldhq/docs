@@ -7,7 +7,9 @@ Connect Salesforce with Collaboration Templates and improve your collaboration o
 
 If you have any questions or need any assistance, kindly write to us at [support@nbold.co](mailto:support@nbold.co)
 
-## 1. **Get Started**
+## Installation
+
+### 1. **Get Started**
 
 Once you have created a template to use for the collaboration on sales deals, you can go ahead and install the collaboration solution.
 
@@ -39,7 +41,7 @@ Here, you can see a solution sorting list on your left bar menu.
 \- _Build for your organisation  
 \-_ There are also some Tags available to sort your solutions, for example, by department: “_sales”, “marketing_”, etc.
 
-## 2. **Install the Deal Room with the Salesforce solution**
+### 2. **Install the Deal Room with the Salesforce solution**
 
 * Click on the Card which says "Deal Room Solution with Salesforce"
 * Next, Click the "Install Now" Button. Inside, you will see the solution description to learn more about the use cases covered for this specific solution.
@@ -51,7 +53,6 @@ Here, you can see a solution sorting list on your left bar menu.
 * Add the credentials to your own Salesforce environment, as well as to Microsoft 365.
 
 > **Warning:** Make sure to use the admin credentials for both, Salesforce, and Microsoft Teams, and review the permissions.
-
 
 ## Salesforce: Configuration and Settings
 
@@ -65,7 +66,7 @@ Here, you can customize the solution according to your unique business needs.
 First, you will need to choose a template from which you wish to create a team.
 Newly created teams will be cloned from this specific template.
 
-   ![](/media/screenshot-2022-11-10-at-12-23-52.png)
+![](/media/screenshot-2022-11-10-at-12-23-52.png)
 
 > **Note**: We highly recommend building a separate template for Deal Room with HubSpot to avoid any confusion within your governance policies in future.
 
@@ -78,7 +79,7 @@ During the configuration process, you define the filters for the team creation. 
 For the **Opportunity Stage** simply pick the desired stage from the dropdown list which is already synchronized with your Salesforce.
 
 For the **Opportunity Amount**, enter the value in number format, with no spaces or non-numeric characters.  
-   ![](/media/screenshot-2022-11-10-at-12-31-39.png)
+![](/media/screenshot-2022-11-10-at-12-31-39.png)
 
 > **Note:** Teams will be created only for those Opportunity records that achieved the right Stage and with an Amount greater or equal to the defined amount.
 
@@ -90,8 +91,7 @@ By default, your team will be named in a format Team Name: “Opportunity Name�
 
 In addition to this, you can enable the “Naming Convention” option to add the Opportunity Stage to the team's name. So, each team created for your Opportunity Records will be named in a format Team Name:” Opportunity Name – Prospecting".
 
-
-   ![](/media/screenshot-2022-11-10-at-12-39-44.png)
+![](/media/screenshot-2022-11-10-at-12-39-44.png)
 
 A team name will reflect the changes in your CRM as well.
 
@@ -106,7 +106,7 @@ If the Opportunity Record is changed, a new owner will be added to the team auto
 
 > Note: The user will be added as an owner of all private channels as well.
 
-   ![](/media/screenshot-2022-11-10-at-12-44-13.png)
+![](/media/screenshot-2022-11-10-at-12-44-13.png)
 
 If you don’t need ownership synchronization, simply disable the option.
 
@@ -115,31 +115,30 @@ If you don’t need ownership synchronization, simply disable the option.
 ### 5. **Manage Notification**
 
 You can choose to receive adaptive cards as notifications on your team's channel.  
-   The available options are:  
-   \- Opportunity Stage Field is updated  
-   \- Opportunity Amount Field is updated  
-   \- Opportunity Stage is Closed Won or Closed Lost
+The available options are:  
+\- Opportunity Stage Field is updated  
+\- Opportunity Amount Field is updated  
+\- Opportunity Stage is Closed Won or Closed Lost
 
-   ![](/media/screenshot-2022-11-14-at-13-26-32.png)
+![](/media/screenshot-2022-11-14-at-13-26-32.png)
 
 Once this is enabled, you will need to choose the teams and channel where you want adaptive cards to be sent (for example, notify your entire company about the closed deals). In this case, you can also change if you want adaptive cards posted with or without the GIFs. Please, see the examples below:
 
+![](/media/screenshot-2022-11-14-at-14-20-01.png)
 
-   ![](/media/screenshot-2022-11-14-at-14-20-01.png)
-   
 ### 6. **End of team life: Sunset**
 
 You can choose what to do with the team when the related Opportunity Record is Closed.
 
-   ![](/media/screenshot-2022-11-10-at-13-01-14.png)  
+![](/media/screenshot-2022-11-10-at-13-01-14.png)
 
 There are four available options between two scenarios (Closed Won and Closed Lost) from which you can select.
 
-   \- **Rename:** If you wish to rename the team, you can select this option (The team will have a new name in a format Opportunity Name – "Custom suffix”)
+\- **Rename:** If you wish to rename the team, you can select this option (The team will have a new name in a format Opportunity Name – "Custom suffix”)
 
-   \- **Archive**: If you wish to archive the team, once the deal reaches the desired stage, you can select this option.  
-   \- **Delete:** If you wish to delete the team, once the deal reaches the desired stage, you can select this option.  
-   \- **Leave Unchanged:** If you don’t have any specific rules for the end of life, simply choose the “Leave Unchanged” option.
+\- **Archive**: If you wish to archive the team, once the deal reaches the desired stage, you can select this option.  
+\- **Delete:** If you wish to delete the team, once the deal reaches the desired stage, you can select this option.  
+\- **Leave Unchanged:** If you don’t have any specific rules for the end of life, simply choose the “Leave Unchanged” option.
 
 And it’s done! All the fields in the configuration form are submitted. Now it’s time to enable your solution – simply click on the “**Update**” button and close the Solution Card.
 
@@ -151,4 +150,4 @@ Once **enabled** – Salesforce integration with Collaboration Templates is star
 
 If you have any questions, please write to us at [support@nbold.co](mailto:support@nbold.co)
 
-To know how to Update the Solution, click here
+To know how to Update the Solution, click [here](docs.nbold.co/connected-apps/90%20Update%20and%20Uninstall%20Salesforce%20Solution).
