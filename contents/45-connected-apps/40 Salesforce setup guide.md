@@ -150,4 +150,4 @@ Once **enabled** – Salesforce integration with Collaboration Templates is star
 
 If you have any questions, please write to us at [support@nbold.co](mailto:support@nbold.co)
 
-To know how to Update the Solution, click [here](www.docs.nbold.co/connected-apps/90%20Update%20and%20Uninstall%20Salesforce%20Solution).
+To know how to Update the Solution, click [here](https://docs.nbold.co/connected-apps/90%20Update%20and%20Uninstall%20Salesforce%20Solution).

@@ -6,7 +6,6 @@ pages:
 - contents/10-quickstart/50-service-account-update.md
 - contents/45-connected-apps/10 HubSpot setup guide.md
 - contents/45-connected-apps/40 Salesforce setup guide.md
-- contents/45-connected-apps/50 Salesforce configuration.md
 - contents/45-connected-apps/80 Update and Uninstall HubSpot Solution.md
 - contents/45-connected-apps/90 Update and Uninstall Salesforce Solution.md
 - contents/45-connected-apps/README.md
