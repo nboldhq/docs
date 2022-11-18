@@ -54,7 +54,7 @@ Here, you can see a solution sorting list on your left bar menu.
 
 > **Warning:** Make sure to use the admin credentials for both, Salesforce, and Microsoft Teams, and review the permissions.
 
-## Salesforce: Configuration and Settings
+## Configuration
 
 Once the authentication is added, you will see the configuration form.
 Here, you can customize the solution according to your unique business needs.
