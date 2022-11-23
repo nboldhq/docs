@@ -2,6 +2,7 @@
 tags:
 - microsoft-onenote
 author: Guillaume Meyer
+
 ---
 # OneNote
 
@@ -11,11 +12,16 @@ Finally, we're happy to announce that now you can clone your 📓 OneNote tabs a
 
 To include your OneNote, just add a new tab to your original team (template team).
 
-![](/media/screenshot-2022-08-05-at-18-14-46.png)
+![](/media/screenshot-2022-08-05-at-18-14-46.png)  
+  
+Once, you click on the + icon to add the OneNote Tab, you will be able to:
 
-Create a new one or choose to add an existing one. 
+* Choose existing note or create a new one
+* Create a new section or choose existing sections from an existing Notebook​
 
-![](/media/screenshot-2022-08-05-at-18-15-48.png)
+> **Please Note**: You can create a page too, but currently, cloning of pages as a new file is not supported. This means if your template has a OneNote **Page** tab, then the Page in the newly created team will point to the default file and not a new one. 
+
+![](/media/screenshot-2022-11-23-at-09-46-59.png)
 
 And now your OneNote tab is automatically replicated to any team created from this template!
 
@@ -33,8 +39,6 @@ These elements will be created as part of the provisioning process:
 * Notes
 * Section groups
 * Sections
-* Pages
-* Resources
 
 ## Where are your notebooks located?
 
@@ -42,4 +46,5 @@ In your newly created team, all your notebooks are stored to the `Notebooks` fol
 
 ## Non-supported features
 
-OneNote tabs from the original team pointing to notebooks stored outside of the team (In another team, or in another SharePoint site) will NOT be cloned and will still target the same notebook in the newly created team.
+* OneNote Page Tabs
+* OneNote tabs from the original team pointing to notebooks stored outside of the team (In another team, or in another SharePoint site) will NOT be cloned and will still target the same notebook in the newly created team.
