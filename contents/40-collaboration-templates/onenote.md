@@ -27,9 +27,7 @@ And now your OneNote tab is automatically replicated to any team created from th
 
 ![](/media/screenshot-2022-08-05-at-18-16-44.png)
 
-:::warning ⚠️ Note
-For this feature to work, you need to grant the nBold app the `Notes.ReadWrite.All` permission. To do so, use the `Check admin consent` command from the `Settings` tab.
-:::
+:::warning ⚠️ Note For this feature to work, you need to grant the nBold app the `Notes.ReadWrite.All` permission. To do so, use the `Check admin consent` command from the `Settings` tab. :::
 
 ## Key features
 
@@ -42,7 +40,7 @@ These elements will be created as part of the provisioning process:
 
 ## Where are your notebooks located?
 
-In your newly created team, all your notebooks are stored to the `Notebooks` folder in the destination default documents library. The folder is created if it doesn't exist.
+In your newly created team, all your notebooks are stored in the `Notebooks` folder in the destination default documents library. The folder is created if it doesn't exist.
 
 ## Non-supported features
 
