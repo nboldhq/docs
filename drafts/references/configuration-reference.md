@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Thu, 10 Nov 2022 13:15:07 GMT*
+📆 *Generated: Wed, 23 Nov 2022 21:36:38 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -348,7 +348,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
-| `WEBHOOKS_USER_AGENT` | Optional ☑️ | (string) HTTP user agent passed as a header with each request. Defaults to `nBold-Webhook/v5.1.0`. |
+| `WEBHOOKS_USER_AGENT` | Optional ☑️ | (string) HTTP user agent passed as a header with each request. Defaults to `nBold-Webhook/v5.1.1`. |
 | `WEBHOOKS_RETRY_INTERVAL` | Optional ☑️ | (number) Interval in `ms` between two attempts. Defaults to `10000`. |
 | `WEBHOOKS_MAX_RETRY` | Optional ☑️ | (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times before failing. Defaults to `2`. |
 | `WEBHOOKS_TIMEOUT` | Optional ☑️ | (number) Timeout in `ms` before aborting the request if the server is unresponsive. Defaults to `5000`. |

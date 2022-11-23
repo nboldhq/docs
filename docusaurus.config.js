@@ -72,7 +72,7 @@ const config = {
           },
           // {
           //   spec: 'http://127.0.0.1:5500/temp/api/nbold-api-openapi-latest.yaml',
-          //   route: '/api/dev',
+          //   route: '/api',
           //   layout: {
           //     title: 'API reference',
           //     description: 'nBold API reference',

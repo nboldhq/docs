@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Thu, 10 Nov 2022 13:15:07 GMT*
+📆 *Generated: Wed, 23 Nov 2022 21:36:38 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -28,7 +28,7 @@ WEB_PUBLICURL=http://localhost
 # (string) Public URL of the CDN used by the web service to serve static assets. Defaults to `""` (means that the web server is serving the static assets itself).
 WEB_CDN_PUBLICURL=
 # (string) Secret string used to encrypt session data. Defaults to an UUID v4 string generated at runtime.
-WEB_SESSION_SECRET=e2611277-7298-489d-a835-9ebb7eda3b23
+WEB_SESSION_SECRET=7f13ae16-9d3c-4fba-a561-e0d055866677
 # (string) Web server requests timeout. Can be a string accepted by the ms (https://www.npmjs.com/package/ms) module. Defaults to `5s`.
 WEB_TIMEOUT=5s
 
@@ -344,8 +344,8 @@ MICROSOFT_APPINSIGHTS_CONNECTION_STRING=
 # Webhooks
 # Webhooks configuration
 
-# (string) HTTP user agent passed as a header with each request. Defaults to `nBold-Webhook/v5.1.0`.
-WEBHOOKS_USER_AGENT=nBold-Webhook/v5.1.0
+# (string) HTTP user agent passed as a header with each request. Defaults to `nBold-Webhook/v5.1.1`.
+WEBHOOKS_USER_AGENT=nBold-Webhook/v5.1.1
 # (number) Interval in `ms` between two attempts. Defaults to `10000`.
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times before failing. Defaults to `2`.

@@ -1,5 +1,5 @@
 # Events Data Model Reference
-📆 *Generated: Thu, 10 Nov 2022 13:15:07 GMT*
+📆 *Generated: Wed, 23 Nov 2022 21:36:38 GMT*
 
 
 This document lists all the events tracked in our events database.
@@ -58,6 +58,7 @@ Each event is specified with:
 | Microsoft Teams service account registration error | When a user has failed to register a Microsoft Teams service account | evt_microsoft_teams_service_account_registation_error |
 | Microsoft Teams service account deletion success | When a user has successfully deleted a Microsoft Teams service account | evt_microsoft_teams_service_account_deletion_success |
 | Microsoft Teams service account deletion error | When a user has failed to delete a Microsoft Teams service account | evt_microsoft_teams_service_account_deletion_error |
+| Microsoft Teams service account tokens renewal completed | When the Microsoft Teams service account tokens renewal has completed | evt_microsoft_teams_service_account_tokens_renewal_completed |
 | Microsoft Teams team template created | When a Microsoft Teams team template is created | evt_microsoft_teams_team_template_created |
 | Microsoft Teams team template updated | When a Microsoft Teams team template is updated | evt_microsoft_teams_team_template_updated |
 | Microsoft Teams team template deleted | When a Microsoft Teams team template is deleted | evt_microsoft_teams_team_template_deleted |
@@ -90,4 +91,6 @@ Each event is specified with:
 | User signed in | When a user has signed in | evt_user_signedin |
 | User signed out | When a user has signed out | evt_user_signedout |
 | User unauthorized | When a user has been denied access to a resource | evt_user_unauthorized |
+| Trello tab cloned | When a Trello tab has been cloned | evt_trello_tab_cloned |
 | Webhook executed | When a webhook has been executed | evt_webhook_run_executed |
+| Remote object updated | When a remote object has been updated | evt_remote_object_updated |
