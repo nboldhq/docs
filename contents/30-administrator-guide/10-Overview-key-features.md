@@ -68,7 +68,7 @@ By default, nBold redirects you to the "Home" page. If you're a member of the Of
 
 From there, you can access the four main sections of nBold:
 
-* Security
+* [Security](https://docs.nbold.co/administrator-guide/Update-Service-Account)
 * Approval
-* Roles
+* [Roles](https://docs.nbold.co/administrator-guide/delegate-template-catalog-administration)
 * System Information
