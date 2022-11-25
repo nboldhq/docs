@@ -3,7 +3,6 @@ label: Connected app
 hide_body: false
 fields: []
 pages:
-- contents/10-quickstart/50-service-account-update.md
 - contents/30-administrator-guide/10-Overview-key-features.md
 - contents/30-administrator-guide/25-Service-Account-Setup.md
 - contents/30-administrator-guide/26-homepage-setup.md
