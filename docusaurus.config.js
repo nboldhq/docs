@@ -130,9 +130,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'quickstart/quickstart',
+            docId: 'administrator-guide/administrator-guide',
             position: 'left',
-            label: '🚀 Quickstart',
+            label: '🚀 Administrator Guide',
           },
           {
             type: 'doc',
