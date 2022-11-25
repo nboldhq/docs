@@ -13,5 +13,5 @@ Here is a short [Demo](https://nbold.co/wp-content/uploads/2022/04/Create-Collab
 
 Now, let's get started!
 
-[How to create Collaboration Templates](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template)
-[Supported Features of Collaboration Templates](https://docs.nbold.co/collaboration-templates/supported-features)
+* [How to create Collaboration Templates](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template)
+* [Supported Features of Collaboration Templates](https://docs.nbold.co/collaboration-templates/supported-features)
