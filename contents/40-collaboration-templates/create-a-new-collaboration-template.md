@@ -6,8 +6,8 @@ author: Kristina Konstantynova
 
 nBold lets organizations build a Collaboration Templates Catalog that the company owns, letting user creates a Team needed to perform Business Activities such as Proposal Realization, Recruitment Session, Project Management, Crisis Management, etc.
 
-Do you want to create a Microsoft Teams Template to support any Collaborative Process in your organization? You'll be able to build it in just a few minutes and help your organization with New Recruitment, Business Proposals, New Store opening, Business Department collaborations, etc.  
-  
+Do you want to create a Microsoft Teams Template to support any Collaborative Process in your organization? You'll be able to build it in just a few minutes and help your organization with New Recruitment, Business Proposals, New Store opening, Business Department collaborations, etc.
+
 So, let's get started!
 
 ## 1. Create a Team that will be the Original Team for the template
@@ -31,20 +31,61 @@ For Mac devices, type `Control + Command + Space`.
 
 ## 2. Add it to the Teams Template Corporate Catalog with Governance Policies (for Admins)
 
- 1. Connect as a **Global Admin in Microsoft Teams**
- 2. Select nBold in the App Store and go to `Catalog` Tab.
- 3. Click on **`+ New Template`** on top right
- 4. Enter the **name of the Team** created before
- 5. Adapt the name of the Template to be shown to end-users in the catalog
- 6. Select what to be cloned (most of the time uncheck "Members")
- 7. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example).
+1. Connect as a **Global Admin in Microsoft Teams**
+2. Select nBold in the App Store and go to `Catalog` Tab.
+3. Click on **`+ New Template`** on top right
+4. Enter the **name of the Team** created before
+5. Adapt the name of the Template to be shown to end-users in the catalog
+6. You will now see a Template creation form. By default, the first tab in the form if the **Info**.
 
-    More details about [Naming Convention](/governance-policies/naming-conventions).
- 8. [**Approval**](/governance-policies/approval): select who will be the approver of the creation (currently disabled by default)
- 9. [**Audience**](/governance-policies/audience-targeting): define who will be able to create a team with this template
-10. **Compliance**: define additional [sensitivity labels](/governance-policies/sensitivity-labels) to protect your data.
-11. [**Security policy**](/governance-policies/security-policy): define the enforced privacy policy, membership policy and Permanent owners/members policy
-12. Click "Save"
+* Microsoft Teams Template name and description: This information is displayed to the end-user during the selection of the Template
+* What you'd like to include from the original team: different characteristics that will be cloned from the "original team" to the new one.
+
+![](/media/info-tab.png)
+
+You can selectively enable or disable these characteristics among:
+
+* Apps: the apps installed in the "original team"
+* Tabs: the tabs added in the "Original team" like **Planner Tabs** will be cloned with tasks, descriptions, checklists, labels, and buckets, **Website Tabs** will be cloned with the pre-configured URL, **all other Tabs** will be replicated but not configured
+* Settings: The team settings configured in the "original team"
+* Channels: The channels created in the "original team" Members: The owners and members of the "original team"
+
+Select what to be cloned (most of the time uncheck "Members")  
+
+7\. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example).
+
+Define the Naming settings with Team name, description, and welcome message default values.
+
+![](/media/naming-convention.png)
+
+[Learn more about Naming Convention](/governance-policies/naming-conventions)
+
+1. [**Approval**](/governance-policies/approval): select who will be the approver of the creation (currently disabled by default)
+
+Define the approval policy with an approver from your organization.
+
+![](/media/teams-creation-approval-policy.png)
+
+[Learn more about Approval](/governance-policies/approval)
+
+1. [**Audience**](/governance-policies/audience-targeting): define who will be able to create a team with this template
+
+Define the audience you want to target for this Template.
+
+![](/media/audience-targeting.png)
+
+[Learn more about Audience Targeting](/governance-policies/audience-targeting)
+
+1. **Compliance**: define additional [sensitivity labels](/governance-policies/sensitivity-labels) to protect your data.
+2. [**Security policy**](/governance-policies/security-policy): define the enforced privacy policy, membership policy and Permanent owners/members policy
+
+Define the Security Policy with Teams Privacy, Permanent Owners and Permanent Members
+
+![](/media/teams-template-security-policy.png)
+
+[Learn more about Security Policy](/governance-policies/security-policy)
+
+1. Click "Save"
 
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)
 
