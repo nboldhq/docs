@@ -4,6 +4,8 @@ author: Kristina Konstantynova
 ---
 # Create a new Collaboration Template
 
+nBold lets organizations build a Collaboration Templates Catalog that the company owns, letting user creates a Team needed to perform Business Activities such as: Proposal Realization, Recruitment Session, Project Management, Crisis Management, etc. 
+
 ## 1. Create a Team that will be the Original Team for the template
 
 1. Create a Team using the regular way and name it "NAME OF THE USE CASE - Template" (Deal Room - Template; Construction Site - Template; Marketing Department - Template; Project Management - Template... )
