@@ -5,6 +5,7 @@ fields: []
 pages:
 - contents/10-quickstart/50-service-account-update.md
 - contents/30-administrator-guide/10-Overview-key-features.md
+- contents/30-administrator-guide/21-homepage-setup.md
 - contents/30-administrator-guide/25-Service-Account-Setup.md
 - contents/45-connected-apps/10 HubSpot setup guide.md
 - contents/45-connected-apps/40 Salesforce setup guide.md
