@@ -7,6 +7,7 @@ pages:
 - contents/30-administrator-guide/10-Overview-key-features.md
 - contents/30-administrator-guide/25-Service-Account-Setup.md
 - contents/30-administrator-guide/26-homepage-setup.md
+- contents/30-administrator-guide/28-Update-Service-Account.md
 - contents/45-connected-apps/10 HubSpot setup guide.md
 - contents/45-connected-apps/40 Salesforce setup guide.md
 - contents/45-connected-apps/80 Update and Uninstall HubSpot Solution.md
