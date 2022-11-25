@@ -21,9 +21,11 @@ Once, you click on the + icon to add the OneNote Tab, you will be able to:
 
 > **Please Note**: You can create a page too, but currently, cloning of pages as a new file is not supported. This means if your template has a OneNote **Page** tab, then the Page in the newly created team will point to the default file and not a new one.
 
+![](/media/screenshot-2022-11-25-at-10-11-13.png)
+
 And now your OneNote tab is automatically replicated to any team created from this template!
 
-![](/media/screenshot-2022-08-05-at-18-16-44.png)
+![](/media/screenshot-2022-11-25-at-10-17-05.png)
 
 :::warning ⚠️ Note For this feature to work, you need to grant the nBold app the `Notes.ReadWrite.All` permission. To do so, use the `Check admin consent` command from the `Settings` tab. :::
 
