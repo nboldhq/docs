@@ -13,7 +13,7 @@ When you log in to nBold, you will by default land on the "Home" Tab. Here, you 
 
 ### 2. Create Team
 
-By clicking here, you or the end users would be able to create a new microsoft team from the collaboration templates that you have configured.
+By clicking here, you or the end users would be able to create a new Microsoft team from the collaboration templates that you have configured.
 
 ### 3. My Requests
 
@@ -54,7 +54,7 @@ To learn how to create a template from scratch, click [here.](https://docs.nbold
 
 To create a new Microsoft Teams, select "➕ Create"
 
-Select an existing team as a Template: Mandatory. Search for an existing team that will be cloned to create the new team. This team is here after referred as the "original team".
+Select an existing team as a Template: Mandatory. Search for an existing team that will be cloned to create the new team. This team is hereafter referred to as the "original team".
 
 ![](/media/screenshot-2022-04-01-at-15-24-47.png)
 
