@@ -1,7 +1,8 @@
 ---
 author: Kristina Konstantnyova
+
 ---
-# Delegate your template catalog administration
+# Delegate Roles
 
 You don't need to be a Microsoft 365 Global Administrator to create, manage and delete templates. Any user from your Microsoft Teams environment can be granted with the `Catalog Manager` role.
 
