@@ -41,7 +41,7 @@ For each existing Template, you can Enable or Disable it for users:
 **Edit:**  
 To edit an existing Template, click on edit as shown in the below picture. The edit form is the same as the creation form.
 
-[![](https://downloads.intercomcdn.com/i/o/175629976/0fd31007ea6ade2d20a50cd8/image.png =324x221)](https://downloads.intercomcdn.com/i/o/175629976/0fd31007ea6ade2d20a50cd8/image.png)
+![](/media/screenshot-2022-11-25-at-13-21-45.png)
 
 ### 3. New Template
 
@@ -66,7 +66,7 @@ By default, nBold redirects you to the "Home" page. If you're a member of the Of
 
 ![](/media/service-account.png)
 
-From there, you can access the 4 main sections of nBold:
+From there, you can access the four main sections of nBold:
 
 * Security
 * Approval
