@@ -1,7 +1,7 @@
 ---
 
 ---
-# Overview: Key Features
+# Overview
 
 ## Home
 
