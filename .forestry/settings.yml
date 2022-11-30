@@ -7,27 +7,27 @@ sections:
 - type: directory
   path: contents/00-introduction
   label: Introduction
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/10-quickstart
   label: Quickstart
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/30-administrator-guide
   label: 'Administrator Guide '
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/40-collaboration-templates
   label: Collaboration templates
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/60-business-scenarios
   label: Business scenarios
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/45-connected-apps
@@ -37,12 +37,12 @@ sections:
 - type: directory
   path: contents/50-governance-policies
   label: Governance policies
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/70-automation
   label: Automation
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/75-api
@@ -52,12 +52,12 @@ sections:
 - type: directory
   path: contents/80-open-source
   label: Open-source
-  create: documents
+  create: all
   match: "**/*"
 - type: directory
   path: contents/90-trust-center
   label: Trust Center
-  create: documents
+  create: all
   match: "**/*"
 upload_dir: static/media
 public_path: "/media"
