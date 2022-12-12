@@ -146,7 +146,8 @@ And it’s done! All the fields in the configuration form are submitted. Now it�
 
 Once **enabled** – Salesforce integration with Collaboration Templates is started.
 
-![](/media/screenshot-2022-11-10-at-13-07-28.png)
+You can watch this [demo](https://6395096.fs1.hubspotusercontent-na1.net/hubfs/6395096/Videos/Deal%20Room%20with%20SF%20-%20presentation.mp4) to see how the solution works.
+
 
 If you have any questions, please write to us at [support@nbold.co](mailto:support@nbold.co)
 
