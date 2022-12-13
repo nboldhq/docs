@@ -54,7 +54,7 @@ Before installing the solution make sure you have:
 
 ## Configuration
 
-### STEP 1: Account Collaboration
+### Step 1: Account Collaboration
 
 * Define the template from which your teams will be created.
 
@@ -110,7 +110,7 @@ Add Salesforce App to the Original team in Microsoft Team
 
 Click on Update to go to the next Step
 
-### STEP 2: Opportunity Collaboration
+### Step 2: Opportunity Collaboration
 
 #### Set-Up the details for collaboration around Opportunity Records
 
@@ -183,7 +183,7 @@ Today we support two types of notifications:
 
   ![](/media/screenshot-2022-12-13-at-16-29-16.png)
 
-### STEP 3: SUNSET
+### Step 3: SUNSET
 
 Finally, you're able to manage the "end of life" for your teams and channels if at some point you won't need any more collaboration.
 
