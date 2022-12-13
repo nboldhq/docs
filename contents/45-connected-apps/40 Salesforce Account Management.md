@@ -7,15 +7,13 @@ Key Account Solution allows to collaborate on accounts and all related deals fro
 
 The main capabilities are:
 
-1. Create a Parent Account team with different triggers:
-
-* Once an Account Record is Created or Updated
-* Once an Account Record fits your custom criteria
-* Once at least one Opportunity Record is assigned to the Account
-
-1. Create Channel in the Parent Account team per related Opportunity
-2. Receive notifications on Opportunity Amount/Stage updates
-3. Set up "end-of lifecycle" for both, channels, and teams on a custom filter
+* Create a Parent Account team with different triggers:
+  * Once an Account Record is Created or Updated
+  * Once an Account Record fits your custom criteria
+  * Once at least one Opportunity Record is assigned to the Account
+* Create Channel in the Parent Account team per related Opportunity
+* Receive notifications on Opportunity Amount/Stage updates
+* Set up "end-of lifecycle" for both, channels, and teams on a custom filter
 
 Additional features include naming convention for both teams and channels, ownership and membership management, advanced integration with adding CRM record as tab, and more
 
