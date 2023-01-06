@@ -6,7 +6,7 @@ id: catalog-manager-guide
 
 In this article, you will find all the documents on creating a Collaboration Template, setting up different Governance Policies, and various business scenarios for all your unique business needs.
 
-1. Collaboration Templates
+1. [Collaboration Templates](/catalog-manager-guide/collaboration-templates)
    Create a new Collaboration Template
    All supported features for Collaboration Template
    Updating Collaboration Template: What changes?
@@ -19,7 +19,6 @@ In this article, you will find all the documents on creating a Collaboration Tem
    Private Channels Capabilities
    SharePoint Library Tab
    Wiki Tabs
-   
 2. Governance Policies
    Disable a regular team creation for end users
    Team creation approval workflow
@@ -32,11 +31,9 @@ In this article, you will find all the documents on creating a Collaboration Tem
    Sensitivity Labels
    Serve Private Channels in Microsoft Teams only through Collaboration Templates
    How to use Active Directory Schema Extensions
-   
-
 3. Business Scenarios
    Account Management
-   Construction Manaement
+   Construction Management
    Crisis Management
    Deal Room Template
    Product Launch
