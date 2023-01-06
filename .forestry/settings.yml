@@ -15,7 +15,7 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: contents/30-administrator-guide
+  path: contents/35-catalog-manager-guide
   label: Catalog Manager Guide
   create: all
   match: "**/*"
@@ -26,7 +26,7 @@ sections:
   match: "**/*"
 - type: directory
   path: contents/70-integrate-with-nbold
-  label: Automation
+  label: Integrate with nBold
   create: all
   match: "**/*"
 - type: directory
