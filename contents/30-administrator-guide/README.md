@@ -5,7 +5,7 @@ tags:
 - administrators
 
 ---
-# Administrator guide
+# Administrator Guide
 
 In this article, you will find all the documents regarding the key features of nBold, the Setup and Configuration Guide, and all other onboarding steps.
 
