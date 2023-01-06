@@ -3,7 +3,7 @@
 ---
 # Key Account Management with Salesforce
 
-Key Account Solution allows to collaborate on accounts and all related deals from a single workspace, with pre-built content, record information in the team, CRM updates, and more.
+Key Account Solution allows collaborating on accounts and all related deals from a single workspace, with pre-built content, record information in the team, CRM updates, and more.
 
 The main capabilities are:
 
