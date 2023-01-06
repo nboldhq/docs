@@ -10,23 +10,13 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: contents/10-quickstart
-  label: Quickstart
-  create: all
-  match: "**/*"
-- type: directory
   path: contents/30-administrator-guide
   label: 'Administrator Guide '
   create: all
   match: "**/*"
 - type: directory
-  path: contents/40-collaboration-templates
-  label: Collaboration templates
-  create: all
-  match: "**/*"
-- type: directory
-  path: contents/60-business-scenarios
-  label: Business scenarios
+  path: contents/30-administrator-guide
+  label: Catalog Manager Guide
   create: all
   match: "**/*"
 - type: directory
@@ -35,19 +25,9 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: contents/50-governance-policies
-  label: Governance policies
-  create: all
-  match: "**/*"
-- type: directory
-  path: contents/70-automation
+  path: contents/70-integrate-with-nbold
   label: Automation
   create: all
-  match: "**/*"
-- type: directory
-  path: contents/75-api
-  label: API
-  create: documents
   match: "**/*"
 - type: directory
   path: contents/80-open-source
