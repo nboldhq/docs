@@ -10,7 +10,8 @@ The article describes how to setup nBold in your Microsoft Teams environment, yo
 
 ### 1. Get the nBold app
 
-You can install the latest version of nBold from the Microsoft Teams store: ![Microsoft Teams store](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)\](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4?
+You can install the latest version of nBold from the Microsoft Teams store:  
+[![Microsoft Teams store](https://img.shields.io/badge/Microsoft_Teams-nBold-253BFE?logo=microsoft-teams&logoColor=white&style=flat)](https://teams.microsoft.com/l/app/589748de-ec98-4616-9063-e91c629bd1a4)
 
 ### 2. Connect to Microsoft Teams as a Global Admin
 

@@ -1,5 +1,5 @@
 # Events Data Model Reference
-📆 *Generated: Wed, 23 Nov 2022 23:45:02 GMT*
+📆 *Generated: Mon, 28 Nov 2022 16:48:46 GMT*
 
 
 This document lists all the events tracked in our events database.
@@ -23,6 +23,10 @@ Each event is specified with:
 | Connected apps solutions search | When a user has searched for a connected apps solution | evt_user_connected_apps_solutions_search |
 | Connected apps solution viewed | When a user has viewed a solution | evt_user_connected_apps_solution_viewed |
 | Scheduled job completed | When a scheduled job has been executed and is done | evt_scheduled_job_run_completed |
+| Graph subscriptions renewal completed | When the Graph subscriptions renewal job is done for a specific tenant | evt_microsoft_graph_subscriptions_renewal_completed |
+| Graph subscriptions created | When the Graph subscriptions job has created a new subscription | evt_microsoft_graph_subscription_created |
+| Graph subscriptions notification received | When the Graph subscriptions job has received a new notification about a resource | evt_microsoft_graph_subscription_notification_received |
+| Graph subscriptions lifecycle notification received | When the Graph subscriptions job has received a new notification about a subscription's lifecycle | evt_microsoft_graph_subscription_lifecycle_notification_received |
 | Microsoft Identity Access Token Refreshed | When a Microsoft Identity access token has been refreshed | evt_microsoft_identity_access_token_refreshed |
 | Microsoft Identity Access Token Refresh Failed | When a Microsoft Identity access token refresh has failed | evt_microsoft_identity_access_token_refresh_failed |
 | Microsoft Teams list tab cloned | When a Microsoft Teams list tab has been cloned | evt_microsoft_teams_list_tab_cloned |

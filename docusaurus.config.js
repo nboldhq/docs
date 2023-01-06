@@ -109,6 +109,10 @@ const config = {
     {
       src: '/js/intercom.js',
       async: true,
+    },
+    {
+      src: 'https://nbold.statuspage.io/embed/script.js',
+      async: true,
     }
   ],
 
@@ -132,25 +136,26 @@ const config = {
             type: 'doc',
             docId: 'administrator-guide/administrator-guide',
             position: 'left',
-            label: '🚀 Administrator Guide',
+            label: 'Administrator Guide',
           },
           {
             type: 'doc',
-            docId: 'automation/automation',
+            docId: 'catalog-manager-guide/catalog-manager-guide',
             position: 'left',
-            label: '🤖 Automation',
+            label: 'Catalog Manager Guide',
           },
+          // {
+          //   type: 'doc',
+          //   docId: 'integrate/integrate',
+          //   position: 'left',
+          //   label: 'Integrate with nBold',
+          // },
           {
             // type: 'doc',
             href: '/api',
             position: 'left',
-            label: '📚 API Reference',
+            label: 'API Reference',
           },
-          // {
-          //   to: '/api/explorer',
-          //   position: 'right',
-          //   label: '🧭 API Explorer',
-          // },
           {
             type: 'doc',
             docId: 'trust-center/trust-center',
@@ -170,16 +175,12 @@ const config = {
                 label: 'Quickstart',
               },
               {
-                href: 'automation/automation',
-                label: 'Automation',
+                href: 'integrate/integrate',
+                label: 'Integrate with nBold',
               },
               {
                 href: 'api/api',
                 label: 'API Reference',
-              },
-              {
-                href: '/api/explorer',
-                label: 'API Explorer',
               },
               {
                 href: 'trust-center/trust-center',
