@@ -40,25 +40,10 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.2.0",
-    "@microsoft/teams-js": "^1.11.0",
-    "@mr-hope/vuepress-plugin-copy-code": "^1.26.0",
     "@openapitools/openapi-generator-cli": "^2.4.26",
     "broken-link-checker": "^0.7.8",
     "front-matter": "^4.0.2",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "moment": "^2.29.1",
-    "msal": "^1.4.15",
-    "sentence-case": "^3.0.4",
-    "swagger-ui-dist": "^4.4.1",
-    "title-case": "^3.0.3",
-    "uikit": "^3.10.1",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-autometa": "^0.1.13",
-    "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-mermaidjs": "^1.9.0",
-    "vuepress-theme-yuu": "^3.1.1",
-    "yamljs": "^0.3.0"
+    "gulp": "^4.0.2"
   },
   "browserslist": {
     "production": [
