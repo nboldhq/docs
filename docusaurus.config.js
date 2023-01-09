@@ -171,19 +171,23 @@ const config = {
             title: 'Table of contents',
             items: [
               {
-                href: 'quickstart/quickstart',
-                label: 'Quickstart',
+                href: '/administrator-guide',
+                label: 'Administrator Guide',
               },
               {
-                href: 'integrate/integrate',
+                href: '/catalog-manager-guide',
+                label: 'Catalog Manager Guide',
+              },
+              {
+                href: '/integrate-with-nbold',
                 label: 'Integrate with nBold',
               },
               {
-                href: 'api/api',
+                href: '/api',
                 label: 'API Reference',
               },
               {
-                href: 'trust-center/trust-center',
+                href: '/trust-center',
                 label: 'Trust center',
               },
             ],
