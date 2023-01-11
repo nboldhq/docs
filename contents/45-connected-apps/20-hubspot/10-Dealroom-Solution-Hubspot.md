@@ -3,9 +3,20 @@
 ---
 # Deal Room Solution with HubSpot
 
-Connect HubSpot with Collaboration Templates and improve your collaboration on sales deals. Scale automation across the company and boost your sales team's productivity.
+  
+**What is Deal Room?**
 
-If you have any questions or need any assistance, kindly write to us at [support@nbold.co](mailto:support@nbold.co)
+Deal Room is a digital workspace that incorporates all the tools, documentation, and data necessary to work on closing deals.  
+If you're using both Microsoft Teams and HubSpot, Deal Rooms will ensure smooth and automatic information flow and bridge the communication gap between the users of both platforms.
+
+The Deal Room with HubSpot allows you to:
+
+* Get teams automatically created from your own collaboration templates for each new deal reaching your setup filters
+* Define the ownership of the created team and sync it to the deal owner in the connected Apps
+* Manage the end of life for a team once the deal is closed (Delete/Archive/Rename)
+* Communicate deal stage or amount changes to specific management teams or channels
+
+**How does it work?**
 
 ## Installation
 
@@ -17,9 +28,9 @@ Once you have created a template to use for the collaboration on sales deals, yo
 
 * Connect and go to the nBold application in Microsoft Teams.
 
-> To know how to install nBold to your Microsoft Teams, click [here](https://docs.nbold.co/administrator-guide/quick-steps-to-onboard-on-nbold.html#_1-install-nbold-app-on-microsoft-teams)
+> To know how to install nBold to your Microsoft Teams, click [here](/administrator-guide/Installation)
 >
-> To know how to create collaboration templates, click [here](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html#_1-create-a-team-that-will-be-the-original-team-for-the-template)
+> To know how to create collaboration templates, click [here](/catalog-manager-guide/collaboration-templates/create-a-new-collaboration-template)
 
 * Go to the Catalog tab and click on the Collaboration Processes tab on your right.
 
@@ -117,6 +128,6 @@ You can also choose to enable sending the GIFs in the notification.
 
 Now it's time to enable your solution!
 
-If you have any questions, please write to us at support@nbold.co
+If you have any questions or need any assistance, kindly write to us at [support@nbold.co](mailto:support@nbold.co)
 
-To know how to Update the Solution, click [here](https://docs.nbold.co/connected-apps/Update%20and%20Uninstall%20HubSpot%20Solution)
+To know how to Update the Solution, click [here](/connected-apps/hubspot/Update%20and%20Uninstall%20HubSpot%20Solution)

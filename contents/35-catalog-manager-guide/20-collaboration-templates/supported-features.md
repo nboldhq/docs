@@ -38,7 +38,7 @@ For more details on how to create a Template, go to the dedicated page about [ho
 * [Enforced Privacy to Private or Public](/governance-policies/security-policy)
 * Teams Creation Requester Membership Policy
 * [Permanent Owners and Members](/governance-policies/permanent-owners-and-members-policy)
-* [Create Teams only through templates ](/collaboration-templates/create-teams-only-through-microsoft-teams-templates-by-nbold)
+* [Create Teams only through templates ](/catalog-manager-guide/governance-policies/Creating-Teams-only-through-Templates)
 * [Create Private Channels Only Through templates ](/governance-policies/serve-private-channels)
 
 #### We do not support yet:
