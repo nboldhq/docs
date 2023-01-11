@@ -50,7 +50,7 @@ You can selectively enable or disable these characteristics among:
 * Settings: The team settings configured in the "original team"
 * Channels: The channels created in the "original team" Members: The owners and members of the "original team"
 
-Select what to be cloned (most of the time uncheck "Members")  
+Select what to be cloned (most of the time uncheck "Members")
 
 7\. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example).
 
@@ -90,7 +90,3 @@ Define the Security Policy with Teams Privacy, Permanent Owners and Permanent Me
 ![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)
 
 Test your new Collaboration Template from the home page! Click on `+New Team`
-
-Here is a video on how to create a **team from a Collaboration Template:**
-
-[https://nbold.co/wp-content/uploads/2022/04/create-team-from-template-demo-center.mp4](https://nbold.co/wp-content/uploads/2022/04/create-team-from-template-demo-center.mp4 "Create team from template")
