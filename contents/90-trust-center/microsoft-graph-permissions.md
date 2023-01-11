@@ -219,7 +219,7 @@ Service account optional requirements:
   * Why: To apply sensitivity labels to your teams/groups
 
 :::tip
-Learn how to [setup the service account](/quickstart/setup-the-service-account)
+Learn how to [setup the service account](/administrator-guide/Service-Account-Setup)
 :::
 
 **Is the service account visible to end-users?**  
