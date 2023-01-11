@@ -9,8 +9,6 @@ You can customize your workspace by integrating and pre-configuring any tool tha
 
 Through collaboration templates, you can make a customized playbook for any business process and then replicate the rest of the collaboration spaces that you or your team need with this template. This not only saves time but also makes the entire process of collaboration easier, faster, and most importantly, more productive.
 
-Here is a short [Demo](https://nbold.co/wp-content/uploads/2022/04/Create-Collaboration-Template-Demo-Center.mp4) to help you understand how a collaboration template is created.
-
 Now, let's get started!
 
 * [How to create Collaboration Templates](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template)
