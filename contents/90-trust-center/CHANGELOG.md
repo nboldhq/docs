@@ -1,3 +1,6 @@
+---
+
+---
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
@@ -1750,7 +1753,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Audience targeting: Included docs and example for the `user.groups.direct` tag
   - Updated RBAC docs to include our new roles, catalog managers and integration managers
 - changed: TechHub now uses Algolia for its full-text search engine.
-- changed: [nBold Connector for Power Platform](https://docs.nbold.co/automation/power-platform-automation-connector) documentation
+- changed: [nBold Connector for Power Platform](https://docs.nbold.co/integrate-with-nbold/power-platform) documentation
   - Updated the "Abstract" section
   - Added an introductory message describing the purpose of each step
   - Added a few minor additional steps
