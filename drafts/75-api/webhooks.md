@@ -60,7 +60,6 @@ The following headers are included in the request:
 A webhook payload contains at least the following properties:
 ```json
 {
-  "@odata.context": "https://docs.nbold.co/api/webhooks", // {string} Link to the webhook online help
   "tenant": {
     "id": "" // {string} The tenant ID from where the event originates
   }

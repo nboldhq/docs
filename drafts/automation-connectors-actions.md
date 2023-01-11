@@ -30,8 +30,6 @@ Triggered when a team is created, whatever the creation origin (manual, api, usi
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
 
-See [Webhook Documentation](/api/webhooks#team-created)
-
 ### When a Team Provisioning is Completed
 
 Triggered when a team provisioning request based on a template is complete (wether successfully or not).
@@ -40,8 +38,6 @@ Triggered when a team provisioning request based on a template is complete (weth
 * Category: `teams`
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
-
-See [Webhook Documentation](/api/webhooks#team-provisioning-completed)
 
 ### When a Team Creation Approval is Requested
 
@@ -52,8 +48,6 @@ Triggered when a user is requesting the creation of a new team using a template 
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
 
-See [Webhook Documentation](/api/webhooks#team-creation-approval-requested)
-
 ### When a Team Creation is Approved
 
 Triggered when a team creation approval is approved.
@@ -63,8 +57,6 @@ Triggered when a team creation approval is approved.
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
 
-See [Webhook Documentation](/api/webhooks#team-creation-approved)
-
 ### When a Team Creation is Rejected
 
 Triggered when a team creation approval is rejected.
@@ -73,8 +65,6 @@ Triggered when a team creation approval is rejected.
 * Category: `approvals`
 * Rate Limit: None
 * Roles: `INTEGRATION_MANAGER`, `TEAMS_SERVICE_ADMIN`, `GLOBAL_ADMIN`
-
-See [Webhook Documentation](/api/webhooks#team-creation-rejected)
 
 ## Actions
 

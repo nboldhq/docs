@@ -131,7 +131,4 @@ Instead of relying on Outlook actionable emails, you can use your own custom app
 
 ![nBold Approval Workflow with Custom App](/img/nocode/custom-approval.png)
 
-To learn more about this option, please read the [nBold API](/api/get-started) documentation, and refer to these webhooks that you can leverage from your custom application:
-- [Team Creation Approval Requested](/api/webhooks#team-creation-approval-requested)
-- [Team Creation Approved](/api/webhooks#supported-events)
-- [Team Creation Rejected](/api/webhooks#team-creation-rejected)
+To learn more about this option, please read the nBold API reference, and refer to these webhooks that you can leverage from your custom application.
