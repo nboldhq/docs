@@ -39,7 +39,7 @@ You're all set up! Now it's time to [create your first template](/collaboration-
 
 You can also:
 
-* [Set up the Home package](/quickstart/setup-the-home-page) to make it easier for your end-users.
+* [Set up the Home package](/administrator-guide/homepage-setup) to make it easier for your end-users.
 * [Delegate the Template Catalog administration](/administrator-guide/delegate-template-catalog-administration) to your business users.
 
 ## Alternative deployment method (Optional)
