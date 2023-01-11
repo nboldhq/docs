@@ -18,9 +18,9 @@ Once you have created a template to use for the collaboration on sales deals, yo
 
 * Connect and go to the nBold application in Microsoft Teams.
 
-> To know how to install nBold to your Microsoft Teams, click [here](https://docs.nbold.co/administrator-guide/quick-steps-to-onboard-on-nbold.html#_1-install-nbold-app-on-microsoft-teams)
+> To know how to install nBold to your Microsoft Teams, click [here](/administrator-guide/Installation)
 >
-> To know how to create collaboration templates, click [here](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html#_1-create-a-team-that-will-be-the-original-team-for-the-template)
+> To know how to create collaboration templates, click [here](/catalog-manager-guide/collaboration-templates/create-a-new-collaboration-template)
 
 * Go to the Catalog tab and click on the Collaboration Processes tab on your right.
 
