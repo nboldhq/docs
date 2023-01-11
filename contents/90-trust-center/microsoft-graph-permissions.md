@@ -1,7 +1,8 @@
 ---
-position: 4
+position: "4"
 status: published
 author: Guillaume Meyer
+
 ---
 # Microsoft Graph Permissions
 
@@ -102,7 +103,7 @@ Examples of these kinds of permissions include the following:
 For nBold to access data in Microsoft Graph, your administrator must grant it the correct permissions via a consent process.  
 
 Learn more:
-- [nBold Install and Setup Guide...](/quickstart/install-the-app)
+- [nBold Install and Setup Guide...](/administrator-guide/Installation)
 - [Azure AD application consent experience...](https://docs.microsoft.com/en-us/azure/active-directory/develop/application-consent-experience)
 - [Microsoft Graph permissions reference...](https://docs.microsoft.com/en-us/graph/permissions-reference)
 :::
@@ -266,4 +267,3 @@ These audits trails could be integrated with an [SIEM](https://en.wikipedia.org/
 
 #### Implement access rights management software
 Carefully managing your Active Directory service accounts is crucial to preventing misuse of broad access and privileges. An access rights management tool can be beneficial to ensure user accounts are set up and managed with appropriate permissions and access.
-
