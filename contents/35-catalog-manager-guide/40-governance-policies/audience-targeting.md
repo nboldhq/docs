@@ -4,53 +4,54 @@ author: Guillaume Meyer
 ---
 # Audience Targeting
 
-**ABSTRACT**  
-An audience targeting rule could be applied to a template to define who can access and therefore use it, based on the user profile data. Intrinsically, targeting rules are a combination of tags and expressions that are evaluated against a user profile to determine if a template is shown or not.
+  
+Audience targeting is a rule that could be applied to a template for defining who can access and use that template, based on the user profile data. Intrinsically, targeting rules are a combination of tags and expressions that are evaluated against a user profile to determine whether a template is shown.
 
 ## Available tags
+
 Targeting rules can use user profile information through the following tags:
 
 | Tag | Description |
-|-----|-------------|
-| `user.displayName` | User full name (for example "Bob Dirac".) |
-| `user.userPrincipalName` | User UPN. In Active Directory, a User Principal Name (UPN) is the name of a system user in an email address format. A UPN (for example: "bob.dirac@contoso.onmicrosoft.com") consists of the user name (logon name), separator (the @ symbol), and domain name (UPN suffix). <hr />Important: A UPN is not the same as an email address. Sometimes, a UPN can match a user's email address, but this is not a general rule. | 
-| `user.mail` | User email (for example: "bob.dirac@domain.com"). |
-| `user.preferredLanguage` | User preferred language in Microsoft 365. <hr />Language and locale codes are limited to those in the [ISO 639-1 standard](https://en.wikipedia.org/wiki/ISO_639-1). |
-| `user.givenName` | User given name (for example: "Bob"). |
-| `user.country` | User country (for example: "France"). |
-| `user.companyName` | User company name (for example: "Contoso"). |
-| `user.department` | User department (for example: "Marketing"). |
-| `user.city` | User city (for example: "Paris"). |
-| `user.jobTitle` | User job title (for example: "Product Manager"). |
-| `user.surname` | User surname (for example: "Dirac"). |
-| `user.usageLocation` | Office 365 usage location. (for example: "US") <hr />Rely on the [ISO 3166-1 alpha-2 country codes...](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
-| `user.groups.direct` | All the groups that the user is a DIRECT member of. |
+| --- | --- |
+| user.displayName | User full name (for example "Bob Dirac".) |
+| user.userPrincipalName | User UPN. In Active Directory, a User Principal Name (UPN) is the name of a system user in an email address format. A UPN (for example: "bob.dirac@contoso.onmicrosoft.com") consists of the user name (logon name), separator (the @ symbol), and domain name (UPN suffix). <hr />Important: A UPN is not the same as an email address. Sometimes, a UPN can match a user's email address, but this is not a general rule. |
+| user.mail | User email (for example: "bob.dirac@domain.com"). |
+| user.preferredLanguage | User preferred language in Microsoft 365. <hr />Language and locale codes are limited to those in the ISO 639-1 standard. |
+| user.givenName | User given name (for example: "Bob"). |
+| user.country | User country (for example: "France"). |
+| user.companyName | User company name (for example: "Contoso"). |
+| user.department | User department (for example: "Marketing"). |
+| user.city | User city (for example: "Paris"). |
+| user.jobTitle | User job title (for example: "Product Manager"). |
+| user.surname | User surname (for example: "Dirac"). |
+| user.usageLocation | Office 365 usage location. (for example: "US") <hr />Rely on the ISO 3166-1 alpha-2 country codes.... |
+| user.groups.direct | All the groups that the user is a DIRECT member of. |
 
-:::caution Case sensitivity
-Be careful: These tags are **CASE-SENSITIVE** and therefore must be always used lower-cased. 
-:::
+:::caution Case sensitivity Be careful: These tags are **CASE-SENSITIVE** and therefore must always be used lower-cased. :::
 
 ## Examples
+
 In combination with tags, targeting rules can use any standard JavaScript operator and function. This section provides some typical examples, from the simplest to the most complex one, to target your templates to specific audiences in an organization.
 
 ### Comparison operators
+
 To compare two values, your expression can use any standard JavaScript [comparison operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators).
 
 ```javascript
 // From France
 user.country === 'FR'
 ```
+
 ```javascript
 // From any country except from Germany
 user.country !== 'DE'
 ```
 
-:::tip Evaluation
-N.B: The template will be shown to a user only if the expression is evaluated as `true`
-:::
+:::tip Evaluation N.B: The template will be shown to a user only if the expression is evaluated as `true` :::
 
 ### Combining multiple criteria
-Rules follows the standard JavaScript [operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), so you can combine multiple rules in one expression.
+
+Rules follow the standard JavaScript [operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), so you can combine multiple rules in one expression.
 
 ```javascript
 // From France or Belgium, member of the Marketing Department
@@ -58,6 +59,7 @@ Rules follows the standard JavaScript [operator precedence](https://developer.mo
 ```
 
 ### Functions
+
 As part of your rules, you can use any standard JavaScript function, for instance [strings methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods), or for more advanced scenarios, [regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 ```javascript
@@ -71,6 +73,7 @@ user.mail.includes('@contoso.com') || user.mail.includes('@contoso.fr')
 ```
 
 ### Using groups membership
+
 The `user.groups.direct` tag gives you access to all the groups that the user is a DIRECT member of, as an array of groups objects. Therefore, you can use any standard JavaScript [array function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods) for your evaluation.
 
 There are several types of groups, that can be differentiated by their `@odata.type` property:
@@ -129,13 +132,15 @@ user.groups.direct.some(group => group.id === ('a937979b-5dbb-4f54-a405-93604624
 ```
 
 ### Azure AD Schema Extension
+
 To use Azure AD schema extensions in your audience targeting rules, please refer to [this article](/catalog-manager-guide/governance-policies/use-ad-schema-extensions)
 
 ## Validate and test your audience targeting rule
 
 :::tip Syntax Assistant
 A "Check Syntax" button is available to test the rule against the current logged user. You can expect 3 kind of outcomes.
+
 1. You would have access
 2. You would not have access
 3. An error is detected. In case of error, the technical details are also available, helping you solve the issue.
-:::
+   :::

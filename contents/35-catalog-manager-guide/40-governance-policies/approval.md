@@ -4,9 +4,7 @@ author: Guillaume Meyer
 ---
 # Team creation approval workflow
 
-## Understanding your options
-
-Team creation approval workflow in nBold could be configured using one of these options:
+There are different Team creation approval workflows in nBold that could be configured using one of the below mentioned options:
 
 * [Approval email sent by nBold](#approval-email-sent-by-salestim): This is the default and easiest option, works without any configuration.
 * [Approval email sent by your organization](#approval-email-sent-by-your-organization): If you need advanced security/compliance control over your notification emails.
