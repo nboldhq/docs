@@ -27,7 +27,7 @@ Before installing the solution make sure you have:
 * Service Account for Salesforce
 * Key Account Management Template with all the content. Define the channel structure with standard, private, and shared channels, and add file templates, guidelines, execution playbooks, board of tasks for repetitive processes. As well as tabs with SharePoint, Lists, OneNote, Forms, and more.
 
-> Explore how to build the Collaboration Templates [here](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html#_1-create-a-team-that-will-be-the-original-team-for-the-template).
+> Explore how to build the Collaboration Templates [here](/catalog-manager-guide/collaboration-templates/create-a-new-collaboration-template.html#_1-create-a-team-that-will-be-the-original-team-for-the-template).
 
 ## Installation
 
