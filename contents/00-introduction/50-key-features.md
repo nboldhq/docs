@@ -1,7 +1,8 @@
 ---
 author: Kristina Konstantnyova
 tags:
-  - introduction
+- introduction
+
 ---
 # Key Features
 nBold lets organizations improve their collaborative processes through the ability to easily create an advanced Microsoft Teams Template and get a Collaboration Template Catalog to let anyone create a Teams based on those Templates. You'll find hereafter the Key features of nBold.
@@ -10,24 +11,24 @@ nBold lets organizations improve their collaborative processes through the abili
 Build any Microsoft Teams Templates, to address any collaboration need in the organization, with:
 * List of Channels
 * List of Tabs
-* [Files and Folders](/collaboration-templates/files-and-folders)
+* [Files and Folders](/catalog-manager-guide/collaboration-templates/files-and-folders)
 * Pre-configured Website Tabs
-* Pre-configured [Planner](/collaboration-templates/microsoft-planner) with Tasks, Buckets, Description, Buckets and Labels
-* Pre-configured [Forms](/collaboration-templates/microsoft-forms) Tab
-* Pre-configured [SharePoint Online Documentation Library](/collaboration-templates/sharepoint-library)
+* Pre-configured [Planner](/catalog-manager-guide/collaboration-templates/microsoft-planner) with Tasks, Buckets, Description, Buckets and Labels
+* Pre-configured [Forms](/catalog-manager-guide/collaboration-templates/microsoft-forms) Tab
+* Pre-configured [SharePoint Online Documentation Library](/catalog-manager-guide/collaboration-templates/sharepoint-library)
 
 ## Collaboration Governance rule
 Features that IT will love! Microsoft Teams has been designed to address enterprise needs to scale collaboration in an organization. While there are tons of potential with Teams created with content such as Planner and Website Tabs, this can't be done without a strong Microsoft Teams Governance.
 
 All the features described hereafter, are set at the template level:
-* [Naming Convention](/governance-policies/naming-conventions)
-* [Teams Creation Approval](/governance-policies/approval)
-* [Template Audience Targeting](/governance-policies/audience-targeting)
-* Teams Compliance with [Sensitivity Labels](/governance-policies/sensitivity-labels)
-* Teams [Enforced Privacy Policy](/governance-policies/security-policy)
+* [Naming Convention](/catalog-manager-guide/governance-policies/naming-conventions)
+* [Teams Creation Approval](/catalog-manager-guide/governance-policies/approval)
+* [Template Audience Targeting](/catalog-manager-guide/governance-policies/audience-targeting)
+* Teams Compliance with [Sensitivity Labels](/catalog-manager-guide/governance-policies/sensitivity-labels)
+* Teams [Enforced Privacy Policy](/catalog-manager-guide/governance-policies/security-policy)
 * Teams Creation Requester as non-Owner
-* [Mandatory number of Owners and Members](/governance-policies/mandatory-number-of-owners-and-members)
-* [Permanent Owners and Permanent Members](/governance-policies/permanent-owners-and-members-policy)
+* [Mandatory number of Owners and Members](/catalog-manager-guide/governance-policies/mandatory-number-of-owners-and-members)
+* [Permanent Owners and Permanent Members](/catalog-manager-guide/governance-policies/permanent-owners-and-members-policy)
 
 ![](https://downloads.intercomcdn.com/i/o/462804740/66f3b89c10e5add4bf608298/Screenshot+2022-02-10+at+10.43.05.png)
 
