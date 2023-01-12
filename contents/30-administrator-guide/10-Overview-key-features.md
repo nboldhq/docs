@@ -48,7 +48,7 @@ To edit an existing Template, click on edit as shown in the below picture. The e
 Here, you can create a new collaboration template that would be used for creating new teams.  
 First, you would need to create the **Original Team** for the Template. This team will serve as a referral for the Template.
 
-To learn how to create a template from scratch, click [here.](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template)
+To learn how to create a template from scratch, click [here.](/catalog-manager-guide/collaboration-templates/create-a-new-collaboration-template)
 
 ### 4. New Team
 
