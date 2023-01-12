@@ -4,9 +4,6 @@ author: Guillaume Meyer
 ---
 # Team creation approval workflow
 
-**ABSTRACT**  
-This article describes the different options you have to configure your team creation approval workflow.
-
 ## Understanding your options
 
 Team creation approval workflow in nBold could be configured using one of these options:
