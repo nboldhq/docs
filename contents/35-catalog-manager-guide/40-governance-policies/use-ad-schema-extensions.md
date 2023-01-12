@@ -4,19 +4,22 @@ author: Guillaume Meyer
 ---
 # How to use Active Directory Schema Extensions
 
-**ABSTRACT**  
-This article describes how you can leverage the nBold platform to create [naming conventions](/catalog-manager-guide/governance-policies/naming-conventions) and [audience targeting](/catalog-manager-guide/governance-policies/audience-targeting) rules based on user profiles Active Directory schema extensions (aka `extension attributes`).
+  
+You can leverage the nBold platform for creating [naming conventions](/catalog-manager-guide/governance-policies/naming-conventions) and [audience-targeting](/catalog-manager-guide/governance-policies/audience-targeting) rules based on user profiles Active Directory schema extensions (aka `extension attributes`).
 
 :::caution
 This article only applies to `Azure Active Directory Schema Extensions`, that are different from the Microsoft Graph specific `Open extensions` and `Schema extensions`. To learn more about Microsoft Graph extensions, see [Add custom data to resources using extensions](https://docs.microsoft.com/en-us/graph/extensibility-overview).
 :::
 
 ## Understanding Extension Attributes
+
 Azure AD extension attributes may be accessed from two different locations depending on their origin:
+
 1. Synchronized from an on-premises Active Directory. See [On-premises Extension Attributes](#on-premises-extension-attributes).
 2. Managed by an application. See [Application-managed Extension Attributes](#application-managed-extension-attributes).
 
 ## On-premises Extension Attributes
+
 On-premises extension attributes are synchronized with Azure Active Directory from an on-premises Active Directory.
 
 :::tip
@@ -24,6 +27,7 @@ These extension attributes are also known as `Exchange custom attributes 1-15`, 
 :::
 
 On-premises extension attributes may be accessed from the `onPremisesExtensionAttributes` property of the user profile. This property is comprised of fifteen custom extension attribute properties:
+
 ```json
 { 
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#users/$entity",
@@ -58,12 +62,15 @@ For an `onPremisesSyncEnabled` user, the source of authority for this set of pro
 :::
 
 Usage example in naming conventions and audience targeting:
+
 ```js
 user.onPremisesExtensionAttributes.extensionAttribute10
 ```
 
 ## Application-managed Extension Attributes
+
 Application-managed extension attributes may be accessed from the root of the user profile:
+
 ```json
 { 
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#users/$entity",
@@ -76,6 +83,7 @@ Application-managed extension attributes may be accessed from the root of the us
 These attributes are named by using the convention `extension_<extensions-app-id>_attributename`, and note that the `<extensions-app-id>` is specific to each tenant.
 
 Usage example in naming conventions and audience targeting:
+
 ```js
 user.extension_e3049e305790413ca1b11bb53526f057_extensionAttribute10
 ```
