@@ -1,5 +1,6 @@
 ---
 author: Kristina Konstantynova
+
 ---
 # Restrict guest access
 
@@ -23,7 +24,7 @@ Define external sharing and user access settings.
 
 #### 2. Go to Microsoft Teams and log into your **nBold account**.
 
-#### 3. Click on [**Create a Template**](/collaboration-templates/create-a-new-collaboration-template)**.**
+#### 3. Click on Create a Template.
 
 #### 4. Go to the `Compliance` tab and choose the relevant sensitivity label.
 
