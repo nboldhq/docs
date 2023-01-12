@@ -58,32 +58,32 @@ Define the Naming settings with Team name, description, and welcome message defa
 
 ![](/media/naming-convention.png)
 
-[Learn more about Naming Convention](/governance-policies/naming-conventions)
+[Learn more about Naming Convention](/catalog-manager-guide/governance-policies/naming-conventions)
 
-1. [**Approval**](/governance-policies/approval): select who will be the approver of the creation (currently disabled by default)
+1. [**Approval**](/catalog-manager-guide/governance-policies/approval): select who will be the approver of the creation (currently disabled by default)
 
 Define the approval policy with an approver from your organization.
 
 ![](/media/teams-creation-approval-policy.png)
 
-[Learn more about Approval](/governance-policies/approval)
+[Learn more about Approval](/catalog-manager-guide/governance-policies/approval)
 
-1. [**Audience**](/governance-policies/audience-targeting): define who will be able to create a team with this template
+1. [**Audience**](/catalog-manager-guide/governance-policies/audience-targeting): define who will be able to create a team with this template
 
 Define the audience you want to target for this Template.
 
 ![](/media/audience-targeting.png)
 
-[Learn more about Audience Targeting](/governance-policies/audience-targeting)
+[Learn more about Audience Targeting](/catalog-manager-guide/governance-policies/audience-targeting)
 
-1. **Compliance**: define additional [sensitivity labels](/governance-policies/sensitivity-labels) to protect your data.
-2. [**Security policy**](/governance-policies/security-policy): define the enforced privacy policy, membership policy and Permanent owners/members policy
+1. **Compliance**: define additional [sensitivity labels](/catalog-manager-guide/governance-policies/sensitivity-labels) to protect your data.
+2. [**Security policy**](/catalog-manager-guide/governance-policies/security-policy): define the enforced privacy policy, membership policy and Permanent owners/members policy
 
 Define the Security Policy with Teams Privacy, Permanent Owners and Permanent Members
 
 ![](/media/teams-template-security-policy.png)
 
-[Learn more about Security Policy](/governance-policies/security-policy)
+[Learn more about Security Policy](/catalog-manager-guide/governance-policies/security-policy)
 
 1. Click "Save"
 
