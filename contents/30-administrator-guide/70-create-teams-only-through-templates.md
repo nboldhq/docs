@@ -1,9 +1,9 @@
 ---
 
 ---
-# Create Teams only through Microsoft Teams Templates by nBold
+# Disable a regular team creation for end users
 
-After having set up your templates, you may want to make sure that people in your organization are only using Templates you've set up with nBold to create teams.
+Once you have set up your templates, you would want to make sure that the end users are only using Templates you've set up with nBold to create teams.
 
 This is possible! And this document is here to describe what you need to do to enable this.
 
