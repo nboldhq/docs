@@ -1,5 +1,6 @@
 ---
 author: Guillaume Meyer
+
 ---
 # Naming Convention
 
@@ -119,7 +120,7 @@ or
 
 ### Azure AD Schema Extension
 
-To use Azure AD schema extensions in your naming conventions, please refer to [this article](/governance-policies/use-ad-schema-extensions)
+To use Azure AD schema extensions in your naming conventions, please refer to [this article](/catalog-manager-guide/governance-policies/use-ad-schema-extensions)
 
 ## Tips
 

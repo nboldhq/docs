@@ -1,11 +1,12 @@
 ---
 author: Kristina Konstantynova
+
 ---
 # Mandatory Number of Owners and Members at teams Creation
 
 When teams are created, many are created with only 1 owner or maybe with no members. And we all know the problems coming with the situation where the only owner is quitting the company: Orphan Teams!
 
-While you can rely on the [Permanent Owners and Members policy](https://help.salestim.com/en/articles/4149874-permanent-owners-and-members-policy) to address this, there are some use cases where it doesn't make sense to have a permanent owner or member in the team created.
+While you can rely on the [Permanent Owners and Members policy](/catalog-manager-guide/governance-policies/permanent-owners-and-members-policy) to address this, there are some use cases where it doesn't make sense to have a permanent owner or member in the team created.
 
 Especially in a high scale motion, you need to ensure that there are several owners and/or members in a team but you can't assume who that can be.
 
