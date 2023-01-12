@@ -57,10 +57,10 @@ Get an overview of all the Teams you belong to, search for the good one with a s
 
 ## Teams Approval
 
-* [Approval](/governance-policies/approval) Dashboard: see the requests that are Pending, Approved or Rejected
+* [Approval](/catalog-manager-guide/governance-policies/approval) Dashboard: see the requests that are Pending, Approved or Rejected
 * Request Review: update request information, approve or reject requests
 * Notification: email received by the approver to act, link to the teams created
 
 ## Compliance
 
-* Protect your data with the help of [sensitivity labels](/governance-policies/security-policy)
+* Protect your data with the help of [sensitivity labels](/catalog-manager-guide/governance-policies/security-policy)
