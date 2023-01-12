@@ -1,5 +1,6 @@
 ---
 author: Guillaume Meyer
+
 ---
 # Audience Targeting
 
@@ -128,7 +129,7 @@ user.groups.direct.some(group => group.id === ('a937979b-5dbb-4f54-a405-93604624
 ```
 
 ### Azure AD Schema Extension
-To use Azure AD schema extensions in your audience targeting rules, please refer to [this article](/governance-policies/use-ad-schema-extensions)
+To use Azure AD schema extensions in your audience targeting rules, please refer to [this article](/catalog-manager-guide/governance-policies/use-ad-schema-extensions)
 
 ## Validate and test your audience targeting rule
 
