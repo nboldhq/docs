@@ -1,7 +1,8 @@
 ---
 author: Kristina Konstantnyova
 tags:
-  - introduction
+- introduction
+
 ---
 # nBold at a Glance
 nBold helps every organization to improve their Collaborative Processes in making it easy to build Collaboration Templates and automate it. You can build a template for any Collaborative purpose:
@@ -24,10 +25,10 @@ Today's Templates created by nBold support:
 
 ## Governance Rules for Teams in Microsoft Teams
 Improving collaboration at scale with Microsoft Teams, can't be done without strong governance. nBold empowers end-users with self-service Teams provisioning and management that suits IT needs. With each Collaboration Template built with nBold you can apply governance rules such as:
-* [Naming Convention](/governance-policies/naming-conventions)
-* [Teams Creation Approval](/governance-policies/approval)
-* [Template Audience Targeting](/governance-policies/audience-targeting)
-* Compliance with [Sensitivity Labels](/governance-policies/sensitivity-labels)
-* Teams [Enforced Privacy Policy](/governance-policies/security-policy)
+* [Naming Convention](/catalog-manager-guide/governance-policies/naming-conventions)
+* [Teams Creation Approval](/catalog-manager-guide/governance-policies/approval)
+* [Template Audience Targeting](/catalog-manager-guide/governance-policies/audience-targeting)
+* Compliance with [Sensitivity Labels](/catalog-manager-guide/governance-policies/sensitivity-labels)
+* Teams [Enforced Privacy Policy](/catalog-manager-guide/governance-policies/security-policy)
 * Teams Creation Requester as non-Owner
-* [Permanent Owners and Permanent Members](/governance-policies/permanent-owners-and-members-policy)
+* [Permanent Owners and Permanent Members](/catalog-manager-guide/governance-policies/permanent-owners-and-members-policy)
