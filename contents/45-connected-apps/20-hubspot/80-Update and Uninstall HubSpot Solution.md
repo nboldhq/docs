@@ -3,7 +3,7 @@
 ---
 # Update & Uninstall Solutions: HubSpot
 
-Update the solution if you see an update available. This means our team made some improvements for you!
+When you see an Update under your installed solution, it means our team has made some improvements for you.
 
 You can follow the below steps to update the solution:
 

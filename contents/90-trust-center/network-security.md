@@ -7,8 +7,8 @@ author: Guillaume Meyer
 ---
 # Network Security
 
-We understand how important the concept of compliance and security is and   
-we also understand that our customers need to be confident that they are communicating with nBold in a secure environment. This document outlines the key aspects of our network security.
+  
+We that our customers need to be confident that they are communicating with nBold in a secure environment. This document outlines the key aspects of our network security.
 
 ## Communication security
 

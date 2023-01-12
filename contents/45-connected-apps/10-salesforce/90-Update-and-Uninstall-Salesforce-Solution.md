@@ -3,14 +3,11 @@
 ---
 # Update & Uninstall Solutions: Salesforce
 
-Update the solution if you see an update available. This means our team made some improvements for you!
-
 You can follow the below steps to update the solution:
 
 * Connect and go to the nBold application in Microsoft Teams.
 * Go to the Catalog tab and click on the Collaboration Processes tab on your right.
 
-    
   ![](/media/screenshot-2022-11-07-at-15-52-01.png)
 * From the menu on the left pane, select the option "Installed"
 * You will land on this screen:
