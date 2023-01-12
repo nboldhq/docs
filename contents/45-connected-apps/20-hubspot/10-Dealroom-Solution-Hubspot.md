@@ -75,7 +75,7 @@ First, you will need to choose a template from which you wish to create a team. 
 
 > **Note**: We highly recommend building a separate template for Deal Room with HubSpot to avoid any confusion within your governance policies in future.
 
-Read more about Collaboration Template [here](https://docs.nbold.co/collaboration-templates/create-a-new-collaboration-template.html#_1-create-a-team-that-will-be-the-original-team-for-the-template)
+Read more about Collaboration Template [here](/catalog-manager-guide/collaboration-templates/create-a-new-collaboration-template.html#_1-create-a-team-that-will-be-the-original-team-for-the-template)
 
 ### 2. **Team Creation**
 
