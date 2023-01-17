@@ -1,5 +1,6 @@
 ---
 author: Kristina Konstantnyova
+
 ---
 # Update App Packages
 
@@ -34,7 +35,7 @@ Download these packages locally and do not unzip them:
 
 Go to [Team Admin Center in the "manage apps" section](https://admin.teams.microsoft.com/policies/manage-apps).
 
-![](/media/image.png)
+![Manage apps from the Teams Admin Center](/media/image.png "Teams Admin Center")
 
 Search for "home" in a search bar and click on it.
 
