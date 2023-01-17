@@ -39,6 +39,8 @@ sections:
   label: Trust Center
   create: all
   match: "**/*"
+  templates:
+  - article
 upload_dir: static/media
 public_path: "/media"
 front_matter_path: ''
