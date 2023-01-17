@@ -1,4 +1,7 @@
 ---
+title: Restrict users from creating teams in a regular way
+description: This page describes how can the users be restricted from creating teams
+  in a regular way
 
 ---
 # Disable a regular team creation for end users
