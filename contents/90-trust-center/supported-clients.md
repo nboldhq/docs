@@ -1,9 +1,15 @@
 ---
+position: ''
+author: Guillaume Meyer
+tags:
+- microsoftteams
+- microsoft
+status: ''
 title: Supported Clients
 description: The list of clients supported by nBold
 keywords:
 - supported
-- " clients"
+- clients
 
 ---
 # Supported Clients
