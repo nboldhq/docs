@@ -1,5 +1,5 @@
 # Environment Variables
-📆 *Generated: Mon, 28 Nov 2022 16:48:46 GMT*
+📆 *Generated: Thu, 12 Jan 2023 09:18:55 GMT*
 
 Here is a formal `.env` file, referencing all the available options, configured with default values, that you can use with any infrastructure-as-code solution.
 For more details about these environment variables, please refer to our [configuration reference](./configuration_reference).
@@ -28,7 +28,7 @@ WEB_PUBLICURL=http://localhost
 # (string) Public URL of the CDN used by the web service to serve static assets. Defaults to `""` (means that the web server is serving the static assets itself).
 WEB_CDN_PUBLICURL=
 # (string) Secret string used to encrypt session data. Defaults to an UUID v4 string generated at runtime.
-WEB_SESSION_SECRET=64a23482-a63c-4607-9ca6-66ff9fc7abb7
+WEB_SESSION_SECRET=1d7b226a-3b16-4174-8cd9-506292be4cf6
 # (string) Web server requests timeout. Can be a string accepted by the ms (https://www.npmjs.com/package/ms) module. Defaults to `5s`.
 WEB_TIMEOUT=5s
 
@@ -43,6 +43,8 @@ API_TIMEOUT=5s
 # Scheduler Service
 # Scheduler service (Manages execution plans for scheduled jobs)
 
+# (string) Timezone used for scheduling. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for valid values. Defaults to `CET`
+SCHEDULER_TIMEZONE=CET
 # (boolean) Enable the `RENEW_SERVICE_ACCOUNT_TOKENS` scheduled job. Defaults to `true`
 SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_ENABLED=true
 # (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to `0 6 * * 0` (At 06:00 on every Sunday).
@@ -63,16 +65,8 @@ SCHEDULER_MICROSOFT_GRAPH_SUBSCRIPTIONS_MANAGER_SCHEDULE=0 2 * * *
 # Jobs Service
 # Jobs service (Scheduled and on-demand background tasks)
 
-# (boolean / number) If true, removes the job when it successfully completes. A number specified the amount of jobs to keep. Defaults to "false".
-JOBS_POLICY_REMOVE_ON_COMPLETE=false
-# (boolean / number) If true, removes the job when it fails after all attempts. A number specified the amount of jobs to keep. Defaults to "false".
-JOBS_POLICY_REMOVE_ON_FAIL=false
 # (number) Grace retention period for all jobs, defined in ms. Default to "2419200000" (28 days).
 JOBS_POLICY_RETENTION_GRACE_PERIOD=2419200000
-# (string) Status of the jobs to delete after the grace period. Accepts "null" / "completed" / "failed". Defaults to "null"
-JOBS_POLICY_RETENTION_STATUS=null
-# (number) Maximum amount of jobs to clean per call to the jobs retention process. If not provided will clean all matching jobs. Defaults to "null"
-JOBS_POLICY_RETENTION_LIMIT=null
 
 ---
 # Required Backing Services
@@ -156,6 +150,10 @@ MICROSOFT_IDENTITY_PLATFORM_URL=https://login.microsoftonline.com
 MICROSOFT_AZURE_AD_APP_CLIENT_ID={PLACEHOLDER}
 # (string) Microsoft Azure AD app registration client secret. No defaults.
 MICROSOFT_AZURE_AD_APP_CLIENT_SECRET={PLACEHOLDER}
+# (string) Legacy Microsoft Azure AD app registration client ID. No defaults.
+MICROSOFT_AZURE_AD_APP_LEGACY_CLIENT_ID={PLACEHOLDER}
+# (string) Legact Microsoft Azure AD app registration client secret. No defaults.
+MICROSOFT_AZURE_AD_APP_LEGACY_CLIENT_SECRET={PLACEHOLDER}
 
 # Microsoft Graph
 # Microsoft Graph
@@ -171,7 +169,7 @@ MICROSOFT_GRAPH_DEFAULT_SCOPE=https://graph.microsoft.com/.default
 ---
 
 # Mail
-# When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization
+# When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service.
 
 # (boolean) Enable integration with an email service for notifications. Defaults to "false".
 MAIL_INTEGRATION_ENABLED=false
@@ -181,7 +179,7 @@ MAIL_PROVIDER=sendgrid
 MAIL_SECRET=
 # (string) Default email sender (FROM:). Defaults to "notifications@salestim.io".
 MAIL_SENDER=notifications@salestim.io
-# (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "".
+# (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). Defaults to "".
 MAIL_ACTION_MSG_ORIGINATOR=
 
 # Connected Apps Service
@@ -242,6 +240,16 @@ REPORTING_SERVICE_URL=http://localhost:5001
 # (string) Token used secure access to embedded reports. Defaults to `""`.
 REPORTING_SERVICE_SERVER_SECRET=
 
+# Search service
+# Search service
+
+# (boolean) Enable integration with the search service. Defaults to `false`.
+SEARCH_SERVICE_INTEGRATION_ENABLED=false
+# (string) Search service URL. Defaults to `http://localhost:20001`.
+SEARCH_SERVICE_URL=http://localhost:20001
+# (string) Master key used to perform admin operations on the search service. Defaults to `""`.
+SEARCH_SERVICE_MASTER_KEY=
+
 # Intercom Service
 # Intercom service
 
@@ -289,7 +297,7 @@ BR_MICROSOFT_TEAMS_TEAM_TEMPLATES_PERMANENTOWNERS_MAX=20
 # (number) Maximum number of users that could be defined as permanent members in a template. Defaults to `20`.
 BR_MICROSOFT_TEAMS_TEAM_TEMPLATES_PERMANENTMEMBERS_MAX=20
 
-# Mirosoft Teams Team Creation Requests Business Rules
+# Microsoft Teams Team Creation Requests Business Rules
 # Business rules for Microsoft Teams team creation requests
 
 # (number) Maximum number of users that could be invited as owners as part of a new team creation request. Defaults to `20`.
@@ -344,8 +352,8 @@ MICROSOFT_APPINSIGHTS_CONNECTION_STRING=
 # Webhooks
 # Webhooks configuration
 
-# (string) HTTP user agent passed as a header with each request. Defaults to `nBold-Webhook/v5.1.1`.
-WEBHOOKS_USER_AGENT=nBold-Webhook/v5.1.1
+# (string) HTTP user agent passed as a header with each request. Defaults to `nBold-Webhook/v5.1.2`.
+WEBHOOKS_USER_AGENT=nBold-Webhook/v5.1.2
 # (number) Interval in `ms` between two attempts. Defaults to `10000`.
 WEBHOOKS_RETRY_INTERVAL=10000
 # (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times before failing. Defaults to `2`.
@@ -430,4 +438,17 @@ MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEINTERVAL=null
 MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEAMOUNT=null
 # (number) The maximum value that `reservoir` can reach when `reservoirIncreaseInterval` is in use. Defaults to `null` (disabled).
 MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEMAXIMUM=null
+
+---
+# Tests
+# Unit and integration tests configuration
+---
+
+# Integration tests
+# Integration tests configuration
+
+# (boolean) Enable the `integration_tests_triggered` scheduled job. Defaults to `false`
+SCHEDULER_INTEGRATION_TESTS_ENABLED=false
+# (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to `0 6 * * 0` (At 06:00 on every Sunday).
+SCHEDULER_INTEGRATION_TESTS_SCHEDULE=0 6 * * 0
 ```sh

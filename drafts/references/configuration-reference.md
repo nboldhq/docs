@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Mon, 28 Nov 2022 16:48:46 GMT*
+📆 *Generated: Thu, 12 Jan 2023 09:18:55 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -55,6 +55,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
+| `SCHEDULER_TIMEZONE` | Optional ☑️ | (string) Timezone used for scheduling. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for valid values. Defaults to `CET` |
 | `SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_ENABLED` | Optional ☑️ | (boolean) Enable the `RENEW_SERVICE_ACCOUNT_TOKENS` scheduled job. Defaults to `true` |
 | `SCHEDULER_SERVICE_ACCOUNTS_TOKENS_RENEWAL_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to `0 6 * * 0` (At 06:00 on every Sunday). |
 | `SCHEDULER_MICROSOFT_TEAMS_PERMANENT_MEMBERSHIP_POLICY_ENABLED` | Optional ☑️ | (boolean) Enable the `PERMANENT_MEMBERSHIP_POLICY` scheduled job. Defaults to `true` |
@@ -72,11 +73,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
-| `JOBS_POLICY_REMOVE_ON_COMPLETE` | Optional ☑️ | (boolean / number) If true, removes the job when it successfully completes. A number specified the amount of jobs to keep. Defaults to "false". |
-| `JOBS_POLICY_REMOVE_ON_FAIL` | Optional ☑️ | (boolean / number) If true, removes the job when it fails after all attempts. A number specified the amount of jobs to keep. Defaults to "false". |
 | `JOBS_POLICY_RETENTION_GRACE_PERIOD` | Optional ☑️ | (number) Grace retention period for all jobs, defined in ms. Default to "2419200000" (28 days). |
-| `JOBS_POLICY_RETENTION_STATUS` | Optional ☑️ | (string) Status of the jobs to delete after the grace period. Accepts "null" / "completed" / "failed". Defaults to "null" |
-| `JOBS_POLICY_RETENTION_LIMIT` | Optional ☑️ | (number) Maximum amount of jobs to clean per call to the jobs retention process. If not provided will clean all matching jobs. Defaults to "null" |
 
 
 
@@ -161,6 +158,8 @@ Options are grouped by category, then by domain, and each option is specified wi
 |:---------------------|:-------|:------------|
 | `MICROSOFT_AZURE_AD_APP_CLIENT_ID` | Required ✅ | (string) Microsoft Azure AD app registration client ID. No defaults. |
 | `MICROSOFT_AZURE_AD_APP_CLIENT_SECRET` | Required ✅ | (string) Microsoft Azure AD app registration client secret. No defaults. |
+| `MICROSOFT_AZURE_AD_APP_LEGACY_CLIENT_ID` | Required ✅ | (string) Legacy Microsoft Azure AD app registration client ID. No defaults. |
+| `MICROSOFT_AZURE_AD_APP_LEGACY_CLIENT_SECRET` | Required ✅ | (string) Legact Microsoft Azure AD app registration client secret. No defaults. |
 
 
 
@@ -179,7 +178,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 *Optional backend infrastructure*
 
 ### Mail
-*When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service: https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization*
+*When you want to send approval and other notifications emails from your own tenant using the Microsoft Graph instead of our own mailing service.*
 
 ---
 | Environment Variable | Status | Description |
@@ -188,7 +187,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 | `MAIL_PROVIDER` | Optional ☑️ | (string) Mailer service (As of today, only "sendgrid" is supported). Defaults to "sendgrid". |
 | `MAIL_SECRET` | Optional ☑️ | (string) Secret key used to authenticate against the mailer service. Defaults to "". |
 | `MAIL_SENDER` | Optional ☑️ | (string) Default email sender (FROM:). Defaults to "notifications@salestim.io". |
-| `MAIL_ACTION_MSG_ORIGINATOR` | Optional ☑️ | (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). See https://docs.nbold.co/nocode/approval.html#approval-email-sent-by-your-organization. Defaults to "". |
+| `MAIL_ACTION_MSG_ORIGINATOR` | Optional ☑️ | (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). Defaults to "". |
 
 
 
@@ -242,6 +241,18 @@ Options are grouped by category, then by domain, and each option is specified wi
 
 
 
+### Search service
+*Search service*
+
+---
+| Environment Variable | Status | Description |
+|:---------------------|:-------|:------------|
+| `SEARCH_SERVICE_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable integration with the search service. Defaults to `false`. |
+| `SEARCH_SERVICE_URL` | Optional ☑️ | (string) Search service URL. Defaults to `http://localhost:20001`. |
+| `SEARCH_SERVICE_MASTER_KEY` | Optional ☑️ | (string) Master key used to perform admin operations on the search service. Defaults to `""`. |
+
+
+
 ### Intercom Service
 *Intercom service*
 
@@ -287,7 +298,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 
 
 
-### Mirosoft Teams Team Creation Requests Business Rules
+### Microsoft Teams Team Creation Requests Business Rules
 *Business rules for Microsoft Teams team creation requests*
 
 ---
@@ -348,7 +359,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
-| `WEBHOOKS_USER_AGENT` | Optional ☑️ | (string) HTTP user agent passed as a header with each request. Defaults to `nBold-Webhook/v5.1.1`. |
+| `WEBHOOKS_USER_AGENT` | Optional ☑️ | (string) HTTP user agent passed as a header with each request. Defaults to `nBold-Webhook/v5.1.2`. |
 | `WEBHOOKS_RETRY_INTERVAL` | Optional ☑️ | (number) Interval in `ms` between two attempts. Defaults to `10000`. |
 | `WEBHOOKS_MAX_RETRY` | Optional ☑️ | (number) Maximum number of retry before failing. Namely if it is set to 2, the module will try 3 times before failing. Defaults to `2`. |
 | `WEBHOOKS_TIMEOUT` | Optional ☑️ | (number) Timeout in `ms` before aborting the request if the server is unresponsive. Defaults to `5000`. |
@@ -412,5 +423,19 @@ Options are grouped by category, then by domain, and each option is specified wi
 | `MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEINTERVAL` | Optional ☑️ | (number) Every `reservoirIncreaseInterval` milliseconds, the `reservoir` value will be automatically incremented by `reservoirIncreaseAmount`. The `reservoirIncreaseInterval` value should be a multiple of 250. Defaults to `null` (disabled) |
 | `MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEAMOUNT` | Optional ☑️ | (number) The increment applied to `reservoir` when `reservoirIncreaseInterval` is in use. Defaults to `null` (disabled). |
 | `MICROSOFT_COSMOSDB_LIMITER_RESERVOIRINCREASEMAXIMUM` | Optional ☑️ | (number) The maximum value that `reservoir` can reach when `reservoirIncreaseInterval` is in use. Defaults to `null` (disabled). |
+
+
+
+## Tests
+*Unit and integration tests configuration*
+
+### Integration tests
+*Integration tests configuration*
+
+---
+| Environment Variable | Status | Description |
+|:---------------------|:-------|:------------|
+| `SCHEDULER_INTEGRATION_TESTS_ENABLED` | Optional ☑️ | (boolean) Enable the `integration_tests_triggered` scheduled job. Defaults to `false` |
+| `SCHEDULER_INTEGRATION_TESTS_SCHEDULE` | Optional ☑️ | (string) Job schedule using the CRON syntax (See https://en.wikipedia.org/wiki/Cron). Defaults to `0 6 * * 0` (At 06:00 on every Sunday). |
 
 

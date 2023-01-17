@@ -1,6 +1,3 @@
----
-
----
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
@@ -1308,7 +1305,7 @@ All notable changes to this project will be documented in this file. See [standa
 - added: The OpenAPI definition of the `/hooks` operation now describes the events and body schema of all the possible callbacks from all the supported webhooks.
   - It follows the [OpenAPI 3 Specification](https://swagger.io/docs/specification/about/) for [Callbacks](https://swagger.io/docs/specification/callbacks/)
   - See it live in [API Explorer](https://developers.salestim.com/api/explorer.html#/hooks/CreateHook).
-- changed: The `TeamProvisioningCompletedNotificationPayload` object (payload of the `team_provisioning_completed`), now has an additional `metadata` property holding the metadata passed to the `createTeamProvisioningJob` [operation](https://developers.salestim.com/api/reference/Apis/TeamsApi.html#createteamprovisioningjob)
+- changed: The `TeamProvisioningCompletedNotificationPayload` object (payload of the `team_provisioning_completed` [webhook](https://developers.salestim.com/api/webhooks.html#team-provisioning-completed)), now has an additional `metadata` property holding the metadata passed to the `createTeamProvisioningJob` [operation](https://developers.salestim.com/api/reference/Apis/TeamsApi.html#createteamprovisioningjob)
 - changed: Metadata
   - Metadata passed through the `createTeamProvisioningJob` operation
     - The `createTeamProvisioningJob` operation accepts an arbitrary json object that could be used as a naming convention tag, or for further reference from the API
@@ -1402,13 +1399,13 @@ All notable changes to this project will be documented in this file. See [standa
   - Triggers:
     - When a team creation approval is requested:
       - Trigger: https://developers.salestim.com/connectors/connectors-actions.html#when-a-team-creation-approval-is-requested
-      - Webhook: https://docs.nbold.co/api
+      - Webhook: https://developers.salestim.com/api/webhooks.html#supported-events
     - When a team creation is approved:
       - Trigger: https://developers.salestim.com/connectors/connectors-actions.html#when-a-team-creation-is-approved
-      - Webhook: https://docs.nbold.co/api
+      - Webhook: https://developers.salestim.com/api/webhooks.html#team-creation-approved
     - When a team creation is rejected:
       - Trigger: https://developers.salestim.com/connectors/connectors-actions.html#when-a-team-creation-is-rejected
-      - Webhook: https://docs.nbold.co/api
+      - Webhook: https://developers.salestim.com/api/webhooks.html#team-creation-rejected
   - Actions:
     - Approve team creation: https://developers.salestim.com/api/reference/Apis/ApprovalsApi.html#approveteamcreation
     - Reject team creation: https://developers.salestim.com/api/reference/Apis/ApprovalsApi.html#rejectteamcreation
@@ -1465,11 +1462,11 @@ All notable changes to this project will be documented in this file. See [standa
   - GetTeamChannelTabs
   - CreateTeamChannelTab
 - added: New Power Platform action "GenerateHookSignature" #powerplatform
-  - Purpose: bring Power Platform the capability to verify the signature generated from a [webhook secret](https://docs.nbold.co/api).
+  - Purpose: bring Power Platform the capability to verify the signature generated from a [webhook secret](https://developers.salestim.com/api/webhooks.html#anatomy-of-a-webhook).
   - Testing procedure:
     - Create a new "Automated cloud flow" and skip the assistant
     - Add a "When a HTTP request is received" trigger
-      - Paste a payload schema from: https://docs.nbold.co/api
+      - Paste a payload schema from: https://developers.salestim.com/api/webhooks.html#supported-events
     - Add a "Compose" action and name it "Get Webhook Signature Header"
       - Retreive the "X-nBold-Signature" header using this formula `triggerOutputs()['headers']['X-nBold-Signature']`
     - Add a "Compose" action and name it "Get Webhook Payload"
@@ -1480,7 +1477,7 @@ All notable changes to this project will be documented in this file. See [standa
     - You can then compare the signature retreived from the "Get Webhook Signature Header" action with the signature calculated from the nBold "GenerateHookSignature" action. If they match, it means that the request was effectively coming from nBold.
 - added: Webhooks payloads examples and schema #api
   - The documentation now includes payload examples for the following events `team_created` and `team_provisioning_completed`.
-  - See: https://docs.nbold.co/api
+  - See: https://developers.salestim.com/api/webhooks.html#supported-events
 - fixed: API explorer errors #api
   - The API openapi definition is up to date
   - Login / Logout works from the [API Explorer](https://developers.salestim.com/api/explorer)
@@ -1753,8 +1750,7 @@ All notable changes to this project will be documented in this file. See [standa
   - Audience targeting: Included docs and example for the `user.groups.direct` tag
   - Updated RBAC docs to include our new roles, catalog managers and integration managers
 - changed: TechHub now uses Algolia for its full-text search engine.
-- changed: nBold Connector for Power Platform
-- documentation
+- changed: nBold Connector for Power Platform documentation
   - Updated the "Abstract" section
   - Added an introductory message describing the purpose of each step
   - Added a few minor additional steps
@@ -1796,7 +1792,7 @@ All notable changes to this project will be documented in this file. See [standa
   ```
 - added: Webhooks
   - Webhooks enable organizations to trigger automated operations outside of the nBold platform, such as in a custom application, or in an automation tool such as Power Automate or Zapier.
-  - See the online doc: https://docs.nbold.co/api
+  - See the online doc: https://developers.salestim.com/api/webhooks
 - Power Platform Connector v1 [#534](https://github.com/nboldhq/app-platform/issues/534)
   - Available actions:
     - GetMyCatalogTemplates: Returns a collection of catalog templates, filtered by the audience targeting rules for the connected user
@@ -2552,16 +2548,15 @@ Avoid planner throttling
   - Now updated versions of the resource files are automatically downloaded during build (taking the latest release)
   - Public URL: https://i18n.salestim.io
   - Governed by:
-    - [nBold Security Policy](https://docs.nbold.co/trust-center/security-policy)
-    - [nBold Open Source Code of Conduct](https://docs.nbold.co/open-source/code-of-conduct)
+    - nBold Security Policy
+    - nBold Open Source Code of Conduct
+  - Usage instructions are detailed in the [README file](https://github.com/nboldhq/internationalization/blob/master/README.md)
 - added: nBold API Explorer
   - Similar to the Microsoft Graph Explorer
   - Currently exposes the /store endpoints
   - Public URL: https://developers.salestim.com/api/explorer
   - Deeplinks to specific operations are supported, for example [getStoreCategories](https://developers.salestim.com/api/explorer.html#/store/getStoreCategories)
 - added: nBold Open Source Code of conduct
-  - Repo: [code-of-conduct](https://github.com/nboldhq/code-of-conduct)
-  - Public URL: https://docs.nbold.co/open-source/code-of-conduct/
   - A new distribution list is available to receive requests at [codeofconduct@salestim.com](mailto:codeofconduct@salestim.com)
 - fixed: Logs files naming convention
   - The switch to a fully global architecture generated conflicts in github

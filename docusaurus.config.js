@@ -56,6 +56,13 @@ const config = {
           trackingID: 'UA-5688830-15',
           anonymizeIP: true,
         },
+        // See: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-sitemap#filename
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        }
       }),
     ],
     [
