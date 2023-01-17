@@ -4,6 +4,8 @@ slug: "/"
 author: Kristina Konstantnyova
 tags:
 - introduction
+title: what is nBold
+description: This article gives you a brief description of what is nBold
 
 ---
 # Welcome to nBold

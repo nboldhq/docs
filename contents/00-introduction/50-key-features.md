@@ -2,6 +2,8 @@
 author: Kristina Konstantnyova
 tags:
 - introduction
+title: Features of nBold
+description: This page describes the key features of nBold
 
 ---
 # Key Features
