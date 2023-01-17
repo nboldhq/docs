@@ -3,8 +3,14 @@ position: 4
 status: published
 tags: []
 author: Guillaume Meyer
----
+title: Security Policy
+description: nBold security policy
+keywords:
+- security
+- policy
+- vulnerabilities
 
+---
 # Security policy
 
 ## How we handle security vulnerabilities
