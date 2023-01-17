@@ -6,14 +6,14 @@ fields:
 - name: title
   type: text
   config:
-    required: false
+    required: true
   label: Title
   description: Title for search engines; can be different from the actual heading
 - name: description
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: false
     schema:
       format: markdown
@@ -24,12 +24,13 @@ fields:
   config:
     required: false
   label: Image
-  description: a thumbnail image to be shown in social media cards
+  description: A thumbnail image to be shown in social media cards
 - name: keywords
   type: tag_list
   default: []
   label: Keywords
-  description: a list of comma-separated keywords
+  description: A list of comma-separated keywords. These keywords are used for SEO
+    only and are not visible.
 - name: tags
   type: tag_list
   default: []
