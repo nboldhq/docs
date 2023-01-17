@@ -9,31 +9,43 @@ sections:
   label: Introduction
   create: all
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: contents/30-administrator-guide
   label: 'Administrator Guide '
   create: all
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: contents/35-catalog-manager-guide
   label: Catalog Manager Guide
   create: all
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: contents/45-connected-apps
   label: Connected apps
   create: all
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: contents/70-integrate-with-nbold
   label: Integrate with nBold
   create: all
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: contents/80-open-source
   label: Open-source
   create: all
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: contents/90-trust-center
   label: Trust Center
