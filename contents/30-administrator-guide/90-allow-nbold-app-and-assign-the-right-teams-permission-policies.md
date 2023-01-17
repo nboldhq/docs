@@ -1,5 +1,9 @@
 ---
 author: Kristina Konstantnyova
+title: Permissions for nBold App
+description: This article describes how to grant permissions for nBold and the Home
+  app
+
 ---
 # Allow nBold App and assign the right Teams Permission Policies
 

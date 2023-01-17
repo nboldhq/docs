@@ -1,5 +1,7 @@
 ---
 author: Kristina Konstantnyova
+title: How to Update App Packages
+description: This page describes how to update app packages when required
 
 ---
 # Update App Packages
