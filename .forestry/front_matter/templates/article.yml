@@ -30,3 +30,9 @@ fields:
   default: []
   label: Keywords
   description: a list of comma-separated keywords
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: Tags used for navigation, to link articles together. If defined, these
+    tags are visible at the bottom of the page.
