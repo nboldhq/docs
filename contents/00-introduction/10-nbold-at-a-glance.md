@@ -2,6 +2,9 @@
 author: Kristina Konstantnyova
 tags:
 - introduction
+title: What is nbold
+description: This page briefly describes what is nbold and how can you achieve collaboration
+  at scale.
 
 ---
 # nBold at a Glance
