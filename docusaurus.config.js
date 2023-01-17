@@ -126,6 +126,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'picto.png',
       // algolia: {
       //   appId: 'YOUR_APP_ID',
       //   apiKey: 'YOUR_SEARCH_API_KEY',
@@ -137,6 +138,11 @@ const config = {
         logo: {
           alt: 'nBold logo',
           src: 'logo.png',
+          srcDark: 'logo_dark.png',
+          width: 115,
+          height: 32,
+          href: '/',
+          target: '_self'
         },
         items: [
           {
@@ -151,12 +157,6 @@ const config = {
             position: 'left',
             label: 'Catalog Manager Guide',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'integrate/integrate',
-          //   position: 'left',
-          //   label: 'Integrate with nBold',
-          // },
           {
             // type: 'doc',
             href: '/api',
@@ -173,6 +173,14 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'nBold logo',
+          src: 'logo.png',
+          width: 115,
+          height: 32,
+          href: 'https://nbold.co',
+          target: '_blank'
+        },
         links: [
           {
             title: 'Table of contents',
