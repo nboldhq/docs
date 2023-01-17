@@ -28,4 +28,4 @@ fields:
   type: tag_list
   default: []
   label: Keywords
-  description: keywords
+  description: a list of comma-separated keywords
