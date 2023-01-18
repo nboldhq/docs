@@ -11,3 +11,5 @@ The nBold API provides a unified programmability model that you can use to manag
   - Create a custom approval process for your teams provisioning requests
   - Apply automaticaly governance policies across all your teams
   - Integrate a custom in-house and LoB apps with Microsoft Teams
+
+To see all the available operations, see the [API reference](/api)

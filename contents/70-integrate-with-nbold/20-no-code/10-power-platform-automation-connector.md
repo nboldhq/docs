@@ -18,7 +18,7 @@ The nBold connector for Power Automate gives you no-code access to all the power
 **Abstract**  
 This article explains how to register the nBold Connector as a custom connector for Microsoft [Power Platform](https://powerplatform.microsoft.com).
 
-:::tip ⏱ Expected Duration
+:::tip Expected Duration
 Creating the custom connector only requires a few operations that are described hereafter as a detailed step-by-step procedure. Assuming you have all the required access and permissions to execute it properly, it should take **_less than 10 minutes_**.
 :::
 
@@ -234,7 +234,7 @@ https://assets.nbold.io/api/nbold-powerplatform-openapi-latest.json
 
 Now that you've created the nBold connector, you can use it from [Power Apps](https://powerapps.com), [Power Automate](https://flow.microsoft.com), and [Power BI](https://powerbi.microsoft.com). See the available [Triggers and Actions](/automation/automation-connectors-actions) for reference.
 
-:::tip 💡 To Go Further
+:::tip To Go Further
 Here are a few interesting articles that may give you some guidelines and new ideas on how to use the nBold Connector:
 
 * [Top 5 Power Automate Flow Examples for Microsoft Teams - nBold](https://nbold.co/top-5-power-automate-flow-examples-for-microsoft-teams/)

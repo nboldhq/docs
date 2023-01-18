@@ -110,7 +110,38 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        // fromExtensions: ['html', 'htm'], // /myPage.html -> /myPage
+        // toExtensions: ['exe', 'zip'], // /myAsset -> /myAsset.zip (if latter exists)
+        redirects: [
+          // /docs/oldDoc -> /docs/newDoc
+          // {
+          //   to: '/api',
+          //   from: '/explorer2',
+          // },
+          // // Redirect from multiple old paths to the new path
+          // {
+          //   to: '/docs/newDoc2',
+          //   from: ['/docs/oldDocFrom2019', '/docs/legacyDocFrom2016'],
+          // },
+        ],
+        // createRedirects (existingPath) {
+        //   if (existingPath.includes('/community')) {
+        //     // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
+        //     return [
+        //       existingPath.replace('/community', '/docs/team'),
+        //       existingPath.replace('/community', '/docs/support'),
+        //     ];
+        //   }
+        //   return undefined; // Return a falsy value: no redirect created
+        // },
+      },
+    ],
+  ],
 
   scripts: [
     {
@@ -146,26 +177,35 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'administrator-guide/administrator-guide',
+            // type: 'doc',
+            href: '/administrator-guide',
             position: 'left',
             label: 'Administrator Guide',
           },
           {
-            type: 'doc',
-            docId: 'catalog-manager-guide/catalog-manager-guide',
+            // type: 'doc',
+            href: '/catalog-manager-guide',
             position: 'left',
             label: 'Catalog Manager Guide',
           },
           {
-            // type: 'doc',
             href: '/api',
             position: 'left',
             label: 'API Reference',
           },
+          // {
+          //   href: '/integrate-with-nbold/api',
+          //   position: 'left',
+          //   label: 'API',
+          // },
           {
-            type: 'doc',
-            docId: 'trust-center/trust-center',
+            href: '/integrate-with-nbold/no-code',
+            position: 'left',
+            label: 'No-Code',
+          },
+          {
+            // type: 'doc',
+            href: '/trust-center',
             position: 'right',
             label: '🛡️ Trust center',
           }
@@ -200,6 +240,14 @@ const config = {
               {
                 href: '/api',
                 label: 'API Reference',
+              },
+              // {
+              //   href: '/integrate-with-nbold/api',
+              //   label: 'API',
+              // },
+              {
+                href: '/integrate-with-nbold/no-code',
+                label: 'No-Code',
               },
               {
                 href: '/trust-center',
@@ -243,7 +291,7 @@ const config = {
       },
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       }
     }),
