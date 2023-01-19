@@ -1,3 +1,14 @@
+---
+title: API versions
+keywords:
+- api
+- versions
+- beta
+tags:
+- api
+description: Available versions supported by the nBold API
+
+---
 # Versions
 The nBold API currently supports two versions: `v1.0` and `beta`.
 
