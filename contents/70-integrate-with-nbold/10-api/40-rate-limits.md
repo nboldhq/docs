@@ -9,9 +9,10 @@ Rate limits are defined as "tiers" applied on a "per user (or app) per tenant" b
 
 | Tier | Code | Limit | Window |
 |------|------|-------|--------|
-| Tier 1 | `tier1` | 6 | 1 minute |
-| Tier 2 | `tier2` |  20 | 1 minute |
-| Tier 3 | `tier3` |  60 | 1 minute |
+| Tier 1 | `tier-1` | 6 | 1 minute |
+| Tier 2 | `tier-2` |  20 | 1 minute |
+| Tier 3 | `tier-3` |  60 | 1 minute |
+| Fair Use | `fair-use` | 600 | 1 minute |
 
 Each operation in this documentation specifies its rate limits as a tier through the `x-nbold-rate-limit` extension.
 
@@ -59,14 +60,14 @@ When you implement error handling, use the HTTP error code 429 to detect throttl
 💡 Note:
 If no `Retry-After` header is provided by the response, we recommend implementing an exponential backoff retry policy.
 
-In addition to the `Retry-After` header, nBold API includes `X-RateLimit-Limit` and `X-RateLimit-Remaining` infos in body of the  throttled response:
+In addition to the `Retry-After` header, nBold API includes `X-RateLimit-Limit` and `X-RateLimit-Remaining` infos in the body of the throttled response:
 ```yaml
 {
   message: 'Too many requests, please try again later...',
   rateLimitExceeded: {
-    tier: 'Tier 1',              # Could be 'Tier 1', 'Tier 2' or 'Tier 3'
-    rateLimitWindow: 900000,     # In ms
-    rateLimitMax: 6              # In # of requests
+    tier: 'tier-1', # Tier code
+    rateLimitWindow: 60000, # In ms
+    rateLimitMax: 6 # In # of requests
   }
 }
 ```
