@@ -1,4 +1,6 @@
 ---
+title: Home App Installation Steps
+description: This page describes how to install the Home App
 
 ---
 # Set up the Home Page
@@ -30,9 +32,9 @@ Connect to [Microsoft Teams](https://teams.microsoft.com) and load the Home Pack
 
 ![](/media/home-page.png)
 
-![](https://downloads.intercomcdn.com/i/o/442958778/717597f2312a2e0e1829cf7a/2022-01-04_11-52-01.png)
+![](/media/screenshot-2023-01-26-at-12-05-22.png)
 
-Select from your computer the nBold Home package that you have just downloaded.
+Select from your computer the nBold Home package (Select the entire zip file) that you have just downloaded.
 
 ![](/media/home-page-1.png)![](/media/add-home.png)
 
@@ -96,6 +98,7 @@ Then follow the steps described in **"4. Add the home Page to everyone"** to add
 ## Package customization (Optional)
 
 This package could be be customized to match your organization's branding or vertical approach, especially:
+
 * Package icons
 * Package title and description
 
