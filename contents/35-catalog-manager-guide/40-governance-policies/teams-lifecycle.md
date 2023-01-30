@@ -8,7 +8,7 @@ image: ''
 ---
 # Teams Lifecycle
 
-While your organization would be well equipped and organized with various team workflows, there might be tens or hundreds of inactive teams that you would like to eliminate (even from the hidden view) for a much more organized and structured view.
+While your organization would be well-equipped and organized with various team workflows, there might be tens or hundreds of inactive teams that you would like to archive or delete.
 
 Introducing **Teams Lifecycle** - the newest addition to your collaboration templates.
 
