@@ -87,11 +87,8 @@ The service account must have been granted the `Reports.Read.All` and `ReportSet
 ### Microsoft 365 roles
 The service account must have the [appropriate authorization](https://learn.microsoft.com/en-us/graph/reportroot-authorization) to read Microsoft 365 usage reports.
 
-### Display concealed groups option
-By default, Microsoft 365 reports are masking team IDs and names. For the lifecycle policy to work, you have to to switch off the obfuscation feature in the Microsoft 365 admin center settings (Only a M365 Global Admin can do this).
-
-Go to "Settings > Org Settings > Services" and select "Reports" in the list. See: [https://admin.microsoft.com/Adminportal/Home?source=applauncher#/Settings/Services/:/Settings/L1/Reports](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/Settings/Services/:/Settings/L1/Reports "https://admin.microsoft.com/Adminportal/Home?source=applauncher#/Settings/Services/:/Settings/L1/Reports")
-
-Clear the "Display concealed user, group, and site names in all reports" switch and click "Save".
-
-You can learn more about the M365 reports at Microsoft 365 Reports in the admin center. See: [https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide](https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide "https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide")
+### "Display concealed groups" option
+By default, Microsoft 365 reports are masking team IDs and names. For the lifecycle policy to work, you have to to switch off the obfuscation feature in the Microsoft 365 admin center settings.  
+Go to "Settings > Org Settings > Services" and select "[Reports](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/Settings/Services/:/Settings/L1/Reports "https://admin.microsoft.com/Adminportal/Home?source=applauncher#/Settings/Services/:/Settings/L1/Reports")" in the list.  
+**Make sure the "Display concealed user, group, and site names in all reports" option is disabled and click "Save".**  
+You can learn more about this option from "[Microsoft 365 Reports in the admin center](https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide "https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide")".
