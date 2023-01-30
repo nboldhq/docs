@@ -37,7 +37,7 @@ With Teams Lifecycle, admins can keep track of teams, monitor their activity lev
 ## How to enable Teams Lifecycle?
 
 1. Go to Microsoft Teams and log into your nBold account.
-2. Click on Create a Template.
+2. Click on Create a Template or edit an existing one.
 3. Go to the Lifecycle tab.
 4. Click on "Enable lifecycle policy".
 5. Enter the number of days of Inactivity and Expiration.
@@ -45,5 +45,5 @@ With Teams Lifecycle, admins can keep track of teams, monitor their activity lev
 
 > Please Note:
 >
-> 1. For the lifecycle to work as expected, the service account must the `Reports.Read.All` role granted.
-> 2. The "Lifecycle" tab from the template form is only accessible to change managers.
+> 1. For the lifecycle to work as expected, the service account must have the `Reports.Read.All` role granted.
+> 2. As of today, the "Lifecycle" tab is restricted to users granted the \`Change Managers\` role.
