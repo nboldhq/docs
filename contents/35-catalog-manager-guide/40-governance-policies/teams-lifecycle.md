@@ -30,6 +30,8 @@ With Teams Lifecycle, admins can keep track of teams, monitor their activity lev
 * **Expiration**: The period to wait before triggering the lifecycle policy action. The grace period can be defined as 7 or 30 days.
 * **Action**: The action to be taken if the grace period has ended, among none, archive, or delete.
 
+![](/media/screenshot-2023-01-29-at-18-42-25.png)
+
 > **Please Note**: By default, the lifecycle is disabled and when enabled, the inactivity is set to 30 days, Expiration is set to 7 days and the Action is selected as Archive.
 
 ## How to enable Teams Lifecycle?
