@@ -1,3 +1,11 @@
+---
+keywords: []
+tags: []
+title: Teams Lifecycle
+description: This article describes what is team's lifecycle and how it works
+image: ''
+
+---
 # Microsoft Teams Lifecycle Policy
 While your organization may be well equipped and organized with various team workflows, there might be tens or hundreds of unused/inactive teams that you would like to archive or delete. 
 
