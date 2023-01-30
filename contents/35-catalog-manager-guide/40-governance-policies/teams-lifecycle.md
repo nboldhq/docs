@@ -2,7 +2,7 @@
 keywords: []
 tags: []
 title: Teams Lifecycle
-description: This article describes what is teams lifecycle and how does it work
+description: This article describes what is team's lifecycle and how does it work
 image: ''
 
 ---
