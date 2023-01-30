@@ -1,9 +1,16 @@
 ---
-keywords: []
-tags: []
-title: Teams Lifecycle
+title: Lifecycle Policy
 description: This article describes what is team's lifecycle and how it works
-image: ''
+keywords:
+- lifecycle
+- policy
+- teams
+- governance
+tags:
+- lifecycle
+- policy
+- teams
+- governance
 
 ---
 # Microsoft Teams Lifecycle Policy
@@ -87,4 +94,4 @@ Go to "Settings > Org Settings > Services" and select "Reports" in the list. See
 
 Clear the "Display concealed user, group, and site names in all reports" switch and click "Save".
 
-You can learn more about the M365 reports at Microsoft 365 Reports in the admin center. See: [https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide](https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide "https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide")  
+You can learn more about the M365 reports at Microsoft 365 Reports in the admin center. See: [https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide](https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide "https://docs.microsoft.com/en-us/microsoft-365/admin/activity-reports/activity-reports?view=o365-worldwide")

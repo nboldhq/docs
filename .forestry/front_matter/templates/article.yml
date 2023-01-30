@@ -37,5 +37,3 @@ fields:
   label: Tags
   description: Tags used for navigation, to link articles together. If defined, these
     tags are visible at the bottom of the page.
-pages:
-- contents/35-catalog-manager-guide/40-governance-policies/teams-lifecycle.md
