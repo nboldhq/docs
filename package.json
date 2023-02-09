@@ -20,10 +20,10 @@
     "serve": "docusaurus serve"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.2.0",
-    "@docusaurus/plugin-google-analytics": "^2.2.0",
-    "@docusaurus/preset-classic": "^2.2.0",
-    "@docusaurus/theme-search-algolia": "^2.2.0",
+    "@docusaurus/core": "^2.3.1",
+    "@docusaurus/plugin-google-analytics": "^2.3.1",
+    "@docusaurus/preset-classic": "^2.3.1",
+    "@docusaurus/theme-search-algolia": "^2.3.1",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",
     "core-js": "^3.26.0",
@@ -39,8 +39,8 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.2.0",
-    "@docusaurus/plugin-client-redirects": "^2.2.0",
+    "@docusaurus/module-type-aliases": "^2.3.1",
+    "@docusaurus/plugin-client-redirects": "^2.3.1",
     "@openapitools/openapi-generator-cli": "^2.4.26",
     "broken-link-checker": "^0.7.8",
     "front-matter": "^4.0.2",

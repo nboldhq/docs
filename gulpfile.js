@@ -11,7 +11,7 @@ const ROOT_DIRECTORY = '.'
 const CONTENTS_DIRECTORY = `${ROOT_DIRECTORY}/contents`
 const DRAFTS_DIRECTORY = `${ROOT_DIRECTORY}/drafts`
 const TRUST_CENTER_DIRECTORY = `${CONTENTS_DIRECTORY}/90-trust-center`
-const REFERENCES_DIRECTORY = `${DRAFTS_DIRECTORY}/references`
+const REFERENCES_DIRECTORY = `${CONTENTS_DIRECTORY}/76-hosting/90-references`
 // #endregion DECLARATIONS
 
 const downloadAssetsFromAppPlatformRepo = (done) => {
@@ -41,11 +41,6 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
       },
       {
         file_name: 'services-reference.md',
-        source: ASSETS_ROOT_URL,
-        destination: REFERENCES_DIRECTORY
-      },
-      {
-        file_name: 'app-data-model-reference.md',
         source: ASSETS_ROOT_URL,
         destination: REFERENCES_DIRECTORY
       }

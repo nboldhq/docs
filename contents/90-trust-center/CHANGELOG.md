@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.2.0](https://github.com/nboldhq/app-platform/compare/v5.1.0...v5.2.0) (2023-01-20)
+
+
+### Features
+
+* **api:** System app authorized to access all tenants logs ([176df5b](https://github.com/nboldhq/app-platform/commit/176df5bd73a1d9de6ed2edfd3df4bb5136e33513))
+* **api:** Updated system app id and system webhook url ([d526ab9](https://github.com/nboldhq/app-platform/commit/d526ab94565c919d4f85d9abda40e7b59f2e6681))
+* **auth:** Added support for multiple client id across services ([edbe838](https://github.com/nboldhq/app-platform/commit/edbe8386af241e58d8f4301ddc535df1982e0377))
+* **exports:** Template and settings export is limited to change mgrs ([859609c](https://github.com/nboldhq/app-platform/commit/859609ca20df9781270b4fa69fe807b5e8ea402d))
+* **provisioning:** Failure to update mailnickname results in a warning, not an error. Automated truncature to 50 characters. ([8398106](https://github.com/nboldhq/app-platform/commit/83981063d457a083b5ecebb1bd758797da826a5d))
+* **queues:** Added  scheduled job ([29982d0](https://github.com/nboldhq/app-platform/commit/29982d0b535a4ac8d97432e3e02744df939117dd))
+* **queues:** Added INT startup script ([f629832](https://github.com/nboldhq/app-platform/commit/f62983287f693ccde8b4e6244b9559c76bb7592e))
+* **queues:** Added queue_read_only and queue_allow_retry ([2a3adaa](https://github.com/nboldhq/app-platform/commit/2a3adaaa9c932108b396a4267ac2310d70b30d41))
+* **queues:** Added queues dashboard options ([3137879](https://github.com/nboldhq/app-platform/commit/313787979fbf5f0ed9f3c54683ed653d875fa67b))
+* **queues:** Added queues-dashboard service ([07d3829](https://github.com/nboldhq/app-platform/commit/07d3829ec66d1be90a9129371755030eb1e9422f))
+* **queues:** Jobs dashboard support for queues mgmt options ([fc15905](https://github.com/nboldhq/app-platform/commit/fc15905a9bebc66bc6f5ddc1aaadff6022ab7025))
+* **queues:** New fine-grained queues options ([177543f](https://github.com/nboldhq/app-platform/commit/177543f3e179a5a5050ea928945c9f8cfaf67341))
+* **queues:** New queues options + Webhooks priorities ([dddc1cf](https://github.com/nboldhq/app-platform/commit/dddc1cf0ebdc931662bd11acaf92dd6403ae8428))
+* reply to channel message ([7c946e0](https://github.com/nboldhq/app-platform/commit/7c946e0a45c452fcf7e894626cfc22df357fba53))
+* **search:** Added search client ([ab15901](https://github.com/nboldhq/app-platform/commit/ab1590135eea10aa354afdf7f0a0df4f3ec694da))
+* **setup:** Included setup scripts in scheduler startup sequence ([9d87298](https://github.com/nboldhq/app-platform/commit/9d87298749b5228c47f18cbfea68975e903497d7))
+* **signin:** Added support for multiple app regs ([f0d3d18](https://github.com/nboldhq/app-platform/commit/f0d3d1857aed02cada51c124bb00db4e59ba0460))
+* **subscriptions:** Data model + events + db operations v0 ([dd6641c](https://github.com/nboldhq/app-platform/commit/dd6641cafbd175384a20d8aed79e879db5d94b73))
+* **templates:** System templates can now be deleted ([aa6e9e8](https://github.com/nboldhq/app-platform/commit/aa6e9e8868582654f860eeeda1ddc7389779a37c))
+* update channel ([3047db1](https://github.com/nboldhq/app-platform/commit/3047db12f5dafd1a8e755bf2b1c243c4dfa44323))
+
+
+### Bug Fixes
+
+* **approval:** Fixed email approval process when triggered from a card in Outlook ([c232860](https://github.com/nboldhq/app-platform/commit/c232860659318cf2056e1e2e1d4657d1c63a4d20))
+* BadGateway error ([de51c1d](https://github.com/nboldhq/app-platform/commit/de51c1dd6369ca5f0377ceaf690840f4c9a0c90e))
+* better error form ([5d59185](https://github.com/nboldhq/app-platform/commit/5d59185438b214b23e4434af932372227a685596))
+* **catalog:** ON/OFF sorting filters in templates catalog are not working [#1471](https://github.com/nboldhq/app-platform/issues/1471) ([8c2610c](https://github.com/nboldhq/app-platform/commit/8c2610c411d7d2be77f05ca6e0957b3d4aa365e8))
+* channel displayName length ([061d6c0](https://github.com/nboldhq/app-platform/commit/061d6c0484fa58664661d23c9b15ff7aedf1be74))
+* **deeplinks:** Fixed open team and open tab deep links ([67f746c](https://github.com/nboldhq/app-platform/commit/67f746c99913c9e03dd5ceca0d7fd3939622507c))
+* error create channel ([12204e8](https://github.com/nboldhq/app-platform/commit/12204e86086e1aae7b31dadc0752e81f63bec7e6))
+* error for expired service account and channel name already exist ([ca70f4c](https://github.com/nboldhq/app-platform/commit/ca70f4c99f7282f85a5c746f4b150d3ddaf97865))
+* **home:** Fixed rendering issues in templates and requests ([602e41b](https://github.com/nboldhq/app-platform/commit/602e41b29a6e4a3114240b56988193144d6811f9))
+* issue [#257](https://github.com/nboldhq/app-platform/issues/257) ([4467d38](https://github.com/nboldhq/app-platform/commit/4467d38474a9a7ca4808795ef51f9ffea89e801b))
+* less-test ([558bffd](https://github.com/nboldhq/app-platform/commit/558bffdd1412e2af80b7bbb04361b555732c68be))
+* nbold v5 ([a8d04ec](https://github.com/nboldhq/app-platform/commit/a8d04ece478307af7131cf4fea894b03627a5c86))
+* not modified graph send 503 ([79c2679](https://github.com/nboldhq/app-platform/commit/79c26794c6b23fc57cd3a51bb40ee7e9114d8659))
+* not modified graph send 503 ([cb67041](https://github.com/nboldhq/app-platform/commit/cb670412f52de843a8fc0cde2277ec7e46bda9e7))
+* repliesMessage to replyToMessage ([73fc482](https://github.com/nboldhq/app-platform/commit/73fc48203aae7c21e37c996d8eba09e4f8889215))
+* send full response ([ff8106a](https://github.com/nboldhq/app-platform/commit/ff8106a9209c85613d83f41025c4618881df1627))
+* **webhooks:** Disabled system webhooks for token renewal ([aa969aa](https://github.com/nboldhq/app-platform/commit/aa969aa45a31cc65bfa47296e065b084487c5bad))
+* **webhooks:** Fixed approval webhooks definition ([e777a45](https://github.com/nboldhq/app-platform/commit/e777a458e2159cbe6493f211165cb86e2bafe339))
+* workflow on push ([705dd01](https://github.com/nboldhq/app-platform/commit/705dd01f98123c4bff7ca2af9c6112c64accf780))
+
 ## [5.1.0](https://github.com/nboldhq/app-platform/compare/v4.24.0...v5.1.0) (2022-10-21)
 
 
