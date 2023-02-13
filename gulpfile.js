@@ -11,7 +11,7 @@ const ROOT_DIRECTORY = '.'
 const CONTENTS_DIRECTORY = `${ROOT_DIRECTORY}/contents`
 const DRAFTS_DIRECTORY = `${ROOT_DIRECTORY}/drafts`
 const TRUST_CENTER_DIRECTORY = `${CONTENTS_DIRECTORY}/90-trust-center`
-const REFERENCES_DIRECTORY = `${CONTENTS_DIRECTORY}/76-hosting/90-references`
+const REFERENCES_DIRECTORY = `${DRAFTS_DIRECTORY}/75-hosting/90-references`
 // #endregion DECLARATIONS
 
 const downloadAssetsFromAppPlatformRepo = (done) => {
@@ -30,7 +30,7 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
         destination: REFERENCES_DIRECTORY
       },
       {
-        file_name: 'environment-variables-reference.md',
+        file_name: '.env-template',
         source: ASSETS_ROOT_URL,
         destination: REFERENCES_DIRECTORY
       },
@@ -46,13 +46,17 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
       }
     ]
     assets.forEach((asset, i) => {
-      const file = fs.createWriteStream(`${asset.destination}/${asset.file_name}`)
-      https.get(`${asset.source}/${asset.file_name}`, (response) => {
-        response.pipe(file)
-        if (i === assets.length - 1) {
-          done()
-        }
-      })
+      try {
+        const file = fs.createWriteStream(`${asset.destination}/${asset.file_name}`)
+        https.get(`${asset.source}/${asset.file_name}`, (response) => {
+          response.pipe(file)
+          if (i === assets.length - 1) {
+            done()
+          }
+        })
+      } catch (err) {
+        console.error(`Unexpected error in /gulpfile/downloadAssetsFromAppPlatformRepo for asset ${asset.file_name}.`)
+      }
     })
   } catch (err) { // Unexpected error
     console.error('Unexpected error in /gulpfile/downloadAssetsFromAppPlatformRepo.')

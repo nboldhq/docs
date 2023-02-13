@@ -1,5 +1,5 @@
 # Configuration Reference
-📆 *Generated: Wed, 08 Feb 2023 18:08:16 GMT*
+📆 *Generated: Fri, 10 Feb 2023 12:29:37 GMT*
 
 This document lists all the configuration options supported by the platform.
 
@@ -188,7 +188,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 | `MAIL_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable integration with an email service for notifications. Defaults to "false". |
 | `MAIL_PROVIDER` | Optional ☑️ | (string) Mailer service (As of today, only "sendgrid" is supported). Defaults to "sendgrid". |
 | `MAIL_SECRET` | Optional ☑️ | (string) Secret key used to authenticate against the mailer service. Defaults to "". |
-| `MAIL_FROM_ADDRESS` | Optional ☑️ | (string) Default email sender (FROM:). Defaults to "notifications@salestim.io". |
+| `MAIL_SENDER` | Optional ☑️ | (string) Default email sender (FROM:). Defaults to "notifications@salestim.io". |
 | `MAIL_ACTION_MSG_ORIGINATOR` | Optional ☑️ | (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). Defaults to "". |
 
 
@@ -246,7 +246,8 @@ Options are grouped by category, then by domain, and each option is specified wi
 | `ANALYTICS_EMBEDDING_SECRET_KEY` | Optional ☑️ | (string) analytics service server secret used to sign embedded reports JWT tokens. Defaults to ``. |
 | `ANALYTICS_SERVICE_USER` | Optional ☑️ | (string) Login of the user used to access the list of available analytics. Defaults to ``. |
 | `ANALYTICS_SERVICE_PASSWORD` | Optional ☑️ | (string) Password of the user used to access the list of available analytics. Defaults to ``. |
-| `ANALYTICS_SERVICE_ROOT_COLLECTION_ID` | Optional ☑️ | (string) ID of the collection owning the available analytics. Defaults to ``. |
+| `ANALYTICS_SERVICE_INTERNAL_ROOT_COLLECTION_NAME` | Optional ☑️ | (string) Name of the collection owning the available analytics for internal use (accessible from the back-office). Defaults to `internal`. |
+| `ANALYTICS_SERVICE_EXTERNAL_ROOT_COLLECTION_NAME` | Optional ☑️ | (string) Name of the collection owning the available analytics for external use (accessible by end-users). Defaults to `external`. |
 
 
 

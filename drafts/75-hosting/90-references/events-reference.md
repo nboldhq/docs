@@ -1,5 +1,5 @@
 # nBold Events Documentation
-📆 *Generated: Wed, 08 Feb 2023 18:08:16 GMT*
+📆 *Generated: Fri, 10 Feb 2023 12:29:37 GMT*
 
 
 This document lists all the events supported by the platform.
