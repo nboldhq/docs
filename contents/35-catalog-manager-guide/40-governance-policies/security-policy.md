@@ -1,8 +1,9 @@
 ---
 author: Kristina Konsatntnyova
----
-# Security Policy
+title: Security Policy for templates
+description: This page describes how to define security policies at the template level
 
+---
 ## Template Security Policy
 
 The "Security & Privacy" tab defines the main security and privacy policy of your Business Solution:
