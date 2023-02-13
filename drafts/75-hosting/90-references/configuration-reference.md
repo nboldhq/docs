@@ -188,7 +188,7 @@ Options are grouped by category, then by domain, and each option is specified wi
 | `MAIL_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable integration with an email service for notifications. Defaults to "false". |
 | `MAIL_PROVIDER` | Optional ☑️ | (string) Mailer service (As of today, only "sendgrid" is supported). Defaults to "sendgrid". |
 | `MAIL_SECRET` | Optional ☑️ | (string) Secret key used to authenticate against the mailer service. Defaults to "". |
-| `MAIL_SENDER` | Optional ☑️ | (string) Default email sender (FROM:). Defaults to "notifications@salestim.io". |
+| `MAIL_FROM_ADDRESS` | Optional ☑️ | (string) Default email sender (FROM:). Defaults to "notifications@salestim.io". |
 | `MAIL_ACTION_MSG_ORIGINATOR` | Optional ☑️ | (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). Defaults to "". |
 
 

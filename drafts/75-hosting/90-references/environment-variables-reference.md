@@ -182,7 +182,7 @@ MAIL_PROVIDER=sendgrid
 # (string) Secret key used to authenticate against the mailer service. Defaults to "".
 MAIL_SECRET=
 # (string) Default email sender (FROM:). Defaults to "notifications@salestim.io".
-MAIL_SENDER=notifications@salestim.io
+MAIL_FROM_ADDRESS=notifications@salestim.io
 # (string) Message originator used to enable outlook actionalbe messages (as used by the team creation request approval process). Defaults to "".
 MAIL_ACTION_MSG_ORIGINATOR=
 
