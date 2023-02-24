@@ -212,23 +212,23 @@ Options are grouped by category, then by domain, and each option is specified wi
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
-| `AUDITING_SERVICE_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable integration with the auditing service. Defaults to `false`. |
-| `AUDITING_SERVICE_URL` | Optional ☑️ | (string) Events collector root URL. Defaults to `http://localhost:8001`. |
-| `AUDITING_SERVICE_AUTH_HEADER` | Optional ☑️ | (string) HTTP header used to pass the authentication token to the events collector service. Defaults to `X-Auth-Token`. |
-| `AUDITING_SERVICE_AUTH_CLIENT_TOKEN` | Optional ☑️ | (string) Token used to authenticate from clients against the events collector service for tracking operations. Defaults to `""`. |
-| `AUDITING_SERVICE_AUTH_SERVER_TOKEN` | Optional ☑️ | (string) Token used to authenticate from servers (s2s) against the events collector service for tracking operations. Defaults to `""`. |
-| `AUDITING_SERVICE_AUTH_ADMIN_TOKEN` | Optional ☑️ | (string) Token used to authenticate from servers (s2s) against the events collector service for administration operations. Defaults to `""`. |
-| `AUDITING_SERVICE_TRACK_ENDPOINT` | Optional ☑️ | (string) Tracking endpoint of the events collector service. Defaults to `/api/v1/s2s/event`. |
-| `AUDITING_SERVICE_TRACK_METHOD` | Optional ☑️ | (string) HTTP verb used to post events. Defaults to `POST`. |
-| `AUDITING_SERVICE_DB_AUDIT_CLIENT` | Optional ☑️ | (string) Database engine client among `mysql` / `mariadb` / `postgres` / `mssql` (Currently only `postgres` is officially supported). Defaults to `postgres`. |
-| `AUDITING_SERVICE_DB_AUDIT_DIALECT_OPTIONS` | Optional ☑️ | (string) Database engine specific dialect options as a stringified json. Defaults to `{"ssl": false}`. |
-| `AUDITING_SERVICE_DB_AUDIT_HOST` | Optional ☑️ | (string) Database server host. Defaults to `localhost`. |
-| `AUDITING_SERVICE_DB_AUDIT_PORT` | Optional ☑️ | (number) Database server port. Defaults to `5432`. |
-| `AUDITING_SERVICE_DB_AUDIT_SSL_MODE` | Optional ☑️ | (string) Specify ssl policy. Defaults to `require`. |
-| `AUDITING_SERVICE_DB_AUDIT_DATABASE_NAME` | Optional ☑️ | (string) Database name. Defaults to `st_audit_db`. |
-| `AUDITING_SERVICE_DB_AUDIT_USER` | Optional ☑️ | (string) Database user name. Defaults to `st_audit_db_user`. |
-| `AUDITING_SERVICE_DB_AUDIT_PASSWORD` | Optional ☑️ | (string) Database password. Defaults to `st_audit_db_password`. |
-| `AUDITING_SERVICE_DB_AUDIT_LOGGING` | Optional ☑️ | (boolean) Enable database advanced logging. Defaults to `false`. |
+| `AUDIT_SERVICE_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable integration with the auditing service. Defaults to `false`. |
+| `AUDIT_SERVICE_URL` | Optional ☑️ | (string) Events collector root URL. Defaults to `http://localhost:8001`. |
+| `AUDIT_SERVICE_AUTH_HEADER` | Optional ☑️ | (string) HTTP header used to pass the authentication token to the events collector service. Defaults to `X-Auth-Token`. |
+| `AUDIT_SERVICE_AUTH_CLIENT_TOKEN` | Optional ☑️ | (string) Token used to authenticate from clients against the events collector service for tracking operations. Defaults to `""`. |
+| `AUDIT_SERVICE_AUTH_SERVER_TOKEN` | Optional ☑️ | (string) Token used to authenticate from servers (s2s) against the events collector service for tracking operations. Defaults to `""`. |
+| `AUDIT_SERVICE_AUTH_ADMIN_TOKEN` | Optional ☑️ | (string) Token used to authenticate from servers (s2s) against the events collector service for administration operations. Defaults to `""`. |
+| `AUDIT_SERVICE_TRACK_ENDPOINT` | Optional ☑️ | (string) Tracking endpoint of the events collector service. Defaults to `/api/v1/s2s/event`. |
+| `AUDIT_SERVICE_TRACK_METHOD` | Optional ☑️ | (string) HTTP verb used to post events. Defaults to `POST`. |
+| `AUDIT_DB_CLIENT` | Optional ☑️ | (string) Database engine client among `mysql` / `mariadb` / `postgres` / `mssql` (Currently only `postgres` is officially supported). Defaults to `postgres`. |
+| `AUDIT_DB_DIALECT_OPTIONS` | Optional ☑️ | (string) Database engine specific dialect options as a stringified json. Defaults to `{"ssl": false}`. |
+| `AUDIT_DB_HOST` | Optional ☑️ | (string) Database server host. Defaults to `localhost`. |
+| `AUDIT_DB_PORT` | Optional ☑️ | (number) Database server port. Defaults to `5432`. |
+| `AUDIT_DB_SSL_MODE` | Optional ☑️ | (string) Specify ssl policy. Defaults to `require`. |
+| `AUDIT_DB_DATABASE_NAME` | Optional ☑️ | (string) Database name. Defaults to `st_audit_db`. |
+| `AUDIT_DB_USER` | Optional ☑️ | (string) Database user name. Defaults to `st_audit_db_user`. |
+| `AUDIT_DB_PASSWORD` | Optional ☑️ | (string) Database password. Defaults to `st_audit_db_password`. |
+| `AUDIT_DB_LOGGING` | Optional ☑️ | (boolean) Enable database advanced logging. Defaults to `false`. |
 
 
 
@@ -241,13 +241,13 @@ Options are grouped by category, then by domain, and each option is specified wi
 | `ANALYTICS_SERVICE_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable integration with the analytics service. Defaults to `true`. |
 | `ANALYTICS_SERVICE_URL` | Optional ☑️ | (string) analytics service URL. Defaults to `http://localhost:5001`. |
 | `ANALYTICS_SERVICE_PORTAL` | Optional ☑️ | (string) URL of the analytics portal. Defaults to `http://localhost:3000/analytics`. |
-| `ANALYTICS_SETUP_TOKEN` | Optional ☑️ | (string) An UUID token used to signify that an instance has permissions to create the initial User. This is created upon the first launch of Metabase, by the first instance; once used, it is cleared out, never to be used again. Defaults to ``. |
-| `ANALYTICS_ENCRYPTION_SECRET` | Optional ☑️ | (string) When set, this will encrypt database credentials stored in the application database. Requirement: minimum 16 characters base64-encoded string. Defaults to ``. |
-| `ANALYTICS_EMBEDDING_SECRET_KEY` | Optional ☑️ | (string) analytics service server secret used to sign embedded reports JWT tokens. Defaults to ``. |
+| `ANALYTICS_SERVICE_SETUP_TOKEN` | Optional ☑️ | (string) An UUID token used to signify that an instance has permissions to create the initial User. This is created upon the first launch of Metabase, by the first instance; once used, it is cleared out, never to be used again. Defaults to ``. |
+| `ANALYTICS_SERVICE_ENCRYPTION_SECRET` | Optional ☑️ | (string) When set, this will encrypt database credentials stored in the application database. Requirement: minimum 16 characters base64-encoded string. Defaults to ``. |
+| `ANALYTICS_SERVICE_EMBEDDING_SECRET_KEY` | Optional ☑️ | (string) analytics service server secret used to sign embedded reports JWT tokens. Defaults to ``. |
 | `ANALYTICS_SERVICE_USER` | Optional ☑️ | (string) Login of the user used to access the list of available analytics. Defaults to ``. |
 | `ANALYTICS_SERVICE_PASSWORD` | Optional ☑️ | (string) Password of the user used to access the list of available analytics. Defaults to ``. |
-| `ANALYTICS_SERVICE_INTERNAL_ROOT_COLLECTION_NAME` | Optional ☑️ | (string) Name of the collection owning the available analytics for internal use (accessible from the back-office). Defaults to `internal`. |
-| `ANALYTICS_SERVICE_EXTERNAL_ROOT_COLLECTION_NAME` | Optional ☑️ | (string) Name of the collection owning the available analytics for external use (accessible by end-users). Defaults to `external`. |
+| `ANALYTICS_SERVICE_SETUP_INTERNAL_COLLECTION_NAME` | Optional ☑️ | (string) Name of the collection owning the available analytics for internal use (accessible from the back-office). Defaults to `internal`. |
+| `ANALYTICS_SERVICE_SETUP_EXTERNAL_COLLECTION_NAME` | Optional ☑️ | (string) Name of the collection owning the available analytics for external use (accessible by end-users). Defaults to `external`. |
 
 
 

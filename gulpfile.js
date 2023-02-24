@@ -24,26 +24,26 @@ const downloadAssetsFromAppPlatformRepo = (done) => {
         source: CDN_ROOT_URL,
         destination: TRUST_CENTER_DIRECTORY
       },
-      {
-        file_name: 'configuration-reference.md',
-        source: ASSETS_ROOT_URL,
-        destination: REFERENCES_DIRECTORY
-      },
-      {
-        file_name: '.env-template',
-        source: ASSETS_ROOT_URL,
-        destination: REFERENCES_DIRECTORY
-      },
-      {
-        file_name: 'events-reference.md',
-        source: ASSETS_ROOT_URL,
-        destination: REFERENCES_DIRECTORY
-      },
-      {
-        file_name: 'services-reference.md',
-        source: ASSETS_ROOT_URL,
-        destination: REFERENCES_DIRECTORY
-      }
+      // {
+      //   file_name: 'configuration-reference.md',
+      //   source: ASSETS_ROOT_URL,
+      //   destination: REFERENCES_DIRECTORY
+      // },
+      // {
+      //   file_name: '.env-template',
+      //   source: ASSETS_ROOT_URL,
+      //   destination: REFERENCES_DIRECTORY
+      // },
+      // {
+      //   file_name: 'events-reference.md',
+      //   source: ASSETS_ROOT_URL,
+      //   destination: REFERENCES_DIRECTORY
+      // },
+      // {
+      //   file_name: 'services-reference.md',
+      //   source: ASSETS_ROOT_URL,
+      //   destination: REFERENCES_DIRECTORY
+      // }
     ]
     assets.forEach((asset, i) => {
       try {
