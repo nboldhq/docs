@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.3.0](https://github.com/nboldhq/app-platform/compare/v5.2.0...v5.3.0) (2023-02-16)
+
+
+### Features
+
+* **analytics:** Added analytics UI integration ([327155d](https://github.com/nboldhq/app-platform/commit/327155dc4c5a7d759ec66e5f785ab1954e7f441b))
+* **analytics:** Added initial setup if integration enabled ([31eb58f](https://github.com/nboldhq/app-platform/commit/31eb58f2149af7ee777e80b7a9214f9763175379))
+* **analytics:** Configured int and prd connectivity ([8a8253e](https://github.com/nboldhq/app-platform/commit/8a8253ec7f525b07517b54122505d4c67accb643))
+* **analytics:** updated db schema ([3c456aa](https://github.com/nboldhq/app-platform/commit/3c456aa0f5044cd1938a6130e36d16ad7af269c8))
+* **api:** Added GetTeamsByTemplate endpoint ([96a0b3a](https://github.com/nboldhq/app-platform/commit/96a0b3ab1ba0ca6727915ca99032eb2d889397a6))
+* **bo:** analytics and operations persistence ([932b2fc](https://github.com/nboldhq/app-platform/commit/932b2fc4144ca7467f9f86fb2ebd0d8924f900df))
+* **bo:** Analytics loaded from internal collection ([f78d44f](https://github.com/nboldhq/app-platform/commit/f78d44fcdcd80f2ad75736fb8625e51e08e9cb9e))
+* **bo:** back-office v1 ([52504f4](https://github.com/nboldhq/app-platform/commit/52504f472e6d532a97db8925d83ff376f467f2ce))
+* **bo:** Handle env without analytics enabled ([1fcd096](https://github.com/nboldhq/app-platform/commit/1fcd096d386d182542e4789e07772d2f2db1815b))
+* **bo:** initialized ui ([80bc65c](https://github.com/nboldhq/app-platform/commit/80bc65c227d2c70fe6ba2e500c13887ee79a614b))
+* **bo:** operations + analytics ([6b052f4](https://github.com/nboldhq/app-platform/commit/6b052f47fd916fee5c471d8727c742212845243a))
+* **business-graph:** added basic client and server ([608a63d](https://github.com/nboldhq/app-platform/commit/608a63d60e66cec4242d97706f364bb9ce42a211))
+* **db:** Added subscription model to sequelize + db ([e994fde](https://github.com/nboldhq/app-platform/commit/e994fde1357ec2020f387836846caa7529f3fc00))
+* **db:** documented models ([91663d4](https://github.com/nboldhq/app-platform/commit/91663d48519037ec77b695be8336477dbad28bdf))
+* **hosting:** Updated self-hosted docker compose files ([724926a](https://github.com/nboldhq/app-platform/commit/724926a7c1d4baf9172b286be27f9549d4523888))
+* **infra:** initialized migration code from cosmosdb and az storage to sql ([c2d41d4](https://github.com/nboldhq/app-platform/commit/c2d41d497e9d5c0208f33d4cb51460e58b9bb1e5))
+* **lifecycle:** Added control for concealed info in usage reports ([5d6ae6c](https://github.com/nboldhq/app-platform/commit/5d6ae6cdef2e6d313ecd7b5bee9e2eb519bb2b00))
+* **lifecycle:** alpha ([81d7b5b](https://github.com/nboldhq/app-platform/commit/81d7b5b85dc4c01e088d522ed757fe6db48341de))
+* **lifecycle:** improved jobs data with teams count + processed ([4a1f6f1](https://github.com/nboldhq/app-platform/commit/4a1f6f10c72b5332a3a60a90be82b46e1a092838))
+* **lifecycle:** job scheduled every hour ([ea71bac](https://github.com/nboldhq/app-platform/commit/ea71bacc4066d4a67c27846a5a610970bba09bda))
+* **self:** Added docker compose for self-hosted ([4367a32](https://github.com/nboldhq/app-platform/commit/4367a322f9385fb91cd0363bfac99db06502d59f))
+* **ui:** Basic UI v2 ([2b975cb](https://github.com/nboldhq/app-platform/commit/2b975cb891ae4fc67f92d0bc791af4af316a5e21))
+
+
+### Bug Fixes
+
+* **bo:** updated startup command ([dcdae84](https://github.com/nboldhq/app-platform/commit/dcdae846c5dd42b1ec3e6210c01b2e58f79be24b))
+* **docker:** fixed docker compose for self-hosted ([2fc3b61](https://github.com/nboldhq/app-platform/commit/2fc3b6136cdc9c0b8db34d227c5691ec8ed96d7a))
+* **lifecycle:** disabled concealed data option check ([7ba5816](https://github.com/nboldhq/app-platform/commit/7ba581640e9c7fdc5fa54ec25da1ad07a04d594b))
+* **lifecycle:** updated concealed option handling ([48819ce](https://github.com/nboldhq/app-platform/commit/48819ceaa929bd6272e9e99cf093f6cad4ece33a))
+* **package:** Updated manifests descriptions ([f1c3f18](https://github.com/nboldhq/app-platform/commit/f1c3f18c6f4dd0dd2958789e644c130679298f72))
+* **provisioning:** Fixed sensitivity labels issue ([e01c8a4](https://github.com/nboldhq/app-platform/commit/e01c8a48fb39d88b2970f90b046107e3b482b0d8))
+* **ui:** Fixed moble text rendering of placeholders ([48a3424](https://github.com/nboldhq/app-platform/commit/48a342488e70589018c2ac218e778163197f9f9e))
+
 ## [5.2.0](https://github.com/nboldhq/app-platform/compare/v5.1.0...v5.2.0) (2023-01-20)
 
 
