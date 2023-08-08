@@ -2,7 +2,7 @@
 
 ## Uptime monitoring
 
-To monitor their uptime, each container exposes an HTTP endpoint at `/monitoring/ping`, that answers to `HEAD` and `GET` requests with a `200` empty response.
+To monitor their uptime, each container exposes an HTTP endpoint at `/health`, that answers to `HEAD` and `GET` requests with a `200` empty response.
 
 :::tip
 You can use the `user-agent` HTTP header to identify the monitoring service sending the requests.
@@ -21,11 +21,11 @@ A sample basic configuration file for monitoring the uptime and latency of the a
 probes:
   - id: api_probe
     name: API ping monitoring endpoint
-    description: Monitors the /monitoring/ping endpoint of the nBold api service
+    description: Monitors the /health endpoint of the nBold api service
     interval: 10
     requests:
       - method: HEAD
-        url: 'http://salestim_api:3000/monitoring/ping'
+        url: 'http://salestim_api:3000/health'
         timeout: 7000
         alerts:
           - query: response.status != 200
@@ -34,11 +34,11 @@ probes:
     recoveryThreshold: 3
   - id: web_probe
     name: Web ping monitoring endpoint
-    description: Monitors the /monitoring/ping endpoint of the nBold web service
+    description: Monitors the /health endpoint of the nBold web service
     interval: 10
     requests:
       - method: HEAD
-        url: 'http://salestim_web:3000/monitoring/ping'
+        url: 'http://salestim_web:3000/health'
         timeout: 7000
         alerts:
           - query: response.status != 200
@@ -47,11 +47,11 @@ probes:
     recoveryThreshold: 3
   - id: jobs_probe
     name: JOBS ping monitoring endpoint
-    description: Monitors the /monitoring/ping endpoint of the nBold jobs service
+    description: Monitors the /health endpoint of the nBold jobs service
     interval: 10
     requests:
       - method: HEAD
-        url: 'http://salestim_jobs:3000/monitoring/ping'
+        url: 'http://salestim_jobs:3000/health'
         timeout: 7000
         alerts:
           - query: response.status != 200
@@ -60,11 +60,11 @@ probes:
     recoveryThreshold: 3
   - id: scheduler_probe
     name: SCHEDULER ping monitoring endpoint
-    description: Monitors the /monitoring/ping endpoint of the nBold scheduler service
+    description: Monitors the /health endpoint of the nBold scheduler service
     interval: 10
     requests:
       - method: HEAD
-        url: 'http://salestim_scheduler:3000/monitoring/ping'
+        url: 'http://salestim_scheduler:3000/health'
         timeout: 7000
         alerts:
           - query: response.status != 200
@@ -125,7 +125,7 @@ Prometheus is an open-source software application that is used for event monitor
 Prometheus has become widely known and used in software industries due to its open-source and ease of use. Prometheus is a stand alone and self containing application that run by pulling data from services using worker systems that runs periodically.
 
 ### Collect application metrics
-To expose their metrics, each SalesTIm container exposes an HTTP endpoint at `/monitoring/metrics`, that answers to `GET` requests with a `200` response, using the [Prometheus](https://prometheus.io/) exporter format.
+To expose their metrics, each SalesTIm container exposes an HTTP endpoint at `/metrics`, that answers to `GET` requests with a `200` response, using the [Prometheus](https://prometheus.io/) exporter format.
 
 Exported metrics could be configured from the [Prometheus Configuration](/hosting/references/configuration-reference.md) options.
 
@@ -143,7 +143,7 @@ Exported metrics could be configured from the [Prometheus Configuration](/hostin
 :::
 
 :::warning How to secure the metrics endpoint?
-In production, you can secure the `/monitoring/metrics` endpoint to prevent any technical information leak. To do so, define the `PROMETHEUS_EXPORTER_AUTH_TOKEN` property from the [Prometheus Configuration](/hosting/references/configuration-reference.md) options.  
+In production, you can secure the `/metrics` endpoint to prevent any technical information leak. To do so, define the `PROMETHEUS_EXPORTER_AUTH_TOKEN` property from the [Prometheus Configuration](/hosting/references/configuration-reference.md) options.  
 :::
 
 :::tip

@@ -340,8 +340,8 @@ Options are grouped by category, then by domain, and each option is specified wi
 ---
 | Environment Variable | Status | Description |
 |:---------------------|:-------|:------------|
-| `PROMETHEUS_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable the `/monitoring/metrics` endpoint to expose platform's key metrics and be polled by a Prometheus server. Defaults to `false`. |
-| `PROMETHEUS_EXPORTER_AUTH_TOKEN` | Optional ☑️ | (string) Token used to authenticate against the Prometheus exporter endpoint `/monitoring/metrics` through the `X-Auth-Token` HTTP header or the `token` url parameter (for instance: `/monitoring/metrics?token=YOUR_AUTH_TOKEN`). Defaults to `""`. |
+| `PROMETHEUS_INTEGRATION_ENABLED` | Optional ☑️ | (boolean) Enable the `/metrics` endpoint to expose platform's key metrics and be polled by a Prometheus server. Defaults to `false`. |
+| `PROMETHEUS_EXPORTER_AUTH_TOKEN` | Optional ☑️ | (string) Token used to authenticate against the Prometheus exporter endpoint `/metrics` through the `X-Auth-Token` HTTP header or the `token` url parameter (for instance: `/metrics?token=YOUR_AUTH_TOKEN`). Defaults to `""`. |
 | `PROMETHEUS_EXPORTER_COLLECT_DEFAULT_METRICS` | Optional ☑️ | (boolean) Collect and expose all the default node.js metrics to Prometheus. Defaults to `true`. |
 | `PROMETHEUS_EXPORTER_COLLECT_GARBAGE_COLLECTOR_METRICS` | Optional ☑️ | (boolean) Collect and expose node.js garbage collector metrics to Prometheus. Defaults to `false`. |
 
