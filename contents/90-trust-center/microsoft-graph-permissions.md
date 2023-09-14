@@ -164,8 +164,9 @@ If the application is executed in the context of a service account model, when a
 | `profile` | Delegated | OpenID | Allows nBold to read the basic profile (name, picture, user name) of the service account. | No |
 | `Mail.Send` | Delegated | Microsoft Graph | If an organization-level provider has been defined from the `Settings` tab, the team creation approval emails will be sent by the service account itself (instead of sending emails through an external mailer service) | No |
 | `User.Read.All` | Delegated | Microsoft Graph | Allows the service account to search for users in the directory. | Yes |
+| `Directory.AccessAsUser.All` | Delegated | Microsoft Graph | Allows the app to have the same access to information in the directory as the signed-in user. | Yes |
 | `Group.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to perform administrative operations (especially applying sensitivity or retention labels, applying groups policies...) on the groups associated with teams. | Yes |
-| `InformationProtectionPolicy.Read` | Delegated | Microsoft Graph | Allows the service account to retreive and apply (granted he has the required licenses) sensitivity labels to teams. | No |
+| `Team.ReadBasic.All` | Delegated | Microsoft Graph | Read basic information about teams (name, description...) | No |
 | `Team.Create` | Delegated | Microsoft Graph | Allows the service account to create new teams. | Yes |
 | `TeamSettings.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to retreive and update teams settings. | Yes |
 | `TeamsAppInstallation.ReadWriteForTeam` | Delegated | Microsoft Graph | Allows the service account to install apps in a team to provision new tabs during the provisioning process. | Yes |
@@ -174,7 +175,14 @@ If the application is executed in the context of a service account model, when a
 | `Channel.Create` | Delegated | Microsoft Graph | Allows the service account to create and manage channels as part of the provisioning process. | Yes |
 | `ChannelSettings.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage channels settings. | Yes |
 | `ChannelMember.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage channels members. | Yes |
-| `Notes.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to OneNote notebooks. | No |
+| `ChannelMessage.Read.All` | Delegated | Microsoft Graph | Read teams channels messages as part of the provisioning process to copy messages between a team template and a new team | Yes |
+| `ChannelMessage.ReadWrite` | Delegated | Microsoft Graph | Update an existing message as part of our connected apps solutions | Yes |
+| `ChannelMessage.Send` | Delegated | Microsoft Graph | Create a new team channel message as part of the provisioning process to copy messages between a team template and a new team | Yes |
+| `Sites.FullControl.All` | Delegated | Microsoft Graph | Used to perform administrative operations (such as provisioning lists) on SharePoint sites created as part of the provisioning process | Yes |
+| `Notes.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to copy OneNote notebooks as part of the provisioning process. | No |
+| `Reports.Read.All` | Delegated | Microsoft Graph | Used to gather statistics about teams, channels and users as part of our analytics feature |  Yes |
+| `ReportSettings.Read.All` | Delegated | Microsoft Graph | Used to determine if the Microsoft 365 reports are using anonymized IDs or not |  Yes |
+| `InformationProtectionPolicy.Read` | Delegated | Microsoft Graph | Allows the service account to retreive and apply (granted he has the required licenses) sensitivity labels to teams. | No |
 
 
 ## Service Account
