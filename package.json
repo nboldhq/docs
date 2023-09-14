@@ -39,8 +39,8 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.3.1",
-    "@docusaurus/plugin-client-redirects": "^2.3.1",
+    "@docusaurus/module-type-aliases": "^2.4.1",
+    "@docusaurus/plugin-client-redirects": "^2.4.1",
     "@openapitools/openapi-generator-cli": "^2.4.26",
     "broken-link-checker": "^0.7.8",
     "front-matter": "^4.0.2",

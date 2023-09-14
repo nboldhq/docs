@@ -17,18 +17,17 @@ jobs:
         with:
           ref: main
 
-      - name: Setup nodejs
-        uses: actions/setup-node@v2
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: "20.6.1"
+          bun-version: latest
 
       - name: Install dependencies
         run: |
-          npm install
+          bun install
 
       - name: Generate assets
         run: |
-          npm run build
+          bun run build
 
       # See: https://github.com/marketplace/actions/git-commit-push-action
       - name: Publish assets
