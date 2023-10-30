@@ -183,6 +183,8 @@ If the application is executed in the context of a service account model, when a
 | `Reports.Read.All` | Delegated | Microsoft Graph | Used to gather statistics about teams, channels and users as part of our analytics feature |  Yes |
 | `ReportSettings.Read.All` | Delegated | Microsoft Graph | Used to determine if the Microsoft 365 reports are using anonymized IDs or not |  Yes |
 | `InformationProtectionPolicy.Read` | Delegated | Microsoft Graph | Allows the service account to retreive and apply (granted he has the required licenses) sensitivity labels to teams. | No |
+| `Notifications.ReadWrite.CreatedByApp` | Delegated | Microsoft Graph | Will be used to send and manage native Microsoft Teams notifications to approvers during approval process and to team requesters at the end of a team provisioning. | No |
+| `People.Read` | Delegated | Microsoft Graph | Will be used to generate a ranked list of relevant people for the signed-in user, to make recommendations during the creation of a team. | No |
 
 
 ## Service Account
