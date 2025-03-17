@@ -17,13 +17,14 @@ jobs:
         with:
           ref: main
 
-      - uses: oven-sh/setup-bun@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          bun-version: latest
+          node-version: latest
 
       - name: Install dependencies
         run: |
-          bun install
+          npm install --legacy-peer-deps
 
       - name: Generate assets
         run: |
