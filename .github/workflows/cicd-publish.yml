@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate assets
         run: |
-          bun run build
+          npm run build
 
       # See: https://github.com/marketplace/actions/git-commit-push-action
       - name: Publish assets
