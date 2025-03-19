@@ -16,7 +16,7 @@
   "scripts": {
     "start": "docusaurus start -p 3000",
     "swizzle": "docusaurus swizzle",
-    "build": "mkdir -p ./build && gulp build && docusaurus build && rm -rf docs && mkdir docs && cp -rfn build/* docs && cp -rfn build/**/* docs",
+    "build": "mkdir -p ./build && docusaurus build && rm -rf docs && mkdir docs && cp -rfn build/* docs && cp -rfn build/**/* docs",
     "serve": "docusaurus serve"
   },
   "dependencies": {
