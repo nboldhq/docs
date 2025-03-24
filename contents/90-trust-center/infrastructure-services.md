@@ -29,20 +29,17 @@ Especially, nBold leverages the following Microsoft Teams extensibility componen
 | Messaging Extensions (Custom Actions) | Initiate actions from conversations |
 | Deep links | Initiate conversation based on business processes |
 
-## Microsoft Azure
+# Microsoft Azure Infrastructure
 
-The nBold Platform relies entirely on the Microsoft Azure platform.  
-Here is a summary of the key architecture components involved:
+La plateforme nBold repose entièrement sur Microsoft Azure. Voici un résumé des principaux composants architecturaux impliqués :
 
-| Service | Role |
+| Service | Rôle |
 |---------|------|
-| Azure Traffic Manager | Azure Traffic Manager is a DNS-based traffic load balancer that enables us to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. We're using it to increase application availability, improve application performance and perform service maintenance without downtime. [Learn more...](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview) |
-| Azure App Service | The nBold Platform is hosted as a containerized app on Linux, enabling vertical and horizontal scale-up based on application needs and reach high availability. [Learn more...](https://docs.microsoft.com/en-us/azure/app-service/) |
-| Azure Application Insights | Application Insights is an extensible Application Performance Management (APM). We're using it to monitor our live production environments, gather telemetry such as performance counters, Azure diagnostics, Docker logs and diagnostic trace logs. [Learn more...](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-overview) |
-| Azure Cache for Redis | Azure Cache for Redis is based on the popular software [Redis](https://redis.io/). It is used as a cache mechanism to improve the performance and scalability of the nBold Platform, especially for back-end data store access and external APIs requests. [Learn more...](https://docs.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview) |
-| Azure Cosmos DB | Azure Cosmos DB is a globally distributed, multi-model database service that supports document, key-value, wide-column, and graph databases. The nBold Platform relies on it as the main back-end data store. [Learn more...](https://docs.microsoft.com/en-us/azure/cosmos-db/)
-| Azure Key Vault | Microsoft Azure Key Vault is a cloud-hosted management service that allows the nBold Platform to encrypt keys and small secrets by using keys that are protected by hardware security modules (HSMs). The nBold Platform relies on it to store securely its encryption keys. [Learn more...](https://docs.microsoft.com/en-us/azure/key-vault/) |
-| Azure Blob Storage | Azure Blob Storage is a massively scalable object storage for unstructured data that allows the nBold Platform to store securely blobs contents such as images. [Learn more...](https://azure.microsoft.com/en-us/services/storage/blobs/) |
+| **Azure Virtual Machines (VM)** | Des machines virtuelles sont utilisées pour héberger RabbitMQ et Redis, permettant une gestion optimisée des files de messages et du cache sans dépendre d’un service managé. |
+| **Azure Container Apps** | La plateforme nBold est désormais déployée sous forme d’applications conteneurisées sur Azure Container Apps, offrant une meilleure scalabilité et gestion des ressources. |
+| **Azure Container Registry (ACR)** | Les images des conteneurs de la plateforme sont stockées et gérées dans Azure Container Registry pour faciliter le déploiement et la mise à jour. |
+
+Cette nouvelle architecture améliore la flexibilité et optimise les coûts d’exploitation tout en maintenant une haute disponibilité.
 
 :::tip
 Learn more about Azure Data Residency from our [Privacy policy](/trust-center/privacy-policy) page

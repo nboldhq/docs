@@ -22,6 +22,8 @@ The following versions of nBold are currently being supported with security upda
 
 | Version | Supported |
 | ------- | --------- |
+| 7.x.x   | ✅         |
+| 6.x.x   | ✅         |
 | 5.1.x   | ✅         |
 | 4.24.x   | ✅         |
 | 3.x.x   | 🚫         |

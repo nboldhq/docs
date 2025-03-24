@@ -7,5 +7,5 @@ You can use a Postman collection to get started with the nBold API in minutes:
 4. Paste the following URL and choose **Import**.
 
 ```
-https://assets.nbold.io/api/nbold-api-openapi-latest.yaml
+https://raw.githubusercontent.com/nboldhq/PowerPlatformConnectors/refs/heads/dev/certified-connectors/nBold/openapidefinition.json
 ```

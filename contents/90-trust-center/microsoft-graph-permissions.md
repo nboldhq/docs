@@ -1,7 +1,7 @@
 ---
 position: "4"
 status: published
-author: Guillaume Meyer
+author: nBold DEV
 
 ---
 # Microsoft Graph Permissions
@@ -120,10 +120,7 @@ This basic scope is requested by the nBold app once the user is authenticated, t
 | `offline_access` | Delegated | OpenID | Allows nBold to retreive a refresh token used to refresh the access token of the current user from the application web client. | No |
 | `email` | Delegated | OpenID | Allows nBold to read the email address of the current user. | No |
 | `profile` | Delegated | OpenID | Allows nBold to read the basic profile (name, picture, user name) of the current user. | No |
-| `User.ReadBasic.All` | Delegated | Microsoft Graph | Allows nBold to retreive the list of users from the directory, used when a user is requesting a new team and wants to add members and owners. | No |
-| `Team.ReadBasic.All` | Delegated | Microsoft Graph | Allows nBold to retreive the list of teams a user is a member of, used to show the list of teams from the `Home` tab of the nBold app. | No |
-| `Channel.ReadBasic.All` | Delegated | Microsoft Graph | Allows nBold to retreive the list of channels from the teams a user is a member of, used to show the list of channels for each team from the `Home` tab of the nBold app. | No |
-
+| `User.Read` | Delegated | Microsoft Graph | Allows nBold to read the profile of signed-in users. It also allows the app to read basic company information of signed-in users. | No |
 
 ### Home scope
 
@@ -149,7 +146,7 @@ In addition to the basic scope, when a user is trying to access the `Catalog` ta
 
 ### Settings scope
 
-When a user is trying to access the `Settings` tab (and of course if the user was granted the `Global Administrator` or the `Teams Administrator` role), nBold only requests the permissions from the `Basic scope` as the only required permission is `User.ReadBasic.All` (already included in `Basic scope`)
+When a user is trying to access the `Settings` tab (and of course if the user was granted the `Global Administrator` or the `Teams Administrator` role), nBold only requests the permissions from the `Basic scope` as the only required permission is `User.Read` (already included in `Basic scope`)
 
 
 ### Service account scope
@@ -158,34 +155,37 @@ If the application is executed in the context of a service account model, when a
 
 | Permission | Type | Origin | Justification | Admin Consent Required |
 |------------|------|--------|---------------|:----------------------:|
-| `openid` | Delegated | OpenID | Allows nBold to sign-in the service account. | No |
-| `offline_access` | Delegated | OpenID | Allows nBold to retreive a refresh token used to refresh the access token of the service account. | No |
-| `email` | Delegated | OpenID | Allows nBold to read the email address of the service account. | No |
-| `profile` | Delegated | OpenID | Allows nBold to read the basic profile (name, picture, user name) of the service account. | No |
-| `Mail.Send` | Delegated | Microsoft Graph | If an organization-level provider has been defined from the `Settings` tab, the team creation approval emails will be sent by the service account itself (instead of sending emails through an external mailer service) | No |
-| `User.Read.All` | Delegated | Microsoft Graph | Allows the service account to search for users in the directory. | Yes |
-| `Directory.AccessAsUser.All` | Delegated | Microsoft Graph | Allows the app to have the same access to information in the directory as the signed-in user. | Yes |
-| `Group.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to perform administrative operations (especially applying sensitivity or retention labels, applying groups policies...) on the groups associated with teams. | Yes |
-| `Team.ReadBasic.All` | Delegated | Microsoft Graph | Read basic information about teams (name, description...) | No |
-| `Team.Create` | Delegated | Microsoft Graph | Allows the service account to create new teams. | Yes |
-| `TeamSettings.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to retreive and update teams settings. | Yes |
-| `TeamsAppInstallation.ReadWriteForTeam` | Delegated | Microsoft Graph | Allows the service account to install apps in a team to provision new tabs during the provisioning process. | Yes |
-| `TeamMember.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage members of teams. | Yes |
-| `TeamsTab.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to create and manage tabs as part of the provisioning process. | Yes |
-| `Channel.Create` | Delegated | Microsoft Graph | Allows the service account to create and manage channels as part of the provisioning process. | Yes |
-| `ChannelSettings.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage channels settings. | Yes |
-| `ChannelMember.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to manage channels members. | Yes |
-| `ChannelMessage.Read.All` | Delegated | Microsoft Graph | Read teams channels messages as part of the provisioning process to copy messages between a team template and a new team | Yes |
-| `ChannelMessage.ReadWrite` | Delegated | Microsoft Graph | Update an existing message as part of our connected apps solutions | Yes |
-| `ChannelMessage.Send` | Delegated | Microsoft Graph | Create a new team channel message as part of the provisioning process to copy messages between a team template and a new team | Yes |
-| `Sites.FullControl.All` | Delegated | Microsoft Graph | Used to perform administrative operations (such as provisioning lists) on SharePoint sites created as part of the provisioning process | Yes |
-| `Notes.ReadWrite.All` | Delegated | Microsoft Graph | Allows the service account to copy OneNote notebooks as part of the provisioning process. | No |
-| `Reports.Read.All` | Delegated | Microsoft Graph | Used to gather statistics about teams, channels and users as part of our analytics feature |  Yes |
-| `ReportSettings.Read.All` | Delegated | Microsoft Graph | Used to determine if the Microsoft 365 reports are using anonymized IDs or not |  Yes |
-| `InformationProtectionPolicy.Read` | Delegated | Microsoft Graph | Allows the service account to retreive and apply (granted he has the required licenses) sensitivity labels to teams. | No |
-| `Notifications.ReadWrite.CreatedByApp` | Delegated | Microsoft Graph | Will be used to send and manage native Microsoft Teams notifications to approvers during approval process and to team requesters at the end of a team provisioning. | No |
-| `People.Read` | Delegated | Microsoft Graph | Will be used to generate a ranked list of relevant people for the signed-in user, to make recommendations during the creation of a team. | No |
-
+| `email` | Delegated | Microsoft Graph | Allows the app to view users' email addresses. | Yes |
+| `offline_access` | Delegated | Microsoft Graph | Maintains access to data the app has been given access to. | Yes |
+| `openid` | Delegated | Microsoft Graph | Allows the app to sign users in. | Yes |
+| `profile` | Delegated | Microsoft Graph | Allows the app to view users' basic profiles. | Yes |
+| `User.Read` | Delegated | Microsoft Graph | Allows the app to sign in and read the user's profile. | Yes |
+| `AppCatalog.Read.All` | Delegated | Microsoft Graph | Allows the app to read all app catalogs. | Yes |
+| `Mail.Send` | Delegated | Microsoft Graph | Allows the app to send mail as a user. | Yes |
+| `User.Read.All` | Delegated | Microsoft Graph | Allows the app to read all users' full profiles. | Yes |
+| `Directory.AccessAsUser.All` | Delegated | Microsoft Graph | Allows the app to access the directory as the signed-in user. | Yes |
+| `Group.ReadWrite.All` | Delegated | Microsoft Graph | Allows the app to read and write all groups. | Yes |
+| `Team.ReadBasic.All` | Delegated | Microsoft Graph | Allows the app to read the names and descriptions of teams. | Yes |
+| `Team.Create` | Delegated | Microsoft Graph | Allows the app to create teams. | Yes |
+| `TeamsActivity.Send` | Delegated | Microsoft Graph | Allows the app to send a teamwork activity as the user. | Yes |
+| `TeamSettings.ReadWrite.All` | Delegated | Microsoft Graph | Allows the app to read and change teams' settings. | Yes |
+| `TeamsAppInstallation.ReadWriteForTeam` | Delegated | Microsoft Graph | Allows the app to manage installed Teams apps in teams. | Yes |
+| `TeamMember.ReadWrite.All` | Delegated | Microsoft Graph | Allows the app to add and remove members from teams. | Yes |
+| `TeamsTab.ReadWrite.All` | Delegated | Microsoft Graph | Allows the app to read and write tabs in Microsoft Teams. | Yes |
+| `Channel.Create` | Delegated | Microsoft Graph | Allows the app to create channels. | Yes |
+| `ChannelSettings.ReadWrite.All` | Delegated | Microsoft Graph | Allows the app to read and write the names, descriptions, and settings of channels. | Yes |
+| `ChannelMember.ReadWrite.All` | Delegated | Microsoft Graph | Allows the app to add and remove members from channels. | Yes |
+| `ChannelMessage.Read.All` | Delegated | Microsoft Graph | Allows the app to read user channel messages. | Yes |
+| `ChannelMessage.ReadWrite` | Delegated | Microsoft Graph | Allows the app to read and write user channel messages. | Yes |
+| `ChannelMessage.Send` | Delegated | Microsoft Graph | Allows the app to send channel messages. | Yes |
+| `Sites.FullControl.All` | Delegated | Microsoft Graph | Allows the app to have full control of all site collections. | Yes |
+| `Notes.ReadWrite.All` | Delegated | Microsoft Graph | Allows the app to read and write all OneNote notebooks that the user can access. | Yes |
+| `Reports.Read.All` | Delegated | Microsoft Graph | Allows the app to read all usage reports. | Yes |
+| `ReportSettings.Read.All` | Delegated | Microsoft Graph | Allows the app to read admin report settings. | Yes |
+| `InformationProtectionPolicy.Read` | Delegated | Microsoft Graph | Allows the app to read user sensitivity labels and label policies. | Yes |
+| `User.ReadBasic.All` | Delegated | Microsoft Graph | Allows the app to read all users' basic profiles. | Yes |
+| `Channel.ReadBasic.All` | Delegated | Microsoft Graph | Allows the app to read the names and descriptions of channels. | Yes |
+| `People.Read` | Delegated | Microsoft Graph | Allows the app to read users' relevant people lists. | Yes |
 
 ## Service Account
 A service account is a user identity that is associated with a service executable (such as nBold) for the purpose of providing a security context for that service.

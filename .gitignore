@@ -5,6 +5,7 @@
 .docusaurus
 .cache-loader
 /build
+docs
 /temp
 
 # Misc
