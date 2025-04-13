@@ -45,7 +45,7 @@
     "broken-link-checker": "^0.7.8",
     "front-matter": "^4.0.2",
     "gulp": "^4.0.2",
-    "swagger-ui-react": "^4.15.5"
+    "swagger-ui-react": "^5.17.14"
   },
   "browserslist": {
     "production": [
