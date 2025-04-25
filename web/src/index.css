@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sidebar-width: 270px;
+  --sidebar-width-collapsed: 80px;
+  --header-height: 70px;
+}
+
+body {
+  @apply font-sans text-gray-800 bg-gray-50 dark:bg-gray-900 dark:text-gray-200 antialiased;
+}
+
+.sidebar-transition {
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.main-transition {
+  transition: margin-left 0.3s ease, padding-left 0.3s ease;
+}
+
+.chart-transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-hover-effect {
+  @apply transition-shadow duration-300 ease-in-out;
+}
+
+.card-hover-effect:hover {
+  @apply shadow-card-hover;
+}
+
+/* Tailwind CSS custom class to hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.prose > * {
+  all: revert;
+}
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none;
+  }
+  .border-gradient {
+    @apply bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000] p-0.5 rounded-full inline-block;
+  }
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 dark:bg-primary-700 dark:hover:bg-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-gray-900 border border-gray-200 hover:bg-gray-100 
+    dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-700;
+  }
+  
+  .btn-sm {
+    @apply h-8 px-3 rounded-md;
+  }
+  
+  .btn-md {
+    @apply h-10 px-4 py-2 rounded-md;
+  }
+  
+  .btn-lg {
+    @apply h-12 px-6 rounded-lg;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden border border-gray-100 dark:border-gray-700;
+  }
+  
+  .page-container {
+    @apply px-4 sm:px-6 lg:px-8 py-6;
+  }
+}

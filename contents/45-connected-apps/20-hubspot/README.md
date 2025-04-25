@@ -1,2 +1,0 @@
-# HubSpot collaboration processes
-
