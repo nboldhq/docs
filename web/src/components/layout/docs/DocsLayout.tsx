@@ -7,105 +7,114 @@ import DocsSidebarItem from './DocsSidebarItem';
 import DocsFooter from './DocsFooter';
 
 type Category = {
-  icon: string;
-  id: number;
   name: string;
-  description: string;
-  parentId: number | null;
-  author?: string;
-  tags?: string[];
-  title?: string;
+  path: string;
+  contentPath: string;
   subItems?: Category[];
 };
 
-const DocsLayout: React.FC<{
-  children: React.ReactNode;
-  categories: Category[];
-}> = ({ children }) => {
+const DocsLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<string[]>(['getting-started']);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleExpanded = (itemId: string) => {
     setExpandedItems((prev) =>
-      prev.includes(itemId)
-        ? prev.filter((id) => id !== itemId)
-        : [...prev, itemId]
+      prev.includes(itemId) ? prev.filter((id) => id !== itemId) : [...prev, itemId]
     );
   };
+
   const toggleDarkMode = () => {
-    const htmlElement = document.documentElement;
-    htmlElement.classList.toggle('dark');
+    document.documentElement.classList.toggle('dark');
     setIsDarkMode(!isDarkMode);
   };
-  const buildCategoryTree = (flatCategories: Category[]) => {
-    const categoryMap: Record<string | number, Category & { subItems: Category[] }> = {};
-    const roots: Category[] = [];
 
-    flatCategories.forEach((cat) => {
-      categoryMap[cat.id] = { ...cat, subItems: [] };
-    });
+  const formatName = (slug: string) =>
+  slug
+    .replace(/^\d+-/, '') 
+    .replace(/-/g, ' ')    
+    .replace(/\.md$/, '')  
+    .replace(/\b\w/g, (l) => l.toUpperCase()); 
 
-    flatCategories.forEach((cat) => {
-      if (cat.parentId && categoryMap[cat.parentId]) {
-        categoryMap[cat.parentId].subItems.push(categoryMap[cat.id]);
-      } else {
-        roots.push(categoryMap[cat.id]);
+const buildCategoryTree = (files: Record<string, () => Promise<unknown>>): Category[] => {
+  const tree: Record<string, Category> = {};
+
+  Object.keys(files).forEach((filePath) => {
+    const parts = filePath.split('/');
+    const contentIndex = parts.indexOf('docs');
+    const relativeParts = parts.slice(contentIndex); 
+
+    if (!relativeParts.length) return;
+
+    const isReadme = relativeParts.at(-1)?.toLowerCase() === 'readme.md';
+    const slugParts = relativeParts.slice(1, -1);
+
+
+    const slugify = (str: string) => str.toLowerCase().replace(/\s+/g, '-');
+
+    const addToTree = (parts: string[], index: number, parentPath: string, parent: Category[] | undefined) => {
+      if (index >= parts.length) return;
+
+      const name = formatName(parts[index]);
+      const currentPath = parentPath ? `${parentPath}/${slugify(parts[index])}` : slugify(parts[index]);
+
+      let existing = parent!.find((item) => item.name === name);
+      if (!existing) {
+        existing = {
+          name,
+          path: `/docs/${currentPath}`,
+          contentPath: '',
+          subItems: [],
+        };
+        parent!.push(existing);
       }
-    });
 
-    return roots;
-  };
+      if (index === parts.length - 1 && isReadme) {
+        existing.contentPath = filePath;
+      }
+
+      addToTree(parts, index + 1, currentPath, existing.subItems);
+    };
+
+    if (slugParts.length) {
+      addToTree(slugParts, 0, '', tree['root']?.subItems || (tree['root'] = { name: 'root', path: '', contentPath: '', subItems: [] }).subItems);
+    }
+  });
+
+  return tree['root']?.subItems || [];
+};
+
 
   useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/api/categories');
-        if (!response.ok) throw new Error('Network response was not ok');
-        const data: Category[] = await response.json();
-        const tree = buildCategoryTree(data);
-        setCategories(tree);
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-        setCategories([]);
-      }
-    };
+    const markdownFiles = import.meta.glob('../../../../../docs/**/*.md');
+    console.log('Found markdown files:', Object.keys(markdownFiles));
   
-    fetchCategories();
+    const tree = buildCategoryTree(markdownFiles);
+    setCategories(tree);
   }, []);
   
 
   const renderSidebarItems = (items: Category[]) =>
-    items.map((category) => {
-      const tagSegment = category.tags?.join('-') || 'untagged';
-      const fullPath = `/docs/${tagSegment}`;
-
-      return (
-        <DocsSidebarItem
-          key={category.id}
-          icon={category.icon}
-          label={category.name}
-          path={fullPath}
-          isActive={location.pathname === fullPath}
-          hasSubItems={category.subItems?.length > 0}
-          isExpanded={expandedItems.includes(String(category.id))}
-          onToggle={() => toggleExpanded(String(category.id))}
-          subItems={category.subItems?.map((sub) => {
-            const subTitle =
-              sub.title?.toLowerCase().replace(/\s+/g, '-') ||
-              sub.name.toLowerCase().replace(/\s+/g, '-');
-            const subTags = sub.tags?.join('-') || 'untagged';
-
-            return {
-              label: sub.name,
-              path: `/docs/${subTags}/${subTitle}`,
-            };
-          })}
-        />
-      );
-    });
+    items.map((category) => (
+      <DocsSidebarItem
+        key={category.path}
+        icon=""
+        label={category.name}
+        path={category.path}
+        isActive={location.pathname === category.path}
+        hasSubItems={!!category.subItems?.length}
+        isExpanded={expandedItems.includes(category.name.toLowerCase().replace(/\s+/g, '-'))}
+        onToggle={() =>
+          toggleExpanded(category.name.toLowerCase().replace(/\s+/g, '-'))
+        }
+        subItems={category.subItems?.map((sub) => ({
+          label: sub.name,
+          path: sub.path,
+        }))}
+      />
+    ));
 
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-black">
@@ -116,7 +125,6 @@ const DocsLayout: React.FC<{
             onClick={() => setIsSidebarOpen(false)}
           />
         )}
-
         <div className="flex">
           <aside
             className={`fixed top-0 left-0 h-full bg-white dark:bg-black border-r border-gray-200 dark:border-gray-700 transform ${
@@ -124,8 +132,6 @@ const DocsLayout: React.FC<{
             } transition-transform duration-300 ease-in-out min-w-80 z-40`}
           >
             <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-              <div className="flex items-center">
-              </div>
               <button
                 className="p-2 text-gray-500 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300"
                 onClick={toggleDarkMode}
@@ -140,21 +146,21 @@ const DocsLayout: React.FC<{
           </aside>
           <div className={`flex-1 ml-0 transition-all duration-300 ease-in-out ${isSidebarOpen ? 'ml-64' : 'ml-0'}`}>
             <button
-                className="fixed top-1 left-4 z-50 flex items-center gap-2 p-2 mt-3"
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                aria-label="Toggle Sidebar"
-              >
-                <div className="flex items-center">
-                  <NBoldIcon />
-                  <span className="text-4xl font-bold text-gray-900 dark:text-white">
-                    Bold
-                    <span className="text-sm align-super ml-1 text-black dark:text-gray-500">Docs</span>
-                  </span>
-                </div>
-              </button>
+              className="fixed top-1 left-4 z-50 flex items-center gap-2 p-2 mt-3"
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              aria-label="Toggle Sidebar"
+            >
+              <div className="flex items-center">
+                <NBoldIcon />
+                <span className="text-4xl font-bold text-gray-900 dark:text-white">
+                  Bold
+                  <span className="text-sm align-super ml-1 text-black dark:text-gray-500">Docs</span>
+                </span>
+              </div>
+            </button>
           </div>
         </div>
-        <main className=" flex-1">
+        <main className="flex-1">
           <DocsNavbar />
           <div className="max-w-4xl mx-auto mb-8 mt-20 min-h-screen">{children}</div>
           <DocsFooter />

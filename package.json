@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "vite-plugin-md": "^0.21.5"
+  }
+}

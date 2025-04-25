@@ -1,106 +1,105 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { Routes, Route, useParams } from 'react-router-dom';
 import DocsLayout from '../../components/layout/docs/DocsLayout';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Spinner } from '@heroui/react';
 
-interface Category {
-  id: number;
-  name: string;
-  description?: string;
-  parentId: number | null;
-  icon?: string;
-}
+const markdownFiles = import.meta.glob('../../../../../docs/**/*.md', {
+  query: '?raw',
+  import: 'default',
+});
 
-const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({ categories }) => {
-  const { tags, title } = useParams<{ tags: string; title: string }>();
-  const [category, setCategory] = useState<Category | null>(null);
-  const markdownContent = category ? category.description : '';
+const slugify = (str: string) =>
+  str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '') // allow letters, numbers, spaces, hyphens
+    .replace(/\s+/g, '-') // convert spaces to dashes
+    .replace(/-+/g, '-'); // collapse multiple dashes
 
+
+    const findMatchingPath = (tags?: string, title?: string) => {
+      const slugParts = [tags, title].filter(Boolean).map(slugify);
+    
+      return Object.keys(markdownFiles).find((path) => {
+        const normalized = path
+          .toLowerCase()
+          .replace('../../../../docs/', '') // adjust to match your actual key
+          .replace('/readme.md', '') // remove filename
+          .split('/')
+          .map(slugify)
+          .join('/');
+    
+        return normalized === slugParts.join('/');
+      });
+    };
+    
+
+const CategoryDocumentation: React.FC = () => {
+  const { tags, title } = useParams();
+  const [content, setContent] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (categories.length > 0) {
-      const formattedTitle = title?.toLowerCase().replace(/\s+/g, '-');
-      const matched = categories.find((c) => {
-        const cTitle = (c.title || c.name).toLowerCase().replace(/\s+/g, '-');
-        const cTags = (c.tags || []).join('-');
-        return title
-          ? cTitle === formattedTitle && cTags === tags
-          : cTags === tags && c.parentId === null;
+    const matchedPath = findMatchingPath(tags, title);
+    setLoading(true);
+    console.log("Matching markdown path:", matchedPath);
+    console.log("Available paths:", Object.keys(markdownFiles));
+    
+    if (matchedPath && markdownFiles[matchedPath]) {
+      markdownFiles[matchedPath]().then((markdown: string) => {
+        setContent(markdown);
+        setLoading(false);
       });
-      setCategory(matched || null);
+    } else {
+      setContent('# Page not found\n\nLe fichier Markdown est introuvable.');
+      setLoading(false);
     }
-  }, [categories, tags, title]);
-  
+  }, [tags, title]);
 
-  if (!category)return (
-    <div className="flex justify-center items-center h-screen p-8">
-      <Spinner color="danger" />
-    </div>
-  );
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen p-8">
+        <Spinner color="danger" />
+      </div>
+    );
+  }
+
   return (
-    <div className="prose dark:prose-invert max-w-none">
-      {category.description && (
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            h1: ({ ...props }) => <h1 className="text-4xl font-bold mb-6" {...props} />,
-            h2: ({ ...props }) => <h2 className="text-2xl font-semibold mb-4" {...props} />,
-            p: ({ ...props }) => <p className="text-gray-600 dark:text-gray-300 mb-4" {...props} />,
-            ul: ({ ...props }) => <ul className="list-disc list-inside ml-5 mb-4" {...props} />,
-            li: ({ ...props }) => <li className="mb-2" {...props} />,
-            a: ({ ...props }) => <a className="text-[#ff003d] hover:underline" {...props} />,
-            img: ({ ...props }) => (
-              <img
-                className="w-full h-auto object-cover rounded-xl border border-gray-300 dark:border-gray-700 mb-8"
-                {...props}
-              />
-            ),
-          }}
-        >
-          {markdownContent}
-        </ReactMarkdown>
-      )}
+    <div className="prose dark:prose-invert max-w-none p-8">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          h1: (props) => <h1 className="text-4xl font-bold mb-6" {...props} />,
+          h2: (props) => <h2 className="text-2xl font-semibold mb-4" {...props} />,
+          p: (props) => <p className="text-gray-600 dark:text-gray-300 mb-4" {...props} />,
+          ul: (props) => <ul className="list-disc list-inside ml-5 mb-4" {...props} />,
+          li: (props) => <li className="mb-2" {...props} />,
+          a: (props) => <a className="text-[#ff003d] hover:underline" {...props} />,
+          img: (props) => (
+            <img
+              className="w-full h-auto object-cover rounded-xl border border-gray-300 dark:border-gray-700 mb-8"
+              {...props}
+            />
+          ),
+        }}
+      >
+        {content}
+      </ReactMarkdown>
     </div>
   );
 };
 
-
 const DocsPage: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [categories, setCategories] = useState<Category[]>([]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
-    document.documentElement.classList.toggle('dark');
-  };
-
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/api/categories');
-        if (!response.ok) throw new Error('Network error');
-        const data = await response.json();
-        setCategories(data);
-      } catch (e) {
-        console.error('Failed to fetch categories:', e);
-      }
-    };
-
-    fetchCategories();
-  }, []);
-
   return (
-    <DocsLayout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} categories={categories}>
+    <DocsLayout>
       <Routes>
-        <Route path="/:tags" element={<CategoryDocumentation categories={categories} />} />
-        <Route path="/:tags/:title" element={<CategoryDocumentation categories={categories} />} />
+        <Route path="/:tags" element={<CategoryDocumentation />} />
+        <Route path="/:tags/:title" element={<CategoryDocumentation />} />
       </Routes>
     </DocsLayout>
   );
 };
-
-
 
 export default DocsPage;

@@ -1,10 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import mdPlugin from 'vite-plugin-md';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  logLevel: 'info', // Ensure this isn't set to 'silent'
+  logLevel: 'info',
+  assetsInclude: ['**/*.md'],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
