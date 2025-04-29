@@ -1,5 +1,8 @@
+# Dependency directories
+node_modules/
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +10,84 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build output
+dist/
+build/
+.temp/
+.temp/**
+.cache/
+.cache-loader/
+out/
+.next/
+.next/**
+
+# Docusaurus
+.docusaurus/
+
+# Testing
+coverage/
+*.lcov
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local development overrides
 *.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Editor directories and files
-.vscode/*
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Misc
+*.tgz
+*.bak
+*.orig
+
+# Ignore Firebase emulators if used
+.firebase/
+
+# Ignore next export static output
+out/
+
+# Ignore vercel build output
+.vercel/
+
+# Ignore storybook static files
+storybook-static/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore JetBrains IDEs (WebStorm, IntelliJ)
+*.iml
+*.iws
+*.ipr
+
+# Ignore typescript cache
+*.tsbuildinfo

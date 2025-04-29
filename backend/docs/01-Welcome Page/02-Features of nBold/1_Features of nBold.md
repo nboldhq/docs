@@ -1,10 +1,17 @@
 ---
-title: Features of nBold
-author: Kristina Konstantnyova
-tags: [introduction]
----
 
-# Key Features
+        title: Features of nBold 
+
+        author: Kristina Konstantnyova
+
+        tags: [introduction]
+
+        status: undefined
+
+        ---
+
+
+        # Key Features
 nBold lets organizations improve their collaborative processes through the ability to easily create an advanced Microsoft Teams Template and get a Collaboration Template Catalog to let anyone create a Teams based on those Templates. You'll find hereafter the Key features of nBold.
 
 ## Advanced Collaboration Template creation

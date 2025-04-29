@@ -29,6 +29,7 @@ interface Category {
   author?: string;
   tags?: string[];
   title?: string;
+  
 }
 
 const CategoriesPage: React.FC = () => {
@@ -127,6 +128,7 @@ const CategoriesPage: React.FC = () => {
       console.error('Error deleting category:', error);
     }
   };
+
   const resetForm = () => {
     setEditingCategory(null);
     setParentIdForAdd(null);
@@ -180,9 +182,7 @@ const CategoriesPage: React.FC = () => {
     const reader = new FileReader();
     reader.onload = (event) => {
       const text = event.target?.result as string;
-  
-      // Match the frontmatter (YAML)
-      const frontmatterMatch = text.match(/^---\n([\s\S]+?)\n---\n?/);
+        const frontmatterMatch = text.match(/^---\n([\s\S]+?)\n---\n?/);
       let frontmatter = {};
       let markdownBody = text;
   
@@ -288,14 +288,14 @@ const CategoriesPage: React.FC = () => {
                 />
                    <div className="flex gap-4">
                       <Select
-                        label="Visibility"
-                        selectedKeys={visibility ? [visibility] : []}
-                        onChange={(e) => setVisibility(e.target.value)}
-                        className="w-40"
-                      >
-                        <SelectItem value="public">Public 🌐</SelectItem>
-                        <SelectItem value="private">Private 🔒</SelectItem>
-                      </Select>
+                          label="Visibility"
+                          selectedKeys={visibility ? [visibility] : []}
+                          onChange={(e) => setVisibility(e.target.value)}
+                          className="w-40"
+                        >
+                          <SelectItem value="public">Public 🌐</SelectItem>
+                          <SelectItem value="private">Private 🔒</SelectItem>
+                        </Select>
                     </div>
               </div>         
 

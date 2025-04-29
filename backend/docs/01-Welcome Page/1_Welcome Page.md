@@ -1,10 +1,17 @@
 ---
-title: Welcome Page
-author: Kristina Konstantnyova
-tags: [introduction]
----
 
-# Welcome to nBold
+        title: Welcome Page
+
+        author: Kristina Konstantnyova
+
+        tags: [welcome-page]
+
+        status: undefined
+
+        ---
+
+
+        # Welcome to nBold
 
 ## Templatize your processes
 

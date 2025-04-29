@@ -3,18 +3,30 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { cn } from "../../../utils/cn";
 
-interface DocsSidebarItemProps {
-    icon: React.ReactNode;
+interface SidebarSubItem {
+  label: string;
+  path: string;
+  subItems?: Array<{
     label: string;
     path: string;
-    isActive: boolean;
-    hasSubItems?: boolean;
-    isExpanded?: boolean;
-    onToggle?: () => void;
-    subItems?: Array<{ label: string; path: string }>;
-    description?: string;
+    subItems?: Array<{
+      label: string;
+      path: string;
+      subItems?: any[]; // optional support for deeper levels
+    }>;
+  }>;
   }
-  
+
+interface DocsSidebarItemProps {
+  icon: React.ReactNode;
+  label: string;
+  path: string;
+  isActive: boolean;
+  hasSubItems?: boolean;
+  isExpanded?: boolean;
+  onToggle?: () => void;
+  subItems?: SidebarSubItem[];
+}
   const DocsSidebarItem: React.FC<DocsSidebarItemProps> = ({
     icon,
     label,
@@ -27,7 +39,15 @@ interface DocsSidebarItemProps {
   }) => {
     const navigate = useNavigate();
     const location = useLocation();
-  
+    const [expandedSubItems, setExpandedSubItems] = React.useState<string[]>([]);
+
+    const toggleSubItem = (label: string) => {
+      setExpandedSubItems((prev) =>
+        prev.includes(label)
+          ? prev.filter((item) => item !== label)
+          : [...prev, label]
+      );
+    };
     return (
       <div className="mb-1">
        <div
@@ -56,20 +76,57 @@ interface DocsSidebarItemProps {
         
         {hasSubItems && isExpanded && (
           <div className="ml-10 mt-1 space-y-1">
-            {subItems?.map((item, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "flex items-center px-4 py-2 rounded-md cursor-pointer text-sm transition-colors duration-200",
-                  location.pathname === item.path
-                    ? "text-[#ff0000]"
-                    : "text-gray-600 hover:text-[#ff0000]"
-                )}
-                onClick={() => navigate(item.path)}
-              >
-                {item.label}
-              </div>
-            ))}
+            {subItems?.map((item, index) => {
+              const isSubExpanded = expandedSubItems.includes(item.label);
+              const hasNested = item.subItems?.length > 0;
+
+              return (
+                <div key={index}>
+                  <div
+                    className={cn(
+                      "flex items-center px-4 py-2 rounded-md cursor-pointer text-sm transition-colors duration-200",
+                      location.pathname === item.path
+                        ? "text-[#ff0000]"
+                        : "text-gray-600 hover:text-[#ff0000]"
+                    )}
+                    onClick={() => {
+                      navigate(item.path);
+                      if (hasNested) toggleSubItem(item.label);
+                    }}
+                  >
+                    <span className="flex-grow">{item.label}</span>
+                    {hasNested && (
+                      <ChevronRight
+                        size={14}
+                        className={cn(
+                          "ml-auto transform transition-transform duration-200",
+                          isSubExpanded && "rotate-90"
+                        )}
+                      />
+                    )}
+                  </div>
+
+                  {hasNested && isSubExpanded && (
+                    <div className="ml-6">
+                      {item.subItems?.map((sub, subIndex) => (
+                        <div
+                          key={subIndex}
+                          className={cn(
+                            "flex items-center px-4 py-1 rounded-md cursor-pointer text-sm transition-colors duration-200",
+                            location.pathname === sub.path
+                              ? "text-[#ff0000]"
+                              : "text-gray-500 hover:text-[#ff0000]"
+                          )}
+                          onClick={() => navigate(sub.path)}
+                        >
+                          {sub.label}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </div>

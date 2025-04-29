@@ -9,6 +9,7 @@ const CategorySchema = new mongoose.Schema({
   author: String,
   tags: [String],
   title: String,
+
 }, { timestamps: true });
 
 export default mongoose.model('Category', CategorySchema);

@@ -1,10 +1,17 @@
 ---
-title: What is nbold
-author: Kristina Konstantnyova
-tags: [introduction]
----
 
-# nBold at a Glance
+        title: What is nbold
+
+        author: Kristina Konstantnyova
+
+        tags: [introduction]
+
+        status: undefined
+
+        ---
+
+
+        # nBold at a Glance
 nBold helps every organization to improve their Collaborative Processes in making it easy to build Collaboration Templates and automate it. You can build a template for any Collaborative purpose:
 
 * Repetitive processes such as Proposal Management, Crisis Management, Recruitment, etc.

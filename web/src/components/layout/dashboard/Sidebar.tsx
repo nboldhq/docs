@@ -3,9 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../contexts/AuthContext';
 import { 
   LayoutDashboard, 
-  Settings, 
-  HelpCircle, 
-  Bell,
   ChevronLeft,
   ChevronRight,
   ListCollapse,
@@ -131,7 +128,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
             collapsed={collapsed}
             onClick={() => {
               handleItemClick('categories');
-              navigate('/dashboard/categories');
+              navigate('/dashboard/categorytree');
             }}
           />
 
@@ -142,7 +139,17 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
             collapsed={collapsed}
             onClick={() => {
               handleItemClick('files');
-              navigate('/dashboard/filepage');
+              navigate('/dashboard/file');
+            }}
+          />
+           <SidebarItem
+            icon={<FolderClosed size={20} />}
+            label="Storage"
+            isActive={activeItem === 'storage'}
+            collapsed={collapsed}
+            onClick={() => {
+              handleItemClick('storage');
+              navigate('/dashboard/storage');
             }}
           />
         </ul>

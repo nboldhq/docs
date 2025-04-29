@@ -3,14 +3,18 @@ import DashboardLayout from '../../components/layout/dashboard/DashboardLayout';
 import Categories from './Categories';
 import Dashboard from './Dashboard'; // ✅ this should be your renamed dashboard component
 import FilesPage from './FilesPage';
-
+import StoragePage from './StoragePage';
+import CategoryTree from '../../pages/dashboard/CategoryTree'
 const DashboardRoutes = () => {
   return (
     <DashboardLayout>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="categories" element={<Categories />} />
-        <Route path="filepage" element={<FilesPage />} />
+        <Route path="file" element={<FilesPage />} />
+        <Route path="storage" element={<StoragePage />} />
+        <Route path="categorytree" element={<CategoryTree />} />
+
       </Routes>
     </DashboardLayout>
   );
