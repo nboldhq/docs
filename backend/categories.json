@@ -3,12 +3,14 @@
     "name": "Welcome Page",
     "description": "# Welcome to nBold\n\n## Templatize your processes\n\nMake sure each team member has all the necessary tools to collaborate efficiently by templatizing repetitive processes. Provide your team with content, policies, procedures, and standard tools for distinct types of teams. Your teams and communities will share their knowledge and coordinate activities highly efficiently across the entire organization.\n\n## Bring operational excellence\n\nProvide your teams with a pre-built working environment within 60 sec. Each time you start a new project, open a sales deal, or mitigate a crisis – your team will get a collaborative workspace with the same structure, file templates, document libraries, pre-built set of tasks, calendars, integrated apps, and more.\n\n## Ensure secure workspace\n\nEnsure a strong, predictable, and supported workspace without overloading your IT. Prevent information loss, duplication, the mess in your working environment, and unsecured business processes by implementing naming rules, membership policies, approval workflows, and much more.",
     "parentId": null,
-    "icon": "",
+    "icon": "💡",
     "tags": [
       "welcome-page"
     ],
     "author": "Kristina Konstantnyova",
-    "id": 1745927474490
+    "id": 1745927474490,
+    "isNew": true,
+    "visibility": "public"
   },
   {
     "name": "What is nbold",
@@ -19,29 +21,20 @@
       "introduction"
     ],
     "author": "Kristina Konstantnyova",
-    "id": 1745927513670
-  },
-  {
-    "name": "Features of nBold ",
-    "description": "# Key Features\nnBold lets organizations improve their collaborative processes through the ability to easily create an advanced Microsoft Teams Template and get a Collaboration Template Catalog to let anyone create a Teams based on those Templates. You'll find hereafter the Key features of nBold.\n\n## Advanced Collaboration Template creation\nBuild any Microsoft Teams Templates, to address any collaboration need in the organization, with:\n* List of Channels\n* List of Tabs\n* [Files and Folders](/catalog-manager-guide/collaboration-templates/files-and-folders)\n* Pre-configured Website Tabs\n* Pre-configured [Planner](/catalog-manager-guide/collaboration-templates/microsoft-planner) with Tasks, Buckets, Description, Buckets and Labels\n* Pre-configured [Forms](/catalog-manager-guide/collaboration-templates/microsoft-forms) Tab\n* Pre-configured [SharePoint Online Documentation Library](/catalog-manager-guide/collaboration-templates/sharepoint-library)\n\n## Collaboration Governance rule\nFeatures that IT will love! Microsoft Teams has been designed to address enterprise needs to scale collaboration in an organization. While there are tons of potential with Teams created with content such as Planner and Website Tabs, this can't be done without a strong Microsoft Teams Governance.\n\nAll the features described hereafter, are set at the template level:\n* [Naming Convention](/catalog-manager-guide/governance-policies/naming-conventions)\n* [Teams Creation Approval](/catalog-manager-guide/governance-policies/approval)\n* [Template Audience Targeting](/catalog-manager-guide/governance-policies/audience-targeting)\n* Teams Compliance with [Sensitivity Labels](/catalog-manager-guide/governance-policies/sensitivity-labels)\n* Teams [Enforced Privacy Policy](/catalog-manager-guide/governance-policies/security-policy)\n* Teams Creation Requester as non-Owner\n* [Mandatory number of Owners and Members](/catalog-manager-guide/governance-policies/mandatory-number-of-owners-and-members)\n* [Permanent Owners and Permanent Members](/catalog-manager-guide/governance-policies/permanent-owners-and-members-policy)\n\n![](https://downloads.intercomcdn.com/i/o/462804740/66f3b89c10e5add4bf608298/Screenshot+2022-02-10+at+10.43.05.png)\n\n## Collaboration Templates Corporate Catalog\nGet a Collaboration Template Catalog owned by your organization, tailored for your needs. Your company can provide Collaboration Templates such as: Project Management, Recruitment Process, Opportunity Management, Crisis Management, etc. The possibilities are endless!\n\n**Request a new team**\n\n1. Request a new team\n2. Select the appropriate Collaboration Template from your corporate catalog:\n\n![](https://downloads.intercomcdn.com/i/o/175628319/9367e7d111ffcaeb0e0001b5/image.png)\n\n3. Choose the team's name and description:\n\n![](https://downloads.intercomcdn.com/i/o/175628523/60feb48f0bd397ca2b0f343d/image.png)\n\n4. Define a welcome message that will be published in the `General` channel once the new Team is available.\n5. Select the team owners and members from your company directory.\n\n## Get a Home Page for Microsoft Teams\n\nGet an overview of all the Teams you belong to, search for the good one with a search bar.\n\n![](https://downloads.intercomcdn.com/i/o/175628763/d8e021026209861b63a4ac27/image.png)\n\n## Teams Approval\n\n* [Approval](/catalog-manager-guide/governance-policies/approval) Dashboard: see the requests that are Pending, Approved or Rejected\n* Request Review: update request information, approve or reject requests\n* Notification: email received by the approver to act, link to the teams created\n\n## Compliance\n\n* Protect your data with the help of [sensitivity labels](/catalog-manager-guide/governance-policies/security-policy)",
-    "parentId": 1745927474490,
-    "icon": "",
-    "tags": [
-      "introduction"
-    ],
-    "author": "Kristina Konstantnyova",
-    "id": 1745927555893
+    "id": 1745927513670,
+    "visibility": "public"
   },
   {
     "name": "Administrator Guide",
     "description": "# Administrator Guide\n\nIn this article, you will find all the documents regarding the key features of nBold, the Setup and Configuration Guide, and all other onboarding steps.\n\n1. [Overview and key features](https://docs.nbold.co/administrator-guide/Overview-key-features)\n2. [nBold Installation guide](https://docs.nbold.co/administrator-guide/Installation)\n3. [Setup Service Account](https://docs.nbold.co/administrator-guide/Service-Account-Setup)\n4. [Setup the Home App](https://docs.nbold.co/administrator-guide/homepage-setup)\n5. [Delegate Roles to users](https://docs.nbold.co/administrator-guide/delegate-template-catalog-administration)\n6. [How to Update Service Account](https://docs.nbold.co/administrator-guide/Update-Service-Account)\n7. [How to update the App packages](https://docs.nbold.co/administrator-guide/update-app-packages)\n8. [Assigning permission policies to nBold and Home App](https://docs.nbold.co/administrator-guide/allow-nbold-app-and-assign-the-right-teams-permission-policies)\n\nYou may need to allow the nBold domains and IP ranges, check 🏳 [Network Security](/trust-center/network-security)",
     "parentId": null,
-    "icon": "",
+    "icon": "🔒",
     "tags": [
       "administrator-guide"
     ],
     "author": "Shruti Priya",
-    "id": 1745927691381
+    "id": 1745927691381,
+    "visibility": "public"
   },
   {
     "name": "Overview",
@@ -49,31 +42,82 @@
     "parentId": 1745927691381,
     "icon": "",
     "tags": [
-      "administrators"
+      "administrator-guide"
     ],
     "author": "Kristina Konstantynova",
-    "id": 1745927741899
+    "id": 1745927741899,
+    "visibility": "public"
   },
   {
     "name": "Catalog Manager Guide",
     "description": "# Catalog Manager Guide\n\nIn this article, you will find all the documents on creating a Collaboration Template, setting up different Governance Policies, and various business scenarios for all your unique business needs.\n\n1. [Collaboration Templates](/catalog-manager-guide/collaboration-templates)\n   * [Create a new Collaboration Template](/catalog-manager-guide/collaboration-templates/create-a-new-collaboration-template) \n   * [All supported features for Collaboration Template ](/catalog-manager-guide/collaboration-templates/supported-features)\n   * [Updating Collaboration Template: What changes?](/catalog-manager-guide/collaboration-templates/what-happens-if-a-template-is-updated) \n   * [File Cloning Microsoft Forms ](/catalog-manager-guide/collaboration-templates/files-and-folders)\n   * [Clone Planner](/catalog-manager-guide/collaboration-templates/microsoft-planner) \n   * [Microsoft Teams Lists](/catalog-manager-guide/collaboration-templates/microsoft-teams-lists) \n   * [Office and Pdf Documents ](/catalog-manager-guide/collaboration-templates/office-and-pdf-documents)\n   * [OneNote Tab ](/catalog-manager-guide/collaboration-templates/onenote)\n   * [Private Channels Capabilities ](/catalog-manager-guide/collaboration-templates/private-channels)\n   * [SharePoint Library Tab](/catalog-manager-guide/collaboration-templates/sharepoint-library) \n   * [Wiki Tabs](/catalog-manager-guide/collaboration-templates/wiki-tabs)\n2. [Governance Policies](/catalog-manager-guide/governance-policies)\n   * [Disable a regular team creation for end users](/catalog-manager-guide/governance-policies/Creating-Teams-only-through-Templates) \n   * [Team creation approval workflow ](/catalog-manager-guide/governance-policies/approval)\n   * [Audience Targeting](/catalog-manager-guide/governance-policies/audience-targeting) \n   * [Mandatory Number of Owners and Members](/catalog-manager-guide/governance-policies/mandatory-number-of-owners-and-members) \n   * [Naming Convention](/catalog-manager-guide/governance-policies/naming-conventions) \n   * [Permanent Owners and Members Policy](/catalog-manager-guide/governance-policies/permanent-owners-and-members-policy) \n   * [Restrict guest access](/catalog-manager-guide/governance-policies/restrict-guest-access) \n   * [Security Policy](/catalog-manager-guide/governance-policies/security-policy) \n   * [Sensitivity Labels](/catalog-manager-guide/governance-policies/sensitivity-labels) \n   * [Serve Private Channels in Microsoft Teams only through Collaboration Templates ](/catalog-manager-guide/governance-policies/serve-private-channels)\n   * [How to use Active Directory Schema Extensions](/catalog-manager-guide/governance-policies/use-ad-schema-extensions)\n3. [Business Scenarios](/catalog-manager-guide/business-scenarios)\n   \n   * [Account Management](/catalog-manager-guide/business-scenarios/account-management)\n   * [Construction Management ](/catalog-manager-guide/business-scenarios/construction-site)\n   * [Crisis Management ](/catalog-manager-guide/business-scenarios/crisis-management)\n   * [Deal Room Template ](/catalog-manager-guide/business-scenarios/deal-room)\n   * [Product Launch ](/catalog-manager-guide/business-scenarios/product-launch)\n   * [Project Management ](/catalog-manager-guide/business-scenarios/project-management)\n   * [Store Opening ](/catalog-manager-guide/business-scenarios/store-opening)\n   * [Team of Executive Community](/catalog-manager-guide/business-scenarios/team-of-executive-committee)",
     "parentId": null,
-    "icon": "",
+    "icon": "📖",
     "tags": [
       "catalog-manager-guide"
     ],
     "author": "Shruti Priya",
-    "id": 1745927905905
+    "id": 1745927905905,
+    "visibility": "public"
+  },
+  {
+    "name": "Collaboration Templates",
+    "description": "# Collaboration Templates\n\nCollaboration Templates are pre-built workspaces with all the necessary information that a team needs to work together efficiently.\nYou can customize your workspace by integrating and pre-configuring any tool that you use, so your team can work on them directly without the need to juggle between apps.\n\nThrough collaboration templates, you can make a customized playbook for any business process and then replicate the rest of the collaboration spaces that you or your team need with this template. This not only saves time but also makes the entire process of collaboration easier, faster, and most importantly, more productive.\n\nNow, let's get started!",
+    "parentId": 1745927905905,
+    "icon": "",
+    "tags": [
+      "catalog-manger-guide"
+    ],
+    "author": "Kristina Konstantynova",
+    "id": 1745928010518,
+    "visibility": "public"
   },
   {
     "name": "Create a new Collaboration Template",
     "description": "# Create a new Collaboration Template\n\nnBold lets organizations build a Collaboration Templates Catalog that the company owns, letting user creates a Team needed to perform Business Activities such as Proposal Realization, Recruitment Session, Project Management, Crisis Management, etc.\n\nDo you want to create a Microsoft Teams Template to support any Collaborative Process in your organization? You'll be able to build it in just a few minutes and help your organization with New Recruitment, Business Proposals, New Store opening, Business Department collaborations, etc.\n\nSo, let's get started!\n\n## 1. Create a Team that will be the Original Team for the template\n\n1. Create a Team using the regular way and name it \"NAME OF THE USE CASE - Template\" (Deal Room - Template; Construction Site - Template; Marketing Department - Template; Project Management - Template... )\n2. Add the different Channels you want.\n3. Add files and folders in Files Tab\n4. Add the different Website tabs to refer to any Intranet Page, Website or WebApp Application (must be in `https://`)\n5. Add Planner in the relevant channels with Predefined Tasks, Checklist, Description, Labels and Buckets\n6. Add an image to this Team in Jpeg\n7. Remove all the wiki tabs from the channels created\n8. Add the nBold Service Account as an owner of the Team\n\n:::tip\n\nOn Windows 10 or Windows 11, launch the emoji keyboard clicking `Win + ;` and pimp the channel name with emoji 💪💯👌😍.  \nFor Mac devices, type `Control + Command + Space`.\n:::\n\n![](https://downloads.intercomcdn.com/i/o/462347098/2f4dddfcdc1c025f4f781728/Screenshot+2022-02-09+at+16.54.12.png)\n\n## 2. Add it to the Teams Template Corporate Catalog with Governance Policies (for Admins)\n\n1. Connect as a **Global Admin in Microsoft Teams**\n2. Select nBold in the App Store and go to `Catalog` Tab.\n3. Click on **`+ New Template`** on top right\n4. Enter the **name of the Team** created before\n5. Adapt the name of the Template to be shown to end-users in the catalog\n6. You will now see a Template creation form. By default, the first tab in the form if the **Info**.\n\n* Microsoft Teams Template name and description: This information is displayed to the end-user during the selection of the Template\n* What you'd like to include from the original team: different characteristics that will be cloned from the \"original team\" to the new one.\n\n![](/media/info-tab.png)\n\nYou can selectively enable or disable these characteristics among:\n\n* Apps: the apps installed in the \"original team\"\n* Tabs: the tabs added in the \"Original team\" like **Planner Tabs** will be cloned with tasks, descriptions, checklists, labels, and buckets, **Website Tabs** will be cloned with the pre-configured URL, **all other Tabs** will be replicated but not configured\n* Settings: The team settings configured in the \"original team\"\n* Channels: The channels created in the \"original team\" Members: The owners and members of the \"original team\"\n\nSelect what to be cloned (most of the time uncheck \"Members\")\n\n7\\. **Naming Tab**: add a Default Team Name and Team Naming convention (add a suffix or prefix for example).\n\nDefine the Naming settings with Team name, description, and welcome message default values.\n\n![](/media/naming-convention.png)\n\n[Learn more about Naming Convention](/catalog-manager-guide/governance-policies/naming-conventions)\n\n1. [**Approval**](/catalog-manager-guide/governance-policies/approval): select who will be the approver of the creation (currently disabled by default)\n\nDefine the approval policy with an approver from your organization.\n\n![](/media/teams-creation-approval-policy.png)\n\n[Learn more about Approval](/catalog-manager-guide/governance-policies/approval)\n\n1. [**Audience**](/catalog-manager-guide/governance-policies/audience-targeting): define who will be able to create a team with this template\n\nDefine the audience you want to target for this Template.\n\n![](/media/audience-targeting.png)\n\n[Learn more about Audience Targeting](/catalog-manager-guide/governance-policies/audience-targeting)\n\n1. **Compliance**: define additional [sensitivity labels](/catalog-manager-guide/governance-policies/sensitivity-labels) to protect your data.\n2. [**Security policy**](/catalog-manager-guide/governance-policies/security-policy): define the enforced privacy policy, membership policy and Permanent owners/members policy\n\nDefine the Security Policy with Teams Privacy, Permanent Owners and Permanent Members\n\n![](/media/teams-template-security-policy.png)\n\n[Learn more about Security Policy](/catalog-manager-guide/governance-policies/security-policy)\n\n1. Click \"Save\"\n\n![](https://downloads.intercomcdn.com/i/o/462367031/3353d4a98c9d6385b3b5fdbf/Screenshot+2022-02-09+at+17.00.14.png)\n\nTest your new Collaboration Template from the home page! Click on `+New Team`",
-    "parentId": 1745927905905,
+    "parentId": 1745928010518,
     "icon": "",
     "tags": [
-      "catalog-guide-manger"
+      "collaboration-templates"
     ],
     "author": "Kristina Konstantynova",
-    "id": 1745928010518
+    "id": 1745933328668,
+    "visibility": "public"
+  },
+  {
+    "name": "Open source",
+    "description": "\n# Open-source\nAt nBold, like most tech companies, we depend on open source software from all over the world to help us get things done.\n\nWe're grateful to the open source community, the projects, and especially their maintainers who have allowed us to innovate and make our customers working lives a little bit more enjoyable.\n",
+    "parentId": null,
+    "icon": "🌍",
+    "tags": [
+      "open-source"
+    ],
+    "author": "source",
+    "id": 1745942188254,
+    "visibility": "public"
+  },
+  {
+    "name": "Service Account Setup",
+    "description": "# Service Account Setup\n\nTo set up or change the Service Account, you just need to follow these steps:\n\n> While we invite you to create a dedicated Service Account for nBold_, you can rely on an existing one if you prefer. In that case, you can jump to point 2.\n\nTo learn more about why we rely on a Service Account and what are the best practices to secure it, please visit our_ [_Trust Center_](/trust-center/trust-center).\n\n***\n\n## 1. Create a Teams Admin User Account\n\nThe service account is the account that will act to create all the Teams, and this is what the users will see in all the teams provisioned.\n\nSo, in Microsoft / Office 365 Admin Portal Create a new user and make sure you assign the role \"Teams Administrator\". Choose the Name you want. This can be the name of your IT Service. And add a nice picture!\n\nHere are the requirements for that account to work:\n\n* The account must be assigned at least an E1 / Business Premium license\n* Exchange Online and Teams must be enabled\n* Exchange Online Mailbox must be provisioned\n\n![](https://downloads.intercomcdn.com/i/o/164946313/1e6321497d4803963fcde313/image.png)\n\n***\n\n## 2. Login to Microsoft Teams and search for nBold App\n\nLogin to [https://teams.microsoft.com](https://teams.microsoft.com \"https://teams.microsoft.com\") with the account you created. Reach the nBold app by searching \"nBold\" through the three dots on the left bar.\n\n![](https://downloads.intercomcdn.com/i/o/462450073/e4bb47e521339359e6aeff34/Screenshot+2022-02-09+at+19.13.23.png)\n\nThen click on the \"Add\" button.\n\n![](https://downloads.intercomcdn.com/i/o/462452055/aade15170fed32201e00c5d7/Screenshot+2022-02-09+at+19.19.31.png)\n\nSign-in into nBold App\n\n![](https://downloads.intercomcdn.com/i/o/462466035/88dd6bc11225e6af2e56048c/sign-in.jpg)\n\nYou should be logged in now:\n\n![](https://downloads.intercomcdn.com/i/o/462460356/dc0ad4f63124164169d9e766/Screenshot+2022-02-09+at+19.33.36.png)\n\n***\n\n## 3. Update and Service Account Check\n\nSelect the settings tab and from the \" Service Account\" select update.\n\n![](https://downloads.intercomcdn.com/i/o/462462983/75a38db590623b5866a4609b/Screenshot+2022-02-09+at+19.34.50.png)\n\nChoose then the corresponding Service Account or Log in with the other account you want to use as a service account.\n\n![](https://downloads.intercomcdn.com/i/o/462464297/aab8cecf984076c8ddcadff2/Screenshot+2022-02-09+at+19.39.06.png)\n\nThen the change is taken into account.",
+    "parentId": 1745942188254,
+    "icon": "",
+    "tags": [
+      "service-account-setup"
+    ],
+    "author": "stestes",
+    "visibility": "public",
+    "id": 1745946599755
+  },
+  {
+    "name": "Features of nBold",
+    "description": "# Key Features\nnBold lets organizations improve their collaborative processes through the ability to easily create an advanced Microsoft Teams Template and get a Collaboration Template Catalog to let anyone create a Teams based on those Templates. You'll find hereafter the Key features of nBold.\n\n## Advanced Collaboration Template creation\nBuild any Microsoft Teams Templates, to address any collaboration need in the organization, with:\n* List of Channels\n* List of Tabs\n* [Files and Folders](/catalog-manager-guide/collaboration-templates/files-and-folders)\n* Pre-configured Website Tabs\n* Pre-configured [Planner](/catalog-manager-guide/collaboration-templates/microsoft-planner) with Tasks, Buckets, Description, Buckets and Labels\n* Pre-configured [Forms](/catalog-manager-guide/collaboration-templates/microsoft-forms) Tab\n* Pre-configured [SharePoint Online Documentation Library](/catalog-manager-guide/collaboration-templates/sharepoint-library)\n\n## Collaboration Governance rule\nFeatures that IT will love! Microsoft Teams has been designed to address enterprise needs to scale collaboration in an organization. While there are tons of potential with Teams created with content such as Planner and Website Tabs, this can't be done without a strong Microsoft Teams Governance.\n\nAll the features described hereafter, are set at the template level:\n* [Naming Convention](/catalog-manager-guide/governance-policies/naming-conventions)\n* [Teams Creation Approval](/catalog-manager-guide/governance-policies/approval)\n* [Template Audience Targeting](/catalog-manager-guide/governance-policies/audience-targeting)\n* Teams Compliance with [Sensitivity Labels](/catalog-manager-guide/governance-policies/sensitivity-labels)\n* Teams [Enforced Privacy Policy](/catalog-manager-guide/governance-policies/security-policy)\n* Teams Creation Requester as non-Owner\n* [Mandatory number of Owners and Members](/catalog-manager-guide/governance-policies/mandatory-number-of-owners-and-members)\n* [Permanent Owners and Permanent Members](/catalog-manager-guide/governance-policies/permanent-owners-and-members-policy)\n\n![](https://downloads.intercomcdn.com/i/o/462804740/66f3b89c10e5add4bf608298/Screenshot+2022-02-10+at+10.43.05.png)\n\n## Collaboration Templates Corporate Catalog\nGet a Collaboration Template Catalog owned by your organization, tailored for your needs. Your company can provide Collaboration Templates such as: Project Management, Recruitment Process, Opportunity Management, Crisis Management, etc. The possibilities are endless!\n\n**Request a new team**\n\n1. Request a new team\n2. Select the appropriate Collaboration Template from your corporate catalog:\n\n![](https://downloads.intercomcdn.com/i/o/175628319/9367e7d111ffcaeb0e0001b5/image.png)\n\n3. Choose the team's name and description:\n\n![](https://downloads.intercomcdn.com/i/o/175628523/60feb48f0bd397ca2b0f343d/image.png)\n\n4. Define a welcome message that will be published in the `General` channel once the new Team is available.\n5. Select the team owners and members from your company directory.\n\n## Get a Home Page for Microsoft Teams\n\nGet an overview of all the Teams you belong to, search for the good one with a search bar.\n\n![](https://downloads.intercomcdn.com/i/o/175628763/d8e021026209861b63a4ac27/image.png)\n\n## Teams Approval\n\n* [Approval](/catalog-manager-guide/governance-policies/approval) Dashboard: see the requests that are Pending, Approved or Rejected\n* Request Review: update request information, approve or reject requests\n* Notification: email received by the approver to act, link to the teams created\n\n## Compliance\n\n* Protect your data with the help of [sensitivity labels](/catalog-manager-guide/governance-policies/security-policy)",
+    "parentId": 1745927474490,
+    "icon": "",
+    "tags": [
+      "features-of-nbold"
+    ],
+    "author": "Kristina Konstantnyova",
+    "visibility": "public",
+    "id": 1746012327806
   }
 ]

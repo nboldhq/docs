@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
 import CategoryForm from '../../components/ui/CategoryForm';
 import CategoryItem from '../../components/ui/CategoryItem';
-import { Button } from '@heroui/react';
+import { Button, ScrollShadow } from '@heroui/react';
 
 interface Category {
-  icon: string;
   id: number;
   name: string;
   description: string;
   parentId: number | null;
+  icon: string;
   author?: string;
   tags?: string[];
   title?: string;
+  visibility: string;
   children: Category[];
 }
 
@@ -20,6 +21,7 @@ const CategoryTree: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [showForm, setShowForm] = useState(false);
+  const [expandedIds, setExpandedIds] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     fetchCategories();
@@ -53,24 +55,37 @@ const CategoryTree: React.FC = () => {
     }
   };
 
-  const renderCategories = (items: Category[], parentId: number | null = null, level: number = 0) => {
+  const renderCategories = (items: Category[], parentId: number | null = null, level: number = 0): React.ReactNode => {
     return items
       .filter(item => item.parentId === parentId)
-      .map((item, index) => (
-        <CategoryItem 
-          key={item.id}
-          item={item}
-          index={index}
-          level={level}
-          onEdit={() => {
-            setSelectedCategory(item);
-            setShowForm(true);
-          }}
-          onDelete={handleDelete}
-          renderChildren={() => renderCategories(items, item.id, level + 1)}
-        />
-      ));
+      .map((item, index) => {
+        const isExpanded = expandedIds.has(item.id);
+  
+        return (
+          <CategoryItem 
+            key={item.id}
+            item={item}
+            index={index}
+            level={level}
+            onEdit={() => {
+              setSelectedCategory(item);
+              setShowForm(true);
+            }}
+            onDelete={handleDelete}
+            isExpanded={isExpanded}
+            onToggle={() => {
+              setExpandedIds(prev => {
+                const updated = new Set(prev);
+                isExpanded ? updated.delete(item.id) : updated.add(item.id);
+                return updated;
+              });
+            }}
+            renderChildren={() => renderCategories(items, item.id, level + 1)}
+          />
+        );
+      });
   };
+  
 
   const handleDelete = async (id: number) => {
     if (!confirm("Are you sure you want to delete this category and all its subcategories?")) return;
@@ -96,7 +111,7 @@ const CategoryTree: React.FC = () => {
       </Button>
       </div>
 
-
+    <ScrollShadow hideScrollBar className="w-full h-[750px]">
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="categories">
           {(provided) => (
@@ -107,14 +122,16 @@ const CategoryTree: React.FC = () => {
           )}
         </Droppable>
       </DragDropContext>
+    </ScrollShadow>
 
       {showForm && (
-        <CategoryForm
+       <CategoryForm
           category={selectedCategory}
           categories={categories}
           onClose={() => setShowForm(false)}
           onSave={fetchCategories}
         />
+     
       )}
     </div>
   );

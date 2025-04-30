@@ -4,7 +4,7 @@
 
         author: Kristina Konstantynova
 
-        tags: [catalog-guide-manger]
+        tags: [collaboration-templates]
 
         status: undefined
 

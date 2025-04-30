@@ -131,17 +131,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
               navigate('/dashboard/categorytree');
             }}
           />
-
-          <SidebarItem
-            icon={<FolderClosed size={20} />}
-            label="Files"
-            isActive={activeItem === 'files'}
-            collapsed={collapsed}
-            onClick={() => {
-              handleItemClick('files');
-              navigate('/dashboard/file');
-            }}
-          />
+          
            <SidebarItem
             icon={<FolderClosed size={20} />}
             label="Storage"

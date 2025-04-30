@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import {
   Folder,
   FileText,
-  Image as ImageIcon,
-  Music,
-  Video,
   Upload,
   FolderPlus,
   Eye
@@ -23,8 +20,10 @@ interface FileItem {
   size?: string;
   modifiedAt: Date;
   path: string[];
-  description?: string; // Added description to FileItem
+  description?: string;
+  children?: FileItem[]; // Add children for folders
 }
+
 
 interface CategoryApiResponse {
   id: number;
@@ -56,27 +55,27 @@ const FilesPage = () => {
           const idToCategory = new Map<number, CategoryApiResponse>();
           data.forEach((category) => idToCategory.set(category.id, category));
     
-          const mappedItems = data.map((category) => {
-            // Build the path by traversing parents
+          const mappedItems: FileItem[] = data.map((category) => {
             const path: string[] = [];
             let current = category;
-    
+          
             while (current.parentId !== 0 && idToCategory.has(current.parentId)) {
               const parent = idToCategory.get(current.parentId)!;
               path.unshift(parent.name);
               current = parent;
             }
-    
+          
             return {
               id: category.id.toString(),
               name: category.name,
-              description: category.description, // Include description
+              description: category.description,
               type: category.parentId ? 'file' : 'folder', 
               parentId: category.parentId ? category.parentId.toString() : null,
               modifiedAt: new Date(),
-              path: path, 
+              path: path,
             };
           });
+          
     
           setItems(mappedItems);
         })
@@ -87,12 +86,6 @@ const FilesPage = () => {
       switch (type) {
         case 'folder':
           return <Folder className="w-6 h-6 text-[#c1124a]" />;
-        case 'image':
-          return <ImageIcon className="w-6 h-6 text-green-500" />;
-        case 'video':
-          return <Video className="w-6 h-6 text-purple-500" />;
-        case 'audio':
-          return <Music className="w-6 h-6 text-pink-500" />;
         default:
           return <FileText className="w-6 h-6 text-gray-500" />;
       }
@@ -112,16 +105,13 @@ const FilesPage = () => {
 
     const handleItemClick = (item: FileItem) => {
       if (item.type === 'folder') {
-        if (item.description) {
-          setSelectedFile(item);
-          setIsModalOpen(true);
-        } else {        setCurrentPath([...currentPath, item.name]);
-        }
+        setCurrentPath([...currentPath, item.name]); 
       } else {
-        setSelectedFile(item);
+        setSelectedFile(item); 
         setIsModalOpen(true);
       }
-    };  
+    };
+     
 
     const handlePathClick = (index: number) => {
       setCurrentPath(currentPath.slice(0, index + 1));
@@ -134,7 +124,7 @@ const FilesPage = () => {
           name: newFolderName,
           type: 'folder',
           modifiedAt: new Date(),
-          path: currentPath, // create it in the current path
+          path: currentPath, 
           description: '',
         };
     
@@ -149,10 +139,10 @@ const FilesPage = () => {
       const file = e.target.files?.[0];
       if (file) {
         const newFile: FileItem = {
-          id: Date.now().toString(), // generate a unique id
+          id: Date.now().toString(), 
           name: file.name,
           type: 'file',
-          size: (file.size / 1024).toFixed(2) + ' KB', // optional: file size
+          size: (file.size / 1024).toFixed(2) + ' KB',
           modifiedAt: new Date(),
           path: currentPath, 
           description: '', 
@@ -172,6 +162,13 @@ const FilesPage = () => {
         setSelectedFile(file);
         setIsModalOpen(true);
     };
+    const getGroupedItems = () => {
+      return items.filter(item =>
+        item.path.length === currentPath.length &&
+        item.path.every((p, index) => p === currentPath[index])
+      );
+    };
+    
 
   return (
     <div className="p-6">
@@ -245,39 +242,68 @@ const FilesPage = () => {
           <div className={viewMode === 'grid'
             ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'
             : 'divide-y dark:divide-gray-700'}>
-            {getVisibleItems().map((item) => (
-              <div
-                key={item.id}
-                onClick={() => handleItemClick(item)}
-                className={`group relative cursor-pointer transition-all p-4
-                  ${viewMode === 'grid'
-                    ? 'border dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700'
-                    : 'flex items-center space-x-4 hover:bg-gray-50 dark:hover:bg-gray-700'
-                  }
-                `}
-              >
-                <div className="flex items-center space-x-3 w-full">
-                  {getFileIcon(item.type)}
-                  <div className="flex-1">
-                    <p className="font-semibold text-gray-900 dark:text-white">{item.name}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {item.size && `${item.size} • `}
-                      {format(item.modifiedAt, 'MMM d, yyyy')}
-                    </p>
-                  </div>
+           {getGroupedItems().map((item) => (
+              <div key={item.id}>
+                <div
+                  onClick={() => handleItemClick(item)}
+                  className={`group relative cursor-pointer transition-all p-4 ${
+                    viewMode === 'grid'
+                      ? 'border dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700'
+                      : 'flex items-center space-x-4 hover:bg-gray-50 dark:hover:bg-gray-700'
+                  }`}
+                >
+                  <div className="flex items-center space-x-3 w-full">
+                    {getFileIcon(item.type)}
+                    <div className="flex-1">
+                      <p className="font-semibold text-gray-900 dark:text-white">{item.name}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        {item.size && `${item.size} • `}
+                        {format(item.modifiedAt, 'MMM d, yyyy')}
+                      </p>
+                    </div>
+                      {item.type === 'file' && (
+                        <button
+                          className="ml-auto text-[#c1124a]"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openFile(item);
+                          }}
+                        >
+                          <Eye className="w-5 h-5" />
+                        </button>
+                      )}
 
-                  {(item.type === 'file' || (item.type === 'folder' && item.description)) && (
-                    <button
-                      className="ml-auto text-[#c1124a]"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        openFile(item);
-                      }}
-                    >
-                      <Eye className="w-5 h-5" />
-                    </button>
-                  )}
+                  </div>
                 </div>
+                {item.type === 'folder' && item.children && (
+                  <div className="ml-8 mt-2 space-y-2">
+                    {item.children.map(child => (
+                      <div
+                        key={child.id}
+                        onClick={() => handleItemClick(child)}
+                        className="flex items-center space-x-3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-md"
+                      >
+                        {getFileIcon(child.type)}
+                        <div>
+                          <p className="text-sm font-medium text-gray-800 dark:text-white">{child.name}</p>
+                          <p className="text-xs text-gray-500 dark:text-gray-400">
+                            {child.size && `${child.size} • `}
+                            {format(child.modifiedAt, 'MMM d, yyyy')}
+                          </p>
+                        </div>
+                        <button
+                          className="ml-auto text-[#c1124a]"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openFile(child);
+                          }}
+                        >
+                          <Eye className="w-4 h-4" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -306,7 +332,7 @@ const FilesPage = () => {
       </Modal>
       <Modal
           isOpen={showNewFolderModal}
-          onClose={() => setShowNewFolderModal(false)} // Close modal
+          onClose={() => setShowNewFolderModal(false)} 
         >
           <ModalContent>
             <ModalHeader>Create New Folder</ModalHeader>

@@ -12,7 +12,7 @@ interface SidebarSubItem {
     subItems?: Array<{
       label: string;
       path: string;
-      subItems?: any[]; // optional support for deeper levels
+      subItems?: any[]; 
     }>;
   }>;
   }
@@ -55,11 +55,11 @@ interface DocsSidebarItemProps {
             "flex items-center px-4 py-2 rounded-md cursor-pointer transition-colors duration-200",
             isActive
             ? "bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000] text-white"
-            : "text-gray-700 hover:bg-gradient-to-r hover:from-[#921d7f] hover:via-[#c1124a] hover:to-[#ff0000] hover:text-white"
+            : "dark:text-white hover:bg-gradient-to-r hover:from-[#921d7f] hover:via-[#c1124a] hover:to-[#ff0000] hover:text-white"
         )}
         onClick={() => {
-            navigate(path); // Always navigate
-            if (hasSubItems) onToggle?.(); // Also expand if needed
+            navigate(path); 
+            if (hasSubItems) onToggle?.(); 
         }}
         >
           <span className="flex-shrink-0 mr-3">{icon}</span>
@@ -78,7 +78,7 @@ interface DocsSidebarItemProps {
           <div className="ml-10 mt-1 space-y-1">
             {subItems?.map((item, index) => {
               const isSubExpanded = expandedSubItems.includes(item.label);
-              const hasNested = item.subItems?.length > 0;
+              const hasNested = !!item.subItems && item.subItems.length > 0;
 
               return (
                 <div key={index}>
@@ -87,7 +87,7 @@ interface DocsSidebarItemProps {
                       "flex items-center px-4 py-2 rounded-md cursor-pointer text-sm transition-colors duration-200",
                       location.pathname === item.path
                         ? "text-[#ff0000]"
-                        : "text-gray-600 hover:text-[#ff0000]"
+                        : "dark:text-white hover:text-[#ff0000]"
                     )}
                     onClick={() => {
                       navigate(item.path);
@@ -115,7 +115,7 @@ interface DocsSidebarItemProps {
                             "flex items-center px-4 py-1 rounded-md cursor-pointer text-sm transition-colors duration-200",
                             location.pathname === sub.path
                               ? "text-[#ff0000]"
-                              : "text-gray-500 hover:text-[#ff0000]"
+                              : "dark:text-white hover:text-[#ff0000]"
                           )}
                           onClick={() => navigate(sub.path)}
                         >

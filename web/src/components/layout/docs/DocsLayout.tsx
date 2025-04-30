@@ -7,25 +7,30 @@ import DocsSidebarItem from './DocsSidebarItem';
 import DocsFooter from './DocsFooter';
 
 type Category = {
-  icon: string;
+  icon: string; 
   id: number;
   name: string;
   description: string;
   parentId: number | null;
+  visibility?: string; 
   author?: string;
   tags?: string[];
   title?: string;
   subItems?: Category[];
 };
 
+
 const DocsLayout: React.FC<{
   children: React.ReactNode;
   categories: Category[];
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+
 }> = ({ children }) => {
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
-  const [expandedItems, setExpandedItems] = useState<number[]>([]); // Use numbers for consistency
+  const [expandedItems, setExpandedItems] = useState<number[]>([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleExpanded = (itemId: number) => {
@@ -45,11 +50,11 @@ const DocsLayout: React.FC<{
   const buildCategoryTree = (flatCategories: Category[]) => {
     const categoryMap: Record<number, Category & { subItems: Category[] }> = {};
     const roots: Category[] = [];
-
+  
     flatCategories.forEach((cat) => {
       categoryMap[cat.id] = { ...cat, subItems: [] };
     });
-
+  
     flatCategories.forEach((cat) => {
       if (cat.parentId && categoryMap[cat.parentId]) {
         categoryMap[cat.parentId].subItems.push(categoryMap[cat.id]);
@@ -57,9 +62,18 @@ const DocsLayout: React.FC<{
         roots.push(categoryMap[cat.id]);
       }
     });
-
-    return roots;
+  
+    const filterPublicTree = (nodes: Category[]): Category[] =>
+      nodes
+        .filter((node) => node.visibility === 'public')
+        .map((node) => ({
+          ...node,
+          subItems: filterPublicTree(node.subItems || []),
+        }));
+  
+    return filterPublicTree(roots);
   };
+  
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -67,16 +81,18 @@ const DocsLayout: React.FC<{
         const response = await fetch('http://localhost:3000/api/categories');
         if (!response.ok) throw new Error('Network response was not ok');
         const data: Category[] = await response.json();
-        const tree = buildCategoryTree(data);
+        const publicCategories = data.filter((cat) => cat.visibility === 'public');
+        const tree = buildCategoryTree(publicCategories);
         setCategories(tree);
       } catch (error) {
         console.error('Error fetching categories:', error);
         setCategories([]);
       }
     };
-
+  
     fetchCategories();
   }, []);
+  
 
   const renderSidebarItems = (items: Category[]) =>
     items.map((category) => {
@@ -90,9 +106,9 @@ const DocsLayout: React.FC<{
           label={category.name}
           path={fullPath}
           isActive={location.pathname === fullPath}
-          hasSubItems={category.subItems?.length > 0}
-          isExpanded={expandedItems.includes(category.id)} // Compare ids as numbers
-          onToggle={() => toggleExpanded(category.id)} // Toggle by id
+          hasSubItems={!!category.subItems && category.subItems.length > 0}
+          isExpanded={expandedItems.includes(category.id)}
+          onToggle={() => toggleExpanded(category.id)}
           subItems={category.subItems?.map((sub) => {
             const subTitle = sub.name.toLowerCase().replace(/\s+/g, '-');
             const subTags = sub.tags?.join('-') || 'untagged';

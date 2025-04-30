@@ -4,7 +4,7 @@
 
         author: Kristina Konstantynova
 
-        tags: [administrators]
+        tags: [administrator-guide]
 
         status: undefined
 

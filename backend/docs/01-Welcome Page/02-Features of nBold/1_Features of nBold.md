@@ -1,10 +1,10 @@
 ---
 
-        title: Features of nBold 
+        title: Features of nBold
 
         author: Kristina Konstantnyova
 
-        tags: [introduction]
+        tags: [features-of-nbold]
 
         status: undefined
 

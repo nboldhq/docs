@@ -3,6 +3,8 @@ import { Button, Card, CardBody, CardHeader, Divider } from '@heroui/react';
 import { Draggable, DraggableProvided, DraggableStateSnapshot } from 'react-beautiful-dnd';
 import { DragIcon } from '../Icons/Icons'; 
 import { Edit, Trash2 } from 'lucide-react';
+
+
 interface Category {
   icon: string;
   id: number;
@@ -21,8 +23,11 @@ interface CategoryItemProps {
   level: number;
   onEdit: () => void;
   onDelete: (id: number) => void;
+  isExpanded: boolean;
+  onToggle: () => void;
   renderChildren: () => React.ReactNode;
 }
+
 
 const CategoryItem: React.FC<CategoryItemProps> = ({
   item,
