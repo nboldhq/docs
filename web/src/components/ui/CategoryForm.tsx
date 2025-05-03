@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Modal,Radio , ModalBody, ModalContent, ModalHeader, ModalFooter, Button, Input, Select, SelectItem, RadioGroup } from '@heroui/react';
-import ReactMarkdownEditorLite from 'react-markdown-editor-lite';
+import { Modal,Radio , ModalBody, ModalContent, ModalHeader, ModalFooter, Button, Input, Select, SelectItem, RadioGroup, Popover, PopoverTrigger, PopoverContent, ScrollShadow } from '@heroui/react';
 import MarkdownIt from 'markdown-it';
 import 'react-markdown-editor-lite/lib/index.css';
 import yaml from 'js-yaml';
+import MDEditor from '@uiw/react-md-editor';
 
 
       interface Category {
@@ -36,6 +36,8 @@ import yaml from 'js-yaml';
         author: string;
         visibility: string;  
       }
+      
+
 
   const CategoryForm: React.FC<CategoryFormProps> = ({ 
     category, 
@@ -47,8 +49,8 @@ import yaml from 'js-yaml';
       const [inputType, setInputType] = useState<'editor' | 'upload'>('editor');
       const mdParser = new MarkdownIt();
       const [file, setFile] = useState<File | null>(null);
-      //const [visibility, setVisibility] = useState('private');
-
+      const [theme, setTheme] = useState<'light' | 'dark'>('light');
+      const [activeTab, setActiveTab] = useState<'blocks' | 'formatting'>('blocks');
       const [formData, setFormData] = useState<FormData>({
         name: '',
         description: '',
@@ -59,6 +61,13 @@ import yaml from 'js-yaml';
         visibility: 'private',
       });
       
+
+          useEffect(() => {
+            const localTheme = localStorage.getItem('theme');
+            if (localTheme === 'dark' || localTheme === 'light') {
+              setTheme(localTheme);
+            }
+}, []);
       useEffect(() => {
         if (category) {
           setFormData({
@@ -79,7 +88,7 @@ import yaml from 'js-yaml';
       const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-          const response = await fetch('http://localhost:3000/api/categories', {
+          const response = await fetch(process.env+'/api/categories', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
@@ -119,7 +128,7 @@ import yaml from 'js-yaml';
             ...prev,
             name: frontmatter.title || prev.name,
             author: frontmatter.author || prev.author,
-            tags: frontmatter.tags || prev.tags,
+            tags: frontmatter.tags?.map(tag => tag.trim().replace(/\s+/g, '-')) || prev.tags,
             description: markdownBody
           }));
       
@@ -128,159 +137,310 @@ import yaml from 'js-yaml';
       
         reader.readAsText(file);
       };
+      
     
     return (
-      <Modal isOpen onClose={onClose}  size="5xl" backdrop="blur" placement="center">
+      <Modal 
+          isOpen 
+          onClose={onClose}  
+          size="5xl" 
+          backdrop="blur" 
+          placement="center"
+          classNames={{
+            base: "mx-4", 
+            wrapper: "md:p-4",
+          }}
+        >
         <ModalContent>
           <form onSubmit={handleSubmit}>
               <ModalHeader className="flex flex-col gap-1">
                 {category ? 'Edit Category' : 'Create Category'}
               </ModalHeader>
               <ModalBody className="gap-4">
-                <div className="space-y-4">
-                  <div className="flex gap-4">
-                      <Select
-                        label="Icon"
-                        selectedKeys={formData.icon ? [formData.icon] : []}
-                        onChange={(e) => {
-                          const icon = e.target.value;
-                          setFormData((prev) => ({ ...prev, icon }));
-                        }}
-                        className="w-24 p-0"
-                        style={{ textAlign: 'center', gap: '0px' }}
-                      >
-                        {[
-                          '', '📚', '💼', '🛠️', '💡', '🎓',
-                          '🖥️', '📱', '📊', '📈', '🌍',
-                          '🎨', '🎮', '🏆', '🔒', '💻',
-                          '🔑', '💎', '🖋️', '📅', '✏️',
-                          '🔧', '🔨', '📖', '🖌️', '💡',
-                          '🎧', '🎤', '🎬', '📸', '🎥'
-                        ].map((icon) => (
-                          <SelectItem key={icon} textValue={icon}>
-                            {icon}
-                          </SelectItem>
-                        ))}
-                      </Select>
-                      <Input
-                            label="Category Name"
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            isRequired
-                            isInvalid={!formData.name.trim()}
-                            errorMessage={!formData.name.trim() && " Category Name is required"}
-                            className='w-[600px]'
-                          />
-                         <Select
-                            label="Parent Category"
-                            selectedKeys={formData.parentId ? [formData.parentId.toString()] : []}
-                            onChange={(e) => {
-                              const selected = e.target.value;
-                              setFormData({ 
-                                ...formData, 
-                                parentId: selected === 'none' ? null : parseInt(selected)
-                              });
-                            }}
-                            
-                            className="w-56"
-                            placeholder="Select parent category"
-                          >
-                            <SelectItem key="none">
-                                None
+                <ScrollShadow hideScrollBar className="w-auto md:w-full md:h-full h-[400px]">
+                  <div className="space-y-4">
+                    <div className="flex flex-col md:flex-row gap-4">
+                        <Select
+                          label="Icon"
+                          selectedKeys={formData.icon ? [formData.icon] : []}
+                          onChange={(e) => {
+                            const icon = e.target.value;
+                            setFormData((prev) => ({ ...prev, icon }));
+                          }}
+                          className="w-full md:w-24 p-0"
+                          style={{ textAlign: 'center', gap: '0px' }}
+                        >
+                          {[
+                            '', '📚', '💼', '🛠️', '💡', '🎓',
+                            '🖥️', '📱', '📊', '📈', '🌍',
+                            '🎨', '🎮', '🏆', '🔒', '💻',
+                            '🔑', '💎', '🖋️', '📅', '✏️',
+                            '🔧', '🔨', '📖', '🖌️', '💡',
+                            '🎧', '🎤', '🎬', '📸', '🎥'
+                          ].map((icon) => (
+                            <SelectItem key={icon} textValue={icon}>
+                              {icon}
                             </SelectItem>
-                            {
-                            categories.map(cat => (
-                              <SelectItem key={cat.id.toString()}>
-                                  {cat.name}
+                          ))}
+                        </Select>
+                        <Input
+                              label="Category Name"
+                              value={formData.name}
+                              onChange={(e) => {
+                                const nameValue = e.target.value;
+                                const formattedTag = nameValue.trim().replace(/\s+/g, '-').toLowerCase();
+                                setFormData({ 
+                                  ...formData, 
+                                  name: e.target.value,
+                                  tags: [formattedTag], 
+                                })
+                              }}
+                              isRequired
+                              isInvalid={!formData.name.trim()}
+                              errorMessage={!formData.name.trim() && " Category Name is required"}
+                              className="w-full md:w-[600px]"
+                              />
+                          <Select
+                              label="Parent Category"
+                              selectedKeys={formData.parentId ? [formData.parentId.toString()] : []}
+                              onChange={(e) => {
+                                const selected = e.target.value;
+                                setFormData({ 
+                                  ...formData, 
+                                  parentId: selected === 'none' ? null : parseInt(selected)
+                                });
+                              }}
+                              
+                              className="w-full md:w-56"
+                              placeholder="Select parent category"
+                            >
+                              <SelectItem key="none">
+                                  None
                               </SelectItem>
-                            ))
-                            }
-                         </Select>
-                  </div>
-                  <div className='flex gap-4'>
+                              {
+                              categories.map(cat => (
+                                <SelectItem key={cat.id.toString()}>
+                                    {cat.name}
+                                </SelectItem>
+                              ))
+                              }
+                          </Select>
+                    </div>
+                    <div className="flex flex-col md:flex-row gap-4">
+                        <Input
+                          label="Author"
+                          value={formData.author}
+                          onChange={(e) => setFormData({ ...formData, author: e.target.value })}
+                          fullWidth
+                          className="w-full"
+                          isRequired
+                        />
                       <Input
-                        label="Author"
-                        value={formData.author}
-                        onChange={(e) => setFormData({ ...formData, author: e.target.value })}
-                        fullWidth
-                        isRequired
-                      />
-                    <Input
-                        label="Tags (comma-separated)"
-                        value={formData.tags.join(', ')}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            tags: e.target.value
-                              .split(',')
-                              .map(t => t.trim().replace(/\s+/g, '-'))
-                              .filter(Boolean)
-                          })
+                          label="Tags (comma-separated)"
+                          value={formData.tags.join(', ')}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              tags: e.target.value
+                                .split(',')
+                                .map(t => t.trim().replace(/\s+/g, '-'))
+                                .filter(Boolean)
+                            })
+                          }
+                          className="w-full"
+                        />
+                      <div className="flex gap-4">
+                      <Select
+                        selectedKeys={formData.visibility ? [formData.visibility] : []}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, visibility: e.target.value }))}
+                        className="w-full md:w-40"
+                        >
+                      <SelectItem key="public">Public 🌐</SelectItem>
+                      <SelectItem key="private">Private 🔒</SelectItem>
+                      </Select>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <RadioGroup
+                        label={
+                          <div className="flex items-center gap-2">
+                            <span>Description Type</span>
+                            <Popover placement="top">
+                              <PopoverTrigger>
+                                <button className="text-red-500 hover:text-gray-700 transition-colors">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-4 w-4"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  >
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                                    <line x1="12" y1="17" x2="12" y2="17" />
+                                  </svg>
+                                </button>
+                              </PopoverTrigger>
+                              <PopoverContent className="w-[400px]">
+                                <div className="px-1 py-2 space-y-3">
+                                  <div className="flex gap-2 pb-2">
+                                    <button
+                                      onClick={() => setActiveTab('blocks')}
+                                      className={`px-3 py-1 text-sm ${
+                                        activeTab === 'blocks' 
+                                          ? 'border-gradient text-white'
+                                          : 'text-gray-500 hover:border-gradient'
+                                      }`}
+                                    >
+                                      Blocks Guide
+                                    </button>
+                                    <button
+                                      onClick={() => setActiveTab('formatting')}
+                                      className={`px-3 py-1 text-sm ${
+                                        activeTab === 'formatting'
+                                          ? 'border-gradient text-white'
+                                          : 'text-gray-500 hover:border-gradient'
+                                      }`}
+                                    >
+                                      Text Formatting
+                                    </button>
+                                  </div>
+
+                                  {activeTab === 'blocks' ? (
+                                    <div className="space-y-3">
+                                      <div className="text-small font-bold">Custom Blocks Guide</div>                                    
+                                        <div className="bg-green-50 p-2 rounded-md border border-green-200">
+                                          <div className="flex items-start gap-2">
+                                            <svg className="w-4 h-4 mt-0.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                              <path strokeLinecap="round" strokeLinecap="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <div className="text-tiny text-green-800">
+                                              <code>:::tip</code>
+                                              <div className="ml-4 mt-1">You can make this homepage available to everyone...</div>
+                                              <code>:::</code>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="bg-amber-50 p-2 rounded-md border border-amber-200">
+                                          <div className="flex items-start gap-2">
+                                            <svg className="w-4 h-4 mt-0.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                              <path strokeLinecap="round" strokeLinecap="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                            </svg>
+                                            <div className="text-tiny text-amber-800">
+                                              <code>:::warning</code>
+                                              <div className="ml-4 mt-1">To complete these steps, you <strong>must</strong> be...</div>
+                                              <code>:::</code>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  ) : (
+                                    <div className="space-y-3">
+                                      <div className="text-small font-bold">Text Formatting Help</div>
+                                      <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-md border border-gray-200 dark:border-gray-700 transition-colors">
+                                        <div className="grid grid-cols-2 gap-4 text-tiny dark:text-gray-300">
+                                          <div className="space-y-2">
+                                            <div className="font-medium dark:text-gray-200">Bold Text</div>
+                                            <code className="dark:bg-gray-700/50 dark:text-gray-300 dark:border-gray-600">
+                                              **bold text**
+                                            </code>
+                                            <div>Renders as: <strong className="dark:text-gray-100">bold text</strong></div>
+                                          </div>
+                                          
+                                          <div className="space-y-2">
+                                            <div className="font-medium dark:text-gray-200">Italic Text</div>
+                                            <code className="dark:bg-gray-700/50 dark:text-gray-300 dark:border-gray-600">
+                                              *italic text*
+                                            </code>
+                                            <div>Renders as: <em className="dark:text-gray-100">italic text</em></div>
+                                          </div>
+                                          
+                                          <div className="space-y-2">
+                                            <div className="font-medium dark:text-gray-200">Combined</div>
+                                            <code className="dark:bg-gray-700/50 dark:text-gray-300 dark:border-gray-600">
+                                              _**bold italic**_
+                                            </code>
+                                            <div>Renders as: <em><strong className="dark:text-gray-100">bold italic</strong></em></div>
+                                          </div>
+                                          
+                                          <div className="space-y-2">
+                                            <div className="font-medium dark:text-gray-200">Code</div>
+                                            <code className="dark:bg-gray-700/50 dark:text-gray-300 dark:border-gray-600">
+                                              `inline code`
+                                            </code>
+                                            <div>Renders as: <code className="dark:bg-gray-700/50 dark:text-gray-300 dark:border-gray-600">
+                                              inline code
+                                            </code></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  )}
+                                </div>
+                              </PopoverContent>
+                            </Popover>
+                          </div>
                         }
-                      />
-                    <div className="flex gap-4">
-                    <Select
-                      selectedKeys={formData.visibility ? [formData.visibility] : []}
-                      onChange={(e) => setFormData((prev) => ({ ...prev, visibility: e.target.value }))}
-                      className="w-40"
-                    >
-                    <SelectItem key="public">Public 🌐</SelectItem>
-                    <SelectItem key="private">Private 🔒</SelectItem>
-                    </Select>
+                        value={inputType}
+                        onValueChange={(value) => setInputType(value as 'editor' | 'upload')}
+                        orientation="horizontal"
+                        className="flex flex-col md:flex-row gap-4 mb-4"
+                        >
+                        <Radio value="editor">Write Content</Radio>
+                        <Radio value="upload">Upload File</Radio>
+                      </RadioGroup>
+
+                      {inputType === 'editor' ? (
+                        <MDEditor
+                          value={formData.description}
+                          onChange={(value) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              description: value || '',
+                            }))
+                          }
+                          preview="live"
+                          height={300}
+                          data-color-mode={theme}
+                          className="max-h-[50vh] md:max-h-none" 
+                        />
+                      ) : (
+                        <Input
+                          label="Upload Markdown File"
+                          type="file"
+                          accept=".md"
+                          onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (file) {
+                              setFile(file);
+                              parseMarkdownMetadata(file);
+                              setInputType('editor');
+                            }
+                          }}
+                          className="w-full"
+                          description="Upload a .md file to import content"
+                        />
+                      )}
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <RadioGroup
-                      label="Description Type"
-                      value={inputType}
-                      onValueChange={(value) => setInputType(value as 'editor' | 'upload')}
-                      orientation="horizontal"
-                      className="mb-4"
-                    >
-                      <Radio value="editor">Write Content</Radio>
-                      <Radio value="upload">Upload File</Radio>
-                    </RadioGroup>
-
-                    {inputType === 'editor' ? (
-                    <ReactMarkdownEditorLite
-                        value={formData.description}
-                        onChange={({ text }) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            description: text,
-                          }))
-                        }
-                        renderHTML={text => mdParser.render(text)}
-                        style={{ height: '300px', marginBottom: '20px' }}
-                        className="markdown-editor"
-                      />
-                  
-                    ) : (
-                      <Input
-                        label="Upload Markdown File"
-                        type="file"
-                        accept=".md"
-                        onChange={(e) => {
-                          const file = e.target.files?.[0];
-                          if (file) {
-                            setFile(file);
-                            parseMarkdownMetadata(file);
-                            setInputType('editor'); 
-                          }
-                        }}
-                        className="w-full"
-                        description="Upload a .md file to import content"
-                      />
-                    )}
-                  </div>
-                </div>
+                </ScrollShadow>
               </ModalBody>
-              <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Annuler
+              <ModalFooter className="flex flex-col md:flex-row gap-2">
+                <Button 
+                color="danger" 
+                variant="light" 
+                onPress={onClose}
+                className="w-full md:w-auto"
+                >
+                  Cancel
                 </Button>
-                <Button color="primary" type="submit">
-                  Sauvegarder
+                <Button           
+                    className='border-gradient text-white w-full md:w-auto' 
+                   type="submit" >
+                  Save
                 </Button>
               </ModalFooter>
           </form>

@@ -29,7 +29,7 @@ const CategoryTree: React.FC = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/categories');
+      const response = await fetch(process.env+'/api/categories');
       const data: Category[] = await response.json();
       setCategories(data);
     } catch (error) {
@@ -41,7 +41,7 @@ const CategoryTree: React.FC = () => {
     if (!result.destination) return;
     
     try {
-      await fetch('http://localhost:3000/api/categories/reorder', {
+      await fetch(process.env+'/api/categories/reorder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -91,7 +91,7 @@ const CategoryTree: React.FC = () => {
     if (!confirm("Are you sure you want to delete this category and all its subcategories?")) return;
   
     try {
-      await fetch(`http://localhost:3000/api/categories/${id}`, { method: 'DELETE' });
+      await fetch(process.env+`/api/categories/${id}`, { method: 'DELETE' });
       fetchCategories();
     } catch (error) {
       console.error('Error deleting category:', error);
@@ -105,7 +105,7 @@ const CategoryTree: React.FC = () => {
       <div className="flex justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Manage Categories</h2>
         <Button
-          className="bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000] text-white"
+          className=" flex text-wrap py-7 md:py-0 rounded-xl bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000] text-white focus:outline-none focus:ring-0"
           onClick={() => { setSelectedCategory(null); setShowForm(true); }}>
         Add New Category
       </Button>

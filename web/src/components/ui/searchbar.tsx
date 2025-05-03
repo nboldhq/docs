@@ -9,27 +9,42 @@ const SearchBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
 
+  // Clear results when query is emptied
+  useEffect(() => {
+    if (query.trim() === '') {
+      setResults([]);
+      setShowDropdown(false);
+    }
+  }, [query]);
+
   const slugify = (text) =>
-  text
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/[\s\W-]+/g, '-');
+    text
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/[\s\W-]+/g, '-');
 
   useEffect(() => {
     const fetchResults = async () => {
-      if (query.trim() === '') {
-        setResults([]);
-        setShowDropdown(false);
-        return;
-      }
+      if (query.trim() === '') return;
+
       try {
         const response = await fetch('http://localhost:3000/api/categories');
         const data = await response.json();
-        const filtered = data.filter(item =>
-          item.name.toLowerCase().includes(query.toLowerCase()) ||
-          item.description.toLowerCase().includes(query.toLowerCase())
-        );
+        
+        // Filter and map results in one pass
+        const filtered = data.reduce((acc, item) => {
+          if (item.name.toLowerCase().includes(query.toLowerCase()) ||
+              item.description.toLowerCase().includes(query.toLowerCase())) {
+            acc.push({
+              ...item,
+              // Create unique search ID for each result
+              searchId: `search-result-${slugify(item.name)}-${Date.now()}`
+            });
+          }
+          return acc;
+        }, []);
+
         setResults(filtered);
         setShowDropdown(filtered.length > 0);
       } catch (error) {
@@ -37,20 +52,22 @@ const SearchBar = () => {
       }
     };
 
-    fetchResults();
+    const debounceTimer = setTimeout(fetchResults, 300);
+    return () => clearTimeout(debounceTimer);
   }, [query]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  // Prevent markdown headings from being rendered as actual HTML headings
+  const MarkdownRenderer = ({ content }) => (
+    <ReactMarkdown
+      components={{
+        h1: ({ node, ...props }) => <div className="font-bold text-lg" {...props} />,
+        h2: ({ node, ...props }) => <div className="font-bold text-base" {...props} />,
+        h3: ({ node, ...props }) => <div className="font-bold text-sm" {...props} />
+      }}
+    >
+      {content}
+    </ReactMarkdown>
+  );
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -66,11 +83,17 @@ const SearchBar = () => {
       {showDropdown && (
         <ul className="absolute z-10 mt-2 w-full bg-white dark:bg-[#18181B] border border-gray-300 dark:border-gray-600 rounded-md shadow-lg max-h-60 overflow-y-auto no-scrollbar divide-y divide-gray-200 dark:divide-gray-700">
           {results.map((item) => (
-            <li key={item.id} className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
-             <Link to={`/docs/${item.tags[0]}/${slugify(item.name)}`}>
+            <li key={item.searchId} className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+              <Link 
+                to={`/docs/${item.tags[0]}/${slugify(item.name)}`}
+                onClick={() => {
+                  setQuery('');
+                  setShowDropdown(false);
+                }}
+              >
                 <div className="font-semibold">{item.name}</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
-                     <ReactMarkdown>{item.description}</ReactMarkdown>
+                  <MarkdownRenderer content={item.description} />
                 </div>
               </Link>
             </li>

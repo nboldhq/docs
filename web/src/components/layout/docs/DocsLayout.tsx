@@ -5,6 +5,7 @@ import { NBoldIcon } from '../../Icons/nBoldIcon';
 import DocsNavbar from './DocsNavbar';
 import DocsSidebarItem from './DocsSidebarItem';
 import DocsFooter from './DocsFooter';
+import TableOfContents from './TableOfContents';
 
 type Category = {
   icon: string; 
@@ -78,7 +79,7 @@ const DocsLayout: React.FC<{
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/categories');
+        const response = await fetch('http://skan-dev.nbold.dev/api/categories');
         if (!response.ok) throw new Error('Network response was not ok');
         const data: Category[] = await response.json();
         const publicCategories = data.filter((cat) => cat.visibility === 'public');
@@ -93,11 +94,16 @@ const DocsLayout: React.FC<{
     fetchCategories();
   }, []);
   
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const renderSidebarItems = (items: Category[]) =>
+  
     items.map((category) => {
       const tagSegment = category.tags?.join('-') || 'untagged';
       const fullPath = `/docs/${tagSegment}`;
+      
 
       return (
         <DocsSidebarItem
@@ -127,9 +133,11 @@ const DocsLayout: React.FC<{
       );
     });
 
+
+
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-black">
-      <div className="flex flex-1 pt-16">
+      <div className="flex flex-1">
         {isSidebarOpen && (
           <div
             className="fixed inset-0 bg-gray-600 bg-opacity-50 z-20 lg:hidden"
@@ -137,13 +145,13 @@ const DocsLayout: React.FC<{
           />
         )}
 
-        <div className="flex">
-          <aside
-            className={`fixed top-0 left-0 h-full bg-white dark:bg-black border-r border-gray-200 dark:border-gray-700 transform ${
-              isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-            } transition-transform duration-300 ease-in-out min-w-80 z-40`}
-          >
-            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+          <div className="flex">
+            <aside
+              className={`fixed top-0 left-0 h-full bg-white dark:bg-black border-r border-gray-200 dark:border-gray-700 transform ${
+                isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+              } transition-transform duration-300 ease-in-out min-w-80 z-40`}
+            >
+            <div className="flex items-center justify-between p-[18px] border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center"></div>
               <button
                 className="p-2 text-gray-500 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300"
@@ -163,7 +171,7 @@ const DocsLayout: React.FC<{
             }`}
           >
             <button
-              className="fixed top-1 left-4 z-50 flex items-center gap-2 p-2 mt-3"
+              className="fixed top-1 left-4 z-50 flex items-center gap-2 p-2 mt-1"
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               aria-label="Toggle Sidebar"
             >
@@ -177,9 +185,12 @@ const DocsLayout: React.FC<{
             </button>
           </div>
         </div>
-        <main className="flex-1">
+        <main id="page-content" className="flex-1 relative">
           <DocsNavbar />
-          <div className="max-w-4xl mx-auto mb-8 mt-20 min-h-screen">{children}</div>
+          <div className="max-w-4xl mx-auto mb-8 mt-20 min-h-screen px-4 lg:px-0 relative">
+            {children}
+          </div>
+          <TableOfContents />
           <DocsFooter />
         </main>
       </div>

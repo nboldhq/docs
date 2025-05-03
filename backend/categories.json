@@ -78,7 +78,7 @@
     "parentId": 1745928010518,
     "icon": "",
     "tags": [
-      "collaboration-templates"
+      "create-a-new-collaboration-template"
     ],
     "author": "Kristina Konstantynova",
     "id": 1745933328668,
@@ -119,5 +119,53 @@
     "author": "Kristina Konstantnyova",
     "visibility": "public",
     "id": 1746012327806
+  },
+  {
+    "name": "Home App Installation Steps",
+    "description": "# Set up the Home Page\n\nIn this article, you'll see how to set up the `Home` Page in your Microsoft Teams environment:\n\n![](https://downloads.intercomcdn.com/i/o/175631759/31ded0f5316a7f707c5752af/image.png)\n\nEmployees will get a home page that gathers all the Teams she/he belongs to, and where they can create teams based on templates made available by your organization.\n\n:::tip\nYou can make this homepage available to everyone in your organization or just certain groups of people.\n:::\n\n:::warning\nTo complete these steps, you **must** be a Microsoft Teams Administrator or a Microsoft 365 Global Administrator.\n:::\n\n## Setup\n\n### 1. Download the nBold Home package\n\nThis \"targeted\" package is a personal Microsoft Teams app comprised of only one tab (Home).\n\n[nBold Home package](https://assets.nbold.io/packages/io.nbold.home.prd.zip)\n\n### 2. Connect to Microsoft Teams as an administrator\n\nConnect to [Microsoft Teams](https://teams.microsoft.com) and load the Home Package as described here:\n\n![](/media/home-page.png)\n\n![](/media/screenshot-2023-01-26-at-12-05-22.png)\n\nSelect from your computer the nBold Home package (Select the entire zip file) that you have just downloaded.\n\n![](/media/home-page-1.png)![](/media/add-home.png)\n\n![](https://downloads.intercomcdn.com/i/o/442959300/32e37d44e7c306fe23d9c902/home+app+pinned.png)\n\nOnce installed, you'll find the home package on your own company store and on the Microsoft Teams navigation bar.\n\n### 3. Connect to Microsoft Teams Admin Panel\n\nConnect to the [Microsoft Teams Admin Center](https://admin.teams.microsoft.com/) and reach the [App Setup Policies Section](https://admin.teams.microsoft.com/policies/app-setup).\n\n![](https://downloads.intercomcdn.com/i/o/164959617/c9f596e883c3f0cc24cd116f/image.png)\n\nAt this stage, you have two options:\n\n* Deploy the Home Page for everyone: Just follow step 4\n* Deploy the Home Page for a selected group of users: jump directly to step 5\n\n### 4. Deploy the Home package for everyone\n\nYou'll see two policies by default, but it may vary depending on your own configuration. With App Setup Policies, you have the capability to change the Apps shown to end-users on the left bar.\n\nSelect the `Global (Org Wide Default)` policy:\n\n![](https://downloads.intercomcdn.com/i/o/164963877/85ff3c22723fffe3ebcdb51c/image.png)\n\nSelect `Add apps`:\n\n![](https://downloads.intercomcdn.com/i/o/164962343/e6d518a5dd5393427e9232a3/image.png)\n\nSearch for `Home` and click `Add`:\n\n![](/media/add-home-1.png)\n\nSelect `Add` again:\n\n![](/media/add-home-2.png)\n\nSelect and move up the Home app to the top:\n\n![](/media/add-home-3.png)\n\nAnd now just click on `Save`!\n\n:::warning\nIt may take **up to two hours** for the policy to be effective and the app visible in the Microsoft Teams clients.\n:::\n\n### 5. Deploy the Home package to a selected group of users\n\nOn the App Setup Policies page, create a new policy by clicking `Add`:\n\n![](https://downloads.intercomcdn.com/i/o/164966410/ea62789ceeebfe3875d4271a/image.png)\n\nGive it a name, such as \"nBold Home setup policy\"\n\n![](/media/add-home-page-5.png)\n\nThen follow the steps described in **\"4. Add the home Page to everyone\"** to add the Home Package to the Policy.\n\n## Package customization (Optional)\n\nThis package could be be customized to match your organization's branding or vertical approach, especially:\n\n* Package icons\n* Package title and description\n\nFor reference, see [Manifest schema for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).\n\n:::tip\n 👋 We'll be glad to help!\nNeed help to customize your own package? Just <a onclick=\"Intercom('showNewMessage');\">Contact Us!</a>\n:::",
+    "parentId": 1745927691381,
+    "icon": "",
+    "tags": [
+      "home-app-installation-steps"
+    ],
+    "author": "test",
+    "visibility": "public",
+    "id": 1746177571784
+  },
+  {
+    "name": "Welcome Page",
+    "description": "# Welcome to nBold\n\n## Templatize your processes\n\nMake sure each team member has all the necessary tools to collaborate efficiently by templatizing repetitive processes. Provide your team with content, policies, procedures, and standard tools for distinct types of teams. Your teams and communities will share their knowledge and coordinate activities highly efficiently across the entire organization.\n\n## Bring operational excellence\n\nProvide your teams with a pre-built working environment within 60 sec. Each time you start a new project, open a sales deal, or mitigate a crisis – your team will get a collaborative workspace with the same structure, file templates, document libraries, pre-built set of tasks, calendars, integrated apps, and more.\n\n## Ensure secure workspace\n\nEnsure a strong, predictable, and supported workspace without overloading your IT. Prevent information loss, duplication, the mess in your working environment, and unsecured business processes by implementing naming rules, membership policies, approval workflows, and much more.",
+    "parentId": null,
+    "icon": "",
+    "tags": [
+      "introduction"
+    ],
+    "author": "Kristina Konstantnyova",
+    "visibility": "private",
+    "id": 1746203115199
+  },
+  {
+    "name": "Welcome Page",
+    "description": "# Welcome to nBold\n\n## Templatize your processes\n\nMake sure each team member has all the necessary tools to collaborate efficiently by templatizing repetitive processes. Provide your team with content, policies, procedures, and standard tools for distinct types of teams. Your teams and communities will share their knowledge and coordinate activities highly efficiently across the entire organization.\n\n## Bring operational excellence\n\nProvide your teams with a pre-built working environment within 60 sec. Each time you start a new project, open a sales deal, or mitigate a crisis – your team will get a collaborative workspace with the same structure, file templates, document libraries, pre-built set of tasks, calendars, integrated apps, and more.\n\n## Ensure secure workspace\n\nEnsure a strong, predictable, and supported workspace without overloading your IT. Prevent information loss, duplication, the mess in your working environment, and unsecured business processes by implementing naming rules, membership policies, approval workflows, and much more.",
+    "parentId": null,
+    "icon": "",
+    "tags": [
+      "introduction"
+    ],
+    "author": "Kristina Konstantnyova",
+    "visibility": "private",
+    "id": 1746203142074
+  },
+  {
+    "name": "Welcome Page",
+    "description": "# Welcome to nBold\n\n## Templatize your processes\n\nMake sure each team member has all the necessary tools to collaborate efficiently by templatizing repetitive processes. Provide your team with content, policies, procedures, and standard tools for distinct types of teams. Your teams and communities will share their knowledge and coordinate activities highly efficiently across the entire organization.\n\n## Bring operational excellence\n\nProvide your teams with a pre-built working environment within 60 sec. Each time you start a new project, open a sales deal, or mitigate a crisis – your team will get a collaborative workspace with the same structure, file templates, document libraries, pre-built set of tasks, calendars, integrated apps, and more.\n\n## Ensure secure workspace\n\nEnsure a strong, predictable, and supported workspace without overloading your IT. Prevent information loss, duplication, the mess in your working environment, and unsecured business processes by implementing naming rules, membership policies, approval workflows, and much more.",
+    "parentId": null,
+    "icon": "",
+    "tags": [
+      "introduction"
+    ],
+    "author": "Kristina Konstantnyova",
+    "visibility": "private",
+    "id": 1746203350419
   }
 ]

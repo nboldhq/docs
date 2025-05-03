@@ -48,19 +48,21 @@ interface DocsSidebarItemProps {
           : [...prev, label]
       );
     };
+
     return (
       <div className="mb-1">
-       <div
-        className={cn(
+        <div
+          className={cn(
             "flex items-center px-4 py-2 rounded-md cursor-pointer transition-colors duration-200",
             isActive
-            ? "bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000] text-white"
-            : "dark:text-white hover:bg-gradient-to-r hover:from-[#921d7f] hover:via-[#c1124a] hover:to-[#ff0000] hover:text-white"
-        )}
-        onClick={() => {
-            navigate(path); 
-            if (hasSubItems) onToggle?.(); 
-        }}
+              ? "bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000] text-white"
+              : "dark:text-white hover:bg-gradient-to-r hover:from-[#921d7f] hover:via-[#c1124a] hover:to-[#ff0000] hover:text-white",
+            "lg:text-base text-sm" // Responsive text sizing
+          )}
+          onClick={() => {
+            navigate(path);
+            if (hasSubItems) onToggle?.();
+          }}
         >
           <span className="flex-shrink-0 mr-3">{icon}</span>
           <span className="flex-grow font-medium">{label}</span>
@@ -73,9 +75,9 @@ interface DocsSidebarItemProps {
             </span>
           )}
         </div>
-        
+
         {hasSubItems && isExpanded && (
-          <div className="ml-10 mt-1 space-y-1">
+          <div className="ml-4 lg:ml-10 mt-1 space-y-1"> 
             {subItems?.map((item, index) => {
               const isSubExpanded = expandedSubItems.includes(item.label);
               const hasNested = !!item.subItems && item.subItems.length > 0;
@@ -84,10 +86,11 @@ interface DocsSidebarItemProps {
                 <div key={index}>
                   <div
                     className={cn(
-                      "flex items-center px-4 py-2 rounded-md cursor-pointer text-sm transition-colors duration-200",
+                      "flex items-center px-4 py-2 rounded-md cursor-pointer transition-colors duration-200",
                       location.pathname === item.path
                         ? "text-[#ff0000]"
-                        : "dark:text-white hover:text-[#ff0000]"
+                        : "dark:text-white hover:text-[#ff0000]",
+                      "lg:text-sm text-xs" // Responsive text sizing
                     )}
                     onClick={() => {
                       navigate(item.path);
@@ -107,15 +110,16 @@ interface DocsSidebarItemProps {
                   </div>
 
                   {hasNested && isSubExpanded && (
-                    <div className="ml-6">
+                    <div className="ml-2 lg:ml-6"> {/* Responsive margin */}
                       {item.subItems?.map((sub, subIndex) => (
                         <div
                           key={subIndex}
                           className={cn(
-                            "flex items-center px-4 py-1 rounded-md cursor-pointer text-sm transition-colors duration-200",
+                            "flex items-center px-4 py-1 rounded-md cursor-pointer transition-colors duration-200",
                             location.pathname === sub.path
                               ? "text-[#ff0000]"
-                              : "dark:text-white hover:text-[#ff0000]"
+                              : "dark:text-white hover:text-[#ff0000]",
+                            "lg:text-sm text-xs" // Responsive text sizing
                           )}
                           onClick={() => navigate(sub.path)}
                         >
@@ -134,3 +138,5 @@ interface DocsSidebarItemProps {
   };
 
 export default DocsSidebarItem;
+
+

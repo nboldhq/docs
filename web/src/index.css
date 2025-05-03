@@ -15,9 +15,19 @@ body {
 .sidebar-transition {
   transition: width 0.3s ease, transform 0.3s ease;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .main-transition {
   transition: margin-left 0.3s ease, padding-left 0.3s ease;
+}
+
+.nav-link {
+    @apply text-gray-700 hover:text-[#ff003d] dark:text-gray-300 dark:hover:text-[#ff003d] font-medium transition-colors duration-200;
+}
+
+.mobile-nav-link {
+    @apply block text-gray-700 hover:text-[#ff003d] dark:text-gray-300 dark:hover:text-[#ff003d] py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200;
 }
 
 .chart-transition-opacity {
@@ -44,7 +54,9 @@ body {
 .prose > * {
   all: revert;
 }
+.wmde-markdown-var{
 
+}
 
 @layer components {
   .btn {

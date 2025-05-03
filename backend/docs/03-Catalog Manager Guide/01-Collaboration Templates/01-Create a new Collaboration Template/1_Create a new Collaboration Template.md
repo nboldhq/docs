@@ -4,7 +4,7 @@
 
         author: Kristina Konstantynova
 
-        tags: [collaboration-templates]
+        tags: [create-a-new-collaboration-template]
 
         status: undefined
 
