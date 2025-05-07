@@ -4,7 +4,7 @@
 
         author: Kristina Konstantnyova
 
-        tags: [features-of-nbold]
+        tags: [introduction]
 
         status: undefined
 

@@ -49,7 +49,7 @@ const FilesPage = () => {
   const sensors = useSensors(useSensor(MouseSensor), useSensor(TouchSensor));
 
     useEffect(() => {
-      fetch('http://localhost:3000/api/categories')
+      fetch('https://skan-dev.nbold.dev/api/categories')
         .then((res) => res.json())
         .then((data: CategoryApiResponse[]) => {
           const idToCategory = new Map<number, CategoryApiResponse>();
@@ -174,28 +174,7 @@ const FilesPage = () => {
     <div className="p-6">
       <div className="mb-6 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-        <Button
-            onClick={handleUploadClick}
-            className="border-gradient text-white"
-            size="sm"
-            startContent={<Upload className="w-4 h-4" />}
-          >
-            Upload
-          </Button>
-          <input
-            type="file"
-            id="file-upload-input"
-            style={{ display: 'none' }} 
-            onChange={handleFileChange} 
-          />
-          <Button
-          onClick={() => setShowNewFolderModal(true)} 
-          size="sm"
-          className="text-[#c1124a] bg-transparent"
-          startContent={<FolderPlus className="w-4 h-4" />}
-        >
-          New Folder
-        </Button>
+         <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Storage</h2>
         </div>
         <div className="flex items-center space-x-2">
           <Button

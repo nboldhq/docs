@@ -13,7 +13,7 @@ const WelcomePage: React.FC = () => {
 
   const handleLogin = () => {
     login();
-    navigate('/docs/introduction');
+    navigate('/docs/welcome-page');
   };
   const descriptions = [
     <div key="desc1">
@@ -44,7 +44,7 @@ const WelcomePage: React.FC = () => {
   
   return (
   <Layout>
-    <div className="relative flex flex-col h-[837px] items-center justify-center w-full px-4 bg-neutral-950 antialiased">
+    <div className="relative flex flex-col h-[847px] items-center justify-center w-full px-4 bg-neutral-950 antialiased">
       <div className="max-w-3xl mx-auto text-center space-y-8 z-10">
         <h1 className="flex items-center justify-center text-white text-3xl md:text-6xl font-bold">
           <span>Welcome to</span>
@@ -52,12 +52,12 @@ const WelcomePage: React.FC = () => {
           <span>Bold</span>
         </h1>
           <div className="space-y-6 text-neutral-400 text-base md:text-lg min-h-[157px]">
-            <Textra
-              effect="topDown"
-              data={descriptions}
-              stopDuration={4000}
-              duration={1000}
-            />
+          <Textra
+            effect="topDown"
+            data={descriptions.map(desc => desc.props.children.map((child: any) => (typeof child === 'string' ? child : child.props.children)).join(' '))}
+            stopDuration={4000}
+            duration={1000}
+          />
           </div>
         <div className="border-gradient rounded-full inline-block">
           <Button

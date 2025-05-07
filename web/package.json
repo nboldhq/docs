@@ -10,12 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@azure/msal-browser": "^4.11.1",
+    "@azure/msal-react": "^3.0.11",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@heroui/react": "^2.7.6",
+    "@scalar/api-reference": "^1.28.32",
+    "@scalar/api-reference-react": "^0.6.29",
     "@tabler/icons-react": "^3.31.0",
     "apexcharts": "^4.0.0",
     "clsx": "^2.1.1",
+    "connect-history-api-fallback": "^2.0.0",
     "cors": "^2.8.5",
     "date-fns": "^2.30.0",
     "dotenv": "^16.5.0",
@@ -45,6 +50,7 @@
   "devDependencies": {
     "@eslint/js": "^9.9.1",
     "@tailwindcss/typography": "^0.5.16",
+    "@types/connect-history-api-fallback": "^1.5.4",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.2",
     "@types/react": "^18.3.5",

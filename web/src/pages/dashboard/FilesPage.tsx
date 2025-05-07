@@ -19,7 +19,7 @@ const FilePage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/categories')
+    fetch('https://skan-dev.nbold.dev/api/categories')
       .then((res) => res.json())
       .then((json) => setData(json))
       .catch((err) => console.error('Error fetching data:', err));

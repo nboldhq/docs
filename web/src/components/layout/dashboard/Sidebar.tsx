@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../contexts/AuthContext';
 import { 
-  LayoutDashboard, 
   ChevronLeft,
   ChevronRight,
   ListCollapse,
   LogOut,
-  FolderClosed
+  FolderClosed,
+  LibraryBig
 } from 'lucide-react';
 import { cn } from '../../../utils/cn';
 import { NBoldIcon } from '../../Icons/nBoldIcon';
@@ -44,8 +44,8 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
          <span className={cn(
             "flex-shrink-0",
             isActive
-              ? "text-white" // Icon matches white text on active gradient background
-              : "text-[#c1124a] group-hover:text-white" // Icon uses theme primary color, turns white on hover
+              ? "text-white" 
+              : "text-[#c1124a] group-hover:text-white"
           )}>
             {icon}
           </span>
@@ -111,27 +111,25 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
       <div className="flex-1 overflow-y-auto py-4 px-3">
         <ul>
           <SidebarItem
-            icon={<LayoutDashboard size={20} />}
-            label="Dashboard"
-            isActive={activeItem === 'dashboard'}
-            collapsed={collapsed}
-            onClick={() => {
-              handleItemClick('dashboard');
-              navigate('/dashboard');
-            }}
-          />
-
+              icon={<ListCollapse size={20} />}
+              label="Categories"
+              isActive={activeItem === 'categories'}
+              collapsed={collapsed}
+              onClick={() => {
+                handleItemClick('categories');
+                navigate('/dashboard/categorytree');
+              }}
+            />
           <SidebarItem
-            icon={<ListCollapse size={20} />}
-            label="Categories"
-            isActive={activeItem === 'categories'}
-            collapsed={collapsed}
-            onClick={() => {
-              handleItemClick('categories');
-              navigate('/dashboard/categorytree');
-            }}
-          />
-          
+              icon={<LibraryBig size={20} />}
+              label="Navigation Tabs"
+              isActive={activeItem === 'tab'}
+              collapsed={collapsed}
+              onClick={() => {
+                handleItemClick('tab');
+                navigate('/dashboard/navigationtab');
+              }}
+            />
            <SidebarItem
             icon={<FolderClosed size={20} />}
             label="Storage"

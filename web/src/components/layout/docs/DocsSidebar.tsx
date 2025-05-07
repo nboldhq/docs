@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
 import DocsSidebarItem from './DocsSidebarItem';
+import { cn } from '../../../utils/cn';
 
 const DocsSidebar = ({ items }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

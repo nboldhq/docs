@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DocsFooter: React.FC = () => (
-    <footer className="bg-[#171717] dark:bg-[#18181B] bg-opacity-100 w-auto border-t border-gray-200 dark:border-gray-700 py-8 px-4 mt-20 ">
+    <footer className="bg-[#171717] dark:bg-[#18181B] bg-opacity-100 w-auto border-t border-gray-200 dark:border-gray-700 py-8 px-4  ">
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>

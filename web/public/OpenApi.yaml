@@ -1,0 +1,546 @@
+openapi: 3.0.0
+info:
+  title: nBold Microsoft Teams API
+  description: |
+    Teams Template and Creation Automation with Channels, Files Template, Folder
+    structure, Planner template with tasks; Governance Automation for Microsoft
+    Teams.
+  version: 1.0.0
+  contact:
+    name: nBold API Support
+    url: https://nbold.co/support
+  license:
+    name: Proprietary
+    url: https://nbold.co/terms
+
+servers:
+  - url: https://app.nbold.io/api/v3.0
+    description: Production API server
+
+paths:
+  /query/teams:
+    get:
+      tags:
+        - Teams
+      security:
+        - azureAD_auth: []
+      parameters:
+        - in: query
+          name: search
+          description: Search term to filter teams by name
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: limit
+          description: Limit the number of teams returned (default 15, max 30)
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 30
+            default: 15
+      summary: Get joined Teams
+      description: Get and search for teams information that the user has joined
+      operationId: getJoinedTeams
+      responses:
+        "200":
+          description: OK - Returns a list of teams the user has joined
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TeamArray"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/TooManyRequests"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /query/teams/{teamId}:
+    get:
+      tags:
+        - Teams
+      security:
+        - azureAD_auth: []
+      summary: Get Team details
+      description: Get detailed information about a specific team
+      operationId: getTeamById
+      parameters:
+        - $ref: "#/components/parameters/teamId"
+      responses:
+        "200":
+          description: OK - Returns detailed information about the team
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Team"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/TooManyRequests"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /query/teams/archive:
+    patch:
+      tags:
+        - Teams
+      security:
+        - azureAD_auth: []
+      summary: Archive Teams
+      description: Archive one or more teams
+      operationId: archiveTeams
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TeamIdList"
+      responses:
+        "200":
+          description: OK - Returns Teams archived's operations status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BulkTeamResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/TooManyRequests"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /query/teams/unarchive:
+    patch:
+      tags:
+        - Teams
+      security:
+        - azureAD_auth: []
+      summary: Unarchive Teams
+      description: Unarchive one or more teams
+      operationId: unarchiveTeams
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TeamIdList"
+      responses:
+        "200":
+          description: OK - Returns Teams unarchived's operations status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BulkTeamResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/TooManyRequests"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /query/templates:
+    get:
+      tags:
+        - Templates
+      security:
+        - azureAD_auth: []
+      parameters:
+        - in: query
+          name: search
+          description: Search term to filter templates by name
+          required: false
+          schema:
+            type: string
+      summary: Get Templates
+      description: Get and search for templates information that the user has access to
+      operationId: getTemplates
+      responses:
+        "200":
+          description: OK - Returns a list of templates that the user has access to
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TemplateArray"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/TooManyRequests"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /query/templates/{templateId}:
+    get:
+      tags:
+        - Templates
+      security:
+        - azureAD_auth: []
+      summary: Get Template details
+      description: Get detailed information about a specific Template
+      operationId: getTemplateById
+      parameters:
+        - $ref: "#/components/parameters/templateId"
+      responses:
+        "200":
+          description: OK - Returns detailed information about the template
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Template"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/TooManyRequests"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /query/teams/leave:
+    put:
+      tags:
+        - Teams
+      security:
+        - azureAD_auth: []
+      summary: Leave Teams
+      description: Leave one or more teams
+      operationId: LeaveTeams
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TeamIdList"
+      responses:
+        "200":
+          description: OK - Returns team leave's operations status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Team"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/TooManyRequests"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+
+components:
+  securitySchemes:
+    azureAD_auth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            https://graph.microsoft.com/.default: User delegated access
+
+  schemas:
+    Team:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: Unique identifier of the team
+        createdDateTime:
+          type: string
+          format: date-time
+          description: Timestamp when the team was created
+        displayName:
+          type: string
+          description: The name of the team
+        description:
+          type: string
+          description: A brief description of the team
+        classification:
+          type: string
+          description: Classification of the team (if applicable)
+        visibility:
+          type: string
+          enum: [private, public]
+          description: The visibility of the team
+        webUrl:
+          type: string
+          format: uri
+          description: The web URL to access the team
+        isArchived:
+          type: boolean
+          description: Indicates whether the team is archived
+        isMembershipLimitedToOwners:
+          type: boolean
+          description: Indicates if membership is limited to owners
+        discoverySettings:
+          type: object
+          properties:
+            showInTeamsSearchAndSuggestions:
+              type: boolean
+              description: Whether the team shows in Teams search and suggestions
+        tagSettings:
+          type: object
+          description: Settings related to tags
+      required:
+        - id
+        - displayName
+        - visibility
+
+    TeamArray:
+      type: array
+      items:
+        $ref: "#/components/schemas/Team"
+
+    TemplateArray:
+      type: array
+      items:
+        $ref: "#/components/schemas/Template"
+
+    Template:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: The unique identifier of the template
+          example: "b74f344d-243d-438d-b5d5-c3b268fc3b60"
+        name:
+          type: string
+          description: The name of the template
+          example: "test"
+        description:
+          type: string
+          description: The description of the template
+          example: "test"
+        enabled:
+          type: boolean
+          description: Whether the template is enabled
+          example: true
+        language:
+          type: string
+          description: The default language of the template
+          example: "en-us"
+        approval_policy_enabled:
+          type: boolean
+          description: Whether approval policy is enabled
+          example: false
+        membership_policy_minimum_members:
+          type: integer
+          description: Minimum number of members required
+          example: 0
+        membership_policy_minimum_owners:
+          type: integer
+          description: Minimum number of owners required
+          example: 0
+        security_policy_privacy:
+          type: string
+          description: Privacy setting of the template
+          example: "private"
+        security_policy_sensitivity_labels_enabled:
+          type: boolean
+          description: Whether sensitivity labels are enabled
+          example: false
+        security_policy_sensitivity_labels_templating_expression:
+          type: string
+          description: Template expression for sensitivity labels
+          example: ""
+        security_policy_sensitivity_labels_templating_encoded:
+          type: string
+          nullable: true
+          description: Encoded template for sensitivity labels
+        lifecycle_policy_enabled:
+          type: boolean
+          description: Whether lifecycle policy is enabled
+          example: false
+        source_team_object_id:
+          type: string
+          format: uuid
+          description: ID of the source team of the template
+          example: "935ae60b-aba3-4671-98e0-39cd6e396505"
+        source_team_name:
+          type: string
+          description: Name of the source team of the template
+          example: "Digital Initiative Public Relations"
+        created_at:
+          type: string
+          format: date-time
+          description: Creation timestamp
+          example: "2025-04-30 09:55:22.098+00"
+        updated_at:
+          type: string
+          format: date-time
+          description: Last update timestamp
+          example: "2025-04-30 09:55:22.098+00"
+
+    TeamIdList:
+      type: object
+      properties:
+        teamIds:
+          type: array
+          items:
+            type: string
+            format: uuid
+          description: List of team IDs to process
+      required:
+        - teamIds
+
+    BulkTeamResponse:
+      type: array
+      items:
+        type: object
+        properties:
+          teamId:
+            type: string
+            format: uuid
+            description: Unique identifier of the team
+          status:
+            type: string
+            enum: [success, failed]
+            description: Status of the operation
+          message:
+            type: string
+            description: Message related to the operation status
+        required:
+          - teamId
+          - status
+
+    ApiError:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              description: The HTTP error code
+            message:
+              type: string
+              description: The error message
+            target:
+              type: string
+              description: The target of the error
+            details:
+              type: array
+              items:
+                $ref: "#/components/schemas/ApiError"
+            innerError:
+              type: object
+              properties:
+                code:
+                  type: string
+                date:
+                  type: string
+                  format: date-time
+                request-id:
+                  type: string
+          required:
+            - code
+            - message
+
+  parameters:
+    teamId:
+      in: path
+      name: teamId
+      description: The ID of the team
+      required: true
+      schema:
+        type: string
+        format: uuid
+
+    templateId:
+      in: path
+      name: templateId
+      description: The ID of the template
+      required: true
+      schema:
+        type: string
+        format: uuid
+
+  responses:
+    BadRequest:
+      description: Bad Request - The request was invalid or cannot be served
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ApiError"
+
+    Unauthorized:
+      description: Unauthorized - Authentication credentials were missing or incorrect
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ApiError"
+
+    Forbidden:
+      description: Forbidden - The request is understood but has been refused
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ApiError"
+
+    NotFound:
+      description: Not Found - The requested resource could not be found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ApiError"
+
+    TooManyRequests:
+      description: Too Many Requests - Rate limit exceeded
+      headers:
+        Retry-After:
+          description: Number of seconds to wait before retrying
+          schema:
+            type: integer
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ApiError"
+
+    InternalServerError:
+      description: Internal Server Error - An unexpected error occurred
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ApiError"

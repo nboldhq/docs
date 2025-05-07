@@ -8,31 +8,31 @@ import DocsFooter from './DocsFooter';
 import TableOfContents from './TableOfContents';
 
 type Category = {
-  icon: string; 
+  icon: string;
   id: number;
   name: string;
   description: string;
   parentId: number | null;
-  visibility?: string; 
+  visibility?: string;
   author?: string;
   tags?: string[];
   title?: string;
   subItems?: Category[];
 };
 
-
 const DocsLayout: React.FC<{
   children: React.ReactNode;
   categories: Category[];
   isDarkMode: boolean;
   toggleDarkMode: () => void;
-
 }> = ({ children }) => {
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const isApiReference = location.pathname.includes('/api-reference');
 
   const toggleExpanded = (itemId: number) => {
     setExpandedItems((prev) =>
@@ -51,11 +51,11 @@ const DocsLayout: React.FC<{
   const buildCategoryTree = (flatCategories: Category[]) => {
     const categoryMap: Record<number, Category & { subItems: Category[] }> = {};
     const roots: Category[] = [];
-  
+
     flatCategories.forEach((cat) => {
       categoryMap[cat.id] = { ...cat, subItems: [] };
     });
-  
+
     flatCategories.forEach((cat) => {
       if (cat.parentId && categoryMap[cat.parentId]) {
         categoryMap[cat.parentId].subItems.push(categoryMap[cat.id]);
@@ -63,7 +63,7 @@ const DocsLayout: React.FC<{
         roots.push(categoryMap[cat.id]);
       }
     });
-  
+
     const filterPublicTree = (nodes: Category[]): Category[] =>
       nodes
         .filter((node) => node.visibility === 'public')
@@ -71,15 +71,14 @@ const DocsLayout: React.FC<{
           ...node,
           subItems: filterPublicTree(node.subItems || []),
         }));
-  
+
     return filterPublicTree(roots);
   };
-  
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://skan-dev.nbold.dev/api/categories');
+        const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`);
         if (!response.ok) throw new Error('Network response was not ok');
         const data: Category[] = await response.json();
         const publicCategories = data.filter((cat) => cat.visibility === 'public');
@@ -90,20 +89,18 @@ const DocsLayout: React.FC<{
         setCategories([]);
       }
     };
-  
+
     fetchCategories();
   }, []);
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const renderSidebarItems = (items: Category[]) =>
-  
     items.map((category) => {
       const tagSegment = category.tags?.join('-') || 'untagged';
       const fullPath = `/docs/${tagSegment}`;
-      
 
       return (
         <DocsSidebarItem
@@ -133,8 +130,6 @@ const DocsLayout: React.FC<{
       );
     });
 
-
-
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-black">
       <div className="flex flex-1">
@@ -145,12 +140,12 @@ const DocsLayout: React.FC<{
           />
         )}
 
-          <div className="flex">
-            <aside
-              className={`fixed top-0 left-0 h-full bg-white dark:bg-black border-r border-gray-200 dark:border-gray-700 transform ${
-                isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-              } transition-transform duration-300 ease-in-out min-w-80 z-40`}
-            >
+        <div className="flex">
+          <aside
+            className={`fixed top-0 left-0 h-full bg-white dark:bg-black border-r border-gray-200 dark:border-gray-700 transform ${
+              isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+            } transition-transform duration-300 ease-in-out w-72 z-40`}
+          >
             <div className="flex items-center justify-between p-[18px] border-b border-gray-200 dark:border-gray-700">
               <div className="flex items-center"></div>
               <button
@@ -165,6 +160,7 @@ const DocsLayout: React.FC<{
               {renderSidebarItems(categories)}
             </nav>
           </aside>
+
           <div
             className={`flex-1 ml-0 transition-all duration-300 ease-in-out ${
               isSidebarOpen ? 'ml-64' : 'ml-0'
@@ -175,7 +171,7 @@ const DocsLayout: React.FC<{
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               aria-label="Toggle Sidebar"
             >
-              <div className="flex items-center">
+              <div className="flex items-center lg:flex hidden">
                 <NBoldIcon />
                 <span className="text-4xl font-bold text-gray-900 dark:text-white">
                   Bold
@@ -186,12 +182,21 @@ const DocsLayout: React.FC<{
           </div>
         </div>
         <main id="page-content" className="flex-1 relative">
-          <DocsNavbar />
-          <div className="max-w-4xl mx-auto mb-8 mt-20 min-h-screen px-4 lg:px-0 relative">
-            {children}
-          </div>
-          <TableOfContents />
+        <DocsNavbar />
+          {!isApiReference ? (
+            <>
+              <div className="max-w-4xl mx-auto mb-8 mt-20 min-h-screen px-4 lg:px-0 relative">
+                {children}
+              </div>
+              <TableOfContents />
+            </>
+          ) : (
+            <div className=" ml-10 mt-20 min-h-screen px-4 lg:px-0 relative">
+              {children}
+            </div>
+          )}
           <DocsFooter />
+
         </main>
       </div>
     </div>

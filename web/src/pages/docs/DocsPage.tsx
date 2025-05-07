@@ -11,7 +11,8 @@ import { KeyboardShortcut } from '../../components/ui/KeyboardShortCut';
 import directive from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
 import rehypeRaw from 'rehype-raw';
-
+import { ApiReferenceReact } from "@scalar/api-reference-react";
+import '../../style.css'
 type Category = {
   icon: string;
   id: number;
@@ -29,6 +30,20 @@ interface MarkdownPreviewProps {
   markdown: string;
   theme: string;
 }
+const ApiReference: React.FC = () => {
+  return (
+    <div className='w-full'>
+
+      <ApiReferenceReact
+        configuration={{
+          spec: {
+            url: '/OpenApi.yaml',
+          },
+        }}
+        />
+   </div>
+  )
+};
 
 const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({ categories }) => {
   const [category, setCategory] = useState<Category | null>(null);
@@ -190,7 +205,7 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({ categorie
     useEffect(() => {
       const fetchCategories = async () => {
         try {
-          const response = await fetch('http://localhost:3000/api/categories');
+          const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`);
           if (!response.ok) throw new Error('Network error');
           const data = await response.json();
           setCategories(data);
@@ -205,10 +220,12 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({ categorie
     return (
       <DocsLayout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} categories={categories}>
         <Routes>
-          <Route path="/:tags" element={<CategoryDocumentation categories={categories} />} />
+          <Route path="/api-reference" element={<ApiReference />} />
           <Route path="/:tags/:title" element={<CategoryDocumentation categories={categories} />} />
-          <Route path="/*" element={<CategoryDocumentation categories={categories} />} />
+          <Route path="/:tags" element={<CategoryDocumentation categories={categories} />} />
+          <Route path="*" element={<CategoryDocumentation categories={categories} />} />
         </Routes>
+
       </DocsLayout>
     );
   };

@@ -15,16 +15,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode, collapsed }
       collapsed ? "left-[var(--sidebar-width-collapsed)]" : "left-[var(--sidebar-width)]"
     )}>
       <div className="flex-1 max-w-md">
-        <div className="relative w-full">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <Search className="h-4 w-4 text-gray-400" />
-          </div>
-          <input
-            type="search"
-              className="pl-10 pr-4 w-full py-2 rounded-[4.5rem] border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#18181B] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 "
-            placeholder="Search..."
-          />
-        </div>
+       
       </div>
       
       <div className="flex items-center space-x-4">

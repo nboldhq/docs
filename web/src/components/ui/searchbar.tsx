@@ -29,16 +29,14 @@ const SearchBar = () => {
       if (query.trim() === '') return;
 
       try {
-        const response = await fetch('http://localhost:3000/api/categories');
+        const response = await fetch('skan-dev.nbold.dev/api/categories');
         const data = await response.json();
         
-        // Filter and map results in one pass
         const filtered = data.reduce((acc, item) => {
           if (item.name.toLowerCase().includes(query.toLowerCase()) ||
               item.description.toLowerCase().includes(query.toLowerCase())) {
             acc.push({
               ...item,
-              // Create unique search ID for each result
               searchId: `search-result-${slugify(item.name)}-${Date.now()}`
             });
           }

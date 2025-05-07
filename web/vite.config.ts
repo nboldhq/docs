@@ -1,18 +1,21 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   server: {
     allowedHosts: [
-      'skan-dev.nbold.dev', // Your custom domain
-      'localhost'           // Keep local development access
+      'skan-dev.nbold.dev',
+      'localhost'
     ],
-    host: true, // Allow external network access (optional but useful for Cloudflare)
+    host: true,
     hmr: {
-      host: 'localhost:3000' // Match your Cloudflare domain
+      host: 'localhost'
     }
+  },
+  build: {
+    outDir: 'dist',
   },
   logLevel: 'info',
   optimizeDeps: {
@@ -23,4 +26,5 @@ export default defineConfig({
       '@utils': '/src/utils',
     },
   },
+
 });

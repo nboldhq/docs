@@ -5,6 +5,7 @@ import Dashboard from './Dashboard'; // ✅ this should be your renamed dashboar
 import FilesPage from './FilesPage';
 import StoragePage from './StoragePage';
 import CategoryTree from '../../pages/dashboard/CategoryTree'
+import NavigationTabs from './NavigationTabs';
 const DashboardRoutes = () => {
   return (
     <DashboardLayout>
@@ -14,7 +15,7 @@ const DashboardRoutes = () => {
         <Route path="file" element={<FilesPage />} />
         <Route path="storage" element={<StoragePage />} />
         <Route path="categorytree" element={<CategoryTree />} />
-
+        <Route path="navigationtab" element={<NavigationTabs />} />
       </Routes>
     </DashboardLayout>
   );

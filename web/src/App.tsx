@@ -1,15 +1,10 @@
-// src/App.tsx
-import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WelcomePage from './pages/WelcomePage';
 import DashboardPage from './pages/dashboard/DashboardPage';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
 import DocsPage from './pages/docs/DocsPage';
-
-function PrivateRoute({ children }: { children: React.ReactNode }) {
-  const { isAuthenticated } = useAuth();
-  return isAuthenticated ? children : <Navigate to="/" />;
-}
+import { AuthProvider } from './contexts/AuthContext';
+import LoginPage from './pages/login/LoginPage';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -17,16 +12,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
-          <Route
-            path="/docs/*"
-            element={
-                <DocsPage />
-            }
-          />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/docs/*" element={<DocsPage />} />
           <Route
             path="/dashboard/*"
             element={
+              <PrivateRoute>
                 <DashboardPage />
+              </PrivateRoute>
             }
           />
         </Routes>

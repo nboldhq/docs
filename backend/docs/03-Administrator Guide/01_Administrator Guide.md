@@ -1,17 +1,11 @@
 ---
+title: Administrator Guide
+author: Shruti Priya
+tags: [administrator-guide]
+status: undefined
+---
 
-        title: Administrator Guide
-
-        author: Shruti Priya
-
-        tags: [administrator-guide]
-
-        status: undefined
-
-        ---
-
-
-        # Administrator Guide
+# Administrator Guide
 
 In this article, you will find all the documents regarding the key features of nBold, the Setup and Configuration Guide, and all other onboarding steps.
 

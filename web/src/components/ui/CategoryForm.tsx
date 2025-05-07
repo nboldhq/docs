@@ -88,7 +88,7 @@ import MDEditor from '@uiw/react-md-editor';
       const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-          const response = await fetch(process.env+'/api/categories', {
+          const response = await fetch('https://skan-dev.nbold.dev/api/categories', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)

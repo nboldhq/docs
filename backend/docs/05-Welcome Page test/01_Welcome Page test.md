@@ -1,17 +1,11 @@
 ---
+title: Welcome Page test
+author: Kristina Konstantnyova
+tags: [welcome-page-test]
+status: undefined
+---
 
-        title: Welcome Page
-
-        author: Kristina Konstantnyova
-
-        tags: [introduction]
-
-        status: undefined
-
-        ---
-
-
-        # Welcome to nBold
+# Welcome to nBold
 
 ## Templatize your processes
 

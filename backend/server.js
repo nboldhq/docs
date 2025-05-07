@@ -1,271 +1,201 @@
+// server.js
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
 const app = express();
-const port = 3000;
-
-app.use(cors());
-app.use(express.json());
-
+const port = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'categories.json');
 
-    function readCategories() {
-      try {
-        if (!fs.existsSync(DATA_FILE)) return [];
-        const data = fs.readFileSync(DATA_FILE, 'utf8');
-        return JSON.parse(data);
-      } catch (error) {
-        console.error('Error reading categories:', error);
-        throw error;
+app.use(express.json());
+app.use(cors({ origin: '*', methods: ['GET','POST','PUT','PATCH','DELETE'] }));
+
+// ——— Helpers —————————————————————————————
+function readCategories() {
+  if (!fs.existsSync(DATA_FILE)) return [];
+  return JSON.parse(fs.readFileSync(DATA_FILE,'utf8'));
+}
+function writeCategories(data) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(data,null,2));
+}
+function sanitizeFilename(name) {
+  return name.replace(/[<>:"/\\|?*\x00-\x1F]/g,'').trim();
+}
+function getCategoryPath(cat, allCats, root) {
+  const parts = [];
+  let cur = cat;
+  while (cur && cur.name) {
+    const siblings = allCats.filter(c=>c.parentId===cur.parentId);
+    const idx = siblings.findIndex(s=>s.id===cur.id);
+    parts.unshift(`${String(idx+1).padStart(2,'0')}-${sanitizeFilename(cur.name)}`);
+    cur = allCats.find(c=>c.id===cur.parentId);
+  }
+  return path.join(root, ...parts);
+}
+
+// ——— API ROUTES ————————————————————————————
+
+// Health check
+app.get('/api/health', (req, res) => {
+  res.json({ status:'ok', timestamp: new Date().toISOString() });
+});
+
+// GET all categories
+app.get('/api/categories', (req, res) => {
+  try { res.json(readCategories()) }
+  catch (e) { res.status(500).json({error:'Failed to load'}) }
+});
+
+// CREATE or UPDATE a category
+app.post('/api/categories', (req, res) => {
+  try {
+    const data = readCategories();
+    const cat  = req.body;
+    if (!cat.name?.trim()) return res.status(400).json({error:'name required'});
+
+    const docsRoot = path.join(__dirname,'docs');
+    let filePath;
+
+    if (cat.id) {
+      // — update existing
+      const idx = data.findIndex(c=>c.id===cat.id);
+      if (idx<0) return res.status(404).json({error:'not found'});
+      const old = data[idx];
+      const oldDir = getCategoryPath(old,data,docsRoot);
+      data[idx] = {...old,...cat};
+      const newDir = getCategoryPath(data[idx],data,docsRoot);
+      if (!fs.existsSync(newDir)) fs.mkdirSync(newDir,{recursive:true});
+
+      // move or rename the single markdown file
+      const files = fs.existsSync(oldDir)?fs.readdirSync(oldDir):[];
+      const f = files.find(f=>f.includes(sanitizeFilename(old.name)))||'';
+      if (oldDir!==newDir && f) {
+        fs.renameSync(path.join(oldDir,f), path.join(newDir, `${f}`));
+        filePath = path.join(newDir, f);
+      } else if (f) {
+        filePath = path.join(oldDir,f);
       }
+    } else {
+      // — create new
+      cat.id = Date.now();
+      data.push(cat);
+      const parent = data.find(c=>c.id===cat.parentId) || {};
+      const dir   = path.join(
+        getCategoryPath(parent,data,docsRoot),
+        `${String(data.filter(c=>c.parentId===cat.parentId).length).padStart(2,'0')}-${sanitizeFilename(cat.name)}`
+      );
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir,{recursive:true});
+      filePath = path.join(dir, `01_${sanitizeFilename(cat.name)}.md`);
     }
-    function writeCategories(data) {
-      try {
-        fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
-      } catch (error) {
-        console.error('Error writing categories:', error);
-        throw error;
-      }
-    }
-    function getCategoryPath(category, categories, contentRoot) {
-      const parts = [];
-      let current = category;
-    
-      while (current && current.name) {
-        const siblings = categories.filter(c => c.parentId === current.parentId);
-        const index = siblings.findIndex(s => s.id === current.id);
-        const seq = String(index + 1).padStart(2, '0');
-        parts.unshift(`${seq}-${sanitizeFilename(current.name)}`);
-        current = categories.find(c => c.id === current.parentId);
-      }
-    
-      return path.join(contentRoot, ...parts);
-    }
-    
-    function sanitizeFilename(name) {
-      return name.replace(/[<>:"/\\|?*\x00-\x1F]/g, '').trim();
-    }
-    // Get all categories
-    app.get('/api/categories', (req, res) => {
-        try {
-          const categories = readCategories(); 
-          res.json(categories);
-        } catch (error) {
-          console.error('Error fetching categories:', error);  
-          res.status(500).json({ error: 'Failed to load categories' });
-        }
-      }); 
-    // Create or update a category
-    app.post('/api/categories', (req, res) => {
-      try {
-        const category = req.body;
-        const categories = readCategories();
-    
-        // Validate required fields
-        if (!category.name?.trim()) {
-          return res.status(400).json({ error: 'Category name is required.' });
-        }
-    
-        const contentRoot = path.join(__dirname, 'docs');
-        let filePath = null;
-    
-        if (category.id) {
-          // Update existing category
-          const index = categories.findIndex(c => c.id === category.id);
-          if (index === -1) {
-            return res.status(404).json({ error: 'Category not found' });
-          }
-    
-          const originalCategory = categories[index];
-          const oldFolderPath = getCategoryPath(originalCategory, categories, contentRoot);
-          categories[index] = { ...originalCategory, ...category };
-          const newFolderPath = getCategoryPath(categories[index], categories, contentRoot);
-    
-          // Create new folder structure if needed
-          if (!fs.existsSync(newFolderPath)) {
-            fs.mkdirSync(newFolderPath, { recursive: true });
-          }
-    
-         // Find the old file name
-            const oldFiles = fs.readdirSync(oldFolderPath);
-            const oldFile = oldFiles.find(f => f.includes(sanitizeFilename(originalCategory.name)));
-            const oldSeqMatch = oldFile?.match(/^(\d+)_/);
-            const seq = oldSeqMatch ? oldSeqMatch[1] : '01';
 
-            // If the folder changed, move the file
-            if (oldFolderPath !== newFolderPath && oldFile) {
-              const oldFilePath = path.join(oldFolderPath, oldFile);
-              const newFileName = `${seq}_${sanitizeFilename(category.name)}.md`;
-              filePath = path.join(newFolderPath, newFileName);
-              fs.renameSync(oldFilePath, filePath);
-            } else if (oldFile) {
-              // Folder didn't change; just update the same file
-              filePath = path.join(oldFolderPath, oldFile);
-            }
+    writeCategories(data);
 
-    
-          // Move old files to new location
-            if (oldFolderPath !== newFolderPath) {
-              const oldFiles = fs.readdirSync(oldFolderPath);
-              
-              oldFiles.forEach(file => {
-                const oldFilePath = path.join(oldFolderPath, file);
-                const newFilePath = path.join(newFolderPath, file);
-                fs.renameSync(oldFilePath, newFilePath);
-              });
+    const fm = `---\n`
+             + `title: ${cat.name}\n`
+             + `author: ${cat.author||''}\n`
+             + `tags: [${(cat.tags||[]).join(',')}]\n`
+             + `status: ${cat.status}\n`
+             + `---\n\n${cat.description||''}\n`;
 
-              // After moving, check if old folder is empty
-              const remainingFiles = fs.readdirSync(oldFolderPath);
-              if (remainingFiles.length === 0) {
-                fs.rmdirSync(oldFolderPath);
-                console.log(`Removed old empty folder: ${oldFolderPath}`);
-              }
-            }
-        }else {
-          // Create new category
-          category.id = Date.now();
-          categories.push(category);
+    fs.writeFileSync(filePath, fm,'utf8');
+    res.json({success:true,category:cat});
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({error:'save failed'});
+  }
+});
 
-          const parent = categories.find(c => c.id === category.parentId);
-          const siblings = categories.filter(c => c.parentId === category.parentId);
-          const folderSeq = String(siblings.length).padStart(2, '0');
+// DELETE a category
+app.delete('/api/categories/:id', (req, res) => {
+  try {
+    const id = +req.params.id;
+    let data = readCategories();
+    const toDel = data.find(c=>c.id===id);
+    if (!toDel) return res.status(404).json({error:'not found'});
 
-          const sanitizedName = sanitizeFilename(category.name);
-          const numberedFolderName = `${folderSeq}-${sanitizedName}`;
-          const folderPath = path.join(
-            getCategoryPath(parent || {}, categories, contentRoot),
-            numberedFolderName
-          );
+    const docsRoot = path.join(__dirname,'docs');
+    const folder   = getCategoryPath(toDel,data,docsRoot);
 
-          if (!fs.existsSync(folderPath)) {
-            fs.mkdirSync(folderPath, { recursive: true });
-          }
+    // remove from array recursively
+    const removeRec = i => {
+      data.filter(c=>c.parentId===i).forEach(child=>removeRec(child.id));
+      data = data.filter(c=>c.id!==i);
+    };
+    removeRec(id);
+    writeCategories(data);
 
-          // File name inside folder
-          const files = fs.readdirSync(folderPath);
-          const maxSeq = files.reduce((max, file) => {
-            const match = file.match(/^(\d+)_/);
-            return match ? Math.max(max, parseInt(match[1])) : max;
-          }, 0);
+    if (fs.existsSync(folder)) fs.rmSync(folder,{recursive:true,force:true});
+    res.json({success:true});
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({error:'delete failed'});
+  }
+});
 
-          filePath = path.join(folderPath, `${maxSeq + 1}_${sanitizedName}.md`);
-        }
+// PATCH a category
+app.patch('/api/categories/:id', (req, res) => {
+  try {
+    const id = +req.params.id;
+    const data = readCategories();
+    const idx = data.findIndex(c=>c.id===id);
+    if (idx<0) return res.status(404).json({error:'not found'});
+    data[idx] = {...data[idx],...req.body};
+    writeCategories(data);
+    res.json({success:true,category:data[idx]});
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({error:'patch failed'});
+  }
+});
 
-    
-        // Write category data
-        writeCategories(categories);
-    
-        // Create markdown content with frontmatter
-        const frontmatter = `---\n
-        title: ${category.name}\n
-        author: ${category.author || ''}\n
-        tags: [${(category.tags || []).join(', ')}]\n
-        status: ${category.status}\n
-        ---\n\n
-        ${category.description || ''}`;
-        
-            fs.writeFileSync(filePath, frontmatter, 'utf-8');
-            
-            return res.status(200).json({ success: true, category });
-          } catch (error) {
-            console.error('Error saving category:', error);
-            return res.status(500).json({ error: 'Internal server error' });
-          }
-    }); 
-    // Delete a category and its children
-    app.delete('/api/categories/:id', (req, res) => {
-      try {
-        const id = parseInt(req.params.id);
-        let categories = readCategories();
-    
-        const categoryToDelete = categories.find(c => c.id === id);
-        if (!categoryToDelete) {
-          return res.status(404).json({ error: 'Category not found' });
-        }
-    
-        const contentRoot = path.join(__dirname, 'docs');
-        const folderPath = getCategoryPath(categoryToDelete, categories, contentRoot);
-    
-        // Recursively delete children first
-        const deleteRecursive = (idToDelete) => {
-          const children = categories.filter(c => c.parentId === idToDelete);
-          children.forEach(child => deleteRecursive(child.id));
-          categories = categories.filter(c => c.id !== idToDelete);
-        };
-    
-        deleteRecursive(id);
-        writeCategories(categories);
-    
-        // Remove the folder and all contents
-        if (fs.existsSync(folderPath)) {
-          fs.rmSync(folderPath, { recursive: true, force: true });
-          console.log(`Deleted folder and files: ${folderPath}`);
-        }
-    
-        res.json({ success: true });
-      } catch (error) {
-        console.error('Error deleting category:', error);
-        res.status(500).json({ error: 'Failed to delete category' });
-      }
-    });
-    
+// REORDER categories
+app.post('/api/categories/reorder', (req, res) => {
+  try {
+    const {draggedId,targetId} = req.body;
+    const data = readCategories();
+    const dI = data.findIndex(c=>c.id===draggedId);
+    const tI = data.findIndex(c=>c.id===targetId);
+    if (dI<0||tI<0) return res.status(400).json({error:'invalid ids'});
+    const [item] = data.splice(dI,1);
+    data.splice(tI,0,item);
+    writeCategories(data);
+    res.json({success:true});
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({error:'reorder failed'});
+  }
+});
 
-    app.post('/api/categories/reorder', (req, res) => {
-        try {
-          const { draggedId, targetId } = req.body;
-          const categories = readCategories();
-      
-          const draggedIndex = categories.findIndex(c => c.id === draggedId);
-          const targetIndex = categories.findIndex(c => c.id === targetId);
-      
-          if (draggedIndex === -1 || targetIndex === -1) {
-            return res.status(400).json({ error: 'Invalid IDs for reordering' });
-          }
-      
-          const [draggedItem] = categories.splice(draggedIndex, 1);
-          categories.splice(targetIndex, 0, draggedItem);
-      
-          writeCategories(categories);
-          res.json({ success: true });
-        } catch (error) {
-          res.status(500).json({ error: 'Failed to reorder categories' });
-        }
-      });
-    // Endpoint to get the contents and files in a folder
-    app.get('/api/folder-content', (req, res) => {
-        try {
-          // Get the folder path from query parameters
-          const folderName = req.query.folderName;
-          if (!folderName) {
-            return res.status(400).json({ error: 'folderName is required' });
-          }
-      
-          const contentRoot = path.join(__dirname, '../content');
-          const folderPath = path.join(contentRoot, folderName);
-      
-          // Check if the folder exists
-          if (!fs.existsSync(folderPath)) {
-            return res.status(404).json({ error: 'Folder not found' });
-          }
-      
-          // Read the contents of the folder
-          const files = fs.readdirSync(folderPath).map(file => {
-            return {
-              fileName: file,
-              filePath: path.join(folderPath, file),
-              isDirectory: fs.statSync(path.join(folderPath, file)).isDirectory(),
-            };
-          });
-      
-          // Return the list of files and directories in the folder
-          res.json({ success: true, files });
-        } catch (error) {
-          console.error('Error reading folder content:', error);
-          res.status(500).json({ error: 'Failed to retrieve folder content' });
-        }
-      });
-      
-    app.listen(port, () => {
-      console.log(`Server is running at http://localhost:${port}`);
-    });
+// FOLDER CONTENTS
+app.get('/api/folder-content', (req, res) => {
+  try {
+    const name = req.query.folderName;
+    if (!name) return res.status(400).json({error:'folderName required'});
+    const root = path.join(__dirname,'../content');
+    const folder = path.join(root,name);
+    if (!fs.existsSync(folder)) return res.status(404).json({error:'not found'});
+    res.json({success:true, files: fs.readdirSync(folder)});
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({error:'list failed'});
+  }
+});
+
+// ——— SPA & Static Assets ————————————————————
+
+// Serve React build
+const staticPath = path.resolve(__dirname, '../web/dist');
+console.log('Serving static files from:', staticPath);
+app.use(express.static(staticPath));
+app.use(express.static(path.resolve(__dirname, '../web/dist')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../web/dist/index.html'));
+});
+// 404 for anything else
+app.use((req,res) => {
+  res.status(404).json({error:'Not found'});
+});
+
+app.listen(port, () => {
+  console.log(`Listening on http://localhost:${port}`);
+});
