@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from '../../ui/searchbar';
+import SearchBar from '../../ui/Searchbar';
 import { Menu, X } from 'lucide-react';
 
 interface Category {

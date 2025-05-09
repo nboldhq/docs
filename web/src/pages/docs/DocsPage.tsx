@@ -30,17 +30,18 @@ interface MarkdownPreviewProps {
   markdown: string;
   theme: string;
 }
-const ApiReference: React.FC = () => {
+const ApiReference: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
+console.log('test theme',isDarkMode)  
   return (
     <div className='w-full'>
-
       <ApiReferenceReact
         configuration={{
-          spec: {
-            url: '/OpenApi.yaml',
-          },
+          spec: { url: 'https://skan-dev.nbold.dev/api/spec' },
+          darkMode: isDarkMode,
+          hideDarkModeToggle:true,
+          hideClientButton:true
         }}
-        />
+      />
    </div>
   )
 };
@@ -194,13 +195,24 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({ categorie
 
 
   const DocsPage: React.FC = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
     const [categories, setCategories] = useState<Category[]>([]);
-
-    const toggleDarkMode = () => {
-      setIsDarkMode((prev) => !prev);
-      document.documentElement.classList.toggle('dark');
-    };
+    const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+      if (typeof window === 'undefined') return false;
+      return localStorage.getItem('docs-theme') === 'dark';
+    });
+  
+    useEffect(() => {
+      const html = document.documentElement;
+      if (isDarkMode) {
+        html.classList.add('dark');
+        localStorage.setItem('docs-theme', 'dark');
+      } else {
+        html.classList.remove('dark');
+        localStorage.setItem('docs-theme', 'light');
+      }
+    }, [isDarkMode]);
+  
+    const toggleDarkMode = () => setIsDarkMode(prev => !prev);
 
     useEffect(() => {
       const fetchCategories = async () => {
@@ -217,10 +229,12 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({ categorie
       fetchCategories();
     }, []);
 
+
+      
     return (
       <DocsLayout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} categories={categories}>
         <Routes>
-          <Route path="/api-reference" element={<ApiReference />} />
+        <Route path="/api-reference" element={<ApiReference isDarkMode={isDarkMode} />} />
           <Route path="/:tags/:title" element={<CategoryDocumentation categories={categories} />} />
           <Route path="/:tags" element={<CategoryDocumentation categories={categories} />} />
           <Route path="*" element={<CategoryDocumentation categories={categories} />} />

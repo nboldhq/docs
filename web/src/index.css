@@ -57,7 +57,9 @@ html {
 .wmde-markdown-var{
 
 }
-
+.transition-transform {
+  transition: transform 0.2s ease-in-out;
+}
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 

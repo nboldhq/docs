@@ -6,6 +6,7 @@ import DocsNavbar from './DocsNavbar';
 import DocsSidebarItem from './DocsSidebarItem';
 import DocsFooter from './DocsFooter';
 import TableOfContents from './TableOfContents';
+import { ApiReferenceReact } from '@scalar/api-reference-react';
 
 type Category = {
   icon: string;
@@ -21,18 +22,17 @@ type Category = {
 };
 
 const DocsLayout: React.FC<{
-  children: React.ReactNode;
-  categories: Category[];
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}> = ({ children }) => {
-  const location = useLocation();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+   children: React.ReactNode;
+   categories: Category[];
+   isDarkMode: boolean;             // use the prop
+   toggleDarkMode: () => void;
+ }> = ({ children, isDarkMode, toggleDarkMode }) => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
+  const location = useLocation();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const isApiReference = location.pathname.includes('/api-reference');
+
 
   const toggleExpanded = (itemId: number) => {
     setExpandedItems((prev) =>
@@ -40,12 +40,6 @@ const DocsLayout: React.FC<{
         ? prev.filter((id) => id !== itemId)
         : [...prev, itemId]
     );
-  };
-
-  const toggleDarkMode = () => {
-    const htmlElement = document.documentElement;
-    htmlElement.classList.toggle('dark');
-    setIsDarkMode(!isDarkMode);
   };
 
   const buildCategoryTree = (flatCategories: Category[]) => {
@@ -130,6 +124,10 @@ const DocsLayout: React.FC<{
       );
     });
 
+    useEffect(()=>{
+        console.log('dark mode layout',isDarkMode)
+        console.log('dark mode layout 2 ',toggleDarkMode)
+    },[])
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-black">
       <div className="flex flex-1">
@@ -183,17 +181,25 @@ const DocsLayout: React.FC<{
         </div>
         <main id="page-content" className="flex-1 relative">
         <DocsNavbar />
-          {!isApiReference ? (
+        {isApiReference ? (
+            <div className="ml-10 mt-20 min-h-screen px-4 lg:px-0 relative">
+              <ApiReferenceReact
+                configuration={{
+                  spec: { url: 'https://skan-dev.nbold.dev/api/spec' },
+                  darkMode: isDarkMode,
+                  hideDarkModeToggle:true,
+                  hideClientButton:true,
+
+                }}
+              />
+            </div>
+          ) : (
             <>
               <div className="max-w-4xl mx-auto mb-8 mt-20 min-h-screen px-4 lg:px-0 relative">
                 {children}
               </div>
               <TableOfContents />
             </>
-          ) : (
-            <div className=" ml-10 mt-20 min-h-screen px-4 lg:px-0 relative">
-              {children}
-            </div>
           )}
           <DocsFooter />
 

@@ -45,7 +45,9 @@ const CategoryTree: React.FC = () => {
           throw new Error('Received non-JSON response');
         }
   
-        const data: Category[] = await response.json();
+        const json = await response.json();
+        const data: Category[] = Array.isArray(json) ? json : [];
+
         setCategories(data);
         return;
       } catch (error) {
@@ -110,14 +112,19 @@ const CategoryTree: React.FC = () => {
     }
   };
 
-  const renderCategories = (items: Category[], parentId: number | null = null, level: number = 0): React.ReactNode => {
+  const renderCategories = (
+    items: Category[],
+    parentId: number | null = null,
+    level: number = 0
+  ): React.ReactNode => {
+    if (!Array.isArray(items)) return null;
+  
     return items
       .filter(item => item.parentId === parentId)
       .map((item, index) => {
         const isExpanded = expandedIds.has(item.id);
-  
         return (
-          <CategoryItem 
+          <CategoryItem
             key={item.id}
             item={item}
             index={index}
@@ -140,6 +147,7 @@ const CategoryTree: React.FC = () => {
         );
       });
   };
+  
 
   return (
     <div className="p-6">

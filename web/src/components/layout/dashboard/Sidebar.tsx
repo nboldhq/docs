@@ -7,7 +7,8 @@ import {
   ListCollapse,
   LogOut,
   FolderClosed,
-  LibraryBig
+  LibraryBig,
+  Code
 } from 'lucide-react';
 import { cn } from '../../../utils/cn';
 import { NBoldIcon } from '../../Icons/nBoldIcon';
@@ -140,6 +141,17 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
               navigate('/dashboard/storage');
             }}
           />
+           <SidebarItem
+            icon={<Code size={20 } />}
+            label="Api Reference"
+            isActive={activeItem === 'apireference'}
+            collapsed={collapsed}
+            onClick={() => {
+              handleItemClick('apireference');
+              navigate('/dashboard/apireference');
+            }}
+          />
+          
         </ul>
       </div>
       
