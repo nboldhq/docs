@@ -60,6 +60,18 @@ html {
 .transition-transform {
   transition: transform 0.2s ease-in-out;
 }
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 

@@ -6,7 +6,7 @@
     "x-ms-api-annotation": {
       "status": "Production"
     },
-    "title": "nBold Collaboration Process API",
+    "title": "nBold Collaboration Process API ",
     "description": "The nBold API provides a unified programmability model that you can use to manage your collaboration environment such as Microsoft Teams and build powerful apps easily.",
     "termsOfService": "https://nbold.co/legal/tos",
     "contact": {
@@ -156,8 +156,7 @@
         "Channels",
         "Messages",
         "Tabs",
-        "Users",
-        "Sensitivity Labels"
+        "Users"
       ]
     },
     {
@@ -199,142 +198,12 @@
     }
   ],
   "paths": {
-    "/monitoring/test_api_connection": {
-      "get": {
-        "tags": [
-          "Connectivity"
-        ],
-        "x-nbold-rate-limit": "tier-3",
-        "x-nbold-required-roles": [
-          "AUTHORIZED_APP",
-          "INTEGRATION_MANAGER",
-          "TEAMS_SERVICE_ADMIN",
-          "GLOBAL_ADMIN"
-        ],
-        "x-ms-visibility": "internal",
-        "x-ms-api-annotation": {
-          "status": "Production",
-          "family": "TestAPIConnection",
-          "revision": 1
-        },
-        "summary": "Test Connection to the nBold API",
-        "deprecated": false,
-        "description": "Test connection to the nBold API. Used by automation platforms such as Microsoft Azure Logic Apps and Microsoft Power Automate.\n",
-        "operationId": "TestApiConnection",
-        "security": [
-          {
-            "oauth2_auth": [
-              "https://graph.microsoft.com/.default"
-            ]
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request - Indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "API Error",
-                  "description": "A generic API error",
-                  "type": "object",
-                  "properties": {
-                    "@odata.context": {
-                      "description": "oData context of the request",
-                      "type": "string"
-                    },
-                    "error": {
-                      "description": "JSON representation of the error",
-                      "type": "object",
-                      "properties": {
-                        "code": {
-                          "description": "The HTTP error code",
-                          "type": "string"
-                        },
-                        "message": {
-                          "description": "The error message",
-                          "type": "string"
-                        },
-                        "innerError": {
-                          "description": "JSON representation of the inner error (If available)",
-                          "type": "object",
-                          "properties": {
-                            "date": {
-                              "description": "Inner error date",
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "request-id": {
-                              "description": "Server-side generated unique request identifier",
-                              "type": "string"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Internal Server Error - Indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "API Error",
-                  "description": "A generic API error",
-                  "type": "object",
-                  "properties": {
-                    "@odata.context": {
-                      "description": "oData context of the request",
-                      "type": "string"
-                    },
-                    "error": {
-                      "description": "JSON representation of the error",
-                      "type": "object",
-                      "properties": {
-                        "code": {
-                          "description": "The HTTP error code",
-                          "type": "string"
-                        },
-                        "message": {
-                          "description": "The error message",
-                          "type": "string"
-                        },
-                        "innerError": {
-                          "description": "JSON representation of the inner error (If available)",
-                          "type": "object",
-                          "properties": {
-                            "date": {
-                              "description": "Inner error date",
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "request-id": {
-                              "description": "Server-side generated unique request identifier",
-                              "type": "string"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/templating/execute": {
       "post": {
         "tags": [
           "Templating"
         ],
-        "summary": "Execute a template against data",
+        "summary": "Execute a template against data ",
         "operationId": "ExecuteTemplating",
         "x-nbold-rate-limit": "tier-3",
         "x-nbold-required-roles": [
@@ -18795,6 +18664,136 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request - Indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "API Error",
+                  "description": "A generic API error",
+                  "type": "object",
+                  "properties": {
+                    "@odata.context": {
+                      "description": "oData context of the request",
+                      "type": "string"
+                    },
+                    "error": {
+                      "description": "JSON representation of the error",
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "description": "The HTTP error code",
+                          "type": "string"
+                        },
+                        "message": {
+                          "description": "The error message",
+                          "type": "string"
+                        },
+                        "innerError": {
+                          "description": "JSON representation of the inner error (If available)",
+                          "type": "object",
+                          "properties": {
+                            "date": {
+                              "description": "Inner error date",
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "request-id": {
+                              "description": "Server-side generated unique request identifier",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Internal Server Error - Indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "API Error",
+                  "description": "A generic API error",
+                  "type": "object",
+                  "properties": {
+                    "@odata.context": {
+                      "description": "oData context of the request",
+                      "type": "string"
+                    },
+                    "error": {
+                      "description": "JSON representation of the error",
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "description": "The HTTP error code",
+                          "type": "string"
+                        },
+                        "message": {
+                          "description": "The error message",
+                          "type": "string"
+                        },
+                        "innerError": {
+                          "description": "JSON representation of the inner error (If available)",
+                          "type": "object",
+                          "properties": {
+                            "date": {
+                              "description": "Inner error date",
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "request-id": {
+                              "description": "Server-side generated unique request identifier",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/monitoring/test_api_connection": {
+      "get": {
+        "tags": [
+          "Connectivity"
+        ],
+        "x-nbold-rate-limit": "tier-3",
+        "x-nbold-required-roles": [
+          "AUTHORIZED_APP",
+          "INTEGRATION_MANAGER",
+          "TEAMS_SERVICE_ADMIN",
+          "GLOBAL_ADMIN"
+        ],
+        "x-ms-visibility": "internal",
+        "x-ms-api-annotation": {
+          "status": "Production",
+          "family": "TestAPIConnection",
+          "revision": 1
+        },
+        "summary": "Test Connection to the nBold API",
+        "deprecated": false,
+        "description": "Test connection to the nBold API. Used by automation platforms such as Microsoft Azure Logic Apps and Microsoft Power Automate.\n",
+        "operationId": "TestApiConnection",
+        "security": [
+          {
+            "oauth2_auth": [
+              "https://graph.microsoft.com/.default"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request - Indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).",
