@@ -441,7 +441,7 @@ export default function EndpointModal({
             </ModalBody>
             <ModalFooter>
             <Button color="danger" variant="light" onClick={onClose}>Cancel</Button>
-            <Button className='border-gradient' onClick={handleCreate}>Create Endpoint</Button>
+            <Button className='border-gradient text-white' onClick={handleCreate}>Create Endpoint</Button>
             </ModalFooter>
         </ModalContent>
     </Modal>

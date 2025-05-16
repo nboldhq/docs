@@ -1,16 +1,19 @@
-// src/components/PrivateRoute.tsx
-import React from 'react';
-import { Navigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
+import { useMsal } from "@azure/msal-react";
+import { Navigate } from "react-router-dom";
+import { InteractionStatus } from "@azure/msal-browser";
 
-interface PrivateRouteProps {
-  children: JSX.Element;
-}
+const PrivateRoute = ({ children }) => {
+  const { accounts, inProgress } = useMsal();
 
-const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
-  const { isAuthenticated } = useAuth();
+  if (inProgress !== InteractionStatus.None) {
+    return <div>Loading...</div>;
+  }
 
-  return isAuthenticated ? children : <Navigate to="/login" replace />;
+  if (accounts.length === 0) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return children;
 };
 
 export default PrivateRoute;

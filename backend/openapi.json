@@ -198,233 +198,6 @@
     }
   ],
   "paths": {
-    "/templating/execute": {
-      "post": {
-        "tags": [
-          "Templating"
-        ],
-        "summary": "Execute a template against data ",
-        "operationId": "ExecuteTemplating",
-        "x-nbold-rate-limit": "tier-3",
-        "x-nbold-required-roles": [
-          "AUTHORIZED_APP",
-          "AUTHENTICATED_USER"
-        ],
-        "description": "Execute an arbitrary [EJS template](https://ejs.co/) against some provided data.\n",
-        "security": [
-          {
-            "bearer_auth": []
-          }
-        ],
-        "requestBody": {
-          "description": "Supply an [EJS template](https://ejs.co/) string and a data payload.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "title": "Templating operation body",
-                "description": "Body of a templating operation.",
-                "type": "object",
-                "properties": {
-                  "template": {
-                    "description": "Template to execute",
-                    "type": "string"
-                  },
-                  "data": {
-                    "description": "Data to use during templating",
-                    "type": "object"
-                  }
-                }
-              },
-              "examples": {
-                "1": {
-                  "summary": "Basic \"Hello World\"",
-                  "description": "Basic string interpolation",
-                  "value": {
-                    "template": "Hello <%= firstName %>!",
-                    "data": {
-                      "firstName": "Alice"
-                    }
-                  }
-                },
-                "2": {
-                  "summary": "Hello world using properties",
-                  "description": "Basic string interpolation using dotted-notation",
-                  "value": {
-                    "template": "Hello <%= user.name %>!",
-                    "data": {
-                      "user": {
-                        "name:'Alice'": null
-                      }
-                    }
-                  }
-                },
-                "3": {
-                  "summary": "Template a JSON object using JSON data",
-                  "description": "N.B: the resulting JSON is send back as a `string` in the `value` property",
-                  "value": {
-                    "template": "{ name: '<%= user.name %>' }",
-                    "data": {
-                      "user": {
-                        "name:'Alice'": null
-                      }
-                    }
-                  }
-                },
-                "4": {
-                  "summary": "Using `javascript` functions",
-                  "description": "You can use some basic `Javascript` functions (Limited by our sandboxing security policy) right in your template",
-                  "value": {
-                    "template": "Hello <%= user.name.toUpperCase() %>! Current data/time: <%= new Date().toISOString() %>",
-                    "data": {
-                      "user": {
-                        "name:'Alice'": null
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Result of the templating operation\n",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "Templating operation result",
-                  "description": "Result of a templating operation.",
-                  "type": "object",
-                  "properties": {
-                    "@odata.context": {
-                      "description": "Link to the templating operation reference documentation",
-                      "type": "string"
-                    },
-                    "result": {
-                      "description": "Result of the templating operation",
-                      "type": "object",
-                      "properties": {
-                        "success": {
-                          "description": "Indicates the success of the templating operation",
-                          "type": "boolean"
-                        },
-                        "message": {
-                          "description": "Human-readeable version of the `success` property",
-                          "type": "string"
-                        },
-                        "value": {
-                          "description": "Generated value (if any) of the templating operation",
-                          "type": "string"
-                        },
-                        "error": {
-                          "description": "In case of failure, a detailed message describing the failure reason",
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request - Indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "API Error",
-                  "description": "A generic API error",
-                  "type": "object",
-                  "properties": {
-                    "@odata.context": {
-                      "description": "oData context of the request",
-                      "type": "string"
-                    },
-                    "error": {
-                      "description": "JSON representation of the error",
-                      "type": "object",
-                      "properties": {
-                        "code": {
-                          "description": "The HTTP error code",
-                          "type": "string"
-                        },
-                        "message": {
-                          "description": "The error message",
-                          "type": "string"
-                        },
-                        "innerError": {
-                          "description": "JSON representation of the inner error (If available)",
-                          "type": "object",
-                          "properties": {
-                            "date": {
-                              "description": "Inner error date",
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "request-id": {
-                              "description": "Server-side generated unique request identifier",
-                              "type": "string"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Internal Server Error - Indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "title": "API Error",
-                  "description": "A generic API error",
-                  "type": "object",
-                  "properties": {
-                    "@odata.context": {
-                      "description": "oData context of the request",
-                      "type": "string"
-                    },
-                    "error": {
-                      "description": "JSON representation of the error",
-                      "type": "object",
-                      "properties": {
-                        "code": {
-                          "description": "The HTTP error code",
-                          "type": "string"
-                        },
-                        "message": {
-                          "description": "The error message",
-                          "type": "string"
-                        },
-                        "innerError": {
-                          "description": "JSON representation of the inner error (If available)",
-                          "type": "object",
-                          "properties": {
-                            "date": {
-                              "description": "Inner error date",
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "request-id": {
-                              "description": "Server-side generated unique request identifier",
-                              "type": "string"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/templating/{template_id}/execute": {
       "post": {
         "tags": [
@@ -18794,6 +18567,233 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request - Indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "API Error",
+                  "description": "A generic API error",
+                  "type": "object",
+                  "properties": {
+                    "@odata.context": {
+                      "description": "oData context of the request",
+                      "type": "string"
+                    },
+                    "error": {
+                      "description": "JSON representation of the error",
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "description": "The HTTP error code",
+                          "type": "string"
+                        },
+                        "message": {
+                          "description": "The error message",
+                          "type": "string"
+                        },
+                        "innerError": {
+                          "description": "JSON representation of the inner error (If available)",
+                          "type": "object",
+                          "properties": {
+                            "date": {
+                              "description": "Inner error date",
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "request-id": {
+                              "description": "Server-side generated unique request identifier",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Internal Server Error - Indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "API Error",
+                  "description": "A generic API error",
+                  "type": "object",
+                  "properties": {
+                    "@odata.context": {
+                      "description": "oData context of the request",
+                      "type": "string"
+                    },
+                    "error": {
+                      "description": "JSON representation of the error",
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "description": "The HTTP error code",
+                          "type": "string"
+                        },
+                        "message": {
+                          "description": "The error message",
+                          "type": "string"
+                        },
+                        "innerError": {
+                          "description": "JSON representation of the inner error (If available)",
+                          "type": "object",
+                          "properties": {
+                            "date": {
+                              "description": "Inner error date",
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "request-id": {
+                              "description": "Server-side generated unique request identifier",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/templating/execute": {
+      "post": {
+        "tags": [
+          "Templating"
+        ],
+        "summary": "Execute a template against data ",
+        "operationId": "ExecuteTemplating",
+        "x-nbold-rate-limit": "tier-3",
+        "x-nbold-required-roles": [
+          "AUTHORIZED_APP",
+          "AUTHENTICATED_USER"
+        ],
+        "description": "Execute an arbitrary [EJS template](https://ejs.co/) against some provided data.\n",
+        "security": [
+          {
+            "bearer_auth": []
+          }
+        ],
+        "requestBody": {
+          "description": "Supply an [EJS template](https://ejs.co/) string and a data payload.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "title": "Templating operation body",
+                "description": "Body of a templating operation.",
+                "type": "object",
+                "properties": {
+                  "template": {
+                    "description": "Template to execute",
+                    "type": "string"
+                  },
+                  "data": {
+                    "description": "Data to use during templating",
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "1": {
+                  "summary": "Basic \"Hello World\"",
+                  "description": "Basic string interpolation",
+                  "value": {
+                    "template": "Hello <%= firstName %>!",
+                    "data": {
+                      "firstName": "Alice"
+                    }
+                  }
+                },
+                "2": {
+                  "summary": "Hello world using properties",
+                  "description": "Basic string interpolation using dotted-notation",
+                  "value": {
+                    "template": "Hello <%= user.name %>!",
+                    "data": {
+                      "user": {
+                        "name:'Alice'": null
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "summary": "Template a JSON object using JSON data",
+                  "description": "N.B: the resulting JSON is send back as a `string` in the `value` property",
+                  "value": {
+                    "template": "{ name: '<%= user.name %>' }",
+                    "data": {
+                      "user": {
+                        "name:'Alice'": null
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "summary": "Using `javascript` functions",
+                  "description": "You can use some basic `Javascript` functions (Limited by our sandboxing security policy) right in your template",
+                  "value": {
+                    "template": "Hello <%= user.name.toUpperCase() %>! Current data/time: <%= new Date().toISOString() %>",
+                    "data": {
+                      "user": {
+                        "name:'Alice'": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Result of the templating operation\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Templating operation result",
+                  "description": "Result of a templating operation.",
+                  "type": "object",
+                  "properties": {
+                    "@odata.context": {
+                      "description": "Link to the templating operation reference documentation",
+                      "type": "string"
+                    },
+                    "result": {
+                      "description": "Result of the templating operation",
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "description": "Indicates the success of the templating operation",
+                          "type": "boolean"
+                        },
+                        "message": {
+                          "description": "Human-readeable version of the `success` property",
+                          "type": "string"
+                        },
+                        "value": {
+                          "description": "Generated value (if any) of the templating operation",
+                          "type": "string"
+                        },
+                        "error": {
+                          "description": "In case of failure, a detailed message describing the failure reason",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request - Indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).",

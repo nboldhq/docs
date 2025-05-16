@@ -1,7 +1,7 @@
 ---
 title: What is nbold
 author: Kristina Konstantnyova
-tags: [what-is-nbold]
+tags: [welcome-page]
 status: draft
 ---
 

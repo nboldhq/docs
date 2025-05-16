@@ -1,38 +1,42 @@
-// src/contexts/AuthContext.tsx
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { useMsal } from '@azure/msal-react';
+import { InteractionStatus } from '@azure/msal-browser';
 
 interface AuthContextType {
   isAuthenticated: boolean;
-  login: () => void;
   logout: () => void;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const AuthContext = createContext<AuthContextType>({
+  isAuthenticated: false,
+  logout: () => {},
+});
 
-export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { instance, accounts, inProgress } = useMsal();
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  const login = () => {
-    // Implement your login logic here
-    setIsAuthenticated(true);
-  };
+  useEffect(() => {
+    if (inProgress === InteractionStatus.None && accounts.length > 0) {
+      instance.setActiveAccount(accounts[0]);
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+    }
+  }, [instance, accounts, inProgress]);
 
   const logout = () => {
-    // Implement your logout logic here
     setIsAuthenticated(false);
+    instance.logoutPopup().catch((error) => {
+      console.error("Logout failed:", error);
+    });
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, logout }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export const useAuth = (): AuthContextType => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
-};
+export const useAuth = () => useContext(AuthContext);

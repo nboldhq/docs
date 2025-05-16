@@ -177,7 +177,6 @@ const ApiReference: React.FC = () => {
     }
   };
 
-
   const handleAddTag = () => {
     const newTag = { name: 'New Tag', description: '' };
     const updatedTags = [...(jsonData?.tags || []), newTag];
@@ -384,7 +383,26 @@ const ApiReference: React.FC = () => {
       </div>
     );
   };
+
+  const renamePathKey = (oldKey: string, newKey: string) => {
+    if (!jsonData || !jsonData.paths[oldKey] || newKey === oldKey) return;
   
+    const updatedPaths = { ...jsonData.paths };
+  
+    // Avoid overwriting an existing key
+    if (updatedPaths[newKey]) {
+      alert('Path already exists');
+      return;
+    }
+  
+    updatedPaths[newKey] = updatedPaths[oldKey];
+    delete updatedPaths[oldKey];
+  
+    setJsonData({
+      ...jsonData,
+      paths: updatedPaths,
+    });
+  };
  
   return (
     <div className="p-8 w-full mx-auto space-y-5"> 
@@ -498,7 +516,7 @@ const ApiReference: React.FC = () => {
                                       ))}
                                   </div>
                               </ScrollShadow>
-                                <div className="absolute top-0 right-0 h-full flex items-center pr-4 bg-[#18181B] pointer-events-none">
+                                <div className="absolute top-0 right-0 h-full flex items-center pr-4 pointer-events-none">
                                   <Button
                                     className="pointer-events-auto px-4 py-2 text-danger mb-2 dark:text-danger rounded-2xl shadow-sm transition-colors min-w-[120px]"
                                     onClick={handleAddTag}
@@ -620,15 +638,16 @@ const ApiReference: React.FC = () => {
                               )
                               .map(([method, details]) => (
                                    <EndpointMethod
-                                   key={method}
-                                   pathKey={pathKey}
-                                   method={method}
-                                   details={details}
-                                   handleChange={handleChange}
-                                   onDelete={() => deleteEndpointMethod(pathKey, method)}
-                                   isOpen={openMethods.has(`${pathKey}-${method}`)}
-                                   toggleOpen={() => toggleMethod(pathKey, method)}
-                                 />
+                                  key={method}
+                                  pathKey={pathKey}
+                                  method={method}
+                                  details={details}
+                                  handleChange={handleChange}
+                                  onDelete={() => deleteEndpointMethod(pathKey, method)}
+                                  isOpen={openMethods.has(`${pathKey}-${method}`)}
+                                  toggleOpen={() => toggleMethod(pathKey, method)} 
+                                  renamePathKey={renamePathKey}
+                                />
                                 ))}
                               </div>
                             </Card>

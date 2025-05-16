@@ -23,7 +23,8 @@ Especially, it means that:
 Single Sign On (SSO) for Microsoft Teams custom apps such as nBold is not yet fully supported by Microsoft, as the current implementation for SSO only grants consent for user-level permissions (email, profile, offline_access, openid) but not for other APIs (such as Microsoft Graph).  
 For further reference, see [Microsoft Teams SSO for custom apps known limitations](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#known-limitations)
 
-:::tip Service account authentication details 
+:::tip
+Service account authentication details 
 For service account authentication details, please refer to [Microsoft Graph Permissions](/trust-center/microsoft-graph-permissions)
 :::
 

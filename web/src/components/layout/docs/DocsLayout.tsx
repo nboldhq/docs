@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Sun, Moon } from 'lucide-react';
 import { NBoldIcon } from '../../Icons/nBoldIcon';
 import DocsNavbar from './DocsNavbar';
-import DocsSidebarItem from './DocsSidebarItem';
 import DocsFooter from './DocsFooter';
 import TableOfContents from './TableOfContents';
 import { ApiReferenceReact } from '@scalar/api-reference-react';
+import DocsSidebar from './DocsSidebar';
 
 type Category = {
   icon: string;
@@ -24,22 +23,17 @@ type Category = {
 const DocsLayout: React.FC<{
    children: React.ReactNode;
    categories: Category[];
-   isDarkMode: boolean;             // use the prop
+   isDarkMode: boolean;             
    toggleDarkMode: () => void;
  }> = ({ children, isDarkMode, toggleDarkMode }) => {
   const [categories, setCategories] = useState<Category[]>([]);
-  const [expandedItems, setExpandedItems] = useState<number[]>([]);
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const isApiReference = location.pathname.includes('/api-reference');
-
+  const [expandedItemId, setExpandedItemId] = React.useState<number | null>(null);
 
   const toggleExpanded = (itemId: number) => {
-    setExpandedItems((prev) =>
-      prev.includes(itemId)
-        ? prev.filter((id) => id !== itemId)
-        : [...prev, itemId]
-    );
+    setExpandedItemId((prevId) => (prevId === itemId ? null : itemId));
   };
 
   const buildCategoryTree = (flatCategories: Category[]) => {
@@ -91,43 +85,11 @@ const DocsLayout: React.FC<{
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const renderSidebarItems = (items: Category[]) =>
-    items.map((category) => {
-      const tagSegment = category.tags?.join('-') || 'untagged';
-      const fullPath = `/docs/${tagSegment}`;
-
-      return (
-        <DocsSidebarItem
-          key={category.id}
-          icon={category.icon}
-          label={category.name}
-          path={fullPath}
-          isActive={location.pathname === fullPath}
-          hasSubItems={!!category.subItems && category.subItems.length > 0}
-          isExpanded={expandedItems.includes(category.id)}
-          onToggle={() => toggleExpanded(category.id)}
-          subItems={category.subItems?.map((sub) => {
-            const subTitle = sub.name.toLowerCase().replace(/\s+/g, '-');
-            const subTags = sub.tags?.join('-') || 'untagged';
-            return {
-              label: sub.name,
-              path: `/docs/${subTags}/${subTitle}`,
-              subItems: sub.subItems?.map((subSub) => ({
-                label: subSub.name,
-                path: `/docs/${subTags}/${subTitle}/${subSub.name
-                  .toLowerCase()
-                  .replace(/\s+/g, '-')}`,
-              })),
-            };
-          })}
-        />
-      );
-    });
-
-    useEffect(()=>{
+  useEffect(()=>{
         console.log('dark mode layout',isDarkMode)
         console.log('dark mode layout 2 ',toggleDarkMode)
     },[])
+
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-black">
       <div className="flex flex-1">
@@ -139,50 +101,50 @@ const DocsLayout: React.FC<{
         )}
 
         <div className="flex">
-          <aside
-            className={`fixed top-0 left-0 h-full bg-white dark:bg-black border-r border-gray-200 dark:border-gray-700 transform ${
-              isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-            } transition-transform duration-300 ease-in-out w-72 z-40`}
-          >
-            <div className="flex items-center justify-between p-[18px] border-b border-gray-200 dark:border-gray-700">
-              <div className="flex items-center"></div>
-              <button
-                className="p-2 text-gray-500 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300"
-                onClick={toggleDarkMode}
-                aria-label="Toggle Dark Mode"
-              >
-                {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              </button>
-            </div>
-            <nav className="p-4 overflow-y-auto h-[calc(100%-80px)]">
-              {renderSidebarItems(categories)}
-            </nav>
-          </aside>
-
+          <DocsSidebar
+              isSidebarOpen={isSidebarOpen}
+              toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
+              isDarkMode={isDarkMode}
+              toggleDarkMode={toggleDarkMode}
+              categories={categories}
+              expandedItemId={expandedItemId}
+              toggleExpanded={toggleExpanded}
+              locationPath={location.pathname}
+            />
           <div
             className={`flex-1 ml-0 transition-all duration-300 ease-in-out ${
               isSidebarOpen ? 'ml-64' : 'ml-0'
             }`}
           >
-            <button
-              className="fixed top-1 left-4 z-50 flex items-center gap-2 p-2 mt-1"
+           <button
+              className="hidden md:flex fixed top-1 left-4 z-50 items-center sm:mt-[18px] md:mt-[18px] lg:mt-[18px] xl:mt-3"
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               aria-label="Toggle Sidebar"
             >
-              <div className="flex items-center lg:flex hidden">
-                <NBoldIcon />
-                <span className="text-4xl font-bold text-gray-900 dark:text-white">
+              <NBoldIcon />
+
+              {/* Always show full text on xl and above */}
+              <span className="hidden xl:block text-4xl font-bold text-gray-900 dark:text-white">
+                Bold
+                <span className="text-sm align-super ml-1 text-black dark:text-gray-500">Docs</span>
+              </span>
+
+              {/* Show text only when sidebar is open and screen is less than xl */}
+              {isSidebarOpen && (
+                <span className="ml-2 text-4xl font-bold text-gray-900 dark:text-white xl:hidden">
                   Bold
                   <span className="text-sm align-super ml-1 text-black dark:text-gray-500">Docs</span>
                 </span>
-              </div>
+              )}
             </button>
+
+
           </div>
         </div>
         <main id="page-content" className="flex-1 relative">
-        <DocsNavbar />
+        <DocsNavbar  categories={[]} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} children={undefined} />
         {isApiReference ? (
-            <div className="ml-10 mt-20 min-h-screen px-4 lg:px-0 relative">
+            <div className={`mt-20 min-h-screen px-4 lg:px-0 relative ${isSidebarOpen ? 'ml-10':'ml-2'}`}>
               <ApiReferenceReact
                 configuration={{
                   spec: { url: 'https://skan-dev.nbold.dev/api/spec' },
@@ -195,7 +157,11 @@ const DocsLayout: React.FC<{
             </div>
           ) : (
             <>
-              <div className="max-w-4xl mx-auto mb-8 mt-20 min-h-screen px-4 lg:px-0 relative">
+             <div
+                className={` mb-8 mt-20 min-h-screen px-4 lg:px-7 relative ${
+                  isSidebarOpen ? 'mx-auto md:ml-[220px] max-w-4xl px-12' : '   md:ml-[274px] md:mr-[50px] max-w-5xl'
+                }`}
+              >
                 {children}
               </div>
               <TableOfContents />

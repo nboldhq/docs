@@ -20,6 +20,7 @@ const EndpointMethod = React.memo(({
   onDelete,
   handleChange,
   isOpen,
+  renamePathKey,
   toggleOpen
 }: {
   pathKey: string;
@@ -27,6 +28,7 @@ const EndpointMethod = React.memo(({
   details: any;
   handleChange: (path: string[], value: any) => void;
   onDelete: () => void;
+  renamePathKey :(oldKey: string, newKey: string) => void;
   isOpen: boolean;
   toggleOpen: () => void;
 }) => {
@@ -36,6 +38,7 @@ const EndpointMethod = React.memo(({
   const [isEditingPath, setIsEditingPath] = useState(false);
   const [editedPath, setEditedPath] = useState(pathKey);
 
+  
 
   return (
     <div className="rounded-lg hover:border-[#3f3f46]">
@@ -59,22 +62,27 @@ const EndpointMethod = React.memo(({
 
           {/* Path with hover trash icon */}
           <div className="group relative flex-1 min-w-0">
-            <div className="flex items-center justify-between min-w-0">
+            <div className="flex items-center justify-between min-w-0 gap-">
                 {isEditingPath ? (
                 <Input
-                    className="font-mono text-sm pr-16"
+                    className="font-mono text-sm pr-10 "
                     value={editedPath}
                     onChange={(e) => setEditedPath(e.target.value)}
                     onBlur={() => {
-                    handleChange(['paths', pathKey], editedPath);
-                    setIsEditingPath(false);
+                      if (editedPath !== pathKey) {
+                        renamePathKey(pathKey, editedPath);
+                      }
+                      setIsEditingPath(false);
                     }}
                     onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                        handleChange(['paths', pathKey], editedPath);
+                      if (e.key === 'Enter') {
+                        if (editedPath !== pathKey) {
+                          renamePathKey(pathKey, editedPath);
+                        }
                         setIsEditingPath(false);
-                    }
+                      }
                     }}
+                    
                 />
                 ) : (
                 <span className="text-sm font-mono dark:text-white whitespace-normal break-words pr-6 truncate">
@@ -82,7 +90,7 @@ const EndpointMethod = React.memo(({
                 </span>
                 )}
                 
-                <div className="absolute right-0 flex gap-2">
+                <div className="absolute right-0 ml-3 flex gap-2">
                 <Pencil 
                     className="w-4 h-4 text-gray-500 hover:text-gray-700 cursor-pointer 
                             opacity-0 group-hover:opacity-100 transition-opacity"

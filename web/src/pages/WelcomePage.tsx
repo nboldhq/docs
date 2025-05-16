@@ -9,10 +9,8 @@ import Textra from 'react-textra';
 
 const WelcomePage: React.FC = () => {
   const navigate = useNavigate();
-  const { login } = useAuth();
 
   const handleLogin = () => {
-    login();
     navigate('/docs/welcome-page');
   };
   const descriptions = [
@@ -44,7 +42,7 @@ const WelcomePage: React.FC = () => {
   
   return (
   <Layout>
-    <div className="relative flex flex-col h-[847px] items-center justify-center w-full px-4 bg-neutral-950 antialiased">
+    <div className="relative flex flex-col h-[847px] lg:h-[879px] items-center justify-center w-full px-4 bg-neutral-950 antialiased">
       <div className="max-w-3xl mx-auto text-center space-y-8 z-10">
         <h1 className="flex items-center justify-center text-white text-3xl md:text-6xl font-bold">
           <span>Welcome to</span>

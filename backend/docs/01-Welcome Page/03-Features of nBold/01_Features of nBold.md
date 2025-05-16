@@ -1,7 +1,7 @@
 ---
 title: Features of nBold
 author: Kristina Konstantnyova
-tags: [welcome-page]
+tags: [features-of-nbold]
 status: draft
 ---
 
