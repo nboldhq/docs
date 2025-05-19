@@ -1,7 +1,7 @@
 ---
 title: HubSpot collaboration processes
 author: test
-tags: [hubspot-collaboration-processes]
+tags: [connected-apps]
 status: draft
 ---
 

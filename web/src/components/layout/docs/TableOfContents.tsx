@@ -25,19 +25,16 @@ const TableOfContents: React.FC = () => {
 
       setHeadings(headingElements);
 
-      // Automatically activate first heading
       if (headingElements.length > 0) {
         const firstId = headingElements[0].id;
         setActiveId(firstId);
         
-        // Optional: Smooth scroll to first heading
         const element = document.getElementById(firstId);
         if (element) {
           const headerHeight = 100;
           const elementPosition = element.getBoundingClientRect().top + window.scrollY;
           const offsetPosition = elementPosition - headerHeight;
           
-          // Only scroll if not already at top
           if (window.scrollY < offsetPosition - 50) {
             window.scrollTo({
               top: offsetPosition,
@@ -47,7 +44,6 @@ const TableOfContents: React.FC = () => {
         }
       }
 
-      // Intersection Observer setup remains the same
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach(entry => {
@@ -70,7 +66,6 @@ const TableOfContents: React.FC = () => {
     return () => clearTimeout(timeout);
   }, [location.pathname]);
 
-  // Keep the existing scrollTo function
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -86,7 +81,6 @@ const TableOfContents: React.FC = () => {
     }
   };
 
-  // Rest of your component remains the same
   return (
     <aside className="hidden xl:block w-64 fixed right-4 2xl:right-8 top-36 h-[calc(100vh-5rem)] overflow-y-auto p-4 border-gray-200 dark:border-gray-700 text-sm">
       <ul className="space-y-2 relative">

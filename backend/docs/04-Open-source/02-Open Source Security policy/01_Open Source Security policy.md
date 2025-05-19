@@ -1,7 +1,7 @@
 ---
 title: Open Source Security policy
 author: test
-tags: [open-source-security-policy]
+tags: [open-source]
 status: draft
 ---
 

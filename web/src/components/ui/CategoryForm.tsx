@@ -52,6 +52,7 @@ import { Check, ShieldAlert, ShieldQuestion } from 'lucide-react';
       const [file, setFile] = useState<File | null>(null);
       const [theme, setTheme] = useState<'light' | 'dark'>('light');
       const [activeTab, setActiveTab] = useState<'blocks' | 'formatting'>('blocks');
+      const [isTagsDisabled, setIsTagsDisabled] = useState(false);
       const [formData, setFormData] = useState<FormData>({
         name: '',
         description: '',
@@ -185,47 +186,57 @@ import { Check, ShieldAlert, ShieldQuestion } from 'lucide-react';
                           ))}
                         </Select>
                         <Input
-                              label="Category Name"
-                              value={formData.name}
-                              onChange={(e) => {
-                                const nameValue = e.target.value;
-                                const formattedTag = nameValue.trim().replace(/\s+/g, '-').toLowerCase();
-                                setFormData({ 
-                                  ...formData, 
-                                  name: e.target.value,
-                                  tags: [formattedTag], 
-                                })
-                              }}
-                              isRequired
-                              isInvalid={!formData.name.trim()}
-                              errorMessage={!formData.name.trim() && " Category Name is required"}
-                              className="w-full md:w-[600px]"
-                              />
-                          <Select
-                              label="Parent Category"
-                              selectedKeys={formData.parentId ? [formData.parentId.toString()] : []}
-                              onChange={(e) => {
-                                const selected = e.target.value;
-                                setFormData({ 
-                                  ...formData, 
-                                  parentId: selected === 'none' ? null : parseInt(selected)
-                                });
-                              }}
-                              
-                              className="w-full md:w-56"
-                              placeholder="Select parent category"
-                            >
-                              <SelectItem key="none">
-                                  None
-                              </SelectItem>
-                              {
-                              categories.map(cat => (
-                                <SelectItem key={cat.id.toString()}>
-                                    {cat.name}
-                                </SelectItem>
-                              ))
+                            label="Category Name"
+                            value={formData.name}
+                            onChange={(e) => {
+                              const nameValue = e.target.value;
+                              const formattedTag = nameValue.trim().replace(/\s+/g, '-').toLowerCase();
+                              setFormData(prev => ({
+                                ...prev,
+                                name: nameValue,
+                                tags: prev.parentId ? prev.tags : [formattedTag]
+                              }));
+                            }}
+                            isRequired
+                            isInvalid={!formData.name.trim()}
+                            errorMessage={!formData.name.trim() && " Category Name is required"}
+                            className="w-full md:w-[600px]"
+                          />
+
+                         <Select
+                            label="Parent Category"
+                            selectedKeys={formData.parentId ? [formData.parentId.toString()] : []}
+                            onChange={(e) => {
+                              const selected = e.target.value;
+                              const selectedCategory = categories.find(cat => cat.id === parseInt(selected));
+
+                              if (selected === 'none') {
+                                setFormData(prev => ({
+                                  ...prev,
+                                  parentId: null,
+                                  tags: [prev.name.trim().replace(/\s+/g, '-').toLowerCase()]
+                                }));
+                                setIsTagsDisabled(false);
+                              } else {
+                                setFormData(prev => ({
+                                  ...prev,
+                                  parentId: parseInt(selected),
+                                  tags: [selectedCategory?.name.trim().replace(/\s+/g, '-').toLowerCase() || '']
+                                }));
+                                setIsTagsDisabled(true);
                               }
+                            }}
+                            className="w-full md:w-56"
+                            placeholder="Select parent category"
+                          >
+                            <SelectItem key="none">None</SelectItem>
+                            {categories.map(cat => (
+                              <SelectItem key={cat.id.toString()}>
+                                {cat.name}
+                              </SelectItem>
+                            ))}
                           </Select>
+
                     </div>
                     <div className="flex flex-col md:flex-row gap-4">
                         <Input
@@ -239,17 +250,21 @@ import { Check, ShieldAlert, ShieldQuestion } from 'lucide-react';
                       <Input
                           label="Tags (comma-separated)"
                           value={formData.tags.join(', ')}
-                          onChange={(e) =>
-                            setFormData({
-                              ...formData,
-                              tags: e.target.value
-                                .split(',')
-                                .map(t => t.trim().replace(/\s+/g, '-'))
-                                .filter(Boolean)
-                            })
-                          }
+                          isDisabled={isTagsDisabled}
+                          onChange={(e) => {
+                            if (!isTagsDisabled) {
+                              setFormData({
+                                ...formData,
+                                tags: e.target.value
+                                  .split(',')
+                                  .map(t => t.trim().replace(/\s+/g, '-'))
+                                  .filter(Boolean)
+                              });
+                            }
+                          }}
                           className="w-full"
                         />
+
                       <div className="flex gap-4">
                       <Select
                         selectedKeys={formData.visibility ? [formData.visibility] : []}

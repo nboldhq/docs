@@ -1,7 +1,7 @@
 ---
 title: Salesforce collaboration processes
 author: test
-tags: [salesforce-collaboration-processes]
+tags: [connected-apps]
 status: draft
 ---
 

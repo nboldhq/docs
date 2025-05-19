@@ -1,7 +1,7 @@
 ---
 title: Key Account Management with Salesforce
 author: test
-tags: [key-account-management-with-salesforce]
+tags: [salesforce-collaboration-processes]
 status: draft
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Classification
 author: Guillaume Meyer
-tags: [classification]
+tags: [trust-center]
 status: draft
 ---
 

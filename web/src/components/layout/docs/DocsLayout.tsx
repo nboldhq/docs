@@ -123,13 +123,11 @@ const DocsLayout: React.FC<{
             >
               <NBoldIcon />
 
-              {/* Always show full text on xl and above */}
               <span className="hidden xl:block text-4xl font-bold text-gray-900 dark:text-white">
                 Bold
                 <span className="text-sm align-super ml-1 text-black dark:text-gray-500">Docs</span>
               </span>
 
-              {/* Show text only when sidebar is open and screen is less than xl */}
               {isSidebarOpen && (
                 <span className="ml-2 text-4xl font-bold text-gray-900 dark:text-white xl:hidden">
                   Bold
@@ -157,11 +155,11 @@ const DocsLayout: React.FC<{
             </div>
           ) : (
             <>
-             <div
-                className={` mb-8 mt-20 min-h-screen px-4 lg:px-7 relative ${
-                  isSidebarOpen ? 'mx-auto md:ml-[220px] max-w-4xl px-12' : '   md:ml-[274px] md:mr-[50px] max-w-5xl'
-                }`}
-              >
+            <div className={`mb-8 mt-20 min-h-screen px-4 lg:px-7 relative ${
+                isSidebarOpen 
+                  ? 'mx-auto md:ml-[220px] max-w-4xl px-12' 
+                  : 'md:ml-[274px] md:mr-[50px] xl:mr-[272px] max-w-5xl'
+              }`}>
                 {children}
               </div>
               <TableOfContents />

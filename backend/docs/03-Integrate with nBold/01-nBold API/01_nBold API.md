@@ -1,7 +1,7 @@
 ---
 title: nBold API
 author: test
-tags: [nbold-api]
+tags: [integrate-with-nbold]
 status: draft
 ---
 

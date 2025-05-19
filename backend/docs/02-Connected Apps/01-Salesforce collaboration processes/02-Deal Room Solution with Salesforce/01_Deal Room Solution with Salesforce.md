@@ -1,7 +1,7 @@
 ---
 title: Deal Room Solution with Salesforce
 author: test
-tags: [deal-room-solution-with-salesforce]
+tags: [salesforce-collaboration-processes]
 status: draft
 ---
 

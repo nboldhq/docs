@@ -1,7 +1,7 @@
 ---
 title: Update & Uninstall Solutions: Salesforce
 author: test
-tags: [update-&-uninstall-solutions:-salesforce]
+tags: [salesforce-collaboration-processes]
 status: draft
 ---
 

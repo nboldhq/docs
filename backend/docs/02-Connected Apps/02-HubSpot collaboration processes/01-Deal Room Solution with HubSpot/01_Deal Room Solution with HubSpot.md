@@ -1,7 +1,7 @@
 ---
 title: Deal Room Solution with HubSpot
 author: test
-tags: [deal-room-solution-with-hubspot]
+tags: [hubspot-collaboration-processes]
 status: draft
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: No-Code
 author: test
-tags: [no-code]
+tags: [integrate-with-nbold]
 status: draft
 ---
 

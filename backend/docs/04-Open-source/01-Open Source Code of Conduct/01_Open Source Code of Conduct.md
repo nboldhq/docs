@@ -1,7 +1,7 @@
 ---
 title: Open Source Code of Conduct
 author: test
-tags: [open-source-code-of-conduct]
+tags: [open-source]
 status: draft
 ---
 

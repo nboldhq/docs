@@ -1,7 +1,7 @@
 ---
 title: Authentication and access control
 author: Guillaume Meyer
-tags: [authentication-and-access-control]
+tags: [trust-center]
 status: draft
 ---
 

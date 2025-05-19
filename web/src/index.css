@@ -54,9 +54,6 @@ html {
 .prose > * {
   all: revert;
 }
-.wmde-markdown-var{
-
-}
 .transition-transform {
   transition: transform 0.2s ease-in-out;
 }
@@ -72,7 +69,12 @@ html {
   background: #f1f1f1;
 }
 
+
 @layer components {
+  .docs-content table {
+    @apply min-w-full whitespace-normal break-words;
+  }
+
   .btn {
     @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none;
