@@ -155,7 +155,7 @@ const DocsLayout: React.FC<{
             </div>
           ) : (
             <>
-            <div className={`mb-8 mt-20 min-h-screen px-4 lg:px-7 relative ${
+            <div className={`mb-8 mt-20 min-h-screen px-4 lg:px-7  relative ${
                 isSidebarOpen 
                   ? 'mx-auto md:ml-[220px] max-w-4xl px-12' 
                   : 'md:ml-[274px] md:mr-[50px] xl:mr-[272px] max-w-5xl'
