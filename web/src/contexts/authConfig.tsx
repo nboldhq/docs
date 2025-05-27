@@ -2,8 +2,8 @@ import { PublicClientApplication } from "@azure/msal-browser";
 
 export const msalConfig = {
   auth: {
-    clientId: "3b62cdf7-6254-4112-8c4a-a1bf499da995",
-    authority: "https://login.microsoftonline.com/9e9fbccb-bd2a-4cc1-97f7-3d18787a45ee",
+    clientId: import.meta.env.VITE_AZURE_CLIENT_ID,
+    authority: import.meta.env.VITE_AZURE_AUTHORITY,
     redirectUri: `${import.meta.env.VITE_API_ENDPOINT}/dashboard/categorytree`,
   },
   cache: {
@@ -18,6 +18,7 @@ export const msalConfig = {
     },
   },
 };
+
 
 export const msalInstance = new PublicClientApplication(msalConfig);
 
