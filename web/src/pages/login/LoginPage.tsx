@@ -51,42 +51,8 @@ const LoginPage: React.FC = () => {
                 <span>Bold</span>
               </h1>
             </CardHeader>
-            <div className="px-6 pb-6 space-y-4">
-              <Input
-                className="w-full pl-2 border border-gray-500 text-white rounded-full"
-                label="Email"
-                type="email"
-                variant='dark'
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                disabled
-              />
-              <Input
-                className="w-full pl-2 border border-gray-500 text-white rounded-full"
-                label="Password"
-                variant='dark'
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                disabled
-              />
-              {error && <p className="text-red-500 text-sm">{error}</p>}
-              <Button
-                className="w-full py-6 text-white border-gradient"
-                onClick={handleLogin}
-                disabled
-              >
-                Connexion
-              </Button>
-            </div>
-            <div className="relative flex items-center justify-center">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t"></span>
-              </div>
-              <span className="relative bg-white rounded-full px-2 text-xs text-muted-foreground">OR</span>
-            </div>
             <Button
-              className="w-64 py-6 mx-24 my-4 text-base"
+              className="w-64 py-6 mx-24 my-24 text-base"
               onClick={handleMicrosoftLogin}
               disabled={isLoading}
             >
@@ -96,11 +62,6 @@ const LoginPage: React.FC = () => {
               </div>
             </Button>
             <CardFooter className="flex flex-col space-y-2 text-center text-sm text-muted-foreground">
-              <div>
-                <a href="/forgot-password" className="underline underline-offset-4 text-gray-500 hover:text-primary">
-                  Mot de passe oublié ?
-                </a>
-              </div>
             </CardFooter>
           </Card>
         </div>

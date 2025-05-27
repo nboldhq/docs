@@ -15,7 +15,6 @@ function App() {
     <BrowserRouter>
       <ToastProvider placement="top-center"/>
         <Routes>
-          {/* Public Routes */}
           <Route path="/" element={<WelcomePage />} />
           <Route
             path="/login"
@@ -27,7 +26,6 @@ function App() {
           />
           <Route path="/docs/*" element={<DocsPage />} />
 
-          {/* Protected Dashboard Routes */}
           <Route
             path="/dashboard/*"
             element={
