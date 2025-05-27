@@ -49,7 +49,7 @@ const FilesPage = () => {
   const sensors = useSensors(useSensor(MouseSensor), useSensor(TouchSensor));
 
     useEffect(() => {
-      fetch('https://skan-dev.nbold.dev/api/categories')
+      fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`)
         .then((res) => res.json())
         .then((data: CategoryApiResponse[]) => {
           const idToCategory = new Map<number, CategoryApiResponse>();

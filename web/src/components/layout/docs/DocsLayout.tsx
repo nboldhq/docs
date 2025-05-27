@@ -145,7 +145,7 @@ const DocsLayout: React.FC<{
             <div className={`mt-20 min-h-screen px-4 lg:px-0 relative ${isSidebarOpen ? 'ml-10':'ml-2'}`}>
               <ApiReferenceReact
                 configuration={{
-                  spec: { url: 'https://skan-dev.nbold.dev/api/spec' },
+                  spec: { url: `${import.meta.env.VITE_API_ENDPOINT}/api/spec` },
                   darkMode: isDarkMode,
                   hideDarkModeToggle:true,
                   hideClientButton:true,

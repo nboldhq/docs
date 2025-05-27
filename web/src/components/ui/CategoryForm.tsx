@@ -90,7 +90,7 @@ import { Check, ShieldAlert, ShieldQuestion } from 'lucide-react';
       const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-          const response = await fetch('https://skan-dev.nbold.dev/api/categories', {
+          const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Bell, Search, Sun, Moon, User } from 'lucide-react';
 import { cn } from '../../../utils/cn';
-import { useMsal } from '@azure/msal-react'; // Import MSAL hook
+import { useMsal } from '@azure/msal-react'; 
 import { msalInstance } from '../../../contexts/authConfig';
 
 interface HeaderProps {
@@ -11,21 +11,19 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode, collapsed }) => {
-  const { accounts } = useMsal(); // Get MSAL accounts
-  const account = accounts[0]; // Get first active account
+  const { accounts } = useMsal(); 
+  const account = accounts[0]; 
   const [userPhoto, setUserPhoto] = useState<string | null>(null);
 
   useEffect(() => {
     const getProfilePhoto = async () => {
       if (account) {
         try {
-          // Get access token for Microsoft Graph
           const response = await msalInstance.acquireTokenSilent({
             scopes: ["User.Read"],
             account: account
           });
 
-          // Fetch user's photo from Microsoft Graph
           const photoResponse = await fetch("https://graph.microsoft.com/v1.0/me/photo/$value", {
             headers: {
               Authorization: `Bearer ${response.accessToken}`

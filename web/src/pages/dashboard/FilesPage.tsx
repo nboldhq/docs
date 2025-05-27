@@ -19,7 +19,7 @@ const FilePage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
-    fetch('https://skan-dev.nbold.dev/api/categories')
+    fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .catch((err) => console.error('Error fetching data:', err));

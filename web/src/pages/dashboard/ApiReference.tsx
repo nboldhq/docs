@@ -73,7 +73,7 @@ const ApiReference: React.FC = () => {
   
   const fetchRemoteSpec = async () => {
     try {
-      const response = await fetch('https://skan-dev.nbold.dev/api/spec');
+      const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/spec`);
       if (!response.ok) {
         throw new Error(`Failed to fetch: ${response.status}`);
       }
