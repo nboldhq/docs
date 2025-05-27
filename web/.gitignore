@@ -34,18 +34,6 @@ out/
 coverage/
 *.lcov
 
-# Environment files
-.env
-.env.*
-!.env.example
-
-# Local development overrides
-*.local
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
 # Editor directories and files
 .vscode/
 !.vscode/extensions.json
