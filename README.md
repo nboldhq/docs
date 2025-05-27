@@ -1,45 +1,52 @@
-# nBold Documentation Repository
+ <h1>🚀 nBold Documentation Repository</h1>
 
-Welcome to the **nBold documentation repository**!
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="60" alt="React" />
+    <img src="https://vitejs.dev/logo.svg" width="60" alt="Vite" style="margin: 0 20px" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" width="120" alt="Express" />
+  </div>
 
-## Abstract
+  <p>
+    Welcome to the <strong>nBold documentation repository</strong>! 📚<br />
+    The central hub for all nBold technical documentation and developer resources.
+  </p>
 
-This repository hosts the contents of the **nBold Docs** website. It consists of a backend built with **Express.js** and a frontend built with **Vite + React** located in the `web` folder.
+  <h2>📌 Abstract</h2>
+  <p>This project powers the nBold documentation website with:</p>
+  <ul>
+    <li>🖥️ <strong>Backend</strong>: Robust Express.js API server</li>
+    <li>💅 <strong>Frontend</strong>: Modern Vite + React application (located in <code>/web</code>)</li>
+  </ul>
 
----
+  <h2>🏗️ Project Structure</h2>
+  <ul>
+    <li><strong>backend/</strong> — Express.js backend API</li>
+    <li><strong>web/</strong> — Vite + React frontend application</li>
+  </ul>
 
-## Project Structure
+  <h3>⚙️ Prerequisites</h3>
+  <p>Make sure you have these installed:</p>
+  <ul>
+    <li><strong>Node.js</strong> (v16+) 📦</li>
+    <li><strong>npm</strong> (v8+) 📦</li>
+  </ul>
 
-- **backend/** — Express.js backend API  
-- **web/** — Vite + React frontend application
+  <h3>🔧 Setup and Run Backend</h3>
+  <ol>
+    <li>Navigate to the backend directory:</li>
+    <pre><code>cd backend</code></pre>
+    <li>Install backend dependencies:</li>
+    <pre><code>npm install</code></pre>
+    <li>Start the backend server:</li>
+    <pre><code>npm run dev</code></pre>
+  </ol>
 
----
-
-## Getting Started
-
-### Prerequisites
-
-Make sure you have **Node.js** and **npm** installed on your machine.
-
----
-
-  ### Setup and Run Backend
-  
-  1. Navigate to the backend directory:
-     ```bash
-      cd backend
-  2.  Install backend dependencies:
-      ```bash
-      npm install
-
-  ### Setup and Build Frontend:
-
-  1. Open a new terminal and navigate to the frontend directory:
-       ```bash
-       cd web
-  2. Install frontend dependencies:
-       ```bash
-       npm install
-  3. Build the frontend for production:
-      ```bash
-       npm run build
+  <h3>🛠️ Setup and Build Frontend</h3>
+  <ol>
+    <li>Open a new terminal and navigate to the frontend directory:</li>
+    <pre><code>cd web</code></pre>
+    <li>Install frontend dependencies:</li>
+    <pre><code>npm install</code></pre>
+    <li>Build the frontend for production:</li>
+    <pre><code>npm run build</code></pre>
+  </ol>
