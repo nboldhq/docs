@@ -1,5 +1,6 @@
 # Dependency directories
 node_modules/
+.env
 
 # Logs
 logs/
@@ -79,3 +80,5 @@ coverage/
 
 # Ignore typescript cache
 *.tsbuildinfo
+
+.env*

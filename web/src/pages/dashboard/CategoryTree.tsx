@@ -64,19 +64,41 @@ const CategoryTree: React.FC = () => {
 
   const handleDragEnd = async (result: DropResult) => {
     if (!result.destination) return;
-    
+
+    const draggedId = parseInt(result.draggableId);
+    const newParentId =
+      result.destination.droppableId === "categories"
+        ? null
+        : parseInt(result.destination.droppableId);
+    const newIndex = result.destination.index;
+
+    console.log("Drag event:", { draggedId, newParentId, newIndex });
+
     try {
-      await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories/reorder`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          draggedId: parseInt(result.draggableId),
-          targetId: parseInt(result.destination.droppableId)
-        })
-      });
-      fetchCategories();
+      const response = await fetch(
+        `${import.meta.env.VITE_API_ENDPOINT}/api/categories/reorder`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            draggedId,
+            newParentId,
+            newIndex,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(
+          errorData.details || `HTTP error! status: ${response.status}`
+        );
+      }
+
+      await fetchCategories();
     } catch (error) {
-      console.error('Error reordering categories:', error);
+      console.error("Error reordering categories:", error.message);
+      alert(`Failed to reorder categories: ${error.message}`);
     }
   };
 
