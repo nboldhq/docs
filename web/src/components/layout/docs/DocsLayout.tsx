@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { NBoldIcon } from '../../Icons/nBoldIcon';
-import DocsNavbar from './DocsNavbar';
-import DocsFooter from './DocsFooter';
-import TableOfContents from './TableOfContents';
-import { ApiReferenceReact } from '@scalar/api-reference-react';
-import DocsSidebar from './DocsSidebar';
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import DocsNavbar from "./DocsNavbar";
+import DocsFooter from "./DocsFooter";
+import TableOfContents from "./TableOfContents";
+import { ApiReferenceReact } from "@scalar/api-reference-react";
+import DocsSidebar from "./DocsSidebar";
 
 type Category = {
   icon: string;
@@ -21,16 +20,18 @@ type Category = {
 };
 
 const DocsLayout: React.FC<{
-   children: React.ReactNode;
-   categories: Category[];
-   isDarkMode: boolean;             
-   toggleDarkMode: () => void;
- }> = ({ children, isDarkMode, toggleDarkMode }) => {
+  children: React.ReactNode;
+  categories: Category[];
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}> = ({ children, isDarkMode, toggleDarkMode }) => {
   const [categories, setCategories] = useState<Category[]>([]);
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const isApiReference = location.pathname.includes('/api-reference');
-  const [expandedItemId, setExpandedItemId] = React.useState<number | null>(null);
+  const isApiReference = location.pathname.includes("/api-reference");
+  const [expandedItemId, setExpandedItemId] = React.useState<number | null>(
+    null
+  );
 
   const toggleExpanded = (itemId: number) => {
     setExpandedItemId((prevId) => (prevId === itemId ? null : itemId));
@@ -54,7 +55,7 @@ const DocsLayout: React.FC<{
 
     const filterPublicTree = (nodes: Category[]): Category[] =>
       nodes
-        .filter((node) => node.visibility === 'public')
+        .filter((node) => node.visibility === "public")
         .map((node) => ({
           ...node,
           subItems: filterPublicTree(node.subItems || []),
@@ -66,14 +67,18 @@ const DocsLayout: React.FC<{
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`);
-        if (!response.ok) throw new Error('Network response was not ok');
+        const response = await fetch(
+          `${import.meta.env.VITE_API_ENDPOINT}/api/categories`
+        );
+        if (!response.ok) throw new Error("Network response was not ok");
         const data: Category[] = await response.json();
-        const publicCategories = data.filter((cat) => cat.visibility === 'public');
+        const publicCategories = data.filter(
+          (cat) => cat.visibility === "public"
+        );
         const tree = buildCategoryTree(publicCategories);
         setCategories(tree);
       } catch (error) {
-        console.error('Error fetching categories:', error);
+        console.error("Error fetching categories:", error);
         setCategories([]);
       }
     };
@@ -85,88 +90,80 @@ const DocsLayout: React.FC<{
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  useEffect(()=>{
-        console.log('dark mode layout',isDarkMode)
-        console.log('dark mode layout 2 ',toggleDarkMode)
-    },[])
-
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-black">
       <div className="flex flex-1">
-        {isSidebarOpen && (
-          <div
-            className="fixed inset-0 bg-gray-600 bg-opacity-50 z-20 lg:hidden"
-            onClick={() => setIsSidebarOpen(false)}
-          />
-        )}
-
-        <div className="flex">
+        <div className="hidden md:block flex">
           <DocsSidebar
-              isSidebarOpen={isSidebarOpen}
-              toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
-              isDarkMode={isDarkMode}
-              toggleDarkMode={toggleDarkMode}
-              categories={categories}
-              expandedItemId={expandedItemId}
-              toggleExpanded={toggleExpanded}
-              locationPath={location.pathname}
-            />
-          <div
-            className={`flex-1 ml-0 transition-all duration-300 ease-in-out ${
-              isSidebarOpen ? 'ml-64' : 'ml-0'
-            }`}
-          >
-           <button
-              className="hidden md:flex fixed top-1 left-4 z-50 items-center sm:mt-[18px] md:mt-[18px] lg:mt-[18px] xl:mt-3"
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              aria-label="Toggle Sidebar"
-            >
-              <NBoldIcon />
-
-              <span className="hidden xl:block text-4xl font-bold text-gray-900 dark:text-white">
-                Bold
-                <span className="text-sm align-super ml-1 text-black dark:text-gray-500">Docs</span>
-              </span>
-
-              {isSidebarOpen && (
-                <span className="ml-2 text-4xl font-bold text-gray-900 dark:text-white xl:hidden">
-                  Bold
-                  <span className="text-sm align-super ml-1 text-black dark:text-gray-500">Docs</span>
-                </span>
-              )}
-            </button>
-
-
-          </div>
+            isSidebarOpen={isSidebarOpen}
+            toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
+            categories={categories}
+            expandedItemId={expandedItemId}
+            toggleExpanded={toggleExpanded}
+            locationPath={location.pathname}
+            setIsSidebarOpen={setIsSidebarOpen}
+          />
         </div>
         <main id="page-content" className="flex-1 relative">
-        <DocsNavbar  categories={[]} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} children={undefined} />
-        {isApiReference ? (
-            <div className={`mt-20 min-h-screen px-4 lg:px-0 relative ${isSidebarOpen ? 'ml-10':'ml-2'}`}>
+          <DocsNavbar
+            categories={[]}
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
+            children={undefined}
+          />
+          {isApiReference ? (
+            <div
+              className={`mt-20 min-h-screen px-4 lg:px-0 relative ${
+                isSidebarOpen ? "ml-0 lg:ml-80" : "ml-0 md:ml-20"
+              }`}
+            >
               <ApiReferenceReact
                 configuration={{
-                  spec: { url: `${import.meta.env.VITE_API_ENDPOINT}/api/spec` },
+                  spec: {
+                    url: `${import.meta.env.VITE_API_ENDPOINT}/api/spec`,
+                  },
                   darkMode: isDarkMode,
-                  hideDarkModeToggle:true,
-                  hideClientButton:true,
-
+                  hideDarkModeToggle: true,
+                  hideClientButton: true,
                 }}
               />
             </div>
           ) : (
             <>
-            <div className={`mb-8 mt-20 min-h-screen px-4 lg:px-7  relative ${
-                isSidebarOpen 
-                  ? 'mx-auto md:ml-[220px] max-w-4xl px-12' 
-                  : 'md:ml-[274px] md:mr-[50px] xl:mr-[272px] max-w-5xl'
-              }`}>
-                {children}
+              <div className="flex justify-between">
+                {isSidebarOpen ? (
+                  <>
+                    <div
+                      className="hidden xl:block lg:w-64 flex-shrink-0 "
+                      aria-hidden="true"
+                    ></div>
+                    <div className="mb-8 mt-20 min-h-screen  lg:-[87%] xl:w-[47%] relative">
+                      {children}
+                    </div>
+                    <div
+                      className="hidden xl:block w-64 flex-shrink-0 "
+                      aria-hidden="true"
+                    ></div>
+                    <TableOfContents />
+                  </>
+                ) : (
+                  <>
+                    <div className="mb-8 sm:ml-2 ml-6 md:ml-15 lg:ml-20 mt-20 min-h-screen lg:px-7 w-[90%] md:w-[78%]  relative">
+                      {children}
+                    </div>
+                    <div
+                      className="hidden xl:block w-64 flex-shrink-0 "
+                      aria-hidden="true"
+                    ></div>
+                    <TableOfContents />
+                  </>
+                )}
               </div>
-              <TableOfContents />
             </>
           )}
           <DocsFooter />
-
         </main>
       </div>
     </div>

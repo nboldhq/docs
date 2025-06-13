@@ -7,7 +7,7 @@
   const multer = require('multer');
   const port = process.env.PORT || 3000;
   const DATA_FILE = path.join(__dirname, 'categories.json');
-  const OPENAPI_FILE = path.join(__dirname, 'openapi.json'); // ✅ Correct file
+  const OPENAPI_FILE = path.join(__dirname, 'openapi.json'); 
   const upload = multer({ dest: 'uploads/' });
   app.use(cors({ origin: '*', methods: ['GET','POST','PUT','PATCH','DELETE'] }));
 
@@ -22,26 +22,57 @@
   }));
 
   // ——— Helpers —————————————————————————————
-  function readCategories() {
-    if (!fs.existsSync(DATA_FILE)) return [];
-    return JSON.parse(fs.readFileSync(DATA_FILE,'utf8'));
-  }
-  function writeCategories(data) {
-    fs.writeFileSync(DATA_FILE, JSON.stringify(data,null,2));
-  }
+  const readCategories = () => {
+    try {
+      if (!fs.existsSync(DATA_FILE)) {
+        fs.writeFileSync(DATA_FILE, JSON.stringify([], null, 2));
+        return [];
+      }
+      const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+      if (!Array.isArray(data)) {
+        console.error('Invalid categories.json: Expected an array');
+        return [];
+      }
+      return data.map(category => ({
+        ...category,
+        children: Array.isArray(category.children) ? category.children : []
+      }));
+    } catch (e) {
+      console.error('Error reading categories.json:', e.message);
+      return [];
+    }
+  };
+  
+  const writeCategories = (data, retries = 3, delay = 1000) => {
+    for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+        fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+        return;
+      } catch (e) {
+        if (attempt === retries) throw e;
+        require('util').promisify(setTimeout)(delay);
+      }
+    }
+  };
+
   function sanitizeFilename(name) {
     return name.replace(/[<>:"/\\|?*\x00-\x1F]/g,'').trim();
   }
+
   function getCategoryPath(cat, allCats, root) {
     const parts = [];
     let cur = cat;
     while (cur && cur.name) {
-      const siblings = allCats.filter(c=>c.parentId===cur.parentId);
-      const idx = siblings.findIndex(s=>s.id===cur.id);
-      parts.unshift(`${String(idx+1).padStart(2,'0')}-${sanitizeFilename(cur.name)}`);
-      cur = allCats.find(c=>c.id===cur.parentId);
+      const siblings = allCats.filter(c => c.parentId === cur.parentId);
+      const idx = siblings.findIndex(s => s.id === cur.id);
+      const part = `${String(idx + 1).padStart(2, '0')}-${sanitizeFilename(cur.name)}`;
+      parts.unshift(part);
+      console.log('getCategoryPath part:', part);
+      cur = allCats.find(c => c.id === cur.parentId);
     }
-    return path.join(root, ...parts);
+    const finalPath = path.join(root, ...parts);
+    console.log('getCategoryPath final:', finalPath);
+    return finalPath;
   }
 
   // ——— API ROUTES ————————————————————————————
@@ -142,33 +173,37 @@
         let filePath;
     
         if (cat.id) {
-          // -- Update existing category
+          // Update existing category
           const idx = data.findIndex(c => c.id === cat.id);
           if (idx < 0) return res.status(404).json({ error: 'Category not found' });
     
           const old = data[idx];
           const oldDir = getCategoryPath(old, data, docsRoot);
-    
           data[idx] = { ...old, ...cat };
           const newDir = getCategoryPath(data[idx], data, docsRoot);
     
           if (!fs.existsSync(newDir)) fs.mkdirSync(newDir, { recursive: true });
     
-          // Move the existing markdown file if directory changed
           const oldFiles = fs.existsSync(oldDir) ? fs.readdirSync(oldDir) : [];
           const oldFileName = oldFiles.find(f => f.includes(sanitizeFilename(old.name))) || '';
     
-          if (oldDir !== newDir && oldFileName) {
+          if (oldFileName && oldDir !== newDir) {
+            // Rename existing file if directory changed
             const oldFilePath = path.join(oldDir, oldFileName);
             const newFileName = `01_${sanitizeFilename(cat.name)}.md`;
             const newFilePath = path.join(newDir, newFileName);
             fs.renameSync(oldFilePath, newFilePath);
             filePath = newFilePath;
           } else if (oldFileName) {
+            // Reuse existing file
             filePath = path.join(oldDir, oldFileName);
+          } else {
+            // No existing file, create a new one
+            const newFileName = `01_${sanitizeFilename(cat.name)}.md`;
+            filePath = path.join(newDir, newFileName);
           }
         } else {
-          // -- Create new category
+          // Create new category
           cat.id = Date.now();
           data.push(cat);
     
@@ -196,12 +231,124 @@
           `${cat.description || ''}`
         ].join('\n');
     
+        if (!filePath) {
+          throw new Error('filePath is undefined');
+        }
         fs.writeFileSync(filePath, frontMatter, 'utf8');
     
         res.json({ success: true, category: cat });
       } catch (e) {
-        console.error(e);
-        res.status(500).json({ error: 'Failed to save category' });
+        console.error('Error in POST /api/categories:', e.message, e.stack);
+        res.status(500).json({ error: 'Failed to save category', details: e.message });
+      }
+    });
+
+    app.post('/api/categories/reorder', (req, res) => {
+      try {
+        const { draggedId, newParentId, newIndex } = req.body;
+        console.log('Reorder request:', { draggedId, newParentId, newIndex });
+    
+        if (!draggedId || newIndex === undefined) {
+          return res.status(400).json({ error: 'Missing required fields: draggedId and newIndex are required' });
+        }
+    
+        let data;
+        try {
+          data = readCategories();
+        } catch (e) {
+          console.error('Error reading categories.json:', e.message, e.stack);
+          return res.status(500).json({ error: 'Failed to read categories data', details: e.message });
+        }
+    
+        if (!Array.isArray(data)) {
+          console.error('Invalid categories data: Expected an array');
+          return res.status(500).json({ error: 'Invalid categories data: Expected an array' });
+        }
+    
+        const findCategory = (categories, id, parentArray = null) => {
+          for (let i = 0; i < categories.length; i++) {
+            const category = categories[i];
+            if (category.id === id) {
+              return { category, parent: parentArray, index: i };
+            }
+            if (Array.isArray(category.children) && category.children.length > 0) {
+              const found = findCategory(category.children, id, categories[i].children);
+              if (found) return found;
+            }
+          }
+          return null;
+        };
+    
+        const isDescendant = (parentCategory, targetId) => {
+          if (parentCategory.id === targetId) return true;
+          if (Array.isArray(parentCategory.children)) {
+            return parentCategory.children.some((child) => isDescendant(child, targetId));
+          }
+          return false;
+        };
+    
+        const dragged = findCategory(data, draggedId);
+        if (!dragged) {
+          console.error(`Category not found for draggedId: ${draggedId}`);
+          return res.status(400).json({ error: `Invalid draggedId: ${draggedId} not found` });
+        }
+    
+        if (newParentId !== null) {
+          const targetParent = findCategory(data, newParentId);
+          if (!targetParent) {
+            console.error(`Category not found for newParentId: ${newParentId}`);
+            return res.status(400).json({ error: `Invalid newParentId: ${newParentId} not found` });
+          }
+          if (draggedId === newParentId || isDescendant(dragged.category, newParentId)) {
+            return res.status(400).json({ error: 'Cannot move category into itself or its descendants' });
+          }
+        }
+    
+        if (!dragged.parent && newParentId !== null) {
+          console.error(`Invalid state: Dragged category ${draggedId} has no parent array`);
+          return res.status(500).json({ error: `Invalid state: Dragged category ${draggedId} has no parent array` });
+        }
+    
+        try {
+          (dragged.parent || data).splice(dragged.index, 1);
+        } catch (e) {
+          console.error(`Error removing category ${draggedId} from parent:`, e.message);
+          return res.status(500).json({ error: `Failed to remove category ${draggedId}`, details: e.message });
+        }
+    
+        let newParentArray;
+        if (newParentId === null) {
+          newParentArray = data;
+        } else {
+          const targetParent = findCategory(data, newParentId);
+          if (!Array.isArray(targetParent.category.children)) {
+            targetParent.category.children = [];
+          }
+          newParentArray = targetParent.category.children;
+        }
+    
+        if (newIndex < 0 || newIndex > newParentArray.length) {
+          console.error(`Invalid newIndex: ${newIndex} for parent array length ${newParentArray.length}`);
+          return res.status(400).json({ error: `Invalid newIndex: ${newIndex}` });
+        }
+    
+        newParentArray.splice(newIndex, 0, {
+          ...dragged.category,
+          parentId: newParentId,
+          children: Array.isArray(dragged.category.children) ? dragged.category.children : []
+        });
+    
+        try {
+          writeCategories(data);
+        } catch (writeError) {
+          console.error('Error writing categories:', writeError.message, writeError.stack);
+          return res.status(500).json({ error: 'Failed to save categories', details: writeError.message });
+        }
+    
+        res.json({ success: true });
+      } catch (e) {
+        console.error('Error reordering categories:', e.message, e.stack);
+        res.status(500).json({ error: 'Reorder failed', details: e.message });
       }
     });
 
@@ -248,21 +395,93 @@
       }
     });
 
-    // REORDER categories
     app.post('/api/categories/reorder', (req, res) => {
       try {
-        const {draggedId,targetId} = req.body;
+        const { draggedId, newParentId, newIndex } = req.body;
+    
+        if (!draggedId || newIndex === undefined) {
+          return res.status(400).json({ error: 'Missing required fields' });
+        }
+    
         const data = readCategories();
-        const dI = data.findIndex(c=>c.id===draggedId);
-        const tI = data.findIndex(c=>c.id===targetId);
-        if (dI<0||tI<0) return res.status(400).json({error:'invalid ids'});
-        const [item] = data.splice(dI,1);
-        data.splice(tI,0,item);
-        writeCategories(data);
-        res.json({success:true});
+        if (!Array.isArray(data)) {
+          return res.status(500).json({ error: 'Invalid categories data' });
+        }
+    
+        // Helper function to find a category and its parent array
+        const findCategory = (categories, id, parentArray = null) => {
+          for (let i = 0; i < categories.length; i++) {
+            const category = categories[i];
+            if (category.id === id) {
+              return { category, parent: parentArray, index: i };
+            }
+            if (category.children && category.children.length > 0) {
+              const found = findCategory(category.children, id, categories[i].children);
+              if (found) return found;
+            }
+          }
+          return null;
+        };
+    
+        // Check if the dragged category is being dropped into its own descendants
+        const isDescendant = (parentCategory, targetId) => {
+          if (parentCategory.id === targetId) return true;
+          if (parentCategory.children) {
+            return parentCategory.children.some((child) => isDescendant(child, targetId));
+          }
+          return false;
+        };
+    
+        const dragged = findCategory(data, draggedId);
+        if (!dragged) {
+          return res.status(400).json({ error: 'Invalid draggedId' });
+        }
+    
+        // Prevent dropping a category into itself or its descendants
+        if (newParentId !== null) {
+          const targetParent = findCategory(data, newParentId);
+          if (!targetParent) {
+            return res.status(400).json({ error: 'Invalid newParentId' });
+          }
+          if (draggedId === newParentId || isDescendant(dragged.category, newParentId)) {
+            return res.status(400).json({ error: 'Cannot move category into itself or its descendants' });
+          }
+        }
+    
+        // Remove the dragged category from its current position
+        dragged.parent.splice(dragged.index, 1);
+    
+        // Find the new parent array (root or a category's children)
+        let newParentArray;
+        if (newParentId === null) {
+          newParentArray = data;
+        } else {
+          const targetParent = findCategory(data, newParentId);
+          if (!targetParent.category.children) {
+            targetParent.category.children = [];
+          }
+          newParentArray = targetParent.category.children;
+        }
+    
+        // Validate newIndex
+        if (newIndex < 0 || newIndex > newParentArray.length) {
+          return res.status(400).json({ error: 'Invalid newIndex' });
+        }
+    
+        // Insert the dragged category at the new index
+        newParentArray.splice(newIndex, 0, { ...dragged.category, parentId: newParentId });
+    
+        try {
+          writeCategories(data);
+        } catch (writeError) {
+          console.error('Error writing categories:', writeError);
+          return res.status(500).json({ error: 'Failed to save categories' });
+        }
+    
+        res.json({ success: true });
       } catch (e) {
-        console.error(e);
-        res.status(500).json({error:'reorder failed'});
+        console.error('Error reordering categories:', e);
+        res.status(500).json({ error: 'Reorder failed' });
       }
     });
 

@@ -42,6 +42,14 @@ html {
   @apply shadow-card-hover;
 }
 
+.hidescrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.hidescrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 /* Tailwind CSS custom class to hide scrollbar */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

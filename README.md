@@ -30,15 +30,17 @@
     <li><strong>Node.js</strong> (v16+) 📦</li>
     <li><strong>npm</strong> (v8+) 📦</li>
   </ul>
+
   <h3>🛠️ Setup and Build Frontend</h3>
-  <ol>
-    <li>Open a new terminal and navigate to the frontend directory:</li>
-    <pre><code>cd web</code></pre>
-    <li>Install frontend dependencies:</li>
-    <pre><code>npm install</code></pre>
-    <li>Build the frontend for production:</li>
-    <pre><code>npm run build</code></pre>
-  </ol>
+    <ol>
+      <li>Open a new terminal and navigate to the frontend directory:</li>
+      <pre><code>cd web</code></pre>
+      <li>Install frontend dependencies:</li>
+      <pre><code>npm install</code></pre>
+      <li>Build the frontend for production:</li>
+      <pre><code>npm run build</code></pre>
+    </ol>
+    
   <h3>🔧 Setup and Run Backend</h3>
   <ol>
     <li>Navigate to the backend directory:</li>
@@ -48,5 +50,4 @@
     <li>Start the backend server:</li>
     <pre><code>npm run dev</code></pre>
   </ol>
-
 

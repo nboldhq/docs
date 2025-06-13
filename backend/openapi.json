@@ -21,7 +21,7 @@
   },
   "servers": [
     {
-      "url": "https://api.nbold.io/api/v2.0",
+      "url": "https://api.nbold.io/api/v3.0",
       "description": "Latest stable version"
     }
   ],
@@ -18883,6 +18883,250 @@
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/teams/copy/channel": {
+      "post": {
+        "summary": "Create a new Copy Channel in a team.",
+        "description": "Create a new Copy Channel in a team.",
+        "tags": [
+          "Channels"
+        ],
+        "x-nbold-rate-limit": "tier-3",
+        "x-nbold-required-roles": [
+          "AUTHORIZED_APP",
+          "AUTHENTICATED_USER"
+        ],
+        "security": [
+          {
+            "bearer_auth": []
+          }
+        ],
+        "requestBody": {
+          "description": "A TeamCopyChannelPayload object describing the channel to copy.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sourceTeamId": {
+                    "type": "string"
+                  },
+                  "sourceChannelName": {
+                    "type": "string"
+                  },
+                  "sourceChannelId": {
+                    "type": "string"
+                  },
+                  "targetTeamId": {
+                    "type": "string"
+                  },
+                  "metadataChannel": {
+                    "type": "object",
+                    "properties": {
+                      "salesforceConfig": {
+                        "type": "object",
+                        "properties": {
+                          "displayName": {
+                            "type": "string"
+                          },
+                          "webUrl": {
+                            "type": "string"
+                          },
+                          "entityId": {
+                            "type": "string"
+                          },
+                          "contentUrl": {
+                            "type": "string"
+                          },
+                          "websiteUrl": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "cuddyBrainConfig": {
+                        "type": "object",
+                        "properties": {
+                          "teamAppId": {
+                            "type": "string"
+                          },
+                          "displayName": {
+                            "type": "string"
+                          },
+                          "webUrl": {
+                            "type": "string"
+                          },
+                          "entityId": {
+                            "type": "string"
+                          },
+                          "contentUrl": {
+                            "type": "string"
+                          },
+                          "websiteUrl": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "salesforce": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "sourceTeamId",
+                  "sourceChannelId",
+                  "targetTeamId"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "sourceChannelId": {
+                          "type": "string"
+                        },
+                        "channelName": {
+                          "type": "string"
+                        },
+                        "sourceTeamId": {
+                          "type": "string"
+                        },
+                        "targetTeamId": {
+                          "type": "string"
+                        },
+                        "metadataChannel": {
+                          "type": "object",
+                          "properties": {
+                            "salesforceConfig": {
+                              "type": "object",
+                              "properties": {
+                                "displayName": {
+                                  "type": "string"
+                                },
+                                "webUrl": {
+                                  "type": "string"
+                                },
+                                "entityId": {
+                                  "type": "string"
+                                },
+                                "contentUrl": {
+                                  "type": "string"
+                                },
+                                "websiteUrl": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "cuddyBrainConfig": {
+                              "type": "object",
+                              "properties": {
+                                "teamAppId": {
+                                  "type": "string"
+                                },
+                                "displayName": {
+                                  "type": "string"
+                                },
+                                "webUrl": {
+                                  "type": "string"
+                                },
+                                "entityId": {
+                                  "type": "string"
+                                },
+                                "contentUrl": {
+                                  "type": "string"
+                                },
+                                "websiteUrl": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "salesforce": {
+                          "type": "boolean"
+                        },
+                        "cuddy_brain": {
+                          "type": "boolean"
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "properties": {
+                            "roles": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – The server could not process the request due to client-side issues, such as invalid syntax or malformed data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "statusCode": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "error": {
+                      "type": "string"
+                    },
+                    "statusCode": {
+                      "type": "integer"
                     }
                   }
                 }

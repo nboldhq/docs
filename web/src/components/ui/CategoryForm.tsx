@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Modal,Radio , ModalBody, ModalContent, ModalHeader, ModalFooter, Button, Input, Select, SelectItem, RadioGroup, Popover, PopoverTrigger, PopoverContent, ScrollShadow } from '@heroui/react';
+import { Modal,Radio , ModalBody, ModalContent, ModalHeader, ModalFooter, Button, Input, Select, SelectItem, RadioGroup, Popover, PopoverTrigger, PopoverContent, ScrollShadow, toast } from '@heroui/react';
 import MarkdownIt from 'markdown-it';
 import 'react-markdown-editor-lite/lib/index.css';
 import yaml from 'js-yaml';
@@ -64,12 +64,12 @@ import { Check, ShieldAlert, ShieldQuestion } from 'lucide-react';
       });
       
 
-          useEffect(() => {
-            const localTheme = localStorage.getItem('theme');
-            if (localTheme === 'dark' || localTheme === 'light') {
-              setTheme(localTheme);
-            }
-}, []);
+      useEffect(() => {
+        const localTheme = localStorage.getItem('theme');
+        if (localTheme === 'dark' || localTheme === 'light') {
+          setTheme(localTheme);
+        }
+      }, []);
       useEffect(() => {
         if (category) {
           setFormData({
@@ -86,7 +86,6 @@ import { Check, ShieldAlert, ShieldQuestion } from 'lucide-react';
         }
       }, [category]);
       
-      
       const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
@@ -95,13 +94,15 @@ import { Check, ShieldAlert, ShieldQuestion } from 'lucide-react';
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
           });
-          
-          if (!response.ok) throw new Error('Failed to save category');
-          
+          if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.details || 'Failed to save category');
+          }
           onSave();
           onClose();
         } catch (error) {
           console.error('Error saving category:', error);
+          toast.error(`Error: ${error.message}`);
         }
       };
       interface Frontmatter {
