@@ -43,7 +43,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}/docs:${{ github.sha }}
+        tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}/docs:prd
         file: ./Dockerfile
 
   deploy:
@@ -61,4 +61,4 @@ jobs:
         app-name: 'docs'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_419fc483e6e944b39b50ccf8ad1ab7c1 }}
-        images: 'nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}/docs:${{ github.sha }}'
+        images: 'nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}/docs:prd'
