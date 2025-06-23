@@ -13,9 +13,10 @@ jobs:
   build:
     runs-on: 'ubuntu-latest'
 
-    env: VITE_API_ENDPOINT= ${{ secrets.VITE_API_ENDPOINT }}
-         VITE_AZURE_CLIENT_ID= ${{ secrets.VITE_AZURE_CLIENT_ID }}
-         VITE_AZURE_AUTHORITY= ${{ secrets.VITE_AZURE_AUTHORITY }}
+    env: 
+      VITE_API_ENDPOINT: ${{ secrets.VITE_API_ENDPOINT }}
+      VITE_AZURE_CLIENT_ID: ${{ secrets.VITE_AZURE_CLIENT_ID }}
+      VITE_AZURE_AUTHORITY: ${{ secrets.VITE_AZURE_AUTHORITY }}
 
     steps:
     - uses: actions/checkout@v2
