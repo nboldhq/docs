@@ -13,8 +13,20 @@ jobs:
   build:
     runs-on: 'ubuntu-latest'
 
+    env: VITE_API_ENDPOINT= ${{ secrets.VITE_API_ENDPOINT }}
+         VITE_AZURE_CLIENT_ID= ${{ secrets.VITE_AZURE_CLIENT_ID }}
+         VITE_AZURE_AUTHORITY= ${{ secrets.VITE_AZURE_AUTHORITY }}
+
     steps:
     - uses: actions/checkout@v2
+
+    - name: Create .env file for Vite
+      run: |
+        cat <<EOF > web/.env
+        VITE_API_ENDPOINT=${VITE_API_ENDPOINT}
+        VITE_AZURE_CLIENT_ID=${VITE_AZURE_CLIENT_ID}
+        VITE_AZURE_AUTHORITY=${VITE_AZURE_AUTHORITY}
+        EOF
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
