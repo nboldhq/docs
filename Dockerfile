@@ -6,7 +6,9 @@ WORKDIR /app/web
 COPY web/package*.json ./
 RUN npm install
 
+COPY web/.env .env
 COPY web/ .
+
 RUN npm run build
 
 
