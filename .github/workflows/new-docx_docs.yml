@@ -23,6 +23,7 @@ jobs:
 
     - name: Create .env file for Vite
       run: |
+        touch .env
         echo "VITE_API_ENDPOINT=${VITE_API_ENDPOINT}" >> web/.env
         echo "VITE_AZURE_CLIENT_ID=${VITE_AZURE_CLIENT_ID}" >> web/.env
         echo "VITE_AZURE_AUTHORITY=${VITE_AZURE_AUTHORITY}" >> web/.env
