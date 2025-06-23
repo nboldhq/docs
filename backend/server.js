@@ -503,12 +503,12 @@
   // ——— SPA & Static Assets ————————————————————
 
   // Serve React build
-  const staticPath = path.resolve(__dirname, '../web/dist');
+  const staticPath = path.resolve(__dirname, './public');
   console.log('Serving static files from:', staticPath);
   app.use(express.static(staticPath));
-  app.use(express.static(path.resolve(__dirname, '../web/dist')));
+  app.use(express.static(path.resolve(__dirname, './public')));
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../web/dist/index.html'));
+    res.sendFile(path.join(__dirname, './public/index.html'));
   });
   // 404 for anything else
   app.use((req,res) => {
