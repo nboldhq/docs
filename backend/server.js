@@ -5,15 +5,14 @@
   const cors = require('cors');
   const app = express();
   const multer = require('multer');
-  const port = process.env.PORT || 3000;
+  const port = 3000;
   const DATA_FILE = path.join(__dirname, 'categories.json');
   const OPENAPI_FILE = path.join(__dirname, 'openapi.json'); 
   const upload = multer({ dest: 'uploads/' });
   app.use(cors({ origin: '*', methods: ['GET','POST','PUT','PATCH','DELETE'] }));
 
-  // Increase payload limit
   app.use(express.json({ 
-    limit: '50mb' // 50MB limit (adjust as needed)
+    limit: '50mb' 
   }));
 
   app.use(express.urlencoded({

@@ -2,3 +2,7 @@
 
 .env
 .env.*
+
+# Ignore build output
+/public/assets/
+/public/index.html
