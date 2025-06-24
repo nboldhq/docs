@@ -23,9 +23,10 @@ jobs:
 
     - name: Create .env file for Vite
       run: |
-        echo "VITE_API_ENDPOINT=${VITE_API_ENDPOINT}" >> ./web/.env
-        echo "VITE_AZURE_CLIENT_ID=${VITE_AZURE_CLIENT_ID}" >> ./web/.env
-        echo "VITE_AZURE_AUTHORITY=${VITE_AZURE_AUTHORITY}" >> ./web/.env
+        touch .env
+        echo "VITE_API_ENDPOINT=${VITE_API_ENDPOINT}" >> web/.env
+        echo "VITE_AZURE_CLIENT_ID=${VITE_AZURE_CLIENT_ID}" >> web/.env
+        echo "VITE_AZURE_AUTHORITY=${VITE_AZURE_AUTHORITY}" >> web/.env
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
