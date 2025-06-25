@@ -60,11 +60,6 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode, collapsed }
           {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
         </button>
 
-        <button className="p-2 text-gray-500 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300 relative">
-          <Bell className="h-5 w-5" />
-          <span className="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full"></span>
-        </button>
-
         {/* User Profile */}
         <div className="flex items-center cursor-pointer">
         <div className="h-9 w-9 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center overflow-hidden">
