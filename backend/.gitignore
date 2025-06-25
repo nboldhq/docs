@@ -1,7 +1,6 @@
+# Node modules
 /node_modules
 
-.env
-.env.*
 
 # Ignore build output
 /public/assets/

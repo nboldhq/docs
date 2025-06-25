@@ -19,7 +19,7 @@ const FilePage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`)
+    fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .catch((err) => console.error('Error fetching data:', err));

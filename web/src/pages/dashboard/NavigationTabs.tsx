@@ -18,7 +18,7 @@ const NavigationTabs: React.FC = () => {
   const fetchCategories = async (retries = 3, delay = 1000) => {
     for (let attempt = 1; attempt <= retries; attempt++) {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`, {
+        const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`, {
           headers: { 'Content-Type': 'application/json' },
         });
 
@@ -42,7 +42,7 @@ const NavigationTabs: React.FC = () => {
 
   const fetchTabs = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories`, {
+      const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`, {
         headers: { 'Content-Type': 'application/json' },
       });
 
@@ -75,7 +75,7 @@ const NavigationTabs: React.FC = () => {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories/${tabWithNavbarFlag.id}`, {
+      const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories/${tabWithNavbarFlag.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -103,8 +103,7 @@ const NavigationTabs: React.FC = () => {
     setTabs(updatedTabs);
 
     try {
-      // Here, you should update the category in the backend to set showInNavbar: false
-      const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/categories/${id}`, {
+      const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ showInNavbar: false }),

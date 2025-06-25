@@ -45,7 +45,7 @@ const DocsNavbar: React.FC<{
     const fetchCategories = async () => {
       try {
         const res = await fetch(
-          `${import.meta.env.VITE_API_ENDPOINT}/api/categories`
+          `https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`
         );
         if (!res.ok) throw new Error("Failed to fetch categories");
         const data: Category[] = await res.json();

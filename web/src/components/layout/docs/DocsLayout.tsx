@@ -68,7 +68,7 @@ const DocsLayout: React.FC<{
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_ENDPOINT}/api/categories`
+          `https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`
         );
         if (!response.ok) throw new Error("Network response was not ok");
         const data: Category[] = await response.json();
@@ -122,7 +122,7 @@ const DocsLayout: React.FC<{
               <ApiReferenceReact
                 configuration={{
                   spec: {
-                    url: `${import.meta.env.VITE_API_ENDPOINT}/api/spec`,
+                    url: `https://${import.meta.env.VITE_ALLOWED_HOST}/api/spec`,
                   },
                   darkMode: isDarkMode,
                   hideDarkModeToggle: true,
