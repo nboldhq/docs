@@ -27,9 +27,6 @@ RUN cd backend && npm install
 # Copy backend source code
 COPY backend ./backend
 
-# Copy built frontend from previous stage
-COPY --from=frontend /app/web/dist ./backend/public
-
 # Set correct permissions
 RUN chown -R appuser:appgroup /app
 
