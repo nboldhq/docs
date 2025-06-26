@@ -3,7 +3,6 @@ import Layout from '../components/layout/Layout';
 import { Button } from '@heroui/react';
 import { NBoldIcon } from '../components/Icons/nBoldIcon';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
 import { BackgroundBeams } from '../components/ui/background-beams';
 import Textra from 'react-textra';
 

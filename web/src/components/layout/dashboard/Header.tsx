@@ -60,27 +60,23 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode, collapsed }
           {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
         </button>
 
-        {/* User Profile */}
         <div className="flex items-center cursor-pointer">
-        <div className="h-9 w-9 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center overflow-hidden">
-          {userPhoto ? (
-            <img 
-              src={userPhoto} 
-              alt="User profile" 
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <User className="h-5 w-5 text-primary-700 dark:text-primary-300" />
-          )}
-        </div>
-        <div className="ml-3 hidden md:block">
-          <p className="text-sm font-medium">
-            {account?.name || 'User'}
-          </p>
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-           {/* {account?.username || account?.idTokenClaims?.preferred_username || 'Admin'}*/}
-          </p>
-        </div>
+          <div className="h-9 w-9 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center overflow-hidden">
+            {userPhoto ? (
+              <img 
+                src={userPhoto} 
+                alt="User profile" 
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <User className="h-5 w-5 text-primary-700 dark:text-primary-300" />
+            )}
+          </div>
+          <div className="ml-3 hidden md:block">
+            <p className="text-sm font-medium">
+              {account?.name || 'User'}
+            </p>
+          </div>
       </div>
       </div>
     </header>

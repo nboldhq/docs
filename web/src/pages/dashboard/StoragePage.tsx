@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import {
   Folder,
   FileText,
-  Upload,
-  FolderPlus,
   Eye
 } from 'lucide-react';
 import { Button, Modal, ModalContent, ModalHeader, ModalBody, ScrollShadow, ModalFooter, Input } from '@heroui/react';
@@ -21,7 +19,7 @@ interface FileItem {
   modifiedAt: Date;
   path: string[];
   description?: string;
-  children?: FileItem[]; // Add children for folders
+  children?: FileItem[];
 }
 
 

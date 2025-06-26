@@ -57,7 +57,7 @@ const NavigationTabs: React.FC = () => {
 
   useEffect(() => {
     fetchCategories();
-    fetchTabs(); // Fetch tabs that have showInNavbar true
+    fetchTabs(); 
   }, []);
 
   const handleAddTab = async () => {
@@ -135,7 +135,7 @@ const NavigationTabs: React.FC = () => {
                 selectedKeys={selectedCategory ? [selectedCategory] : []}
                 onSelectionChange={(keys) => {
                   const selected = Array.from(keys)[0] || '';
-                  console.log("Selected category ID:", selected); // ✅ Debug here
+                  console.log("Selected category ID:", selected);
                   setSelectedCategory(selected);
                 }}
                 label="Select a category"
