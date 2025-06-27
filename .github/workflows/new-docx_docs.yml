@@ -31,7 +31,7 @@ jobs:
         push: true
         tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}/docs:prd
         file: ./Dockerfile
-        build_args: |
+        build-args: |
           VITE_ALLOWED_HOST=${{ secrets.VITE_API_ENDPOINT }}
           VITE_AZURE_CLIENT_ID=${{ secrets.VITE_AZURE_CLIENT_ID }}
           VITE_AZURE_TENANT_ID=${{ secrets.VITE_AZURE_AUTHORITY }}
