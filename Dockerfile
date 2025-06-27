@@ -25,15 +25,13 @@ WORKDIR /app
 
 # Install backend dependencies
 COPY backend/package*.json ./backend/
-RUN cd web && npm run build
 RUN cd backend && npm install
 
 
 # Copy backend source code
 COPY backend ./backend
 
-
-
+RUN cd /app/web && npm run build
 # Set correct permissions
 RUN chown -R appuser:appgroup /app
 
