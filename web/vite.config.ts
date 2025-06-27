@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => {
   },
   build: {
     outDir: '../backend/public',
+    emptyOutDir: true
   },
   logLevel: 'info',
   optimizeDeps: {
