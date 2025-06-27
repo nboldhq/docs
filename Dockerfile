@@ -1,5 +1,5 @@
 # Stage 1: Build Frontend
-FROM node:lts-slim AS frontend
+FROM node:lts-slim
 
 ARG VITE_API_ENDPOINT
 ARG VITE_AZURE_CLIENT_ID
@@ -18,10 +18,6 @@ RUN npm install
 COPY web/ .
 
 RUN npm run build
-
-
-# Stage 2: Setup Backend and Serve Frontend
-FROM node:lts-slim AS backend
 
 # Create a non-root user and group
 RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
