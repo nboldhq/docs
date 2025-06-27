@@ -12,12 +12,6 @@ on:
 jobs:
   build:
     runs-on: 'ubuntu-latest'
-
-    env: 
-      VITE_API_ENDPOINT: ${{ secrets.VITE_API_ENDPOINT }}
-      VITE_AZURE_CLIENT_ID: ${{ secrets.VITE_AZURE_CLIENT_ID }}
-      VITE_AZURE_AUTHORITY: ${{ secrets.VITE_AZURE_AUTHORITY }}
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Docker Buildx
@@ -25,6 +19,11 @@ jobs:
 
     - name: Log in to registry
       uses: docker/login-action@v2
+      with:
+        registry: https://nbold.azurecr.io/
+        username: ${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_cdec9194df7a4b62860ed31dbb149589 }}
+
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
@@ -32,9 +31,9 @@ jobs:
         tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}/docs:prd
         file: ./Dockerfile
         build-args: |
-          VITE_ALLOWED_HOST=${{ secrets.VITE_API_ENDPOINT }}
+          VITE_API_ENDPOINT=${{ secrets.VITE_API_ENDPOINT }}
           VITE_AZURE_CLIENT_ID=${{ secrets.VITE_AZURE_CLIENT_ID }}
-          VITE_AZURE_TENANT_ID=${{ secrets.VITE_AZURE_AUTHORITY }}
+          VITE_AZURE_AUTHORITY=${{ secrets.VITE_AZURE_AUTHORITY }}
 
   deploy:
     runs-on: ubuntu-latest
