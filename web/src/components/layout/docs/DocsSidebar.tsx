@@ -52,7 +52,10 @@ const DocsSidebar: React.FC<SidebarProps> = ({
           isActive={locationPath === fullPath}
           hasSubItems={!!category.subItems?.length}
           isExpanded={expandedItemId === category.id}
-          onToggle={() => toggleExpanded(category.id)}
+          onToggle={() => {
+            toggleExpanded(category.id);
+            setIsSidebarOpen(true);
+          }}
           subItems={category.subItems?.map((sub) => {
             const subTitle = sub.name.toLowerCase().replace(/\s+/g, "-");
             const subTags = sub.tags?.join("-") || "untagged";
