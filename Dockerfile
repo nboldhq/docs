@@ -17,8 +17,6 @@ RUN npm install
 
 COPY web/ .
 
-RUN npm run build
-
 # Create a non-root user and group
 RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
 
@@ -27,10 +25,14 @@ WORKDIR /app
 
 # Install backend dependencies
 COPY backend/package*.json ./backend/
+RUN cd web && npm run build
 RUN cd backend && npm install
+
 
 # Copy backend source code
 COPY backend ./backend
+
+
 
 # Set correct permissions
 RUN chown -R appuser:appgroup /app
