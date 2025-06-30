@@ -49,7 +49,15 @@ const DocsSidebar: React.FC<SidebarProps> = ({
           label={category.name}
           path={fullPath}
           isSidebarOpen={isSidebarOpen}
-          isActive={locationPath === fullPath}
+          isActive={Boolean(
+            locationPath === fullPath ||
+            category.subItems?.some((sub) =>
+              locationPath === `/docs/${sub.tags?.join("-") || "untagged"}/${sub.name.toLowerCase().replace(/\s+/g, "-")}` ||
+              sub.subItems?.some((subSub) =>
+                locationPath === `/docs/${sub.tags?.join("-") || "untagged"}/${sub.name.toLowerCase().replace(/\s+/g, "-")}/${subSub.name.toLowerCase().replace(/\s+/g, "-")}`
+              )
+            )
+          )}
           hasSubItems={!!category.subItems?.length}
           isExpanded={expandedItemId === category.id}
           onToggle={() => {

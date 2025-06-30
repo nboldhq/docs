@@ -1,6 +1,6 @@
 ---
 title: Welcome Page
-author: Kristina Konstantnyova
+author: nbold Developer
 tags: [welcome-page]
 status: draft
 ---

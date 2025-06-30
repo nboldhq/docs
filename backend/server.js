@@ -6,8 +6,8 @@
   const app = express();
   const multer = require('multer');
   const port = 3000;
-  const DATA_FILE = path.join(__dirname, 'categories.json');
-  const OPENAPI_FILE = path.join(__dirname, 'openapi.json'); 
+  const DATA_FILE = path.join(__dirname, '../../dataBase/categories.json');
+  const OPENAPI_FILE = path.join(__dirname, '../../dataBase/openapi.json'); 
   const upload = multer({ dest: 'uploads/' });
   app.use(cors({ origin: '*', methods: ['GET','POST','PUT','PATCH','DELETE'] }));
 
@@ -84,7 +84,7 @@
   // Load existing OpenAPI spec
   let openAPISpec = {};
   try {
-    openAPISpec = require('./openapi.json');
+    openAPISpec = require('../../dataBase/openapi.json');
   } catch (err) {
     console.log('No existing openapi.json file found');
   }
