@@ -6,9 +6,10 @@
   const app = express();
   const multer = require('multer');
   const port = 3000;
-  const DATA_FILE = path.join(__dirname, '../../dataBase/categories.json');
-  const OPENAPI_FILE = path.join(__dirname, '../../dataBase/openapi.json'); 
-  const upload = multer({ dest: 'uploads/' });
+  const DATA_DIR = path.join(__dirname, '../../data/');
+  const DATA_FILE = path.join(DATA_DIR, 'categories.json');
+  const OPENAPI_FILE = path.join(DATA_DIR, 'openapi.json'); 
+  const upload = multer({ dest: '../../data/' });
   app.use(cors({ origin: '*', methods: ['GET','POST','PUT','PATCH','DELETE'] }));
 
   app.use(express.json({ 
@@ -20,6 +21,10 @@
     limit: '50mb'
   }));
 
+  // Ensure data directory exists
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+}
   // ——— Helpers —————————————————————————————
   const readCategories = () => {
     try {
@@ -84,7 +89,7 @@
   // Load existing OpenAPI spec
   let openAPISpec = {};
   try {
-    openAPISpec = require('../../dataBase/openapi.json');
+    openAPISpec = require('../../data/openapi.json');
   } catch (err) {
     console.log('No existing openapi.json file found');
   }
@@ -93,30 +98,60 @@
 
     // Get current spec
     app.get('/api/spec', (req, res) => {
-      res.json(openAPISpec);
+      fs.readFile(OPENAPI_FILE, 'utf8', (err, data) => {
+        if (err) {
+          return res.status(500).json({ error: 'Error reading OpenAPI file' });
+        }
+    
+        try {
+          const spec = JSON.parse(data);
+          res.json(spec);
+        } catch (parseError) {
+          res.status(500).json({ error: 'Invalid JSON in OpenAPI file' });
+        }
+      });
     });
-
+    
     // Upload new spec file
     app.post('/api/upload', upload.single('file'), (req, res) => {
       if (!req.file) {
         return res.status(400).json({ error: 'No file uploaded' });
       }
 
+      // Read the uploaded file
       fs.readFile(req.file.path, 'utf8', (err, data) => {
+        // Always delete the temp file first
+        fs.unlink(req.file.path, (unlinkErr) => {
+          if (unlinkErr) console.error('Error deleting temp file:', unlinkErr);
+        });
+
         if (err) {
-          return res.status(500).json({ error: 'Error reading file' });
+          return res.status(500).json({ error: 'Error reading uploaded file' });
         }
 
         try {
-          openAPISpec = JSON.parse(data);
-          // Save to persistent storage
-          fs.writeFileSync('openapi.json', JSON.stringify(openAPISpec, null, 2));
-          res.json({ message: 'File uploaded and parsed successfully' });
+          // Validate JSON
+          const openAPISpec = JSON.parse(data);
+
+          // Delete old file if exists
+          if (fs.existsSync(OPENAPI_FILE)) {
+            fs.unlinkSync(OPENAPI_FILE);
+          }
+
+          // Write new file
+          fs.writeFileSync(
+            OPENAPI_FILE,
+            JSON.stringify(openAPISpec, null, 2),
+            'utf8'
+          );
+
+          res.json({ message: 'File uploaded and saved as openapi.json' });
         } catch (parseError) {
           res.status(400).json({ error: 'Invalid JSON file' });
         }
       });
     });
+
 
     // Save modifications
     app.post('/api/save', (req, res) => {

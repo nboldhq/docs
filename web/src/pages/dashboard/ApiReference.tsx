@@ -70,7 +70,9 @@ const ApiReference: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const scrollContainerRef = useRef(null);
   const [newGroupAdded, setNewGroupAdded] = useState(false);
-  
+  const [uploadStatus, setUploadStatus] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
   const fetchRemoteSpec = async () => {
     try {
       const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/spec`);
@@ -90,7 +92,6 @@ const ApiReference: React.FC = () => {
       setFilename('Remote OpenAPI Spec');
     } catch (error) {
       console.error('Error fetching remote spec:', error);
-      alert(`Error fetching remote spec: ${error.message}`);
     }
   };
 
@@ -353,7 +354,7 @@ const ApiReference: React.FC = () => {
                   />
                   {/* Tag List */}
                   <ScrollShadow hideScrollBar className='flex flex-col gap-1 max-h-48'>
-                    {filteredTags.length > 0 ? (
+                    {filteredTags?.length > 0 ? (
                       filteredTags.map((tagName) => (
                         <div
                           key={tagName}
@@ -404,12 +405,50 @@ const ApiReference: React.FC = () => {
     });
   };
  
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+  
+    const formData = new FormData();
+    formData.append('file', file);
+  
+    setIsLoading(true); // Start loading
+  
+    try {
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      const result = await response.json();
+  
+      if (response.ok) {
+        setUploadStatus('Upload successful: ' + result.message);
+        
+        // Fetch the latest spec from the server
+        await fetchRemoteSpec();
+      } else {
+        setUploadStatus('Error: ' + result.error);
+      }
+    } catch (error) {
+      setUploadStatus('Error uploading file: ' + error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+
   return (
     <div className="p-8 w-full mx-auto space-y-5"> 
-      <h2 className="text-2xl font-bold">OpenAPI Editor</h2>      
-      {/*<Input type="file" accept=".json" onChange={handleFileUpload} />*/}
-
-      {jsonData && (
+       <div className="flex justify-between items-center">
+          <h2 className="text-2xl font-bold">OpenAPI Editor</h2>      
+          <Input label="Upload a File" size='sm' type="file" accept=".json" onChange={handleFileUpload} className="w-40" />
+        </div>
+      {isLoading ? (
+      <div className="text-center text-lg text-gray-500 py-10">
+        Uploading and loading File... ⏳
+      </div>
+      )  :jsonData && (
         <>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5"> 
               {/* LEFT COLUMN */}
@@ -420,14 +459,14 @@ const ApiReference: React.FC = () => {
                     <Input
                         label="Title"
                         type="text"
-                        value={jsonData.info.title}
+                        value={jsonData.info?.title}
                         onChange={(e) => handleChange(['info', 'title'], e.target.value)}
                     />
                     <Textarea
                         label="Description"
                         className="w-full"
                         rows={4}
-                        value={jsonData.info.description}
+                        value={jsonData.info?.description}
                         onChange={(e) => handleChange(['info', 'description'], e.target.value)}
                     />
                     </Card>
@@ -499,7 +538,7 @@ const ApiReference: React.FC = () => {
                                           }`}
                                           onClick={() => setSelectedTabIndex(index)}
                                           >
-                                          <span className="mr-2">{tag.name}</span>
+                                          <span className="mr-2">{tag?.name}</span>
                                           <button
                                               className={`opacity-70 hover:opacity-100 transition-opacity ${
                                               selectedTabIndex === index ? 'text-white' : 'text-gray-500'
@@ -508,7 +547,7 @@ const ApiReference: React.FC = () => {
                                               e.stopPropagation();
                                               handleDeleteTag(index);
                                               }}
-                                              aria-label={`Delete ${tag.name}`}
+                                              aria-label={`Delete ${tag?.name}`}
                                           >
                                               ×
                                           </button>
@@ -601,60 +640,61 @@ const ApiReference: React.FC = () => {
                         </Button>
                     </div>
                     <Divider className="my-5" />
-                      <ScrollShadow hideScrollBar className="w-auto h-[1150px] space-y-5">
-                      {Object.entries(jsonData.paths)
-                        .filter(([pathKey]) => 
-                          pathKey.toLowerCase().includes(searchQuery.toLowerCase())
-                        )
-                        .map(([pathKey, methods]) => {
-                          const firstMethod = Object.values(methods)[0];
-                            const primaryTag = firstMethod?.tags?.[0] || 'Untagged';
-                            const summary = firstMethod?.summary;
-                            const tagDetails = jsonData.tags?.find((t: any) => t.name === primaryTag);
-                          return (
-                            <Card key={pathKey} className="p-5 space-y-4"> 
-                              <div className="flex justify-between items-start mb-2">
-                                <div className="flex items-center gap-2">
-                                  <strong className="text-lg font-semibold">
-                                  {tagDetails?.name || primaryTag}
-                                  </strong>
-                                  <span className="text-sm text-default-500 font-mono" title={pathKey}>
-                                    {summary}
-                                  </span>
-                                </div>
-                                <div className="flex gap-2">
-                                  <TrashIcon
-                                    className="w-5 h-5 text-gray-500 hover:text-red-600 cursor-pointer"
-                                    onClick={() => deleteEntireEndpoint(pathKey)}
-                                  />
-                                </div>
-                              </div>
+                    <ScrollShadow hideScrollBar className="w-auto h-[1150px] space-y-5">
+  {jsonData?.paths &&
+    Object.entries(jsonData.paths)
+      .filter(([pathKey]) =>
+        pathKey.toLowerCase().includes(searchQuery?.toLowerCase())
+      )
+      .map(([pathKey, methods]) => {
+        const firstMethod = Object.values(methods)[0];
+        const primaryTag = firstMethod?.tags?.[0] || 'Untagged';
+        const summary = firstMethod?.summary;
+        const tagDetails = jsonData?.tags?.find((t: any) => t.name === primaryTag);
 
-                              <div className="space-y-4"> 
-                              {Object.entries(methods)
-                              .filter(([methodName]) => 
-                                !methodName.startsWith('x-') && 
-                                ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'].includes(methodName.toUpperCase())
-                              )
-                              .map(([method, details]) => (
-                                   <EndpointMethod
-                                  key={method}
-                                  pathKey={pathKey}
-                                  method={method}
-                                  details={details}
-                                  handleChange={handleChange}
-                                  onDelete={() => deleteEndpointMethod(pathKey, method)}
-                                  isOpen={openMethods.has(`${pathKey}-${method}`)}
-                                  toggleOpen={() => toggleMethod(pathKey, method)} 
-                                  renamePathKey={renamePathKey}
-                                />
-                                ))}
-                              </div>
-                            </Card>
-                             );
-                          })}
+        return (
+          <Card key={pathKey} className="p-5 space-y-4">
+            <div className="flex justify-between items-start mb-2">
+              <div className="flex items-center gap-2">
+                <strong className="text-lg font-semibold">
+                  {tagDetails?.name || primaryTag}
+                </strong>
+                <span className="text-sm text-default-500 font-mono" title={pathKey}>
+                  {summary}
+                </span>
+              </div>
+              <div className="flex gap-2">
+                <TrashIcon
+                  className="w-5 h-5 text-gray-500 hover:text-red-600 cursor-pointer"
+                  onClick={() => deleteEntireEndpoint(pathKey)}
+                />
+              </div>
+            </div>
 
-                      </ScrollShadow>
+            <div className="space-y-4">
+              {Object.entries(methods)
+                .filter(([methodName]) =>
+                  !methodName.startsWith('x-') &&
+                  ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'].includes(methodName.toUpperCase())
+                )
+                .map(([method, details]) => (
+                  <EndpointMethod
+                    key={method}
+                    pathKey={pathKey}
+                    method={method}
+                    details={details}
+                    handleChange={handleChange}
+                    onDelete={() => deleteEndpointMethod(pathKey, method)}
+                    isOpen={openMethods.has(`${pathKey}-${method}`)}
+                    toggleOpen={() => toggleMethod(pathKey, method)}
+                    renamePathKey={renamePathKey}
+                  />
+                ))}
+            </div>
+          </Card>
+        );
+      })}
+                    </ScrollShadow>
                  </div>
               </div>
             </div>
