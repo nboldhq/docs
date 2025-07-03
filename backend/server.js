@@ -203,79 +203,26 @@
           return res.status(400).json({ error: 'Name is required' });
         }
     
-        const docsRoot = path.join(__dirname, 'docs');
-        let filePath;
-    
         if (cat.id) {
           // Update existing category
           const idx = data.findIndex(c => c.id === cat.id);
           if (idx < 0) return res.status(404).json({ error: 'Category not found' });
     
-          const old = data[idx];
-          const oldDir = getCategoryPath(old, data, docsRoot);
-          data[idx] = { ...old, ...cat };
-          const newDir = getCategoryPath(data[idx], data, docsRoot);
-    
-          if (!fs.existsSync(newDir)) fs.mkdirSync(newDir, { recursive: true });
-    
-          const oldFiles = fs.existsSync(oldDir) ? fs.readdirSync(oldDir) : [];
-          const oldFileName = oldFiles.find(f => f.includes(sanitizeFilename(old.name))) || '';
-    
-          if (oldFileName && oldDir !== newDir) {
-            // Rename existing file if directory changed
-            const oldFilePath = path.join(oldDir, oldFileName);
-            const newFileName = `01_${sanitizeFilename(cat.name)}.md`;
-            const newFilePath = path.join(newDir, newFileName);
-            fs.renameSync(oldFilePath, newFilePath);
-            filePath = newFilePath;
-          } else if (oldFileName) {
-            // Reuse existing file
-            filePath = path.join(oldDir, oldFileName);
-          } else {
-            // No existing file, create a new one
-            const newFileName = `01_${sanitizeFilename(cat.name)}.md`;
-            filePath = path.join(newDir, newFileName);
-          }
+          data[idx] = { ...data[idx], ...cat };
         } else {
           // Create new category
           cat.id = Date.now();
           data.push(cat);
-    
-          const parent = data.find(c => c.id === cat.parentId) || {};
-          const subCount = data.filter(c => c.parentId === cat.parentId).length;
-          const dir = path.join(
-            getCategoryPath(parent, data, docsRoot),
-            `${String(subCount).padStart(2, '0')}-${sanitizeFilename(cat.name)}`
-          );
-    
-          if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-          filePath = path.join(dir, `01_${sanitizeFilename(cat.name)}.md`);
         }
     
         writeCategories(data);
-    
-        const frontMatter = [
-          `---`,
-          `title: ${cat.name}`,
-          `author: ${cat.author || ''}`,
-          `tags: [${(cat.tags || []).join(',')}]`,
-          `status: ${cat.status || 'draft'}`,
-          `---`,
-          ``,
-          `${cat.description || ''}`
-        ].join('\n');
-    
-        if (!filePath) {
-          throw new Error('filePath is undefined');
-        }
-        fs.writeFileSync(filePath, frontMatter, 'utf8');
-    
         res.json({ success: true, category: cat });
       } catch (e) {
         console.error('Error in POST /api/categories:', e.message, e.stack);
         res.status(500).json({ error: 'Failed to save category', details: e.message });
       }
     });
+    
 
     app.post('/api/categories/reorder', (req, res) => {
       try {

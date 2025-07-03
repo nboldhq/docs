@@ -60,15 +60,14 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
 
     const isShortcut = (text: string) =>
       /^[A-Za-z]+(\s*\+\s*[A-Za-z]+)+$/.test(text);
+      
     const generateId = (children: ReactNode) => {
       const text = Array.isArray(children)
       ? children.map((child: any) => child?.props?.children || child).join('')
       : children;
-      return String(text)
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w\-]+/g, '');
+      return   String(children).toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
       };
+
     return (
       <div className="w-full max-w-[20rem] sm:max-w-[28rem] md:max-w-6xl px-4 sm:px-6 lg:px-8 mx-auto"> 
               <ReactMarkdown
@@ -81,7 +80,7 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
                 rehypePlugins={[rehypeHighlight, rehypeKatex, rehypeRaw]}
                 components={{
                   tip: ({ children }) => (
-                    <div className="flex flex-col my-6 bg-green-50 border-l-4 border-green-500 rounded-lg p-4 dark:bg-gray-800 dark:border-green-400">
+                    <div className="my-6 bg-green-50 border-l-4 border-green-500 rounded-lg p-4 dark:bg-gray-800 dark:border-green-400">
                       <div className="flex items-center mb-2 text-green-700 dark:text-green-300">
                         <span className="font-semibold text-lg">💡 Tip</span>
                       </div>
@@ -90,9 +89,8 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
                       </div>
                     </div>
                   ),
-
                   warning: ({ children }) => (
-                    <div className="flex flex-col my-6 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg p-4 dark:bg-gray-800 dark:border-yellow-400">
+                    <div className="my-6 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg p-4 dark:bg-gray-800 dark:border-yellow-400">
                       <div className="flex items-center mb-2 text-yellow-700 dark:text-yellow-300">
                         <span className="font-semibold text-lg">⚠️ Warning</span>
                       </div>
@@ -126,15 +124,14 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
                     );
                   },
                   table: ({ children }) => (
-                    <div className="flex overflow-x-auto my-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
-                      <table className="min-w-full text-sm bg-white dark:bg-[#18181B]">
+                    <div className="overflow-x-auto my-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                      <table className="min-w-full text-sm bg-white dark:bg-gray-900">
                         {children}
                       </table>
                     </div>
                   ),
-
-                  thead: ({ children, ...props }) => (
-                    <thead className="bg-gray-50 dark:bg-[#18181B]">{children}</thead>
+                  thead: ({ children }) => (
+                    <thead className="bg-gray-50 dark:bg-gray-800">{children}</thead>
                   ),
                   tbody: ({ children, ...props }) => (
                     <tbody className="divide-y divide-gray-200 dark:divide-bg-[#18181B]">
@@ -162,7 +159,6 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
                       {children}
                     </td>
                   ),
-
                   p: ({ node, children, ...props }) => (
                     <p
                       className="text-md text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
@@ -183,11 +179,13 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
                       {...props}
                     />
                   ),
-                  li: ({ ...props }) => (
+                  li: ({ children, ...props }) => (
                     <li
                       className="mb-3 pl-2 text-md marker:text-gray-400 dark:marker:text-gray-600"
                       {...props}
-                    />
+                    >
+                      {children}
+                    </li>
                   ),
                   a: ({ ...props }) => (
                     <a
@@ -214,6 +212,14 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
                       {...props}
                     />
                   ),
+                  inlineCode: ({ children, ...props }) => (
+                    <code
+                      className="bg-gray-100 dark:bg-gray-800 text-red-600 dark:text-red-400 px-1 py-0.5 rounded"
+                      {...props}
+                    >
+                      {children}
+                    </code>
+                  ),                  
                   code({ node, className, children, ...props }) {
                     const language = className
                       ? className.replace("language-", "")
