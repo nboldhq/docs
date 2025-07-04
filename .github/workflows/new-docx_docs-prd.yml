@@ -32,6 +32,7 @@ jobs:
           
       - name: npm install, build, and test server
         run: |
+          rm -rf ./web
           cd backend/
           npm install
 
