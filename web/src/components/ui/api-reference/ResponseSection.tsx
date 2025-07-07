@@ -49,6 +49,7 @@ const ResponseSection = ({
                       <SchemaField 
                         schema={content.schema} 
                         path={[...path, statusCode, 'content', contentType, 'schema']}
+                        onSchemaChange={handleChange}
                       />
                     )}
                   </div>

@@ -442,7 +442,7 @@ const ApiReference: React.FC = () => {
     <div className="p-8 w-full mx-auto space-y-5"> 
        <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold">OpenAPI Editor</h2>      
-          <Input label="Upload a File" size='sm' type="file" accept=".json" onChange={handleFileUpload} className="w-40 rounded-full" />
+          <Input  size='sm' type="file" accept=".json" onChange={handleFileUpload} className="w-40 rounded-full" />
         </div>
       {isLoading ? (
       <div className="text-center text-lg text-gray-500 py-10">
