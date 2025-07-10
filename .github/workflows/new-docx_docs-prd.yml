@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - Docs-prd
+name: Build and deploy container app to Azure Web App - Docs-prd
 
 on:
   push:
@@ -11,68 +11,45 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read #This is required for actions/checkout
+    runs-on: 'ubuntu-latest'
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v2
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20.x'
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
 
-      - name: npm install, build, and test web
-        run: |
-          cd web/
-          npm install
-          npm run build --if-present
-          npm run test --if-present
-          
-      - name: npm install, build, and test server
-        run: |
-          rm -rf ./web
-          cd backend/
-          npm install
+    - name: Log in to registry
+      uses: docker/login-action@v2
+      with:
+        registry: https://nbold.azurecr.io/
+        username: ${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_caa8dabfc2424fb993b8904f6e7c248b }}
 
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
-
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
-        with:
-          name: node-app
-          path: release.zip
+    - name: Build and push container image to registry
+      uses: docker/build-push-action@v3
+      with:
+        push: true
+        tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}/nbold/docs:prd
+        file: ./Dockerfile
+        build-args: |
+          VITE_API_ENDPOINT=${{ secrets.VITE_API_ENDPOINT }}
+          VITE_AZURE_CLIENT_ID=${{ secrets.VITE_AZURE_CLIENT_ID }}
+          VITE_AZURE_AUTHORITY=${{ secrets.VITE_AZURE_AUTHORITY }}
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: node-app
-
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
-      
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CCA4970E9EFC4A4B87EFF1AC56DB0C43 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9658F6931F3D439BB4D8933C810EA6F0 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4ABD566DEEDA4ECDA2FC659E851CA777 }}
-
-      - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
-        with:
-          app-name: 'Docs-prd'
-          slot-name: 'Production'
-          package: .
-          
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'Docs-prd'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ba319087acce49c8b8ed5dbc7ad4c14e }}
+        images: 'nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}/nbold/docs:prd'
