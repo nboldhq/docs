@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   base: '/',
   server: {
     allowedHosts: [
-      env.VITE_ALLOWED_HOST || 'localhost',
+      env.VITE_ALLOWED_HOST || 'localhost:3000',
     ],
     host: true,
     hmr: {

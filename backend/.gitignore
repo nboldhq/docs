@@ -5,3 +5,7 @@
 # Ignore build output
 /public/assets/
 /public/index.html
+
+# Ignore folder data
+# /data/categories.json
+# /data/openapi.json

@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MsalProvider } from '@azure/msal-react';
 import { msalInstance } from './contexts/authConfig';
@@ -9,6 +8,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import LoginPage from './pages/login/LoginPage';
 import PrivateRoute from './components/PrivateRoute';
 import { ToastProvider } from '@heroui/react';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -16,6 +16,8 @@ function App() {
       <ToastProvider placement="top-center"/>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
+          <Route path="/page-not-found" element={<NotFoundPage />} />
+
           <Route
             path="/login"
             element={
