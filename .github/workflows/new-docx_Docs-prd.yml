@@ -30,8 +30,12 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}/nbold/docs:${{ github.sha }}
+        tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}/nbold/docs:prd
         file: ./Dockerfile
+        build-args: |
+          VITE_API_ENDPOINT=${{ secrets.VITE_API_ENDPOINT }}
+          VITE_AZURE_CLIENT_ID=${{ secrets.VITE_AZURE_CLIENT_ID }}
+          VITE_AZURE_AUTHORITY=${{ secrets.VITE_AZURE_AUTHORITY }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -48,4 +52,4 @@ jobs:
         app-name: 'Docs-prd'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_ba319087acce49c8b8ed5dbc7ad4c14e }}
-        images: 'nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}/nbold/docs:${{ github.sha }}'
+        images: 'nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}/nbold/docs:prd'
