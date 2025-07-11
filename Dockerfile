@@ -45,4 +45,4 @@ WORKDIR /app/backend
 EXPOSE 3000
 
 # Run the app (assuming production mode)
-CMD ["npm", "run","start"]
+CMD ["npm", "run", "start"]
