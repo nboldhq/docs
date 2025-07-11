@@ -9,6 +9,8 @@ const OPENAPI_FILE = path.join(DATA_DIR, 'openapi.json');
 const categoriesRouter = require('./routes/categories');
 const specRouter = require('./routes/spec');
 const healthRouter = require('./routes/health');
+const uploadRouter = require('./routes/upload');
+
 
 app.use(cors({ origin: '*', methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'] }));
 
@@ -23,6 +25,7 @@ if (!fs.existsSync(DATA_DIR)) {
 app.use('/api/health',healthRouter ); 
 app.use('/api/categories', categoriesRouter);
 app.use('/api/spec', specRouter);
+app.use('/api/upload', uploadRouter);
 
 // API ROUTES
 
@@ -56,6 +59,7 @@ app.post('/api/save', (req, res) => {
         });
     }
 });
+
 
 // SPA & Static Assets
 const staticPath = path.resolve(__dirname, 'public'); 

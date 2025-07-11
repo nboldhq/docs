@@ -415,11 +415,12 @@ const ApiReference: React.FC = () => {
     setIsLoading(true); // Start loading
   
     try {
+
       const response = await fetch('/api/upload', {
         method: 'POST',
         body: formData,
       });
-  
+      
       const result = await response.json();
   
       if (response.ok) {

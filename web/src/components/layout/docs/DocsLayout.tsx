@@ -27,11 +27,11 @@ const DocsLayout: React.FC<{
   toggleDarkMode: () => void;
 }> = ({ children, isDarkMode, toggleDarkMode }) => {
   const [categories, setCategories] = useState<Category[]>([]);
-  const [apiSpec, setApiSpec] = useState<any>(null); 
-  const [isSpecLoading, setIsSpecLoading] = useState(true); 
+  const [apiSpec, setApiSpec] = useState<any>(null);
+  const [isSpecLoading, setIsSpecLoading] = useState(true);
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const isApiReference = location.pathname.includes("/api-reference");
+  const isApiReference = location.pathname.toLowerCase().includes("/api-reference");
   const [expandedItemId, setExpandedItemId] = React.useState<number | null>(null);
 
   const toggleExpanded = (itemId: number) => {
@@ -89,20 +89,29 @@ const DocsLayout: React.FC<{
     if (isApiReference) {
       const fetchApiSpec = async () => {
         try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 10000);
           const response = await fetch(
-            `https://${import.meta.env.VITE_ALLOWED_HOST}/api/spec`
+            `https://${import.meta.env.VITE_ALLOWED_HOST}/api/spec`,
+            { signal: controller.signal }
           );
+          clearTimeout(timeoutId);
           if (!response.ok) throw new Error("Network response was not ok");
           const data = await response.json();
+          console.log("API Spec fetched:", data);
           setApiSpec(data);
         } catch (error) {
           console.error("Error fetching API spec:", error);
           setApiSpec(null);
         } finally {
+          console.log("Setting isSpecLoading to false");
           setIsSpecLoading(false);
         }
       };
       fetchApiSpec();
+    } else {
+      setIsSpecLoading(false);
+      setApiSpec(null);
     }
   }, [isApiReference]);
 
@@ -110,7 +119,19 @@ const DocsLayout: React.FC<{
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const isSpecEmpty = !isSpecLoading && (!apiSpec || Object.keys(apiSpec).length === 0);
+  const isSpecEmpty = !isSpecLoading && (
+    !apiSpec || 
+    (
+      (!apiSpec.title || apiSpec.title === "") && 
+      (!apiSpec.description || apiSpec.description === "") && 
+      (!apiSpec.tags || (Array.isArray(apiSpec.tags) && apiSpec.tags.length === 0)) && 
+      (!apiSpec['x-tagGroups'] || (Array.isArray(apiSpec['x-tagGroups']) && apiSpec['x-tagGroups'].length === 0)) && 
+      (!apiSpec.paths || (apiSpec.paths && Object.keys(apiSpec.paths).length === 0))
+    )
+  );
+
+  console.log("isSpecEmpty:", isSpecEmpty, "isSpecLoading:", isSpecLoading, "apiSpec:", apiSpec);
+
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-black">
       <div className="flex flex-1">
@@ -140,13 +161,11 @@ const DocsLayout: React.FC<{
                 isSidebarOpen ? "ml-0 lg:ml-80" : "ml-0 md:ml-20"
               }`}
             >
-              {
-                isSpecLoading ? (
-                  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <Spinner style={{ color: '#921d7f' }} size="lg" />
-                  </div>
-                ):
-               isSpecEmpty ? (
+              {isSpecLoading ? (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                  <Spinner style={{ color: '#921d7f' }} size="lg" />
+                </div>
+              ) : isSpecEmpty ? (
                 <div className="flex flex-col items-center justify-center h-full text-center px-4 py-16">
                   <div className="text-6xl mb-6">🛠️</div>
                   <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
@@ -158,7 +177,7 @@ const DocsLayout: React.FC<{
                     We’re currently working on this page to provide you with a better experience.
                     Please check back later.
                   </p>
-              </div>
+                </div>
               ) : (
                 <ApiReferenceReact
                   configuration={{
@@ -166,44 +185,42 @@ const DocsLayout: React.FC<{
                       content: apiSpec,
                     },
                     darkMode: isDarkMode,
-                    hideDarkModeToggle: false,
+                    hideDarkModeToggle: true,
                     hideClientButton: true,
                   }}
                 />
               )}
             </div>
           ) : (
-            <>
-              <div className="flex justify-between">
-                {isSidebarOpen ? (
-                  <>
-                    <div
-                      className="hidden xl:block lg:w-64 flex-shrink-0"
-                      aria-hidden="true"
-                    ></div>
-                    <div className="mb-8 mt-20 min-h-screen lg:-[87%] xl:w-[47%] relative">
-                      {children}
-                    </div>
-                    <div
-                      className="hidden xl:block w-64 flex-shrink-0"
-                      aria-hidden="true"
-                    ></div>
-                    <TableOfContents />
-                  </>
-                ) : (
-                  <>
-                    <div className="mb-8 sm:ml-2 ml-6 md:ml-15 lg:ml-20 mt-20 min-h-screen lg:px-7 w-[90%] md:w-[78%] relative">
-                      {children}
-                    </div>
-                    <div
-                      className="hidden xl:block w-64 flex-shrink-0"
-                      aria-hidden="true"
-                    ></div>
-                    <TableOfContents />
-                  </>
-                )}
-              </div>
-            </>
+            <div className="flex justify-between">
+              {isSidebarOpen ? (
+                <>
+                  <div
+                    className="hidden xl:block lg:w-64 flex-shrink-0"
+                    aria-hidden="true"
+                  ></div>
+                  <div className="mb-8 mt-20 min-h-screen lg:-[87%] xl:w-[47%] relative">
+                    {children}
+                  </div>
+                  <div
+                    className="hidden xl:block w-64 flex-shrink-0"
+                    aria-hidden="true"
+                  ></div>
+                  <TableOfContents />
+                </>
+              ) : (
+                <>
+                  <div className="mb-8 sm:ml-2 ml-6 md:ml-15 lg:ml-20 mt-20 min-h-screen lg:px-7 w-[90%] md:w-[78%] relative">
+                    {children}
+                  </div>
+                  <div
+                    className="hidden xl:block w-64 flex-shrink-0"
+                    aria-hidden="true"
+                  ></div>
+                  <TableOfContents />
+                </>
+              )}
+            </div>
           )}
           <DocsFooter />
         </main>

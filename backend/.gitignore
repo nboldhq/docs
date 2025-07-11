@@ -6,5 +6,5 @@
 /public/index.html
 
 # Ignore folder data
-# /data/categories.json
-# /data/openapi.json
+/data/categories.json
+/data/openapi.json
