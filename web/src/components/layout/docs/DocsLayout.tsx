@@ -28,11 +28,12 @@ const DocsLayout: React.FC<{
 }> = ({ children, isDarkMode, toggleDarkMode }) => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [apiSpec, setApiSpec] = useState<any>(null);
-  const [isSpecLoading, setIsSpecLoading] = useState(true);
+  const [isSpecLoading, setIsSpecLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const isApiReference = location.pathname.toLowerCase().includes("/api-reference");
-  const [expandedItemId, setExpandedItemId] = React.useState<number | null>(null);
+  const isApiReference = location.pathname.includes("/api-reference");
+  const [expandedItemId, setExpandedItemId] = useState<number | null>(null);
 
   const toggleExpanded = (itemId: number) => {
     setExpandedItemId((prevId) => (prevId === itemId ? null : itemId));
@@ -71,7 +72,7 @@ const DocsLayout: React.FC<{
         const response = await fetch(
           `https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`
         );
-        if (!response.ok) throw new Error("Network response was not ok");
+        if (!response.ok) throw new Error("Failed to fetch categories");
         const data: Category[] = await response.json();
         const publicCategories = data.filter((cat) => cat.visibility === "public");
         const tree = buildCategoryTree(publicCategories);
@@ -87,6 +88,8 @@ const DocsLayout: React.FC<{
 
   useEffect(() => {
     if (isApiReference) {
+      setIsSpecLoading(true);
+      setError(null);
       const fetchApiSpec = async () => {
         try {
           const controller = new AbortController();
@@ -96,15 +99,14 @@ const DocsLayout: React.FC<{
             { signal: controller.signal }
           );
           clearTimeout(timeoutId);
-          if (!response.ok) throw new Error("Network response was not ok");
+          if (!response.ok) throw new Error("Failed to fetch API spec");
           const data = await response.json();
-          console.log("API Spec fetched:", data);
           setApiSpec(data);
-        } catch (error) {
+        } catch (error: any) {
           console.error("Error fetching API spec:", error);
+          setError(error.message || "Failed to load API specification");
           setApiSpec(null);
         } finally {
-          console.log("Setting isSpecLoading to false");
           setIsSpecLoading(false);
         }
       };
@@ -112,6 +114,7 @@ const DocsLayout: React.FC<{
     } else {
       setIsSpecLoading(false);
       setApiSpec(null);
+      setError(null);
     }
   }, [isApiReference]);
 
@@ -119,18 +122,13 @@ const DocsLayout: React.FC<{
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const isSpecEmpty = !isSpecLoading && (
-    !apiSpec || 
-    (
-      (!apiSpec.title || apiSpec.title === "") && 
-      (!apiSpec.description || apiSpec.description === "") && 
-      (!apiSpec.tags || (Array.isArray(apiSpec.tags) && apiSpec.tags.length === 0)) && 
-      (!apiSpec['x-tagGroups'] || (Array.isArray(apiSpec['x-tagGroups']) && apiSpec['x-tagGroups'].length === 0)) && 
-      (!apiSpec.paths || (apiSpec.paths && Object.keys(apiSpec.paths).length === 0))
-    )
+  const isSpecEmpty = apiSpec && (
+    (!apiSpec.title || apiSpec.title === "") &&
+    (!apiSpec.description || apiSpec.description === "") &&
+    (!apiSpec.tags || (Array.isArray(apiSpec.tags) && apiSpec.tags.length === 0)) &&
+    (!apiSpec['x-tagGroups'] || (Array.isArray(apiSpec['x-tagGroups']) && apiSpec['x-tagGroups'].length === 0)) &&
+    (!apiSpec.paths || (apiSpec.paths && Object.keys(apiSpec.paths).length === 0))
   );
-
-  console.log("isSpecEmpty:", isSpecEmpty, "isSpecLoading:", isSpecLoading, "apiSpec:", apiSpec);
 
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-black">
@@ -165,25 +163,34 @@ const DocsLayout: React.FC<{
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                   <Spinner style={{ color: '#921d7f' }} size="lg" />
                 </div>
+              ) : error ? (
+                <div className="flex flex-col items-center justify-center h-full text-center px-4 py-16">
+                  <div className="text-6xl mb-6">⚠️</div>
+                  <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
+                    <span className="p-2 rounded-md text-white bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000]">
+                      Error Loading API Specification
+                    </span>
+                  </h2>
+                  <p className="text-gray-600 dark:text-gray-400 max-w-xl text-base md:text-lg">
+                    {error}. Please try again later or contact support.
+                  </p>
+                </div>
               ) : isSpecEmpty ? (
                 <div className="flex flex-col items-center justify-center h-full text-center px-4 py-16">
                   <div className="text-6xl mb-6">🛠️</div>
                   <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
                     <span className="p-2 rounded-md text-white bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000]">
-                      Page Under Maintenance
+                      API Specification Unavailable
                     </span>
                   </h2>
                   <p className="text-gray-600 dark:text-gray-400 max-w-xl text-base md:text-lg">
-                    We’re currently working on this page to provide you with a better experience.
-                    Please check back later.
+                    The API specification is currently empty or not properly configured. Please check back later.
                   </p>
                 </div>
               ) : (
                 <ApiReferenceReact
                   configuration={{
-                    spec: {
-                      content: apiSpec,
-                    },
+                    spec: { content: apiSpec },
                     darkMode: isDarkMode,
                     hideDarkModeToggle: true,
                     hideClientButton: true,
