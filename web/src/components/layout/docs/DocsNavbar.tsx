@@ -152,7 +152,7 @@ const DocsNavbar: React.FC<{
 
   return (
     <div className="flex items-center justify-between fixed top-0 left-0 right-0 z-20 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 p-4">
-      <Link  className="flex items-center gap-2 hover:opacity-80 transition-opacity" to={"/"}>
+      <Link  className="flex items-center hover:opacity-80 transition-opacity" to={"/"}>
         <NBoldIcon />
         <span className="hidden xl:block text-4xl font-bold text-gray-900 dark:text-white">
           Bold

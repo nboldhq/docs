@@ -4,6 +4,7 @@
 # Ignore build output
 /public/assets/
 /public/index.html
+/public/img/nbold.svg
 
 # Ignore folder data
 /data/categories.json
