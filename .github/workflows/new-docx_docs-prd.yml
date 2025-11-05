@@ -1,4 +1,3 @@
-
 name: Build and deploy container app to Azure Web App - docs
 
 on:
