@@ -1,4 +1,7 @@
-name: Build and deploy container app to Azure Web App - docs
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy container app to Azure Web App - Docs-prd
 
 on:
   push:
@@ -8,43 +11,53 @@ on:
 
 jobs:
   build:
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read #This is required for actions/checkout
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+      - uses: actions/checkout@v4
 
-    - name: Log in to registry
-      uses: docker/login-action@v2
-      with:
-        registry: https://nbold.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_cdec9194df7a4b62860ed31dbb149589 }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-    - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
-      with:
-        push: true
-        tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}/docs:prd
-        file: ./Dockerfile
-        build-args: |
-          VITE_API_ENDPOINT=${{ secrets.VITE_API_ENDPOINT }}
-          VITE_AZURE_CLIENT_ID=${{ secrets.VITE_AZURE_CLIENT_ID }}
-          VITE_AZURE_AUTHORITY=${{ secrets.VITE_AZURE_AUTHORITY }}
+      - name: Log in to container registry
+        uses: docker/login-action@v2
+        with:
+          registry: nbold.azurecr.io/
+          username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}
+          password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_90F0ED1266AE4AC6965FC9D6F3258503 }}
+
+      - name: Build and push container image to registry
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: nbold.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}/nbold/nbold/docs:${{ github.sha }}
+          file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    permissions:
+      id-token: write #This is required for requesting the JWT
+      contents: read #This is required for actions/checkout
 
+    needs: build
+    
     steps:
-    - name: Deploy to Azure Web App
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'docs'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_419fc483e6e944b39b50ccf8ad1ab7c1 }}
-        images: 'nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_099a2e9e7ea64e95800da198c4ced4fc }}/docs:prd'
+      
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CEB2CB72B9BB48AE8682CAA0653BEEC6 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_55A22A4714AA465480D6961D96E5F902 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FDDA671BF7834A83BC92D2928B459390 }}
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'Docs-prd'
+          slot-name: 'Production'
+          images: 'nbold.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}/nbold/nbold/docs:${{ github.sha }}'
+          
