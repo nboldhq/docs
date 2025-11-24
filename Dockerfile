@@ -1,5 +1,5 @@
 # Stage 1: Build Frontend
-FROM node:lts-slim
+FROM node:20-slim
 
 ARG VITE_API_ENDPOINT
 ARG VITE_AZURE_CLIENT_ID
