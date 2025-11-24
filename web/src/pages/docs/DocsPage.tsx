@@ -43,7 +43,7 @@ const DocsPage: React.FC = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`);
+        const response = await fetch(`https://${process.env.VITE_ALLOWED_HOST}/api/categories`);
         if (!response.ok) throw new Error('Network error');
         const data = await response.json();
 

@@ -70,7 +70,7 @@ const DocsLayout: React.FC<{
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          `https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`
+          `https://${process.env.VITE_ALLOWED_HOST}/api/categories`
         );
         if (!response.ok) throw new Error("Failed to fetch categories");
         const data: Category[] = await response.json();
@@ -95,7 +95,7 @@ const DocsLayout: React.FC<{
           const controller = new AbortController();
           const timeoutId = setTimeout(() => controller.abort(), 10000);
           const response = await fetch(
-            `https://${import.meta.env.VITE_ALLOWED_HOST}/api/spec`,
+            `https://${process.env.VITE_ALLOWED_HOST}/api/spec`,
             { signal: controller.signal }
           );
           clearTimeout(timeoutId);
