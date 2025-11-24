@@ -19,7 +19,6 @@ COPY web/ .
 # Create a non-root user and group
 RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
 
-
 # Set working directory
 WORKDIR /app
 
