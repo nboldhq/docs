@@ -31,10 +31,13 @@ jobs:
       - name: Build and push container image to registry
         uses: docker/build-push-action@v3
         with:
-          context: .
           push: true
-          tags: nbold.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}/nbold/nbold/docs:${{ github.sha }}
+          tags: nbold.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}/docs:${{ github.sha }}
           file: ./Dockerfile
+          build-args: |
+            VITE_API_ENDPOINT=${{ secrets.VITE_API_ENDPOINT }}
+            VITE_AZURE_CLIENT_ID=${{ secrets.VITE_AZURE_CLIENT_ID }}
+            VITE_AZURE_AUTHORITY=${{ secrets.VITE_AZURE_AUTHORITY }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -59,5 +62,5 @@ jobs:
         with:
           app-name: 'Docs-prd'
           slot-name: 'Production'
-          images: 'nbold.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}/nbold/nbold/docs:${{ github.sha }}'
+          images: 'nbold.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}/docs:${{ github.sha }}'
           
