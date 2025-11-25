@@ -47,7 +47,7 @@ const FilesPage = () => {
   const sensors = useSensors(useSensor(MouseSensor), useSensor(TouchSensor));
 
     useEffect(() => {
-      fetch(`https://${process.env.VITE_ALLOWED_HOST}/api/categories`)
+      fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`)
         .then((res) => res.json())
         .then((data: CategoryApiResponse[]) => {
           const idToCategory = new Map<number, CategoryApiResponse>();
