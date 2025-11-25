@@ -9,6 +9,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import directive from "remark-directive";
 import rehypeRaw from "rehype-raw";
+import MermaidDiagram from "./MermaidDiagram";
 
 type Category = {
   icon: string;
@@ -57,9 +58,6 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
 
   const MarkdownPreview: React.FC<MarkdownPreviewProps> = ({ markdown }) => {
     const processedMarkdown = markdown.replace();
-
-    const isShortcut = (text: string) =>
-      /^[A-Za-z]+(\s*\+\s*[A-Za-z]+)+$/.test(text);
       
     const generateId = (children: ReactNode) => {
       const text = Array.isArray(children)
@@ -133,12 +131,12 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
                   thead: ({ children }) => (
                     <thead className="bg-gray-50 dark:bg-gray-800">{children}</thead>
                   ),
-                  tbody: ({ children, ...props }) => (
+                  tbody: ({ children }) => (
                     <tbody className="divide-y divide-gray-200 dark:divide-bg-[#18181B]">
                       {children}
                     </tbody>
                   ),
-                  tr: ({ children, ...props }) => (
+                  tr: ({ children }) => (
                     <tr className="even:bg-gray-50 even:dark:bg-[#18181B]">
                       {children}
                     </tr>
@@ -220,16 +218,25 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
                       {children}
                     </code>
                   ),                  
-                  code({ node, className, children, ...props }) {
-                    const language = className
-                      ? className.replace("language-", "")
-                      : "text";
-                    return (
+                  code({ node, inline, className, children, ...props }) {
+                    const match = /language-mermaid/.test(className || '');
+                    
+                    if (match) {
+                      const mermaidCode = String(children).trim();
+                      return <MermaidDiagram code={mermaidCode} />;
+                    }
+                
+                    const language = className?.replace('language-', '') || 'text';
+                    return !inline ? (
                       <div className="flex my-4 overflow-x-auto">
                         <pre className="bg-gray-800 text-gray-200 p-3 sm:p-4 rounded-lg w-full whitespace-pre-wrap text-sm sm:text-base">
                           <code className={`language-${language}`}>{children}</code>
                         </pre>
                       </div>
+                    ) : (
+                      <code className="bg-gray-100 dark:bg-gray-800 text-red-600 dark:text-red-400 px-1 py-0.5 rounded" {...props}>
+                        {children}
+                      </code>
                     );
                   },
                 }}
