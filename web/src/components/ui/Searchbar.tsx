@@ -40,7 +40,7 @@ const SearchBar = () => {
     const fetchResults = async (searchQuery) => {
       try {
         setIsLoading(true);
-        const response = await fetch(`https://${process.env.VITE_ALLOWED_HOST}/api/categories`);
+        const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`);
         
         if (!response.ok) throw new Error('Network response was not ok');
         

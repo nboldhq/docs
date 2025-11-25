@@ -32,7 +32,7 @@ const CategoryTree: React.FC = () => {
   const fetchCategories = async (retries = 3, delay = 1000) => {
     for (let attempt = 1; attempt <= retries; attempt++) {
       try {
-        const response = await fetch(`https://${process.env.VITE_ALLOWED_HOST}/api/categories`, {
+        const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`, {
           headers: { 'Content-Type': 'application/json' },
         });
   
@@ -76,7 +76,7 @@ const CategoryTree: React.FC = () => {
 
     try {
       const response = await fetch(
-        `https://${process.env.VITE_ALLOWED_HOST}/api/categories/reorder`,
+        `https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories/reorder`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -108,7 +108,7 @@ const CategoryTree: React.FC = () => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://${process.env.VITE_ALLOWED_HOST}/api/categories/${id}`,
+        `https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories/${id}`,
         { method: 'DELETE' }
       );
   

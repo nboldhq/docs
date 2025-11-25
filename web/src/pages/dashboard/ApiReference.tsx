@@ -75,7 +75,7 @@ const ApiReference: React.FC = () => {
 
   const fetchRemoteSpec = async () => {
     try {
-      const response = await fetch(`https://${process.env.VITE_ALLOWED_HOST}/api/spec`);
+      const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/spec`);
       if (!response.ok) {
         throw new Error(`Failed to fetch: ${response.status}`);
       }
