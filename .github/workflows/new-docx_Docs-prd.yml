@@ -11,46 +11,55 @@ on:
 
 jobs:
   build:
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read #This is required for actions/checkout
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-    - name: Log in to registry
-      uses: docker/login-action@v2
-      with:
-        registry: https://nbold.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_caa8dabfc2424fb993b8904f6e7c248b }}
+      - name: Log in to container registry
+        uses: docker/login-action@v2
+        with:
+          registry: nbold.azurecr.io/
+          username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}
+          password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_90F0ED1266AE4AC6965FC9D6F3258503 }}
 
-    - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
-      with:
-        push: true
-        tags: nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}/nbold/docs:prd
-        file: ./Dockerfile
-        build-args: |
-          VITE_API_ENDPOINT=${{ secrets.VITE_API_ENDPOINT }}
-          VITE_AZURE_CLIENT_ID=${{ secrets.VITE_AZURE_CLIENT_ID }}
-          VITE_AZURE_AUTHORITY=${{ secrets.VITE_AZURE_AUTHORITY }}
+      - name: Build and push container image to registry
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: nbold.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}/docs:${{ github.sha }}
+          file: ./Dockerfile
+          build-args: |
+            VITE_API_ENDPOINT=${{ secrets.VITE_API_ENDPOINT }}
+            VITE_AZURE_CLIENT_ID=${{ secrets.VITE_AZURE_CLIENT_ID }}
+            VITE_AZURE_AUTHORITY=${{ secrets.VITE_AZURE_AUTHORITY }}
 
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write #This is required for requesting the JWT
+      contents: read #This is required for actions/checkout
+
     needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
+    
     steps:
-    - name: Deploy to Azure Web App
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'Docs-prd'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ba319087acce49c8b8ed5dbc7ad4c14e }}
-        images: 'nbold.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_bf1f74d5cf144cf4bd9ab2cae0ecdc85 }}/nbold/docs:prd'
+      
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CEB2CB72B9BB48AE8682CAA0653BEEC6 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_55A22A4714AA465480D6961D96E5F902 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FDDA671BF7834A83BC92D2928B459390 }}
 
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'Docs-prd'
+          slot-name: 'Production'
+          images: 'nbold.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_0D0F978E313649D9BE62F10D1B179FE5 }}/docs:${{ github.sha }}'
