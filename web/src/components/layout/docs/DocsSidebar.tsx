@@ -40,7 +40,7 @@ const DocsSidebar: React.FC<SidebarProps> = ({
   const renderSidebarItems = (items: Category[]) =>
     items.map((category) => {
       const tagSegment = category.tags?.join("-") || "untagged";
-      const fullPath = `/docs/${tagSegment}`;
+      const fullPath = `/${tagSegment}`;
 
       return (
         <DocsSidebarItem
@@ -52,9 +52,9 @@ const DocsSidebar: React.FC<SidebarProps> = ({
           isActive={Boolean(
             locationPath === fullPath ||
             category.subItems?.some((sub) =>
-              locationPath === `/docs/${sub.tags?.join("-") || "untagged"}/${sub.name.toLowerCase().replace(/\s+/g, "-")}` ||
+              locationPath === `/${sub.tags?.join("-") || "untagged"}/${sub.name.toLowerCase().replace(/\s+/g, "-")}` ||
               sub.subItems?.some((subSub) =>
-                locationPath === `/docs/${sub.tags?.join("-") || "untagged"}/${sub.name.toLowerCase().replace(/\s+/g, "-")}/${subSub.name.toLowerCase().replace(/\s+/g, "-")}`
+                locationPath === `/${sub.tags?.join("-") || "untagged"}/${sub.name.toLowerCase().replace(/\s+/g, "-")}/${subSub.name.toLowerCase().replace(/\s+/g, "-")}`
               )
             )
           )}
@@ -69,10 +69,10 @@ const DocsSidebar: React.FC<SidebarProps> = ({
             const subTags = sub.tags?.join("-") || "untagged";
             return {
               label: sub.name,
-              path: `/docs/${subTags}/${subTitle}`,
+              path: `/${subTags}/${subTitle}`,
               subItems: sub.subItems?.map((subSub) => ({
                 label: subSub.name,
-                path: `/docs/${subTags}/${subTitle}/${subSub.name
+                path: `/${subTags}/${subTitle}/${subSub.name
                   .toLowerCase()
                   .replace(/\s+/g, "-")}`,
               })),
@@ -101,7 +101,6 @@ const DocsSidebar: React.FC<SidebarProps> = ({
             isSidebarOpen ? "ml-64" : "ml-0"
           }`}
         >
-          {/* Updated toggle button with dynamic icons */}
           <button
             className="hidden md:flex fixed top-1 left-[17rem] z-50 items-center sm:mt-[18px] md:mt-[18px] lg:mt-[18px] xl:mt-3"
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}

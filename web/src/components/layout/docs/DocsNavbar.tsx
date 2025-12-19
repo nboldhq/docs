@@ -106,7 +106,7 @@ const DocsNavbar: React.FC<{
     return subItems.map((sub) => {
       const subTitle = slugify(sub.name);
       const subTags = sub.tags?.join("-") || parentTags.join("-") || "untagged";
-      const subPath = `/docs/${subTags}/${subTitle}`;
+      const subPath = `/${subTags}/${subTitle}`;
       const isExpanded = expandedItems.includes(sub.id);
       const hasChildren = sub.subItems.length > 0;
 
@@ -165,7 +165,7 @@ const DocsNavbar: React.FC<{
       <nav className="hidden md:flex items-center gap-6">
         {navbarTabs.map((tab) => {
           const tagSegment = tab.tags?.join("-") || slugify(tab.name);
-          const fullPath = `/docs/${tagSegment}`;
+          const fullPath = `/${tagSegment}`;
           return (
             <Link
               key={tab.id}
@@ -182,10 +182,10 @@ const DocsNavbar: React.FC<{
           );
         })}
         <Link
-          to="/docs/api-reference"
+          to="/api-reference"
           className={cn(
             "nav-link py-2 px-3 rounded-lg transition-colors",
-            location.pathname === "/docs/api-reference"
+            location.pathname === "/api-reference"
               ? "text-red-600 dark:bg-red-900/20 dark:text-red-400"
               : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
           )}
@@ -228,7 +228,7 @@ const DocsNavbar: React.FC<{
           <div className="px-4 space-y-2">
             {allCategories.map((tab) => {
               const tagSegment = tab.tags?.join("-") || slugify(tab.name);
-              const fullPath = `/docs/${tagSegment}`;
+              const fullPath = `/${tagSegment}`;
               const isExpanded = expandedItems.includes(tab.id);
               const hasSubItems = tab.subItems.length > 0;
 
@@ -273,10 +273,10 @@ const DocsNavbar: React.FC<{
               );
             })}
             <Link
-              to="/docs/api-reference"
+              to="/api-reference"
               className={cn(
                 "block py-2 px-3 rounded-lg text-base transition-colors",
-                location.pathname === "/docs/api-reference"
+                location.pathname === "/api-reference"
                   ? "bg-red-50 text-red-600 dark:bg-red-900/20 dark:text-red-400"
                   : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
               )}

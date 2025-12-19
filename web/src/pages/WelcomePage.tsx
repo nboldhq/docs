@@ -40,7 +40,7 @@ const WelcomePage: React.FC = () => {
       const firstPublicCategory = sortedCategories[0];
   
       if (firstPublicCategory && firstPublicCategory.tags.length > 0) {
-        setFirstCategoryPath(`/docs/${firstPublicCategory.tags[0]}`);
+        setFirstCategoryPath(`/${firstPublicCategory.tags[0]}`);
       } else {
         setFirstCategoryPath('/page-not-found');
       }

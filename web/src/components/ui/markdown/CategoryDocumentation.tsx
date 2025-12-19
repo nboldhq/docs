@@ -24,10 +24,6 @@ type Category = {
   subItems?: Category[];
 };
 
-interface MarkdownPreviewProps {
-  markdown: string;
-  theme: string;
-}
 const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
   categories,
 }) => {
@@ -56,7 +52,7 @@ const CategoryDocumentation: React.FC<{ categories: Category[] }> = ({
     );
   }
 
-  const MarkdownPreview: React.FC<MarkdownPreviewProps> = ({ markdown }) => {
+  const MarkdownPreview: React.FC<any> = ({ markdown }) => {
     const processedMarkdown = markdown.replace();
       
     const generateId = (children: ReactNode) => {
