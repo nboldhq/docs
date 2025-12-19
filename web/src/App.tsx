@@ -26,7 +26,7 @@ function App() {
               </MsalProvider>
             }
           />
-          <Route path="/docs/*" element={<DocsPage />} />
+          <Route path="/*" element={<DocsPage />} />
 
           <Route
             path="/dashboard/*"
