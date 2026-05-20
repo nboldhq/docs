@@ -18,7 +18,7 @@ const NavigationTabs: React.FC = () => {
   const fetchCategories = async (retries = 3, delay = 1000) => {
     for (let attempt = 1; attempt <= retries; attempt++) {
       try {
-        const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`, {
+        const response = await fetch(`/api/categories`, {
           headers: { 'Content-Type': 'application/json' },
         });
 
@@ -42,7 +42,7 @@ const NavigationTabs: React.FC = () => {
 
   const fetchTabs = async () => {
     try {
-      const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`, {
+      const response = await fetch(`/api/categories`, {
         headers: { 'Content-Type': 'application/json' },
       });
 
@@ -75,7 +75,7 @@ const NavigationTabs: React.FC = () => {
     };
 
     try {
-      const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories/${tabWithNavbarFlag.id}`, {
+      const response = await fetch(`/api/categories/${tabWithNavbarFlag.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ const NavigationTabs: React.FC = () => {
     setTabs(updatedTabs);
 
     try {
-      const response = await fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories/${id}`, {
+      const response = await fetch(`/api/categories/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ showInNavbar: false }),
@@ -117,13 +117,16 @@ const NavigationTabs: React.FC = () => {
 
   return (
     <div className="p-6 max-w-screen-xl mx-auto">
-      <div className="flex justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Manage Navigation Tabs</h1>
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Navigation Tabs</h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Control which categories appear in the docs navbar.</p>
+        </div>
         <Button
           onPress={onOpen}
-          className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000] text-white"
+          className="bg-[#fc035a] text-white hover:bg-[#d9024e] rounded-lg text-sm font-medium px-4"
         >
-          Add Tab
+          Add tab
         </Button>
       </div>
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -151,16 +154,15 @@ const NavigationTabs: React.FC = () => {
               <ModalFooter className="flex justify-end gap-2">
                 <Button
                   onPress={onClose}
-                  color="danger"
                   variant="light"
-                  className="px-4 py-2 rounded-xl"
+                  className="px-4 py-2 rounded-lg text-sm"
                 >
                   Cancel
                 </Button>
                 <Button
                   onPress={handleAddTab}
                   isDisabled={!selectedCategory}
-                  className="px-4 py-2 border-gradient text-white w-full md:w-auto rounded-xl"
+                  className="px-4 py-2 bg-[#fc035a] text-white hover:bg-[#d9024e] rounded-lg text-sm font-medium disabled:opacity-50"
                 >
                   Confirm
                 </Button>
@@ -170,23 +172,35 @@ const NavigationTabs: React.FC = () => {
         </ModalContent>
       </Modal>
 
-      <div>
-        <h2 className="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-200">Current Tabs</h2>
+      <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+        <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
+          <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500">
+            Active tabs ({tabs.length})
+          </p>
+        </div>
         {tabs.length === 0 ? (
-          <p className="text-gray-500 dark:text-gray-400">No tabs added yet.</p>
+          <div className="px-4 py-8 text-center">
+            <p className="text-sm text-gray-500 dark:text-gray-400">No tabs added yet.</p>
+            <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+              Add a category tab to make it appear in the docs navigation bar.
+            </p>
+          </div>
         ) : (
-          <ul className="space-y-2">
+          <ul className="divide-y divide-gray-100 dark:divide-gray-800">
             {tabs.map((tab) => (
               <li
                 key={tab.id}
-                className="flex items-center justify-between p-2 bg-gray-100 dark:bg-[#18181B] rounded-md"
+                className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
               >
-                <span className="text-gray-900 dark:text-white">{tab.label || tab.name}</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">
+                  {tab.label || tab.name}
+                </span>
                 <button
-                  className="text-red-500 hover:text-red-700"
+                  className="p-1.5 rounded-md text-gray-400 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
                   onClick={() => handleDeleteTab(tab.id)}
+                  aria-label="Remove tab"
                 >
-                  <Trash2 size={20} />
+                  <Trash2 size={15} />
                 </button>
               </li>
             ))}

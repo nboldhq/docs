@@ -33,7 +33,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className="h-full bg-gray-50 dark:bg-black">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} collapsed={collapsed} />
       <main className={cn(

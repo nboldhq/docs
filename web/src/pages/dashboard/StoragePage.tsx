@@ -47,7 +47,7 @@ const FilesPage = () => {
   const sensors = useSensors(useSensor(MouseSensor), useSensor(TouchSensor));
 
     useEffect(() => {
-      fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`)
+      fetch(`/api/categories`)
         .then((res) => res.json())
         .then((data: CategoryApiResponse[]) => {
           const idToCategory = new Map<number, CategoryApiResponse>();
@@ -171,8 +171,9 @@ const FilesPage = () => {
   return (
     <div className="p-6">
       <div className="mb-6 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-         <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Storage</h2>
+        <div>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Storage</h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Browse your documentation files and folders.</p>
         </div>
         <div className="flex items-center space-x-2">
           <Button
@@ -191,7 +192,7 @@ const FilesPage = () => {
           </Button>
         </div>
       </div>
-      <div className="bg-white dark:bg-[#18181B] rounded-2xl shadow-md mb-6">
+      <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 mb-6">
         <div className="p-4">
           <nav className="flex items-center text-sm space-x-2" aria-label="Breadcrumb">
             <button
@@ -324,7 +325,7 @@ const FilesPage = () => {
               </ModalBody>
             <ModalFooter>
               <Button onClick={() => setShowNewFolderModal(false)}>Cancel</Button>
-              <Button onClick={handleCreateFolder} className='border-gradient text-white'>Create Folder</Button>
+              <Button onClick={handleCreateFolder} className="bg-[#fc035a] text-white hover:bg-[#d9024e] rounded-lg text-sm font-medium">Create Folder</Button>
             </ModalFooter>
           </ModalContent>
       </Modal>

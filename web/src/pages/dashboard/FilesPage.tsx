@@ -19,7 +19,7 @@ const FilePage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
 
   useEffect(() => {
-    fetch(`https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`)
+    fetch(`/api/categories`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .catch((err) => console.error('Error fetching data:', err));
@@ -50,7 +50,7 @@ const openFile = (file) => {
   };
 
   return (
-    <div className="p-6 mt-10 max-w-5xl mx-auto bg-gray-50 dark:bg-[#18181B] rounded-lg shadow-md">
+    <div className="p-6 max-w-5xl mx-auto">
     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Files</h2>
     {Object.keys(folders).map((tag) => (
       <div key={tag} className="mb-4 mt-3">

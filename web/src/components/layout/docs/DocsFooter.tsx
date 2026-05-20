@@ -1,46 +1,78 @@
 import React from 'react';
+import { NBoldIcon } from '../../Icons/nBoldIcon';
 
 const DocsFooter: React.FC = () => (
-    <footer className="bg-[#171717] dark:bg-[#18181B] bg-opacity-100 w-auto border-t border-gray-200 dark:border-gray-700 py-8 px-4  ">
-      <div className="max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
+  <footer className="border-t border-gray-200 dark:border-gray-800 bg-gray-50/60 dark:bg-gray-900/40">
+    <div className="max-w-5xl mx-auto px-6 py-12">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-10">
+
+        <div className="flex items-center gap-1.5 shrink-0">
+          <NBoldIcon className="w-6 h-auto" />
+          <span className="font-semibold text-gray-900 dark:text-white text-base leading-none">Bold</span>
+          <span className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Docs</span>
+        </div>
+
+        <div className="flex gap-14">
           <div>
-            <h3 className="text-lg text-white font-semibold mb-4">Follow us</h3>
-            <ul className="space-y-2">
+            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-4">
+              Follow us
+            </p>
+            <ul className="space-y-3">
               <li>
-                <a href="https://www.linkedin.com/company/nbold" className="text-white hover:text-[#ff003d] dark:text-gray-300 dark:hover:text-[#ff003d]">
-                  LinkedIn 
+                <a
+                  href="https://www.linkedin.com/company/nbold"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-[#fc035a] dark:hover:text-[#fc035a] transition-colors"
+                >
+                  LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-[#ff003d] dark:text-gray-300 dark:hover:text-[#ff003d]">
-                Twitter
+                <a
+                  href="#"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-[#fc035a] dark:hover:text-[#fc035a] transition-colors"
+                >
+                  Twitter
                 </a>
               </li>
             </ul>
           </div>
+
           <div>
-            <h3 className="text-lg text-white font-semibold mb-4">More</h3>
-            <ul className="space-y-2">
+            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-4">
+              More
+            </p>
+            <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white hover:text-[#ff003d] dark:text-gray-300 dark:hover:text-[#ff003d]">
+                <a
+                  href="#"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-[#fc035a] dark:hover:text-[#fc035a] transition-colors"
+                >
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-[#ff003d] dark:text-gray-300 dark:hover:text-[#ff003d]">
+                <a
+                  href="#"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-[#fc035a] dark:hover:text-[#fc035a] transition-colors"
+                >
                   GitHub
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-white dark:text-gray-400">
-          <p>Copyright © {new Date().getFullYear()} SalesTim SAS.
-  </p>
-        </div>
       </div>
-    </footer>
-  );
+
+      <div className="mt-10 pt-6 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <p className="text-xs text-gray-400 dark:text-gray-500">
+          Copyright © {new Date().getFullYear()} SalesTim SAS.
+        </p>
+        <p className="text-xs text-gray-400 dark:text-gray-500">
+          Microsoft 365 Workspace Provisioning
+        </p>
+      </div>
+    </div>
+  </footer>
+);
+
 export default DocsFooter;

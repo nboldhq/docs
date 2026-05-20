@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import DocsNavbar from "./DocsNavbar";
-import DocsFooter from "./DocsFooter";
-import TableOfContents from "./TableOfContents";
-import { ApiReferenceReact } from "@scalar/api-reference-react";
-import DocsSidebar from "./DocsSidebar";
-import { Spinner } from "@heroui/react";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import DocsNavbar from './DocsNavbar';
+import DocsFooter from './DocsFooter';
+import TableOfContents from './TableOfContents';
+import DocsSidebar from './DocsSidebar';
+import { ApiReferenceReact } from '@scalar/api-reference-react';
+import { Spinner } from '@heroui/react';
 
 type Category = {
   icon: string;
@@ -14,15 +14,13 @@ type Category = {
   description: string;
   parentId: number | null;
   visibility?: string;
-  author?: string;
   tags?: string[];
-  title?: string;
   subItems?: Category[];
 };
 
 const DocsLayout: React.FC<{
   children: React.ReactNode;
-  categories: Category[];
+  categories?: Category[];
   isDarkMode: boolean;
   toggleDarkMode: () => void;
 }> = ({ children, isDarkMode, toggleDarkMode }) => {
@@ -30,208 +28,185 @@ const DocsLayout: React.FC<{
   const [apiSpec, setApiSpec] = useState<any>(null);
   const [isSpecLoading, setIsSpecLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const location = useLocation();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const isApiReference = location.pathname.includes("/api-reference");
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [expandedItemId, setExpandedItemId] = useState<number | null>(null);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    return localStorage.getItem('docs-sidebar-collapsed') === 'true';
+  });
 
-  const toggleExpanded = (itemId: number) => {
-    setExpandedItemId((prevId) => (prevId === itemId ? null : itemId));
+  const toggleSidebarCollapse = () => {
+    setIsSidebarCollapsed((v) => {
+      const next = !v;
+      localStorage.setItem('docs-sidebar-collapsed', String(next));
+      return next;
+    });
   };
+  const location = useLocation();
+  const isApiReference = location.pathname.includes('/api-reference');
 
-  const buildCategoryTree = (flatCategories: Category[]) => {
-    const categoryMap: Record<number, Category & { subItems: Category[] }> = {};
+  const toggleExpanded = (id: number) =>
+    setExpandedItemId((prev) => (prev === id ? null : id));
+
+  const buildTree = (flat: Category[]): Category[] => {
+    const map: Record<number, Category & { subItems: Category[] }> = {};
     const roots: Category[] = [];
 
-    flatCategories.forEach((cat) => {
-      categoryMap[cat.id] = { ...cat, subItems: [] };
-    });
-
-    flatCategories.forEach((cat) => {
-      if (cat.parentId && categoryMap[cat.parentId]) {
-        categoryMap[cat.parentId].subItems.push(categoryMap[cat.id]);
+    flat.forEach((c) => { map[c.id] = { ...c, subItems: [] }; });
+    flat.forEach((c) => {
+      if (c.parentId && map[c.parentId]) {
+        map[c.parentId].subItems.push(map[c.id]);
       } else {
-        roots.push(categoryMap[cat.id]);
+        roots.push(map[c.id]);
       }
     });
 
-    const filterPublicTree = (nodes: Category[]): Category[] =>
+    const filterPublic = (nodes: Category[]): Category[] =>
       nodes
-        .filter((node) => node.visibility === "public")
-        .map((node) => ({
-          ...node,
-          subItems: filterPublicTree(node.subItems || []),
-        }));
+        .filter((n) => n.visibility === 'public')
+        .map((n) => ({ ...n, subItems: filterPublic(n.subItems || []) }));
 
-    return filterPublicTree(roots);
+    return filterPublic(roots);
   };
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(
-          `https://${import.meta.env.VITE_ALLOWED_HOST}/api/categories`
-        );
-        if (!response.ok) throw new Error("Failed to fetch categories");
-        const data: Category[] = await response.json();
-        const publicCategories = data.filter((cat) => cat.visibility === "public");
-        const tree = buildCategoryTree(publicCategories);
-        setCategories(tree);
-      } catch (error) {
-        console.error("Error fetching categories:", error);
+        const res = await fetch('/api/categories');
+        if (!res.ok) throw new Error('Failed');
+        const data: Category[] = await res.json();
+        setCategories(buildTree(data.filter((c) => c.visibility === 'public')));
+      } catch {
         setCategories([]);
       }
     };
-
     fetchCategories();
   }, []);
 
   useEffect(() => {
-    if (isApiReference) {
-      setIsSpecLoading(true);
-      setError(null);
-      const fetchApiSpec = async () => {
-        try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 10000);
-          const response = await fetch(
-            `https://${import.meta.env.VITE_ALLOWED_HOST}/api/spec`,
-            { signal: controller.signal }
-          );
-          clearTimeout(timeoutId);
-          if (!response.ok) throw new Error("Failed to fetch API spec");
-          const data = await response.json();
-          setApiSpec(data);
-        } catch (error: any) {
-          console.error("Error fetching API spec:", error);
-          setError(error.message || "Failed to load API specification");
-          setApiSpec(null);
-        } finally {
-          setIsSpecLoading(false);
-        }
-      };
-      fetchApiSpec();
-    } else {
-      setIsSpecLoading(false);
+    if (!isApiReference) {
       setApiSpec(null);
       setError(null);
+      setIsSpecLoading(false);
+      return;
     }
+    setIsSpecLoading(true);
+    setError(null);
+    const fetchSpec = async () => {
+      try {
+        const controller = new AbortController();
+        const tid = setTimeout(() => controller.abort(), 10000);
+        const res = await fetch('/api/spec', { signal: controller.signal, cache: 'no-cache' });
+        clearTimeout(tid);
+        if (!res.ok) throw new Error('Failed to fetch API spec');
+        setApiSpec(await res.json());
+      } catch (e: any) {
+        setError(e.message || 'Failed to load API specification');
+        setApiSpec(null);
+      } finally {
+        setIsSpecLoading(false);
+      }
+    };
+    fetchSpec();
   }, [isApiReference]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const isSpecEmpty = apiSpec && (
-    (!apiSpec.title || apiSpec.title === "") &&
-    (!apiSpec.description || apiSpec.description === "") &&
-    (!apiSpec.tags || (Array.isArray(apiSpec.tags) && apiSpec.tags.length === 0)) &&
-    (!apiSpec['x-tagGroups'] || (Array.isArray(apiSpec['x-tagGroups']) && apiSpec['x-tagGroups'].length === 0)) &&
-    (!apiSpec.paths || (apiSpec.paths && Object.keys(apiSpec.paths).length === 0))
-  );
+  useEffect(() => {
+    setIsMobileOpen(false);
+  }, [location.pathname]);
+
+  const isSpecEmpty =
+    apiSpec &&
+    (!apiSpec.paths || Object.keys(apiSpec.paths).length === 0) &&
+    (!apiSpec['x-tagGroups'] || apiSpec['x-tagGroups'].length === 0);
 
   return (
-    <div className="flex min-h-screen bg-gray-50 dark:bg-black">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-neutral-950">
+      <DocsNavbar
+        isDarkMode={isDarkMode}
+        toggleDarkMode={toggleDarkMode}
+        onMenuToggle={() => setIsMobileOpen(true)}
+        onToggleSidebar={toggleSidebarCollapse}
+        isSidebarCollapsed={isSidebarCollapsed}
+      />
+
       <div className="flex flex-1">
-        <div className="hidden md:block flex">
-          <DocsSidebar
-            isSidebarOpen={isSidebarOpen}
-            toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
-            isDarkMode={isDarkMode}
-            toggleDarkMode={toggleDarkMode}
-            categories={categories}
-            expandedItemId={expandedItemId}
-            toggleExpanded={toggleExpanded}
-            locationPath={location.pathname}
-            setIsSidebarOpen={setIsSidebarOpen}
-          />
-        </div>
-        <main id="page-content" className="flex-1 relative">
-          <DocsNavbar
-            categories={[]}
-            isDarkMode={isDarkMode}
-            toggleDarkMode={toggleDarkMode}
-            children={undefined}
-          />
+        <DocsSidebar
+          categories={categories}
+          expandedItemId={expandedItemId}
+          toggleExpanded={toggleExpanded}
+          locationPath={location.pathname}
+          isMobileOpen={isMobileOpen}
+          onMobileClose={() => setIsMobileOpen(false)}
+          isCollapsed={isSidebarCollapsed}
+        />
+
+        <main id="page-content" className="flex-1 min-w-0">
           {isApiReference ? (
-            <div
-              className={`mt-20 min-h-screen px-4 lg:px-0 relative ${
-                isSidebarOpen ? "ml-0 lg:ml-80" : "ml-0 md:ml-20"
-              }`}
-            >
+            <div className="min-h-[50vh]">
               {isSpecLoading ? (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                  <Spinner style={{ color: '#921d7f' }} size="lg" />
+                <div className="flex items-center justify-center h-64">
+                  <Spinner style={{ color: '#fc035a' }} size="lg" />
                 </div>
               ) : error ? (
-                <div className="flex flex-col items-center justify-center h-full text-center px-4 py-16">
-                  <div className="text-6xl mb-6">⚠️</div>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
-                    <span className="p-2 rounded-md text-white bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000]">
-                      Error Loading API Specification
-                    </span>
-                  </h2>
-                  <p className="text-gray-600 dark:text-gray-400 max-w-xl text-base md:text-lg">
+                <div className="max-w-lg mx-auto text-center px-6 py-24">
+                  <p className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    Error loading API specification
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
                     {error}. Please try again later or contact support.
                   </p>
                 </div>
               ) : isSpecEmpty ? (
-                <div className="flex flex-col items-center justify-center h-full text-center px-4 py-16">
-                  <div className="text-6xl mb-6">🛠️</div>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
-                    <span className="p-2 rounded-md text-white bg-gradient-to-r from-[#921d7f] via-[#c1124a] to-[#ff0000]">
-                      API Specification Unavailable
-                    </span>
-                  </h2>
-                  <p className="text-gray-600 dark:text-gray-400 max-w-xl text-base md:text-lg">
-                    The API specification is currently empty or not properly configured. Please check back later.
+                <div className="max-w-lg mx-auto text-center px-6 py-24">
+                  <p className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    API specification unavailable
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    The API specification is not yet configured.
                   </p>
                 </div>
               ) : (
                 <ApiReferenceReact
+                  key={isDarkMode ? 'dark' : 'light'}
                   configuration={{
                     spec: { content: apiSpec },
                     darkMode: isDarkMode,
                     hideDarkModeToggle: true,
                     hideClientButton: true,
+                    customCss: !isDarkMode
+                      ? `
+                        .dark-mode {
+                          color-scheme: light !important;
+                          --scalar-background-1: #fff !important;
+                          --scalar-background-2: #f6f6f6 !important;
+                          --scalar-background-3: #e7e7e7 !important;
+                          --scalar-color-1: #2a2f45 !important;
+                          --scalar-color-2: #757575 !important;
+                          --scalar-color-accent: #0099ff !important;
+                          --scalar-border-color: #dfdfdf !important;
+                        }
+                      `
+                      : undefined,
                   }}
                 />
               )}
             </div>
           ) : (
-            <div className="flex justify-between">
-              {isSidebarOpen ? (
-                <>
-                  <div
-                    className="hidden xl:block lg:w-64 flex-shrink-0"
-                    aria-hidden="true"
-                  ></div>
-                  <div className="mb-8 mt-20 min-h-screen lg:-[87%] xl:w-[47%] relative">
-                    {children}
-                  </div>
-                  <div
-                    className="hidden xl:block w-64 flex-shrink-0"
-                    aria-hidden="true"
-                  ></div>
-                  <TableOfContents />
-                </>
-              ) : (
-                <>
-                  <div className="mb-8 sm:ml-2 ml-6 md:ml-15 lg:ml-20 mt-20 min-h-screen lg:px-7 w-[90%] md:w-[78%] relative">
-                    {children}
-                  </div>
-                  <div
-                    className="hidden xl:block w-64 flex-shrink-0"
-                    aria-hidden="true"
-                  ></div>
-                  <TableOfContents />
-                </>
-              )}
+            <div className="flex">
+              <div className="flex-1 min-w-0 px-8 py-10">
+                {children}
+              </div>
+              <TableOfContents />
             </div>
           )}
-          <DocsFooter />
         </main>
       </div>
+
+      <DocsFooter />
     </div>
   );
 };
