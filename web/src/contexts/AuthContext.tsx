@@ -27,7 +27,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = () => {
     setIsAuthenticated(false);
-    instance.logoutPopup().catch((error) => {
+    instance.logoutRedirect().catch((error) => {
       console.error("Logout failed:", error);
     });
   };

@@ -2,13 +2,12 @@ import { useState } from 'react';
 import {
   Button,
   Checkbox,
-  Chip,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
   Input,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
   ScrollShadow,
   Select,
   SelectItem,
@@ -17,9 +16,8 @@ import {
   Tabs,
   Textarea,
 } from '@heroui/react';
-import { Trash2 } from 'lucide-react';
+import { Trash2, X } from 'lucide-react';
 
-// Define types for the OpenAPI-like structure
 interface Schema {
   type: string;
   properties?: Record<string, any>;
@@ -67,14 +65,36 @@ interface JsonData {
   paths: Record<string, Record<string, any>>;
 }
 
-// Define props interface
 interface EndpointModalProps {
   isOpen: boolean;
   onClose: () => void;
   onCreate?: (endpoint: Endpoint) => void;
   jsonData: JsonData;
-  setJsonData: React.Dispatch<React.SetStateAction<JsonData>>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  setJsonData: (data: any) => void;
 }
+
+const BLANK_ENDPOINT: Endpoint = {
+  path: '',
+  method: 'GET',
+  summary: '',
+  description: '',
+  includeParameters: false,
+  parameters: [],
+  includeRequestBody: false,
+  requestBody: {
+    description: '',
+    required: false,
+    content: { 'application/json': { schema: { type: 'object', properties: {} } } },
+  },
+  tags: [],
+  responses: {
+    '200': {
+      description: 'Successful response',
+      content: { 'application/json': { schema: { type: 'object', properties: {} } } },
+    },
+  },
+};
 
 export default function EndpointModal({
   isOpen,
@@ -83,518 +103,417 @@ export default function EndpointModal({
   jsonData,
   setJsonData,
 }: EndpointModalProps) {
-  const [newEndpoint, setNewEndpoint] = useState<Endpoint>({
-    path: '',
-    method: 'GET',
-    summary: '',
-    description: '',
-    includeParameters: false,
-    parameters: [],
-    includeRequestBody: false,
-    requestBody: {
-      description: '',
-      required: false,
-      content: {
-        'application/json': { schema: { type: 'object', properties: {} } },
-      },
-    },
-    tags: [],
-    responses: {
-      '200': {
-        description: 'Successful response',
-        content: {
-          'application/json': { schema: { type: 'object', properties: {} } },
-        },
-      },
-    },
-  });
+  const [endpoint, setEndpoint] = useState<Endpoint>(BLANK_ENDPOINT);
 
-  const handleAddParameter = () => {
-    setNewEndpoint((prev) => ({
-      ...prev,
-      parameters: [
-        ...prev.parameters,
-        {
-          name: '',
-          in: 'query',
-          description: '',
-          required: false,
-          schema: { type: 'string' },
-        },
-      ],
-    }));
-  };
-
-  const handleAddResponse = () => {
-    const newCode = String(Object.keys(newEndpoint.responses).length + 200);
-    setNewEndpoint((prev) => ({
-      ...prev,
-      responses: {
-        ...prev.responses,
-        [newCode]: {
-          description: '',
-          content: {
-            'application/json': {
-              schema: { type: 'object', properties: {} },
-            },
-          },
-        },
-      },
-    }));
-  };
+  const reset = () => setEndpoint(BLANK_ENDPOINT);
 
   const handleCreate = () => {
-    if (!newEndpoint.path || !newEndpoint.method) return;
-    const endpoint: any = {
-      summary: newEndpoint.summary,
-      description: newEndpoint.description,
-      tags: newEndpoint.tags,
-      responses: newEndpoint.responses,
+    if (!endpoint.path || !endpoint.method) return;
+    const payload: any = {
+      summary: endpoint.summary,
+      description: endpoint.description,
+      tags: endpoint.tags,
+      responses: endpoint.responses,
     };
-    if (newEndpoint.includeParameters && newEndpoint.parameters.length) {
-      endpoint.parameters = newEndpoint.parameters;
+    if (endpoint.includeParameters && endpoint.parameters.length) {
+      payload.parameters = endpoint.parameters;
     }
-    if (newEndpoint.includeRequestBody) {
-      endpoint.requestBody = newEndpoint.requestBody;
+    if (endpoint.includeRequestBody) {
+      payload.requestBody = endpoint.requestBody;
     }
-    const updated = { ...jsonData };
-    const p = newEndpoint.path.startsWith('/') ? newEndpoint.path : `/${newEndpoint.path}`;
-    updated.paths = {
-      ...updated.paths,
-      [p]: {
-        ...(updated.paths[p] || {}),
-        [newEndpoint.method.toLowerCase()]: endpoint,
-      },
-    };
-    setJsonData(updated);
-    onCreate && onCreate(newEndpoint);
-    onClose();
-    // Reset
-    setNewEndpoint({
-      path: '',
-      method: 'GET',
-      summary: '',
-      description: '',
-      includeParameters: false,
-      parameters: [],
-      includeRequestBody: false,
-      requestBody: {
-        description: '',
-        required: false,
-        content: { 'application/json': { schema: { type: 'object', properties: {} } } },
-      },
-      tags: [],
-      responses: {
-        '200': {
-          description: 'Successful response',
-          content: { 'application/json': { schema: { type: 'object', properties: {} } } },
+    const p = endpoint.path.startsWith('/') ? endpoint.path : `/${endpoint.path}`;
+    setJsonData({
+      ...jsonData,
+      paths: {
+        ...jsonData.paths,
+        [p]: {
+          ...(jsonData.paths[p] || {}),
+          [endpoint.method.toLowerCase()]: payload,
         },
       },
     });
+    onCreate?.(endpoint);
+    reset();
+    onClose();
   };
 
+  const handleClose = () => { reset(); onClose(); };
+
+  const addParameter = () =>
+    setEndpoint((prev) => ({
+      ...prev,
+      parameters: [
+        ...prev.parameters,
+        { name: '', in: 'query', description: '', required: false, schema: { type: 'string' } },
+      ],
+    }));
+
+  const removeParameter = (i: number) =>
+    setEndpoint((prev) => ({
+      ...prev,
+      parameters: prev.parameters.filter((_, idx) => idx !== i),
+    }));
+
+  const updateParam = (i: number, field: keyof Parameter, value: any) =>
+    setEndpoint((prev) => {
+      const updated = [...prev.parameters];
+      updated[i] = { ...updated[i], [field]: value };
+      return { ...prev, parameters: updated };
+    });
+
+  const addResponse = () => {
+    const code = String(Object.keys(endpoint.responses).length + 200);
+    setEndpoint((prev) => ({
+      ...prev,
+      responses: {
+        ...prev.responses,
+        [code]: {
+          description: '',
+          content: { 'application/json': { schema: { type: 'object', properties: {} } } },
+        },
+      },
+    }));
+  };
+
+  const removeResponse = (code: string) =>
+    setEndpoint((prev) => {
+      const updated = { ...prev.responses };
+      delete updated[code];
+      return { ...prev, responses: updated };
+    });
+
   return (
-    <Modal isOpen={isOpen} onClose={onClose} size="5xl">
-      <ModalContent className="min-h-[69vh] max-h-[69vh] overflow-hidden rounded-lg">
-        <ModalHeader>Create New Endpoint</ModalHeader>
-        <ModalBody className="overflow-y-auto max-h-[calc(95vh-10rem)] px-6">
-          <Tabs aria-label="Endpoint configuration">
+    <Drawer isOpen={isOpen} placement="right" size="2xl" onClose={handleClose} hideCloseButton>
+      <DrawerContent>
+        <DrawerHeader className="flex items-start justify-between border-b border-gray-200 dark:border-gray-800 px-6 py-4 shrink-0">
+          <div>
+            <h2 className="text-base font-semibold text-gray-900 dark:text-white">New endpoint</h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+              Define the path, method, and details.
+            </p>
+          </div>
+          <button
+            onClick={handleClose}
+            className="p-1.5 rounded-lg text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          >
+            <X size={16} />
+          </button>
+        </DrawerHeader>
+
+        <DrawerBody className="px-6 py-5 overflow-y-auto no-scrollbar">
+          <Tabs aria-label="Endpoint config" variant="underlined" color="danger">
+            {/* General */}
             <Tab key="general" title="General">
-              <div className="space-y-6 mt-4">
-                <Input
-                  label="Endpoint Path"
-                  placeholder="/example/path"
-                  value={newEndpoint.path}
-                  onChange={(e) => setNewEndpoint((prev) => ({ ...prev, path: e.target.value }))}
-                  isRequired
-                />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <Select
-                      label="HTTP Method"
-                      className="w-full"
-                      isRequired
-                      selectedKeys={new Set([newEndpoint.method])}
-                      onSelectionChange={(keys) =>
-                        setNewEndpoint((prev) => ({
-                          ...prev,
-                          method: Array.from(keys)[0] as Endpoint['method'],
-                        }))
-                      }
-                    >
-                      <SelectSection title="HTTP Methods">
-                        {['GET', 'POST', 'PUT', 'PATCH', 'DELETE'].map((m) => (
-                          <SelectItem key={m}>{m}</SelectItem>
-                        ))}
-                      </SelectSection>
-                    </Select>
-                  </div>
-                  <div>
-                    <Select
-                      label="Tags"
-                      selectionMode="multiple"
-                      isRequired
-                      selectedKeys={new Set(newEndpoint.tags)}
-                      onSelectionChange={(keys) =>
-                        setNewEndpoint((prev) => ({
-                          ...prev,
-                          tags: Array.from(keys) as string[],
-                        }))
-                      }
-                    >
-                      {jsonData.tags?.map((tag) => (
-                        <SelectItem key={tag.name}>{tag.name}</SelectItem>
+              <div className="space-y-4 mt-4">
+                <div className="flex gap-3">
+                  <Select
+                    label="Method"
+                    size="sm"
+                    className="w-32 shrink-0"
+                    selectedKeys={new Set([endpoint.method])}
+                    onSelectionChange={(keys) =>
+                      setEndpoint((prev) => ({
+                        ...prev,
+                        method: Array.from(keys)[0] as Endpoint['method'],
+                      }))
+                    }
+                  >
+                    <SelectSection title="HTTP Methods">
+                      {['GET', 'POST', 'PUT', 'PATCH', 'DELETE'].map((m) => (
+                        <SelectItem key={m}>{m}</SelectItem>
                       ))}
-                    </Select>
-                  </div>
+                    </SelectSection>
+                  </Select>
+                  <Input
+                    label="Path"
+                    size="sm"
+                    placeholder="/example/path"
+                    value={endpoint.path}
+                    onChange={(e) => setEndpoint((prev) => ({ ...prev, path: e.target.value }))}
+                    isRequired
+                    className="flex-1"
+                  />
                 </div>
+
+                <Select
+                  label="Tags"
+                  size="sm"
+                  selectionMode="multiple"
+                  selectedKeys={new Set(endpoint.tags)}
+                  onSelectionChange={(keys) =>
+                    setEndpoint((prev) => ({ ...prev, tags: Array.from(keys) as string[] }))
+                  }
+                >
+                  {(jsonData.tags || []).map((tag) => (
+                    <SelectItem key={tag.name}>{tag.name}</SelectItem>
+                  ))}
+                </Select>
+
                 <Input
                   label="Summary"
-                  value={newEndpoint.summary}
-                  onChange={(e) => setNewEndpoint((prev) => ({ ...prev, summary: e.target.value }))}
+                  size="sm"
+                  value={endpoint.summary}
+                  onChange={(e) => setEndpoint((prev) => ({ ...prev, summary: e.target.value }))}
                 />
                 <Textarea
                   label="Description"
-                  rows={3}
-                  value={newEndpoint.description}
-                  onChange={(e) =>
-                    setNewEndpoint((prev) => ({ ...prev, description: e.target.value }))
-                  }
+                  size="sm"
+                  minRows={3}
+                  value={endpoint.description}
+                  onChange={(e) => setEndpoint((prev) => ({ ...prev, description: e.target.value }))}
                 />
               </div>
             </Tab>
-            <Tab key="responses" title="Responses">
-                <div className="space-y-4">
-                    <div className="flex justify-between items-center mb-4">
-                    <h4 className="font-semibold">Responses</h4>
-                    <Button color="danger" variant="flat" size="sm" onClick={handleAddResponse}>Add Response</Button>
-                    </div>
-                    <ScrollShadow hideScrollBar className="w-auto h-[450px]">
-                    {Object.entries(newEndpoint.responses).map(([code, resp], index) => (
-                        <div key={index} className="space-y-3 p-4 border mb-3 rounded-md">
-                        <div className="flex gap-4">
-                            <Input
-                            label="Status Code"
-                            className="w-28"
-                            value={code}
-                            onChange={(e) => {
-                                const newCode = e.target.value;
-                                setNewEndpoint((prev) => {
-                                const updated = { ...prev.responses };
-                                delete updated[code];
-                                updated[newCode] = resp;
-                                return { ...prev, responses: updated };
-                                });
-                            }}
-                            />
-                            <Input
-                            label="Description"
-                            className="flex-1"
-                            value={resp.description}
-                            onChange={(e) =>
-                                setNewEndpoint((prev) => ({
-                                ...prev,
-                                responses: {
-                                    ...prev.responses,
-                                    [code]: {
-                                    ...resp,
-                                    description: e.target.value,
-                                    },
-                                },
-                                }))
-                            }
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <label className="text-sm font-medium">Content Types</label>
-                            {Object.entries(resp.content || {}).map(([ct, val], contentIndex) => (
-                            <div key={`${index}-${ct}`} className="space-y-2">
-                                <Chip variant="flat" className="bg-success-200 text-gray-600">
-                                {ct}
-                                </Chip>
-                                <Textarea
-                                label="Schema"
-                                minRows={4}
-                                className="font-mono text-sm"
-                                defaultValue={JSON.stringify(val.schema, null, 2)}
-                                onChange={(e) => {
-                                    const newValue = e.target.value;
-                                    setNewEndpoint((prev) => {
-                                    try {
-                                        const sc = JSON.parse(newValue);
-                                        return {
-                                        ...prev,
-                                        responses: {
-                                            ...prev.responses,
-                                            [code]: {
-                                            description: resp.description,
-                                            content: {
-                                                [ct]: { schema: sc },
-                                            },
-                                            },
-                                        },
-                                        };
-                                    } catch {
-                                        // Store the raw input temporarily without parsing
-                                        return {
-                                        ...prev,
-                                        responses: {
-                                            ...prev.responses,
-                                            [code]: {
-                                            ...resp,
-                                            content: {
-                                                [ct]: {
-                                                ...val,
-                                                schema: newValue, // Store as string temporarily
-                                                },
-                                            },
-                                            },
-                                        },
-                                        };
-                                    }
-                                    });
-                                }}
-                                onBlur={(e) => {
-                                    // Validate JSON on blur
-                                    try {
-                                    const sc = JSON.parse(e.target.value);
-                                    setNewEndpoint((prev) => ({
-                                        ...prev,
-                                        responses: {
-                                        ...prev.responses,
-                                        [code]: {
-                                            description: resp.description,
-                                            content: {
-                                            [ct]: { schema: sc },
-                                            },
-                                        },
-                                        },
-                                    }));
-                                    } catch {
-                                    // Optionally notify user of invalid JSON
-                                    console.warn('Invalid JSON schema');
-                                    }
-                                }}
-                                />
-                            </div>
-                            ))}
-                            <div className="flex justify-end">
-                            <Button
-                                size="sm"
-                                variant="ghost"
-                                onClick={() => {
-                                const updated = { ...newEndpoint.responses };
-                                delete updated[code];
-                                setNewEndpoint((prev) => ({ ...prev, responses: updated }));
-                                }}
-                            >
-                                <Trash2 className="hover:danger" size={16} />
-                            </Button>
-                            </div>
-                        </div>
-                        </div>
-                    ))}
-                    </ScrollShadow>
-                </div>
-            </Tab>
+
+            {/* Parameters */}
             <Tab key="parameters" title="Parameters">
               <div className="space-y-4 mt-4">
                 <Checkbox
-                  isSelected={newEndpoint.includeParameters}
-                  onValueChange={(v) => setNewEndpoint((prev) => ({ ...prev, includeParameters: v }))}
+                  isSelected={endpoint.includeParameters}
+                  onValueChange={(v) => setEndpoint((prev) => ({ ...prev, includeParameters: v }))}
+                  size="sm"
                 >
-                  Include Parameters
+                  Include parameters
                 </Checkbox>
-                {newEndpoint.includeParameters && (
+
+                {endpoint.includeParameters && (
                   <>
-                    <div className="flex justify-between items-center">
-                      <h4 className="font-semibold">Parameters</h4>
-                      <Button size="sm" onClick={handleAddParameter}>
-                        Add Parameter
-                      </Button>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Parameters</span>
+                      <button
+                        onClick={addParameter}
+                        className="text-xs font-medium text-[#fc035a] hover:text-[#d9024e] transition-colors"
+                      >
+                        + Add
+                      </button>
                     </div>
-                    <ScrollShadow hideScrollBar className="w-auto h-auto max-h-[450px]">
-                      {newEndpoint.parameters.map((param, index) => (
-                        <div key={index} className="space-y-3 border p-4 rounded mb-3">
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      {endpoint.parameters.map((param, i) => (
+                        <div key={i} className="space-y-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700">
+                          <div className="flex gap-3">
                             <Input
+                              size="sm"
                               label="Name"
                               value={param.name}
-                              onChange={(e) => {
-                                const newParams = [...newEndpoint.parameters];
-                                newParams[index].name = e.target.value;
-                                setNewEndpoint((prev) => ({ ...prev, parameters: newParams }));
-                              }}
+                              onChange={(e) => updateParam(i, 'name', e.target.value)}
+                              className="flex-1"
                             />
-                            <div>
-                              <label className="block text-sm font-medium mb-1">Location</label>
+                            <div className="w-28 shrink-0">
+                              <label className="block text-xs font-medium text-gray-500 mb-1.5 ml-0.5">Location</label>
                               <select
-                                className="w-full p-2 border rounded"
+                                className="w-full h-9 text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 px-2 focus:outline-none focus:ring-1 focus:ring-[#fc035a]/30"
                                 value={param.in}
-                                onChange={(e) => {
-                                  const newParams = [...newEndpoint.parameters];
-                                  newParams[index].in = e.target.value as Parameter['in'];
-                                  setNewEndpoint((prev) => ({ ...prev, parameters: newParams }));
-                                }}
+                                onChange={(e) => updateParam(i, 'in', e.target.value as Parameter['in'])}
                               >
-                                {['path', 'query', 'header', 'cookie'].map((location) => (
-                                  <option key={location} value={location}>
-                                    {location}
-                                  </option>
+                                {['path', 'query', 'header', 'cookie'].map((loc) => (
+                                  <option key={loc} value={loc}>{loc}</option>
                                 ))}
                               </select>
                             </div>
                           </div>
                           <Textarea
+                            size="sm"
                             label="Description"
+                            minRows={2}
                             value={param.description}
-                            onChange={(e) => {
-                              const newParams = [...newEndpoint.parameters];
-                              newParams[index].description = e.target.value;
-                              setNewEndpoint((prev) => ({ ...prev, parameters: newParams }));
-                            }}
+                            onChange={(e) => updateParam(i, 'description', e.target.value)}
                           />
-                          <Checkbox
-                            isSelected={param.required}
-                            onValueChange={(value) => {
-                              const newParams = [...newEndpoint.parameters];
-                              newParams[index].required = value;
-                              setNewEndpoint((prev) => ({ ...prev, parameters: newParams }));
-                            }}
-                          >
-                            Required
-                          </Checkbox>
-                          <div className="flex justify-end">
-                            <Button
+                          <div className="flex items-center justify-between">
+                            <Checkbox
                               size="sm"
-                              variant="ghost"
-                              onClick={() => {
-                                const newParams = [...newEndpoint.parameters];
-                                newParams.splice(index, 1);
-                                setNewEndpoint((prev) => ({ ...prev, parameters: newParams }));
-                              }}
+                              isSelected={param.required}
+                              onValueChange={(v) => updateParam(i, 'required', v)}
                             >
-                              <Trash2 className="hover:danger" size={16} />
-                            </Button>
+                              Required
+                            </Checkbox>
+                            <button
+                              onClick={() => removeParameter(i)}
+                              className="p-1 rounded text-gray-400 hover:text-red-500 transition-colors"
+                            >
+                              <Trash2 size={14} />
+                            </button>
                           </div>
                         </div>
                       ))}
-                    </ScrollShadow>
+                    </div>
                   </>
                 )}
               </div>
             </Tab>
+
+            {/* Request Body */}
             <Tab key="requestBody" title="Request Body">
-                <div className="space-y-4 mt-4">
+              <div className="space-y-4 mt-4">
+                <Checkbox
+                  isSelected={endpoint.includeRequestBody}
+                  onValueChange={(v) => setEndpoint((prev) => ({ ...prev, includeRequestBody: v }))}
+                  size="sm"
+                >
+                  Include request body
+                </Checkbox>
+
+                {endpoint.includeRequestBody && (
+                  <div className="space-y-4 p-3 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <Textarea
+                      size="sm"
+                      label="Description"
+                      minRows={2}
+                      value={endpoint.requestBody.description}
+                      onChange={(e) =>
+                        setEndpoint((prev) => ({
+                          ...prev,
+                          requestBody: { ...prev.requestBody, description: e.target.value },
+                        }))
+                      }
+                    />
                     <Checkbox
-                    isSelected={newEndpoint.includeRequestBody}
-                    onValueChange={(v) => setNewEndpoint((prev) => ({ ...prev, includeRequestBody: v }))}
+                      size="sm"
+                      isSelected={endpoint.requestBody.required}
+                      onValueChange={(v) =>
+                        setEndpoint((prev) => ({
+                          ...prev,
+                          requestBody: { ...prev.requestBody, required: v },
+                        }))
+                      }
                     >
-                    Include Request Body
+                      Required
                     </Checkbox>
-                    {newEndpoint.includeRequestBody && (
-                    <div className="space-y-4 border p-4 rounded">
-                        <h4 className="font-semibold">Request Body</h4>
-                        <Textarea
-                        label="Description"
-                        value={newEndpoint.requestBody.description}
-                        onChange={(e) =>
-                            setNewEndpoint((prev) => ({
+                    <Textarea
+                      label="JSON Schema"
+                      size="sm"
+                      minRows={8}
+                      className="font-mono text-xs"
+                      defaultValue={JSON.stringify(
+                        endpoint.requestBody.content['application/json'].schema,
+                        null,
+                        2,
+                      )}
+                      onBlur={(e) => {
+                        try {
+                          const schema = JSON.parse(e.target.value);
+                          setEndpoint((prev) => ({
                             ...prev,
                             requestBody: {
-                                ...prev.requestBody,
-                                description: e.target.value,
+                              ...prev.requestBody,
+                              content: { 'application/json': { schema } },
                             },
-                            }))
+                          }));
+                        } catch {
+                          // keep existing schema if JSON is invalid
                         }
-                        />
-                        <Checkbox
-                        isSelected={newEndpoint.requestBody.required}
-                        onValueChange={(val) =>
-                            setNewEndpoint((prev) => ({
-                            ...prev,
-                            requestBody: {
-                                ...prev.requestBody,
-                                required: val,
-                            },
-                            }))
-                        }
-                        >
-                        Required
-                        </Checkbox>
-                        <div className="space-y-2">
-                        <label className="text-sm font-medium">JSON Schema</label>
-                        <Textarea
-                            label="Schema"
-                            minRows={8}
-                            className="font-mono text-sm"
-                            defaultValue={JSON.stringify(
-                            newEndpoint.requestBody.content['application/json'].schema,
-                            null,
-                            2
-                            )}
-                            onChange={(e) => {
-                            const newValue = e.target.value;
-                            setNewEndpoint((prev) => ({
-                                ...prev,
-                                requestBody: {
-                                ...prev.requestBody,
-                                content: {
-                                    'application/json': {
-                                    schema: newValue, // Store as string temporarily
-                                    },
-                                },
-                                },
-                            }));
-                            }}
-                            onBlur={(e) => {
-                            try {
-                                const parsedSchema = JSON.parse(e.target.value);
-                                setNewEndpoint((prev) => ({
-                                ...prev,
-                                requestBody: {
-                                    ...prev.requestBody,
-                                    content: {
-                                    'application/json': {
-                                        schema: parsedSchema,
-                                    },
-                                    },
-                                },
-                                }));
-                            } catch {
-                                console.warn('Invalid JSON schema');
-                                // Optionally notify user of invalid JSON
-                                // alert('Invalid JSON schema. Please enter valid JSON.');
-                            }
-                            }}
-                        />
-                        </div>
-                        <div className="flex justify-end">
-                        <Button
-                            size="sm"
-                            variant="ghost"
-                            onClick={() =>
-                            setNewEndpoint((prev) => ({ ...prev, includeRequestBody: false }))
-                            }
-                        >
-                            <Trash2 className="hover:danger" size={16} />
-                        </Button>
-                        </div>
-                    </div>
-                    )}
+                      }}
+                    />
+                  </div>
+                )}
+              </div>
+            </Tab>
+
+            {/* Responses */}
+            <Tab key="responses" title="Responses">
+              <div className="space-y-4 mt-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Responses</span>
+                  <button
+                    onClick={addResponse}
+                    className="text-xs font-medium text-[#fc035a] hover:text-[#d9024e] transition-colors"
+                  >
+                    + Add response
+                  </button>
                 </div>
+
+                <ScrollShadow hideScrollBar className="max-h-[520px] space-y-3 pr-1">
+                  {Object.entries(endpoint.responses).map(([code, resp]) => (
+                    <div key={code} className="space-y-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700">
+                      <div className="flex gap-3">
+                        <Input
+                          size="sm"
+                          label="Status code"
+                          className="w-28 shrink-0"
+                          value={code}
+                          onChange={(e) => {
+                            const newCode = e.target.value;
+                            setEndpoint((prev) => {
+                              const updated = { ...prev.responses };
+                              delete updated[code];
+                              updated[newCode] = resp;
+                              return { ...prev, responses: updated };
+                            });
+                          }}
+                        />
+                        <Input
+                          size="sm"
+                          label="Description"
+                          className="flex-1"
+                          value={resp.description}
+                          onChange={(e) =>
+                            setEndpoint((prev) => ({
+                              ...prev,
+                              responses: {
+                                ...prev.responses,
+                                [code]: { ...resp, description: e.target.value },
+                              },
+                            }))
+                          }
+                        />
+                      </div>
+                      {Object.entries(resp.content || {}).map(([ct, val]) => (
+                        <div key={ct} className="space-y-2">
+                          <span className="text-xs font-medium text-gray-500 dark:text-gray-400 font-mono">{ct}</span>
+                          <Textarea
+                            size="sm"
+                            label="Schema"
+                            minRows={4}
+                            className="font-mono text-xs"
+                            defaultValue={JSON.stringify(val.schema, null, 2)}
+                            onBlur={(e) => {
+                              try {
+                                const schema = JSON.parse(e.target.value);
+                                setEndpoint((prev) => ({
+                                  ...prev,
+                                  responses: {
+                                    ...prev.responses,
+                                    [code]: {
+                                      description: resp.description,
+                                      content: { [ct]: { schema } },
+                                    },
+                                  },
+                                }));
+                              } catch {
+                                // keep existing if JSON is invalid
+                              }
+                            }}
+                          />
+                        </div>
+                      ))}
+                      <div className="flex justify-end">
+                        <button
+                          onClick={() => removeResponse(code)}
+                          className="p-1 rounded text-gray-400 hover:text-red-500 transition-colors"
+                        >
+                          <Trash2 size={14} />
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </ScrollShadow>
+              </div>
             </Tab>
           </Tabs>
-        </ModalBody>
-        <ModalFooter>
-          <Button color="danger" variant="light" onClick={onClose}>
+        </DrawerBody>
+
+        <DrawerFooter className="border-t border-gray-200 dark:border-gray-800 px-6 py-4 flex items-center justify-end gap-3 shrink-0">
+          <Button variant="flat" color="default" onPress={handleClose} className="text-sm font-medium">
             Cancel
           </Button>
-          <Button className="border-gradient text-white" onClick={handleCreate}>
-            Create Endpoint
+          <Button
+            onPress={handleCreate}
+            isDisabled={!endpoint.path || !endpoint.method}
+            className="bg-[#fc035a] text-white hover:bg-[#d9024e] text-sm font-medium px-5"
+          >
+            Create endpoint
           </Button>
-        </ModalFooter>
-      </ModalContent>
-    </Modal>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
   );
 }

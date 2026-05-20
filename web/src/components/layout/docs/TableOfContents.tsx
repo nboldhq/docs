@@ -1,71 +1,41 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { cn } from '../../../utils/cn';
 
 const TableOfContents: React.FC = () => {
-  const [headings, setHeadings] = useState<
-    { id: string; text: string; level: number }[]
-  >([]);
+  const [headings, setHeadings] = useState<{ id: string; text: string; level: number }[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      const contentElement = document.getElementById("page-content");
-      if (!contentElement) return;
+      const content = document.getElementById('page-content');
+      if (!content) return;
 
-      const headingElements = Array.from(
-        contentElement.querySelectorAll(
-          "h1:not(footer h1),h2:not(footer h2), h3:not(footer h3)"
-        )
-      ).map((heading) => {
+      const els = Array.from(
+        content.querySelectorAll('h1:not(footer h1), h2:not(footer h2), h3:not(footer h3)')
+      ).map((el) => {
         const id =
-          heading.id ||
-          heading.textContent?.toLowerCase().replace(/\s+/g, "-") ||
-          "";
-        heading.id = id;
-        return {
-          id,
-          text: heading.textContent || "",
-          level: parseInt(heading.tagName.substring(1)),
-        };
+          el.id || el.textContent?.toLowerCase().replace(/\s+/g, '-') || '';
+        el.id = id;
+        return { id, text: el.textContent || '', level: parseInt(el.tagName[1]) };
       });
 
-      setHeadings(headingElements);
-
-      if (headingElements.length > 0) {
-        const firstId = headingElements[0].id;
-        setActiveId(firstId);
-
-        const element = document.getElementById(firstId);
-        if (element) {
-          const headerHeight = 100;
-          const elementPosition =
-            element.getBoundingClientRect().top + window.scrollY;
-          const offsetPosition = elementPosition - headerHeight;
-
-          if (window.scrollY < offsetPosition - 50) {
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth",
-            });
-          }
-        }
-      }
+      setHeadings(els);
+      if (els.length > 0) setActiveId(els[0].id);
 
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveId(entry.target.id);
-            }
+          entries.forEach((e) => {
+            if (e.isIntersecting) setActiveId(e.target.id);
           });
         },
-        { rootMargin: "0px 0px -80% 0px", threshold: 1 }
+        { rootMargin: '0px 0px -80% 0px', threshold: 1 }
       );
 
-      headingElements.forEach(({ id }) => {
-        const element = document.getElementById(id);
-        if (element) observer.observe(element);
+      els.forEach(({ id }) => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
       });
 
       return () => observer.disconnect();
@@ -75,45 +45,34 @@ const TableOfContents: React.FC = () => {
   }, [location.pathname]);
 
   const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      setActiveId(id);
-      const headerHeight = 100;
-      const elementPosition =
-        element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
+    const el = document.getElementById(id);
+    if (!el) return;
+    setActiveId(id);
+    const offset = el.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
   };
 
+  if (headings.length === 0) return null;
+
   return (
-    <aside className="hidden xl:block w-64 fixed right-4 2xl:right-8 top-36 h-[calc(100vh-5rem)] overflow-y-auto p-4 border-gray-200 dark:border-gray-700 text-sm">
-      <ul className="space-y-2 relative">
-        {headings.length === 0 && <p className="text-gray-500 text-sm"></p>}
-        {headings.map((heading) => (
-          <li
-            key={heading.id}
-            className={`transition-all duration-200 ease-out ${
-              heading.level === 3 ? "pl-4" : "pl-2"
-            } ${
-              activeId === heading.id
-                ? "text-[#ff0000] dark:text-[#ff0000] border-l-2 border-current"
-                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-            }`}
-            style={{
-              transform: activeId === heading.id ? "translateX(2px)" : "none",
-            }}
-          >
+    <aside className="hidden xl:block w-56 shrink-0 sticky top-[60px] self-start max-h-[calc(100vh-60px)] overflow-y-auto no-scrollbar py-10 pr-4 pl-2">
+      <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3 px-2">
+        On this page
+      </p>
+      <ul className="space-y-0.5">
+        {headings.map((h) => (
+          <li key={h.id} className={h.level === 3 ? 'pl-3' : ''}>
             <button
-              onClick={() => scrollTo(heading.id)}
-              className="text-left w-full hover:underline focus:outline-none rounded"
-              aria-current={activeId === heading.id ? "location" : undefined}
+              onClick={() => scrollTo(h.id)}
+              className={cn(
+                'w-full text-left px-2 py-1 rounded text-sm transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#fc035a]',
+                activeId === h.id
+                  ? 'text-[#fc035a] font-medium'
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100'
+              )}
+              aria-current={activeId === h.id ? 'location' : undefined}
             >
-              {heading.text}
+              {h.text}
             </button>
           </li>
         ))}
